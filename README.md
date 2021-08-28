@@ -3,19 +3,21 @@
 ---
 
 <h2 align="center">
-  Our Ts lib - Jest + Typescript
+  Opinionated collection of helpful JavaScript / TypeScript utils which we use on the real world applications
 </h2>
 
-<p align="center">Talk something 🥳.</p>
+<div align="center">
+
+- Tree-shakable ESM
+- Fully typed - with TSDocs
+
+  > This package is designed to be used as `devDependencies` and bundled into your dist.
+
+</div>
 
 <hr>
 
-## Using this template
-
-- Search `my-ts-lib` and replace it with your custom package name.
-- Search `TechMeLy` and replace it with your name.
-
-Features:
+## Features
 
 - Package manager [pnpm](https://pnpm.js.org/), safe and fast
 - Release with [semantic-release](https://npm.im/semantic-release)
@@ -25,7 +27,7 @@ Features:
 ## Install
 
 ```bash
-npm i my-ts-lib
+npm i @techmely/utils
 ```
 
 ## License

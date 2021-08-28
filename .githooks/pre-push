@@ -1,0 +1,34 @@
+#!/bin/bash -e
+
+textError='\033[1;31m'
+textSuccess='\033[1;32m'
+
+echo -e "\nStarting run eslint..."
+eslintAnalyzeResults=$(pnpm lint:eslint:quiet)
+
+if ! [[ $eslintAnalyzeResults =~ "Done" ]]; then
+  echo "$eslintAnalyzeResults"
+  echo -e "$textError Eslint analyze failed! Pls review your code before push codes to remotes origin."
+  exit 1
+fi
+
+echo -e "\n Starting run unit test..."
+unitTestResult=$(pnpm test:jest)
+
+if ! [[ $unitTestResult =~ "Done" ]]; then
+  echo "$unitTestResult"
+  echo -e "$textError Eslint analyze failed! Pls review your code before push codes to remotes origin."
+  exit 1
+fi
+
+echo -e "\n Starting check bundlesize..."
+bundleSizeResult=$(pnpm bundlesize)
+
+if [[ $bundleSizeResult =~ "FAIL" ]]; then
+  echo "$bundleSizeResult"
+  echo -e "$textError Eslint analyze failed! Pls review your code before push codes to remotes origin."
+  exit 1
+fi
+
+echo -e "\n$textSuccess Eslint analyze successfully, starting push your code on remotes origin."
+echo -e "$textBase"

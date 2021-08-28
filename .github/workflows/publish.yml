@@ -38,12 +38,11 @@ jobs:
       - name: Install pnpm
         run: npm i -g pnpm
 
-      - name: Install deps
+      - name: Install dependencies
         run: pnpm i
 
-      # Runs a set of commands using the runners shell
-      - name: Build and Test
-        run: pnpm test:jest
+      - name: Build
+        run: pnpm build
 
       - name: Release
         run: pnpx -y semantic-release --branches main

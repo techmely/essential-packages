@@ -60,6 +60,9 @@
       "require": "./dist/index.js"
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "funding": [
     {
       "type": "ko-fi",

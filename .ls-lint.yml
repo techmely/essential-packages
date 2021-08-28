@@ -1,0 +1,12 @@
+ls:
+  .js: camelCase | point.case
+  .ts: camelCase | point.case
+
+ignore:
+  - node_modules
+  - dist
+  - coverage
+  - .git
+  - .github
+  - .vscode
+  - .idea

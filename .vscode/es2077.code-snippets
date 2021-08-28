@@ -1,0 +1,20 @@
+{
+  "Import type": {
+    "prefix": "impt",
+    "body": ["import type { $2 } from '$1'"],
+    "description": "Import type"
+  },
+  "Console log": {
+    "prefix": "clg",
+    "body": ["console.log($1)"],
+    "description": "Console log"
+  },
+  "Export * from XXX": {
+    "prefix": "exs",
+    "body": ["export * from './${0}';"]
+  },
+  "Export * from XXX + Type": {
+    "prefix": "exst",
+    "body": ["export * from './${0}';", "export * from './${0}.types';"]
+  }
+}

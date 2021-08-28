@@ -1,0 +1,45 @@
+{
+  "name": "template-typescript",
+  "version": "0.0.1",
+  "description": "Template for all project using typescript",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechMeLy/template-typescript.git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "make git-hook",
+    "lint:files": "ls-lint",
+    "build": "tsup src --format cjs,esm --dts",
+    "release": "npx bumpp --commit --push --tag && npm publish",
+    "prepublishOnly": "pnpm build"
+  },
+  "devDependencies": {
+    "@ls-lint/ls-lint": "^1.10.0",
+    "@sucrase/jest-plugin": "^2.1.1",
+    "@techmely/eslint-config-ts": "^0.0.3",
+    "eslint": "^7.32.0",
+    "jest": "^27.1.0",
+    "tsup": "^4.14.0",
+    "typescript": "^4.4.2"
+  },
+  "engines": {
+    "node": ">=14.15.4",
+    "npm": ">= 7.0.15"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ]
+}

@@ -2,11 +2,11 @@
   "files": [
     {
       "path": "dist/index.js",
-      "maxSize": "10kB"
+      "maxSize": "5kB"
     },
     {
       "path": "dist/index.mjs",
-      "maxSize": "10kB"
+      "maxSize": "5kB"
     }
   ]
 }

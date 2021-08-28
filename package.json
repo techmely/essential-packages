@@ -26,8 +26,8 @@
     "build": "cross-env NODE_ENV=production tsup --dts",
     "lint:files": "ls-lint",
     "lint:eslint": "eslint --cache --ext .ts . --ignore-path .gitignore",
-    "lint:eslint:quiet": "pnpm lint:eslint --quiet",
-    "lint:eslint:fix": "pnpm lint:eslint --fix",
+    "lint:eslint:quiet": "eslint --cache --ext .ts . --ignore-path .gitignore --quiet",
+    "lint:eslint:fix": "eslint --cache --ext .ts . --ignore-path .gitignore --fix",
     "test:jest": "TZ=Asia/Ho_Chi_Minh jest --passWithNoTests",
     "release": "npx bumpp --commit --push --tag && npm publish",
     "prepublishOnly": "pnpm build"

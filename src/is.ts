@@ -65,6 +65,7 @@ export function isNotEmpty<T = unknown>(val: T): val is T {
  * Use for case you validate multiple values is not empty
  * @param args
  */
+// @ts-expect-error I do not know how to fix this
 export function isNotEmpties(...args): boolean {
   if (args.length > 1) {
     return args.reduce((a, b) => a && isNotEmpty(b), true);

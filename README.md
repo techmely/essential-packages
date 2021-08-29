@@ -6,29 +6,38 @@
   Opinionated collection of helpful JavaScript / TypeScript utils which we use on the real world applications
 </h2>
 
-<div align="center">
-
-Tree-shakable ESM
-
-Fully typed - with TSDocs
-
-> This package is designed to be used as `devDependencies` and bundled into your dist.
-
-</div>
+> Attention: This package is designed to be used as `devDependencies` and bundled into your dist.
 
 <hr>
 
 ## Features
 
+- 📦 2kb mini library
+- Tree-shakable ESM
+- Unit Test coverage 100% with [jest](https://jestjs.io) + [sucrase](https://sucrase.io)
+- Code quality analysis is A+ with [codacy](https://www.codacy.com) and [deepscan](https://deepscan.io)
+- Bundle to commonjs and es-module with [tsup](https://github.com/egoist/tsup)
 - Package manager [pnpm](https://pnpm.js.org/), safe and fast
 - Release with [semantic-release](https://npm.im/semantic-release)
-- Bundle with [tsup](https://github.com/TechMeLy/tsup)
-- Test with [jest](https://jestjs.io/)
 
-## Install
+## Install to use in your project
+
+With npm
 
 ```bash
-npm i @techmely/utils
+npm i --save-dev @techmely/utils
+```
+
+With yarn
+
+```bash
+yarn add -D @techmely/utils
+```
+
+With pnpm
+
+```bash
+pnpm add -D @techmely/utils
 ```
 
 ## License

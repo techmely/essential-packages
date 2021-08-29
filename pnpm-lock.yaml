@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@ls-lint/ls-lint': ^1.10.0
   '@sucrase/jest-plugin': ^2.1.1
-  '@techmely/eslint-config-ts': ^0.0.4
+  '@techmely/eslint-config-ts': ^0.0.5
   '@types/jest': ^27.0.1
   '@types/node': ^16.7.4
   bundlesize: ^0.18.1
@@ -17,7 +17,7 @@ specifiers:
 devDependencies:
   '@ls-lint/ls-lint': 1.10.0
   '@sucrase/jest-plugin': 2.1.1
-  '@techmely/eslint-config-ts': 0.0.4_eslint@7.32.0+typescript@4.4.2
+  '@techmely/eslint-config-ts': 0.0.5_eslint@7.32.0+typescript@4.4.2
   '@types/jest': 27.0.1
   '@types/node': 16.7.4
   bundlesize: 0.18.1
@@ -688,8 +688,8 @@ packages:
       sucrase: 3.20.1
     dev: true
 
-  /@techmely/eslint-config-ts/0.0.4_eslint@7.32.0+typescript@4.4.2:
-    resolution: {integrity: sha512-b300+JLX/9yarosdCRGIpCdbSA/QJhfiYlya1fJ/fZV3RrTehXFx8Z/663hjz4rsmjCrN4MaVCMY0iExptOIxg==}
+  /@techmely/eslint-config-ts/0.0.5_eslint@7.32.0+typescript@4.4.2:
+    resolution: {integrity: sha512-Pb6cwOQee0djlxWqDCaP4Lp4z+9UQXTogtbLWGpqZNR9DjNme/BmXwayv88kW4OW2NjeQ0kwek+NOWmd6j5uEw==}
     peerDependencies:
       eslint: ^7.32.0
       typescript: ^4.4.2

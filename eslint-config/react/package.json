@@ -1,0 +1,42 @@
+{
+  "name": "@techmely/eslint-react",
+  "version": "0.0.1",
+  "description": "Eslint config for React + Typescript project",
+  "keywords": [
+    "eslint",
+    "react",
+    "typescript",
+    "cypress"
+  ],
+  "license": "MIT",
+  "author": "Harry Tran <nhattq.coding@gmail.com> (https://ebugkia.com)",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "version": "yarn version"
+  },
+  "peerDependencies": {
+    "eslint": "^7.32.0",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "@techmely/eslint-ts": "workspace:*",
+    "eslint-plugin-cypress": "^2.11.3",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechMely/techmely/tree/main/eslint-config/react"
+  },
+  "bugs": {
+    "url": "https://github.com/TechMely/techmely/issues"
+  },
+  "maintainers": [
+    "harrytran998"
+  ]
+}

@@ -4,7 +4,7 @@ textError='\033[1;31m'
 textSuccess='\033[1;32m'
 
 echo -e "\nStarting run eslint..."
-eslintAnalyzeResults=$(pnpm lint:eslint:quiet)
+eslintAnalyzeResults=$(yarn lint:eslint:quiet)
 
 if [[ $eslintAnalyzeResults =~ "ERROR" ]]; then
   echo "$eslintAnalyzeResults"
@@ -13,7 +13,7 @@ if [[ $eslintAnalyzeResults =~ "ERROR" ]]; then
 fi
 
 echo -e "\n Starting run unit test..."
-unitTestResult=$(pnpm test:jest)
+unitTestResult=$(yarn test:jest)
 
 if [[ $unitTestResult =~ "FAIL" ]]; then
   echo "$unitTestResult"
@@ -22,7 +22,7 @@ if [[ $unitTestResult =~ "FAIL" ]]; then
 fi
 
 echo -e "\n Starting check bundlesize..."
-bundleSizeResult=$(pnpm bundlesize)
+bundleSizeResult=$(yarn bundlesize)
 
 if [[ $bundleSizeResult =~ "FAIL" ]]; then
   echo "$bundleSizeResult"

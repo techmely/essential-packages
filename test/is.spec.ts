@@ -1,4 +1,4 @@
-import { isNotEmpties } from '../src/is';
+import { isNotEmpties } from '../packages/utils/src/is';
 
 describe('Test valid is', () => {
   it('Should return true', () => {

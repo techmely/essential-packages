@@ -1,0 +1,39 @@
+{
+  "name": "@techmely/eslint-vue",
+  "version": "0.0.1",
+  "description": "Eslint config for Vue + Typescript project",
+  "license": "MIT",
+  "author": "Harry Tran <nhattq.coding@gmail.com> (https://ebugkia.com)",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "version": "yarn version"
+  },
+  "peerDependencies": {
+    "eslint": "^7.32.0",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "@techmely/eslint-ts": "workspace:*",
+    "eslint-plugin-vue": "^7.17.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechMely/techmely/tree/main/eslint-config/vue"
+  },
+  "bugs": {
+    "url": "https://github.com/TechMely/techmely/issues"
+  },
+  "maintainers": [
+    "harrytran998"
+  ],
+  "keywords": [
+    "eslint",
+    "vue",
+    "typescript",
+    "cypress"
+  ]
+}

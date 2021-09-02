@@ -1,4 +1,4 @@
-import { dayjs } from './external';
+import { dayjs } from './_external';
 
 export function formatDate(date: string, format = 'DD/MM/YYYY'): string {
   if (date) {

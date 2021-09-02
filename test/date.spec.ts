@@ -1,4 +1,4 @@
-import { formatDate } from '../src';
+import { formatDate } from '../packages/utils/src';
 
 const dataDateTest = [
   '2021-09-20T17:30:00Z',

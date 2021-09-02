@@ -1,67 +1,57 @@
 {
-  "name": "@techmely/utils",
+  "name": "techmely",
   "version": "0.0.1",
-  "description": "Collection of helpful JavaScript / TypeScript utils",
+  "description": "",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TechMeLy/utils.git"
+    "url": "https://github.com/TechMeLy/techmely.git"
   },
   "engines": {
     "node": ">=14.15.4",
     "npm": ">= 7.0.15"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "typings"
+  "workspaces": [
+    "packages/*",
+    "eslint-config/*"
   ],
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
+    "preinstall": "npx only-allow yarn",
     "postinstall": "make git-hook",
-    "dev": "tsup --watch",
-    "build": "cross-env NODE_ENV=production tsup --dts",
     "lint:files": "ls-lint",
     "lint:eslint": "eslint --cache --ext .ts . --ignore-path .gitignore",
     "lint:eslint:quiet": "eslint --cache --ext .ts . --ignore-path .gitignore --quiet",
     "lint:eslint:fix": "eslint --cache --ext .ts . --ignore-path .gitignore --fix",
     "test:jest": "TZ=Asia/Ho_Chi_Minh jest --passWithNoTests",
     "release": "npx bumpp --commit --push --tag && npm publish",
-    "prepublishOnly": "pnpm build"
-  },
-  "peerDependencies": {
-    "dayjs": "^1.10.6"
-  },
-  "peerDependenciesMeta": {
-    "dayjs": {
-      "optional": true
-    }
+    "prepublishOnly": "pnpm build",
+    "clear": "rimraf .pnp.js yarn.lock .yarn/cache .yarn/sdks .yarn/unplugged .yarn/install-state.gz"
   },
   "devDependencies": {
     "@ls-lint/ls-lint": "^1.10.0",
     "@sucrase/jest-plugin": "^2.1.1",
-    "@techmely/eslint-config-ts": "^0.0.5",
+    "@techmely/eslint-ts": "workspace:*",
     "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.4",
+    "@types/node": "^16.7.10",
+    "@types/rimraf": "^3",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@yarnpkg/sdks": "^2.4.2-rc.2",
     "bundlesize": "^0.18.1",
     "cross-env": "^7.0.3",
-    "dayjs": "^1.10.6",
     "eslint": "^7.32.0",
     "jest": "^27.1.0",
+    "rimraf": "^3.0.2",
     "tsup": "^4.14.0",
     "typescript": "^4.4.2"
   },
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+  "dependenciesMeta": {
+    "core-js-pure": {
+      "built": false
+    },
+    "fsevents": {
+      "built": false
     }
-  },
-  "publishConfig": {
-    "access": "public"
   },
   "funding": [
     {
@@ -72,5 +62,6 @@
       "type": "patreon",
       "url": "https://www.patreon.com/harrytran998"
     }
-  ]
+  ],
+  "packageManager": "yarn@3.0.1"
 }

@@ -1,0 +1,41 @@
+{
+  "name": "@techmely/eslint-svelte",
+  "version": "0.0.1",
+  "description": "Eslint config for Svelte + Typescript project",
+  "license": "MIT",
+  "author": "Harry Tran <nhattq.coding@gmail.com> (https://ebugkia.com)",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "version": "yarn version"
+  },
+  "peerDependencies": {
+    "eslint": "^7.32.0",
+    "svelte": "^3.42.4",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "@techmely/eslint-ts": "workspace:*",
+    "eslint-plugin-cypress": "^2.11.3",
+    "eslint-plugin-svelte3": "^3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechMely/techmely/tree/main/eslint-config/svelte"
+  },
+  "bugs": {
+    "url": "https://github.com/TechMely/techmely/issues"
+  },
+  "maintainers": [
+    "harrytran998"
+  ],
+  "keywords": [
+    "eslint",
+    "svelte",
+    "typescript",
+    "cypress"
+  ]
+}

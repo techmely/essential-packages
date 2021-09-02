@@ -1,4 +1,4 @@
-import { deepMerge } from '../src';
+import { deepMerge } from '../packages/utils/src';
 
 describe('Object test', () => {
   describe('deepMerge', () => {

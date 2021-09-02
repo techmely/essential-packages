@@ -1,4 +1,4 @@
-import { take, unique } from '../src';
+import { take, unique } from '../packages/utils/src';
 
 describe('Array utils test', () => {
   describe('Unique array', () => {

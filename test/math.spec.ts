@@ -1,4 +1,4 @@
-import { calculateSum } from '../src/math';
+import { calculateSum } from '../packages/utils/src/math';
 
 it('Calculate sum', () => {
   expect(calculateSum(1, 2, 3)).toEqual(6);

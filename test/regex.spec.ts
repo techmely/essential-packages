@@ -1,4 +1,4 @@
-import { isValidEmail, isValidVnPhone } from '../src';
+import { isValidEmail, isValidVnPhone } from '../packages/utils/src';
 
 const dataTest = {
   valid: {

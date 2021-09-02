@@ -1,5 +1,5 @@
 {
-    "version": "0.1",
+    "version": "0.2",
     "words": [
         "bahmutov",
         "bumpp",
@@ -7,8 +7,10 @@
         "codacy",
         "codeql",
         "compat",
+        "fsevents",
         "harrytran",
         "inmemory",
+        "lerp",
         "lozad",
         "Mergeable",
         "Minh",

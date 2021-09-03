@@ -37,12 +37,12 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "eslint.nodePath": ".yarn/sdks",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.tsserver.watchOptions": {
-    "watchFile": "useFsEventsOnParentDirectory",
-    "watchDirectory": "useFsEvents"
-  },
+  // "eslint.nodePath": ".yarn/sdks",
+  // "typescript.enablePromptUseWorkspaceTsdk": true,
+  // "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  // "typescript.tsserver.watchOptions": {
+  //   "watchFile": "useFsEventsOnParentDirectory",
+  //   "watchDirectory": "useFsEvents"
+  // },
   "npm.packageManager": "yarn"
 }

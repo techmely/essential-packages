@@ -1,17 +1,19 @@
 import glob from 'fast-glob';
-import { promises } from 'fs';
+import { copyFile } from 'fs/promises';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 (async () => {
-  const packages = await glob('kimochi/*', {
+  const packages = await glob(['packages/*'], {
     onlyDirectories: true,
     absolute: true,
   });
 
+  // eslint-disable-next-line no-restricted-syntax
   for (const packageDir of packages) {
-    await promises.copyFile(
-      path.join(__dirname, '../README.md'),
-      path.join(packageDir, 'README.md'),
-    );
+    const source = path.join(path.dirname(fileURLToPath(import.meta.url)), '../README.md');
+    const target = path.join(packageDir, 'README.md');
+    // eslint-disable-next-line no-await-in-loop
+    await copyFile(source, target);
   }
 })();

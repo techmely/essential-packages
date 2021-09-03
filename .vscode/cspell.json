@@ -1,14 +1,17 @@
 {
     "version": "0.2",
     "words": [
+        "Apivt",
         "bahmutov",
         "bumpp",
         "bundlesize",
         "codacy",
         "codeql",
         "compat",
+        "eslintignore",
         "fsevents",
         "harrytran",
+        "homemage",
         "inmemory",
         "lerp",
         "lozad",
@@ -24,6 +27,7 @@
         "stylelint",
         "techmely",
         "tsup",
+        "typedefs",
         "vite"
     ]
 }

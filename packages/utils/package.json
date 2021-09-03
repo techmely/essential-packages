@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -15,25 +15,35 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "source": "src/index.ts",
   "files": [
     "dist",
     "typings"
   ],
   "scripts": {
-    "dev": "tsup --watch",
-    "build": "cross-env NODE_ENV=production tsup --dts"
+    "build": "cross-env NODE_ENV=production tsup --dts",
+    "clean": "rm -rf dist",
+    "prepublish": "yarn clean",
+    "version": "yarn version"
   },
   "peerDependencies": {
-    "dayjs": "^1.10.6"
+    "dayjs": "^1.10.6",
+    "throttle-debounce": "^3.0.1"
   },
   "peerDependenciesMeta": {
     "dayjs": {
       "optional": true
+    },
+    "throttle-debounce": {
+      "optional": true
     }
   },
   "devDependencies": {
+    "@techmely/types": "workspace:packages/types",
+    "@types/throttle-debounce": "^2.1.0",
     "cross-env": "^7.0.3",
-    "dayjs": "^1.10.6"
+    "dayjs": "^1.10.6",
+    "throttle-debounce": "^3.0.1"
   },
   "exports": {
     ".": {

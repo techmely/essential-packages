@@ -1,0 +1,37 @@
+{
+  "name": "@techmely/types",
+  "version": "0.0.1",
+  "description": "Techmely types definitions",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TechMeLy/techmely/techmely.git"
+  },
+  "engines": {
+    "node": ">=14.17.6",
+    "npm": ">= 7.0.15"
+  },
+  "main": "index.d.ts",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "version": "yarn version"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.10"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ]
+}

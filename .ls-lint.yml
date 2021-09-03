@@ -10,5 +10,4 @@ ignore:
   - .github
   - .vscode
   - .idea
-  - packages/utils/src/_external.ts
   - .yarn

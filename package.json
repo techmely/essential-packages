@@ -1,6 +1,6 @@
 {
   "name": "techmely",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -13,45 +13,43 @@
     "npm": ">= 7.0.15"
   },
   "workspaces": [
-    "packages/*",
-    "eslint-config/*"
+    "packages/*"
   ],
   "scripts": {
     "preinstall": "npx only-allow yarn",
     "postinstall": "make git-hook",
+    "build": "yarn workspaces foreach -Apivt --exclude techmely run build",
     "lint:files": "ls-lint",
+    "node": "yarn sucrase-node",
     "lint:eslint": "eslint --cache --ext .ts . --ignore-path .gitignore",
     "lint:eslint:quiet": "eslint --cache --ext .ts . --ignore-path .gitignore --quiet",
     "lint:eslint:fix": "eslint --cache --ext .ts . --ignore-path .gitignore --fix",
     "test:jest": "TZ=Asia/Ho_Chi_Minh jest --passWithNoTests",
-    "release": "npx bumpp --commit --push --tag && npm publish",
-    "prepublishOnly": "pnpm build",
-    "clear": "rimraf .pnp.js yarn.lock .yarn/cache .yarn/sdks .yarn/unplugged .yarn/install-state.gz"
+    "release": "npx bumpp --commit --push --tag && yarn publish",
+    "publish": "yarn bump && yarn clean && yarn build && yarn workspaces foreach -pv --exclude techmely npm publish --tolerate-republish",
+    "clean": "yarn workspaces foreach -Apivt --exclude primitives --exclude ssr-testing run clean",
+    "prepublishOnly": "yarn build",
+    "clear": "rimraf .pnp.cjs yarn.lock .yarn/cache .yarn/unplugged .yarn/install-state.gz node_modules",
+    "bump": "yarn version apply --all",
+    "bump:check": "yarn version check"
   },
   "devDependencies": {
     "@ls-lint/ls-lint": "^1.10.0",
     "@sucrase/jest-plugin": "^2.1.1",
-    "@techmely/eslint-ts": "workspace:*",
+    "@techmely/eslint-config-ts": "^0.0.6",
+    "@techmely/types": "workspace:packages/types",
     "@types/jest": "^27.0.1",
     "@types/node": "^16.7.10",
-    "@types/rimraf": "^3",
-    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@types/rimraf": "^3.0.2",
     "@yarnpkg/sdks": "^2.4.2-rc.2",
     "bundlesize": "^0.18.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
     "jest": "^27.1.0",
     "rimraf": "^3.0.2",
+    "sucrase": "^3.20.1",
     "tsup": "^4.14.0",
     "typescript": "^4.4.2"
-  },
-  "dependenciesMeta": {
-    "core-js-pure": {
-      "built": false
-    },
-    "fsevents": {
-      "built": false
-    }
   },
   "funding": [
     {

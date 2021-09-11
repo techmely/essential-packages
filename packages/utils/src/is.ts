@@ -6,10 +6,8 @@ export const isDef = <T = any>(val?: T): val is T => typeof val !== 'undefined';
 export const isUndef = <T = any>(val?: T): val is T => !isDef(val);
 
 export const isDev = process.env.NODE_ENV !== 'production';
+export const isProduction = process.env.NODE_ENV === 'production';
 
-/**
- * Type guard to filter out null values
- */
 export function isNotNull<T>(v: T | null): v is Exclude<T, null> {
   return v !== null;
 }
@@ -63,7 +61,9 @@ export function isNotEmpty<T = unknown>(val: T): val is T {
 
 /**
  * Use for case you validate multiple values is not empty
- * @param args
+ *
+ * @param {any} args any arguments
+ * @returns {boolean} will return true if all value is not empty
  */
 // @ts-expect-error I do not know how to fix this
 export function isNotEmpties(...args): boolean {
@@ -71,4 +71,28 @@ export function isNotEmpties(...args): boolean {
     return args.reduce((a, b) => a && isNotEmpty(b), true);
   }
   return false;
+}
+
+/**
+ * {@link} https://en.wikipedia.org/wiki/Portable_Network_Graphics
+ *
+ * @param {Buffer | Uint8Array} buffer Input is a buffer
+ * @returns {boolean} return true if the input is a PNG Image
+ */
+export function isPngImage(buffer: Buffer | Uint8Array) {
+  if (!buffer || buffer.length < 8) {
+    return false;
+  }
+
+  // prettier-ignore
+  return (
+    buffer[0] === 0x89 &&
+    buffer[1] === 0x50 &&
+    buffer[2] === 0x4E &&
+    buffer[3] === 0x47 &&
+    buffer[4] === 0x0D &&
+    buffer[5] === 0x0A &&
+    buffer[6] === 0x1A &&
+    buffer[7] === 0x0A
+  );
 }

@@ -17,7 +17,7 @@
 - Unit Test coverage 100% with [jest](https://jestjs.io) + [sucrase](https://sucrase.io)
 - Code quality analysis is A+ with [codacy](https://www.codacy.com) and [deepscan](https://deepscan.io)
 - Bundle to commonjs and es-module with [tsup](https://github.com/egoist/tsup)
-- Package manager [pnpm](https://pnpm.js.org/), safe and fast
+- Package manager [yarn 3](https://yarnpkg.com/), safe and fast
 - Release with [semantic-release](https://npm.im/semantic-release)
 
 ## Install to use in your project

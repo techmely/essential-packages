@@ -1,25 +1,17 @@
-// <reference types="node" />
-declare namespace NodeJS {
-  interface Process {
-    env: ProcessEnv;
-  }
-  interface ProcessEnv {
-    readonly NODE_ENV: 'development' | 'production';
-  }
+import './src/node';
+import './src/sources';
+
+// Global compile-time constants
+declare const __DEV__: boolean;
+declare const __PRODUCTION__: boolean;
+declare const __TEST__: boolean;
+
+declare interface Dict<T> {
+  [key: string]: T;
 }
 
-declare module '@techmely/types' {
-  let __DEV__: boolean;
-  let __PRODUCTION__: boolean;
-  let __TEST__: boolean;
+declare type Nullable<T> = T | null;
+declare type Undefinable<T> = T | undefined;
+declare type NullList<T> = T | undefined | null;
 
-  let __COMMIT__: string;
-  let __VERSION__: string;
-
-  type Dict<T> = {
-    [key: string]: T;
-  };
-  type Nullable<T> = T | null;
-  type Undefinable<T> = T | undefined;
-  type NullList<T> = T | undefined | null;
-}
+declare interface Headers extends Dict<string> {}

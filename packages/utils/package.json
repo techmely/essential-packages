@@ -12,10 +12,10 @@
     "node": ">=14.15.4",
     "npm": ">= 7.0.15"
   },
+  "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "source": "src/index.ts",
   "files": [
     "dist",
     "typings"
@@ -39,13 +39,14 @@
     }
   },
   "devDependencies": {
-    "@techmely/types": "workspace:packages/types",
+    "@techmely/types": "^0.0.2",
     "@types/throttle-debounce": "^2.1.0",
     "cross-env": "^7.0.3",
     "dayjs": "^1.10.6",
     "throttle-debounce": "^3.0.1"
   },
   "exports": {
+    "./package.json": "./package.json",
     ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"

@@ -8,4 +8,7 @@ module.exports = {
       modules: true,
     },
   },
+  rules: {
+    '@typescript-eslint/no-inferrable-types': ['error', { ignoreParameters: true }],
+  },
 };

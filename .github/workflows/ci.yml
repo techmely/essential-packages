@@ -63,7 +63,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - uses: preactjs/compressed-size-action@v2
+      - uses: TechMeLy/compressed-size-action@v2
         with:
           repo-token: '${{ secrets.GH_TOKEN }}'
           minimum-change-threshold: 1000

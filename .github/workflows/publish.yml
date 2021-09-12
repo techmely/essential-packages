@@ -43,7 +43,6 @@ jobs:
         run: yarn build
 
       - name: Release
-        run: npx -y semantic-release --branches main
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          run: yarn semantic-release

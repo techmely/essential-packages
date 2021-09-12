@@ -10,7 +10,7 @@ textError='\033[1;31m'
 textSuccess='\033[1;32m'
 gitCommitMsg=$(head -n 1 "$1") # $1 is path =  .git/COMMIT_EDITMSG
 
-echo -e "$textInfor Starting verify commit message..."
+echo -e "\n$textInfor Starting verify commit message..."
 if [[ -n "$branchName" ]]; then
  if ! [[ $gitCommitMsg =~ $commitMsgRegex ]]; then
    echo -e "\n$textError Invalid commit message format - Aborting commit"
@@ -23,5 +23,4 @@ if [[ -n "$branchName" ]]; then
  # Append prefix branch name into commit message
  sed -i.bak -e "1s~^~$branchName ~" "$1"
 fi
-echo -e "$textSuccess Verify commit message successful."
-echo -e "$textBase"
+echo -e "\n$textSuccess Verify commit message successful.$textBase\n"

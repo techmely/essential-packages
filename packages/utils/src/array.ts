@@ -1,17 +1,19 @@
 /**
- * Unique an Array
- *
- * @category Array
+ * @description Take only unique value from an array
+ * @template T
+ * @param {T[]} array - The input array
+ * @returns {T[]} - New array with unique value
  */
 export function unique<T>(array: readonly T[]): T[] {
   return [...new Set(array)];
 }
 
 /**
- * Creates a slice of array with n elements taken from the beginning.
- * @param array
- * @param limit
- * @category Array
+ * @description Creates a slice of array with n elements taken from the beginning.
+ * @template T
+ * @param {T[]} array - The input array
+ * @param {number} limit - The number you want to
+ * @returns {T[]} - New array was sliced
  */
 export function take<T>(array: readonly T[], limit: number): T[] {
   return array.slice(0, limit);

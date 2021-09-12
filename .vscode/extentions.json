@@ -5,6 +5,7 @@
     "esbenp.prettier-vscode",
     "Orta.vscode-jest",
     "mikestead.dotenv",
-    "usernamehw.errorlens"
+    "usernamehw.errorlens",
+    "arcanis.vscode-zipfs"
   ]
 }

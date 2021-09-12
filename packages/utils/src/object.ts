@@ -2,10 +2,13 @@ import { isArray, isDef, isNotEmpty, isNotNull, isObject, isUndef } from './is';
 import { DeepMerge } from './types';
 
 /**
- * Deep merge Object
+ * @description Deep merge Object
  * This will mutate the old object, be careful
- * Extend this from @link https://github.com/antfu/utils/blob/1e66c6f940/src/object.ts#L75#L102
- * @category Object
+ * {@link https://github.com/antfu/utils/blob/1e66c6f940/src/object.ts#L75#L102}
+ * @template T, S
+ * @param {T} target - The target object
+ * @param {...S[]} sources - The sources will merge
+ * @returns {DeepMerge<T, S>} the object after merge
  */
 export function deepMerge<T extends Record<string, any>, S extends Record<string, any>>(
   target: T,
@@ -35,13 +38,18 @@ export function deepMerge<T extends Record<string, any>, S extends Record<string
   return deepMerge(target, ...sources);
 }
 
+/**
+ * @param {any} item - the input check
+ * @returns {boolean} - value
+ */
 function isMergeableObject(item: any): item is Record<string, any> {
   return isObject(item) && !isArray(item);
 }
 
 /**
- * Remove empty fields from an object. This will mutates the object
- * @category Object
+ * @description Remove empty fields from an object. This will mutates the object
+ * @param {any} obj - The input obj
+ * @returns {any} - the clean obj
  */
 export function removeEmptyObj(obj: any) {
   return Object.fromEntries(
@@ -50,8 +58,9 @@ export function removeEmptyObj(obj: any) {
 }
 
 /**
- * Remove undefined fields from an object - This will mutates the object
- * @category Object
+ * @description Remove undefined fields from an object - This will mutates the object
+ * @param {any} obj - The input obj
+ * @returns {any} - the clean obj
  */
 export function removeUndefObj<T extends Record<string, any>>(obj: T): T {
   // eslint-disable-next-line no-param-reassign

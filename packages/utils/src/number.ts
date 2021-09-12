@@ -1,9 +1,18 @@
+import { NullList, Undefinable } from '@techmely/types';
+
 import { isNumber } from './is';
 
+/**
+ *
+ * @param num
+ * @param precision
+ * @param defaultValue
+ * @returns
+ */
 export function formatNumber(
-  num: number | undefined | null,
+  num: NullList<number>,
   precision = 0,
-  defaultValue: number | string | undefined = '-',
+  defaultValue: Undefinable<number | string> = '-',
 ) {
   if (!isNumber(num)) {
     return defaultValue;
@@ -14,14 +23,27 @@ export function formatNumber(
   });
 }
 
-export function formatPrice(price: number | undefined | null, precision = 0) {
+/**
+ *
+ * @param price
+ * @param precision
+ * @returns
+ */
+export function formatPrice(price: NullList<number>, precision = 0) {
   return formatNumber(price, precision);
 }
 
+/**
+ *
+ * @param volume
+ * @param precision
+ * @param defaultValue
+ * @returns
+ */
 export function formatLot10Volume(
-  volume: number | undefined | null,
+  volume: NullList<number>,
   precision = 0,
-  defaultValue: number | string | undefined = '-',
+  defaultValue: Undefinable<number | string> = '-',
 ) {
   if (!isNumber(volume)) {
     return defaultValue;

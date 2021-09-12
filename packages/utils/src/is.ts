@@ -1,3 +1,4 @@
+/* eslint-disable jsdoc/require-jsdoc */
 function is(val: unknown, type: string) {
   return Object.prototype.toString.call(val) === `[object ${type}]`;
 }
@@ -65,8 +66,7 @@ export function isNotEmpty<T = unknown>(val: T): val is T {
  * @param {any} args any arguments
  * @returns {boolean} will return true if all value is not empty
  */
-// @ts-expect-error I do not know how to fix this
-export function isNotEmpties(...args): boolean {
+export function isNotEmpties(...args: any[]): boolean {
   if (args.length > 1) {
     return args.reduce((a, b) => a && isNotEmpty(b), true);
   }
@@ -96,3 +96,5 @@ export function isPngImage(buffer: Buffer | Uint8Array) {
     buffer[7] === 0x0A
   );
 }
+
+/* eslint-enable jsdoc/require-jsdoc */

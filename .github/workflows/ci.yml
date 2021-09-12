@@ -66,6 +66,4 @@ jobs:
       - uses: preactjs/compressed-size-action@v2
         with:
           repo-token: '${{ secrets.GH_TOKEN }}'
-          build-script: 'yarn build'
-          clean-script: 'yarn clean'
           minimum-change-threshold: 1000

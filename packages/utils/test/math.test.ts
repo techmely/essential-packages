@@ -1,10 +1,10 @@
-import { calculateSum } from '../src/math';
+import { sum } from '../src/math';
 
 it('Calculate sum', () => {
-  expect(calculateSum(1, 2, 3)).toEqual(6);
-  expect(calculateSum([1, 2, 3])).toEqual(6);
-  expect(calculateSum([1], [2, 3])).toEqual(6);
+  expect(sum(1, 2, 3)).toEqual(6);
+  expect(sum([1, 2, 3])).toEqual(6);
+  expect(sum([1], [2, 3])).toEqual(6);
 
   // @ts-expect-error Bcs the type of args can be number [][]
-  expect(calculateSum(1, 2, [1, 2, 3])).toEqual(9);
+  expect(sum(1, 2, [1, 2, 3])).toEqual(9);
 });

@@ -28,10 +28,14 @@
   },
   "peerDependencies": {
     "dayjs": "^1.10.6",
+    "jwt-decode": "^3.1.2",
     "throttle-debounce": "^3.0.1"
   },
   "peerDependenciesMeta": {
     "dayjs": {
+      "optional": true
+    },
+    "jwt-decode": {
       "optional": true
     },
     "throttle-debounce": {
@@ -43,6 +47,7 @@
     "@types/throttle-debounce": "^2.1.0",
     "cross-env": "^7.0.3",
     "dayjs": "^1.10.6",
+    "jwt-decode": "^3.1.2",
     "throttle-debounce": "^3.0.1"
   },
   "exports": {

@@ -10,5 +10,7 @@ module.exports = {
   },
   rules: {
     '@typescript-eslint/no-inferrable-types': ['error', { ignoreParameters: true }],
+    'class-methods-use-this': 'off',
+    'unicorn/no-document-cookie': 'off',
   },
 };

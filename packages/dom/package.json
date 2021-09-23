@@ -1,6 +1,6 @@
 {
-  "name": "@techmely/utils",
-  "version": "0.0.3",
+  "name": "@techmely/dom",
+  "version": "0.0.1",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -26,29 +26,9 @@
     "prepublish": "yarn clean",
     "version": "yarn version"
   },
-  "peerDependencies": {
-    "dayjs": "^1.10.6",
-    "jwt-decode": "^3.1.2",
-    "throttle-debounce": "^3.0.1"
-  },
-  "peerDependenciesMeta": {
-    "dayjs": {
-      "optional": true
-    },
-    "jwt-decode": {
-      "optional": true
-    },
-    "throttle-debounce": {
-      "optional": true
-    }
-  },
   "devDependencies": {
     "@techmely/types": "^0.0.2",
-    "@types/throttle-debounce": "^2.1.0",
-    "cross-env": "^7.0.3",
-    "dayjs": "^1.10.7",
-    "jwt-decode": "^3.1.2",
-    "throttle-debounce": "^3.0.1"
+    "cross-env": "^7.0.3"
   },
   "exports": {
     "./package.json": "./package.json",

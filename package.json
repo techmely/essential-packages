@@ -36,23 +36,23 @@
   },
   "devDependencies": {
     "@ls-lint/ls-lint": "^1.10.0",
-    "@semantic-release/changelog": "^5.0.1",
-    "@semantic-release/git": "^9.0.1",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
     "@sucrase/jest-plugin": "^2.1.1",
     "@techmely/eslint-config-ts": "^0.0.10",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.9.6",
     "@types/rimraf": "^3.0.2",
-    "@types/semantic-release": "^17",
+    "@types/semantic-release": "^17.2.2",
     "bundlesize": "^0.18.1",
     "cross-env": "^7.0.3",
     "eslint": "^7.32.0",
-    "jest": "^27.1.0",
+    "jest": "^27.2.1",
     "rimraf": "^3.0.2",
-    "semantic-release": "^17.4.7",
+    "semantic-release": "^18.0.0",
     "sucrase": "^3.20.1",
-    "tsup": "^4.14.0",
-    "typescript": "^4.4.2"
+    "tsup": "^5.1.0",
+    "typescript": "^4.4.3"
   },
   "funding": [
     {
@@ -64,5 +64,5 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
-  "packageManager": "yarn@3.0.1"
+  "packageManager": "yarn@3.0.2"
 }

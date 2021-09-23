@@ -2,7 +2,7 @@
 
 branchName=$(git rev-parse --abbrev-ref HEAD)
 # Origin pattern https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format
-commitMsgRegex='(revert: )?(feat|fix|docs|style|refactor|perf|test|workflow|ci|chore|types|release)(\(.+\))?(:)? .{1,50}'
+commitMsgRegex='(revert: )?(feat|fix|docs|style|refactor|perf|test|workflow|ci|chore|types|release|bump)(\(.+\))?(:)? .{1,50}'
 
 textBase='\033[0m'
 textInfor='\033[1;34m'

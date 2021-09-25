@@ -10,16 +10,16 @@ import { isDev } from '../is';
  * The invariant message will be stripped in production, but the invariant
  * will remain to ensure logic does not differ in production.
  *
- * @param {boolean} condition - The condition to verify.
+ * @param {any} condition - The condition to verify.
  * @param {string} message - The format will throw err
  * @param {...any} args - arguments
  */
-export const invariant = (condition: boolean, message?: string, ...args: Array<any>) => {
+export const invariant = (condition: any, message?: string, ...args: Array<any>) => {
   if (isDev && message === undefined) {
     throw new Error('invariant requires an error message argument');
   }
 
-  if (!condition) {
+  if (condition) {
     let error;
     if (message === undefined) {
       error = new Error(

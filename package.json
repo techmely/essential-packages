@@ -1,6 +1,5 @@
 {
   "name": "techmely",
-  "version": "0.0.0-development",
   "description": "",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -12,16 +11,12 @@
     "node": ">=14.15.4",
     "npm": ">= 7.0.15"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "preinstall": "npx only-allow yarn",
     "postinstall": "make git-hook",
     "bundlesize": "bundlesize --config config/bundlesize.config.json",
     "build": "yarn workspaces foreach -Apivt --exclude techmely run build",
     "lint:files": "ls-lint",
-    "node": "yarn sucrase-node",
     "lint:eslint": "eslint --cache --ext .ts . --ignore-path .eslintignore",
     "lint:eslint:quiet": "eslint --cache --ext .ts . --ignore-path .eslintignore --quiet",
     "lint:eslint:fix": "eslint --cache --ext .ts . --ignore-path .eslintignore --fix",
@@ -30,22 +25,47 @@
     "publish": "yarn bump && yarn clean && yarn build && yarn workspaces foreach -pv --exclude techmely npm publish --tolerate-republish",
     "clean": "yarn workspaces foreach -Apivt --exclude techmely run clean",
     "clear": "rimraf .pnp.cjs yarn.lock .yarn/cache .yarn/unplugged .yarn/install-state.gz node_modules",
-    "bump": "yarn version apply --all",
+    "bump": "yarn version check --interactive && yarn version apply --all",
     "bump:check": "yarn version check",
     "semantic-release": "semantic-release"
   },
+  "peerDependencies": {
+    "dayjs": "^1.10.6",
+    "jwt-decode": "^3.1.2",
+    "throttle-debounce": "^3.0.1"
+  },
+  "peerDependenciesMeta": {
+    "dayjs": {
+      "optional": true
+    },
+    "jwt-decode": {
+      "optional": true
+    },
+    "throttle-debounce": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@ls-lint/ls-lint": "^1.10.0",
+    "@nrwl/cli": "12.9.0",
+    "@nrwl/nx-cloud": "12.3.13",
+    "@nrwl/tao": "12.9.0",
+    "@nrwl/workspace": "12.9.0",
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/git": "^10.0.0",
     "@sucrase/jest-plugin": "^2.1.1",
     "@techmely/eslint-config-ts": "^0.0.10",
+    "@techmely/types": "^0.0.2",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.9.6",
     "@types/rimraf": "^3.0.2",
     "@types/semantic-release": "^17.2.2",
-    "bundlesize": "^0.18.1",
+    "@types/throttle-debounce": "^2.1.0",
     "cross-env": "^7.0.3",
+    "dayjs": "^1.10.7",
+    "jwt-decode": "^3.1.2",
+    "throttle-debounce": "^3.0.1",
+    "bundlesize": "^0.18.1",
     "eslint": "^7.32.0",
     "jest": "^27.2.1",
     "rimraf": "^3.0.2",
@@ -63,6 +83,5 @@
       "type": "patreon",
       "url": "https://www.patreon.com/harrytran998"
     }
-  ],
-  "packageManager": "yarn@3.0.2"
+  ]
 }

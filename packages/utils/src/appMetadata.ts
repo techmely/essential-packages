@@ -1,23 +1,24 @@
-import { execCmd } from 'child_process';
+import { exec } from 'child_process';
 import { readFileSync } from 'fs';
 import { promisify } from 'util';
 
-const exec = promisify(execCmd);
+import { invariant } from './logger';
+
+const execCmd = promisify(exec);
 
 export const gitLastCommitHash = async () => {
   const gitCommand = 'git rev-parse --short HEAD';
-  const { stderr: lastCommitHashErr, stdout: lastCommitHash } = await exec(gitCommand);
-  if (lastCommitHashErr) {
-    throw new Error(
-      `The environment doesn't have GIT, died!\n Error: ${lastCommitHashErr.toString()}`,
-    );
-  }
+  const { stderr: lastCommitHashErr, stdout: lastCommitHash } = await execCmd(gitCommand);
+  invariant(
+    lastCommitHashErr,
+    `The environment doesn't have GIT, died!\n Error: ${lastCommitHashErr.toString()}`,
+  );
   return lastCommitHash.trimEnd();
 };
 
 export const gitCurrentBranch = async () => {
   const gitCommand = 'git rev-parse --abbrev-ref HEAD';
-  const { stderr: branchNameErr, stdout: gitBranchName } = await exec(gitCommand);
+  const { stderr: branchNameErr, stdout: gitBranchName } = await execCmd(gitCommand);
   if (branchNameErr) {
     throw new Error(`The environment doesn't have GIT, died!\n Error: ${branchNameErr.toString()}`);
   }

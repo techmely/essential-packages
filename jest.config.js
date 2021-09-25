@@ -1,7 +1,13 @@
 module.exports = {
   globals: {
-    __DEV__: false,
+    __DEV__: true,
     __TEST__: true,
+    __BROWSER__: false,
+    __GLOBAL__: false,
+    __ESM_BUNDLER__: true,
+    __ESM_BROWSER__: false,
+    __NODE_JS__: true,
+    __SSR__: true,
   },
   rootDir: '.',
   testEnvironment: 'node',

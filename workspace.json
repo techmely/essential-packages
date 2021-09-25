@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "cli": {
+    "warnings": {
+      "versionMismatch": false
+    },
+    "packageManager": "yarn",
+    "analytics": false
+  },
+  "projects": {
+    "@techmely/types": {
+      "root": "packages/types"
+    },
+    "@techmely/utils": {
+      "root": "packages/utils"
+    }
+  }
+}

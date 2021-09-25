@@ -43,7 +43,6 @@
     }
   },
   "devDependencies": {
-    "@techmely/types": "^0.0.2",
     "@types/throttle-debounce": "^2.1.0",
     "cross-env": "^7.0.3",
     "dayjs": "^1.10.7",

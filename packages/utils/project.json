@@ -1,0 +1,30 @@
+{
+  "projectType": "library",
+  "root": "packages/utils",
+  "sourceRoot": "packages/utils/src",
+  "prefix": "techmely",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/products/home-page/src/**/*.ts",
+          "libs/products/home-page/src/**/*.html"
+        ]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "packages/utils/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["coverage/packages/utils"]
+    },
+    "build": {
+      "executor": "@nrwl/jest:jest"
+    }
+  },
+  "tags": ["scope:products", "type:feature"]
+}

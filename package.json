@@ -16,6 +16,7 @@
     "preinstall": "npx only-allow yarn",
     "postinstall": "make git-hook",
     "bundlesize": "bundlesize --config config/bundlesize.config.json",
+    "build": "nx run-many --target=build --all --parallel --maxParallel=6",
     "semantic-release": "semantic-release"
   },
   "peerDependencies": {

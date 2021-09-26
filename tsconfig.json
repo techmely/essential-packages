@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@techmely/utils": ["./packages/utils/src"],
+      "@techmely/types": ["./packages/types/src"]
+    }
+  }
+}

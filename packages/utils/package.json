@@ -9,8 +9,8 @@
     "url": "https://github.com/TechMeLy/techmely/utils.git"
   },
   "engines": {
-    "node": ">=14.15.4",
-    "npm": ">= 7.0.15"
+    "node": ">=14.17.6",
+    "npm": ">=7.22.0"
   },
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -21,15 +21,15 @@
     "typings"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production tsup --dts",
+    "build": "NODE_ENV=production tsup --dts",
     "clean": "rm -rf dist",
     "prepublish": "yarn clean",
     "version": "yarn version"
   },
   "peerDependencies": {
-    "dayjs": "^1.10.6",
-    "jwt-decode": "^3.1.2",
-    "throttle-debounce": "^3.0.1"
+    "dayjs": "1.10.6",
+    "jwt-decode": "3.1.2",
+    "throttle-debounce": "3.0.1"
   },
   "peerDependenciesMeta": {
     "dayjs": {
@@ -43,11 +43,11 @@
     }
   },
   "devDependencies": {
-    "@types/throttle-debounce": "^2.1.0",
-    "cross-env": "^7.0.3",
-    "dayjs": "^1.10.7",
-    "jwt-decode": "^3.1.2",
-    "throttle-debounce": "^3.0.1"
+    "@types/throttle-debounce": "2.1.0",
+    "cross-env": "7.0.3",
+    "dayjs": "1.10.7",
+    "jwt-decode": "3.1.2",
+    "throttle-debounce": "3.0.1"
   },
   "exports": {
     "./package.json": "./package.json",

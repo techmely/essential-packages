@@ -1,18 +1,12 @@
 {
   "version": 2,
-  "cli": {
-    "warnings": {
-      "versionMismatch": false
-    },
-    "packageManager": "yarn",
-    "analytics": false
-  },
   "projects": {
-    "@techmely/types": {
-      "root": "packages/types"
-    },
-    "@techmely/utils": {
-      "root": "packages/utils"
-    }
+    "@techmely/types": "packages/types",
+    "@techmely/utils": "packages/utils"
+  },
+  "cli": {
+    "packageManager": "yarn",
+    "defaultCollection": "@nrwl/workspace",
+    "analytics": false
   }
 }

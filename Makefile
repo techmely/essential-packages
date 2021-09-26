@@ -7,3 +7,7 @@ git-hook:
 
 	# Allow bash script execute
 	chmod -R 777 .githooks
+
+.PHONY: build-tsup
+build-tsup:
+	yarn cross-env NODE_ENV=production tsup --dts

@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  test:
+  lint-then-test:
     if: "!contains(github.event.head_commit.message, 'ci skip')"
     runs-on: ubuntu-latest
     steps:
@@ -35,11 +35,11 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Install dependencies
-        run: yarn install
+      - name: Run linting
+        run: nx run-many --target=eslint --all
 
       - name: Run unit tests
-        run: yarn test:jest
+        run: TZ=Asia/Ho_Chi_Minh nx run-many --target=unit-test --all
 
   bundlesize:
     if: "!contains(github.event.head_commit.message, 'ci skip')"

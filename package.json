@@ -1,6 +1,7 @@
 {
   "name": "techmely",
   "description": "",
+  "private": true,
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "repository": {

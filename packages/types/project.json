@@ -1,0 +1,27 @@
+{
+  "projectType": "library",
+  "root": "packages/types",
+  "sourceRoot": "packages/types/src",
+  "prefix": "techmely",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["packages/types/src/**/*.ts"]
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "cd packages/types && npx -y tsup --dts"
+          }
+        ],
+        "cwd": "."
+      }
+    }
+  },
+  "tags": ["scope:shared"]
+}

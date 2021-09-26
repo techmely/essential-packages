@@ -8,4 +8,4 @@ export type UnionToIntersection<Union> = (
   ? Intersection
   : never;
 
-type AnyFunction<ReturnType> = (...args: any) => ReturnType;
+export type AnyFunction<ReturnType> = (...args: any) => ReturnType;

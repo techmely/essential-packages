@@ -13,5 +13,5 @@ export const vietnamPhoneRegex = new RegExp(/^0(\d{9})$/);
 export const isValidVnPhone = (phone: string) => vietnamPhoneRegex.test(phone);
 
 // prettier-ignore
-export const urlRegex = /(((^https?:(?:\/\/)?)(?:[\w$&+,:;=-]+@)?[\d.A-Za-z-]+(?::\d+)?|(?:www.|[\w$&+,:;=-]+@)[\d.A-Za-z-]+)((?:\/[%+./~\w-_]*)?\??[\w%&+.;=@-]*#?\w*)?)$/;
+export const urlRegex = /(((^https?:(?:\/\/)?)(?:[\w$&+,:;=-]+@)?[\d.A-Za-z-]+(?::\d+)?|(?:www.|[\w$&+,:;=-]+@)[\d.A-Za-z-]+)((?:\/[\w%+./~-]*)?\??[\w%&+.;=@-]*(?:#\w*)?)?)$/;
 export const isValidUrl = (path: string) => urlRegex.test(path);

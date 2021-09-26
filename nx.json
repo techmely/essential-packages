@@ -37,7 +37,7 @@
       "implicitDependencies": []
     },
     "@techmely/utils": {
-      "implicitDependencies": []
+      "implicitDependencies": ["@techmely/types"]
     }
   },
   "affected": {

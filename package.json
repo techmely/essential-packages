@@ -47,7 +47,7 @@
     "@semantic-release/changelog": "6.0.0",
     "@semantic-release/git": "10.0.0",
     "@sucrase/jest-plugin": "2.1.1",
-    "@techmely/eslint-config-ts": "0.0.14",
+    "@techmely/eslint-config-ts": "0.0.15",
     "@techmely/types": "0.0.3",
     "@types/jest": "27.0.2",
     "@types/node": "16.9.6",

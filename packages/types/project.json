@@ -4,10 +4,12 @@
   "sourceRoot": "packages/types/src",
   "prefix": "techmely",
   "targets": {
-    "lint": {
+    "eslint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["packages/types/src/**/*.ts"]
+        "lintFilePatterns": ["packages/utils/src/**/*.ts"],
+        "cache": true,
+        "quiet": true
       },
       "outputs": ["{options.outputFile}"]
     },

@@ -1,7 +1,3 @@
-// eslint-disable-next-line max-classes-per-file
-
-import { Undefinable } from '@techmely/types';
-
 import { jwtDecodeToken } from '../_external/jwt';
 import { CookieInstance } from '../types';
 

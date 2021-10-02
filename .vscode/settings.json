@@ -16,8 +16,8 @@
   // ===
   "files.exclude": {
     "**/*.log": true,
-    "**/*.log*": true,
-    "node_modules": true
+    "**/*.log*": true
+    // "node_modules": true
   },
   "search.exclude": {
     "**/dist": true,
@@ -44,5 +44,41 @@
   //   "watchFile": "useFsEventsOnParentDirectory",
   //   "watchDirectory": "useFsEvents"
   // },
-  "npm.packageManager": "yarn"
+  "npm.packageManager": "yarn",
+  "cSpell.words": [
+    "Apivt",
+    "avif",
+    "bahmutov",
+    "bumpp",
+    "bundlesize",
+    "cacheable",
+    "codacy",
+    "codeql",
+    "compat",
+    "decamelize",
+    "decamelized",
+    "eslintignore",
+    "fsevents",
+    "harrytran",
+    "homemage",
+    "inmemory",
+    "lerp",
+    "lozad",
+    "Mergeable",
+    "Minh",
+    "nrwl",
+    "patreon",
+    "plusplus",
+    "pnpx",
+    "posva",
+    "preactjs",
+    "preinstall",
+    "sarif",
+    "shipjs",
+    "stylelint",
+    "techmely",
+    "tsup",
+    "typedefs",
+    "vite"
+  ]
 }

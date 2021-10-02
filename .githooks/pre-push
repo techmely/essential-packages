@@ -6,7 +6,7 @@ textError='\033[1;31m'
 textSuccess='\033[1;32m'
 
 echo -e "\nStarting run eslint..."
-eslintAnalyzeResults=$(yarn lint:eslint:quiet)
+eslintAnalyzeResults=$(nx run-many --target=eslint --all)
 
 if [[ $eslintAnalyzeResults =~ "ERROR" ]]; then
   echo "$eslintAnalyzeResults"
@@ -17,7 +17,7 @@ else
 fi
 
 echo -e "\n$textInfor Starting run unit test...$textBase\n"
-unitTestResult=$(yarn test:jest:silent)
+unitTestResult=$(nx run-many --target=unit-test --all)
 
 if [[ $unitTestResult =~ "FAIL" ]]; then
   echo "$unitTestResult"

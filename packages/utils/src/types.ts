@@ -1,5 +1,3 @@
-import { Undefinable } from '@techmely/types';
-
 export type MergeInsertions<T> = T extends Record<string, any>
   ? { [K in keyof T]: MergeInsertions<T[K]> }
   : T;
@@ -17,7 +15,7 @@ export type DeepMerge<F, S> = MergeInsertions<{
 export abstract class CookieInstance<T> {
   abstract setSecureToken(token: string, env?: string): void;
 
-  abstract get(name: string): Undefinable<string>;
+  abstract get(name: string): string | undefined;
 
   abstract getSecureToken(env: string): string;
 

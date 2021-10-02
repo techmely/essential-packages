@@ -1,14 +1,4 @@
-module.exports = {
-  globals: {
-    __DEV__: false,
-    __TEST__: true,
-  },
-  rootDir: '.',
-  testEnvironment: 'node',
-  transform: {
-    '^.+\\.tsx?$': '@sucrase/jest-plugin',
-  },
-  testPathIgnorePatterns: ['/node_modules/', '/dist/', '/types/'],
-  moduleFileExtensions: ['js', 'ts', 'tsx', 'json', 'node'],
-  testMatch: ['<rootDir>/packages/**/test/**/*.test.(ts|tsx)'],
-};
+const { getJestProjects } = require('@nrwl/jest');
+const presetJest = require('./jest.preset');
+
+module.exports = { projects: getJestProjects(), ...presetJest };

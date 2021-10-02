@@ -1,6 +1,6 @@
 {
   "name": "@techmely/types",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Techmely types definitions",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -10,20 +10,15 @@
   },
   "engines": {
     "node": ">=14.17.6",
-    "npm": ">= 7.0.15"
+    "npm": ">=7.22.0"
   },
-  "main": "index.d.ts",
-  "types": "index.d.ts",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
-    "index.d.ts",
-    "README.md"
+    "dist"
   ],
-  "scripts": {
-    "version": "yarn version"
-  },
-  "devDependencies": {
-    "@types/node": "^16.9.6"
-  },
   "funding": [
     {
       "type": "ko-fi",

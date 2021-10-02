@@ -1,0 +1,36 @@
+{
+  "projectType": "library",
+  "root": "packages/utils",
+  "sourceRoot": "packages/utils/src",
+  "prefix": "techmely",
+  "targets": {
+    "eslint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["packages/utils/src/**/*.ts"],
+        "cache": true,
+        "quiet": true
+      },
+      "outputs": ["{options.outputFile}"]
+    },
+    "unit-test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "packages/utils/jest.config.js",
+        "passWithNoTests": true
+      },
+      "outputs": ["coverage/packages/utils"]
+    },
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "cd packages/utils && npx -y tsup --dts"
+          }
+        ]
+      }
+    }
+  },
+  "tags": ["scope:shared", "type:utils"]
+}

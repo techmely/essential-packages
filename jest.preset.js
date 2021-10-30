@@ -1,7 +1,6 @@
 // const nxPreset = require('@nrwl/jest/preset');
 
 module.exports = {
-  // ...nxPreset,
   globals: {
     __DEV__: true,
     __TEST__: true,

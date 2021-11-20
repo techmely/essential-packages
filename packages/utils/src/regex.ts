@@ -16,4 +16,4 @@ export const isValidVnPhone = (phone: string) => vietnamPhoneRegex.test(phone);
 export const urlRegex = /(((^https?:(?:\/\/)?)(?:[\w$&+,:;=-]+@)?[\d.A-Za-z-]+(?::\d+)?|(?:www.|[\w$&+,:;=-]+@)[\d.A-Za-z-]+)((?:\/[\w%+./~-]*)?\??[\w%&+.;=@-]*(?:#\w*)?)?)$/;
 export const isValidUrl = (path: string) => urlRegex.test(path);
 
-export const hexColor = /^#(([a-f\d]{2}){3,4})$/;
+export const hexColor = /^#(([\da-f]{2}){3,4})$/;

@@ -4,7 +4,7 @@ export * from './date';
 export * from './logger';
 export * from './math';
 // export * from './number';
-export * from './images';
+export * from './files';
 export * from './object';
 export * from './regex';
 export * from './transform';

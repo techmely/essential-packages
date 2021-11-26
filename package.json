@@ -38,6 +38,7 @@
     "semantic-release": "18.0.0",
     "sucrase": "3.20.3",
     "tsup": "5.7.0",
+    "jscpd": "3.4.2",
     "typescript": "4.4.4",
     "ultra-runner": "^3.10.5"
   },

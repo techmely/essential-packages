@@ -5,7 +5,8 @@
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/vite-plugin/**"
   ],
   "repository": {
     "type": "git",
@@ -19,7 +20,13 @@
     "preinstall": "npx only-allow yarn",
     "postinstall": "make git-hook",
     "bundlesize": "bundlesize --config config/bundlesize.config.json",
-    "build": "nx run-many --target=build --all --parallel --maxParallel=6",
+    "build:deps": "yarn workspaces foreach -Apivt run build",
+    "build:types": "yarn workspace @techmely/types run build",
+    "build:vite-plugin": "yarn workspace @techmely/vite-plugin-runtime-env run build",
+    "build:test-utils": "yarn workspace @techmely/test-utils run build",
+    "build:utils": "yarn workspace @techmely/utils run build",
+    "build:ui": "yarn workspace @techmely/ui run build",
+    "build:hooks": "yarn workspace @techmely/hooks run build",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
@@ -28,19 +35,18 @@
     "@semantic-release/git": "10.0.1",
     "@sucrase/jest-plugin": "2.2.0",
     "@techmely/types": "0.0.3",
-    "@types/jest": "27.0.2",
-    "@types/node": "16.11.7",
+    "@types/jest": "27.0.3",
+    "@types/node": "16.11.10",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",
     "jest": "27.3.1",
+    "jscpd": "3.4.2",
     "rimraf": "3.0.2",
     "rome": "10.0.4-beta",
-    "semantic-release": "18.0.0",
+    "semantic-release": "18.0.1",
     "sucrase": "3.20.3",
-    "tsup": "5.7.0",
-    "jscpd": "3.4.2",
-    "typescript": "4.4.4",
-    "ultra-runner": "^3.10.5"
+    "tsup": "5.10.0",
+    "typescript": "4.5.2"
   },
   "funding": [
     {

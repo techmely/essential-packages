@@ -1,0 +1,36 @@
+{
+  "name": "@techmely/vite-plugin-runtime-env",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "version": "1.0.0",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "typing": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup --dts",
+    "build:dev": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@techmely/utils": "workspace:^",
+    "dotenv": "10.0.0"
+  },
+  "peerDependencies": {
+    "vite": "2.6.14"
+  },
+  "devDependencies": {
+    "tsup": "5.10.0",
+    "vite": "2.6.14"
+  }
+}

@@ -3,7 +3,8 @@
   "compilerOptions": {
     "paths": {
       "@techmely/utils": ["./packages/utils/src"],
-      "@techmely/types": ["./packages/types/src"]
+      "@techmely/types": ["./packages/types/src"],
+      "@techmely/vite-plugin-runtime-env": ["./packages/vite-plugin/runtime-env/src"]
     }
   }
 }

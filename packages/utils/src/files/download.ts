@@ -15,6 +15,7 @@ export function downloadByData(data: BlobPart, filename: string, mime?: string, 
   tempLink.style.display = 'none';
   tempLink.href = blobURL;
   tempLink.setAttribute('download', filename);
+  tempLink.dataset.testid = 'link-download-blob-file';
 
   if (typeof tempLink.download === 'undefined') {
     tempLink.setAttribute('target', '_blank');

@@ -1,7 +1,19 @@
 import { Options } from 'tsup';
 
-export default function getTsupOptions(pkg: any) {
-  const external = [...new Set(Object.keys(pkg.peerDependencies ?? {}))];
+type BuildOptions = {
+  externalDeps?: string[];
+  tsupOptions?: Partial<Options>;
+};
+
+export default function getTsupOptions(pkg: any, buildOptions?: BuildOptions) {
+  let external = [
+    ...new Set(Object.keys(pkg.peerDependencies ?? {})),
+    ...new Set(Object.keys(pkg.devDependencies ?? {})),
+  ];
+  if (buildOptions?.externalDeps) {
+    external = [...external, ...buildOptions.externalDeps];
+  }
+
   const isProd = process.env.NODE_ENV === 'production';
 
   const options: Options = {
@@ -12,6 +24,7 @@ export default function getTsupOptions(pkg: any) {
     splitting: false,
     external,
     ignoreWatch: ['**/{.git,node_modules}/**', 'dist', 'src/**/*.spec.ts'],
+    ...buildOptions?.tsupOptions,
   };
   return options;
 }

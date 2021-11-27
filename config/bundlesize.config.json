@@ -7,6 +7,14 @@
     {
       "path": "packages/*/dist/index.mjs",
       "maxSize": "5kB"
+    },
+    {
+      "path": "packages/vite-plugin/*/dist/index.mjs",
+      "maxSize": "5kB"
+    },
+    {
+      "path": "packages/vite-plugin/*/dist/index.mjs",
+      "maxSize": "5kB"
     }
   ]
 }

@@ -17,8 +17,23 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "typings"
   ],
+  "scripts": {
+    "build": "tsup --dts",
+    "build:dev": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist",
+    "prepublish": "yarn clean",
+    "version": "yarn version"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "funding": [
     {
       "type": "ko-fi",

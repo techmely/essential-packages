@@ -12,7 +12,7 @@
 
 ## Features
 
-- 📦 2kb mini library
+- 📦 <5kb mini libraries
 - Tree-shakable ESM
 - Unit Test coverage 100% with [jest](https://jestjs.io) + [sucrase](https://sucrase.io)
 - Code quality analysis is A+ with [codacy](https://www.codacy.com) and [deepscan](https://deepscan.io)

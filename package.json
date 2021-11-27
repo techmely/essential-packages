@@ -27,6 +27,7 @@
     "build:utils": "yarn workspace @techmely/utils run build",
     "build:ui": "yarn workspace @techmely/ui run build",
     "build:hooks": "yarn workspace @techmely/hooks run build",
+    "build:build-configs": "yarn workspace @techmely/build-configs run build",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {

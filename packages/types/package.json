@@ -6,11 +6,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TechMeLy/techmely/techmely.git"
+    "url": "https://github.com/techmely/techmely/techmely.git"
   },
   "engines": {
-    "node": ">=14.17.6",
-    "npm": ">=7.22.0"
+    "node": ">=16.13.0",
+    "npm": ">=8.1.0"
   },
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -21,9 +21,7 @@
     "typings"
   ],
   "scripts": {
-    "build": "tsup --dts",
-    "build:dev": "tsup",
-    "dev": "tsup --watch",
+    "build": "tsup src/index.ts --dts --format esm,cjs --minify --splitting",
     "clean": "rimraf dist",
     "prepublish": "yarn clean",
     "version": "yarn version"
@@ -43,5 +41,12 @@
       "type": "patreon",
       "url": "https://www.patreon.com/harrytran998"
     }
+  ],
+  "bugs": {
+    "url": "https://github.com/techmely/techmely/issues"
+  },
+  "keywords": [
+    "techmely",
+    "types"
   ]
 }

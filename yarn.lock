@@ -1229,9 +1229,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@techmely/types@0.0.3, @techmely/types@workspace:packages/types":
+"@techmely/build-configs@workspace:^, @techmely/build-configs@workspace:packages/build-configs":
+  version: 0.0.0-use.local
+  resolution: "@techmely/build-configs@workspace:packages/build-configs"
+  dependencies:
+    "@techmely/types": "workspace:^"
+  peerDependencies:
+    tsup: 5.10.0
+  peerDependenciesMeta:
+    tsup:
+      optional: true
+  languageName: unknown
+  linkType: soft
+
+"@techmely/types@0.0.3, @techmely/types@workspace:^, @techmely/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@techmely/types@workspace:packages/types"
+  dependencies:
+    "@techmely/build-configs": "workspace:^"
   languageName: unknown
   linkType: soft
 
@@ -1239,6 +1254,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:
+    "@techmely/build-configs": "workspace:^"
     "@types/debug": ^4
     "@types/jest": 27.0.3
     "@types/throttle-debounce": 2.1.0
@@ -1265,6 +1281,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@techmely/vite-plugin-runtime-env@workspace:packages/vite-plugin/runtime-env"
   dependencies:
+    "@techmely/build-configs": "workspace:^"
     "@techmely/utils": "workspace:^"
     dotenv: 10.0.0
     tsup: 5.10.0

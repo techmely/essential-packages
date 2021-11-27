@@ -1,11 +1,12 @@
 import { Options } from 'tsup';
+import { BasePackageJson } from '@techmely/types';
 
 type BuildOptions = {
   externalDeps?: string[];
   tsupOptions?: Partial<Options>;
 };
 
-export default function getTsupOptions(pkg: any, buildOptions?: BuildOptions) {
+export function getTsupOptions(pkg: BasePackageJson, buildOptions?: BuildOptions) {
   let external = [
     ...new Set(Object.keys(pkg.peerDependencies ?? {})),
     ...new Set(Object.keys(pkg.devDependencies ?? {})),

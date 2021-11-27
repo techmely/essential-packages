@@ -1,4 +1,5 @@
 export * from './combination';
+export * from './package';
 
 export interface Dict<T> {
   [key: string]: T;

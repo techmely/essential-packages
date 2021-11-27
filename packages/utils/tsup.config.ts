@@ -1,4 +1,4 @@
-import config from '../../config/tsup.base';
+import { getTsupOptions } from '@techmely/build-configs';
 import pkg from './package.json';
 
-export default config(pkg, { tsupOptions: { minify: true } });
+export default getTsupOptions(pkg, { tsupOptions: { minify: true } });

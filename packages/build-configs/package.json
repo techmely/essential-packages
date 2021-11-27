@@ -1,12 +1,12 @@
 {
-  "name": "@techmely/utils",
-  "version": "0.0.3",
-  "description": "Collection of helpful JavaScript / TypeScript utils",
+  "name": "@techmely/build-configs",
+  "version": "1.0.0",
+  "description": "Techmely build configurations",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TechMeLy/techmely/utils.git"
+    "url": "https://github.com/techmely/techmely/techmely.git"
   },
   "engines": {
     "node": ">=16.13.0",
@@ -29,30 +29,15 @@
     "version": "yarn version"
   },
   "peerDependencies": {
-    "dayjs": "1.10.6",
-    "jwt-decode": "3.1.2",
-    "throttle-debounce": "3.0.1"
+    "tsup": "5.10.0"
   },
   "peerDependenciesMeta": {
-    "dayjs": {
-      "optional": true
-    },
-    "jwt-decode": {
-      "optional": true
-    },
-    "throttle-debounce": {
+    "tsup": {
       "optional": true
     }
   },
   "devDependencies": {
-    "@techmely/build-configs": "workspace:^",
-    "@types/debug": "^4",
-    "@types/jest": "27.0.3",
-    "@types/throttle-debounce": "2.1.0",
-    "chalk": "^5.0.0",
-    "dayjs": "1.10.7",
-    "jwt-decode": "3.1.2",
-    "throttle-debounce": "3.0.1"
+    "@techmely/types": "workspace:^"
   },
   "exports": {
     ".": {
@@ -70,7 +55,11 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
-  "dependencies": {
-    "debug": "^4.3.2"
-  }
+  "bugs": {
+    "url": "https://github.com/techmely/techmely/issues"
+  },
+  "keywords": [
+    "techmely",
+    "types"
+  ]
 }

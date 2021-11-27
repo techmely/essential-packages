@@ -19,7 +19,7 @@
   "scripts": {
     "preinstall": "npx only-allow yarn",
     "postinstall": "make git-hook",
-    "bundlesize": "bundlesize --config config/bundlesize.config.json",
+    "bundlesize": "bundlesize",
     "build:deps": "yarn workspaces foreach -Apivt run build",
     "build:types": "yarn workspace @techmely/types run build",
     "build:vite-plugin": "yarn workspace @techmely/vite-plugin-runtime-env run build",

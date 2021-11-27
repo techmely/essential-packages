@@ -21,8 +21,10 @@
     "typings"
   ],
   "scripts": {
-    "build": "NODE_ENV=production tsup --dts",
-    "clean": "rm -rf dist",
+    "build": "tsup --dts",
+    "build:dev": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist",
     "prepublish": "yarn clean",
     "version": "yarn version"
   },
@@ -43,15 +45,15 @@
     }
   },
   "devDependencies": {
+    "@types/debug": "^4",
     "@types/jest": "27.0.3",
     "@types/throttle-debounce": "2.1.0",
-    "cross-env": "7.0.3",
+    "chalk": "^5.0.0",
     "dayjs": "1.10.7",
     "jwt-decode": "3.1.2",
     "throttle-debounce": "3.0.1"
   },
   "exports": {
-    "./package.json": "./package.json",
     ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
@@ -66,5 +68,8 @@
       "type": "patreon",
       "url": "https://www.patreon.com/harrytran998"
     }
-  ]
+  ],
+  "dependencies": {
+    "debug": "^4.3.2"
+  }
 }

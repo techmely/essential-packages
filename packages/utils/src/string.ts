@@ -1,3 +1,7 @@
-export default function capitalizeFirst(str: string): string {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+export function snake2camel(src: string) {
+  return src.replace(/_([a-z])/g, g => g[1].toUpperCase());
+}
+
+export function capitalizeFirst(value: string) {
+  return value.replace(/^./, value[0].toUpperCase());
 }

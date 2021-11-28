@@ -1,0 +1,61 @@
+{
+  "folders": [
+    {
+      "name": "utils",
+      "path": "packages/utils/"
+    },
+    {
+      "name": "build-configs",
+      "path": "packages/build-configs/"
+    },
+    {
+      "name": "types",
+      "path": "packages/types"
+    },
+    {
+      "name": "vite-plugin/runtime-env",
+      "path": "packages/vite-plugin/runtime-env/"
+    },
+    {
+      "name": "monorepo",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.associations": {
+      ".code-workspace": "jsonc",
+      "README": "markdown"
+    },
+    "search.useIgnoreFiles": true,
+    "todo-tree.general.tags": ["TODO:", "FIXME:"],
+    "todo-tree.highlights.defaultHighlight": {
+      "gutterIcon": true
+    },
+    "todo-tree.highlights.customHighlight": {
+      "TODO:": {
+        "foreground": "#fff",
+        "background": "#ffbd2a",
+        "iconColour": "#ffbd2a"
+      },
+      "FIXME:": {
+        "foreground": "#fff",
+        "background": "#f06292",
+        "icon": "flame",
+        "iconColour": "#f06292"
+      }
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.tabSize": 2,
+      "editor.formatOnType": true,
+      "editor.formatOnPaste": true,
+      "editor.formatOnSave": true
+    },
+    "typescript.tsdk": ".yarn/sdks/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.tsserver.watchOptions": {
+      "watchFile": "useFsEventsOnParentDirectory",
+      "watchDirectory": "useFsEvents"
+    }
+  }
+}

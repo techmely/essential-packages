@@ -1,5 +1,5 @@
 {
-  "name": "techmely",
+  "name": "@techmely/monorepo",
   "description": "Techmely Communities Packages",
   "private": true,
   "author": "Harry Tran <nhattq.coding@gmail.com>",
@@ -28,7 +28,9 @@
     "build:ui": "yarn workspace @techmely/ui run build",
     "build:hooks": "yarn workspace @techmely/hooks run build",
     "build:build-configs": "yarn workspace @techmely/build-configs run build",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "clean": "yarn workspaces foreach -Apivt run clean",
+    "clean:cache": "yarn cache clean --all && rimraf .yarn/build-state.yml .yarn/install-state.gz node_modules yarn.lock"
   },
   "devDependencies": {
     "@ls-lint/ls-lint": "1.10.0",
@@ -38,6 +40,7 @@
     "@techmely/types": "0.0.3",
     "@types/jest": "27.0.3",
     "@types/node": "16.11.10",
+    "@yarnpkg/sdks": "^2.5.1-rc.4",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",
     "jest": "27.3.1",

@@ -37,13 +37,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  // "eslint.nodePath": ".yarn/sdks",
-  // "typescript.enablePromptUseWorkspaceTsdk": true,
-  // "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  // "typescript.tsserver.watchOptions": {
-  //   "watchFile": "useFsEventsOnParentDirectory",
-  //   "watchDirectory": "useFsEvents"
-  // },
   "npm.packageManager": "yarn",
   "cSpell.words": [
     "Apivt",
@@ -84,5 +77,11 @@
     "tsup",
     "typedefs",
     "vite"
-  ]
+  ],
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsserver.watchOptions": {
+    "watchFile": "useFsEventsOnParentDirectory",
+    "watchDirectory": "useFsEvents"
+  }
 }

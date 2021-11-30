@@ -37,7 +37,8 @@
     }
   },
   "devDependencies": {
-    "@techmely/types": "workspace:^"
+    "@techmely/types": "workspace:^",
+    "tsup": "5.10.0"
   },
   "exports": {
     ".": {

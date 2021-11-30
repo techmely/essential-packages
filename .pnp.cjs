@@ -42,7 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["@techmely/build-configs", ["virtual:2f8c3c40f99ceab50617baa8c9cd602c46a69abdfabd70cb8dafc19370824268ef91c3f4c9e5f81bf26a5dea7944cd42375bf8493596a078569985f55e4236d3#workspace:packages/build-configs", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#workspace:packages/build-configs", "virtual:7d65edfaef09df5512cc40bbf03c01fa801b75889552780cb97afa0b6fb1672366d0aa3ef2ceda1dbe0afab34e809baefe09f339771092ea48b1efddcd02f006#workspace:packages/build-configs", "workspace:packages/build-configs"]],
+      ["@techmely/build-configs", ["virtual:2f8c3c40f99ceab50617baa8c9cd602c46a69abdfabd70cb8dafc19370824268ef91c3f4c9e5f81bf26a5dea7944cd42375bf8493596a078569985f55e4236d3#workspace:packages/build-configs", "virtual:7d65edfaef09df5512cc40bbf03c01fa801b75889552780cb97afa0b6fb1672366d0aa3ef2ceda1dbe0afab34e809baefe09f339771092ea48b1efddcd02f006#workspace:packages/build-configs", "workspace:packages/build-configs"]],
       ["@techmely/monorepo", ["workspace:."]],
       ["@techmely/types", ["workspace:packages/types"]],
       ["@techmely/utils", ["virtual:7d65edfaef09df5512cc40bbf03c01fa801b75889552780cb97afa0b6fb1672366d0aa3ef2ceda1dbe0afab34e809baefe09f339771092ea48b1efddcd02f006#workspace:packages/utils", "workspace:packages/utils"]],
@@ -59,26 +59,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@semantic-release/changelog", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:6.0.1"],
             ["@semantic-release/git", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:10.0.1"],
             ["@sucrase/jest-plugin", "npm:2.2.0"],
-            ["@techmely/build-configs", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#workspace:packages/build-configs"],
             ["@techmely/types", "workspace:packages/types"],
-            ["@types/debug", "npm:4.1.7"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:16.11.10"],
-            ["@types/throttle-debounce", "npm:2.1.0"],
             ["@yarnpkg/sdks", "npm:2.5.1-rc.4"],
             ["bundlesize", "npm:0.18.1"],
-            ["chalk", "npm:5.0.0"],
             ["cross-env", "npm:7.0.3"],
-            ["dayjs", "npm:1.10.7"],
             ["jest", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:27.3.1"],
             ["jscpd", "npm:3.4.2"],
-            ["jwt-decode", "npm:3.1.2"],
             ["rimraf", "npm:3.0.2"],
             ["rome", "npm:10.0.4-beta"],
             ["semantic-release", "npm:18.0.1"],
             ["sucrase", "npm:3.20.3"],
             ["tsup", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:5.10.0"],
-            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=ddd1e8"]
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "linkType": "SOFT",
         }]
@@ -1895,25 +1889,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@techmely/build-configs", "virtual:2f8c3c40f99ceab50617baa8c9cd602c46a69abdfabd70cb8dafc19370824268ef91c3f4c9e5f81bf26a5dea7944cd42375bf8493596a078569985f55e4236d3#workspace:packages/build-configs"],
             ["@techmely/types", "workspace:packages/types"],
             ["@types/tsup", null],
-            ["tsup", null]
+            ["tsup", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:5.10.0"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "packagePeers": [
-            "@types/tsup",
-            "tsup"
-          ],
-          "linkType": "SOFT",
-        }],
-        ["virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#workspace:packages/build-configs", {
-          "packageLocation": "./.yarn/__virtual__/@techmely-build-configs-virtual-71361051c4/1/packages/build-configs/",
-          "packageDependencies": [
-            ["@techmely/build-configs", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#workspace:packages/build-configs"],
-            ["@techmely/types", "workspace:packages/types"],
-            ["@types/tsup", null],
-            ["tsup", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:5.10.0"]
-          ],
-          "packagePeers": [
-            "@types/tsup",
-            "tsup"
+            "@types/tsup"
           ],
           "linkType": "SOFT",
         }],
@@ -1923,7 +1903,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@techmely/build-configs", "virtual:7d65edfaef09df5512cc40bbf03c01fa801b75889552780cb97afa0b6fb1672366d0aa3ef2ceda1dbe0afab34e809baefe09f339771092ea48b1efddcd02f006#workspace:packages/build-configs"],
             ["@techmely/types", "workspace:packages/types"],
             ["@types/tsup", null],
-            ["tsup", "virtual:7d65edfaef09df5512cc40bbf03c01fa801b75889552780cb97afa0b6fb1672366d0aa3ef2ceda1dbe0afab34e809baefe09f339771092ea48b1efddcd02f006#npm:5.10.0"]
+            ["tsup", "virtual:7d65edfaef09df5512cc40bbf03c01fa801b75889552780cb97afa0b6fb1672366d0aa3ef2ceda1dbe0afab34e809baefe09f339771092ea48b1efddcd02f006#npm:5.10.0"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "packagePeers": [
             "@types/tsup",
@@ -1935,7 +1916,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/build-configs/",
           "packageDependencies": [
             ["@techmely/build-configs", "workspace:packages/build-configs"],
-            ["@techmely/types", "workspace:packages/types"]
+            ["@techmely/types", "workspace:packages/types"],
+            ["tsup", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:5.10.0"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "linkType": "SOFT",
         }]
@@ -1949,26 +1932,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@semantic-release/changelog", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:6.0.1"],
             ["@semantic-release/git", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:10.0.1"],
             ["@sucrase/jest-plugin", "npm:2.2.0"],
-            ["@techmely/build-configs", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#workspace:packages/build-configs"],
             ["@techmely/types", "workspace:packages/types"],
-            ["@types/debug", "npm:4.1.7"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:16.11.10"],
-            ["@types/throttle-debounce", "npm:2.1.0"],
             ["@yarnpkg/sdks", "npm:2.5.1-rc.4"],
             ["bundlesize", "npm:0.18.1"],
-            ["chalk", "npm:5.0.0"],
             ["cross-env", "npm:7.0.3"],
-            ["dayjs", "npm:1.10.7"],
             ["jest", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:27.3.1"],
             ["jscpd", "npm:3.4.2"],
-            ["jwt-decode", "npm:3.1.2"],
             ["rimraf", "npm:3.0.2"],
             ["rome", "npm:10.0.4-beta"],
             ["semantic-release", "npm:18.0.1"],
             ["sucrase", "npm:3.20.3"],
             ["tsup", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:5.10.0"],
-            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=ddd1e8"]
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "linkType": "SOFT",
         }]
@@ -10569,7 +10546,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rollup", "npm:2.60.1"],
             ["sucrase", "npm:3.20.3"],
             ["tree-kill", "npm:1.2.2"],
-            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=ddd1e8"]
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "packagePeers": [
             "@types/typescript",
@@ -10708,10 +10685,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["typescript", [
-        ["patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=ddd1e8", {
-          "packageLocation": "./.yarn/cache/typescript-patch-04b86b0e5c-24a439e062.zip/node_modules/typescript/",
+        ["patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53", {
+          "packageLocation": "./.yarn/cache/typescript-patch-613ccf361e-53838d56ab.zip/node_modules/typescript/",
           "packageDependencies": [
-            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=ddd1e8"]
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "linkType": "HARD",
         }]

@@ -97,4 +97,15 @@ export function isPngImage(buffer: Buffer | Uint8Array) {
   );
 }
 
+export function isPrimitive(value: unknown): boolean {
+  if (value === null) {
+    return true;
+  }
+
+  return !['array', 'function', 'object'].includes(typeof value);
+}
+
+export const isDeepEqual = (a: unknown, b: unknown): boolean =>
+  JSON.stringify(a) === JSON.stringify(b);
+
 /* eslint-enable jsdoc/require-jsdoc */

@@ -34,11 +34,15 @@
   },
   "peerDependencies": {
     "dayjs": "1.10.6",
+    "exceljs": "4.3.0",
     "jwt-decode": "3.1.2",
     "throttle-debounce": "3.0.1"
   },
   "peerDependenciesMeta": {
     "dayjs": {
+      "optional": true
+    },
+    "exceljs": {
       "optional": true
     },
     "jwt-decode": {
@@ -55,6 +59,7 @@
     "@types/throttle-debounce": "2.1.0",
     "chalk": "5.0.0",
     "dayjs": "1.10.7",
+    "exceljs": "4.3.0",
     "jwt-decode": "3.1.2",
     "throttle-debounce": "3.0.1"
   },

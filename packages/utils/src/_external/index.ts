@@ -1,2 +1,2 @@
-export * from './date';
+export * from './dayjs';
 export * from './jwt';

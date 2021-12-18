@@ -1,0 +1,13 @@
+ls:
+  .js: camelCase | point.case
+  .ts: camelCase | point.case
+
+ignore:
+  - dist
+  - packages/**/dist
+  - coverage
+  - .git
+  - .github
+  - .vscode
+  - .idea
+  - .yarn

@@ -1,0 +1,90 @@
+{
+  // ===
+  // Spacing
+  // ===
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "editor.quickSuggestionsDelay": 0,
+  // Integrate with windowns user
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  // ===
+  // Files
+  // ===
+  "files.exclude": {
+    "**/*.log": true,
+    "**/*.log*": true
+    // "node_modules": true
+  },
+  "search.exclude": {
+    "**/dist": true,
+    "dist": true,
+    "node_modules": true,
+    "**/coverge": true,
+    "**/node_modules": true,
+    "libs": true,
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  // ===
+  // Event Triggers
+  // ===
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "npm.packageManager": "yarn",
+  "cSpell.words": [
+    "Apivt",
+    "argb",
+    "avif",
+    "bahmutov",
+    "bumpp",
+    "bundlesize",
+    "cacheable",
+    "codacy",
+    "codeql",
+    "compat",
+    "decamelize",
+    "decamelized",
+    "eslintignore",
+    "exceljs",
+    "fsevents",
+    "harrytran",
+    "heic",
+    "homemage",
+    "inmemory",
+    "lerp",
+    "letiables",
+    "lozad",
+    "Mergeable",
+    "Minh",
+    "msvideo",
+    "nrwl",
+    "patreon",
+    "plusplus",
+    "pnpx",
+    "posva",
+    "preactjs",
+    "preinstall",
+    "quicktime",
+    "sarif",
+    "shipjs",
+    "stylelint",
+    "techmely",
+    "tsup",
+    "typedefs",
+    "vite"
+  ],
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsserver.watchOptions": {
+    "watchFile": "useFsEventsOnParentDirectory",
+    "watchDirectory": "useFsEvents"
+  },
+  "eslint.nodePath": ".yarn/sdks"
+}

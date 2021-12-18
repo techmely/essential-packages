@@ -1,0 +1,30 @@
+#!/bin/bash -e
+
+textBase='\033[0m'
+textInfor='\033[1;34m'
+textError='\033[1;31m'
+textSuccess='\033[1;32m'
+
+echo -e "\n$textInfor Starting run unit test...$textBase\n"
+unitTestResult=$(yarn test:jest)
+
+if [[ $unitTestResult =~ "FAIL" ]]; then
+  echo "$unitTestResult"
+  echo -e "$textError Unit test failed! Pls review your code before push codes to remotes origin."
+  exit 1
+else
+  echo -e "\n$textSuccess Check unit test successfully"
+fi
+
+# echo -e "\n$textInfor Starting check bundlesize..."
+# bundleSizeResult=$(yarn bundlesize)
+
+# if [[ $bundleSizeResult =~ "FAIL" ]]; then
+#   echo "$bundleSizeResult"
+#   echo -e "$textError Check bundlesize failed! Pls review your code before push codes to remotes origin."
+#   exit 1
+# else
+#   echo -e "\n$textSuccess Check bundlesize successfully"
+# fi
+
+echo -e "\n$textSuccess All check PASSED, starting push your code on remotes origin.$textBase\n"

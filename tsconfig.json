@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@admin/*": ["packages/admin/src/*"],
+      "@techmely/product": ["packages/product/src"]
+    }
+  },
+  "exclude": ["packages/**/dist", "packages/**/public", "packages/**/node_modules"]
+}

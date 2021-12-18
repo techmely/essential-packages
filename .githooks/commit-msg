@@ -1,0 +1,26 @@
+#!/bin/bash -e
+
+branchName=$(git rev-parse --abbrev-ref HEAD)
+# Origin pattern https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format
+commitMsgRegex='(revert: )?(feat|fix|docs|style|refactor|perf|test|workflow|ci|chore|types|release)(\(.+\))?(:)? .{1,50}'
+
+textBase='\033[0m'
+textInfor='\033[1;34m'
+textError='\033[1;31m'
+textSuccess='\033[1;32m'
+gitCommitMsg=$(head -n 1 "$1") # $1 is path =  .git/COMMIT_EDITMSG
+
+echo -e "\n$textInfor Starting verify commit message..."
+if [[ -n "$branchName" ]]; then
+ if ! [[ $gitCommitMsg =~ $commitMsgRegex ]]; then
+   echo -e "\n$textError Invalid commit message format - Aborting commit"
+   echo -e "$textBase Pls follow this commit message format: https://github.com/angular/angular/blob/master/CONTRIBUTING.md#-commit-message-format"
+   echo -e "\t$textSuccess feat(ui): improve toast notification"
+   echo -e "\t$textSuccess fix(redux): handle events ABC when login"
+   echo -e "\n$textError Commit failed, terminated process, pls try again."
+      exit 1
+ fi
+ # Append prefix branch name into commit message
+ sed -i.bak -e "1s~^~$branchName ~" "$1"
+fi
+echo -e "\n$textSuccess Verify commit message successful.$textBase\n"

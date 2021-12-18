@@ -1,0 +1,4 @@
+.github/commit-convention.md
+node_modules
+.vscode/cspell.json
+.yarnrc.yml

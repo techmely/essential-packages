@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "DavidAnson.vscode-markdownlint",
+    "esbenp.prettier-vscode",
+    "Orta.vscode-jest",
+    "mikestead.dotenv",
+    "usernamehw.errorlens",
+    "arcanis.vscode-zipfs"
+  ]
+}

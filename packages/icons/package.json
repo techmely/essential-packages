@@ -1,0 +1,41 @@
+{
+  "name": "@techmely/icons",
+  "license": "unlicense",
+  "version": "1.0.0",
+  "description": "",
+  "author": "From Hieu Tran<https://github.com/hieuhani> <3 with love",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "yarn generate-icons && tsup --dts",
+    "dev": "yarn generate-icons && tsup --watch",
+    "generate-icons": "node scripts/generate-icon-components.js",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@techmely/build-configs": "workspace:^",
+    "@types/react": "17.0.37",
+    "camelcase": "6.2.1",
+    "cheerio": "1.0.0-rc.10",
+    "glob": "7.2.0",
+    "glob-promise": "4.2.2",
+    "prettier": "2.5.1",
+    "tsup": "5.11.6"
+  },
+  "peerDependencies": {
+    "@emotion/react": "11.7.1",
+    "@emotion/styled": "11.6.0",
+    "react": "17.0.2"
+  }
+}

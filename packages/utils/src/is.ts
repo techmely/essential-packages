@@ -33,12 +33,16 @@ export function isNumber(val: unknown): val is number {
   return is(val, 'Number');
 }
 
+type EmptyArray<T> = readonly [T, ...ReadonlyArray<T>];
+const isEmptyArr = <T>(array: ReadonlyArray<T> | undefined): array is EmptyArray<T> =>
+  !!array && array.length === 0;
+
 export function isEmpty<T = unknown>(val: T): val is T {
   if (!val) {
     return true;
   }
   if (isArray(val)) {
-    return val.length === 0;
+    return isEmptyArr(val);
   }
 
   if (isString(val)) {

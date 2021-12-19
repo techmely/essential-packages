@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -17,8 +17,7 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "typings"
+    "dist"
   ],
   "scripts": {
     "build": "tsup --dts",
@@ -28,15 +27,10 @@
     "prepublish": "yarn clean",
     "version": "yarn version"
   },
-  "publishConfig": {
-    "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
-  },
   "peerDependencies": {
     "dayjs": "1.10.6",
     "exceljs": "4.3.0",
-    "jwt-decode": "3.1.2",
-    "throttle-debounce": "3.0.1"
+    "jwt-decode": "3.1.2"
   },
   "peerDependenciesMeta": {
     "dayjs": {
@@ -47,21 +41,17 @@
     },
     "jwt-decode": {
       "optional": true
-    },
-    "throttle-debounce": {
-      "optional": true
     }
   },
   "devDependencies": {
     "@techmely/build-configs": "workspace:^",
     "@types/debug": "4.1.7",
     "@types/jest": "27.0.3",
-    "@types/throttle-debounce": "2.1.0",
     "chalk": "5.0.0",
     "dayjs": "1.10.7",
     "exceljs": "4.3.0",
     "jwt-decode": "3.1.2",
-    "throttle-debounce": "3.0.1"
+    "typescript": "4.5.2"
   },
   "exports": {
     ".": {

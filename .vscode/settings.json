@@ -73,6 +73,7 @@
     "preactjs",
     "preinstall",
     "quicktime",
+    "reduxjs",
     "sarif",
     "shipjs",
     "stylelint",
@@ -87,5 +88,6 @@
     "watchFile": "useFsEventsOnParentDirectory",
     "watchDirectory": "useFsEvents"
   },
-  "eslint.nodePath": ".yarn/sdks"
+  "eslint.nodePath": ".yarn/sdks",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
 }

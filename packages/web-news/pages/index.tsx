@@ -3,9 +3,9 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { type NextPage } from 'next';
 
-import Copyright from '../components/Copyright';
-import Link from 'next/link';
-import ProTip from '../components/ProTip';
+import Link from '@web-news/components/Link';
+import Copyright from '@web-news/components/Copyright';
+import ProTip from '@web-news/components/ProTip';
 
 const Home: NextPage = () => (
   <Container maxWidth="lg">

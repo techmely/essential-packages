@@ -4,6 +4,7 @@ import createEmotionServer from '@emotion/server/create-instance';
 import theme from '../styles/theme';
 import createEmotionCache from '../utils/createEmotionCache';
 
+// @ts-expect-error Ignore type check
 class MyDocument extends Document {
   render() {
     return (
@@ -28,6 +29,7 @@ class MyDocument extends Document {
 
 // `getInitialProps` belongs to `_document` (instead of `_app`),
 // it's compatible with static-site generation (SSG).
+// @ts-expect-error Ignore type check
 MyDocument.getInitialProps = async (ctx) => {
   // Resolution order
   //
@@ -58,14 +60,16 @@ MyDocument.getInitialProps = async (ctx) => {
   const cache = createEmotionCache();
   const { extractCriticalToChunks } = createEmotionServer(cache);
 
+  // eslint-disable-next-line no-param-reassign
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (App: any) =>
+      enhanceApp: (App) =>
         function EnhanceApp(props) {
           return <App emotionCache={cache} {...props} />;
         },
     });
 
+    // @ts-expect-error Ignore type check
   const initialProps = await Document.getInitialProps(ctx);
   // This is important. It prevents emotion to render invalid HTML.
   // See https://github.com/mui-org/material-ui/issues/26561#issuecomment-855286153

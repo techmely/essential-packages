@@ -10,7 +10,6 @@
         "packages/web-news/*"
       ]
     },
-    "jsx": "preserve"
   },
   "exclude": [
     "packages/**/dist",

@@ -85,5 +85,6 @@
   "typescript.tsserver.watchOptions": {
     "watchFile": "useFsEventsOnParentDirectory",
     "watchDirectory": "useFsEvents"
-  }
+  },
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
 }

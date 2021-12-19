@@ -4,6 +4,7 @@
     "Orta.vscode-jest",
     "mikestead.dotenv",
     "usernamehw.errorlens",
-    "rome.rome"
+    "rome.rome",
+    "arcanis.vscode-zipfs"
   ]
 }

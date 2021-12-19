@@ -1,12 +1,14 @@
 export * from './combination';
 export * from './package';
 
-export interface Dict<T> {
-  [key: string]: T;
-}
 
 export type Nullable<T> = T | null;
 export type Undefinable<T> = T | undefined;
 export type NullList<T> = T | undefined | null;
 
-export interface Headers extends Dict<string> {}
+export interface DictionaryNum<T> {
+  [id: number]: Undefinable<T>;
+}
+export interface Dictionary<T> extends DictionaryNum<T> {
+  [id: string]: Undefinable<T>;
+}

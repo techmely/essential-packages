@@ -1,6 +1,6 @@
 {
   "name": "@techmely/types",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Techmely types definitions",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -17,14 +17,17 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
-    "dist",
-    "typings"
+    "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --dts --format esm,cjs --minify --splitting",
+    "build": "tsup --dts",
     "clean": "rimraf dist",
     "prepublish": "yarn clean",
     "version": "yarn version"
+  },
+  "devDependencies": {
+    "@techmely/build-configs": "workspace:^",
+    "typescript": "4.5.4"
   },
   "exports": {
     ".": {

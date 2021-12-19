@@ -21,7 +21,10 @@
     "build": "yarn generate-icons && tsup --dts",
     "dev": "yarn generate-icons && tsup --watch",
     "generate-icons": "node scripts/generate-icon-components.js",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "version:major": "yarn version major -i",
+    "version:minor": "yarn version minor -i",
+    "version:patch": "yarn version patch -i"
   },
   "devDependencies": {
     "@techmely/build-configs": "workspace:^",

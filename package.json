@@ -29,7 +29,10 @@
     "build:ui": "yarn workspace @techmely/ui run build",
     "build:hooks": "yarn workspace @techmely/hooks run build",
     "build:build-configs": "yarn workspace @techmely/build-configs run build",
-    "semantic-release": "semantic-release",
+    "release": "yarn publish && bumpp --commit --push --tag",
+    "publish": "yarn bump && yarn workspaces foreach -Apivt --exclude @techmely/monorepo npm publish --tolerate-republish",
+    "bump": "yarn version apply --all",
+    "bump:patch": "yarn workspaces foreach run version:patch",
     "clean": "yarn workspaces foreach -Apivt run clean",
     "clean:cache": "yarn cache clean --all && rimraf .yarn/build-state.yml .yarn/install-state.gz node_modules yarn.lock"
   },

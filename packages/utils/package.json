@@ -24,8 +24,9 @@
     "build:dev": "tsup",
     "dev": "tsup --watch",
     "clean": "rimraf dist",
-    "prepublish": "yarn clean",
-    "version": "yarn version"
+    "version:major": "yarn version major -i",
+    "version:minor": "yarn version minor -i",
+    "version:patch": "yarn version patch -i"
   },
   "peerDependencies": {
     "dayjs": "1.10.6",

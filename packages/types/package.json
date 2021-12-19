@@ -22,8 +22,9 @@
   "scripts": {
     "build": "tsup --dts",
     "clean": "rimraf dist",
-    "prepublish": "yarn clean",
-    "version": "yarn version"
+    "version:major": "yarn version major -i",
+    "version:minor": "yarn version minor -i",
+    "version:patch": "yarn version patch -i"
   },
   "devDependencies": {
     "@techmely/build-configs": "workspace:^",

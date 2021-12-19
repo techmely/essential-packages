@@ -46,6 +46,7 @@
     "bumpp",
     "bundlesize",
     "cacheable",
+    "clsx",
     "codacy",
     "codeql",
     "compat",

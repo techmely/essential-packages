@@ -11,3 +11,4 @@ ignore:
   - .vscode
   - .idea
   - .yarn
+  - packages/web-news/.next

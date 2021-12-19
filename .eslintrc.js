@@ -75,18 +75,7 @@ module.exports = {
         selector: 'variable',
         types: ['boolean'],
         format: ['PascalCase'],
-        prefix: [
-          'is',
-          'should',
-          'has',
-          'had',
-          'can',
-          'did',
-          'will',
-          'use',
-          'checked',
-          'disabled',
-        ],
+        prefix: ['is', 'should', 'has', 'had', 'can', 'did', 'will', 'use', 'checked', 'disabled'],
       },
       // Normally just accept only camelCase functions, but with a function return a TSX --> maybe PascalCase (23.8)
       {
@@ -113,17 +102,7 @@ module.exports = {
     'no-prototype-builtins': 'off',
     // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html
     'import/prefer-default-export': 'off',
-    'import/no-default-export': 'off',
     'import/no-unresolved': 'off',
-    "import/no-duplicates": 'off',
-    "import/no-named-as-default-member": 'off',
-    "import/no-named-as-default": 'off',
-    "import/no-relative-packages": 'off',
-    "import/no-cycle": 'off',
-    "import/no-self-import": 'off',
-    "import/order": 'off',
-    "import/named": 'off',
-    'import/no-useless-path-segments': "off",
     // Too restrictive: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md
     'react/destructuring-assignment': 'off',
     // Use function hoisting to improve code readability

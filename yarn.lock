@@ -2427,6 +2427,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/env@npm:12.0.7":
+  version: 12.0.7
+  resolution: "@next/env@npm:12.0.7"
+  checksum: 98258ead3fd384ead612385c89aad4f4bbcb71fdd28a2e8c8abaa7cbdc63070edb849efc859b3d45215aa5c37cb256fb8cb4958708ea2e1f4b3e968102eba93b
+  languageName: node
+  linkType: hard
+
 "@next/polyfill-module@npm:12.0.5":
   version: 12.0.5
   resolution: "@next/polyfill-module@npm:12.0.5"
@@ -2667,10 +2674,48 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@techmely/icons@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@techmely/icons@npm:1.0.0"
+  peerDependencies:
+    "@emotion/react": 11.7.1
+    "@emotion/styled": 11.6.0
+    react: 17.0.2
+  checksum: dd31f9a5f3e4d7f7e77c5360fc74b95eac2ad9a9dc100c2aa4911b128ebeb11e4afc2e05079a59e8b3b0d52fe77e3099eea2a282690add07362c1c07b86f0b28
+  languageName: node
+  linkType: hard
+
 "@techmely/types@npm:0.0.3":
   version: 0.0.3
   resolution: "@techmely/types@npm:0.0.3"
   checksum: d4dd4faa8ba51272dba942b3159a805ecfea57a749f77bb0ce42696e7a59a052f53d582d9de1f6dcb649c00299af71a7f7e598b139d402558754d91548b673b2
+  languageName: node
+  linkType: hard
+
+"@techmely/types@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@techmely/types@npm:1.0.0"
+  checksum: f64894f1f58f55879e594ee7d611ab515b622928d3b6ea0edd77626a6fe5e757a7427942ba3a5b078f16f78fec1484b805fe4988d57433df50ff7fbeeab35024
+  languageName: node
+  linkType: hard
+
+"@techmely/utils@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@techmely/utils@npm:1.0.0"
+  dependencies:
+    debug: ^4.3.3
+  peerDependencies:
+    dayjs: 1.10.6
+    exceljs: 4.3.0
+    jwt-decode: 3.1.2
+  peerDependenciesMeta:
+    dayjs:
+      optional: true
+    exceljs:
+      optional: true
+    jwt-decode:
+      optional: true
+  checksum: 9f7dba2f7f35e419540a9f3a41cffc3fbd330bcf0fd1daaee9ebec2ac2e61510152bdac3a4df2bb4bbeab5069c3dab86b0152085109007a0ae4fb8ab1f499cc6
   languageName: node
   linkType: hard
 
@@ -2683,7 +2728,11 @@ __metadata:
     "@emotion/server": 11.4.0
     "@emotion/styled": 11.6.0
     "@mui/material": 5.2.4
+    "@next/env": 12.0.7
     "@reduxjs/toolkit": 1.7.1
+    "@techmely/icons": 1.0.0
+    "@techmely/types": 1.0.0
+    "@techmely/utils": 1.0.0
     "@types/node": 17.0.0
     "@types/react": 17.0.37
     "@types/react-redux": 7.1.20
@@ -2691,6 +2740,7 @@ __metadata:
     next: 12.0.5
     react: 17.0.2
     react-dom: 17.0.2
+    redux-persist: 6.0.0
     typescript: 4.5.4
   languageName: unknown
   linkType: soft
@@ -5484,7 +5534,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2":
+"debug@npm:4, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3":
   version: 4.3.3
   resolution: "debug@npm:4.3.3"
   dependencies:
@@ -10650,6 +10700,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"redux-persist@npm:6.0.0":
+  version: 6.0.0
+  resolution: "redux-persist@npm:6.0.0"
+  peerDependencies:
+    redux: ">4.0.0"
+  checksum: edaf10dbf17351ce8058d0802357adae8665b3a1ff39371834e37838ddbe1a79cccbc717b8ba54acb5307651ccf51d0f7dc1cbc8dbae0726ff952d11ef61c6b8
+  languageName: node
+  linkType: hard
+
 "redux-thunk@npm:^2.4.1":
   version: 2.4.1
   resolution: "redux-thunk@npm:2.4.1"
@@ -11887,6 +11946,7 @@ __metadata:
     eslint: 8.5.0
     eslint-config-airbnb-base: 15.0.0
     eslint-config-prettier: 8.3.0
+    eslint-import-resolver-node: ^0.3.6
     eslint-plugin-cypress: 2.12.1
     eslint-plugin-import: 2.25.3
     eslint-plugin-jest: 25.3.0

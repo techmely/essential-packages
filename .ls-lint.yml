@@ -12,4 +12,4 @@ ignore:
   - .idea
   - .yarn
   - packages/web-news/.next
-  - packages/web-news/next-env.d.ts
+  - packages/web-news/typings

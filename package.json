@@ -29,7 +29,7 @@
     "build:ui": "yarn workspace @techmely/ui run build",
     "build:hooks": "yarn workspace @techmely/hooks run build",
     "build:build-configs": "yarn workspace @techmely/build-configs run build",
-    "release": "yarn publish && bumpp --commit --push --tag",
+    "release": "yarn publish && npx bumpp --commit --push --tag",
     "publish": "yarn bump && yarn workspaces foreach -Apivt --exclude @techmely/monorepo npm publish --tolerate-republish",
     "bump": "yarn version apply --all",
     "bump:patch": "yarn workspaces foreach run version:patch",

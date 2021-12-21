@@ -1,4 +1,4 @@
-import { isArray, isDef, isNotEmpty, isNotNull, isObject, isUndef } from './is';
+import { isObject, isArray, isNotNull, isDef, isNotEmpty, isUndef } from './is';
 import { DeepMerge } from './types';
 
 /**

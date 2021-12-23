@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { PreferencesState } from '@web-news/store/types';
+import { PreferencesState } from '@news/store/types';
 import { actions } from './preferences.actions';
 
 export const initialState: PreferencesState = {

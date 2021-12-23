@@ -1,6 +1,8 @@
-import { AnyAction, configureStore, Store } from '@reduxjs/toolkit';
-import { pokemonApi } from '@web-news/services/pokemon';
-import getEnvVarOrDie from '@web-news/utils/accessEnv';
+import { AnyAction, configureStore, Reducer, Store } from '@reduxjs/toolkit';
+import { pokemonApi } from '@news/services/pokemon';
+import getEnvVarOrDie from '@news/utils/accessEnv';
+
+const rootReducer: Reducer<any, AnyAction> = () => {};
 
 export const store: Store<any, AnyAction> = configureStore({
   reducer: {

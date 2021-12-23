@@ -1,9 +1,9 @@
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Copyright from '@web-news/components/Copyright';
-import Link from '@web-news/components/Link';
-import ProTip from '@web-news/components/ProTip';
+import Copyright from '@news/components/Copyright';
+import Link from '@news/components/Link';
+import ProTip from '@news/components/ProTip';
 import { type NextPage } from 'next';
 
 const Home: NextPage = () => (

@@ -1,0 +1,58 @@
+{
+  "name": "@techmely/core",
+  "version": "0.0.1",
+  "description": "Techmely core business logic and functionalities",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "typing": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "typings"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsup --dts",
+    "build:js": "tsup",
+    "dev": "tsup --watch",
+    "test": "jest --passWithNoTests",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.7.1",
+    "@techmely/types": "1.0.1",
+    "@techmely/utils": "1.0.2",
+    "connected-react-router": "6.9.2",
+    "history": "5.2.0",
+    "jwt-decode": "3.1.2",
+    "react-redux": "7.2.6",
+    "react-router": "6.2.1",
+    "react-router-dom": "6.2.1",
+    "redux": "4.1.2",
+    "redux-persist": "6.0.0"
+  },
+  "peerDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@techmely/build-configs": "1.0.1",
+    "@types/react": "17.0.38",
+    "@types/react-redux": "7.1.20",
+    "react": "17.0.2",
+    "tsup": "5.11.7"
+  }
+}

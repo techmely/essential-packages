@@ -1,7 +1,6 @@
-import { Undefinable } from '@techmely/types';
 import { PersistedState } from 'redux-persist';
 
-export type ThemeType = Undefinable<'dark' | 'light'>;
+export type ThemeType = 'dark' | 'light';
 
 export interface PreferencesState {
   theme: ThemeType;

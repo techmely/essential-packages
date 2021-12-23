@@ -1,5 +1,5 @@
 import { createAction } from '@reduxjs/toolkit';
-import { ThemeType } from '@web-news/store/types';
+import { ThemeType } from '@news/store/types';
 
 export const key = 'preferences';
 const compose = (type: string) => `${key}/${type}`;

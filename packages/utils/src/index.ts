@@ -9,3 +9,4 @@ export * from './transform';
 export * from './appMetadata';
 export * from './vector';
 export * from './generate';
+export * from './is';

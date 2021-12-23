@@ -1,5 +1,3 @@
-import { isDev } from '../is';
-
 /**
  * Use invariant() to assert state which your program assumes to be true.
  *
@@ -15,10 +13,6 @@ import { isDev } from '../is';
  * @param {...any} args - arguments
  */
 export const invariant = (condition: any, message?: string, ...args: Array<any>) => {
-  if (isDev && message === undefined) {
-    throw new Error('invariant requires an error message argument');
-  }
-
   if (condition) {
     let error;
     if (message === undefined) {
@@ -33,7 +27,6 @@ export const invariant = (condition: any, message?: string, ...args: Array<any>)
       error.name = 'Invariant Violation';
     }
 
-    // @ts-expect-error we don't care about invariant's own frame
     error.framesToPop = 1;
     throw error;
   }

@@ -1448,7 +1448,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@techmely-utils-virtual-0cb439e464/1/packages/utils/",
           "packageDependencies": [
             ["@techmely/utils", "virtual:7d65edfaef09df5512cc40bbf03c01fa801b75889552780cb97afa0b6fb1672366d0aa3ef2ceda1dbe0afab34e809baefe09f339771092ea48b1efddcd02f006#workspace:packages/utils"],
-            ["@techmely/build-configs", "virtual:0bd5016d91acd10d862c173cb3405daed818e09800d819275993442363c472d80f95d4f09a571e2b0c756c5341afd166775234d9ec475bbdef8dc5fb3e6d4d96#workspace:packages/build-configs"],
+            ["@techmely/types", "workspace:packages/types"],
             ["@types/dayjs", null],
             ["@types/debug", "npm:4.1.7"],
             ["@types/exceljs", null],
@@ -1459,7 +1459,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:4d5b41b4c144bc0f7c0e4c4c2164d0bc5d527811557a2fd7f2ec3307b1cf1ca97f42a730a90b32caada41091b3e922a1e5a2d8c6ff2841b6857305532c68aca8#npm:4.3.3"],
             ["exceljs", "npm:4.3.0"],
             ["jwt-decode", "npm:3.1.2"],
-            ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
+            ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"],
+            ["vite", "virtual:2f8c3c40f99ceab50617baa8c9cd602c46a69abdfabd70cb8dafc19370824268ef91c3f4c9e5f81bf26a5dea7944cd42375bf8493596a078569985f55e4236d3#npm:2.7.6"],
+            ["vite-plugin-dts", "virtual:2f8c3c40f99ceab50617baa8c9cd602c46a69abdfabd70cb8dafc19370824268ef91c3f4c9e5f81bf26a5dea7944cd42375bf8493596a078569985f55e4236d3#npm:0.9.6"]
           ],
           "packagePeers": [
             "@types/dayjs",
@@ -1472,7 +1474,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./packages/utils/",
           "packageDependencies": [
             ["@techmely/utils", "workspace:packages/utils"],
-            ["@techmely/build-configs", "virtual:0bd5016d91acd10d862c173cb3405daed818e09800d819275993442363c472d80f95d4f09a571e2b0c756c5341afd166775234d9ec475bbdef8dc5fb3e6d4d96#workspace:packages/build-configs"],
+            ["@techmely/types", "workspace:packages/types"],
             ["@types/debug", "npm:4.1.7"],
             ["@types/jest", "npm:27.0.3"],
             ["chalk", "npm:5.0.0"],
@@ -1480,7 +1482,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["debug", "virtual:4d5b41b4c144bc0f7c0e4c4c2164d0bc5d527811557a2fd7f2ec3307b1cf1ca97f42a730a90b32caada41091b3e922a1e5a2d8c6ff2841b6857305532c68aca8#npm:4.3.3"],
             ["exceljs", "npm:4.3.0"],
             ["jwt-decode", "npm:3.1.2"],
-            ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
+            ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"],
+            ["vite", "virtual:2f8c3c40f99ceab50617baa8c9cd602c46a69abdfabd70cb8dafc19370824268ef91c3f4c9e5f81bf26a5dea7944cd42375bf8493596a078569985f55e4236d3#npm:2.7.6"],
+            ["vite-plugin-dts", "virtual:2f8c3c40f99ceab50617baa8c9cd602c46a69abdfabd70cb8dafc19370824268ef91c3f4c9e5f81bf26a5dea7944cd42375bf8493596a078569985f55e4236d3#npm:0.9.6"]
           ],
           "linkType": "SOFT",
         }]
@@ -1504,6 +1508,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@tootallnate-once-npm-1.1.2-0517220057-e1fb1bbbc1.zip/node_modules/@tootallnate/once/",
           "packageDependencies": [
             ["@tootallnate/once", "npm:1.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@ts-morph/common", [
+        ["npm:0.12.2", {
+          "packageLocation": "./.yarn/cache/@ts-morph-common-npm-0.12.2-a6508c62d5-3095b71595.zip/node_modules/@ts-morph/common/",
+          "packageDependencies": [
+            ["@ts-morph/common", "npm:0.12.2"],
+            ["fast-glob", "npm:3.2.7"],
+            ["minimatch", "npm:3.0.4"],
+            ["mkdirp", "npm:1.0.4"],
+            ["path-browserify", "npm:1.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -3054,6 +3071,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["code-block-writer", [
+        ["npm:11.0.0", {
+          "packageLocation": "./.yarn/cache/code-block-writer-npm-11.0.0-3f31b00c5b-d3d92a06f7.zip/node_modules/code-block-writer/",
+          "packageDependencies": [
+            ["code-block-writer", "npm:11.0.0"],
+            ["tslib", "npm:2.3.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["code-point-at", [
         ["npm:1.1.0", {
           "packageLocation": "./.yarn/cache/code-point-at-npm-1.1.0-37de5fe566-17d5666611.zip/node_modules/code-point-at/",
@@ -4353,6 +4380,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["fs-extra", [
+        ["npm:10.0.0", {
+          "packageLocation": "./.yarn/cache/fs-extra-npm-10.0.0-4f8c704115-5285a3d8f3.zip/node_modules/fs-extra/",
+          "packageDependencies": [
+            ["fs-extra", "npm:10.0.0"],
+            ["graceful-fs", "npm:4.2.8"],
+            ["jsonfile", "npm:6.1.0"],
+            ["universalify", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:9.1.0", {
           "packageLocation": "./.yarn/cache/fs-extra-npm-9.1.0-983c2ddb4c-ba71ba32e0.zip/node_modules/fs-extra/",
           "packageDependencies": [
@@ -6962,6 +6999,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["path-browserify", [
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/path-browserify-npm-1.0.1-f975d99a99-c6d7fa3764.zip/node_modules/path-browserify/",
+          "packageDependencies": [
+            ["path-browserify", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["path-exists", [
         ["npm:4.0.0", {
           "packageLocation": "./.yarn/cache/path-exists-npm-4.0.0-e9e4f63eb0-505807199d.zip/node_modules/path-exists/",
@@ -8380,6 +8426,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["ts-morph", [
+        ["npm:13.0.2", {
+          "packageLocation": "./.yarn/cache/ts-morph-npm-13.0.2-a37bc93996-325e850b99.zip/node_modules/ts-morph/",
+          "packageDependencies": [
+            ["ts-morph", "npm:13.0.2"],
+            ["@ts-morph/common", "npm:0.12.2"],
+            ["code-block-writer", "npm:11.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["tslib", [
         ["npm:1.14.1", {
           "packageLocation": "./.yarn/cache/tslib-npm-1.14.1-102499115e-dbe628ef87.zip/node_modules/tslib/",
@@ -8636,6 +8693,39 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
+        ["npm:2.7.6", {
+          "packageLocation": "./.yarn/cache/vite-npm-2.7.6-543f605be6-7aa110a3a5.zip/node_modules/vite/",
+          "packageDependencies": [
+            ["vite", "npm:2.7.6"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:2f8c3c40f99ceab50617baa8c9cd602c46a69abdfabd70cb8dafc19370824268ef91c3f4c9e5f81bf26a5dea7944cd42375bf8493596a078569985f55e4236d3#npm:2.7.6", {
+          "packageLocation": "./.yarn/__virtual__/vite-virtual-1cfbba4a32/0/cache/vite-npm-2.7.6-543f605be6-7aa110a3a5.zip/node_modules/vite/",
+          "packageDependencies": [
+            ["vite", "virtual:2f8c3c40f99ceab50617baa8c9cd602c46a69abdfabd70cb8dafc19370824268ef91c3f4c9e5f81bf26a5dea7944cd42375bf8493596a078569985f55e4236d3#npm:2.7.6"],
+            ["@types/less", null],
+            ["@types/sass", null],
+            ["@types/stylus", null],
+            ["esbuild", "npm:0.13.15"],
+            ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"],
+            ["less", null],
+            ["postcss", "npm:8.4.5"],
+            ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"],
+            ["rollup", "npm:2.61.1"],
+            ["sass", null],
+            ["stylus", null]
+          ],
+          "packagePeers": [
+            "@types/less",
+            "@types/sass",
+            "@types/stylus",
+            "less",
+            "sass",
+            "stylus"
+          ],
+          "linkType": "HARD",
+        }],
         ["virtual:7d65edfaef09df5512cc40bbf03c01fa801b75889552780cb97afa0b6fb1672366d0aa3ef2ceda1dbe0afab34e809baefe09f339771092ea48b1efddcd02f006#npm:2.7.3", {
           "packageLocation": "./.yarn/__virtual__/vite-virtual-bf77eec595/0/cache/vite-npm-2.7.3-28a50b6539-5db8eb9c3e.zip/node_modules/vite/",
           "packageDependencies": [
@@ -8659,6 +8749,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "less",
             "sass",
             "stylus"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["vite-plugin-dts", [
+        ["npm:0.9.6", {
+          "packageLocation": "./.yarn/cache/vite-plugin-dts-npm-0.9.6-f89cdf8aa8-81442bcb6d.zip/node_modules/vite-plugin-dts/",
+          "packageDependencies": [
+            ["vite-plugin-dts", "npm:0.9.6"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:2f8c3c40f99ceab50617baa8c9cd602c46a69abdfabd70cb8dafc19370824268ef91c3f4c9e5f81bf26a5dea7944cd42375bf8493596a078569985f55e4236d3#npm:0.9.6", {
+          "packageLocation": "./.yarn/__virtual__/vite-plugin-dts-virtual-c9c353b335/0/cache/vite-plugin-dts-npm-0.9.6-f89cdf8aa8-81442bcb6d.zip/node_modules/vite-plugin-dts/",
+          "packageDependencies": [
+            ["vite-plugin-dts", "virtual:2f8c3c40f99ceab50617baa8c9cd602c46a69abdfabd70cb8dafc19370824268ef91c3f4c9e5f81bf26a5dea7944cd42375bf8493596a078569985f55e4236d3#npm:0.9.6"],
+            ["@types/vite", null],
+            ["fast-glob", "npm:3.2.7"],
+            ["fs-extra", "npm:10.0.0"],
+            ["ts-morph", "npm:13.0.2"],
+            ["vite", "virtual:2f8c3c40f99ceab50617baa8c9cd602c46a69abdfabd70cb8dafc19370824268ef91c3f4c9e5f81bf26a5dea7944cd42375bf8493596a078569985f55e4236d3#npm:2.7.6"]
+          ],
+          "packagePeers": [
+            "@types/vite",
+            "vite"
           ],
           "linkType": "HARD",
         }]

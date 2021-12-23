@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -20,7 +20,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --dts",
+    "build": "vite build",
     "build:dev": "tsup",
     "dev": "tsup --watch",
     "clean": "rimraf dist",
@@ -45,14 +45,15 @@
     }
   },
   "devDependencies": {
-    "@techmely/build-configs": "workspace:^",
     "@types/debug": "4.1.7",
     "@types/jest": "27.0.3",
     "chalk": "5.0.0",
     "dayjs": "1.10.7",
     "exceljs": "4.3.0",
     "jwt-decode": "3.1.2",
-    "typescript": "4.5.4"
+    "typescript": "4.5.4",
+    "vite": "2.7.6",
+    "vite-plugin-dts": "0.9.6"
   },
   "exports": {
     ".": {
@@ -71,7 +72,7 @@
     }
   ],
   "dependencies": {
-    "debug": "^4.3.3",
-    "@techmely/types": "workspace:^"
+    "@techmely/types": "workspace:^",
+    "debug": "4.3.3"
   }
 }

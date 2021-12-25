@@ -1,0 +1,43 @@
+{
+  "name": "@techmely/news",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "11.7.1",
+    "@emotion/react": "11.7.1",
+    "@emotion/server": "11.4.0",
+    "@emotion/styled": "11.6.0",
+    "@mui/material": "5.2.5",
+    "@next/env": "12.0.7",
+    "@reduxjs/toolkit": "1.7.1",
+    "@techmely/icons": "1.0.0",
+    "@techmely/utils": "1.0.2",
+    "clsx": "1.1.1",
+    "lodash-es": "4.17.21",
+    "next": "12.0.7",
+    "next-seo": "4.28.1",
+    "next-sitemap": "1.6.203",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-use": "17.3.1",
+    "react-redux": "7.2.6",
+    "redux": "4.1.2",
+    "redux-persist": "6.0.0"
+  },
+  "devDependencies": {
+    "@techmely/types": "1.0.1",
+    "@types/node": "17.0.4",
+    "@types/react": "17.0.38",
+    "@types/react-redux": "7.1.20",
+    "@redux-devtools/core": "3.9.1",
+    "@redux-devtools/log-monitor": "2.3.1",
+    "@redux-devtools/dock-monitor": "1.4.1",
+    "typescript": "4.5.4"
+  }
+}

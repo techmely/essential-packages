@@ -1,0 +1,31 @@
+{
+  "name": "@techmely/news-admin",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+    "format": "prettier .  --write"
+  },
+  "dependencies": {
+    "axios": "0.24.0",
+    "element-plus": "^1.2.0-beta.6",
+    "pinia": "^2.0.9",
+    "vue": "^3.1.2",
+    "vue-cropperjs": "5.0.0",
+    "vue-router": "^4.0.10"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "2.0.1",
+    "@vue/compiler-sfc": "3.2.26",
+    "autoprefixer": "10.4.0",
+    "postcss": "8.4.5",
+    "sass": "1.45.1",
+    "sass-loader": "12.4.0",
+    "tailwindcss": "3.0.7",
+    "vite": "2.7.6",
+    "webpack": "5.65.0"
+  }
+}

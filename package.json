@@ -14,6 +14,7 @@
   "scripts": {
     "dev:web": "yarn workspace @techmely/web-news run dev",
     "build:web": "yarn workspace @techmely/web-news run build",
+    "dev:admin": "yarn workspace @techmely/admin run dev",
     "build:admin": "yarn workspace @techmely/admin run build",
     "preinstall": "npx only-allow yarn",
     "postinstall": "make git-hook",

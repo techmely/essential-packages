@@ -1,70 +1,54 @@
 {
-  "name": "@techmely/monorepo",
-  "description": "Techmely Communities Packages",
+  "name": "@techmely/open-sources",
+  "description": "Techmely Open Sources Communities Packages",
   "private": true,
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
-  "workspaces": [
-    "packages/*",
-    "packages/vite-plugin/**",
-    "packages/ui/**"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/TechMeLy/techmely.git"
   },
   "engines": {
     "node": ">=16.13.0",
-    "npm": ">=8.1.0"
+    "npm": ">=8.1.0",
+    "pnpm": ">=6"
   },
   "scripts": {
-    "preinstall": "npx only-allow yarn",
+    "preinstall": "npx only-allow pnpm",
     "postinstall": "make git-hook",
     "bundlesize": "bundlesize",
-    "build:deps": "yarn workspaces foreach -Apivt run build",
-    "build:types": "yarn workspace @techmely/types run build",
-    "build:vite-plugin": "yarn workspace @techmely/vite-plugin-runtime-env run build",
-    "build:test-utils": "yarn workspace @techmely/test-utils run build",
-    "build:utils": "yarn workspace @techmely/utils run build",
-    "build:ui": "yarn workspace @techmely/ui run build",
-    "build:hooks": "yarn workspace @techmely/hooks run build",
-    "build:build-configs": "yarn workspace @techmely/build-configs run build",
+    "build:deps": "pnpm -r --parallel --filter {packages} run build",
+    "build:types": "pnpm --filter  @techmely/types run build",
+    "build:vite-plugin": "pnpm --filter  @techmely/vite-plugin-runtime-env run build",
+    "build:test-utils": "pnpm --filter  @techmely/test-utils run build",
+    "build:utils": "pnpm --filter  @techmely/utils run build",
+    "build:ui": "pnpm --filter  @techmely/ui run build",
+    "build:hooks": "pnpm --filter  @techmely/hooks run build",
+    "build:build-configs": "pnpm --filter  @techmely/build-configs run build",
     "release": "yarn publish && npx bumpp --commit --push --tag",
-    "publish": "yarn bump && yarn workspaces foreach -Apivt --exclude @techmely/monorepo npm publish --tolerate-republish",
+    "publish": "yarn bump && pnpm --filter s foreach -Apivt --exclude @techmely/monorepo npm publish --tolerate-republish",
     "bump": "yarn version apply --all",
-    "bump:patch": "yarn workspaces foreach run version:patch",
-    "clean": "yarn workspaces foreach -Apivt run clean",
-    "clean:cache": "yarn cache clean --all && rimraf .yarn/build-state.yml .yarn/install-state.gz node_modules yarn.lock"
+    "bump:patch": "pnpm --filter s foreach run version:patch",
+    "clean": "pnpm -r run clean",
+    "clean:cache": "yarn cache clean --all && rimraf .yarn/build-state.yml .yarn/install-state.gz node_modules yarn.lock",
+    "test": "vitest",
+    "coverage": "vitest --coverage"
   },
+  "packageManager": "pnpm@6.24.2",
   "devDependencies": {
     "@ls-lint/ls-lint": "1.10.0",
-    "@sucrase/jest-plugin": "2.2.0",
-    "@techmely/types": "0.0.3",
-    "@types/jest": "27.0.3",
     "@types/node": "17.0.0",
-    "@yarnpkg/sdks": "^2.5.1-rc.6",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",
-    "jest": "27.4.5",
     "jscpd": "3.4.2",
     "prettier": "2.5.1",
     "rimraf": "3.0.2",
-    "sucrase": "3.20.3",
     "tsup": "5.11.6",
-    "turbo": "1.0.19",
-    "typescript": "4.5.4"
+    "turbo": "1.0.23",
+    "typescript": "4.5.4",
+    "vite": "2.7.6",
+    "vitest": "0.0.113"
   },
-  "funding": [
-    {
-      "type": "ko-fi",
-      "url": "https://ko-fi.com/harrytran998"
-    },
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/harrytran998"
-    }
-  ],
-  "packageManager": "yarn@3.1.1",
   "turbo": {
     "baseBranch": "origin/main",
     "pipeline": {
@@ -96,5 +80,15 @@
         ]
       }
     }
-  }
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ]
 }

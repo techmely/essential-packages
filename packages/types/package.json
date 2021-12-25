@@ -21,13 +21,12 @@
   ],
   "scripts": {
     "build": "tsup --dts",
-    "clean": "rimraf dist",
-    "version:major": "yarn version major -i",
-    "version:minor": "yarn version minor -i",
-    "version:patch": "yarn version patch -i"
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@techmely/build-configs": "workspace:*"
   },
   "devDependencies": {
-    "@techmely/build-configs": "workspace:^",
     "typescript": "4.5.4"
   },
   "exports": {

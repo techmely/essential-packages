@@ -1,3 +1,4 @@
+import { expect, it } from 'vitest';
 import { sum } from '../src/math';
 
 it('Calculate sum', () => {

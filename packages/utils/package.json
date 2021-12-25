@@ -8,10 +8,6 @@
     "type": "git",
     "url": "https://github.com/TechMeLy/techmely/utils.git"
   },
-  "engines": {
-    "node": ">=16.13.0",
-    "npm": ">=8.1.0"
-  },
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -19,14 +15,22 @@
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "build": "vite build",
+    "build": "tsup --dts",
     "build:dev": "tsup",
     "dev": "tsup --watch",
     "clean": "rimraf dist",
-    "version:major": "yarn version major -i",
-    "version:minor": "yarn version minor -i",
-    "version:patch": "yarn version patch -i"
+    "test": "vitest",
+    "coverage": "vitest --coverage"
+  },
+  "dependencies": {
+    "debug": "4.3.3"
   },
   "peerDependencies": {
     "dayjs": "1.10.6",
@@ -45,21 +49,15 @@
     }
   },
   "devDependencies": {
+    "@techmely/build-configs": "workspace:*",
+    "@techmely/types": "workspace:*",
     "@types/debug": "4.1.7",
-    "@types/jest": "27.0.3",
     "chalk": "5.0.0",
     "dayjs": "1.10.7",
     "exceljs": "4.3.0",
     "jwt-decode": "3.1.2",
     "typescript": "4.5.4",
-    "vite": "2.7.6",
-    "vite-plugin-dts": "0.9.6"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    }
+    "vitest": "0.0.113"
   },
   "funding": [
     {
@@ -70,9 +68,5 @@
       "type": "patreon",
       "url": "https://www.patreon.com/harrytran998"
     }
-  ],
-  "dependencies": {
-    "@techmely/types": "workspace:^",
-    "debug": "4.3.3"
-  }
+  ]
 }

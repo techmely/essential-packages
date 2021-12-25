@@ -1,4 +1,5 @@
 import { isHex } from '../src/colors';
+import { describe, expect, it } from 'vitest';
 
 describe('Colors utilities', () => {
   describe('Check hex color', () => {

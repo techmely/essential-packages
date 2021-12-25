@@ -1,7 +1,7 @@
 {
   "threshold": 1,
   "reporters": ["html", "console"],
-  "format": "typescript,tsx,vue",
+  "format": "typescript",
   "ignore": ["**/__snapshots__/**", "packages/**/dist"],
   "absolute": true,
   "gitignore": true

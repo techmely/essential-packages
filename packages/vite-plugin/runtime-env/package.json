@@ -26,14 +26,14 @@
     "version:patch": "yarn version patch -i"
   },
   "dependencies": {
-    "@techmely/utils": "workspace:^",
+    "@techmely/utils": "workspace:*",
     "dotenv": "10.0.0"
   },
   "peerDependencies": {
     "vite": "^2.7.3"
   },
   "devDependencies": {
-    "@techmely/build-configs": "workspace:^",
+    "@techmely/build-configs": "workspace:*",
     "tsup": "5.11.6",
     "vite": "2.7.3"
   }

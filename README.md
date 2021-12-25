@@ -6,18 +6,16 @@
   Opinionated collection of helpful JavaScript / TypeScript utils which we use on the real world applications
 </h2>
 
-> Attention: This package is designed to be used as `devDependencies` and bundled into your dist.
-
 <hr>
 
 ## Features
 
 - 📦 <5kb mini libraries
 - Tree-shakable ESM
-- Unit Test coverage 100% with [jest](https://jestjs.io) + [sucrase](https://sucrase.io)
+- Unit Test coverage ...% with [vitest](https://vitest.dev)
 - Code quality analysis is A+ with [codacy](https://www.codacy.com) and [deepscan](https://deepscan.io)
 - Bundle to commonjs and es-module with [tsup](https://github.com/egoist/tsup)
-- Package manager [yarn 3](https://yarnpkg.com/), safe and fast
+- Package manager [pnpm](https://pnpm.io), safe and fast
 - Release with [semantic-release](https://npm.im/semantic-release)
 
 ## Install to use in your project
@@ -39,6 +37,12 @@ With pnpm
 ```bash
 pnpm add -D @techmely/utils
 ```
+
+## How to contributes
+
+1. Run `pnpm install` to install all dependencies
+
+2. Run others command in `package.json` with `pnpm run ...`
 
 ## License
 

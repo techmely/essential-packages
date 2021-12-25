@@ -1,4 +1,5 @@
 import { getMimeTypeFromExtension } from '../../src';
+import { describe, expect, it } from 'vitest';
 
 describe('getMimeTypeFromExtension', () => {
   it('returns a mime type when passing an extension', () => {

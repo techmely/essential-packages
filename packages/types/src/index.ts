@@ -1,5 +1,11 @@
 export * from './combination';
-export * from './package';
+import {
+  type BasePackageJson,
+  type DependencyManifest,
+  type PackageExtension,
+} from '@techmely/build-configs';
+
+export { BasePackageJson, DependencyManifest, PackageExtension };
 
 export type Nullable<T> = T | null;
 export type Undefinable<T> = T | undefined;

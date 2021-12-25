@@ -1,4 +1,5 @@
 import { isNotEmpties } from '../src/is';
+import { describe, expect, it } from 'vitest';
 
 describe('Test valid is', () => {
   it('Should return true', () => {

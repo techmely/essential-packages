@@ -1,10 +1,11 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
       "@techmely/utils": ["packages/utils/src"],
       "@techmely/types": ["packages/types/src"],
-      "@techmely/build-configs": ["packages/build-configs/src"],
+      "@techmely/build-configs": ["packages/build-configs/src/index.ts"],
       "@techmely/vite-plugin-runtime-env": ["packages/vite-plugin/runtime-env/src"]
     }
   }

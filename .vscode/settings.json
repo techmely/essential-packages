@@ -78,13 +78,7 @@
     "techmely",
     "tsup",
     "typedefs",
-    "vite"
-  ],
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "typescript.tsserver.watchOptions": {
-    "watchFile": "useFsEventsOnParentDirectory",
-    "watchDirectory": "useFsEvents"
-  },
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
+    "vite",
+    "vitest"
+  ]
 }

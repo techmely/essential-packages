@@ -27,7 +27,7 @@
     "version:patch": "yarn version patch -i"
   },
   "devDependencies": {
-    "@techmely/build-configs": "workspace:^",
+    "@techmely/build-configs": "workspace:*",
     "@types/react": "17.0.37",
     "camelcase": "6.2.1",
     "cheerio": "1.0.0-rc.10",

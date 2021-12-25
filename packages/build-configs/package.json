@@ -24,10 +24,7 @@
     "build": "tsup --dts",
     "build:dev": "tsup",
     "dev": "tsup --watch",
-    "clean": "rimraf dist",
-    "version:major": "yarn version major -i",
-    "version:minor": "yarn version minor -i",
-    "version:patch": "yarn version patch -i"
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
     "tsup": "^5.11.6"
@@ -38,7 +35,6 @@
     }
   },
   "devDependencies": {
-    "@techmely/types": "workspace:^",
     "tsup": "^5.11.6"
   },
   "exports": {

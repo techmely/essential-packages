@@ -25,11 +25,16 @@
     "build:ui": "pnpm --filter @techmely/ui run build",
     "build:hooks": "pnpm --filter @techmely/hooks run build",
     "build:build-configs": "pnpm --filter @techmely/build-configs run build",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag",
+    "changelog:gen": "ts-node scripts/changelog-generate.ts",
+    "changelog:write": "ts-node scripts/changelog-write.ts",
+    "changelog:commit": "git add CHANGELOG.md && git commit -am 'docs: add changelog' && git push",
+    "version-packages": "changeset version && yarn prettier",
+    "release": "pnpm run build:deps && changeset publish",
     "clean": "pnpm -r run clean",
     "clean:modules": "npx rimraf node_modules packages/**/node_modules",
     "test": "vitest",
-    "coverage": "vitest --coverage"
+    "coverage": "vitest --coverage",
+    "prettier": "prettier --write \"**/*.{js,ts,tsx,md}\""
   },
   "packageManager": "pnpm@6.24.2",
   "devDependencies": {

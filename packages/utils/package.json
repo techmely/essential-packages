@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -26,6 +26,7 @@
     "build:dev": "tsup",
     "dev": "tsup --watch",
     "clean": "rimraf dist",
+    "publish": "",
     "test": "vitest",
     "coverage": "vitest --coverage"
   },

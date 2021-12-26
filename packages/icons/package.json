@@ -30,13 +30,13 @@
   },
   "devDependencies": {
     "@techmely/build-configs": "1.0.3",
-    "@types/react": "17.0.37",
+    "@types/react": "17.0.38",
     "camelcase": "6.2.1",
     "cheerio": "1.0.0-rc.10",
     "glob": "7.2.0",
     "glob-promise": "4.2.2",
     "prettier": "2.5.1",
-    "tsup": "5.11.6"
+    "tsup": "5.11.9"
   },
   "peerDependencies": {
     "@emotion/react": "11.7.1",

@@ -2,7 +2,7 @@
   "name": "@techmely/vite-plugin-runtime-env",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -26,18 +26,17 @@
     "build": "tsup --dts",
     "build:dev": "tsup",
     "dev": "tsup --watch",
-    "clean": "rimraf dist",
-    "publish": "npm publish --access publish"
+    "clean": "rimraf dist"
   },
   "dependencies": {
-    "@techmely/utils": "workspace:*",
+    "@techmely/utils": "1.0.5",
     "dotenv": "10.0.0"
   },
   "peerDependencies": {
     "vite": "^2.7.3"
   },
   "devDependencies": {
-    "@techmely/build-configs": "workspace:*",
+    "@techmely/build-configs": "1.0.3",
     "tsup": "5.11.6",
     "vite": "2.7.3"
   }

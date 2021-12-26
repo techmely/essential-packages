@@ -44,7 +44,7 @@ importers:
 
   packages/icons:
     specifiers:
-      '@techmely/build-configs': workspace:*
+      '@techmely/build-configs': 1.0.3
       '@types/react': 17.0.37
       camelcase: 6.2.1
       cheerio: 1.0.0-rc.10
@@ -64,7 +64,7 @@ importers:
 
   packages/types:
     specifiers:
-      '@techmely/build-configs': workspace:*
+      '@techmely/build-configs': 1.0.3
       typescript: 4.5.4
     dependencies:
       '@techmely/build-configs': link:../build-configs
@@ -73,7 +73,7 @@ importers:
 
   packages/utils:
     specifiers:
-      '@techmely/build-configs': workspace:*
+      '@techmely/build-configs': 1.0.3
       '@techmely/types': workspace:*
       '@types/debug': 4.1.7
       chalk: 5.0.0
@@ -98,7 +98,7 @@ importers:
 
   packages/vite-plugin/runtime-env:
     specifiers:
-      '@techmely/build-configs': workspace:*
+      '@techmely/build-configs': 1.0.3
       '@techmely/utils': workspace:*
       dotenv: 10.0.0
       tsup: 5.11.6

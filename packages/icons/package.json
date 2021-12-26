@@ -1,7 +1,7 @@
 {
   "name": "@techmely/icons",
   "license": "MIT",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "author": "From Hieu Tran<https://github.com/hieuhani> <3 with love",
   "files": [
@@ -26,11 +26,10 @@
     "build": "yarn generate-icons && tsup --dts",
     "dev": "yarn generate-icons && tsup --watch",
     "generate-icons": "node scripts/generate-icon-components.js",
-    "clean": "rimraf dist",
-    "publish": "npm publish --access publish"
+    "clean": "rimraf dist"
   },
   "devDependencies": {
-    "@techmely/build-configs": "workspace:*",
+    "@techmely/build-configs": "1.0.3",
     "@types/react": "17.0.37",
     "camelcase": "6.2.1",
     "cheerio": "1.0.0-rc.10",

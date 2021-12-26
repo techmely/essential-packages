@@ -29,8 +29,7 @@
     "build": "tsup --dts",
     "build:dev": "tsup",
     "dev": "tsup --watch",
-    "clean": "rimraf dist",
-    "publish": "npm publish --access publish"
+    "clean": "rimraf dist"
   },
   "peerDependencies": {
     "tsup": "^5.11.6"

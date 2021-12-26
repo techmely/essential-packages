@@ -7,6 +7,7 @@ export const initialState: TraceState = {
   request: {},
   process: {},
 };
+
 export const reducer = createReducer(initialState, builder => {
   builder
     .addMatcher<APICallAction>(

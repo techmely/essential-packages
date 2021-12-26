@@ -16,8 +16,8 @@
     "@mui/material": "5.2.5",
     "@next/env": "12.0.7",
     "@reduxjs/toolkit": "1.7.1",
-    "@techmely/icons": "1.0.0",
-    "@techmely/utils": "1.0.2",
+    "@techmely/icons": "1.0.4",
+    "@techmely/utils": "1.0.5",
     "clsx": "1.1.1",
     "lodash-es": "4.17.21",
     "next": "12.0.7",
@@ -35,10 +35,10 @@
     "@redux-devtools/dock-monitor": "1.4.1",
     "@redux-devtools/log-monitor": "2.3.1",
     "@techmely/build-configs": "1.0.3",
-    "@techmely/types": "1.0.1",
-    "@types/node": "17.0.4",
+    "@techmely/types": "1.0.4",
+    "@types/node": "17.0.5",
     "@types/react": "17.0.38",
-    "@types/react-redux": "7.1.20",
+    "@types/react-redux": "7.1.21",
     "typescript": "4.5.4"
   }
 }

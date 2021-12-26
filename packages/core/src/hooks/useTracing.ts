@@ -1,15 +1,15 @@
 import { Undefinable } from '@techmely/types';
-import { is } from '@techmely/utils';
+import { isNotEmpty } from '@techmely/utils';
 import { useReduxState } from './useReduxState';
 import { TraceItem } from '../types/trace';
-import { selectors } from '../domain/trace';
+import { selectors } from '../domains/trace';
 import { Progress, StateSelector } from '../types';
 
 export function useTracingProcess<ProcessVariable = unknown, T extends boolean = true>(
   id: string,
   isOnlySteps?: T,
 ): T extends false
-  ? [Progress, CombineApiError, Undefinable<string>, Undefinable<ProcessVariable>]
+  ? [Progress, unknown, Undefinable<string>, Undefinable<ProcessVariable>]
   : Undefinable<string>;
 
 export function useTracingProcess<ProcessVariable = unknown>(
@@ -17,7 +17,7 @@ export function useTracingProcess<ProcessVariable = unknown>(
   isOnlySteps = true,
 ):
   | Undefinable<string>
-  | [Progress, Undefinable<CombineApiError>, Undefinable<string>, Undefinable<ProcessVariable>] {
+  | [Progress, Undefinable<unknown>, Undefinable<string>, Undefinable<ProcessVariable>] {
   const tracing = useReduxState<StateSelector<TraceItem>, TraceItem<ProcessVariable>>(
     selectors.selectProcessFactory(id),
   );
@@ -30,7 +30,7 @@ export function useTracingProcess<ProcessVariable = unknown>(
 
 export function useTracingRequest<ProcessVariable = unknown>(
   id: string,
-): [Progress, Undefinable<CombineApiError>] {
+): [Progress, Undefinable<unknown>] {
   const tracing = useReduxState<StateSelector<TraceItem>, TraceItem<ProcessVariable>>(
     selectors.selectRequestFactory(id),
   );

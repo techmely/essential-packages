@@ -52,8 +52,8 @@
   "devDependencies": {
     "@techmely/build-configs": "1.0.3",
     "@types/react": "17.0.38",
-    "@types/react-redux": "7.1.20",
+    "@types/react-redux": "7.1.21",
     "react": "17.0.2",
-    "tsup": "5.11.7"
+    "tsup": "5.11.9"
   }
 }

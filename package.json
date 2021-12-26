@@ -17,6 +17,8 @@
     "build:news": "turbo run build --scope=@techmely/news",
     "dev:admin": "turbo run dev --scope=@techmely/news-admin --no-cache",
     "build:admin": "turbo run build --scope=@techmely/news-admin",
+    "dev:core": "turbo run dev --scope=@techmely/core --no-cache",
+    "build:core": "turbo run build --scope=@techmely/core",
     "lint:files": "ls-lint",
     "lint:eslint": "eslint --cache --ext .ts . --ignore-path .eslintignore",
     "lint:eslint:quiet": "eslint --cache --ext .ts . --ignore-path .eslintignore --quiet",

@@ -1,6 +1,7 @@
 {
   "name": "@techmely/core",
   "version": "0.0.1",
+  "license": "unlicense ",
   "description": "Techmely core business logic and functionalities",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -18,22 +19,22 @@
   },
   "scripts": {
     "build": "tsup --dts",
-    "build:js": "tsup",
     "dev": "tsup --watch",
-    "test": "jest --passWithNoTests",
+    "test": "vitest",
+    "lint": "",
     "clean": "rimraf dist"
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.7.1",
-    "@techmely/types": "1.0.1",
-    "@techmely/utils": "1.0.2",
-    "redux-first-history": "5.0.8",
+    "@techmely/types": "1.0.4",
+    "@techmely/utils": "1.0.5",
     "history": "5.2.0",
     "jwt-decode": "3.1.2",
     "react-redux": "7.2.6",
     "react-router": "6.2.1",
     "react-router-dom": "6.2.1",
     "redux": "4.1.2",
+    "redux-first-history": "5.0.8",
     "redux-persist": "6.0.0"
   },
   "peerDependencies": {
@@ -49,7 +50,7 @@
     }
   },
   "devDependencies": {
-    "@techmely/build-configs": "1.0.1",
+    "@techmely/build-configs": "1.0.3",
     "@types/react": "17.0.38",
     "@types/react-redux": "7.1.20",
     "react": "17.0.2",

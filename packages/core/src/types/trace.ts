@@ -22,21 +22,21 @@ export interface ResultCallback<SuccessResponse, FailResponse> {
   onFailure?: OnFailureCallback<FailResponse>;
 }
 
-export interface ProcessMeta<Success, Failure> extends ResultCallback<Success, Failure> {
+export interface ProcessMeta<Success, Failure = any> extends ResultCallback<Success, Failure> {
   traceable?: boolean;
   processKey?: string;
   processState?: Progress;
 }
 
-export interface RequestMeta<S, F> extends ResultCallback<S, F>, RequestId, Traceable {}
-export interface RequestMetaFail<S, F> extends RequestMeta<S, F> {
+export interface RequestMeta<S, F = any> extends ResultCallback<S, F>, RequestId, Traceable {}
+export interface RequestMetaFail<F = any> extends RequestMeta<F> {
   /**
    * When we dont need toast error in api call ==> Set this to {false}
    */
   silent?: boolean;
 }
 
-export type ProcessPrepareAction<Payload, Success, Failure> = (
+export type ProcessPrepareAction<Payload, Success, Failure = any> = (
   payload: Payload,
   meta?: ProcessMeta<Success, Failure>,
 ) => {
@@ -44,7 +44,7 @@ export type ProcessPrepareAction<Payload, Success, Failure> = (
   meta: ProcessMeta<Success, Failure>;
 };
 
-export type RequestPrepareAction<Payload, Success, Failure> = (
+export type RequestPrepareAction<Payload, Success, Failure = any> = (
   payload: Payload,
   meta?: RequestMeta<Success, Failure>,
 ) => {
@@ -52,12 +52,12 @@ export type RequestPrepareAction<Payload, Success, Failure> = (
   meta: RequestMeta<Success, Failure>;
 };
 
-export type RequestFailPrepareAction<Payload, Success, Failure> = (
+export type RequestFailPrepareAction<Payload, Failure = any> = (
   payload: Payload,
-  meta?: RequestMetaFail<Success, Failure>,
+  meta?: RequestMetaFail<Failure>,
 ) => {
   payload: Payload;
-  meta: RequestMetaFail<Success, Failure>;
+  meta: RequestMetaFail<Failure>;
 };
 
 export interface TraceItem<ProcessVariable = unknown, ResponseError = unknown> {

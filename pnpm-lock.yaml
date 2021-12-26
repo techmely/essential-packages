@@ -71,9 +71,9 @@ importers:
   packages/core:
     specifiers:
       '@reduxjs/toolkit': 1.7.1
-      '@techmely/build-configs': 1.0.1
-      '@techmely/types': 1.0.1
-      '@techmely/utils': 1.0.2
+      '@techmely/build-configs': 1.0.3
+      '@techmely/types': 1.0.4
+      '@techmely/utils': 1.0.5
       '@types/react': 17.0.38
       '@types/react-redux': 7.1.20
       history: 5.2.0
@@ -88,8 +88,8 @@ importers:
       tsup: 5.11.7
     dependencies:
       '@reduxjs/toolkit': 1.7.1_react-redux@7.2.6+react@17.0.2
-      '@techmely/types': 1.0.1
-      '@techmely/utils': 1.0.2_jwt-decode@3.1.2
+      '@techmely/types': 1.0.4_tsup@5.11.7
+      '@techmely/utils': 1.0.5_jwt-decode@3.1.2
       history: 5.2.0
       jwt-decode: 3.1.2
       react-redux: 7.2.6_react@17.0.2
@@ -99,7 +99,7 @@ importers:
       redux-first-history: 5.0.8_history@5.2.0+redux@4.1.2
       redux-persist: 6.0.0_redux@4.1.2
     devDependencies:
-      '@techmely/build-configs': 1.0.1_tsup@5.11.7
+      '@techmely/build-configs': 1.0.3_tsup@5.11.7
       '@types/react': 17.0.38
       '@types/react-redux': 7.1.20
       react: 17.0.2
@@ -117,6 +117,7 @@ importers:
       '@redux-devtools/dock-monitor': 1.4.1
       '@redux-devtools/log-monitor': 2.3.1
       '@reduxjs/toolkit': 1.7.1
+      '@techmely/build-configs': 1.0.3
       '@techmely/icons': 1.0.0
       '@techmely/types': 1.0.1
       '@techmely/utils': 1.0.2
@@ -160,6 +161,7 @@ importers:
       '@redux-devtools/core': 3.9.1_34362ad81a919891909cf289bf01b934
       '@redux-devtools/dock-monitor': 1.4.1_2c5ed6a1b945aebf4c1dcfbec3e0ad6f
       '@redux-devtools/log-monitor': 2.3.1_2c5ed6a1b945aebf4c1dcfbec3e0ad6f
+      '@techmely/build-configs': 1.0.3
       '@techmely/types': 1.0.1
       '@types/node': 17.0.4
       '@types/react': 17.0.38
@@ -2275,8 +2277,18 @@ packages:
       reselect: 4.1.5
     dev: false
 
-  /@techmely/build-configs/1.0.1_tsup@5.11.7:
-    resolution: {integrity: sha512-bgzaPGn6XSqrs9hhd49LicRa78ZmcssOgEX3zlVH996Gdv30vTX/y2YHNNrKA6VxIHbEjGGzZ4/75ts9azGvaw==}
+  /@techmely/build-configs/1.0.3:
+    resolution: {integrity: sha512-u3Np15CBSGkqxeDd7bU8cqaqN1W4H6GavICjL5RW1BNtKdbe+PuKE4+6DZ51mx2llrB0v9qwORO+ZYVCjYyEgw==}
+    engines: {node: '>=16.13.0', npm: '>=8.1.0'}
+    peerDependencies:
+      tsup: ^5.11.6
+    peerDependenciesMeta:
+      tsup:
+        optional: true
+    dev: true
+
+  /@techmely/build-configs/1.0.3_tsup@5.11.7:
+    resolution: {integrity: sha512-u3Np15CBSGkqxeDd7bU8cqaqN1W4H6GavICjL5RW1BNtKdbe+PuKE4+6DZ51mx2llrB0v9qwORO+ZYVCjYyEgw==}
     engines: {node: '>=16.13.0', npm: '>=8.1.0'}
     peerDependencies:
       tsup: ^5.11.6
@@ -2285,7 +2297,6 @@ packages:
         optional: true
     dependencies:
       tsup: 5.11.7_typescript@4.5.4
-    dev: true
 
   /@techmely/icons/1.0.0_922a85da57e3646a57465b7970b0de85:
     resolution: {integrity: sha512-+gvBzUYqfLTc1seCrGkpxO37OXiXJUzf8ik3PaM41fn18rwYEaHIiYs4etdau4q67b5nY0rNDDG+66Q5AHEfCA==}
@@ -2302,6 +2313,15 @@ packages:
   /@techmely/types/1.0.1:
     resolution: {integrity: sha512-AuFbZ7nyQKyZk0u/7casB0H6YY06MKl8q/eenwDJBsFf/rZaI9QBtL+1rcld/ISxcAtt9Yfl7jZYAxC41U6J7w==}
     engines: {node: '>=16.13.0', npm: '>=8.1.0'}
+
+  /@techmely/types/1.0.4_tsup@5.11.7:
+    resolution: {integrity: sha512-jlMn3Z/n4T5oIcGvNYCunxsTYivW72lOsa2TxoT1i7JJryYzVK27V7cc/RCdAWC8rAkn/srDLEC1/Eq86UrKIw==}
+    engines: {node: '>=16.13.0', npm: '>=8.1.0'}
+    dependencies:
+      '@techmely/build-configs': 1.0.3_tsup@5.11.7
+    transitivePeerDependencies:
+      - tsup
+    dev: false
 
   /@techmely/utils/1.0.2:
     resolution: {integrity: sha512-SA9tLoipr3K73KXDwNf5drmgqvVotc/WJmYzSxQYM6D+1MlZo9eCllt2Dd1UjCL9W2GTDvPSYt5mbRVHkEiuzA==}
@@ -2324,9 +2344,8 @@ packages:
       - supports-color
     dev: false
 
-  /@techmely/utils/1.0.2_jwt-decode@3.1.2:
-    resolution: {integrity: sha512-SA9tLoipr3K73KXDwNf5drmgqvVotc/WJmYzSxQYM6D+1MlZo9eCllt2Dd1UjCL9W2GTDvPSYt5mbRVHkEiuzA==}
-    engines: {node: '>=16.13.0', npm: '>=8.1.0'}
+  /@techmely/utils/1.0.5_jwt-decode@3.1.2:
+    resolution: {integrity: sha512-/eLBtDbMzLgiYQvfsNYjIKt/smvJ9pmuDj0wXwmNrcaOlDpydwfBUC/7BjG5weOOxaQB8JyENXcdH1oKZjNxwQ==}
     peerDependencies:
       dayjs: 1.10.6
       exceljs: 4.3.0
@@ -2339,7 +2358,6 @@ packages:
       jwt-decode:
         optional: true
     dependencies:
-      '@techmely/types': 1.0.1
       debug: 4.3.3
       jwt-decode: 3.1.2
     transitivePeerDependencies:

@@ -4,7 +4,7 @@ import createEmotionServer from '@emotion/server/create-instance';
 import theme from '../styles/theme';
 import createCache from '@emotion/cache';
 
-const createEmotionCache = createCache({ key: 'css' })
+const createEmotionCache = createCache({ key: 'css' });
 class MyDocument extends Document {
   render() {
     return (
@@ -56,11 +56,11 @@ MyDocument.getInitialProps = async ctx => {
 
   // You can consider sharing the same emotion cache between all the SSR requests to speed up performance.
   // However, be aware that it can have global side effects.
-  const { extractCriticalToChunks } = createEmotionServer(cache);
+  const { extractCriticalToChunks } = createEmotionServer(createEmotionCache);
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: App =>
+      enhanceApp: (App: any) =>
         function EnhanceApp(props) {
           return <App emotionCache={createEmotionCache} {...props} />;
         },

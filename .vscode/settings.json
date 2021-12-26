@@ -88,13 +88,5 @@
     "vite",
     "vitejs",
     "vitest"
-  ],
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "typescript.tsserver.watchOptions": {
-    "watchFile": "useFsEventsOnParentDirectory",
-    "watchDirectory": "useFsEvents"
-  },
-  "eslint.nodePath": ".yarn/sdks",
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
+  ]
 }

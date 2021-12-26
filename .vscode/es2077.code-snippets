@@ -16,5 +16,40 @@
   "Export * from XXX + Type": {
     "prefix": "exst",
     "body": ["export * from './${0}';", "export * from './${0}.types';"]
+  },
+  "Export custom hooks": {
+    "prefix": "exch",
+    "body": ["export function ${1:${TM_FILENAME_BASE}}() {", " $2", "}"],
+    "description": "export custom hooks"
+  },
+  "Export const component": {
+    "prefix": "exconst",
+    "body": [
+      "import Box from '@mui/material/Box';",
+      "import React from 'react';",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: React.FC = props => {",
+      "  console.log('Have a good day bro!');",
+      "",
+      "  return <Box>$2</Box>;",
+      "};"
+    ],
+    "description": "Creates a React Arrow Function Component with ES7 module system and TypeScript interface"
+  },
+  "Export default component": {
+    "prefix": "exdef",
+    "body": [
+      "import Box from '@mui/material/Box';",
+      "import React from 'react';",
+      "",
+      "const ${1:${TM_FILENAME_BASE}}: React.FC = props => {",
+      "  console.log('Have a good day bro!');",
+      "",
+      "  return <Box>$2</Box>;",
+      "};",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ],
+    "description": "Creates a React Arrow Function Component with ES7 module system and TypeScript interface"
   }
 }

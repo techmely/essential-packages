@@ -10,7 +10,7 @@
     "allowJs": true /* Allow javascript files to be compiled. */,
     "alwaysStrict": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react" /* Specify JSX code generation: 'preserve', 'react-native', 'react', 'react-jsx' or 'react-jsxdev'. */,
+    "jsx": "preserve",
     "outDir": "./dist" /* Redirect output structure to the directory. */,
     "noEmit": true /* Do not emit outputs. */,
     "isolatedModules": true /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */,

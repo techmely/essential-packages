@@ -1,9 +1,9 @@
+import * as React from 'react';
+import clsx from 'clsx';
+import { useRouter } from 'next/router';
+import NextLink, { LinkProps as NextLinkProps } from 'next/link';
 import MuiLink, { LinkProps as MuiLinkProps } from '@mui/material/Link';
 import { styled } from '@mui/material/styles';
-import clsx from 'clsx';
-import NextLink, { LinkProps as NextLinkProps } from 'next/link';
-import { useRouter } from 'next/router';
-import * as React from 'react';
 
 // Add support for the sx prop for consistency with the other branches.
 const Anchor = styled('a')({});
@@ -17,7 +17,7 @@ interface NextLinkComposedProps
 }
 
 export const NextLinkComposed = React.forwardRef<HTMLAnchorElement, NextLinkComposedProps>(
-  (props, ref) => {
+  function NextLinkComposed(props, ref) {
     const { to, linkAs, href, replace, scroll, shallow, prefetch, locale, ...other } = props;
 
     return (
@@ -41,13 +41,14 @@ export type LinkProps = {
   activeClassName?: string;
   as?: NextLinkProps['as'];
   href: NextLinkProps['href'];
+  linkAs?: NextLinkProps['as']; // Useful when the as prop is shallow by styled().
   noLinkStyle?: boolean;
 } & Omit<NextLinkComposedProps, 'to' | 'linkAs' | 'href'> &
   Omit<MuiLinkProps, 'href'>;
 
 // A styled version of the Next.js Link component:
-// https://nextjs.org/docs/#with-link
-const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
+// https://nextjs.org/docs/api-reference/next/link
+const TLink = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(props, ref) {
   const {
     activeClassName = 'active',
     as: linkAs,
@@ -61,7 +62,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   const router = useRouter();
   const pathname = typeof href === 'string' ? href : href.pathname;
   const className = clsx(classNameProps, {
-    [activeClassName]: router?.pathname === pathname && activeClassName,
+    [activeClassName]: router.pathname === pathname && activeClassName,
   });
 
   const isExternal =
@@ -91,4 +92,4 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>((props, ref) => {
   );
 });
 
-export default Link;
+export default TLink;

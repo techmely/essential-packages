@@ -3,9 +3,9 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { type NextPage } from 'next';
 
-import Link from '@news/src/components/Link';
-import Copyright from '@news/src/components/Copyright';
-import ProTip from '@news/src/components/ProTip';
+import TLink from '@news/components/TLink';
+import Copyright from '@news/components/Copyright';
+import ProTip from '@news/components/ProTip';
 
 const Home: NextPage = () => (
   <Container maxWidth="lg">
@@ -21,7 +21,7 @@ const Home: NextPage = () => (
       <Typography variant="h4" component="h1" gutterBottom>
         MUI v5 + Next.js with TypeScript example
       </Typography>
-      <Link href="/about">Go to the about page</Link>
+      <TLink href="/about">Go to the about page</TLink>
       <ProTip />
       <Copyright />
     </Box>

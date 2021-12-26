@@ -3,9 +3,20 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@admin/*": ["packages/news-admin/src/*"],
-      "@news/*": ["packages/news/src/*"]
-    }
+      "@admin/*": [
+        "packages/news-admin/src/*"
+      ],
+      "@news/*": [
+        "packages/news/src/*"
+      ]
+    },
+    "incremental": true
   },
-  "exclude": ["packages/**/dist", "packages/**/public"]
+  "exclude": [
+    "packages/**/dist",
+    "packages/**/public"
+  ],
+  "include": [
+    "packages"
+  ]
 }

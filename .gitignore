@@ -572,5 +572,6 @@ $RECYCLE.BIN/
 !.yarn/versions
 .pnp.*
 
+.turbo
 
 # End of https://www.toptal.com/developers/gitignore/api/node,macos,windows,intellij,reactnative,flutter

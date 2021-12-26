@@ -4,9 +4,9 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
-import Link from '@news/src/components/Link';
-import ProTip from '@news/src/components/ProTip';
-import Copyright from '@news/src/components/Copyright';
+import TLink from '@news/components/TLink';
+import ProTip from '@news/components/ProTip';
+import Copyright from '@news/components/Copyright';
 
 const About: NextPage = () => {
   return (
@@ -24,7 +24,7 @@ const About: NextPage = () => {
           ABOUT PAGE
         </Typography>
         <Box maxWidth="sm">
-          <Button variant="contained" component={Link} noLinkStyle href="/">
+          <Button variant="contained" component={TLink} noLinkStyle href="/">
             Go to the home page
           </Button>
         </Box>

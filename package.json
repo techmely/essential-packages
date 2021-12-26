@@ -8,15 +8,15 @@
     "url": "https://github.com/techmely/products.git"
   },
   "workspaces": [
-    "packages/**"
+    "packages/*"
   ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev:web": "pnpm --filter @techmely/web-news run dev",
-    "build:web": "pnpm --filter @techmely/web-news run build",
-    "dev:admin": "pnpm --filter @techmely/admin run dev",
-    "build:admin": "pnpm --filter @techmely/admin run build",
     "postinstall": "make git-hook",
+    "dev:news": "turbo run dev --scope=@techmely/news --no-cache",
+    "build:news": "turbo run build --scope=@techmely/news",
+    "dev:admin": "turbo run dev --scope=@techmely/news-admin --no-cache",
+    "build:admin": "turbo run build --scope=@techmely/news-admin",
     "lint:files": "ls-lint",
     "lint:eslint": "eslint --cache --ext .ts . --ignore-path .eslintignore",
     "lint:eslint:quiet": "eslint --cache --ext .ts . --ignore-path .eslintignore --quiet",
@@ -64,5 +64,30 @@
     "node": ">=16.13.0",
     "npm": ">=8.1.0"
   },
-  "packageManager": "pnpm@6.24.2"
+  "packageManager": "pnpm@6.24.2",
+  "turbo": {
+    "baseBranch": "origin/main",
+    "pipeline": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          ".next/**"
+        ]
+      },
+      "test": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": []
+      },
+      "lint": {
+        "outputs": []
+      },
+      "dev": {
+        "cache": false
+      }
+    }
+  }
 }

@@ -1,7 +1,7 @@
 {
   "name": "@techmely/icons",
-  "license": "unlicense",
-  "version": "1.0.2",
+  "license": "MIT",
+  "version": "1.0.3",
   "description": "",
   "author": "From Hieu Tran<https://github.com/hieuhani> <3 with love",
   "files": [
@@ -11,6 +11,11 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
@@ -22,9 +27,7 @@
     "dev": "yarn generate-icons && tsup --watch",
     "generate-icons": "node scripts/generate-icon-components.js",
     "clean": "rimraf dist",
-    "version:major": "yarn version major -i",
-    "version:minor": "yarn version minor -i",
-    "version:patch": "yarn version patch -i"
+    "publish": "npm publish --access publish"
   },
   "devDependencies": {
     "@techmely/build-configs": "workspace:*",

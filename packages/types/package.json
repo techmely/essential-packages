@@ -1,6 +1,6 @@
 {
   "name": "@techmely/types",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Techmely types definitions",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -19,9 +19,15 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  },
   "scripts": {
     "build": "tsup --dts",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "publish": "npm publish --access publish"
   },
   "dependencies": {
     "@techmely/build-configs": "workspace:*"

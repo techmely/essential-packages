@@ -1,6 +1,6 @@
 {
   "name": "@techmely/build-configs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Techmely build configurations",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -15,16 +15,22 @@
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "typings"
   ],
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  },
   "scripts": {
     "build": "tsup --dts",
     "build:dev": "tsup",
     "dev": "tsup --watch",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "publish": "npm publish --access publish"
   },
   "peerDependencies": {
     "tsup": "^5.11.6"

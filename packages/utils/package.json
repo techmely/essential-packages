@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -21,12 +21,17 @@
       "require": "./dist/index.js"
     }
   },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  },
   "scripts": {
     "build": "tsup --dts",
     "build:dev": "tsup",
     "dev": "tsup --watch",
     "clean": "rimraf dist",
-    "publish": "",
+    "publish": "npm publish --access publish",
     "test": "vitest",
     "coverage": "vitest --coverage"
   },

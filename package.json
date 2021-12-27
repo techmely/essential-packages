@@ -18,6 +18,7 @@
     "build:news": "turbo run build --scope=@techmely/news",
     "dev:admin": "turbo run dev --scope=@techmely/news-admin --no-cache",
     "build:admin": "turbo run build --scope=@techmely/news-admin",
+    "start:admin": "pnpm --filter @techmely/news-admin run serve",
     "dev:core": "turbo run dev --scope=@techmely/core --no-cache",
     "build:core": "turbo run build --scope=@techmely/core",
     "lint:files": "ls-lint",

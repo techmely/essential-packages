@@ -4,8 +4,9 @@ ls:
 
 ignore:
   - dist
-  - packages/**/dist
-  - packages/**/node_modules
+  - packages/news-admin/dist
+  - packages/news-admin/node_modules
+  - packages/*/node_modules
   - packages/news/.next
   - packages/news/next-env.d.ts
   - packages/news/src/typings

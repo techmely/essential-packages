@@ -11,15 +11,7 @@ import Copyright from '@news/components/Copyright';
 const About: NextPage = () => {
   return (
     <Container maxWidth="lg">
-      <Box
-        sx={{
-          my: 4,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
+      <Box my={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
         <Typography variant="h4" component="h1" gutterBottom>
           ABOUT PAGE
         </Typography>

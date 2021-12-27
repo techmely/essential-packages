@@ -88,7 +88,6 @@ importers:
       tsup: 5.11.9
     dependencies:
       '@reduxjs/toolkit': 1.7.1_react-redux@7.2.6+react@17.0.2
-      '@techmely/types': 1.0.4_tsup@5.11.9
       '@techmely/utils': 1.0.5_jwt-decode@3.1.2
       history: 5.2.0
       jwt-decode: 3.1.2
@@ -100,6 +99,7 @@ importers:
       redux-persist: 6.0.0_redux@4.1.2
     devDependencies:
       '@techmely/build-configs': 1.0.3_tsup@5.11.9
+      '@techmely/types': 1.0.4_tsup@5.11.9
       '@types/react': 17.0.38
       '@types/react-redux': 7.1.21
       react: 17.0.2
@@ -2297,6 +2297,7 @@ packages:
         optional: true
     dependencies:
       tsup: 5.11.9_typescript@4.5.4
+    dev: true
 
   /@techmely/icons/1.0.4_922a85da57e3646a57465b7970b0de85:
     resolution: {integrity: sha512-/SkOpned5jXn3bGmfa6G2IjWWrfSz4EoWbVRmcEEvs1w1L0TNERFnumQ8PwuREXFRxTtSJkltp0lt8UcW0M/zw==}
@@ -2326,7 +2327,7 @@ packages:
       '@techmely/build-configs': 1.0.3_tsup@5.11.9
     transitivePeerDependencies:
       - tsup
-    dev: false
+    dev: true
 
   /@techmely/utils/1.0.5:
     resolution: {integrity: sha512-/eLBtDbMzLgiYQvfsNYjIKt/smvJ9pmuDj0wXwmNrcaOlDpydwfBUC/7BjG5weOOxaQB8JyENXcdH1oKZjNxwQ==}

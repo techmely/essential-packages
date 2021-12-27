@@ -9,15 +9,7 @@ import ProTip from '@news/components/ProTip';
 
 const Home: NextPage = () => (
   <Container maxWidth="lg">
-    <Box
-      sx={{
-        my: 4,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
+    <Box my={4} display="flex" flexDirection="column" justifyContent="center" alignItems="center">
       <Typography variant="h4" component="h1" gutterBottom>
         MUI v5 + Next.js with TypeScript example
       </Typography>

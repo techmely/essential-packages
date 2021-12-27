@@ -63,10 +63,6 @@
     "vite": "2.7.7",
     "vitest": "0.0.114"
   },
-  "engines": {
-    "node": ">=16.13.0",
-    "npm": ">=8.1.0"
-  },
   "packageManager": "pnpm@6.24.2",
   "turbo": {
     "baseBranch": "origin/main",

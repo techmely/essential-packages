@@ -61,7 +61,7 @@
     "turbo": "1.0.23",
     "typescript": "4.5.4",
     "vite": "2.7.7",
-    "vitest": "0.0.114"
+    "vitest": "0.0.115"
   },
   "engines": {
     "node": ">=16.13.0",

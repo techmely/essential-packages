@@ -8,14 +8,14 @@ import {
 export { BasePackageJson, DependencyManifest, PackageExtension };
 
 export type Nullable<T> = T | null;
-export type Undefinable<T> = T | undefined;
+export type UnDef<T> = T | undefined;
 export type NullList<T> = T | undefined | null;
 
 export interface DictionaryNum<T> {
-  [id: number]: Undefinable<T>;
+  [id: number]: UnDef<T>;
 }
 export interface Dictionary<T> extends DictionaryNum<T> {
-  [id: string]: Undefinable<T>;
+  [id: string]: UnDef<T>;
 }
 
 export type VoidFunc<T> = (value: T) => void;

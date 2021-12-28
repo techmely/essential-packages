@@ -1,4 +1,4 @@
-import { type Options } from 'tsup';
+import { Options } from 'tsup';
 import { type BasePackageJson } from './types';
 
 const now = new Date();

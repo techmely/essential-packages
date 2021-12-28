@@ -29,7 +29,7 @@
     "clean": "rimraf dist"
   },
   "devDependencies": {
-    "@techmely/build-configs": "1.0.3",
+    "@techmely/build-configs": "workspace:*",
     "@types/react": "17.0.38",
     "camelcase": "6.2.1",
     "cheerio": "1.0.0-rc.10",

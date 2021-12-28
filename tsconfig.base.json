@@ -6,6 +6,7 @@
     "allowJs": true /* Allow javascript files to be compiled. */,
     "jsx": "preserve" /* Specify JSX code generation: 'preserve', 'react-native', 'react', 'react-jsx' or 'react-jsxdev'. */,
     "declaration": true /* Generates corresponding '.d.ts' file. */,
+    "declarationMap": true,
     "outDir": "./dist" /* Redirect output structure to the directory. */,
     "importHelpers": true /* Import emit helpers from 'tslib'. */,
     "isolatedModules": true /* Transpile each file as a separate module (similar to 'ts.transpileModule'). */,

@@ -54,7 +54,7 @@
     }
   },
   "devDependencies": {
-    "@techmely/build-configs": "1.0.3",
+    "@techmely/build-configs": "workspace:*",
     "@techmely/types": "workspace:*",
     "@types/debug": "4.1.7",
     "chalk": "5.0.0",

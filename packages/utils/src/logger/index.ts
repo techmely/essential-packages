@@ -1,7 +1,7 @@
 export * from './invariant';
 import readline from 'readline';
 import chalk from 'chalk';
-import { NullList, Undefinable } from '@techmely/types';
+import { NullList, UnDef } from '@techmely/types';
 
 export type LogType = 'error' | 'warn' | 'info';
 export type LogLevel = LogType | 'silent';
@@ -31,8 +31,8 @@ export const LogLevels: Record<LogLevel, number> = {
   info: 3,
 };
 
-let lastType: Undefinable<LogType>;
-let lastMsg: Undefinable<string>;
+let lastType: UnDef<LogType>;
+let lastMsg: UnDef<string>;
 let sameCount = 0;
 
 export interface LoggerOptions {

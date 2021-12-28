@@ -1,4 +1,4 @@
-import { NullList, Undefinable } from '@techmely/types';
+import { NullList, UnDef } from '@techmely/types';
 
 import { isNumber } from './is';
 
@@ -12,7 +12,7 @@ import { isNumber } from './is';
 export function formatNumber(
   num: NullList<number>,
   precision = 0,
-  defaultValue: Undefinable<number | string> = '-',
+  defaultValue: UnDef<number | string> = '-',
 ) {
   if (!isNumber(num)) {
     return defaultValue;
@@ -43,7 +43,7 @@ export function formatPrice(price: NullList<number>, precision = 0) {
 export function formatLot10Volume(
   volume: NullList<number>,
   precision = 0,
-  defaultValue: Undefinable<number | string> = '-',
+  defaultValue: UnDef<number | string> = '-',
 ) {
   if (!isNumber(volume)) {
     return defaultValue;

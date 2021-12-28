@@ -1,5 +1,12 @@
 # @techmely/vite-plugin-runtime-env
 
+## 1.0.5
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @techmely/utils@1.0.6
+
 ## 1.0.4
 
 ### Patch Changes

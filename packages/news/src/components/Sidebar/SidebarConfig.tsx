@@ -1,7 +1,7 @@
 import path from '@news/constants/path';
-import { HMSidebarMenu } from '@news/types';
+import { MelySidebarMenu } from '@news/types';
 
-const sidebarConfig: HMSidebarMenu[] = [
+const sidebarConfig: MelySidebarMenu[] = [
   {
     title: 'sidebar.dashboard',
     path: path.root,

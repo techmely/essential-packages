@@ -1,1 +1,1 @@
-export type { HMRoute, HMSidebarMenu, HMSidebarSubMenu } from './Sidebar';
+export type { HMRoute, MelySidebarMenu, HMSidebarSubMenu } from './Sidebar';

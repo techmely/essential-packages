@@ -30,7 +30,7 @@ const Main = styled('main', { shouldForwardProp: prop => prop !== 'open' })<{
 }));
 
 const DefaultLayout: FC = ({ children }) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState<boolean>(true);
 
   return (
     <RootStyle>
@@ -40,6 +40,9 @@ const DefaultLayout: FC = ({ children }) => {
         onOpenSidebar={() => setOpen(true)}
       />
       <Main open={open}>
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
         <div>hello</div>
         <DrawerHeader />
         {children}

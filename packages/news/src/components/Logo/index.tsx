@@ -1,12 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 
-export function Logo() {
-  return (
-    <img
-      style={{ cursor: 'pointer' }}
-      onClick={() => console.log('run')}
-      src="/logo.svg"
-      alt="ican logo"
-    />
-  );
-}
+import Typography from '@mui/material/Typography';
+
+const Logo: React.FC = () => {
+  return <Typography variant="h5">TechMely</Typography>;
+};
+
+export default Logo;

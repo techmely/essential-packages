@@ -1,7 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useTheme, styled } from '@mui/material/styles';
 import { Box, List, Collapse, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
-import { HMSidebarMenu } from 'types';
+import { MelySidebarMenu } from '@news/types';
 
 const ListItemStyle = styled((props: any) => <ListItemButton disableGutters {...props} />)(
   ({ theme }) => ({
@@ -28,7 +28,7 @@ const ListItemTextStyle = styled(ListItemText)({
 });
 
 interface Props {
-  item: HMSidebarMenu;
+  item: MelySidebarMenu;
   active: (path?: string) => boolean;
 }
 
@@ -122,7 +122,6 @@ function NavItem(props: Props) {
 
   return (
     <ListItemStyle
-      // component={RouterLink}
       to={path}
       sx={{
         ...(isActiveRoot && activeRootStyle),
@@ -135,11 +134,12 @@ function NavItem(props: Props) {
 }
 
 interface NavSectionProps {
-  navConfig: HMSidebarMenu[];
+  navConfig: MelySidebarMenu[];
   [prop: string]: any;
 }
 
 export default function NavSection(props: NavSectionProps) {
+  // eslint-disable-next-line
   const { navConfig, ...other } = props;
 
   const match = (path?: string) => true;

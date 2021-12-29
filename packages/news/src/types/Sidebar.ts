@@ -5,11 +5,11 @@ export interface HMRoute {
   authenticationRequired?: boolean; // default: true
 }
 
-export interface HMSidebarMenu extends HMRoute {
+export interface MelySidebarMenu extends HMRoute {
   icon?: any;
   children?: HMRoute[];
 }
 
-export interface HMSidebarSubMenu extends HMSidebarMenu {
-  visible?: boolean; // default: false
+export interface HMSidebarSubMenu extends MelySidebarMenu {
+  visible?: boolean;
 }

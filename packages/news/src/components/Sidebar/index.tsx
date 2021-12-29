@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { styled, Theme, CSSObject } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import { useTheme, Drawer as MuiDrawer } from '@mui/material';
@@ -8,13 +7,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import Stack from '@mui/material/Stack';
-
 import NavSection from '../NavSection';
-import { Logo } from '../Logo';
+import Logo from '../Logo';
 import Scrollbar from '../Scrollbar';
-
 import sidebarConfig from './SidebarConfig';
 
 export const drawerWidth = 240;
@@ -48,13 +43,11 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
-export const DrawerHeader = styled('div')(({ theme }) => ({
+export const DrawerHeader: React.FC = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: 'space-between',
 }));
 
 const openedMixin = (theme: Theme): CSSObject => ({
@@ -113,32 +106,33 @@ export default function PersistentDrawerLeft({
     </Scrollbar>
   );
 
+  const onClickToggle = (): void => {
+    isOpenSidebar ? onCloseSidebar() : onOpenSidebar();
+  };
+
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar position="fixed" open={isOpenSidebar}>
-        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-          <IconButton
-            color="primary"
-            aria-label="open drawer"
-            onClick={onOpenSidebar}
-            edge="start"
-            sx={{ mr: 2, ...(isOpenSidebar && { display: 'none' }) }}
-          >
+    <Box>
+      <AppBar
+        position="fixed"
+        sx={{ zIndex: theme => theme.zIndex.drawer + 1, width: '100vw' }}
+        open={isOpenSidebar}
+      >
+        <Toolbar sx={{ display: 'flex', color: 'black' }}>
+          <IconButton color="primary" aria-label="open drawer" onClick={onClickToggle} edge="start">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div"></Typography>
+          <Logo />
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={isOpenSidebar}>
-        <DrawerHeader>
-          <Logo />
-          <IconButton onClick={onCloseSidebar}>
-            <ChevronLeftIcon />
-          </IconButton>
-        </DrawerHeader>
-        {renderContent}
-      </Drawer>
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        <Drawer variant="permanent" open={isOpenSidebar}>
+          <DrawerHeader>
+            <Typography variant="h5">Lập trình không khó</Typography>;
+          </DrawerHeader>
+          {renderContent}
+        </Drawer>
+      </Box>
     </Box>
   );
 }

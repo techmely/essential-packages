@@ -20,7 +20,9 @@ if [[ -n "$branchName" ]]; then
    echo -e "\n$textError Commit failed, terminated process, pls try again."
       exit 1
  fi
- # Append prefix branch name into commit message
- sed -i.bak -e "1s~^~$branchName ~" "$1"
+  if [[ $branchName != "main" ]]; then
+    # Append prefix branch name into commit message
+    sed -i.bak -e "1s~^~$branchName ~" "$1"
+  fi
 fi
 echo -e "\n$textSuccess Verify commit message successful.$textBase\n"

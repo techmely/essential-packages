@@ -4,7 +4,8 @@
     "baseUrl": ".",
     "paths": {
       "@admin/*": ["packages/news-admin/src/*"],
-      "@news/*": ["packages/news/src/*"]
+      "@news/*": ["packages/news/src/*"],
+      "@reduxjs/toolkit": ["packages/news/node_modules/@reduxjs/toolkit/dist"]
     },
     "incremental": true
   },

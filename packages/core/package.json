@@ -26,7 +26,6 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "1.7.1",
-    "@techmely/types": "1.0.4",
     "@techmely/utils": "1.0.5",
     "history": "5.2.0",
     "jwt-decode": "3.1.2",
@@ -39,7 +38,7 @@
   },
   "peerDependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "react-dom@>=16.8.0 || ^17.0.2"
   },
   "peerDependenciesMeta": {
     "react": {
@@ -51,6 +50,7 @@
   },
   "devDependencies": {
     "@techmely/build-configs": "1.0.3",
+    "@techmely/types": "1.0.4",
     "@types/react": "17.0.38",
     "@types/react-redux": "7.1.21",
     "react": "17.0.2",

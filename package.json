@@ -16,8 +16,10 @@
     "clean:modules": "npx rimraf node_modules packages/**/node_modules pnpm-lock.yaml",
     "dev:news": "turbo run dev --scope=@techmely/news --no-cache",
     "build:news": "turbo run build --scope=@techmely/news",
+    "start:news": "pnpm --filter @techmely/news run start",
     "dev:admin": "turbo run dev --scope=@techmely/news-admin --no-cache",
     "build:admin": "turbo run build --scope=@techmely/news-admin",
+    "start:admin": "pnpm --filter @techmely/news-admin run start",
     "dev:core": "turbo run dev --scope=@techmely/core --no-cache",
     "build:core": "turbo run build --scope=@techmely/core",
     "lint:files": "ls-lint",
@@ -61,7 +63,7 @@
     "turbo": "1.0.23",
     "typescript": "4.5.4",
     "vite": "2.7.7",
-    "vitest": "0.0.114"
+    "vitest": "0.0.115"
   },
   "packageManager": "pnpm@6.24.2",
   "turbo": {

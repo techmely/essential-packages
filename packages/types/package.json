@@ -1,6 +1,6 @@
 {
   "name": "@techmely/types",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Techmely types definitions",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -29,7 +29,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@techmely/build-configs": "1.0.3"
+    "@techmely/build-configs": "1.0.4"
   },
   "devDependencies": {
     "typescript": "4.5.4"

@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.0.7
+
+### Patch Changes
+
+- Add utility dayjs and upgrade deps
+
 ## 1.0.6
 
 ### Patch Changes

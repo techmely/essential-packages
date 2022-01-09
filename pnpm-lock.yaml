@@ -99,7 +99,7 @@ importers:
   packages/vite-plugin/runtime-env:
     specifiers:
       '@techmely/build-configs': workspace:*
-      '@techmely/utils': 1.0.5
+      '@techmely/utils': 1.0.6
       dotenv: 10.0.0
       tsup: 5.11.9
       vite: 2.7.7

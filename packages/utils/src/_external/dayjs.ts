@@ -1,6 +1,8 @@
 import dayjs, { OpUnitType, QUnitType } from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import updateLocale from 'dayjs/plugin/updateLocale';
 
 type CompareDateConfig = {
   unit?: QUnitType | OpUnitType;
@@ -8,10 +10,12 @@ type CompareDateConfig = {
 };
 
 dayjs.extend(utc);
+dayjs.extend(updateLocale);
+dayjs.extend(relativeTime);
 dayjs.extend(timezone);
 const timeZone = dayjs.tz.guess();
 dayjs.tz.setDefault(timeZone);
-
+dayjs.updateLocale('vi', {});
 export { dayjs };
 
 /**
@@ -23,6 +27,10 @@ export { dayjs };
  */
 export function formatDate(date: dayjs.ConfigType, format = 'DD/MM/YYYY'): string {
   return dayjs(date).format(format);
+}
+
+export function formatDateToNow(date: dayjs.ConfigType): string {
+  return dayjs(date).fromNow();
 }
 
 export function formatDateUnixTime(seconds: number, format = 'DD/MM/YYYY') {

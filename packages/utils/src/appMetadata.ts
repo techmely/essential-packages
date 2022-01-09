@@ -1,8 +1,7 @@
 import { exec } from 'child_process';
 import { readFileSync } from 'fs';
 import { promisify } from 'util';
-
-import { invariant } from './logger';
+import invariant from './logger/invariant';
 
 const execCmd = promisify(exec);
 

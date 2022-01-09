@@ -31,12 +31,12 @@
   "devDependencies": {
     "@techmely/build-configs": "workspace:*",
     "@types/react": "17.0.38",
-    "camelcase": "6.2.1",
+    "camelcase": "6.3.0",
     "cheerio": "1.0.0-rc.10",
     "glob": "7.2.0",
     "glob-promise": "4.2.2",
     "prettier": "2.5.1",
-    "tsup": "5.11.9"
+    "tsup": "5.11.11"
   },
   "peerDependencies": {
     "@emotion/react": "11.7.1",

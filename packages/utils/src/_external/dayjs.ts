@@ -1,4 +1,5 @@
-import dayjs, { OpUnitType, QUnitType } from 'dayjs';
+import dayjs from 'dayjs';
+import type { OpUnitType, QUnitType, ConfigType } from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -25,11 +26,11 @@ export { dayjs };
  * // Format with HH:mm:ss
  * formatDate(date, 'HH:mm:ss')
  */
-export function formatDate(date: dayjs.ConfigType, format = 'DD/MM/YYYY'): string {
+export function formatDate(date: ConfigType, format = 'DD/MM/YYYY'): string {
   return dayjs(date).format(format);
 }
 
-export function formatDateToNow(date: dayjs.ConfigType): string {
+export function formatDateToNow(date: ConfigType): string {
   return dayjs(date).fromNow();
 }
 

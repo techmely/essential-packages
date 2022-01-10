@@ -1,4 +1,4 @@
-import readline from 'readline';
+// import readline from 'readline';
 import chalk from 'chalk';
 import { NullList, UnDef } from '@techmely/types';
 
@@ -130,6 +130,6 @@ function clearScreen() {
   const repeatCount = process.stdout.rows - 2;
   const blank = repeatCount > 0 ? '\n'.repeat(repeatCount) : '';
   console.log(blank);
-  readline.cursorTo(process.stdout, 0, 0);
-  readline.clearScreenDown(process.stdout);
+  // readline.cursorTo(process.stdout, 0, 0);
+  // readline.clearScreenDown(process.stdout);
 }

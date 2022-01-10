@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.0.9
+
+### Patch Changes
+
+- fix(utils): move dayjs to deps instead dev deps
+
 ## 1.0.8
 
 ### Patch Changes

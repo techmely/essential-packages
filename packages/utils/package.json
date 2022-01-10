@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -35,14 +35,17 @@
     "coverage": "vitest --coverage"
   },
   "dependencies": {
-    "dayjs": "1.10.6",
     "debug": "4.3.3"
   },
   "peerDependencies": {
+    "dayjs": "1.10.6",
     "exceljs": "4.3.0",
     "jwt-decode": "3.1.2"
   },
   "peerDependenciesMeta": {
+    "dayjs": {
+      "optional": true
+    },
     "exceljs": {
       "optional": true
     },

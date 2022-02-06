@@ -7,7 +7,7 @@ export interface ArrowRightOutlineProps extends IconBaseProps {
 }
 
 export const ArrowRightOutline: React.FC<ArrowRightOutlineProps> = (
-  props: ArrowRightOutlineProps,
+  props: ArrowRightOutlineProps
 ) =>
   GenIcon({
     tag: 'svg',
@@ -19,8 +19,8 @@ export const ArrowRightOutline: React.FC<ArrowRightOutlineProps> = (
           d: 'M3.33203 8H12.6654',
           strokeWidth: '2',
           strokeLinecap: 'round',
-          strokeLinejoin: 'round',
-        },
+          strokeLinejoin: 'round'
+        }
       },
       {
         tag: 'path',
@@ -28,8 +28,8 @@ export const ArrowRightOutline: React.FC<ArrowRightOutlineProps> = (
           d: 'M8 3.3335L12.6667 8.00016L8 12.6668',
           strokeWidth: '2',
           strokeLinecap: 'round',
-          strokeLinejoin: 'round',
-        },
-      },
-    ],
+          strokeLinejoin: 'round'
+        }
+      }
+    ]
   })(props);

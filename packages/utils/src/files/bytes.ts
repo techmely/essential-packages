@@ -9,7 +9,10 @@ interface FormatBytesOptions {
  * @param {Partial<FormatBytesOptions>} options - Options to pass to this function.
  * @returns {string} A formatted number that ends in bytes, KB, MB, GB, TB, PB, EB, ZB, or YB
  */
-export const formatBytes = (bytes: number, options?: Partial<FormatBytesOptions>): string => {
+export const formatBytes = (
+  bytes: number,
+  options?: Partial<FormatBytesOptions>
+): string => {
   const sizes = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
   const { numberOfDecimals = 0 } = options ?? {};
 
@@ -38,4 +41,5 @@ export const formatBytes = (bytes: number, options?: Partial<FormatBytesOptions>
  * @param {number} bytes The number of bytes that are being checked
  * @returns {number} The number of appropriate decimal places
  */
-export const formatDecimals = (bytes: number = 0): number => (bytes >= 1e9 ? 2 : 0);
+export const formatDecimals = (bytes: number = 0): number =>
+  bytes >= 1e9 ? 2 : 0;

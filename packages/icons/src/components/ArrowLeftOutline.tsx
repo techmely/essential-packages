@@ -6,7 +6,9 @@ export interface ArrowLeftOutlineProps extends IconBaseProps {
   color?: string;
 }
 
-export const ArrowLeftOutline: React.FC<ArrowLeftOutlineProps> = (props: ArrowLeftOutlineProps) =>
+export const ArrowLeftOutline: React.FC<ArrowLeftOutlineProps> = (
+  props: ArrowLeftOutlineProps
+) =>
   GenIcon({
     tag: 'svg',
     attr: { viewBox: '0 0 16 16', fill: 'none' },
@@ -17,8 +19,8 @@ export const ArrowLeftOutline: React.FC<ArrowLeftOutlineProps> = (props: ArrowLe
           d: 'M12.6654 8H3.33203',
           strokeWidth: '2',
           strokeLinecap: 'round',
-          strokeLinejoin: 'round',
-        },
+          strokeLinejoin: 'round'
+        }
       },
       {
         tag: 'path',
@@ -26,8 +28,8 @@ export const ArrowLeftOutline: React.FC<ArrowLeftOutlineProps> = (props: ArrowLe
           d: 'M7.9987 12.6668L3.33203 8.00016L7.9987 3.3335',
           strokeWidth: '2',
           strokeLinecap: 'round',
-          strokeLinejoin: 'round',
-        },
-      },
-    ],
+          strokeLinejoin: 'round'
+        }
+      }
+    ]
   })(props);

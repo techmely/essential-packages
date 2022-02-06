@@ -29,7 +29,7 @@ export const LogLevels: Record<LogLevel, number> = {
   silent: 0,
   error: 1,
   warn: 2,
-  info: 3,
+  info: 3
 };
 
 let lastType: UnDef<LogType>;
@@ -42,7 +42,10 @@ export interface LoggerOptions {
   customLogger?: Logger;
 }
 
-export function createLogger(level: LogLevel = 'info', options: LoggerOptions = {}): Logger {
+export function createLogger(
+  level: LogLevel = 'info',
+  options: LoggerOptions = {}
+): Logger {
   if (options.customLogger) {
     return options.customLogger;
   }
@@ -50,7 +53,8 @@ export function createLogger(level: LogLevel = 'info', options: LoggerOptions = 
   const loggedErrors = new WeakSet<Error>();
   const { prefix = '[vite]', allowClearScreen = true } = options;
   const thresh = LogLevels[level];
-  const canClearScreen = allowClearScreen && process.stdout.isTTY && !process.env.CI;
+  const canClearScreen =
+    allowClearScreen && process.stdout.isTTY && !process.env.CI;
   const clear = canClearScreen ? clearScreen : () => {};
 
   function output(type: LogType, msg: string, options: LogErrorOptions = {}) {
@@ -120,7 +124,7 @@ export function createLogger(level: LogLevel = 'info', options: LoggerOptions = 
     },
     hasErrorLogged(error) {
       return loggedErrors.has(error);
-    },
+    }
   };
 
   return logger;

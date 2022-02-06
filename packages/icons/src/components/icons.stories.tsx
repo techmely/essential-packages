@@ -86,5 +86,5 @@ const Template: Story<BoxProps> = args => (
 export const All = Template.bind({});
 All.args = {
   color: '#333333',
-  size: 24,
+  size: 24
 };

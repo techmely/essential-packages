@@ -16,8 +16,8 @@ export const ClockColor: React.FC<ClockColorProps> = (props: ClockColorProps) =>
           stroke: '#FF3B30',
           strokeWidth: '1.5',
           strokeLinecap: 'round',
-          strokeLinejoin: 'round',
-        },
+          strokeLinejoin: 'round'
+        }
       },
       {
         tag: 'path',
@@ -26,8 +26,8 @@ export const ClockColor: React.FC<ClockColorProps> = (props: ClockColorProps) =>
           stroke: '#FF3B30',
           strokeWidth: '1.5',
           strokeLinecap: 'round',
-          strokeLinejoin: 'round',
-        },
-      },
-    ],
+          strokeLinejoin: 'round'
+        }
+      }
+    ]
   })(props);

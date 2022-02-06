@@ -30,14 +30,14 @@
   },
   "dependencies": {
     "@techmely/utils": "1.0.9",
-    "dotenv": "10.0.0"
+    "dotenv": "16.0.0"
   },
   "peerDependencies": {
     "vite": "^2.7.3"
   },
   "devDependencies": {
     "@techmely/build-configs": "workspace:*",
-    "tsup": "5.11.11",
-    "vite": "2.7.10"
+    "tsup": "5.11.13",
+    "vite": "2.7.13"
   }
 }

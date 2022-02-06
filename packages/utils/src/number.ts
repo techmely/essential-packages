@@ -12,14 +12,14 @@ import { isNumber } from './is';
 export function formatNumber(
   num: NullList<number>,
   precision = 0,
-  defaultValue: UnDef<number | string> = '-',
+  defaultValue: UnDef<number | string> = '-'
 ) {
   if (!isNumber(num)) {
     return defaultValue;
   }
   return num.toLocaleString('en', {
     minimumFractionDigits: precision,
-    maximumFractionDigits: precision,
+    maximumFractionDigits: precision
   });
 }
 
@@ -43,10 +43,12 @@ export function formatPrice(price: NullList<number>, precision = 0) {
 export function formatLot10Volume(
   volume: NullList<number>,
   precision = 0,
-  defaultValue: UnDef<number | string> = '-',
+  defaultValue: UnDef<number | string> = '-'
 ) {
   if (!isNumber(volume)) {
     return defaultValue;
   }
-  return (volume * 10)?.toLocaleString('en', { minimumFractionDigits: precision }).slice(0, -1);
+  return (volume * 10)
+    ?.toLocaleString('en', { minimumFractionDigits: precision })
+    .slice(0, -1);
 }

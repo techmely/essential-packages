@@ -1,7 +1,10 @@
 import path from 'path';
 import fs from 'fs';
 
-export function writeFile(filename: string, content: string | Uint8Array): void {
+export function writeFile(
+  filename: string,
+  content: string | Uint8Array
+): void {
   const dir = path.dirname(filename);
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });

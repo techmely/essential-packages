@@ -7,7 +7,7 @@ export interface ArrowDownRoundedOutlineProps extends IconBaseProps {
 }
 
 export const ArrowDownRoundedOutline: React.FC<ArrowDownRoundedOutlineProps> = (
-  props: ArrowDownRoundedOutlineProps,
+  props: ArrowDownRoundedOutlineProps
 ) =>
   GenIcon({
     tag: 'svg',
@@ -16,8 +16,8 @@ export const ArrowDownRoundedOutline: React.FC<ArrowDownRoundedOutlineProps> = (
       {
         tag: 'path',
         attr: {
-          d: 'M3.19 5h8.62c.857 0 1.317 1.007.756 1.655l-4.31 4.973c-.4.46-1.113.46-1.512 0l-4.31-4.973C1.873 6.007 2.333 5 3.19 5z',
-        },
-      },
-    ],
+          d: 'M3.19 5h8.62c.857 0 1.317 1.007.756 1.655l-4.31 4.973c-.4.46-1.113.46-1.512 0l-4.31-4.973C1.873 6.007 2.333 5 3.19 5z'
+        }
+      }
+    ]
   })(props);

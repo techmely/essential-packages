@@ -7,7 +7,7 @@ export interface ChevronsDownOutlineProps extends IconBaseProps {
 }
 
 export const ChevronsDownOutline: React.FC<ChevronsDownOutlineProps> = (
-  props: ChevronsDownOutlineProps,
+  props: ChevronsDownOutlineProps
 ) =>
   GenIcon({
     tag: 'svg',
@@ -20,8 +20,8 @@ export const ChevronsDownOutline: React.FC<ChevronsDownOutlineProps> = (
           strokeLinecap: 'round',
           strokeLinejoin: 'round',
           strokeWidth: '2',
-          d: 'M12.5 9l-4 4-4-4M12.5 3l-4 4-4-4',
-        },
-      },
-    ],
+          d: 'M12.5 9l-4 4-4-4M12.5 3l-4 4-4-4'
+        }
+      }
+    ]
   })(props);

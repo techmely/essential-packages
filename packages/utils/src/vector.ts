@@ -174,10 +174,14 @@ export function isEqual(a: number[], b: number[]) {
  */
 export function toPointsArray<
   T extends number[],
-  K extends { x: number; y: number; pressure?: number },
+  K extends { x: number; y: number; pressure?: number }
 >(points: (T | K)[]): number[][] {
   if (isArray(points[0])) {
-    return (points as number[][]).map(([x, y, pressure = 0.5]) => [x, y, pressure]);
+    return (points as number[][]).map(([x, y, pressure = 0.5]) => [
+      x,
+      y,
+      pressure
+    ]);
   }
   return (
     points as {
@@ -200,7 +204,7 @@ export function getStrokeRadius(
   size: number,
   thinning: number,
   easing: (t: number) => number,
-  pressure = 0.5,
+  pressure = 0.5
 ) {
   if (!thinning) return size / 2;
   const newPressure = clamp(easing(pressure), 0, 1);

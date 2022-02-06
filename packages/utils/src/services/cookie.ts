@@ -52,10 +52,8 @@ export function parse<T>(str: string, options?: CookieParseOptions) {
       val = val.slice(1, -1);
     }
 
-    // @ts-expect-error Ignore type check
     // only assign once
     if (undefined == obj[key]) {
-      // @ts-expect-error Ignore type check
       obj[key] = tryDecode(val, dec);
     }
   }
@@ -71,7 +69,11 @@ export function parse<T>(str: string, options?: CookieParseOptions) {
  * @param [options] object containing serialization options
  * @throws {TypeError} when `maxAge` options is invalid
  */
-export function serialize(name: string, value: string, options?: CookieSerializeOptions) {
+export function serialize(
+  name: string,
+  value: string,
+  options?: CookieSerializeOptions
+) {
   let opt = options || {};
   let enc = opt.encode || encode;
 
@@ -134,7 +136,10 @@ export function serialize(name: string, value: string, options?: CookieSerialize
   }
 
   if (opt.sameSite) {
-    let sameSite = typeof opt.sameSite === 'string' ? opt.sameSite.toLowerCase() : opt.sameSite;
+    let sameSite =
+      typeof opt.sameSite === 'string'
+        ? opt.sameSite.toLowerCase()
+        : opt.sameSite;
 
     switch (sameSite) {
       case true:

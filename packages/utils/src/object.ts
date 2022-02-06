@@ -10,10 +10,10 @@ import { DeepMerge } from './types';
  * @param {...S[]} sources - The sources will merge
  * @returns {DeepMerge<T, S>} the object after merge
  */
-export function deepMerge<T extends Record<string, any>, S extends Record<string, any>>(
-  target: T,
-  ...sources: S[]
-): DeepMerge<T, S> {
+export function deepMerge<
+  T extends Record<string, any>,
+  S extends Record<string, any>
+>(target: T, ...sources: S[]): DeepMerge<T, S> {
   if (sources.length === 0) return target as any;
 
   const source = sources.shift();
@@ -53,7 +53,9 @@ function isMergeableObject(item: any): item is Record<string, any> {
  */
 export function removeEmptyObj(obj: any) {
   return Object.fromEntries(
-    Object.entries(obj).filter(([_, v]) => isNotNull(v) && isDef(v) && isNotEmpty(v)),
+    Object.entries(obj).filter(
+      ([_, v]) => isNotNull(v) && isDef(v) && isNotEmpty(v)
+    )
   );
 }
 
@@ -64,6 +66,8 @@ export function removeEmptyObj(obj: any) {
  */
 export function removeUndefObj<T extends Record<string, any>>(obj: T): T {
   // eslint-disable-next-line no-param-reassign
-  Object.keys(obj).forEach((key: string) => (isUndef(obj[key]) ? delete obj[key] : {}));
+  Object.keys(obj).forEach((key: string) =>
+    isUndef(obj[key]) ? delete obj[key] : {}
+  );
   return obj;
 }

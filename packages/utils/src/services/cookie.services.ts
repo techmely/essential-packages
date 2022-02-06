@@ -8,7 +8,10 @@ export class CookieService<T> implements CookieInstance<T> {
 
   public cookieTokenName: string;
 
-  public constructor(env: 'uat' | 'production' | 'staging', cookieDomain: string) {
+  public constructor(
+    env: 'uat' | 'production' | 'staging',
+    cookieDomain: string
+  ) {
     this.appEnv = env;
     this.cookieDomain = cookieDomain;
     this.cookieTokenName = `token_${this.appEnv}`;

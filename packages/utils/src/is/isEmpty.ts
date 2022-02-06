@@ -1,8 +1,9 @@
 import { isArray, isString, isObject } from './isType';
 
 type EmptyArray<T> = readonly [T, ...ReadonlyArray<T>];
-const isEmptyArr = <T>(array: ReadonlyArray<T> | undefined): array is EmptyArray<T> =>
-  !!array && array.length === 0;
+const isEmptyArr = <T>(
+  array: ReadonlyArray<T> | undefined
+): array is EmptyArray<T> => !!array && array.length === 0;
 
 export function isEmpty<T = unknown>(val: T): val is T {
   if (!val) {

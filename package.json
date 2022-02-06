@@ -23,13 +23,13 @@
     "postinstall": "make git-hook",
     "bundlesize": "bundlesize",
     "build:deps": "pnpm -r --parallel --filter {packages} run build",
-    "build:types": "pnpm --filter @techmely/types run build",
-    "build:vite-plugin": "pnpm --filter @techmely/vite-plugin-runtime-env run build",
-    "build:test-utils": "pnpm --filter @techmely/test-utils run build",
-    "build:utils": "pnpm --filter @techmely/utils run build",
-    "build:ui": "pnpm --filter @techmely/ui run build",
-    "build:hooks": "pnpm --filter @techmely/hooks run build",
-    "build:build-configs": "pnpm --filter @techmely/build-configs run build",
+    "build:types": "turbo run build --scope=@techmely/types --no-deps",
+    "build:vite-plugin": "turbo run build --scope=@techmely/vite-plugin-runtime-env --no-deps",
+    "build:test-utils": "turbo run build --scope=@techmely/test-utils --no-deps",
+    "build:utils": "turbo run build --scope=@techmely/utils --no-deps",
+    "build:ui": "turbo run build --scope=@techmely/ui --no-deps",
+    "build:hooks": "turbo run build --scope=@techmely/hooks --no-deps",
+    "build:build-configs": "turbo run build --scope=@techmely/build-configs --no-deps",
     "changelog:gen": "ts-node scripts/changelog-generate.ts",
     "changelog:write": "ts-node scripts/changelog-write.ts",
     "changelog:commit": "git add CHANGELOG.md && git commit -am 'docs: add changelog' && git push",
@@ -44,53 +44,23 @@
   "packageManager": "pnpm@6.24.2",
   "devDependencies": {
     "@changesets/changelog-github": "0.4.2",
-    "@changesets/cli": "2.19.0",
+    "@changesets/cli": "2.20.0",
     "@ls-lint/ls-lint": "1.10.0",
-    "@types/node": "17.0.8",
+    "@swc/core": "1.2.136",
+    "@swc/helpers": "0.3.2",
+    "@types/node": "17.0.15",
     "bumpp": "7.1.1",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",
-    "jscpd": "3.4.2",
+    "jscpd": "3.4.5",
     "prettier": "2.5.1",
+    "regenerator-runtime": "0.13.9",
     "rimraf": "3.0.2",
-    "tsup": "5.11.11",
-    "turbo": "1.0.24",
-    "typescript": "4.5.4",
-    "vite": "2.7.10",
-    "vitest": "0.0.139"
-  },
-  "turbo": {
-    "baseBranch": "origin/main",
-    "pipeline": {
-      "build": {
-        "dependsOn": [
-          "^build"
-        ],
-        "outputs": [
-          "dist/**",
-          "**/dist/**"
-        ]
-      },
-      "test": {
-        "dependsOn": [
-          "^build"
-        ],
-        "outputs": []
-      },
-      "lint": {
-        "outputs": []
-      },
-      "dev": {
-        "cache": false
-      },
-      "deploy": {
-        "dependsOn": [
-          "build",
-          "test",
-          "lint"
-        ]
-      }
-    }
+    "tsup": "5.11.13",
+    "turbo": "1.1.2",
+    "typescript": "4.5.5",
+    "vite": "2.7.13",
+    "vitest": "0.2.7"
   },
   "funding": [
     {

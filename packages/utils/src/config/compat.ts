@@ -1,4 +1,3 @@
-import { isDev } from '../is';
 import { createLogger } from '../logger';
 
 const logger = createLogger();
@@ -9,7 +8,7 @@ type DeprecationData = {
 };
 
 export const enum DeprecationTypes {
-  CONFIG_SILENT = 'CONFIG_SILENT',
+  CONFIG_SILENT = 'CONFIG_SILENT'
 }
 
 export const deprecationData: Record<DeprecationTypes, DeprecationData> = {
@@ -17,17 +16,17 @@ export const deprecationData: Record<DeprecationTypes, DeprecationData> = {
     message:
       'config.silent has been removed because it is not good practice to ' +
       "intentionally suppress warnings. You can use your browser console's " +
-      'filter features to focus on relevant messages.',
-  },
+      'filter features to focus on relevant messages.'
+  }
 };
 
 export const warnDeprecation = (key: DeprecationTypes, ...args: any[]) => {
-  if (isDev) return;
+  // if (isDev) return;
 
   const { message, link } = deprecationData[key];
   logger.warn(
-    `(deprecation ${key}) ${typeof message === 'function' ? message(...args) : message}${
-      link ? `\n  Details: ${link}` : ''
-    }`,
+    `(deprecation ${key}) ${
+      typeof message === 'function' ? message(...args) : message
+    }${link ? `\n  Details: ${link}` : ''}`
   );
 };

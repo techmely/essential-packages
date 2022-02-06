@@ -24,7 +24,7 @@ export enum MimeType {
   QuickTime = 'video/quicktime',
   AVI = 'video/x-msvideo',
   WMV = 'video/x-ms-wmv',
-  HEIC = 'image/heic',
+  HEIC = 'image/heic'
 }
 
 export const mimeTable: {
@@ -38,7 +38,7 @@ export const mimeTable: {
   { ext: ['mp4', 'mp4v', 'mpg4', 'm4v'], type: MimeType.MP4 },
   { ext: ['avi'], type: MimeType.AVI },
   { ext: ['wmv'], type: MimeType.WMV },
-  { ext: ['heic'], type: MimeType.HEIC },
+  { ext: ['heic'], type: MimeType.HEIC }
 ];
 
 /**

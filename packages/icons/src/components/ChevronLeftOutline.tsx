@@ -7,7 +7,7 @@ export interface ChevronLeftOutlineProps extends IconBaseProps {
 }
 
 export const ChevronLeftOutline: React.FC<ChevronLeftOutlineProps> = (
-  props: ChevronLeftOutlineProps,
+  props: ChevronLeftOutlineProps
 ) =>
   GenIcon({
     tag: 'svg',
@@ -19,8 +19,8 @@ export const ChevronLeftOutline: React.FC<ChevronLeftOutlineProps> = (
           d: 'M10 12L6 8L10 4',
           strokeWidth: '2',
           strokeLinecap: 'round',
-          strokeLinejoin: 'round',
-        },
-      },
-    ],
+          strokeLinejoin: 'round'
+        }
+      }
+    ]
   })(props);

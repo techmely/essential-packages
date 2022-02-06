@@ -38,10 +38,18 @@ export function formatDateUnixTime(seconds: number, format = 'DD/MM/YYYY') {
   return formatDate(dayjs.unix(seconds).toISOString(), format);
 }
 
-export function diffDate(toDate: Date, fromDate: Date, config?: CompareDateConfig) {
+export function diffDate(
+  toDate: Date,
+  fromDate: Date,
+  config?: CompareDateConfig
+) {
   const formattedToDate = dayjs(toDate).format('YYYY-MM-DD');
   const formattedFromDate = dayjs(fromDate).format('YYYY-MM-DD');
-  return dayjs(formattedFromDate).diff(dayjs(formattedToDate), config?.unit, config?.float);
+  return dayjs(formattedFromDate).diff(
+    dayjs(formattedToDate),
+    config?.unit,
+    config?.float
+  );
 }
 
 export function addNewDate(date: Date, addDays = 0): Date {

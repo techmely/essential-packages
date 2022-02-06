@@ -8,7 +8,7 @@ export default function invariant(
   condition: any,
   // Can provide a string, or a function that returns a string for cases where
   // the message takes a fair amount of effort to compute
-  message?: string | (() => string),
+  message?: string | (() => string)
 ): asserts condition {
   if (condition) {
     return;
@@ -23,7 +23,8 @@ export default function invariant(
   // When not in production we allow the message to pass through
   // *This block will be removed in production builds*
 
-  const provided: string | undefined = typeof message === 'function' ? message() : message;
+  const provided: string | undefined =
+    typeof message === 'function' ? message() : message;
 
   // Options:
   // 1. message provided: `${prefix}: ${provided}`

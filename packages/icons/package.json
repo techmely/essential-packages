@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@techmely/build-configs": "workspace:*",
-    "@types/react": "17.0.38",
+    "@types/react": "17.0.39",
     "camelcase": "6.3.0",
     "cheerio": "1.0.0-rc.10",
     "glob": "7.2.0",

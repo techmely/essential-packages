@@ -40,7 +40,7 @@
     }
   },
   "devDependencies": {
-    "tsup": "^5.11.13"
+    "tsup": "^5.12.1"
   },
   "exports": {
     ".": {

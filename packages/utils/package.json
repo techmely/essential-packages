@@ -35,7 +35,8 @@
     "coverage": "vitest --coverage"
   },
   "dependencies": {
-    "debug": "4.3.3"
+    "debug": "4.3.4",
+    "ufo": "0.8.1"
   },
   "peerDependencies": {
     "dayjs": "1.10.6",
@@ -57,12 +58,12 @@
     "@techmely/build-configs": "workspace:*",
     "@techmely/types": "workspace:*",
     "@types/debug": "4.1.7",
-    "chalk": "5.0.0",
-    "dayjs": "1.10.8",
+    "chalk": "5.0.1",
+    "dayjs": "1.11.0",
     "exceljs": "4.3.0",
     "jwt-decode": "3.1.2",
     "typescript": "4.6.2",
-    "vitest": "0.5.9"
+    "vitest": "0.7.6"
   },
   "funding": [
     {

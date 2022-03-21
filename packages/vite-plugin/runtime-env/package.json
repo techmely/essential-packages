@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@techmely/build-configs": "workspace:*",
-    "tsup": "5.11.13",
+    "tsup": "5.12.1",
     "vite": "2.8.6"
   }
 }

@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "debug": "4.3.4",
-    "ufo": "0.8.1"
+    "ufo": "0.8.3"
   },
   "peerDependencies": {
     "dayjs": "1.10.6",

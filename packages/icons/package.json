@@ -36,7 +36,7 @@
     "glob": "7.2.0",
     "glob-promise": "4.2.2",
     "prettier": "2.6.0",
-    "tsup": "5.12.1"
+    "tsup": "5.12.4"
   },
   "peerDependencies": {
     "@emotion/react": "11.7.1",

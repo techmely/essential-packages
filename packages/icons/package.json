@@ -35,7 +35,7 @@
     "cheerio": "1.0.0-rc.10",
     "glob": "7.2.0",
     "glob-promise": "4.2.2",
-    "prettier": "2.6.0",
+    "prettier": "2.6.2",
     "tsup": "5.12.1"
   },
   "peerDependencies": {

@@ -1,6 +1,10 @@
 import { config as dotenvConfig, DotenvParseOutput } from 'dotenv';
 import fs from 'fs';
-import { gitLastCommitHash, gitCurrentBranch, getAppVersion } from '@techmely/utils';
+import {
+  gitLastCommitHash,
+  gitCurrentBranch,
+  getAppVersion
+} from '@techmely/utils';
 import path from 'path';
 import { Plugin } from 'vite';
 
@@ -18,7 +22,7 @@ function RuntimeEnv(args: Partial<Options> = {}): Plugin {
     extraConfigMountPoint: 'extra_env_',
     configName: 'env/conf',
     defaultMode: 'uat',
-    ...args,
+    ...args
   };
 
   let configStringJs: string;
@@ -30,7 +34,9 @@ function RuntimeEnv(args: Partial<Options> = {}): Plugin {
     name: 'vite-plugin-runtime-env',
     async configResolved({ mode: _mode, command }) {
       const mode = _mode === 'development' ? options.defaultMode : _mode;
-      const envWithMode = fs.readFileSync(`.env.${mode}`, { encoding: 'utf-8' }).toString();
+      const envWithMode = fs
+        .readFileSync(`.env.${mode}`, { encoding: 'utf-8' })
+        .toString();
 
       const extraConfigJs = await getDefaultExtraConfig();
 
@@ -44,16 +50,19 @@ function RuntimeEnv(args: Partial<Options> = {}): Plugin {
 
       configStringJs = generateConfigString(mode, options.mountPoint, isDev);
       configStringEnv += envWithMode;
-      extraConfigString = generateExtraConfigString(options.extraConfigMountPoint, {
-        ...extraConfig,
-        ...extraConfigJs,
-      });
+      extraConfigString = generateExtraConfigString(
+        options.extraConfigMountPoint,
+        {
+          ...extraConfig,
+          ...extraConfigJs
+        }
+      );
     },
     transformIndexHtml() {
       return isDev
         ? [
             { tag: 'script', children: configStringJs, injectTo: 'head' },
-            { tag: 'script', children: extraConfigString, injectTo: 'head' },
+            { tag: 'script', children: extraConfigString, injectTo: 'head' }
           ]
         : [
             { tag: 'script', children: extraConfigString, injectTo: 'head' },
@@ -62,8 +71,8 @@ function RuntimeEnv(args: Partial<Options> = {}): Plugin {
               // Need to slash / for absolute file path => localhost/env/config
               // Avoid web load wrong path like: localhost/website/env/config
               attrs: { src: `/${options.configName}.js`, id: 'app-config' },
-              injectTo: 'head',
-            },
+              injectTo: 'head'
+            }
           ];
     },
     generateBundle() {
@@ -71,15 +80,15 @@ function RuntimeEnv(args: Partial<Options> = {}): Plugin {
       this.emitFile({
         type: 'asset',
         fileName: `${options.configName}.js`,
-        source: configStringJs,
+        source: configStringJs
       });
       // This env file serve for in CI/CD mode --> Generate a .env file to Docker container use
       this.emitFile({
         type: 'asset',
         fileName: '.env',
-        source: configStringEnv,
+        source: configStringEnv
       });
-    },
+    }
   };
 }
 
@@ -107,7 +116,10 @@ function generateConfigString(mode: string, mountPoint: string, isDev = false) {
   return `window.${mountPoint} = ${JSON.stringify(envObj)}`;
 }
 
-function generateExtraConfigString(mountPoint: string, configs: DotenvParseOutput) {
+function generateExtraConfigString(
+  mountPoint: string,
+  configs: DotenvParseOutput
+) {
   return `window.${mountPoint} = ${JSON.stringify(configs)}`;
 }
 
@@ -123,7 +135,7 @@ async function getDefaultExtraConfig() {
   return {
     APP_VERSION: appVersion,
     GIT_BRANCH_NAME: currentBranch,
-    GIT_COMMIT_HASH: lastCommitHash,
+    GIT_COMMIT_HASH: lastCommitHash
   } as DotenvParseOutput;
 }
 

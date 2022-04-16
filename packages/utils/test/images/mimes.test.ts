@@ -11,6 +11,8 @@ describe('getMimeTypeFromExtension', () => {
 
   it('throws an error when passing an invalid extension', () => {
     // @ts-expect-error Check enum errors
-    expect(() => getMimeTypeFromExtension('gifs')).toThrow("'gifs' is not a valid extension");
+    expect(() => getMimeTypeFromExtension('gifs')).toThrow(
+      "'gifs' is not a valid extension"
+    );
   });
 });

@@ -1,12 +1,12 @@
 {
   "name": "@techmely/build-configs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Techmely build configurations",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/techmely/techmely/techmely.git"
+    "url": "https://github.com/techmely/techmely/tree/main/packages/build-configs"
   },
   "engines": {
     "node": ">=16.13.0",
@@ -17,13 +17,10 @@
   "module": "dist/index.mjs",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "typings"
+    "dist"
   ],
   "publishConfig": {
-    "access": "public",
-    "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
+    "access": "public"
   },
   "scripts": {
     "build": "tsup --dts",
@@ -32,15 +29,10 @@
     "clean": "rimraf dist"
   },
   "peerDependencies": {
-    "tsup": "^5.11.6"
-  },
-  "peerDependenciesMeta": {
-    "tsup": {
-      "optional": true
-    }
+    "tsup": "^5.12.5"
   },
   "devDependencies": {
-    "tsup": "^5.12.1"
+    "tsup": "^5.12.5"
   },
   "exports": {
     ".": {

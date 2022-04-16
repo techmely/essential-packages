@@ -63,23 +63,23 @@ describe('formatBytes', () => {
   it('returns a number with the requested amount of decimal places', () => {
     expect(
       formatBytes(12.3456, {
-        numberOfDecimals: 2,
-      }),
+        numberOfDecimals: 2
+      })
     ).toBe('12.34 bytes');
     expect(
       formatBytes(1000, {
-        numberOfDecimals: 3,
-      }),
+        numberOfDecimals: 3
+      })
     ).toBe('1.000 KB');
     expect(
       formatBytes(999.999_999_999_99e3, {
-        numberOfDecimals: 20,
-      }),
+        numberOfDecimals: 20
+      })
     ).toBe('999.99999999999000000000 KB');
     expect(
       formatBytes(999.999_999_999_99e24, {
-        numberOfDecimals: 4,
-      }),
+        numberOfDecimals: 4
+      })
     ).toBe('999.9999 YB');
   });
 });

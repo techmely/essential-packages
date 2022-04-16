@@ -1,4 +1,4 @@
-import { createLogger } from '../logger';
+import { createLogger } from './logger';
 
 const logger = createLogger();
 
@@ -21,8 +21,6 @@ export const deprecationData: Record<DeprecationTypes, DeprecationData> = {
 };
 
 export const warnDeprecation = (key: DeprecationTypes, ...args: any[]) => {
-  // if (isDev) return;
-
   const { message, link } = deprecationData[key];
   logger.warn(
     `(deprecation ${key}) ${

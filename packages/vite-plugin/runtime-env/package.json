@@ -18,9 +18,7 @@
     }
   },
   "publishConfig": {
-    "access": "public",
-    "main": "dist/index.js",
-    "typings": "dist/index.d.ts"
+    "access": "public"
   },
   "scripts": {
     "build": "tsup --dts",
@@ -33,11 +31,15 @@
     "dotenv": "16.0.0"
   },
   "peerDependencies": {
-    "vite": "^2.7.3"
+    "vite": "2.9.5"
   },
   "devDependencies": {
     "@techmely/build-configs": "workspace:*",
-    "tsup": "5.12.1",
-    "vite": "2.8.6"
+    "tsup": "5.12.5",
+    "vite": "2.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techmely/techmely/tree/main/packages/vite-plugin/runtime-env"
   }
 }

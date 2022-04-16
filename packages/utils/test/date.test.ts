@@ -4,7 +4,7 @@ import { describe, test, expect, it } from 'vitest';
 const dataDateTest = [
   '2021-09-20T17:30:00Z',
   '2021-08-10T10:51:09.833Z',
-  '2021-12-31T00:00:00+07:00',
+  '2021-12-31T00:00:00+07:00'
 ];
 
 const expectDefaultOutput = ['21/09/2021', '10/08/2021', '31/12/2021'];
@@ -28,7 +28,9 @@ describe('Unit test Date utils', () => {
     describe('Test valid time with HH:mm:ss format', () => {
       test('IF user use format HH:mm:ss', () => {
         dataDateTest.forEach((date, index) => {
-          expect(formatDate(date, 'HH:mm:ss')).toEqual(expectTimesOutput[index]);
+          expect(formatDate(date, 'HH:mm:ss')).toEqual(
+            expectTimesOutput[index]
+          );
         });
       });
     });

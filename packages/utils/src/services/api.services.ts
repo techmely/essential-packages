@@ -1,5 +1,9 @@
-import { resolveURL, withQuery } from 'ufo';
-import type { QueryObject } from 'ufo';
+export function baseHeader(headers?: HeadersInit) {
+  return {
+    'Content-Type': 'application/json',
+    ...headers
+  };
+}
 
 interface ResponseMap {
   blob: Blob;
@@ -11,11 +15,12 @@ export type ResponseType = keyof ResponseMap | 'json';
 
 export type MappedType<
   R extends ResponseType,
-  JsonType = any
+  JsonType
 > = R extends keyof ResponseMap ? ResponseMap[R] : JsonType;
 
-export type ApiFetchHandler = <T = any, R extends ResponseType = 'json'>(
-  data?: RequestInit['body'] | Record<string, any>
+export type ApiFetchHandler = <T, R extends ResponseType = 'json'>(
+  data?: RequestInit['body'] | Record<string, any>,
+  overridesOpts?: RequestInit
 ) => Promise<MappedType<R, T>>;
 
 export type ApiBuilder = {
@@ -32,18 +37,14 @@ export type ApiBuilder = {
 type FetchOptions = Partial<RequestInit>;
 
 const defaultOptions: FetchOptions = {
-  headers: {
-    'Content-Type': 'application/json'
-  }
+  headers: baseHeader()
 };
 
-/**
- * A generator fetch API with Proxies
- * @param baseUrl The URL
- * @param opts Options for fetch API
- * @returns Data with generic type
- */
-export function createApi(baseUrl: string, opts = defaultOptions): ApiBuilder {
+export function generateAPI(
+  baseUrl: string,
+  opts = defaultOptions
+): ApiBuilder {
+  if (!fetch) throw new Error('No fetch API available');
   // Callable internal target required to use `apply` on it
   const internalTarget = (() => {}) as ApiBuilder;
 
@@ -53,7 +54,7 @@ export function createApi(baseUrl: string, opts = defaultOptions): ApiBuilder {
         const method = key.toUpperCase();
 
         if (!['GET', 'POST', 'PUT', 'DELETE', 'PATCH'].includes(method)) {
-          return p(resolveURL(url, key));
+          return p(`${url}/${key}`);
         }
 
         const handler: ApiFetchHandler = <Response = any>(
@@ -65,6 +66,8 @@ export function createApi(baseUrl: string, opts = defaultOptions): ApiBuilder {
             ...overridesOpts,
             method
           };
+          // @ts-expect-error Ignore type check
+          const searchParams = `?${new URLSearchParams(data)}`;
 
           switch (method) {
             case 'POST':
@@ -73,7 +76,8 @@ export function createApi(baseUrl: string, opts = defaultOptions): ApiBuilder {
               payloadOpts.body = JSON.stringify(data);
               break;
             default:
-              if (data) url = withQuery(url, data as QueryObject);
+              // eslint-disable-next-line no-param-reassign
+              url = `${url}${data && searchParams}`;
           }
 
           return fetchAPI<Response>(url, payloadOpts);
@@ -81,8 +85,8 @@ export function createApi(baseUrl: string, opts = defaultOptions): ApiBuilder {
 
         return handler;
       },
-      apply(_target, _thisArg, args: (string | number)[] = []) {
-        return p(resolveURL(url, ...args.map(i => `${i}`)));
+      apply(_target, _thisArg, [arg] = []) {
+        return p(arg ? `${url}/${arg}` : url);
       }
     });
 

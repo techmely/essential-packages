@@ -7,7 +7,6 @@ module.exports = {
   quoteProps: 'as-needed',
   bracketSpacing: true,
   trailingComma: 'none',
-  jsxBracketSameLine: false,
   jsxSingleQuote: false,
   arrowParens: 'avoid',
   insertPragma: false,
@@ -15,5 +14,5 @@ module.exports = {
   proseWrap: 'never',
   htmlWhitespaceSensitivity: 'strict',
   endOfLine: 'lf',
-  rangeStart: 0,
+  rangeStart: 0
 };

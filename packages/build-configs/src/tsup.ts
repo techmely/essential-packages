@@ -3,7 +3,7 @@ import { type BasePackageJson } from './types';
 
 const now = new Date();
 
-const techmelyBanner = (packageName: string) => `
+export const TECHMELY_BANNER = (packageName: string) => `
 /*!
  * ${packageName}
  * Copyright(c) 2021-${now.getFullYear()} Techmely <techmely.creation@gmail.com>
@@ -17,10 +17,13 @@ type BuildOptions = {
   packageName?: string;
 };
 
-export function getTsupOptions(pkg: BasePackageJson, buildOptions?: BuildOptions): Options {
+export function getTsupOptions(
+  pkg?: BasePackageJson,
+  buildOptions?: BuildOptions
+): Options {
   let external = [
-    ...new Set(Object.keys(pkg.peerDependencies ?? {})),
-    ...new Set(Object.keys(pkg.devDependencies ?? {})),
+    ...new Set(Object.keys(pkg?.peerDependencies ?? {})),
+    ...new Set(Object.keys(pkg?.devDependencies ?? {}))
   ];
   if (buildOptions?.externalDeps) {
     external = [...external, ...buildOptions.externalDeps];
@@ -37,9 +40,11 @@ export function getTsupOptions(pkg: BasePackageJson, buildOptions?: BuildOptions
     external,
     ignoreWatch: ['**/{node_modules}/**', 'dist', 'src/**/*.test.ts'],
     banner: {
-      js: techmelyBanner(buildOptions?.packageName || pkg.name || 'open-sources'),
+      js: TECHMELY_BANNER(
+        buildOptions?.packageName || pkg?.name || 'open-sources'
+      )
     },
-    ...buildOptions?.tsupOptions,
+    ...buildOptions?.tsupOptions
   };
   return options;
 }

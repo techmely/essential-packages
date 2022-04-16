@@ -24,7 +24,7 @@ import ViteRuntimeEnv from '@techmely/vite-plugin-runtime-env';
 import { UserConfig } from 'vite';
 
 const config: UserConfig = {
-  plugins: [ViteRuntimeEnv()],
+  plugins: [ViteRuntimeEnv()]
 };
 ```
 

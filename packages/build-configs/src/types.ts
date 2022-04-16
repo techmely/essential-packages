@@ -166,5 +166,8 @@ export type DependencyManifest = BasePackageJson &
 
 export type PackageExtension = Pick<
   BasePackageJson,
-  'dependencies' | 'optionalDependencies' | 'peerDependencies' | 'peerDependenciesMeta'
+  | 'dependencies'
+  | 'optionalDependencies'
+  | 'peerDependencies'
+  | 'peerDependenciesMeta'
 >;

@@ -10,7 +10,7 @@ const dataTest = {
       '0888888888',
       '0988888888',
       '0300000000',
-      '0710000000',
+      '0710000000'
     ],
     email: [
       'email@example.com',
@@ -21,8 +21,8 @@ const dataTest = {
       'email@example.museum',
       'email@example.co.jp',
       'firstname-lastname@example.com',
-      '1234567890@example.com',
-    ],
+      '1234567890@example.com'
+    ]
   },
   invalid: {
     phone: [
@@ -31,15 +31,15 @@ const dataTest = {
       '01734305551',
       '09123456781123',
       '0123430555111111',
-      '1234567890',
+      '1234567890'
     ],
     email: [
       'email.example.com',
       'email@example@example.com',
       'email@111.222.333.44444',
-      'email@example..com',
-    ],
-  },
+      'email@example..com'
+    ]
+  }
 };
 
 describe('Check regex', () => {

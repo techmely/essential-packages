@@ -11,3 +11,5 @@ export * from './vector';
 export * from './generate';
 export * from './is';
 export * from './services';
+export * from './compat';
+export * from './helpers';

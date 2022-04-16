@@ -9,15 +9,17 @@ export const alias: AliasOptions = {
   '@techmely/types': r('./packages/types/src/'),
   '@techmely/icons': r('./packages/icons/src/'),
   '@techmely/utils': r('./packages/utils/src/'),
-  '@techmely/vite-plugin-runtime-env': r('./packages/vite-plugin/runtime-env/src/'),
+  '@techmely/vite-plugin-runtime-env': r(
+    './packages/vite-plugin/runtime-env/src/'
+  )
 };
 
 export default defineConfig({
   resolve: {
-    alias,
+    alias
   },
   test: {
-    global: true,
-    environment: 'node',
-  },
+    globals: true,
+    environment: 'node'
+  }
 });

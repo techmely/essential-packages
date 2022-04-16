@@ -1,12 +1,12 @@
 {
   "name": "@techmely/types",
-  "version": "1.0.6",
+  "version": "1.1.1",
   "description": "Techmely types definitions",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/techmely/techmely/techmely.git"
+    "url": "https://github.com/techmely/techmely/tree/main/packages/types"
   },
   "engines": {
     "node": ">=16.13.0",
@@ -29,10 +29,11 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@techmely/build-configs": "1.0.4"
+    "@techmely/build-configs": "workspace:*"
   },
   "devDependencies": {
-    "typescript": "4.6.2"
+    "tsup": "5.12.5",
+    "typescript": "4.6.3"
   },
   "exports": {
     ".": {

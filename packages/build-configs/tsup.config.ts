@@ -1,4 +1,6 @@
-import { getTsupOptions } from './src/tsup';
-import pkg from './package.json';
+import { defineConfig } from 'tsup';
+import { getTsupOptions } from './src';
 
-export default getTsupOptions(pkg);
+const options = getTsupOptions({}, {});
+
+export default defineConfig(options);

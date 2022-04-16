@@ -24,8 +24,6 @@ const options = getTsupOptions(pkg, {
       'src/appMetadata.ts',
       'src/hasProp.ts',
       'src/validators.ts',
-      'src/uuid.ts',
-      'src/index.ts',
       'src/array.ts',
       'src/date.ts',
       'src/number.ts',

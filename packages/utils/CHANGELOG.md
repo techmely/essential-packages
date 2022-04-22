@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.1.3
+
+### Patch Changes
+
+- feat(utils): add convertor percent to hext fuction
+
 ## 1.0.9
 
 ### Patch Changes

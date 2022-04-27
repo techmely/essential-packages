@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -43,10 +43,6 @@
       "import": "./dist/is/index.mjs",
       "require": "./dist/is/index.js"
     },
-    "./logger": {
-      "import": "./dist/logger/index.mjs",
-      "require": "./dist/logger/index.js"
-    },
     "./math": {
       "import": "./dist/math/index.mjs",
       "require": "./dist/math/index.js"
@@ -60,16 +56,16 @@
       "require": "./dist/services/index.js"
     },
     "./dayjs": {
-      "import": "./dist/_external/dayjs.mjs",
-      "require": "./dist/_external/dayjs.js"
+      "import": "./dist/vendor/dayjs.mjs",
+      "require": "./dist/vendor/dayjs.js"
     },
     "./excel": {
-      "import": "./dist/_external/excel.mjs",
-      "require": "./dist/_external/excel.js"
+      "import": "./dist/vendor/excel.mjs",
+      "require": "./dist/vendor/excel.js"
     },
     "./jwt": {
-      "import": "./dist/_external/jwt.mjs",
-      "require": "./dist/_external/jwt.js"
+      "import": "./dist/vendor/jwt.mjs",
+      "require": "./dist/vendor/jwt.js"
     },
     "./colors": {
       "import": "./dist/colors.mjs",
@@ -122,9 +118,6 @@
   },
   "typesVersions": {
     "*": {
-      ".": [
-        "dist/index.d.ts"
-      ],
       "./files": [
         "dist/files/index.d.ts"
       ],
@@ -133,9 +126,6 @@
       ],
       "./is": [
         "dist/is/index.d.ts"
-      ],
-      "./logger": [
-        "dist/logger/index.d.ts"
       ],
       "./math": [
         "dist/math/index.d.ts"
@@ -147,13 +137,13 @@
         "dist/services/index.d.ts"
       ],
       "./dayjs": [
-        "dist/_external/dayjs.d.ts"
+        "dist/vendor/dayjs.d.ts"
       ],
       "./excel": [
-        "dist/_external/excel.d.ts"
+        "dist/vendor/excel.d.ts"
       ],
       "./jwt": [
-        "dist/_external/jwt.d.ts"
+        "dist/vendor/jwt.d.ts"
       ],
       "./colors": [
         "dist/colors.d.ts"
@@ -193,9 +183,6 @@
       ]
     }
   },
-  "dependencies": {
-    "debug": "4.3.4"
-  },
   "peerDependencies": {
     "dayjs": "1.10.6",
     "exceljs": "4.3.0",
@@ -215,14 +202,13 @@
   "devDependencies": {
     "@techmely/build-configs": "workspace:*",
     "@techmely/types": "workspace:*",
-    "@types/debug": "4.1.7",
     "chalk": "5.0.1",
     "dayjs": "1.11.1",
     "exceljs": "4.3.0",
     "jwt-decode": "3.1.2",
+    "tsup": "5.12.6",
     "typescript": "4.6.3",
-    "tsup": "5.12.5",
-    "vitest": "0.9.3"
+    "vitest": "0.10.0"
   },
   "funding": [
     {

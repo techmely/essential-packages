@@ -21,10 +21,7 @@ export function getTsupOptions(
   pkg?: BasePackageJson,
   buildOptions?: BuildOptions
 ): Options {
-  let external = [
-    ...new Set(Object.keys(pkg?.peerDependencies ?? {})),
-    ...new Set(Object.keys(pkg?.devDependencies ?? {}))
-  ];
+  let external = [...new Set(Object.keys(pkg?.peerDependencies ?? {}))];
   if (buildOptions?.externalDeps) {
     external = [...external, ...buildOptions.externalDeps];
   }

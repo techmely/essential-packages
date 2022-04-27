@@ -1,7 +1,7 @@
 import { exec } from 'child_process';
 import { readFileSync } from 'fs';
 import { promisify } from 'util';
-import invariant from './logger/invariant';
+import assert from 'assert';
 
 const execCmd = promisify(exec);
 
@@ -10,7 +10,7 @@ export const gitLastCommitHash = async () => {
   const { stderr: lastCommitHashErr, stdout: lastCommitHash } = await execCmd(
     gitCommand
   );
-  invariant(
+  assert(
     lastCommitHashErr,
     `The environment doesn't have GIT, died!\n Error: ${lastCommitHashErr.toString()}`
   );

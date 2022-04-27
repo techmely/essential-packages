@@ -1,4 +1,4 @@
-import invariant from '../logger/invariant';
+import assert from 'assert';
 
 export type FileExtension =
   | 'gif'
@@ -51,7 +51,7 @@ export const mimeTable: {
 export const getMimeTypeFromExtension = (extension: FileExtension) => {
   const result = mimeTable.find(({ ext }) => ext.includes(extension));
 
-  invariant(!!result, `'${extension}' is not a valid extension`);
+  assert(!!result, `'${extension}' is not a valid extension`);
 
   return result?.type;
 };

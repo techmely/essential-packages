@@ -10,13 +10,12 @@ const options = getTsupOptions(pkg, {
       'src/files',
       'src/helpers',
       'src/is',
-      'src/logger',
       'src/math',
       'src/transform',
       'src/services',
-      'src/_external/dayjs.ts',
-      'src/_external/excel.ts',
-      'src/_external/jwt.ts',
+      'src/vendor/dayjs.ts',
+      'src/vendor/excel.ts',
+      'src/vendor/jwt.ts',
       'src/index.ts',
       'src/colors.ts',
       'src/compat.ts',
@@ -33,5 +32,6 @@ const options = getTsupOptions(pkg, {
     ]
   }
 });
+console.log('options', options);
 
 export default defineConfig(options);

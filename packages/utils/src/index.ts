@@ -1,6 +1,5 @@
-export * from './_external';
+export * from './vendor';
 export * from './array';
-export * from './logger';
 export * from './math';
 export * from './files';
 export * from './object';

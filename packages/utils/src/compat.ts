@@ -1,7 +1,3 @@
-import { createLogger } from './logger';
-
-const logger = createLogger();
-
 type DeprecationData = {
   message: string | ((...args: any[]) => string);
   link?: string;
@@ -22,7 +18,7 @@ export const deprecationData: Record<DeprecationTypes, DeprecationData> = {
 
 export const warnDeprecation = (key: DeprecationTypes, ...args: any[]) => {
   const { message, link } = deprecationData[key];
-  logger.warn(
+  console.warn(
     `(deprecation ${key}) ${
       typeof message === 'function' ? message(...args) : message
     }${link ? `\n  Details: ${link}` : ''}`

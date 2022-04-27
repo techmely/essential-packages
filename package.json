@@ -29,10 +29,7 @@
     "build:ui": "turbo run build --scope=@techmely/ui --no-deps",
     "build:hooks": "turbo run build --scope=@techmely/hooks --no-deps",
     "build:build-configs": "turbo run build --scope=@techmely/build-configs --no-deps",
-    "changelog:gen": "ts-node scripts/changelog-generate.ts",
-    "changelog:write": "ts-node scripts/changelog-write.ts",
-    "changelog:commit": "git add CHANGELOG.md && git commit -am 'docs: add changelog' && git push",
-    "version-packages": "changeset version && yarn prettier",
+    "version-packages": "changeset version",
     "release": "pnpm run build:deps && changeset publish",
     "clean": "pnpm -r run clean",
     "clean:modules": "npx rimraf node_modules packages/**/node_modules",
@@ -40,7 +37,7 @@
     "coverage": "vitest --coverage",
     "prettier": "prettier --write \"**/*.{js,ts,tsx,md}\""
   },
-  "packageManager": "pnpm@6.24.2",
+  "packageManager": "pnpm@6.32.11",
   "devDependencies": {
     "@changesets/changelog-github": "0.4.4",
     "@changesets/cli": "2.22.0",

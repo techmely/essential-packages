@@ -1,5 +1,17 @@
 # @techmely/utils
 
+## 1.1.8
+
+### Patch Changes
+
+- Remove unnessary lib
+
+## 1.1.6
+
+### Patch Changes
+
+- Treeshaking module
+
 ## 1.1.3
 
 ### Patch Changes

@@ -7,20 +7,11 @@ const options = getTsupOptions(pkg, {
     minify: true,
     target: 'node14',
     entry: [
-      'src/files',
-      'src/helpers',
-      'src/is',
-      'src/math',
-      'src/transform',
-      'src/services',
-      'src/vendor/dayjs.ts',
-      'src/vendor/excel.ts',
-      'src/vendor/jwt.ts',
+      'src/**/index.ts',
       'src/index.ts',
       'src/colors.ts',
       'src/compat.ts',
       'src/generate.ts',
-      'src/appMetadata.ts',
       'src/hasProp.ts',
       'src/validators.ts',
       'src/array.ts',
@@ -32,6 +23,5 @@ const options = getTsupOptions(pkg, {
     ]
   }
 });
-console.log('options', options);
 
 export default defineConfig(options);

@@ -5,7 +5,6 @@ export * from './files';
 export * from './object';
 export * from './regex';
 export * from './transform';
-export * from './appMetadata';
 export * from './vector';
 export * from './generate';
 export * from './is';

@@ -52,7 +52,7 @@
     "@techmely/build-configs": "workspace:*",
     "@techmely/types": "workspace:*",
     "chalk": "5.0.1",
-    "dayjs": "1.11.1",
+    "dayjs": "1.11.3",
     "exceljs": "4.3.0",
     "jwt-decode": "3.1.2",
     "tsup": "5.12.6",

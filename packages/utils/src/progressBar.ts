@@ -19,7 +19,7 @@ interface Options {
 // the eighth Mersenne Prime
 const MAX_Z_INDEX = Math.pow(2, 32) - 1;
 
-export default class ProgressBar {
+export class ProgressBar {
   /** Show the progress bar and begin animating it. */
   start: () => void;
 

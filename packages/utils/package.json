@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -19,9 +19,7 @@
     "build": "tsup --dts",
     "build:dev": "tsup",
     "dev": "tsup --watch",
-    "clean": "rimraf dist",
-    "test": "vitest",
-    "coverage": "vitest --coverage"
+    "clean": "rimraf dist"
   },
   "files": [
     "dist"
@@ -30,6 +28,34 @@
     ".": {
       "import": "./dist/index.mjs",
       "require": "./dist/index.js"
+    },
+    "./fs": {
+      "import": "./dist/files/fs.mjs",
+      "require": "./dist/files/fs.js"
+    },
+    "./findNearestFile": {
+      "import": "./dist/files/findNearestFile.mjs",
+      "require": "./dist/files/findNearestFile.js"
+    },
+    "./git": {
+      "import": "./dist/git.mjs",
+      "require": "./dist/git.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "dist/index.d.ts"
+      ],
+      "fs": [
+        "dist/files/fs.d.ts"
+      ],
+      "findNearestFile": [
+        "dist/files/findNearestFile.d.ts"
+      ],
+      "git": [
+        "dist/git.d.ts"
+      ]
     }
   },
   "peerDependencies": {

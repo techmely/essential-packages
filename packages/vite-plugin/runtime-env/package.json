@@ -40,6 +40,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/techmely/techmely/tree/main/packages/vite-plugin/runtime-env"
+    "url": "https://github.com/techmely/utils/tree/dev/packages/vite-plugin/runtime-env"
   }
 }

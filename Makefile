@@ -1,5 +1,5 @@
-.PHONY: git-hook
-git-hook:
+.PHONY: git-hooks
+git-hooks:
 	# Config git settings
 	git config core.ignoreCase false
 	git config core.eol lf

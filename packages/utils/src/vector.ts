@@ -1,5 +1,5 @@
-import { isArray } from './is';
-import { clamp, lerp } from './math';
+import { isArray } from './is/isType';
+import { clamp, lerp } from './math/calculate';
 
 /**
  * Negate a vector.
@@ -206,7 +206,9 @@ export function getStrokeRadius(
   easing: (t: number) => number,
   pressure = 0.5
 ) {
-  if (!thinning) return size / 2;
+  if (!thinning) {
+    return size / 2;
+  }
   const newPressure = clamp(easing(pressure), 0, 1);
   return (
     (thinning < 0

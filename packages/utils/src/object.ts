@@ -1,4 +1,5 @@
-import { isObject, isArray, isNotNull, isDef, isNotEmpty, isUndef } from './is';
+import { isNotEmpty } from './is/isEmpty';
+import { isArray, isDef, isNotNull, isObject, isUndef } from './is/isType';
 import { DeepMerge } from './types';
 
 /**
@@ -14,22 +15,26 @@ export function deepMerge<
   T extends Record<string, any>,
   S extends Record<string, any>
 >(target: T, ...sources: S[]): DeepMerge<T, S> {
-  if (sources.length === 0) return target as any;
+  if (sources.length === 0) {
+    return target as any;
+  }
 
   const source = sources.shift();
-  if (source === undefined) return target as any;
+  if (source === undefined) {
+    return target as any;
+  }
 
   if (isMergeableObject(target) && isMergeableObject(source)) {
     Object.keys(source).forEach(key => {
       if (isMergeableObject(source[key])) {
-        // @ts-expect-error I do not know how to fix this
-        // eslint-disable-next-line no-param-reassign
-        if (!target[key]) target[key] = {};
+        if (!target[key]) {
+          // @ts-expect-error I do not know how to fix this
+          target[key] = {};
+        }
 
         deepMerge(target[key], source[key]);
       } else {
         // @ts-expect-error I do not know how to fix this
-        // eslint-disable-next-line no-param-reassign
         target[key] = source[key];
       }
     });
@@ -65,9 +70,9 @@ export function removeEmptyObj(obj: any) {
  * @returns {any} - the clean obj
  */
 export function removeUndefObj<T extends Record<string, any>>(obj: T): T {
-  // eslint-disable-next-line no-param-reassign
   Object.keys(obj).forEach((key: string) =>
-    isUndef(obj[key]) ? delete obj[key] : {}
+    // @ts-expect-error Ignore type checking
+    isUndef(obj[key]) ? (obj[key] = undefined) : {}
   );
   return obj;
 }
@@ -139,7 +144,7 @@ export function objectKeys<T extends object>(obj: T) {
  * @category Object
  */
 export function objectEntries<T extends object>(obj: T) {
-  return Object.entries(obj) as Array<[keyof T, T[keyof T]]>;
+  return Object.entries(obj) as [keyof T, T[keyof T]][];
 }
 
 /**
@@ -149,7 +154,9 @@ export function objectEntries<T extends object>(obj: T) {
  * @category Object
  */
 export function hasOwnProperty<T>(obj: T, v: PropertyKey) {
-  if (obj === null) return false;
+  if (obj === null) {
+    return false;
+  }
   return Object.prototype.hasOwnProperty.call(obj, v);
 }
 
@@ -165,7 +172,9 @@ export function objectPick<O, T extends keyof O>(
 ) {
   return keys.reduce((n, k) => {
     if (k in obj) {
-      if (!omitUndefined || obj[k] !== undefined) n[k] = obj[k];
+      if (!omitUndefined || obj[k] !== undefined) {
+        n[k] = obj[k];
+      }
     }
     return n;
   }, {} as Pick<O, T>);

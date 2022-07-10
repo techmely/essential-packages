@@ -13,8 +13,9 @@ export function capitalizeFirst(value: string) {
  * @returns {string} The hex decimal
  */
 export function percentToHex(percent: number): string {
-  if (percent < 0 || percent > 100)
+  if (percent < 0 || percent > 100) {
     throw new Error('Value must in range [0, 100]');
+  }
 
   const intValue = Math.round((percent / 100) * 255); // map percent to nearest integer (0 - 255)
   const hexValue = intValue.toString(16); // get hexadecimal representation

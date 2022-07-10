@@ -7,7 +7,7 @@ export type StripEnums<T extends Record<string, any>> = {
     ? T[K]
     : T[K] extends object
     ? T[K]
-    : T[K] extends Array<any>
+    : T[K] extends any[]
     ? T[K]
     : T[K] extends undefined
     ? undefined

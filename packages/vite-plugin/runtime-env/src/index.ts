@@ -1,10 +1,11 @@
+import {
+  findNearestFile,
+  getAppVersion,
+  getCurrentGitBranch,
+  getLastGitCommitHash
+} from '@techmely/utils';
 import { config as dotenvConfig, DotenvParseOutput } from 'dotenv';
 import fs from 'fs';
-import {
-  gitLastCommitHash,
-  gitCurrentBranch,
-  getAppVersion
-} from '@techmely/utils';
 import path from 'path';
 import { Plugin } from 'vite';
 
@@ -128,9 +129,10 @@ function getEnvWithPath(file: string) {
 }
 
 async function getDefaultExtraConfig() {
-  const lastCommitHash = await gitLastCommitHash();
-  const currentBranch = await gitCurrentBranch();
-  const appVersion = getAppVersion();
+  const lastCommitHash = await getLastGitCommitHash();
+  const currentBranch = await getCurrentGitBranch();
+  const { data } = await findNearestFile<{ name: string }>('package.json');
+  const appVersion = await getAppVersion(data.name);
 
   return {
     APP_VERSION: appVersion,

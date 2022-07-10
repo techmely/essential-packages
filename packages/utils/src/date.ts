@@ -1,7 +1,7 @@
-import { isNumber } from './is';
+import { isNumber } from './is/isType';
 
 const isSameDay = (date1?: Date, date2?: Date): boolean => {
-  if (!date1 || !date2) {
+  if (!(date1 && date2)) {
     return false;
   }
 
@@ -13,7 +13,7 @@ const isSameDay = (date1?: Date, date2?: Date): boolean => {
 };
 
 export const isSameMonth = (date1?: Date, date2?: Date): boolean => {
-  if (!date1 || !date2) {
+  if (!(date1 && date2)) {
     return false;
   }
 
@@ -68,9 +68,15 @@ export function sortData(
   const { locale = 'vi', shouldIgnoreZero = false } = options || {};
 
   if (shouldIgnoreZero) {
-    if (a === b) return 0;
-    if (a === 0) return 1;
-    if (b === 0) return -1;
+    if (a === b) {
+      return 0;
+    }
+    if (a === 0) {
+      return 1;
+    }
+    if (b === 0) {
+      return -1;
+    }
   }
 
   if (isNumber(a) && isNumber(b)) {

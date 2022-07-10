@@ -9,48 +9,59 @@ on:
       - main
 
 jobs:
-  release:
-    name: 'Release'
-    if: "!contains(github.event.head_commit.message, 'ci skip')"
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-
-    runs-on: ${{ matrix.os }}
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  Release:
+    runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
 
-      - name: Set node version to 14
+      - name: Set node version to 16
         uses: actions/setup-node@v2
         with:
-          node-version: 14.x
+          node-version: 16
+          cache: 'pnpm'
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - run: pnpm install
 
-      - uses: actions/cache@v2
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+      - name: Setup Git
+        run: |
+          git config user.name "Harry Tran"
+          git config user.email "nhattq.coding@gmail.com"
 
-      - name: Install NX
-        run: yarn global add nx
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build package
-        run: yarn build
-
-      - name: Release
+      - name: Configure npm
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            //registry.npmjs.org/:_authToken=$NPM_TOKEN
+          EOF
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          run: yarn semantic-release
+
+      - name: Build packages
+        run: pnpm run build:deps
+
+      - name: Create release Pull Request or publish to NPM
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: yarn release
+          commit: 'ci(changesets): version packages'
+          title: 'ci(changesets): version packages'
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Release to @dev tag
+        if: steps.changesets.outputs.published != 'true'
+        run: |
+          git checkout main
+          pnpm changeset version --snapshot dev
+          pnpm changeset publish --tag dev
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update changelog
+        if: steps.changesets.outputs.published == 'true'
+        run: |
+          yarn changelog:write
+          yarn changelog:commit

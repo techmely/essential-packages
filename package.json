@@ -19,7 +19,6 @@
   ],
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "postinstall": "make git-hook",
     "bundlesize": "bundlesize",
     "build:deps": "turbo run build --parallel",
     "build:types": "turbo run build --scope=@techmely/types --no-deps",
@@ -37,15 +36,18 @@
     "clean:modules": "npx rimraf node_modules packages/**/node_modules",
     "test:unit": "vitest --passWithNoTests",
     "test:unit:run": "vitest run --passWithNoTests",
-    "test:unit:coverage": "vitest --coverage"
+    "test:unit:coverage": "vitest --coverage",
+    "changelog:gen": "ts-node scripts/generateChangelog.ts",
+    "changelog:write": "ts-node scripts/writeChangelog.ts",
+    "changelog:commit": "git add CHANGELOG.md && git commit -am 'docs: add changelog' && git push"
   },
   "packageManager": "pnpm@6.32.11",
   "devDependencies": {
     "@changesets/changelog-github": "0.4.5",
     "@changesets/cli": "2.23.1",
     "@ls-lint/ls-lint": "1.11.2",
-    "@swc/core": "1.2.211",
-    "@swc/helpers": "0.4.3",
+    "@swc/core": "^1.2.211",
+    "@swc/helpers": "^0.4.3",
     "@types/node": "18.0.3",
     "bumpp": "8.2.1",
     "bundlesize": "0.18.1",
@@ -53,13 +55,15 @@
     "happy-dom": "6.0.2",
     "jscpd": "3.4.5",
     "kolorist": "1.5.1",
+    "lodash-es": "4.17.21",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
     "rome": "0.7.0-next",
     "turbo": "1.3.1",
     "typescript": "4.7.4",
-    "vite": "2.9.13",
-    "vitest": "0.17.0",
+    "vite": "^2.9.14",
+    "vitest": "^0.18.0",
+    "ts-node": "^10.8.2",
     "zx": "7.0.7"
   },
   "funding": [

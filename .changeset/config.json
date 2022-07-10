@@ -1,13 +1,11 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@1.4.0/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "techmely/techmely" }],
-  "commit": false,
-  "linked": [],
+  "changelog": ["@changesets/changelog-github", { "repo": "techmely/utils" }],
+  "commit": true,
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
-    "onlyUpdatePeerDependentsWhenOutOfRange": true
-  },
-  "ignore": []
+    "updateInternalDependents": "always"
+  }
 }

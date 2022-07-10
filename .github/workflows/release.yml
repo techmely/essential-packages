@@ -43,12 +43,12 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          publish: yarn release
+          publish: pnpm changeset public
           commit: 'ci(changesets): version packages'
           title: 'ci(changesets): version packages'
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Release to @dev tag
         if: steps.changesets.outputs.published != 'true'
@@ -58,10 +58,10 @@ jobs:
           pnpm changeset publish --tag dev
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Update changelog
         if: steps.changesets.outputs.published == 'true'
         run: |
-          yarn changelog:write
-          yarn changelog:commit
+          pnpm run changelog:write
+          pnpm run changelog:commit

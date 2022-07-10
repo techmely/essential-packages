@@ -1,4 +1,4 @@
-import { deepMerge } from '../src';
+import { deepMerge } from '@techmely/utils';
 import { describe, expect, it } from 'vitest';
 
 describe('Object test', () => {

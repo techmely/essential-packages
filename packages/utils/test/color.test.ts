@@ -1,4 +1,4 @@
-import { isHex } from '../src/colors';
+import { isHex } from '@techmely/utils';
 import { describe, expect, it } from 'vitest';
 
 describe('Colors utilities', () => {

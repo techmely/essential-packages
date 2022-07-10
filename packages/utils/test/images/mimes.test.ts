@@ -1,4 +1,4 @@
-import { getMimeTypeFromExtension } from '../../src';
+import { getMimeTypeFromExtension } from '@techmely/utils';
 import { describe, expect, it } from 'vitest';
 
 describe('getMimeTypeFromExtension', () => {

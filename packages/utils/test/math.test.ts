@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest';
-import { sum } from '../src/math';
+import { sum } from '@techmely/utils';
 
 it('Calculate sum', () => {
   expect(sum(1, 2, 3)).toEqual(6);

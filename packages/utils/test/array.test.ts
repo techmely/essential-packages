@@ -1,4 +1,4 @@
-import { take, unique } from '../src';
+import { take, unique } from '@techmely/utils';
 import { describe, expect, it } from 'vitest';
 
 describe('Array utils test', () => {

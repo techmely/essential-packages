@@ -1,10 +1,11 @@
+import { ComputeRange } from '@techmely/types';
 import { describe, test, expect } from 'vitest';
-import { percentToHex } from '../src';
+import { percentToHex } from '@techmely/utils';
 
 /**
  * Get this from here {@link https://gist.github.com/lopspower/03fb1cc0ac9f32ef38f4}
  */
-const percents = [
+const percents: ComputeRange<101>[number][] = [
   100, 99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 89, 88, 87, 86, 85, 84, 83, 82,
   81, 80, 79, 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65, 64, 63,
   62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44,

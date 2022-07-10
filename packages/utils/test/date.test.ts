@@ -1,4 +1,4 @@
-import { formatDate } from '../src';
+import { formatDate } from '@techmely/utils';
 import { describe, test, expect, it } from 'vitest';
 
 const dataDateTest = [

@@ -1,13 +1,13 @@
-import { isNotEmpties } from '../src/is';
-import { describe, expect, it } from 'vitest';
+import { isNotEmpties } from '@techmely/utils';
+import { describe, expect, test } from 'vitest';
 
-describe('Test valid is', () => {
-  it('Should return true', () => {
+describe.concurrent('Test valid is', () => {
+  test('Should return true', () => {
     expect(isNotEmpties('test', 'test')).toEqual(true);
     expect(isNotEmpties('test', 'test', 'test')).toEqual(true);
   });
 
-  it('Should return false', () => {
+  test('Should return false', () => {
     expect(isNotEmpties('', 'test')).toEqual(false);
     expect(isNotEmpties('', '')).toEqual(false);
     expect(isNotEmpties('test', '')).toEqual(false);

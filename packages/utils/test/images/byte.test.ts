@@ -1,4 +1,4 @@
-import { formatBytes, formatDecimals } from '../../src';
+import { formatBytes, formatDecimals } from '@techmely/utils';
 import { describe, expect, it } from 'vitest';
 
 describe('formatBytes', () => {

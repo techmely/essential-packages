@@ -1,8 +1,77 @@
-export function baseHeader(headers?: HeadersInit) {
-  return {
-    'Content-Type': 'application/json',
-    ...headers
-  };
+const defaultOptions: FetchOptions = {
+  headers: {
+    'Content-Type': 'application/json'
+  }
+};
+
+const METHODS: ReadonlyArray<string> = ['post', 'put', 'delete', 'patch'];
+
+export function generateApi(
+  baseUrl: string,
+  fetchAPI = baseFetchApi,
+  opts = defaultOptions
+): ClientBuilder {
+  // Callable internal target required to use `apply` on it
+  const internalTarget = (() => {}) as ClientBuilder;
+
+  const p = (url: string): ClientBuilder =>
+    new Proxy(internalTarget, {
+      get(_target, key: string) {
+        if (!['get', ...METHODS].includes(key)) {
+          return p(`${url}/${key}`);
+        }
+
+        // @ts-expect-error Ignore type checking
+        const handler: ClientMethodHandler = (data, interceptors) => {
+          const payloadOpts: FetchOptions = {
+            ...opts,
+            method: key.toUpperCase()
+          };
+
+          if (interceptors) {
+            interceptors.forEach(interceptor => {
+              interceptor(payloadOpts);
+            });
+          }
+          if (key === 'get' && data) {
+            // @ts-expect-error Ignore type checking
+            const searchParams = `?${new URLSearchParams(data)}`;
+            // eslint-disable-next-line no-param-reassign
+            url = `${url}${data ? searchParams : ''}`;
+          } else if (METHODS.includes(key)) {
+            payloadOpts.body = JSON.stringify(data);
+          }
+
+          return fetchAPI<Response>(url, payloadOpts);
+        };
+
+        return handler;
+      },
+      apply(_target, _thisArg, args: (string | number) | (string | number)[]) {
+        const _url = Array.isArray(args)
+          ? `${url}/${args.map(i => `${i}`).join('/')}`
+          : `${url}/${args}`;
+
+        return p(_url);
+      }
+    });
+
+  return p(baseUrl);
+}
+
+export async function baseFetchApi<Response>(url: string, opts?: RequestInit) {
+  if (!url) {
+    return;
+  }
+  const resp = await fetch(url, opts);
+  if (resp.ok && resp.status === 200) {
+    const json = await resp.json();
+    return json as Response;
+  }
+  if (resp.status >= 400 && resp.status < 500) {
+    const json = await resp.json();
+    throw json;
+  }
 }
 
 interface ResponseMap {
@@ -13,89 +82,27 @@ interface ResponseMap {
 
 export type ResponseType = keyof ResponseMap | 'json';
 
+export type Interceptor = (request: RequestInit) => void;
+
+export type FetchOptions = Partial<RequestInit>;
+
 export type MappedType<
   R extends ResponseType,
-  JsonType
+  JsonType = any
 > = R extends keyof ResponseMap ? ResponseMap[R] : JsonType;
 
-export type ApiFetchHandler = <T, R extends ResponseType = 'json'>(
+export type ClientMethodHandler = <T = any, R extends ResponseType = 'json'>(
   data?: RequestInit['body'] | Record<string, any>,
-  overridesOpts?: RequestInit
+  interceptors?: Interceptor[]
 ) => Promise<MappedType<R, T>>;
 
-export type ApiBuilder = {
-  [K: string]: ApiBuilder;
-  (...segmentsOrIds: (string | number)[]): ApiBuilder;
+export type ClientBuilder = {
+  [K: string]: ClientBuilder;
+  (...segmentsOrIds: (string | number)[]): ClientBuilder;
 } & {
-  get: ApiFetchHandler;
-  post: ApiFetchHandler;
-  put: ApiFetchHandler;
-  delete: ApiFetchHandler;
-  patch: ApiFetchHandler;
+  get: ClientMethodHandler;
+  post: ClientMethodHandler;
+  put: ClientMethodHandler;
+  delete: ClientMethodHandler;
+  patch: ClientMethodHandler;
 };
-
-type FetchOptions = Partial<RequestInit>;
-
-const defaultOptions: FetchOptions = {
-  headers: baseHeader()
-};
-
-export function generateAPI(
-  baseUrl: string,
-  opts = defaultOptions
-): ApiBuilder {
-  if (!fetch) throw new Error('No fetch API available');
-  // Callable internal target required to use `apply` on it
-  const internalTarget = (() => {}) as ApiBuilder;
-
-  const p = (url: string): ApiBuilder =>
-    new Proxy(internalTarget, {
-      get(_target, key: string) {
-        const method = key.toUpperCase();
-
-        if (!['GET', 'POST', 'PUT', 'DELETE', 'PATCH'].includes(method)) {
-          return p(`${url}/${key}`);
-        }
-
-        const handler: ApiFetchHandler = <Response = any>(
-          data?: RequestInit['body'] | Record<string, any>,
-          overridesOpts: RequestInit = {}
-        ) => {
-          const payloadOpts: FetchOptions = {
-            ...opts,
-            ...overridesOpts,
-            method
-          };
-          // @ts-expect-error Ignore type check
-          const searchParams = `?${new URLSearchParams(data)}`;
-
-          switch (method) {
-            case 'POST':
-            case 'PUT':
-            case 'PATCH':
-              payloadOpts.body = JSON.stringify(data);
-              break;
-            default:
-              // eslint-disable-next-line no-param-reassign
-              url = `${url}${data && searchParams}`;
-          }
-
-          return fetchAPI<Response>(url, payloadOpts);
-        };
-
-        return handler;
-      },
-      apply(_target, _thisArg, [arg] = []) {
-        return p(arg ? `${url}/${arg}` : url);
-      }
-    });
-
-  return p(baseUrl);
-}
-
-async function fetchAPI<Response>(url: string, opts?: RequestInit) {
-  const resp = await fetch(url, opts);
-  const json = await resp.json();
-
-  return json as Response;
-}

@@ -2,7 +2,7 @@
   "name": "@techmely/vite-plugin-runtime-env",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
-  "version": "1.0.10",
+  "version": "1.1.0",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

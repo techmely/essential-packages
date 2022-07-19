@@ -1,5 +1,5 @@
 import path from 'path';
-import { readFile, readFileSync } from './fs';
+import { readFile, readFileSync } from '../fs';
 
 export async function findNearestFile<T>(
   fileName: string,

@@ -1,6 +1,12 @@
-import { isNotEmpty } from './is/isEmpty';
-import { isArray, isDef, isNotNull, isObject, isUndef } from './is/isType';
-import { DeepMerge } from './types';
+import {
+  isNotEmpty,
+  isArray,
+  isDef,
+  isNotNull,
+  isObject,
+  isUndef
+} from '../is';
+import { DeepMerge } from '../types';
 
 /**
  * @description Deep merge Object

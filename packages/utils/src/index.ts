@@ -1,43 +1,30 @@
 export * from './array';
+export * from './base';
 
 export * from './colors';
 
 export * from './math/calculate';
 
-export * from './files/bytes';
-export * from './files/mimes';
-export * from './files/download';
+export * from './bytes';
+export * from './mines';
+export * from './download';
 
 export * from './object';
-export * from './progressBar';
+export * from './ProgressBar';
 export * from './regex';
 
-export * from './transform/convert';
+export * from './convert';
 
 export * from './vector';
 export * from './generate';
 
-export * from './is/isBrowser';
-export * from './is/isCallable';
-export * from './is/isDeepEqual';
-export * from './is/isEmpty';
-export * from './is/isPngImg';
-export * from './is/isType';
-export * from './is/isBrowser';
-export * from './is/isCallable';
-export * from './is/isDeepEqual';
-export * from './is/isEmpty';
-export * from './is/isPngImg';
-export * from './is/isType';
+export * from './is';
+export * from './generateApi';
+export * from './cookie';
 
-export * from './services/api.services';
-export * from './services/cookie.services';
-
-export * from './compat';
-
-// export * from './vendor/dayjs';
+export * from './dayjs';
 
 // Node.js only
-// export * from './git';
-// export * from './files/fs';
-// export * from './files/findNearestFile';
+export * from './git';
+export * from './fs';
+export * from './findNearestFile';

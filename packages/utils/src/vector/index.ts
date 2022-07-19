@@ -1,5 +1,5 @@
-import { isArray } from './is/isType';
-import { clamp, lerp } from './math/calculate';
+import { isArray } from '../is';
+import { clamp, lerp } from '../math/calculate';
 
 /**
  * Negate a vector.

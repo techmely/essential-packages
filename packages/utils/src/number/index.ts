@@ -1,6 +1,6 @@
 import { NullList, UnDef } from '@techmely/types';
 
-import { isNumber } from './is/isType';
+import { isNumber } from '../is';
 
 /**
  *

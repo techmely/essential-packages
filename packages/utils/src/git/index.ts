@@ -1,4 +1,4 @@
-import { findLastIndex } from './array';
+import { findLastIndex } from '../array';
 
 export async function getCurrentGitBranch() {
   return (

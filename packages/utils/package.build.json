@@ -1,0 +1,33 @@
+{
+  "name": "@techmely/utils",
+  "version": "1.4.0",
+  "description": "Collection of helpful JavaScript / TypeScript utils",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techmely/utils/tree/dev/packages/utils"
+  },
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "peerDependencies": {
+    "dayjs": "^1.11.3"
+  },
+  "peerDependenciesMeta": {
+    "dayjs": {
+      "optional": true
+    }
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ],
+  "keywords": ["techmely", "techmely-component", "techmely-utils"]
+}

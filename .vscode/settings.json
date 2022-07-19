@@ -83,6 +83,7 @@
     "shipjs",
     "stylelint",
     "techmely",
+    "treeshake",
     "tsup",
     "typedefs",
     "vite",

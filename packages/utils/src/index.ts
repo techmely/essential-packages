@@ -1,6 +1,5 @@
-export * from './vendor/dayjs';
-
 export * from './array';
+
 export * from './colors';
 
 export * from './math/calculate';
@@ -35,6 +34,8 @@ export * from './services/api.services';
 export * from './services/cookie.services';
 
 export * from './compat';
+
+// export * from './vendor/dayjs';
 
 // Node.js only
 // export * from './git';

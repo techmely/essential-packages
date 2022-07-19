@@ -2,13 +2,21 @@ import { getTsupOptions } from '@techmely/build-configs';
 import { defineConfig } from 'tsup';
 import pkg from './package.json';
 
-const options = getTsupOptions(pkg, {
+const universalOptions = getTsupOptions(pkg, {
   tsupOptions: {
-    minify: true,
-    splitting: true,
+    splitting: false,
     target: 'node16',
     entry: ['src/*.ts', 'src/**/*.ts']
   }
 });
 
-export default defineConfig(options);
+// const nodeOptions = getTsupOptions(pkg, {});
+// const vendorOptions = getTsupOptions(pkg, {
+//   tsupOptions: {
+//     outDir: 'vendor',
+//     target: 'node16',
+//     entry: ['src/vendor/*.ts']
+//   }
+// });
+
+export default defineConfig([universalOptions]);

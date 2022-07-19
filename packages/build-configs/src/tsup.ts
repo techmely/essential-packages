@@ -31,10 +31,11 @@ export function getTsupOptions(
   const options: Options = {
     entryPoints: ['src/index.ts'],
     format: ['cjs', 'esm'],
+    outDir: 'build',
     pure: isProd ? ['console.log', 'console.warn', 'debugger'] : undefined,
-    sourcemap: !isProd,
-    splitting: false,
     external,
+    clean: true,
+    treeshake: true,
     ignoreWatch: ['**/{node_modules}/**', 'dist', 'src/**/*.test.ts'],
     banner: {
       js: TECHMELY_BANNER(

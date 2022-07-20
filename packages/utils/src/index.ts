@@ -1,11 +1,10 @@
 export * from './array';
 export * from './base';
+export * from './bytes';
 
+export * from './calculate';
 export * from './colors';
 
-export * from './math/calculate';
-
-export * from './bytes';
 export * from './mines';
 export * from './download';
 

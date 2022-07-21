@@ -23,7 +23,7 @@ export * from './cookie';
 
 export * from './dayjs';
 
-// Node.js only
-export * from './git';
-export * from './fs';
-export * from './findNearestFile';
+// Node.js only --> Import nested modules to use them in the node environment
+// export * from './git';
+// export * from './fs';
+// export * from './findNearestFile';

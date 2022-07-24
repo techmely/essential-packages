@@ -31,6 +31,7 @@ async function genPkgJsonToModules({ from, to }) {
       const pkgJsonPath = path.join(to, dir, 'package.json');
       const newPkgData = {
         sideEffects: false,
+        typings: './index.d.ts',
         types: './index.d.ts',
         main: './index.js',
         module: './index.mjs'
@@ -59,6 +60,7 @@ async function cpBasePkgJson() {
     private: false,
     sideEffects: false,
     types: './index.d.ts',
+    typings: './index.d.ts',
     main: './index.js',
     module: './index.mjs'
   };

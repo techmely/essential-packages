@@ -90,7 +90,7 @@ importers:
   packages/vite-plugin/runtime-env:
     specifiers:
       '@techmely/build-configs': workspace:*
-      '@techmely/utils': workspace:*
+      '@techmely/utils': ^1.4.2
       dotenv: 16.0.1
     dependencies:
       '@techmely/utils': link:../../utils

@@ -1,13 +1,13 @@
-import {
-  findNearestFile,
-  getAppVersion,
-  getCurrentGitBranch,
-  getLastGitCommitHash
-} from '@techmely/utils';
 import { config as dotenvConfig, DotenvParseOutput } from 'dotenv';
 import fs from 'fs';
 import path from 'path';
 import { Plugin } from 'vite';
+import { findNearestFile } from '@techmely/utils/findNearestFile';
+import {
+  getLastGitCommitHash,
+  getCurrentGitBranch,
+  getAppVersion
+} from '@techmely/utils/git';
 
 interface Options {
   mountPoint: string;

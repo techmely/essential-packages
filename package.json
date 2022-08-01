@@ -44,7 +44,7 @@
   },
   "packageManager": "pnpm@6.32.11",
   "devDependencies": {
-    "@changesets/changelog-github": "0.4.5",
+    "@changesets/changelog-github": "0.4.6",
     "@changesets/cli": "2.23.2",
     "@ls-lint/ls-lint": "1.11.2",
     "@swc/core": "^1.2.218",

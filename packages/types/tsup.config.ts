@@ -3,5 +3,5 @@ import { defineConfig } from 'tsup';
 import pkg from './package.json';
 
 export default defineConfig(
-  getTsupOptions(pkg, { tsupOptions: { minify: true } })
+  getTsupOptions(pkg, { tsupOptions: { minify: true, outDir: 'build' } })
 );

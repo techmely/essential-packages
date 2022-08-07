@@ -22,7 +22,7 @@
     "tag": "latest"
   },
   "scripts": {
-    "build": "tsup --dts",
+    "build": "tsup --dts && ts-node ../../scripts/magicCpFiles.ts",
     "clean": "rimraf dist"
   },
   "dependencies": {
@@ -48,5 +48,6 @@
   "keywords": [
     "techmely",
     "types"
-  ]
+  ],
+  "gitHead": "0e0729d5b8e243db12e8cd41aa9189eee347469b"
 }

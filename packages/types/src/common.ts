@@ -1,8 +1,8 @@
-export {
-  type BasePackageJson,
-  type DependencyManifest,
-  type PackageExtension
-} from '@techmely/build-configs';
+// export {
+//   type BasePackageJson,
+//   type DependencyManifest,
+//   type PackageExtension
+// } from '@techmely/build-configs';
 
 export type Nullable<T> = T | null;
 export type UnDef<T> = T | undefined;

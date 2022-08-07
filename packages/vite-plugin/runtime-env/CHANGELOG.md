@@ -1,5 +1,12 @@
 # @techmely/vite-plugin-runtime-env
 
+## 1.1.1
+
+### Patch Changes
+
+- Updated dependencies [[`d423a21`](undefined)]:
+  - @techmely/utils@1.4.3
+
 ## 1.1.0
 
 ### Minor Changes

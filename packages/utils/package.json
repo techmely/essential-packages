@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@techmely/build-configs": "^1.1.1",
-    "@techmely/types": "^1.2.1",
+    "@techmely/types": "^1.2.2",
     "chalk": "^5.0.1",
     "dayjs": "^1.11.4",
     "execa": "^6.1.0"

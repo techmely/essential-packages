@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.2.2
+
+### Patch Changes
+
+- [`d423a21`](undefined) - Update Dayjs utils + Bump latest dependencies
+
 ## 1.2.0
 
 ### Minor Changes

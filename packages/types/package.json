@@ -1,6 +1,6 @@
 {
   "name": "@techmely/types",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Techmely types definitions",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -49,5 +49,5 @@
     "techmely",
     "types"
   ],
-  "gitHead": "0e0729d5b8e243db12e8cd41aa9189eee347469b"
+  "gitHead": "3e01e2013f7e11f175d1746bf2ecf838f86582f8"
 }

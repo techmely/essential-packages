@@ -17,7 +17,6 @@ dayjs.extend(timezone);
 const timeZone = dayjs.tz.guess();
 dayjs.tz.setDefault(timeZone);
 dayjs.updateLocale('vi', {});
-export { dayjs };
 
 /**
  * @param date
@@ -32,6 +31,17 @@ export function formatDate(date: ConfigType, format = 'DD/MM/YYYY'): string {
 
 export function formatDateToNow(date: ConfigType): string {
   return dayjs(date).fromNow();
+}
+
+/**
+ * @param time The unix timestamp
+ */
+export function parseUnix(time: number) {
+  return dayjs.unix(time);
+}
+
+export function getUnixTime(date: Date) {
+  return dayjs(date).unix();
 }
 
 export function formatDateUnixTime(seconds: number, format = 'DD/MM/YYYY') {
@@ -55,3 +65,5 @@ export function diffDate(
 export function addNewDate(date: Date, addDays = 0): Date {
   return dayjs(date).add(addDays, 'day').toDate();
 }
+
+export { dayjs };

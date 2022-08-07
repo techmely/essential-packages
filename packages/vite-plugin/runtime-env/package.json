@@ -18,14 +18,14 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@techmely/utils": "^1.4.2",
+    "@techmely/utils": "1.4.2",
     "dotenv": "16.0.1"
   },
   "peerDependencies": {
     "vite": "2.9.5"
   },
   "devDependencies": {
-    "@techmely/build-configs": "workspace:*"
+    "@techmely/build-configs": "1.1.3"
   },
   "repository": {
     "type": "git",

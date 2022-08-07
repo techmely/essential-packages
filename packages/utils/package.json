@@ -33,7 +33,7 @@
     "@techmely/build-configs": "^1.1.1",
     "@techmely/types": "^1.2.1",
     "chalk": "^5.0.1",
-    "dayjs": "^1.11.3",
+    "dayjs": "^1.11.4",
     "execa": "^6.1.0"
   },
   "funding": [

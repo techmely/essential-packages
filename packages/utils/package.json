@@ -13,7 +13,8 @@
   "types": "build/index.d.ts",
   "publishConfig": {
     "access": "public",
-    "directory": "build"
+    "directory": "build",
+    "tag": "latest"
   },
   "scripts": {
     "build": "tsup --dts && ts-node ../../scripts/magicCpFiles.ts",

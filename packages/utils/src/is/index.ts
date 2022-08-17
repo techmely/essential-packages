@@ -34,8 +34,7 @@ export const isWindow = (val: any): boolean =>
   typeof window !== 'undefined' && toString(val) === '[object Window]';
 
 // Using `typeof window !== 'undefined'` alone is not enough because some users use https://www.npmjs.com/package/ssr-window
-export const isBrowser =
-  typeof window !== 'undefined' && typeof window.scrollY === 'number';
+export const isBrowser = typeof window !== 'undefined';
 
 type EmptyArray<T> = readonly [T, ...ReadonlyArray<T>];
 const isEmptyArr = <T>(

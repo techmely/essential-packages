@@ -49,7 +49,7 @@
     "@ls-lint/ls-lint": "1.11.2",
     "@swc/core": "^1.2.224",
     "@swc/helpers": "^0.4.3",
-    "@types/node": "18.6.4",
+    "@types/node": "18.7.14",
     "bumpp": "8.2.1",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",

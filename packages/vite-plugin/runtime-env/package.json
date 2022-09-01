@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@techmely/utils": "1.4.3",
-    "dotenv": "16.0.1"
+    "dotenv": "16.0.2"
   },
   "peerDependencies": {
     "vite": "2.9.5"

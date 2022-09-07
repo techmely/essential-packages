@@ -1,7 +1,5 @@
-import { getTsupOptions } from '@techmely/build-configs';
+import { getTsupOptions } from '../utils/src/build-config';
 import { defineConfig } from 'tsup';
 import pkg from './package.json';
 
-export default defineConfig(
-  getTsupOptions(pkg, { tsupOptions: { minify: true, outDir: 'build' } })
-);
+export default defineConfig(getTsupOptions(pkg));

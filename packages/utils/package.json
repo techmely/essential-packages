@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -16,6 +16,9 @@
     "directory": "dist",
     "tag": "latest"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup --dts && yarn generate",
     "build:dts": "tsup --dts",

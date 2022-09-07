@@ -1,4 +1,4 @@
-import { ComputeRange } from '@techmely/types';
+import type { ComputeRange } from '@techmely/types';
 import { hexColor } from '../regex';
 
 export function isHex(hex: string): boolean {

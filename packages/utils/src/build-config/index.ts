@@ -33,6 +33,7 @@ export function getTsupOptions(
     external,
     clean: true,
     treeshake: true,
+    splitting: false,
     ignoreWatch: ['**/{node_modules}/**', 'dist', 'src/**/*.test.ts'],
     banner: {
       js: TECHMELY_BANNER(

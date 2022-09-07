@@ -17,7 +17,6 @@
   "files.exclude": {
     "**/*.log": true,
     "**/*.log*": true
-    // "node_modules": true
   },
   "search.exclude": {
     "**/dist": true,

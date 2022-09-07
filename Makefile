@@ -7,3 +7,15 @@ git-hooks:
 
 	# Allow bash script execute
 	chmod -R 777 .githooks
+
+.PHONY: yarn-latest
+yarn-latest:
+	# Config git settings
+	yarn set version latest
+
+	# Plugin
+
+	yarn plugin import typescript
+	yarn plugin import interactive-tools
+	yarn plugin import workspace-tools
+	yarn plugin import version

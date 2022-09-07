@@ -1,0 +1,16 @@
+{
+  "name": "@techmely/ts-config",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "main": "index.js",
+  "files": [
+    "base.json",
+    "next.json",
+    "node.json",
+    "ui-react-lib.json"
+  ],
+  "scripts": {
+    "publish": "yarn npm publish --tolerate-republish"
+  }
+}

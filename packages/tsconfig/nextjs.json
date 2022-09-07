@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "UiReact Lib",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "lib": ["ESNext", "DOM"],
+    "jsx": "preserve",
+    "incremental": true
+  }
+}

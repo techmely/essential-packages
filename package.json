@@ -13,9 +13,7 @@
     "yarn": ">=3.1.0"
   },
   "workspaces": [
-    "packages/*",
-    "packages/vite-plugin/*",
-    "packages/ui/*"
+    "packages/*"
   ],
   "scripts": {
     "preinstall": "npx only-allow yarn",
@@ -33,24 +31,17 @@
     "test:unit": "vitest --passWithNoTests",
     "test:unit:run": "vitest run --passWithNoTests",
     "test:unit:coverage": "vitest --coverage",
-    "changelog:gen": "ts-node scripts/generateChangelog.ts",
-    "changelog:write": "ts-node scripts/writeChangelog.ts",
-    "changelog:commit": "git add CHANGELOG.md && git commit -am 'docs: add changelog' && git push",
-    "release:version": "",
-    "release:build": "",
-    "release:changelog": "node scripts/releaseChangelog",
-    "publish": "yarn changeset publish"
+    "publish:stable": "yarn bump:stable && yarn clean && yarn build:deps && yarn workspaces foreach -pv --exclude @techmely/open-sources run publish",
+    "publish:next": "yarn bump:next && yarn clean && yarn build:deps && yarn workspaces foreach -pv --exclude @techmely/open-sources run publish --tag next",
+    "bump:stable": "yarn version apply --all",
+    "bump:next": "yarn version apply --all --prerelease",
+    "bump:check": "yarn version check"
   },
   "packageManager": "yarn@3.2.3",
   "devDependencies": {
-    "@changesets/changelog-github": "0.4.6",
-    "@changesets/cli": "2.24.4",
     "@ls-lint/ls-lint": "1.11.2",
-    "@swc/core": "^1.2.248",
-    "@swc/helpers": "^0.4.11",
     "@types/node": "18.7.15",
     "@yarnpkg/sdks": "^3.0.0-rc.18",
-    "bumpp": "8.2.1",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",
     "fast-glob": "^3.2.11",

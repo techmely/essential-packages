@@ -11,6 +11,7 @@ export * from './download';
 export * from './object';
 export * from './ProgressBar';
 export * from './regex';
+export * from './string';
 
 export * from './convert';
 

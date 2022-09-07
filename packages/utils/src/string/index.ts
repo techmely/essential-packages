@@ -7,3 +7,47 @@ export function capitalizeFirst(value: string) {
 }
 
 export const toString = (v: any) => Object.prototype.toString.call(v);
+
+/**
+ * @param text string will slugify for only Vietnamese
+ * @returns {string}
+ */
+export function slugify(text: string): string {
+  if (!text) {
+    return '';
+  }
+  return text
+    .toString() // Cast to string (optional)
+    .normalize('NFKD') // The normalize() using NFKD method returns the Unicode Normalization Form of a given string.
+    .toLowerCase() // Convert the string to lowercase letters
+    .trim() // Remove whitespace from both sides of a string (optional)
+    .replace(/\s+/g, '-') // Replace spaces with -
+    .replace(/[Đđ]/g, 'd') // Replace-all the đ char with d
+    .replace(/[^\w-]+/g, '') // Remove all non-word chars
+    .replace(/--+/g, '-'); // Replace multiple - with single -
+}
+
+/**
+ * Pseudo-random string generator
+ * http://stackoverflow.com/a/27872144/383904
+ * Default: return a random alpha-numeric string
+ *
+ * @param {Integer} length Desired length
+ * @param {String} alphanumeric Optional (alphanumeric), "a" (alpha), "n" (numeric)
+ * @return {String}
+ */
+export function getRandomString(
+  length: number,
+  alphanumeric?: 'a' | 'n'
+): string {
+  let str = '';
+  let i = 0;
+  const min = alphanumeric === 'a' ? 10 : 0;
+  const max = alphanumeric === 'n' ? 10 : 62;
+
+  while (i++ < length) {
+    let r = Math.trunc(Math.random() * (max - min) + min);
+    str += String.fromCodePoint((r += r > 9 ? (r < 36 ? 55 : 61) : 48));
+  }
+  return str;
+}

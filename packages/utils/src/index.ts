@@ -22,6 +22,7 @@ export * from './is';
 export * from './generateApi';
 export * from './cookie';
 
+// Use this when your project install dayjs
 export * from './dayjs';
 
 // Node.js only --> Import nested modules to use them in the node environment

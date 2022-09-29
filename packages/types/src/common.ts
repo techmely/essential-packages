@@ -9,4 +9,11 @@ export interface Dictionary<T> extends DictionaryNum<T> {
   [id: string]: UnDef<T>;
 }
 
+export interface EntityState<T> {
+  ids: string[];
+  entities: Dictionary<T>;
+}
+
 export type VoidFunc<T> = (value: T) => void;
+
+export type StringEnum<T> = T | (string & Record<never, never>);

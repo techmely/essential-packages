@@ -28,6 +28,9 @@ export const isFalsy = (val: any): val is false | undefined | null =>
 export const isWindow = (val: any): boolean =>
 	typeof window !== "undefined" && toString.call(val) === "[object Window]";
 
+export const isStream = (val: any) =>
+	val !== null && typeof val === "object" && typeof val.pipe === "function";
+
 // Using `typeof window !== 'undefined'` alone is not enough because some users use https://www.npmjs.com/package/ssr-window
 export const isBrowser = typeof window !== "undefined";
 

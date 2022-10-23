@@ -159,3 +159,19 @@ export function objectPick<O, T extends keyof O>(obj: O, keys: T[], omitUndefine
 		return n;
 	}, {} as Pick<O, T>);
 }
+
+function pick<T>(from: T, val: string) {
+	return val
+		.replace(/\[([^\[\]]*)\]/g, ".$1.")
+		.split(".")
+		.filter((t) => t !== "")
+		.reduce((prev, cur) => prev && prev[cur], from);
+}
+
+export function objectGet<T>(from: T, selector: string) {
+	return pick(from, selector);
+}
+
+export function objectGets<T>(from: T, ...selectors: string[]) {
+	return [...selectors].map((s) => pick(from, s));
+}

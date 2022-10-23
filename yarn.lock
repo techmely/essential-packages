@@ -125,7 +125,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jscpd/finder@npm:^3.5.0":
+"@jscpd/finder@npm:*, @jscpd/finder@npm:^3.5.0":
   version: 3.5.0
   resolution: "@jscpd/finder@npm:3.5.0"
   dependencies:
@@ -345,9 +345,8 @@ __metadata:
     happy-dom: 7.6.0
     jscpd: 3.5.0
     kolorist: 1.6.0
-    lodash-es: 4.17.21
+    nano-staged: ^0.8.0
     nx: ^15.0.1
-    prettier: 2.7.1
     rimraf: 3.0.2
     rome: next
     ts-node: ^10.9.1
@@ -387,7 +386,7 @@ __metadata:
     tsup: ^6.3.0
     typescript: ^4.8.4
   peerDependencies:
-    dayjs: ^1.11.5
+    dayjs: ^1.11.6
   peerDependenciesMeta:
     dayjs:
       optional: true
@@ -3360,13 +3359,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash-es@npm:4.17.21":
-  version: 4.17.21
-  resolution: "lodash-es@npm:4.17.21"
-  checksum: 05cbffad6e2adbb331a4e16fbd826e7faee403a1a04873b82b42c0f22090f280839f85b95393f487c1303c8a3d2a010048bf06151a6cbe03eee4d388fb0a12d2
-  languageName: node
-  linkType: hard
-
 "lodash.sortby@npm:^4.7.0":
   version: 4.7.0
   resolution: "lodash.sortby@npm:4.7.0"
@@ -3686,6 +3678,17 @@ __metadata:
   dependencies:
     node-gyp: latest
   checksum: cb16937273ea55b01ea47df244094c12297ce6b29b36e845d349f1f7c268b8d7c5abd126a102c5678a1e1afd0d36bba35ea0cc959e364928ce60561c9306064a
+  languageName: node
+  linkType: hard
+
+"nano-staged@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "nano-staged@npm:0.8.0"
+  dependencies:
+    picocolors: ^1.0.0
+  bin:
+    nano-staged: lib/bin.js
+  checksum: 01a6eee4053bd163e3084f34421fcb0f3ab90b5c47fa1ff7b4208f2a553b5e0a26e55a7f88c8af7632cfc2bcc3622d6078697bb0042409744bbb65565bb43334
   languageName: node
   linkType: hard
 
@@ -4158,15 +4161,6 @@ __metadata:
   bin:
     prebuild-install: bin.js
   checksum: 9b99e5ea2c1db44efbd1bc1f3d04f887e66ae282af8560191ee3005886c8d3fab578ad3e903d0965fec082d3c0779e6337a63152dc9d0f847f1bc95317356ea1
-  languageName: node
-  linkType: hard
-
-"prettier@npm:2.7.1":
-  version: 2.7.1
-  resolution: "prettier@npm:2.7.1"
-  bin:
-    prettier: bin-prettier.js
-  checksum: 55a4409182260866ab31284d929b3cb961e5fdb91fe0d2e099dac92eaecec890f36e524b4c19e6ceae839c99c6d7195817579cdffc8e2c80da0cb794463a748b
   languageName: node
   linkType: hard
 

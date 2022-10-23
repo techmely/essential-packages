@@ -20,8 +20,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --dts && yarn generate",
-    "build:dts": "tsup --dts",
+    "build": "tsup --dts",
     "build:dev": "tsup",
     "clean": "rimraf dist",
     "publish": "ts-node ../../scripts/publishPkg.ts",

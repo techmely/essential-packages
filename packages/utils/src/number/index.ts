@@ -1,6 +1,6 @@
-import { NullList, UnDef } from '@techmely/types';
+import { NullList, UnDef } from "@techmely/types";
 
-import { isNumber } from '../is';
+import { isNumber } from "../is";
 
 /**
  *
@@ -10,17 +10,17 @@ import { isNumber } from '../is';
  * @returns
  */
 export function formatNumber(
-  num: NullList<number>,
-  precision = 0,
-  defaultValue: UnDef<number | string> = '-'
+	num: NullList<number>,
+	precision = 0,
+	defaultValue: UnDef<number | string> = "-",
 ) {
-  if (!isNumber(num)) {
-    return defaultValue;
-  }
-  return num.toLocaleString('en', {
-    minimumFractionDigits: precision,
-    maximumFractionDigits: precision
-  });
+	if (!isNumber(num)) {
+		return defaultValue;
+	}
+	return num.toLocaleString("en", {
+		minimumFractionDigits: precision,
+		maximumFractionDigits: precision,
+	});
 }
 
 /**
@@ -30,7 +30,7 @@ export function formatNumber(
  * @returns
  */
 export function formatPrice(price: NullList<number>, precision = 0) {
-  return formatNumber(price, precision);
+	return formatNumber(price, precision);
 }
 
 /**
@@ -41,14 +41,12 @@ export function formatPrice(price: NullList<number>, precision = 0) {
  * @returns
  */
 export function formatLot10Volume(
-  volume: NullList<number>,
-  precision = 0,
-  defaultValue: UnDef<number | string> = '-'
+	volume: NullList<number>,
+	precision = 0,
+	defaultValue: UnDef<number | string> = "-",
 ) {
-  if (!isNumber(volume)) {
-    return defaultValue;
-  }
-  return (volume * 10)
-    ?.toLocaleString('en', { minimumFractionDigits: precision })
-    .slice(0, -1);
+	if (!isNumber(volume)) {
+		return defaultValue;
+	}
+	return (volume * 10)?.toLocaleString("en", { minimumFractionDigits: precision }).slice(0, -1);
 }

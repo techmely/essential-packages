@@ -18,4 +18,3 @@ yarn-latest:
 	yarn plugin import typescript
 	yarn plugin import interactive-tools
 	yarn plugin import workspace-tools
-	yarn plugin import version

@@ -5,7 +5,7 @@
  * @returns {T[]} - New array with unique value
  */
 export function unique<T>(array: readonly T[]): T[] {
-  return [...new Set(array)];
+	return [...new Set(array)];
 }
 
 /**
@@ -16,7 +16,7 @@ export function unique<T>(array: readonly T[]): T[] {
  * @returns {T[]} - New array was sliced
  */
 export function take<T>(array: readonly T[], limit: number): T[] {
-  return array.slice(0, limit);
+	return array.slice(0, limit);
 }
 
 /**
@@ -28,14 +28,40 @@ export function take<T>(array: readonly T[], limit: number): T[] {
  * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
  */
 export function findLastIndex<T>(
-  array: T[],
-  predicate: (value: T, index: number, obj: T[]) => boolean
+	array: T[],
+	predicate: (value: T, index: number, obj: T[]) => boolean,
 ): number {
-  let l = array.length;
-  while (l--) {
-    if (predicate(array[l], l, array)) {
-      return l;
-    }
-  }
-  return -1;
+	let l = array.length;
+	while (l--) {
+		if (predicate(array[l], l, array)) {
+			return l;
+		}
+	}
+	return -1;
+}
+
+/**
+ * @description
+ * Takes an Array<V>, and a grouping function,
+ * and returns a Map of the array grouped by the grouping function.
+ *
+ * @param list An array of type V.
+ * @param keyGetter A Function that takes the the Array type V as an input, and returns a value of type K.
+ *                  K is generally intended to be a property key of V.
+ *
+ * @returns Map of the array grouped by the grouping function.
+ */
+
+export function groupBy<K, V>(list: V[], keyGetter: (input: V) => K): Map<K, V[]> {
+	const map = new Map<K, V[]>();
+	list.forEach((item) => {
+		const key = keyGetter(item);
+		const collection = map.get(key);
+		if (collection) {
+			collection.push(item);
+		} else {
+			map.set(key, [item]);
+		}
+	});
+	return map;
 }

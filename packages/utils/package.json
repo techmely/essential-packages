@@ -23,12 +23,12 @@
     "build": "tsup --dts && yarn generate",
     "build:dts": "tsup --dts",
     "build:dev": "tsup",
-    "generate": "node ../../scripts/generateExportEsm.js",
     "clean": "rimraf dist",
-    "publish": "yarn npm publish --tolerate-republish"
+    "publish": "ts-node ../../scripts/publishPkg.ts",
+    "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "dayjs": "^1.11.5"
+    "dayjs": "^1.11.6"
   },
   "peerDependenciesMeta": {
     "dayjs": {
@@ -37,13 +37,13 @@
   },
   "devDependencies": {
     "@techmely/types": "workspace:packages/types",
-    "@types/node": "18.7.15",
-    "chalk": "^5.0.1",
-    "dayjs": "^1.11.5",
+    "@types/node": "18.11.3",
+    "chalk": "^5.1.2",
+    "dayjs": "^1.11.6",
     "execa": "^6.1.0",
     "tslib": "^2.4.0",
-    "tsup": "^6.2.3",
-    "typescript": "^4.8.2"
+    "tsup": "^6.3.0",
+    "typescript": "^4.8.4"
   },
   "funding": [
     {
@@ -59,183 +59,5 @@
     "techmely",
     "techmely-component",
     "techmely-utils"
-  ],
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    },
-    "./ProgressBar": {
-      "import": "./dist/ProgressBar/index.mjs",
-      "require": "./dist/ProgressBar/index.js"
-    },
-    "./array": {
-      "import": "./dist/array/index.mjs",
-      "require": "./dist/array/index.js"
-    },
-    "./base": {
-      "import": "./dist/base/index.mjs",
-      "require": "./dist/base/index.js"
-    },
-    "./build-config": {
-      "import": "./dist/build-config/index.mjs",
-      "require": "./dist/build-config/index.js"
-    },
-    "./bytes": {
-      "import": "./dist/bytes/index.mjs",
-      "require": "./dist/bytes/index.js"
-    },
-    "./calculate": {
-      "import": "./dist/calculate/index.mjs",
-      "require": "./dist/calculate/index.js"
-    },
-    "./colors": {
-      "import": "./dist/colors/index.mjs",
-      "require": "./dist/colors/index.js"
-    },
-    "./convert": {
-      "import": "./dist/convert/index.mjs",
-      "require": "./dist/convert/index.js"
-    },
-    "./cookie": {
-      "import": "./dist/cookie/index.mjs",
-      "require": "./dist/cookie/index.js"
-    },
-    "./date": {
-      "import": "./dist/date/index.mjs",
-      "require": "./dist/date/index.js"
-    },
-    "./dayjs": {
-      "import": "./dist/dayjs/index.mjs",
-      "require": "./dist/dayjs/index.js"
-    },
-    "./download": {
-      "import": "./dist/download/index.mjs",
-      "require": "./dist/download/index.js"
-    },
-    "./findNearestFile": {
-      "import": "./dist/findNearestFile/index.mjs",
-      "require": "./dist/findNearestFile/index.js"
-    },
-    "./fs": {
-      "import": "./dist/fs/index.mjs",
-      "require": "./dist/fs/index.js"
-    },
-    "./generate": {
-      "import": "./dist/generate/index.mjs",
-      "require": "./dist/generate/index.js"
-    },
-    "./generateApi": {
-      "import": "./dist/generateApi/index.mjs",
-      "require": "./dist/generateApi/index.js"
-    },
-    "./git": {
-      "import": "./dist/git/index.mjs",
-      "require": "./dist/git/index.js"
-    },
-    "./is": {
-      "import": "./dist/is/index.mjs",
-      "require": "./dist/is/index.js"
-    },
-    "./mines": {
-      "import": "./dist/mines/index.mjs",
-      "require": "./dist/mines/index.js"
-    },
-    "./number": {
-      "import": "./dist/number/index.mjs",
-      "require": "./dist/number/index.js"
-    },
-    "./object": {
-      "import": "./dist/object/index.mjs",
-      "require": "./dist/object/index.js"
-    },
-    "./regex": {
-      "import": "./dist/regex/index.mjs",
-      "require": "./dist/regex/index.js"
-    },
-    "./string": {
-      "import": "./dist/string/index.mjs",
-      "require": "./dist/string/index.js"
-    },
-    "./vector": {
-      "import": "./dist/vector/index.mjs",
-      "require": "./dist/vector/index.js"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "ProgressBar": [
-        "dist/ProgressBar/index.d.ts"
-      ],
-      "array": [
-        "dist/array/index.d.ts"
-      ],
-      "base": [
-        "dist/base/index.d.ts"
-      ],
-      "build-config": [
-        "dist/build-config/index.d.ts"
-      ],
-      "bytes": [
-        "dist/bytes/index.d.ts"
-      ],
-      "calculate": [
-        "dist/calculate/index.d.ts"
-      ],
-      "colors": [
-        "dist/colors/index.d.ts"
-      ],
-      "convert": [
-        "dist/convert/index.d.ts"
-      ],
-      "cookie": [
-        "dist/cookie/index.d.ts"
-      ],
-      "date": [
-        "dist/date/index.d.ts"
-      ],
-      "dayjs": [
-        "dist/dayjs/index.d.ts"
-      ],
-      "download": [
-        "dist/download/index.d.ts"
-      ],
-      "findNearestFile": [
-        "dist/findNearestFile/index.d.ts"
-      ],
-      "fs": [
-        "dist/fs/index.d.ts"
-      ],
-      "generate": [
-        "dist/generate/index.d.ts"
-      ],
-      "generateApi": [
-        "dist/generateApi/index.d.ts"
-      ],
-      "git": [
-        "dist/git/index.d.ts"
-      ],
-      "is": [
-        "dist/is/index.d.ts"
-      ],
-      "mines": [
-        "dist/mines/index.d.ts"
-      ],
-      "number": [
-        "dist/number/index.d.ts"
-      ],
-      "object": [
-        "dist/object/index.d.ts"
-      ],
-      "regex": [
-        "dist/regex/index.d.ts"
-      ],
-      "string": [
-        "dist/string/index.d.ts"
-      ],
-      "vector": [
-        "dist/vector/index.d.ts"
-      ]
-    }
-  }
+  ]
 }

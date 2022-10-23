@@ -5,11 +5,11 @@
  * @returns {string} the hexadecimal value after convert
  */
 export function intToHex(integer: number | bigint): string {
-  if (integer < 0) {
-    throw new Error('Invalid integer as argument, must be unsigned!');
-  }
-  const hex = integer.toString(16);
-  return hex.length % 2 ? `0${hex}` : hex;
+	if (integer < 0) {
+		throw new Error("Invalid integer as argument, must be unsigned!");
+	}
+	const hex = integer.toString(16);
+	return hex.length % 2 ? `0${hex}` : hex;
 }
 
 /**
@@ -19,6 +19,6 @@ export function intToHex(integer: number | bigint): string {
  * @returns {Buffer} the buffer after convert
  */
 export function intToBuffer(integer: number | bigint): Buffer {
-  const hex = intToHex(integer);
-  return Buffer.from(hex, 'hex');
+	const hex = intToHex(integer);
+	return Buffer.from(hex, "hex");
 }

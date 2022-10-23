@@ -1,5 +1,5 @@
 interface FormatBytesOptions {
-  numberOfDecimals: number;
+	numberOfDecimals: number;
 }
 
 /**
@@ -9,36 +9,33 @@ interface FormatBytesOptions {
  * @param {Partial<FormatBytesOptions>} options - Options to pass to this function.
  * @returns {string} A formatted number that ends in bytes, KB, MB, GB, TB, PB, EB, ZB, or YB
  */
-export const formatBytes = (
-  bytes: number,
-  options?: Partial<FormatBytesOptions>
-): string => {
-  const sizes = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-  const { numberOfDecimals = 0 } = options ?? {};
+export const formatBytes = (bytes: number, options?: Partial<FormatBytesOptions>): string => {
+	const sizes = ["bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"];
+	const { numberOfDecimals = 0 } = options ?? {};
 
-  if (!bytes || bytes <= 0) {
-    return '0 bytes';
-  }
-  if (bytes === 1) {
-    return '1 byte';
-  }
+	if (!bytes || bytes <= 0) {
+		return "0 bytes";
+	}
+	if (bytes === 1) {
+		return "1 byte";
+	}
 
-  const base = 1000;
-  const exponent = Math.trunc(Math.log(bytes) / Math.log(base));
-  const rawValue = bytes / base ** exponent;
-  let [whole, partial = ''] = rawValue.toString().split('.');
+	const base = 1000;
+	const exponent = Math.trunc(Math.log(bytes) / Math.log(base));
+	const rawValue = bytes / base ** exponent;
+	let [whole, partial = ""] = rawValue.toString().split(".");
 
-  if (numberOfDecimals > 0) {
-    const count = numberOfDecimals - partial.length;
-    if (count > 0) {
-      partial += '0'.repeat(count);
-    }
-    whole += `.${partial.slice(0, numberOfDecimals)}`;
-  }
+	if (numberOfDecimals > 0) {
+		const count = numberOfDecimals - partial.length;
+		if (count > 0) {
+			partial += "0".repeat(count);
+		}
+		whole += `.${partial.slice(0, numberOfDecimals)}`;
+	}
 
-  const abbreviationSuffix = sizes[exponent];
+	const abbreviationSuffix = sizes[exponent];
 
-  return `${whole} ${abbreviationSuffix}`;
+	return `${whole} ${abbreviationSuffix}`;
 };
 
 /**
@@ -47,5 +44,4 @@ export const formatBytes = (
  * @param {number} bytes The number of bytes that are being checked
  * @returns {number} The number of appropriate decimal places
  */
-export const formatDecimals = (bytes: number = 0): number =>
-  bytes >= 1e9 ? 2 : 0;
+export const formatDecimals = (bytes: number = 0): number => (bytes >= 1e9 ? 2 : 0);

@@ -6,7 +6,7 @@
  * @returns {number} - the clamp number
  */
 export function clamp(n: number, min: number, max: number): number {
-  return Math.min(max, Math.max(min, n));
+	return Math.min(max, Math.max(min, n));
 }
 
 /**
@@ -14,7 +14,7 @@ export function clamp(n: number, min: number, max: number): number {
  * @returns {number} - Sum of array
  */
 export function sum(...args: number[] | number[][]): number {
-  return [...args].flat(1).reduce((a, b) => a + b, 0);
+	return [...args].flat(1).reduce((a, b) => a + b, 0);
 }
 
 /**
@@ -25,5 +25,5 @@ export function sum(...args: number[] | number[][]): number {
  * @returns {number} - the lerp
  */
 export function lerp(y1: number, y2: number, mu: number): number {
-  return y1 * (1 - mu) + y2 * mu;
+	return y1 * (1 - mu) + y2 * mu;
 }

@@ -48,7 +48,7 @@
     "fs-extra": "^10.1.0",
     "happy-dom": "6.0.4",
     "jscpd": "3.4.5",
-    "kolorist": "1.5.1",
+    "kolorist": "1.6.0",
     "lodash-es": "4.17.21",
     "nx": "^14.6.4",
     "prettier": "2.7.1",

@@ -309,7 +309,7 @@ __metadata:
     fs-extra: ^10.1.0
     happy-dom: 6.0.4
     jscpd: 3.4.5
-    kolorist: 1.5.1
+    kolorist: 1.6.0
     lodash-es: 4.17.21
     nx: ^14.6.4
     prettier: 2.7.1
@@ -2984,10 +2984,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kolorist@npm:1.5.1":
-  version: 1.5.1
-  resolution: "kolorist@npm:1.5.1"
-  checksum: c113be08834fc03a24699612141c79879fceba9ff9765ad500507fb594ee4fa3465a3453ea90bbc9b0dd82f7ba5dbd79814da28e9ebaf8da27266a0088ba2714
+"kolorist@npm:1.6.0":
+  version: 1.6.0
+  resolution: "kolorist@npm:1.6.0"
+  checksum: 4d898b782ceaaac3a51d9820a13563fcd0ed516d5493374a0e04ceda93ed4d74f9e267e8da5fb4453e508099b9f6b22e38ac1bff92fdc227081f460c003401c0
   languageName: node
   linkType: hard
 

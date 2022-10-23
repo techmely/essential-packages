@@ -307,7 +307,7 @@ __metadata:
     cross-env: 7.0.3
     fast-glob: ^3.2.11
     fs-extra: ^10.1.0
-    happy-dom: 6.0.4
+    happy-dom: 7.6.0
     jscpd: 3.4.5
     kolorist: 1.5.1
     lodash-es: 4.17.21
@@ -2449,9 +2449,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:6.0.4":
-  version: 6.0.4
-  resolution: "happy-dom@npm:6.0.4"
+"happy-dom@npm:7.6.0":
+  version: 7.6.0
+  resolution: "happy-dom@npm:7.6.0"
   dependencies:
     css.escape: ^1.5.1
     he: ^1.2.0
@@ -2460,7 +2460,7 @@ __metadata:
     webidl-conversions: ^7.0.0
     whatwg-encoding: ^2.0.0
     whatwg-mimetype: ^3.0.0
-  checksum: 4bfd97f07ab459fd48fe93f597deb903527f0ffffbc98f2ab1cacc1362ae09d11dfc21d8b166d8e0d19fc49d7c1dcc4b250c1da131d6f70e3cf2e82b39d60657
+  checksum: 96fd73ccea28edfbbe97bc900d358ac0bff340694ccdc4fb6b6cd45ab60701329c047f4c6071770f88d29b3b640d50d039772529df8042e12452e7f9a8204ce9
   languageName: node
   linkType: hard
 

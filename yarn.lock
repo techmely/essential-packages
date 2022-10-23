@@ -102,21 +102,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jscpd/core@npm:^3.4.5":
-  version: 3.4.5
-  resolution: "@jscpd/core@npm:3.4.5"
+"@jscpd/core@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "@jscpd/core@npm:3.5.0"
   dependencies:
     eventemitter3: ^4.0.4
-  checksum: 608bb2e9c2def193b34153d24f413905b765b40f366b84b2def6a857a449630af1b4743d3dc0e00ac1bef50215d17346124910b256cb331e2204ebc620352a3a
+  checksum: d25cd48897b78b39fe6d9414bdf2a144dc683c732708d41613a4cf08b4a75f17f8a841d8f0d91f543b71e3a74b7fe53ef259d5d58d53cbb44efd6b560ea9b05f
   languageName: node
   linkType: hard
 
-"@jscpd/finder@npm:^3.4.5":
-  version: 3.4.5
-  resolution: "@jscpd/finder@npm:3.4.5"
+"@jscpd/finder@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "@jscpd/finder@npm:3.5.0"
   dependencies:
-    "@jscpd/core": ^3.4.5
-    "@jscpd/tokenizer": ^3.4.5
+    "@jscpd/core": ^3.5.0
+    "@jscpd/tokenizer": ^3.5.0
     blamer: ^1.0.1
     bytes: ^3.1.0
     cli-table3: ^0.6.0
@@ -125,28 +125,28 @@ __metadata:
     fs-extra: ^9.0.0
     markdown-table: ^2.0.0
     pug: ^3.0.1
-  checksum: 56d3942cbaf7b15d5563d4db8e86651165612fccea7bef9f7c62c598d0686d6a1a6b31c4bd24c1352a7205cdf35b360d88cbf428fff4dd1a87bc8c95a6aeea30
+  checksum: dcfb510046aa243783a02576c5c9d4c7869f87f83cba3f321132e562e601443cf78f0fcefd69b01ede8f24acc4c81f929bb9f964b887b872908efb46c777392b
   languageName: node
   linkType: hard
 
-"@jscpd/html-reporter@npm:^3.4.5":
-  version: 3.4.5
-  resolution: "@jscpd/html-reporter@npm:3.4.5"
+"@jscpd/html-reporter@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "@jscpd/html-reporter@npm:3.5.0"
   dependencies:
     colors: 1.4.0
     fs-extra: ^9.0.1
-  checksum: 91619da79171f41f750ad7ca04b98f5da36a42c7c4b03aa8b90a4b30b94dc36ccf2b82a10573a8eca77db0ec3d5808bbb54ba755379013637b4c099cf5684a23
+  checksum: 38cde53a4959908e724bd535e1da4b93adcb486c6f08c928c69b237b347e5a1d2bf696f09febf804efdc2905fe47b2861ac12e2eec015db73f2616ad62eac53a
   languageName: node
   linkType: hard
 
-"@jscpd/tokenizer@npm:^3.4.5":
-  version: 3.4.5
-  resolution: "@jscpd/tokenizer@npm:3.4.5"
+"@jscpd/tokenizer@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "@jscpd/tokenizer@npm:3.5.0"
   dependencies:
-    "@jscpd/core": ^3.4.5
+    "@jscpd/core": ^3.5.0
     reprism: ^0.0.11
     spark-md5: ^3.0.1
-  checksum: f5d7d2276aa77fed9a006630cc23ebab9afaaaccf9a34defe72edcb0eb87251bfd3e0df333a02b3bfd47c2ca7b5f33e8bbbc1c569dd3f27ea4c3f4afce0da204
+  checksum: 8cd41a25f2caf6c0d090dad21ec721eb4f0a67c88167e2538aee31686b06ebb38318e5ef553114b7af9ec3d76928f928db1107f89c7c2d4149f5c02ce86bd0d8
   languageName: node
   linkType: hard
 
@@ -308,7 +308,7 @@ __metadata:
     fast-glob: ^3.2.11
     fs-extra: ^10.1.0
     happy-dom: 6.0.4
-    jscpd: 3.4.5
+    jscpd: 3.5.0
     kolorist: 1.5.1
     lodash-es: 4.17.21
     nx: ^14.6.4
@@ -2902,21 +2902,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jscpd@npm:3.4.5":
-  version: 3.4.5
-  resolution: "jscpd@npm:3.4.5"
+"jscpd@npm:3.5.0":
+  version: 3.5.0
+  resolution: "jscpd@npm:3.5.0"
   dependencies:
-    "@jscpd/core": ^3.4.5
-    "@jscpd/finder": ^3.4.5
-    "@jscpd/html-reporter": ^3.4.5
-    "@jscpd/tokenizer": ^3.4.5
+    "@jscpd/core": ^3.5.0
+    "@jscpd/finder": ^3.5.0
+    "@jscpd/html-reporter": ^3.5.0
+    "@jscpd/tokenizer": ^3.5.0
     colors: 1.4.0
     commander: ^5.0.0
     fs-extra: ^9.1.0
     gitignore-to-glob: ^0.3.0
   bin:
     jscpd: bin/jscpd
-  checksum: b7eb838f3690bb6b49907491e44f99cd81a07d34d15da42c28b510c1359c7c07784665771bac347b963a7a2fdd0b5ffc01a91026a65eb32d12a9c1cb74225e3c
+  checksum: 80e942e404ce954d3e009767e94241d09666d6aabe2c088e78540d33559324951eaa3d6ed0de4fe10d11c66b99530596ad17e68eb69e6762ae9cee7d398931c2
   languageName: node
   linkType: hard
 

@@ -301,7 +301,7 @@ __metadata:
   resolution: "@techmely/open-sources@workspace:."
   dependencies:
     "@ls-lint/ls-lint": 1.11.2
-    "@types/node": 18.7.15
+    "@types/node": 18.11.3
     "@yarnpkg/sdks": ^3.0.0-rc.18
     bundlesize: 0.18.1
     cross-env: 7.0.3
@@ -344,7 +344,7 @@ __metadata:
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:
     "@techmely/types": "workspace:packages/types"
-    "@types/node": 18.7.15
+    "@types/node": 18.11.3
     chalk: ^5.0.1
     dayjs: ^1.11.5
     execa: ^6.1.0
@@ -486,10 +486,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:18.7.15, @types/node@npm:^18.6.3":
+"@types/node@npm:*, @types/node@npm:^18.6.3":
   version: 18.7.15
   resolution: "@types/node@npm:18.7.15"
   checksum: 1435fc7fe44744467a3ba8ace646455be228516530dbb3db64a03cca6abcfdc5ba2e48a3eafc71f25f836d2ca871132361c58a5e760237a53674cb09151147d9
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:18.11.3":
+  version: 18.11.3
+  resolution: "@types/node@npm:18.11.3"
+  checksum: 3a2a9142d891a90a195c296149bf64a69cc0abcc42f543be911ab22b2e0ead85ff077f90af92f0f13f6e3e5e72501469200fd753dfd1101825d4646a89d3ee47
   languageName: node
   linkType: hard
 

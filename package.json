@@ -40,7 +40,7 @@
   "packageManager": "yarn@3.2.3",
   "devDependencies": {
     "@ls-lint/ls-lint": "1.11.2",
-    "@types/node": "18.7.15",
+    "@types/node": "18.11.3",
     "@yarnpkg/sdks": "^3.0.0-rc.18",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",

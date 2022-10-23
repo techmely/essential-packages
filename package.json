@@ -17,17 +17,12 @@
   ],
   "scripts": {
     "preinstall": "npx only-allow yarn",
-    "bundlesize": "bundlesize",
+    "postinstall": "make git-hooks",
     "build:deps": "nx run-many --target=build --all",
     "build:types": "nx build @techmely/types",
-    "build:vite-plugin": "nx build @techmely/vite-plugin-runtime-env",
     "build:utils": "nx build @techmely/utils",
-    "build:ui": "nx build @techmely/ui",
     "build:hooks": "nx build @techmely/hooks",
-    "lint:check": "rome format packages/**/src/**/*.ts",
-    "lint:format": "rome format packages/**/src/**/*.ts --write",
     "clean": "yarn workspaces foreach -pti run clean",
-    "clean:modules": "npx rimraf node_modules packages/**/node_modules",
     "test:unit": "vitest --passWithNoTests",
     "test:unit:run": "vitest run --passWithNoTests",
     "test:unit:coverage": "vitest --coverage",
@@ -36,7 +31,11 @@
     "bump:stable": "yarn version apply --all",
     "bump:next": "yarn version apply --all --prerelease",
     "bump:check": "yarn version check",
-    "type-check": "yarn workspaces foreach -pvti run type-check"
+    "lint:format": "rome format packages/**/src/**/*.ts --write",
+    "lint:check": "rome format packages/**/src/**/*.ts",
+    "lint:typing": "yarn workspaces foreach -pvti run type-check",
+    "lint:bundlesize": "bundlesize",
+    "lint:duplicate": "jscpd"
   },
   "packageManager": "yarn@3.2.4",
   "devDependencies": {
@@ -50,7 +49,7 @@
     "happy-dom": "7.6.0",
     "jscpd": "3.5.0",
     "kolorist": "1.6.0",
-    "lodash-es": "4.17.21",
+    "nano-staged": "^0.8.0",
     "nx": "^15.0.1",
     "rimraf": "3.0.2",
     "rome": "next",
@@ -60,6 +59,22 @@
     "vite": "^3.1.8",
     "vitest": "^0.24.3",
     "zx": "7.1.1"
+  },
+  "nano-staged": {
+    "*.{mjs,js,ts,tsx}": [
+      "yarn lint:check"
+    ]
+  },
+  "jscpd": {
+    "threshold": 0.1,
+    "pattern": "packages/**/src/**/*.ts",
+    "reporters": ["html", "console"],
+    "ignore": [
+      "**/__snapshots__/**",
+      "packages/**/test/**/*.ts"
+    ],
+    "absolute": true,
+    "gitignore": true
   },
   "funding": [
     {

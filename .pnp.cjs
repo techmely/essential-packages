@@ -53,9 +53,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["happy-dom", "npm:7.6.0"],\
             ["jscpd", "npm:3.5.0"],\
             ["kolorist", "npm:1.6.0"],\
-            ["lodash-es", "npm:4.17.21"],\
+            ["nano-staged", "npm:0.8.0"],\
             ["nx", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:15.0.1"],\
-            ["prettier", "npm:2.7.1"],\
             ["rimraf", "npm:3.0.2"],\
             ["rome", "npm:0.10.1-next"],\
             ["ts-node", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:10.9.1"],\
@@ -234,6 +233,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@jscpd-html-reporter-npm-3.5.0-96c13e207f-38cde53a49.zip/node_modules/@jscpd/html-reporter/",\
           "packageDependencies": [\
             ["@jscpd/html-reporter", "npm:3.5.0"],\
+            ["@jscpd/finder", "npm:3.5.0"],\
             ["colors", "npm:1.4.0"],\
             ["fs-extra", "npm:9.1.0"]\
           ],\
@@ -461,9 +461,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["happy-dom", "npm:7.6.0"],\
             ["jscpd", "npm:3.5.0"],\
             ["kolorist", "npm:1.6.0"],\
-            ["lodash-es", "npm:4.17.21"],\
+            ["nano-staged", "npm:0.8.0"],\
             ["nx", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:15.0.1"],\
-            ["prettier", "npm:2.7.1"],\
             ["rimraf", "npm:3.0.2"],\
             ["rome", "npm:0.10.1-next"],\
             ["ts-node", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:10.9.1"],\
@@ -3777,15 +3776,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["lodash-es", [\
-        ["npm:4.17.21", {\
-          "packageLocation": "./.yarn/cache/lodash-es-npm-4.17.21-b45832dfce-05cbffad6e.zip/node_modules/lodash-es/",\
-          "packageDependencies": [\
-            ["lodash-es", "npm:4.17.21"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["lodash.sortby", [\
         ["npm:4.7.0", {\
           "packageLocation": "./.yarn/cache/lodash.sortby-npm-4.7.0-fda8ab950d-db170c9396.zip/node_modules/lodash.sortby/",\
@@ -4132,6 +4122,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["nan", "npm:2.16.0"],\
             ["node-gyp", "npm:9.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["nano-staged", [\
+        ["npm:0.8.0", {\
+          "packageLocation": "./.yarn/cache/nano-staged-npm-0.8.0-ba6e5181ff-01a6eee405.zip/node_modules/nano-staged/",\
+          "packageDependencies": [\
+            ["nano-staged", "npm:0.8.0"],\
+            ["picocolors", "npm:1.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4676,15 +4676,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tar-fs", "npm:2.1.1"],\
             ["tunnel-agent", "npm:0.6.0"],\
             ["which-pm-runs", "npm:1.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["prettier", [\
-        ["npm:2.7.1", {\
-          "packageLocation": "./.yarn/cache/prettier-npm-2.7.1-d1f40f5e1a-55a4409182.zip/node_modules/prettier/",\
-          "packageDependencies": [\
-            ["prettier", "npm:2.7.1"]\
           ],\
           "linkType": "HARD"\
         }]\

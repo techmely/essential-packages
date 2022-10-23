@@ -18,12 +18,9 @@ export const isDef = <T = any>(val?: T): val is T => typeof val !== "undefined";
 export const isUndef = <T = any>(val?: T): val is T => !isDef(val);
 export const isBoolean = (val: any): val is boolean => typeof val === "boolean";
 export const isFunction = (val: any): boolean => typeof val === "function";
-export const isNumber = (val: any): val is number =>
-	toString.call(val) === "[object Number]";
-export const isString = (val: unknown): val is string =>
-	typeof val === "string";
-export const isObject = (val: any): val is object =>
-	toString.call(val) === "[object Object]";
+export const isNumber = (val: any): val is number => toString.call(val) === "[object Number]";
+export const isString = (val: unknown): val is string => typeof val === "string";
+export const isObject = (val: any): val is object => toString.call(val) === "[object Object]";
 
 export const isFalsy = (val: any): val is false | undefined | null =>
 	isNotNull(val) && isDef(val) && isNotEmpty(val);
@@ -36,9 +33,8 @@ export const isBrowser = typeof window !== "undefined";
 
 type EmptyArray<T> = readonly [T, ...ReadonlyArray<T>];
 
-const isEmptyArr = <T>(
-	array: ReadonlyArray<T> | undefined,
-): array is EmptyArray<T> => array?.length === 0;
+const isEmptyArr = <T>(array: ReadonlyArray<T> | undefined): array is EmptyArray<T> =>
+	array?.length === 0;
 
 /**
  * Check a value is empty or not

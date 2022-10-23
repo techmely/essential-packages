@@ -10,7 +10,7 @@ import { isNumber } from "../is";
  * @returns
  */
 export function formatNumber(
-	num: NullList<number>,
+	num: NullList<number | string>,
 	precision = 0,
 	defaultValue: UnDef<number | string> = "-",
 ) {
@@ -29,8 +29,12 @@ export function formatNumber(
  * @param precision
  * @returns
  */
-export function formatPrice(price: NullList<number>, precision = 0) {
-	return formatNumber(price, precision);
+export function formatPrice(
+	price: NullList<number | string>,
+	precision = 0,
+	defaultValue: string | number = "-",
+) {
+	return formatNumber(price, precision, defaultValue);
 }
 
 /**
@@ -41,7 +45,7 @@ export function formatPrice(price: NullList<number>, precision = 0) {
  * @returns
  */
 export function formatLot10Volume(
-	volume: NullList<number>,
+	volume: NullList<number | string>,
 	precision = 0,
 	defaultValue: UnDef<number | string> = "-",
 ) {

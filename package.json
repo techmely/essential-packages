@@ -39,6 +39,8 @@
   },
   "packageManager": "yarn@3.2.4",
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.7",
+    "@changesets/cli": "^2.25.0",
     "@ls-lint/ls-lint": "1.11.2",
     "@types/node": "18.11.3",
     "@yarnpkg/sdks": "^3.0.0-rc.26",

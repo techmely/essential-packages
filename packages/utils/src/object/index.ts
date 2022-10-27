@@ -175,3 +175,6 @@ export function objectGet<T>(from: T, selector: string) {
 export function objectGets<T>(from: T, ...selectors: string[]) {
 	return [...selectors].map((s) => pick(from, s));
 }
+
+// compare whether a value has changed, accounting for NaN.
+export const hasChanged = (value: any, oldValue: any): boolean => !Object.is(value, oldValue);

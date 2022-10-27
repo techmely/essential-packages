@@ -1,10 +1,28 @@
-export function snake2camel(src: string) {
-	return src.replace(/_([a-z])/g, (g) => g[1].toUpperCase());
-}
+const cacheStringFunction = <T extends (str: string) => string>(fn: T): T => {
+	const cache: Record<string, string> = Object.create(null);
+	return ((str: string) => {
+		const hit = cache[str];
+		return hit || (cache[str] = fn(str));
+	}) as T;
+};
 
-export function capitalizeFirst(value: string) {
+const camelizeRE = /-(\w)/g;
+export const camelize = cacheStringFunction((str: string): string => {
+	return str.replace(camelizeRE, (_, c) => (c ? c.toUpperCase() : ""));
+});
+
+const hyphenateRE = /\B([A-Z])/g;
+export const hyphenate = cacheStringFunction((str: string) =>
+	str.replace(hyphenateRE, "-$1").toLowerCase(),
+);
+
+export const snake2camel = cacheStringFunction((src: string) => {
+	return src.replace(/_([a-z])/g, (g) => g[1].toUpperCase());
+});
+
+export const capitalizeFirst = cacheStringFunction((value: string) => {
 	return value.replace(/^./, value[0].toUpperCase());
-}
+});
 
 /**
  * @param text string will slugify for only Latin/Vietnamese

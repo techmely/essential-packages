@@ -2,7 +2,7 @@ export function isNotNull<T>(v: T | null): v is Exclude<T, null> {
 	return v !== null;
 }
 
-export function isArray(val: any): val is any[] {
+export function isArray<T = unknown>(val: any): val is T[] {
 	return val && Array.isArray(val);
 }
 
@@ -21,6 +21,14 @@ export const isFunction = (val: any): boolean => typeof val === "function";
 export const isNumber = (val: any): val is number => toString.call(val) === "[object Number]";
 export const isString = (val: unknown): val is string => typeof val === "string";
 export const isObject = (val: any): val is object => toString.call(val) === "[object Object]";
+export const isMap = (val: unknown): val is Map<any, any> => toString.call(val) === "[object Map]";
+export const isSet = (val: unknown): val is Set<any> => toString.call(val) === "[object Set]";
+export const isDate = (val: unknown): val is Date => toString.call(val) === "[object Date]";
+export const isSymbol = (val: unknown): val is symbol => typeof val === "symbol";
+export const isPromise = <T = any>(val: unknown): val is Promise<T> => {
+	// @ts-expect-error Ignore type checking
+	return isObject(val) && isFunction(val.then) && isFunction(val.catch);
+};
 
 export const isFalsy = (val: any): val is false | undefined | null =>
 	isNotNull(val) && isDef(val) && isNotEmpty(val);

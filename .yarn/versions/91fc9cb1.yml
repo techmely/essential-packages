@@ -1,0 +1,3 @@
+releases:
+  "@techmely/types": patch
+  "@techmely/utils": patch

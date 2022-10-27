@@ -20,6 +20,11 @@ export * from "./generate";
 export * from "./is";
 export * from "./cookie";
 
+const __DEV__ = process.env.NODE_ENV !== "production";
+
+export const EMPTY_OBJ: { readonly [key: string]: any } = __DEV__ ? Object.freeze({}) : {};
+export const EMPTY_ARR = __DEV__ ? Object.freeze([]) : [];
+
 // Use this when your project install dayjs
 // export * from './dayjs';
 

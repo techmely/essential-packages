@@ -1,4 +1,11 @@
-import { isNotEmpty, isArray, isDef, isNotNull, isObject, isUndef } from "../is";
+import {
+  isNotEmpty,
+  isArray,
+  isDef,
+  isNotNull,
+  isObject,
+  isUndef,
+} from "../is";
 import { DeepMerge } from "../types";
 
 /**
@@ -10,36 +17,36 @@ import { DeepMerge } from "../types";
  * @param {...S[]} sources - The sources will merge
  * @returns {DeepMerge<T, S>} the object after merge
  */
-export function deepMerge<T extends Record<string, any>, S extends Record<string, any>>(
-	target: T,
-	...sources: S[]
-): DeepMerge<T, S> {
-	if (sources.length === 0) {
-		return target as any;
-	}
+export function deepMerge<
+  T extends Record<string, any>,
+  S extends Record<string, any>
+>(target: T, ...sources: S[]): DeepMerge<T, S> {
+  if (sources.length === 0) {
+    return target as any;
+  }
 
-	const source = sources.shift();
-	if (source === undefined) {
-		return target as any;
-	}
+  const source = sources.shift();
+  if (source === undefined) {
+    return target as any;
+  }
 
-	if (isMergeableObject(target) && isMergeableObject(source)) {
-		Object.keys(source).forEach((key) => {
-			if (isMergeableObject(source[key])) {
-				if (!target[key]) {
-					// @ts-expect-error I do not know how to fix this
-					target[key] = {};
-				}
+  if (isMergeableObject(target) && isMergeableObject(source)) {
+    Object.keys(source).forEach((key) => {
+      if (isMergeableObject(source[key])) {
+        if (!target[key]) {
+          // @ts-expect-error I do not know how to fix this
+          target[key] = {};
+        }
 
-				deepMerge(target[key], source[key]);
-			} else {
-				// @ts-expect-error I do not know how to fix this
-				target[key] = source[key];
-			}
-		});
-	}
+        deepMerge(target[key], source[key]);
+      } else {
+        // @ts-expect-error I do not know how to fix this
+        target[key] = source[key];
+      }
+    });
+  }
 
-	return deepMerge(target, ...sources);
+  return deepMerge(target, ...sources);
 }
 
 /**
@@ -47,7 +54,7 @@ export function deepMerge<T extends Record<string, any>, S extends Record<string
  * @returns {boolean} - value
  */
 function isMergeableObject(item: any): item is Record<string, any> {
-	return isObject(item) && !isArray(item);
+  return isObject(item) && !isArray(item);
 }
 
 /**
@@ -56,9 +63,11 @@ function isMergeableObject(item: any): item is Record<string, any> {
  * @returns {any} - the clean obj
  */
 export function removeEmptyObj(obj: any) {
-	return Object.fromEntries(
-		Object.entries(obj).filter(([_, v]) => isNotNull(v) && isDef(v) && isNotEmpty(v)),
-	);
+  return Object.fromEntries(
+    Object.entries(obj).filter(
+      ([_, v]) => isNotNull(v) && isDef(v) && isNotEmpty(v)
+    )
+  );
 }
 
 /**
@@ -67,11 +76,11 @@ export function removeEmptyObj(obj: any) {
  * @returns {any} - the clean obj
  */
 export function removeUndefObj<T extends Record<string, any>>(obj: T): T {
-	Object.keys(obj).forEach((key: string) =>
-		// @ts-expect-error Ignore type checking
-		isUndef(obj[key]) ? (obj[key] = undefined) : {},
-	);
-	return obj;
+  Object.keys(obj).forEach((key: string) =>
+    // @ts-expect-error Ignore type checking
+    isUndef(obj[key]) ? (obj[key] = undefined) : {}
+  );
+  return obj;
 }
 
 /**
@@ -102,16 +111,16 @@ export function removeUndefObj<T extends Record<string, any>>(obj: T): T {
  * ```
  */
 export function objectMap<K extends string, V, NK = K, NV = V>(
-	obj: Record<K, V>,
-	fn: (key: K, value: V) => [NK, NV] | undefined,
+  obj: Record<K, V>,
+  fn: (key: K, value: V) => [NK, NV] | undefined
 ): Record<K, V> {
-	// @ts-expect-error ignore type check
-	return Object.fromEntries(
-		// @ts-expect-error ignore type check
-		Object.entries(obj)
-			.map(([k, v]) => fn(k as K, v as V))
-			.filter(isNotNull),
-	);
+  // @ts-expect-error ignore type check
+  return Object.fromEntries(
+    // @ts-expect-error ignore type check
+    Object.entries(obj)
+      .map(([k, v]) => fn(k as K, v as V))
+      .filter(isNotNull)
+  );
 }
 
 /**
@@ -123,7 +132,7 @@ export function objectMap<K extends string, V, NK = K, NV = V>(
  * @param k key to check existence in `obj`
  */
 export function isKeyOf<T extends object>(obj: T, k: keyof any): k is keyof T {
-	return k in obj;
+  return k in obj;
 }
 
 /**
@@ -132,7 +141,7 @@ export function isKeyOf<T extends object>(obj: T, k: keyof any): k is keyof T {
  * @category Object
  */
 export function objectKeys<T extends object>(obj: T) {
-	return Object.keys(obj) as Array<keyof T>;
+  return Object.keys(obj) as Array<keyof T>;
 }
 
 /**
@@ -141,7 +150,7 @@ export function objectKeys<T extends object>(obj: T) {
  * @category Object
  */
 export function objectEntries<T extends object>(obj: T) {
-	return Object.entries(obj) as [keyof T, T[keyof T]][];
+  return Object.entries(obj) as [keyof T, T[keyof T]][];
 }
 
 /**
@@ -149,32 +158,33 @@ export function objectEntries<T extends object>(obj: T) {
  *
  * @category Object
  */
-export function objectPick<O, T extends keyof O>(obj: O, keys: T[], omitUndefined = false) {
-	return keys.reduce((n, k) => {
-		if (k in obj) {
-			if (!omitUndefined || obj[k] !== undefined) {
-				n[k] = obj[k];
-			}
-		}
-		return n;
-	}, {} as Pick<O, T>);
+export function objectPick<O, T extends keyof O>(
+  obj: O,
+  keys: T[],
+  omitUndefined = false
+) {
+  return keys.reduce((n, k) => {
+    if (k in obj) {
+      if (!omitUndefined || obj[k] !== undefined) {
+        n[k] = obj[k];
+      }
+    }
+    return n;
+  }, {} as Pick<O, T>);
 }
 
 function pick<T>(from: T, val: string) {
-	return val
-		.replace(/\[([^\[\]]*)\]/g, ".$1.")
-		.split(".")
-		.filter((t) => t !== "")
-		.reduce((prev, cur) => prev && prev[cur], from);
+  return val
+    .replace(/\[([^\[\]]*)\]/g, ".$1.")
+    .split(".")
+    .filter((t) => t !== "")
+    .reduce((prev, cur) => prev && prev[cur], from);
 }
 
 export function objectGet<T>(from: T, selector: string) {
-	return pick(from, selector);
+  return pick(from, selector);
 }
 
 export function objectGets<T>(from: T, ...selectors: string[]) {
-	return [...selectors].map((s) => pick(from, s));
+  return [...selectors].map((s) => pick(from, s));
 }
-
-// compare whether a value has changed, accounting for NaN.
-export const hasChanged = (value: any, oldValue: any): boolean => !Object.is(value, oldValue);

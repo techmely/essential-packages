@@ -3,7 +3,7 @@
  * @link https://stackoverflow.com/a/46181
  */
 export const emailRegex = new RegExp(
-	/^(([^\s"(),.:;<>@[\\\]]+(\.[^\s"(),.:;<>@[\\\]]+)*)|(".+"))@((\[(?:\d{1,3}\.){3}\d{1,3}])|(([\dA-Za-z-]+\.)+[A-Za-z]{2,}))$/,
+  /^(([^\s"(),.:;<>@[\\\]]+(\.[^\s"(),.:;<>@[\\\]]+)*)|(".+"))@((\[(?:\d{1,3}\.){3}\d{1,3}])|(([\dA-Za-z-]+\.)+[A-Za-z]{2,}))$/
 );
 export const isValidEmail = (email: string) => emailRegex.test(email);
 
@@ -14,7 +14,7 @@ export const vietnamPhoneRegex = new RegExp(/^0(\d{9})$/);
 export const isValidVnPhone = (phone: string) => vietnamPhoneRegex.test(phone);
 
 export const urlRegex =
-	/(((^https?:(?:\/\/)?)(?:[\w$&+,:;=-]+@)?[\d.A-Za-z-]+(?::\d+)?|(?:www.|[\w$&+,:;=-]+@)[\d.A-Za-z-]+)((?:\/[\w%+./~-]*)?\??[\w%&+.;=@-]*(?:#\w*)?)?)$/;
+  /(((^https?:(?:\/\/)?)(?:[\w$&+,:;=-]+@)?[\d.A-Za-z-]+(?::\d+)?|(?:www.|[\w$&+,:;=-]+@)[\d.A-Za-z-]+)((?:\/[\w%+./~-]*)?\??[\w%&+.;=@-]*(?:#\w*)?)?)$/;
 export const isValidUrl = (path: string) => urlRegex.test(path);
 
 export const hexColor = /^#(([\da-f]{2}){3,4})$/;
@@ -22,3 +22,5 @@ export const hexColor = /^#(([\da-f]{2}){3,4})$/;
 export const multilineCommentsRegex = /\/\*(.|[\r\n])*?\*\//gm;
 export const singlelineCommentsRegex = /\/\/.*/g;
 export const escapedSpaceCharactersRegex = /( |\\t|\\n|\\f|\\r)+/g;
+export const reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+export const reHasRegExpChar = RegExp(reRegExpChar.source);

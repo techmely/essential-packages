@@ -5,7 +5,7 @@
  * @returns {T[]} - New array with unique value
  */
 export function unique<T>(array: readonly T[]): T[] {
-  return [...new Set(array)];
+	return [...new Set(array)];
 }
 
 /**
@@ -16,7 +16,7 @@ export function unique<T>(array: readonly T[]): T[] {
  * @returns {T[]} - New array was sliced
  */
 export function take<T>(array: readonly T[], limit: number): T[] {
-  return array.slice(0, limit);
+	return array.slice(0, limit);
 }
 
 /**
@@ -28,16 +28,16 @@ export function take<T>(array: readonly T[], limit: number): T[] {
  * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
  */
 export function findLastIndex<T>(
-  array: T[],
-  predicate: (value: T, index: number, obj: T[]) => boolean
+	array: T[],
+	predicate: (value: T, index: number, obj: T[]) => boolean,
 ): number {
-  let l = array.length;
-  while (l--) {
-    if (predicate(array[l], l, array)) {
-      return l;
-    }
-  }
-  return -1;
+	let l = array.length;
+	while (l--) {
+		if (predicate(array[l], l, array)) {
+			return l;
+		}
+	}
+	return -1;
 }
 
 /**
@@ -52,49 +52,43 @@ export function findLastIndex<T>(
  * @returns Map of the array grouped by the grouping function.
  */
 
-export function groupBy<K, V>(
-  list: V[],
-  keyGetter: (input: V) => K
-): Map<K, V[]> {
-  const map = new Map<K, V[]>();
-  list.forEach((item) => {
-    const key = keyGetter(item);
-    const collection = map.get(key);
-    if (collection) {
-      collection.push(item);
-    } else {
-      map.set(key, [item]);
-    }
-  });
-  return map;
+export function groupBy<K, V>(list: V[], keyGetter: (input: V) => K): Map<K, V[]> {
+	const map = new Map<K, V[]>();
+	list.forEach((item) => {
+		const key = keyGetter(item);
+		const collection = map.get(key);
+		if (collection) {
+			collection.push(item);
+		} else {
+			map.set(key, [item]);
+		}
+	});
+	return map;
 }
 
 export const remove = <T>(arr: T[], el: T) => {
-  const i = arr.indexOf(el);
-  if (i > -1) {
-    arr.splice(i, 1);
-  }
+	const i = arr.indexOf(el);
+	if (i > -1) {
+		arr.splice(i, 1);
+	}
 };
 
 /**
  * Get random items from an array
  */
 export function sample<T>(arr: T[], count: number) {
-  return Array.from(
-    { length: count },
-    (_) => arr[Math.round(Math.random() * (arr.length - 1))]
-  );
+	return Array.from({ length: count }, (_) => arr[Math.round(Math.random() * (arr.length - 1))]);
 }
 
 /**
  * Shuffle an array. This function mutates the array.
  */
 export function shuffle<T>(array: T[]): T[] {
-  for (let i = array.length - 1; i > 0; i--) {
-    const factor = Math.floor(Math.random() * (i + 1));
-    [array[i], array[factor]] = [array[factor], array[i]];
-  }
-  return array;
+	for (let i = array.length - 1; i > 0; i--) {
+		const factor = Math.floor(Math.random() * (i + 1));
+		[array[i], array[factor]] = [array[factor], array[i]];
+	}
+	return array;
 }
 
 /**
@@ -106,13 +100,13 @@ export function shuffle<T>(array: T[]): T[] {
  * @returns {Array} Returns `array`.
  */
 export function arrayEach(array, iteratee) {
-  let index = -1;
-  const length = array.length;
+	let index = -1;
+	const length = array.length;
 
-  while (++index < length) {
-    if (iteratee(array[index], index, array) === false) {
-      break;
-    }
-  }
-  return array;
+	while (++index < length) {
+		if (iteratee(array[index], index, array) === false) {
+			break;
+		}
+	}
+	return array;
 }

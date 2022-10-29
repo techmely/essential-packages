@@ -403,7 +403,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jscpd/finder@npm:*, @jscpd/finder@npm:^3.5.0":
+"@jscpd/finder@npm:*":
   version: 3.5.0
   resolution: "@jscpd/finder@npm:3.5.0"
   dependencies:
@@ -418,6 +418,24 @@ __metadata:
     markdown-table: ^2.0.0
     pug: ^3.0.1
   checksum: dcfb510046aa243783a02576c5c9d4c7869f87f83cba3f321132e562e601443cf78f0fcefd69b01ede8f24acc4c81f929bb9f964b887b872908efb46c777392b
+  languageName: node
+  linkType: hard
+
+"@jscpd/finder@npm:^3.5.0":
+  version: 3.5.1
+  resolution: "@jscpd/finder@npm:3.5.1"
+  dependencies:
+    "@jscpd/core": ^3.5.0
+    "@jscpd/tokenizer": ^3.5.1
+    blamer: ^1.0.1
+    bytes: ^3.1.0
+    cli-table3: ^0.6.0
+    colors: 1.4.0
+    fast-glob: ^3.2.2
+    fs-extra: ^9.0.0
+    markdown-table: ^2.0.0
+    pug: ^3.0.1
+  checksum: 52b92173862fd697148c9a25f922878c6267e396f006c85fb13856830425b8d098778367c4b646f96a0e85501c2f359016d98b9d6eefacfbbefc966f44c271b7
   languageName: node
   linkType: hard
 
@@ -439,6 +457,17 @@ __metadata:
     reprism: ^0.0.11
     spark-md5: ^3.0.1
   checksum: 8cd41a25f2caf6c0d090dad21ec721eb4f0a67c88167e2538aee31686b06ebb38318e5ef553114b7af9ec3d76928f928db1107f89c7c2d4149f5c02ce86bd0d8
+  languageName: node
+  linkType: hard
+
+"@jscpd/tokenizer@npm:^3.5.1":
+  version: 3.5.1
+  resolution: "@jscpd/tokenizer@npm:3.5.1"
+  dependencies:
+    "@jscpd/core": ^3.5.0
+    reprism: ^0.0.11
+    spark-md5: ^3.0.1
+  checksum: d829698e1b071fbc572382092c474e30b374684794a0b8d6238f6368a37d56be0a418fda0b8415994b732e4fac63ee257305e2eab51cbda0a22e4c30856c251d
   languageName: node
   linkType: hard
 
@@ -525,23 +554,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/cli@npm:15.0.1":
-  version: 15.0.1
-  resolution: "@nrwl/cli@npm:15.0.1"
+"@nrwl/cli@npm:15.0.4":
+  version: 15.0.4
+  resolution: "@nrwl/cli@npm:15.0.4"
   dependencies:
-    nx: 15.0.1
-  checksum: f4dcdc839e4aeb346095b6354cc554bf45dbbd910ef7f1b0c00b40565dbce9aa8c54da233e949e1479d7873414b5bdcad1fd2b7c84b7a5d4c57afc69f78ee7f8
+    nx: 15.0.4
+  checksum: 4541f88135a83089b94f628be721c3803ba158eed28c67da977e0dffdb8304624f78e10b569ad97dc482939dd7851795d6738475226ef8fdfa73aaac06f24652
   languageName: node
   linkType: hard
 
-"@nrwl/tao@npm:15.0.1":
-  version: 15.0.1
-  resolution: "@nrwl/tao@npm:15.0.1"
+"@nrwl/tao@npm:15.0.4":
+  version: 15.0.4
+  resolution: "@nrwl/tao@npm:15.0.4"
   dependencies:
-    nx: 15.0.1
+    nx: 15.0.4
   bin:
     tao: index.js
-  checksum: 75c1428578520541d0beaca7482a1ff829c17ff06c19194f99c22ce7b861990b1743b5bf7b372decafcf3092748b5dac1541539e16e6f6194613387875a26141
+  checksum: 342ca77d317d64ea30c5e9299d6266afa4fb302cf8e6a47ae42f028d784fe363ecaaa94780ac86f92a52849b7042db271ab2bfeb1534a09dbbe4f072423e6efd
   languageName: node
   linkType: hard
 
@@ -642,23 +671,22 @@ __metadata:
     "@changesets/changelog-github": ^0.4.7
     "@changesets/cli": ^2.25.0
     "@ls-lint/ls-lint": 1.11.2
-    "@types/node": 18.11.3
+    "@types/node": 18.11.7
     "@yarnpkg/sdks": ^3.0.0-rc.26
     bundlesize: 0.18.1
     cross-env: 7.0.3
     fast-glob: ^3.2.12
     fs-extra: ^10.1.0
-    happy-dom: 7.6.0
+    happy-dom: 7.6.6
     jscpd: 3.5.0
     kolorist: 1.6.0
-    nano-staged: ^0.8.0
-    nx: ^15.0.1
+    nx: ^15.0.4
     rimraf: 3.0.2
     rome: next
     ts-node: ^10.9.1
     tslib: ^2.4.0
     typescript: 4.8.4
-    vite: ^3.1.8
+    vite: ^3.2.1
     vitest: ^0.24.3
     zx: 7.1.1
   languageName: unknown
@@ -684,7 +712,7 @@ __metadata:
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:
     "@techmely/types": "workspace:packages/types"
-    "@types/node": 18.11.3
+    "@types/node": 18.11.7
     chalk: ^5.1.2
     dayjs: ^1.11.6
     execa: ^6.1.0
@@ -835,10 +863,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:18.11.3, @types/node@npm:^18.7.20":
+"@types/node@npm:*, @types/node@npm:^18.7.20":
   version: 18.11.3
   resolution: "@types/node@npm:18.11.3"
   checksum: 3a2a9142d891a90a195c296149bf64a69cc0abcc42f543be911ab22b2e0ead85ff077f90af92f0f13f6e3e5e72501469200fd753dfd1101825d4646a89d3ee47
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:18.11.7":
+  version: 18.11.7
+  resolution: "@types/node@npm:18.11.7"
+  checksum: 69d630825cf6fbf580d08d76a4d4836ef8c34ed4fe0842221ade87d275f517099cbfabe8e22397208e564bd24926db97699ab9db5c091383269a432b336665e2
   languageName: node
   linkType: hard
 
@@ -3221,9 +3256,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:7.6.0":
-  version: 7.6.0
-  resolution: "happy-dom@npm:7.6.0"
+"happy-dom@npm:7.6.6":
+  version: 7.6.6
+  resolution: "happy-dom@npm:7.6.6"
   dependencies:
     css.escape: ^1.5.1
     he: ^1.2.0
@@ -3232,7 +3267,7 @@ __metadata:
     webidl-conversions: ^7.0.0
     whatwg-encoding: ^2.0.0
     whatwg-mimetype: ^3.0.0
-  checksum: 96fd73ccea28edfbbe97bc900d358ac0bff340694ccdc4fb6b6cd45ab60701329c047f4c6071770f88d29b3b640d50d039772529df8042e12452e7f9a8204ce9
+  checksum: 5465475373a7245050b58b2564e9067712db941efb7165d645cb69721dba129bdb399c8b11e509cc9fad3e82997e8cad4fa409886c8252e67efaaaebaf67b9b0
   languageName: node
   linkType: hard
 
@@ -4443,17 +4478,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nano-staged@npm:^0.8.0":
-  version: 0.8.0
-  resolution: "nano-staged@npm:0.8.0"
-  dependencies:
-    picocolors: ^1.0.0
-  bin:
-    nano-staged: lib/bin.js
-  checksum: 01a6eee4053bd163e3084f34421fcb0f3ab90b5c47fa1ff7b4208f2a553b5e0a26e55a7f88c8af7632cfc2bcc3622d6078697bb0042409744bbb65565bb43334
-  languageName: node
-  linkType: hard
-
 "nanoid@npm:^3.3.4":
   version: 3.3.4
   resolution: "nanoid@npm:3.3.4"
@@ -4651,12 +4675,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nx@npm:15.0.1, nx@npm:^15.0.1":
-  version: 15.0.1
-  resolution: "nx@npm:15.0.1"
+"nx@npm:15.0.4, nx@npm:^15.0.4":
+  version: 15.0.4
+  resolution: "nx@npm:15.0.4"
   dependencies:
-    "@nrwl/cli": 15.0.1
-    "@nrwl/tao": 15.0.1
+    "@nrwl/cli": 15.0.4
+    "@nrwl/tao": 15.0.4
     "@parcel/watcher": 2.0.4
     "@yarnpkg/lockfile": ^1.1.0
     "@yarnpkg/parsers": ^3.0.0-rc.18
@@ -4700,7 +4724,7 @@ __metadata:
       optional: true
   bin:
     nx: bin/nx.js
-  checksum: 8e0048f57a4b7b1640b213064e0fb715eb022dcd36cdce0384775541013cb656a0f6724c5c8195d9ba988e977e646940f7537b77dc243bc61d26caef496a987f
+  checksum: 00def43fa750159b32a6bebc13a90ebeaef4f6d65b51c556389c7a004f9d71d7231f66ffedf2ea64ec3877e36671dda1550f3cf4cdd208ea2868229e83da4a10
   languageName: node
   linkType: hard
 
@@ -5013,7 +5037,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.16":
+"postcss@npm:^8.4.16, postcss@npm:^8.4.18":
   version: 8.4.18
   resolution: "postcss@npm:8.4.18"
   dependencies:
@@ -5551,7 +5575,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.74.1":
+"rollup@npm:^2.74.1, rollup@npm:^2.79.1":
   version: 2.79.1
   resolution: "rollup@npm:2.79.1"
   dependencies:
@@ -6617,7 +6641,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^3.0.0, vite@npm:^3.1.8":
+"vite@npm:^3.0.0":
   version: 3.1.8
   resolution: "vite@npm:3.1.8"
   dependencies:
@@ -6646,6 +6670,41 @@ __metadata:
   bin:
     vite: bin/vite.js
   checksum: 982696ad134577dd9915c4c3548ad36ddcf5dc6d341058548a670a13d860e4cdaaf2b320a59221f178018df089d148b9980e9a344316bef12b698a1c1abc7390
+  languageName: node
+  linkType: hard
+
+"vite@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "vite@npm:3.2.1"
+  dependencies:
+    esbuild: ^0.15.9
+    fsevents: ~2.3.2
+    postcss: ^8.4.18
+    resolve: ^1.22.1
+    rollup: ^2.79.1
+  peerDependencies:
+    less: "*"
+    sass: "*"
+    stylus: "*"
+    sugarss: "*"
+    terser: ^5.4.0
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  peerDependenciesMeta:
+    less:
+      optional: true
+    sass:
+      optional: true
+    stylus:
+      optional: true
+    sugarss:
+      optional: true
+    terser:
+      optional: true
+  bin:
+    vite: bin/vite.js
+  checksum: d33f6f4c80f85f327cf74c56d2189f1ba1d808987501eae9455c65bbb1ba5ea96af0f68647e18fe0c61e82126ea91f10480c1e80964a6836a751502647a42f2b
   languageName: node
   linkType: hard
 

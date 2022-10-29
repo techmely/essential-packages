@@ -40,9 +40,11 @@ pnpm add -D @techmely/utils
 
 ## How to contributes
 
-1. Run `pnpm install` to install all dependencies
+1. Run `yarn` to install all dependencies
 
-2. Run others command in `package.json` with `pnpm run ...`
+2. Install VsCode Extension: Rome
+3. CRUD feature and do not forget to add unit test for them
+   - Remember add typing for all functions
 
 ## License
 

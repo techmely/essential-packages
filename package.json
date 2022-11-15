@@ -47,7 +47,7 @@
     "fast-glob": "^3.2.11",
     "fs-extra": "^10.1.0",
     "happy-dom": "6.0.4",
-    "jscpd": "3.4.5",
+    "jscpd": "3.5.1",
     "kolorist": "1.5.1",
     "lodash-es": "4.17.21",
     "nx": "^14.6.4",

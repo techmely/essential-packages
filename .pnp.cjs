@@ -56,7 +56,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fast-glob", "npm:3.2.11"],\
             ["fs-extra", "npm:10.1.0"],\
             ["happy-dom", "npm:6.0.4"],\
-            ["jscpd", "npm:3.4.5"],\
+            ["jscpd", "npm:3.5.1"],\
             ["kolorist", "npm:1.5.1"],\
             ["lodash-es", "npm:4.17.21"],\
             ["nx", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:14.6.4"],\
@@ -190,22 +190,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@jscpd/core", [\
-        ["npm:3.4.5", {\
-          "packageLocation": "./.yarn/cache/@jscpd-core-npm-3.4.5-955593259c-608bb2e9c2.zip/node_modules/@jscpd/core/",\
+        ["npm:3.5.0", {\
+          "packageLocation": "./.yarn/cache/@jscpd-core-npm-3.5.0-8a5b5a3be8-d25cd48897.zip/node_modules/@jscpd/core/",\
           "packageDependencies": [\
-            ["@jscpd/core", "npm:3.4.5"],\
+            ["@jscpd/core", "npm:3.5.0"],\
             ["eventemitter3", "npm:4.0.7"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@jscpd/finder", [\
-        ["npm:3.4.5", {\
-          "packageLocation": "./.yarn/cache/@jscpd-finder-npm-3.4.5-acfd7cd0df-56d3942cba.zip/node_modules/@jscpd/finder/",\
+        ["npm:3.5.1", {\
+          "packageLocation": "./.yarn/cache/@jscpd-finder-npm-3.5.1-d31539900b-52b9217386.zip/node_modules/@jscpd/finder/",\
           "packageDependencies": [\
-            ["@jscpd/finder", "npm:3.4.5"],\
-            ["@jscpd/core", "npm:3.4.5"],\
-            ["@jscpd/tokenizer", "npm:3.4.5"],\
+            ["@jscpd/finder", "npm:3.5.1"],\
+            ["@jscpd/core", "npm:3.5.0"],\
+            ["@jscpd/tokenizer", "npm:3.5.1"],\
             ["blamer", "npm:1.0.1"],\
             ["bytes", "npm:3.1.2"],\
             ["cli-table3", "npm:0.6.2"],\
@@ -219,10 +219,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@jscpd/html-reporter", [\
-        ["npm:3.4.5", {\
-          "packageLocation": "./.yarn/cache/@jscpd-html-reporter-npm-3.4.5-316e394113-91619da791.zip/node_modules/@jscpd/html-reporter/",\
+        ["npm:3.5.0", {\
+          "packageLocation": "./.yarn/cache/@jscpd-html-reporter-npm-3.5.0-96c13e207f-38cde53a49.zip/node_modules/@jscpd/html-reporter/",\
           "packageDependencies": [\
-            ["@jscpd/html-reporter", "npm:3.4.5"],\
+            ["@jscpd/html-reporter", "npm:3.5.0"],\
             ["colors", "npm:1.4.0"],\
             ["fs-extra", "npm:9.1.0"]\
           ],\
@@ -230,11 +230,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@jscpd/tokenizer", [\
-        ["npm:3.4.5", {\
-          "packageLocation": "./.yarn/cache/@jscpd-tokenizer-npm-3.4.5-14e0e86515-f5d7d2276a.zip/node_modules/@jscpd/tokenizer/",\
+        ["npm:3.5.1", {\
+          "packageLocation": "./.yarn/cache/@jscpd-tokenizer-npm-3.5.1-9ac0d8bce2-d829698e1b.zip/node_modules/@jscpd/tokenizer/",\
           "packageDependencies": [\
-            ["@jscpd/tokenizer", "npm:3.4.5"],\
-            ["@jscpd/core", "npm:3.4.5"],\
+            ["@jscpd/tokenizer", "npm:3.5.1"],\
+            ["@jscpd/core", "npm:3.5.0"],\
             ["reprism", "npm:0.0.11"],\
             ["spark-md5", "npm:3.0.2"]\
           ],\
@@ -421,7 +421,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fast-glob", "npm:3.2.11"],\
             ["fs-extra", "npm:10.1.0"],\
             ["happy-dom", "npm:6.0.4"],\
-            ["jscpd", "npm:3.4.5"],\
+            ["jscpd", "npm:3.5.1"],\
             ["kolorist", "npm:1.5.1"],\
             ["lodash-es", "npm:4.17.21"],\
             ["nx", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:14.6.4"],\
@@ -3325,14 +3325,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["jscpd", [\
-        ["npm:3.4.5", {\
-          "packageLocation": "./.yarn/cache/jscpd-npm-3.4.5-0c67a91898-b7eb838f36.zip/node_modules/jscpd/",\
+        ["npm:3.5.1", {\
+          "packageLocation": "./.yarn/cache/jscpd-npm-3.5.1-534d491dc8-1f287024b0.zip/node_modules/jscpd/",\
           "packageDependencies": [\
-            ["jscpd", "npm:3.4.5"],\
-            ["@jscpd/core", "npm:3.4.5"],\
-            ["@jscpd/finder", "npm:3.4.5"],\
-            ["@jscpd/html-reporter", "npm:3.4.5"],\
-            ["@jscpd/tokenizer", "npm:3.4.5"],\
+            ["jscpd", "npm:3.5.1"],\
+            ["@jscpd/core", "npm:3.5.0"],\
+            ["@jscpd/finder", "npm:3.5.1"],\
+            ["@jscpd/html-reporter", "npm:3.5.0"],\
+            ["@jscpd/tokenizer", "npm:3.5.1"],\
             ["colors", "npm:1.4.0"],\
             ["commander", "npm:5.1.0"],\
             ["fs-extra", "npm:9.1.0"],\

@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.8
+
+### Patch Changes
+
+- Flat structure utils folder
+
 ## 1.4.3
 
 ### Patch Changes

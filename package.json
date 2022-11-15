@@ -50,6 +50,7 @@
     "jscpd": "3.5.0",
     "kolorist": "1.6.0",
     "nx": "^15.0.4",
+    "prettier-plugin-svelte": "^2.8.0",
     "rimraf": "3.0.2",
     "rome": "next",
     "ts-node": "^10.9.1",

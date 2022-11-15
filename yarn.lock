@@ -681,6 +681,7 @@ __metadata:
     jscpd: 3.5.0
     kolorist: 1.6.0
     nx: ^15.0.4
+    prettier-plugin-svelte: ^2.8.0
     rimraf: 3.0.2
     rome: next
     ts-node: ^10.9.1
@@ -5082,6 +5083,16 @@ __metadata:
     path-exists: ^4.0.0
     which-pm: 2.0.0
   checksum: 0de0948cb6ae22213f2ad7868032d89f1e1443d9caabc22ceeb9d284f19d359d65b67fab178f4db5c8c6ca6ae34642bdc72730b70ab1899ea158e2677a88a6d0
+  languageName: node
+  linkType: hard
+
+"prettier-plugin-svelte@npm:^2.8.0":
+  version: 2.8.0
+  resolution: "prettier-plugin-svelte@npm:2.8.0"
+  peerDependencies:
+    prettier: ^1.16.4 || ^2.0.0
+    svelte: ^3.2.0
+  checksum: 3c49d46406b3b5a94c8b67fe139190b7ef1054532e3ae1852813729cdb5c19ba996b9c02f32af877cabb39fb42a7a87f4c9451da1a8c8d82098878e6bce3aba8
   languageName: node
   linkType: hard
 

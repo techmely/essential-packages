@@ -55,7 +55,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-env", "npm:7.0.3"],\
             ["fast-glob", "npm:3.2.11"],\
             ["fs-extra", "npm:10.1.0"],\
-            ["happy-dom", "npm:6.0.4"],\
+            ["happy-dom", "npm:7.7.0"],\
             ["jscpd", "npm:3.4.5"],\
             ["kolorist", "npm:1.5.1"],\
             ["lodash-es", "npm:4.17.21"],\
@@ -420,7 +420,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-env", "npm:7.0.3"],\
             ["fast-glob", "npm:3.2.11"],\
             ["fs-extra", "npm:10.1.0"],\
-            ["happy-dom", "npm:6.0.4"],\
+            ["happy-dom", "npm:7.7.0"],\
             ["jscpd", "npm:3.4.5"],\
             ["kolorist", "npm:1.5.1"],\
             ["lodash-es", "npm:4.17.21"],\
@@ -2806,13 +2806,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["happy-dom", [\
-        ["npm:6.0.4", {\
-          "packageLocation": "./.yarn/cache/happy-dom-npm-6.0.4-0e06246c22-4bfd97f07a.zip/node_modules/happy-dom/",\
+        ["npm:7.7.0", {\
+          "packageLocation": "./.yarn/cache/happy-dom-npm-7.7.0-8b0231cf25-39badc7c6d.zip/node_modules/happy-dom/",\
           "packageDependencies": [\
-            ["happy-dom", "npm:6.0.4"],\
+            ["happy-dom", "npm:7.7.0"],\
             ["css.escape", "npm:1.5.1"],\
             ["he", "npm:1.2.0"],\
-            ["node-fetch", "virtual:0e06246c228fed1c7f600939e9cd252c0aa60435487e85e06ef763e752d95fa1168416b7a9d14f2de972a8d4142efa247d73605daf4db42b6790cc888656b276#npm:2.6.7"],\
+            ["node-fetch", "virtual:8b0231cf258618067ccc47ef1d6248d4e4b59bd6819d9d865b26393fab955f323c1343c96bf87be810e3670080b8f8fc76b1416a28b9a0193a28b21441b15034#npm:2.6.7"],\
             ["sync-request", "npm:6.1.0"],\
             ["webidl-conversions", "npm:7.0.0"],\
             ["whatwg-encoding", "npm:2.0.0"],\
@@ -3897,10 +3897,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["virtual:0e06246c228fed1c7f600939e9cd252c0aa60435487e85e06ef763e752d95fa1168416b7a9d14f2de972a8d4142efa247d73605daf4db42b6790cc888656b276#npm:2.6.7", {\
-          "packageLocation": "./.yarn/__virtual__/node-fetch-virtual-95e68dd81b/0/cache/node-fetch-npm-2.6.7-777aa2a6df-8d816ffd1e.zip/node_modules/node-fetch/",\
+        ["virtual:8b0231cf258618067ccc47ef1d6248d4e4b59bd6819d9d865b26393fab955f323c1343c96bf87be810e3670080b8f8fc76b1416a28b9a0193a28b21441b15034#npm:2.6.7", {\
+          "packageLocation": "./.yarn/__virtual__/node-fetch-virtual-3b78516678/0/cache/node-fetch-npm-2.6.7-777aa2a6df-8d816ffd1e.zip/node_modules/node-fetch/",\
           "packageDependencies": [\
-            ["node-fetch", "virtual:0e06246c228fed1c7f600939e9cd252c0aa60435487e85e06ef763e752d95fa1168416b7a9d14f2de972a8d4142efa247d73605daf4db42b6790cc888656b276#npm:2.6.7"],\
+            ["node-fetch", "virtual:8b0231cf258618067ccc47ef1d6248d4e4b59bd6819d9d865b26393fab955f323c1343c96bf87be810e3670080b8f8fc76b1416a28b9a0193a28b21441b15034#npm:2.6.7"],\
             ["@types/encoding", null],\
             ["encoding", null],\
             ["whatwg-url", "npm:5.0.0"]\
@@ -5751,7 +5751,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@vitest/ui", null],\
             ["chai", "npm:4.3.6"],\
             ["debug", "virtual:b86a9fb34323a98c6519528ed55faa0d9b44ca8879307c0b29aa384bde47ff59a7d0c9051b31246f14521dfb71ba3c5d6d0b35c29fffc17bf875aa6ad977d9e8#npm:4.3.4"],\
-            ["happy-dom", "npm:6.0.4"],\
+            ["happy-dom", "npm:7.7.0"],\
             ["jsdom", null],\
             ["local-pkg", "npm:0.4.2"],\
             ["strip-literal", "npm:0.4.0"],\

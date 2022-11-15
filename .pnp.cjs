@@ -62,7 +62,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nx", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:14.6.4"],\
             ["prettier", "npm:2.7.1"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rome", "npm:0.7.0-next.f6510d6"],\
+            ["rome", "npm:10.0.1"],\
             ["ts-node", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:10.9.1"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"],\
@@ -336,55 +336,55 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@rometools/cli-darwin-arm64", [\
-        ["npm:0.7.0-next.f6510d6", {\
-          "packageLocation": "./.yarn/unplugged/@rometools-cli-darwin-arm64-npm-0.7.0-next.f6510d6-f93e90a3e9/node_modules/@rometools/cli-darwin-arm64/",\
+        ["npm:10.0.1", {\
+          "packageLocation": "./.yarn/unplugged/@rometools-cli-darwin-arm64-npm-10.0.1-a9ac5adfbf/node_modules/@rometools/cli-darwin-arm64/",\
           "packageDependencies": [\
-            ["@rometools/cli-darwin-arm64", "npm:0.7.0-next.f6510d6"]\
+            ["@rometools/cli-darwin-arm64", "npm:10.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@rometools/cli-darwin-x64", [\
-        ["npm:0.7.0-next.f6510d6", {\
-          "packageLocation": "./.yarn/unplugged/@rometools-cli-darwin-x64-npm-0.7.0-next.f6510d6-57c90e34c7/node_modules/@rometools/cli-darwin-x64/",\
+        ["npm:10.0.1", {\
+          "packageLocation": "./.yarn/unplugged/@rometools-cli-darwin-x64-npm-10.0.1-8d4ff2768e/node_modules/@rometools/cli-darwin-x64/",\
           "packageDependencies": [\
-            ["@rometools/cli-darwin-x64", "npm:0.7.0-next.f6510d6"]\
+            ["@rometools/cli-darwin-x64", "npm:10.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@rometools/cli-linux-arm64", [\
-        ["npm:0.7.0-next.f6510d6", {\
-          "packageLocation": "./.yarn/unplugged/@rometools-cli-linux-arm64-npm-0.7.0-next.f6510d6-f7da7ff63d/node_modules/@rometools/cli-linux-arm64/",\
+        ["npm:10.0.1", {\
+          "packageLocation": "./.yarn/unplugged/@rometools-cli-linux-arm64-npm-10.0.1-ae75625111/node_modules/@rometools/cli-linux-arm64/",\
           "packageDependencies": [\
-            ["@rometools/cli-linux-arm64", "npm:0.7.0-next.f6510d6"]\
+            ["@rometools/cli-linux-arm64", "npm:10.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@rometools/cli-linux-x64", [\
-        ["npm:0.7.0-next.f6510d6", {\
-          "packageLocation": "./.yarn/unplugged/@rometools-cli-linux-x64-npm-0.7.0-next.f6510d6-280373a70b/node_modules/@rometools/cli-linux-x64/",\
+        ["npm:10.0.1", {\
+          "packageLocation": "./.yarn/unplugged/@rometools-cli-linux-x64-npm-10.0.1-11c970b002/node_modules/@rometools/cli-linux-x64/",\
           "packageDependencies": [\
-            ["@rometools/cli-linux-x64", "npm:0.7.0-next.f6510d6"]\
+            ["@rometools/cli-linux-x64", "npm:10.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@rometools/cli-win32-arm64", [\
-        ["npm:0.7.0-next.f6510d6", {\
-          "packageLocation": "./.yarn/unplugged/@rometools-cli-win32-arm64-npm-0.7.0-next.f6510d6-eb591c06d3/node_modules/@rometools/cli-win32-arm64/",\
+        ["npm:10.0.1", {\
+          "packageLocation": "./.yarn/unplugged/@rometools-cli-win32-arm64-npm-10.0.1-874ef84848/node_modules/@rometools/cli-win32-arm64/",\
           "packageDependencies": [\
-            ["@rometools/cli-win32-arm64", "npm:0.7.0-next.f6510d6"]\
+            ["@rometools/cli-win32-arm64", "npm:10.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@rometools/cli-win32-x64", [\
-        ["npm:0.7.0-next.f6510d6", {\
-          "packageLocation": "./.yarn/unplugged/@rometools-cli-win32-x64-npm-0.7.0-next.f6510d6-3079e6adc1/node_modules/@rometools/cli-win32-x64/",\
+        ["npm:10.0.1", {\
+          "packageLocation": "./.yarn/unplugged/@rometools-cli-win32-x64-npm-10.0.1-356f198c02/node_modules/@rometools/cli-win32-x64/",\
           "packageDependencies": [\
-            ["@rometools/cli-win32-x64", "npm:0.7.0-next.f6510d6"]\
+            ["@rometools/cli-win32-x64", "npm:10.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -427,7 +427,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nx", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:14.6.4"],\
             ["prettier", "npm:2.7.1"],\
             ["rimraf", "npm:3.0.2"],\
-            ["rome", "npm:0.7.0-next.f6510d6"],\
+            ["rome", "npm:10.0.1"],\
             ["ts-node", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:10.9.1"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"],\
@@ -4822,16 +4822,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["rome", [\
-        ["npm:0.7.0-next.f6510d6", {\
-          "packageLocation": "./.yarn/unplugged/rome-npm-0.7.0-next.f6510d6-96b7536b22/node_modules/rome/",\
+        ["npm:10.0.1", {\
+          "packageLocation": "./.yarn/unplugged/rome-npm-10.0.1-1a07b415e7/node_modules/rome/",\
           "packageDependencies": [\
-            ["rome", "npm:0.7.0-next.f6510d6"],\
-            ["@rometools/cli-darwin-arm64", "npm:0.7.0-next.f6510d6"],\
-            ["@rometools/cli-darwin-x64", "npm:0.7.0-next.f6510d6"],\
-            ["@rometools/cli-linux-arm64", "npm:0.7.0-next.f6510d6"],\
-            ["@rometools/cli-linux-x64", "npm:0.7.0-next.f6510d6"],\
-            ["@rometools/cli-win32-arm64", "npm:0.7.0-next.f6510d6"],\
-            ["@rometools/cli-win32-x64", "npm:0.7.0-next.f6510d6"]\
+            ["rome", "npm:10.0.1"],\
+            ["@rometools/cli-darwin-arm64", "npm:10.0.1"],\
+            ["@rometools/cli-darwin-x64", "npm:10.0.1"],\
+            ["@rometools/cli-linux-arm64", "npm:10.0.1"],\
+            ["@rometools/cli-linux-x64", "npm:10.0.1"],\
+            ["@rometools/cli-win32-arm64", "npm:10.0.1"],\
+            ["@rometools/cli-win32-x64", "npm:10.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\

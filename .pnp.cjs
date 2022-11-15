@@ -64,7 +64,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:3.0.2"],\
             ["rome", "npm:0.7.0-next.f6510d6"],\
             ["ts-node", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:10.9.1"],\
-            ["tslib", "npm:2.4.0"],\
+            ["tslib", "npm:2.4.1"],\
             ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"],\
             ["vite", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:3.1.0"],\
             ["vitest", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:0.23.1"],\
@@ -429,7 +429,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:3.0.2"],\
             ["rome", "npm:0.7.0-next.f6510d6"],\
             ["ts-node", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:10.9.1"],\
-            ["tslib", "npm:2.4.0"],\
+            ["tslib", "npm:2.4.1"],\
             ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"],\
             ["vite", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:3.1.0"],\
             ["vitest", "virtual:a87d8ad2e5029d9d6b479a721ba33134b2d040b537742f8bc8d06f5f1478f4a0d0b95a6f4759d387b857d188644afb946184b9a1edbc65e8c7a203d4193fe51f#npm:0.23.1"],\
@@ -468,7 +468,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chalk", "npm:5.0.1"],\
             ["dayjs", "npm:1.11.5"],\
             ["execa", "npm:6.1.0"],\
-            ["tslib", "npm:2.4.0"],\
+            ["tslib", "npm:2.4.1"],\
             ["tsup", "virtual:0bd5016d91acd10d862c173cb3405daed818e09800d819275993442363c472d80f95d4f09a571e2b0c756c5341afd166775234d9ec475bbdef8dc5fb3e6d4d96#npm:6.2.3"],\
             ["typescript", "patch:typescript@npm%3A4.8.2#~builtin<compat/typescript>::version=4.8.2&hash=a1c5e5"]\
           ],\
@@ -734,7 +734,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tar", "npm:6.1.11"],\
             ["tinylogic", "npm:2.0.0"],\
             ["treeify", "npm:1.1.0"],\
-            ["tslib", "npm:2.4.0"],\
+            ["tslib", "npm:2.4.1"],\
             ["tunnel", "npm:0.0.6"]\
           ],\
           "linkType": "HARD"\
@@ -746,7 +746,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@yarnpkg/fslib", "npm:3.0.0-rc.18"],\
             ["@yarnpkg/libzip", "npm:3.0.0-rc.18"],\
-            ["tslib", "npm:2.4.0"]\
+            ["tslib", "npm:2.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -757,7 +757,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@yarnpkg/libzip", "npm:3.0.0-rc.18"],\
             ["@types/emscripten", "npm:1.39.6"],\
-            ["tslib", "npm:2.4.0"]\
+            ["tslib", "npm:2.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -768,7 +768,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@yarnpkg/parsers", "npm:3.0.0-rc.18"],\
             ["js-yaml", "npm:3.14.1"],\
-            ["tslib", "npm:2.4.0"]\
+            ["tslib", "npm:2.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -785,7 +785,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["clipanion", "virtual:f3d2080971cbb0561dab068415a3aa3fa5a8947be9ea90089b547439a977280d853e6796c6b1cbb8f8cdde5000bd51c6a5de68a1c4aed82a0bb76d7f419ddc61#npm:3.2.0-rc.11"],\
             ["comment-json", "npm:2.4.2"],\
             ["lodash", "npm:4.17.21"],\
-            ["tslib", "npm:2.4.0"]\
+            ["tslib", "npm:2.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -802,7 +802,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-spawn", "npm:7.0.3"],\
             ["fast-glob", "npm:3.2.11"],\
             ["micromatch", "npm:4.0.5"],\
-            ["tslib", "npm:2.4.0"]\
+            ["tslib", "npm:2.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5528,6 +5528,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tslib-npm-2.4.0-9cb6dc5030-8c4aa6a3c5.zip/node_modules/tslib/",\
           "packageDependencies": [\
             ["tslib", "npm:2.4.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.4.1", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-2.4.1-36f0ed04db-19480d6e03.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:2.4.1"]\
           ],\
           "linkType": "HARD"\
         }]\

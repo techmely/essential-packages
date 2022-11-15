@@ -585,66 +585,45 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rometools/cli-darwin-arm64@npm:0.10.1-next":
-  version: 0.10.1-next
-  resolution: "@rometools/cli-darwin-arm64@npm:0.10.1-next"
+"@rometools/cli-darwin-arm64@npm:0.10.1":
+  version: 0.10.1
+  resolution: "@rometools/cli-darwin-arm64@npm:0.10.1"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@rometools/cli-darwin-x64@npm:0.10.1-next":
-  version: 0.10.1-next
-  resolution: "@rometools/cli-darwin-x64@npm:0.10.1-next"
+"@rometools/cli-darwin-x64@npm:0.10.1":
+  version: 0.10.1
+  resolution: "@rometools/cli-darwin-x64@npm:0.10.1"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@rometools/cli-linux-arm64@npm:0.10.1-next":
-  version: 0.10.1-next
-  resolution: "@rometools/cli-linux-arm64@npm:0.10.1-next"
+"@rometools/cli-linux-arm64@npm:0.10.1":
+  version: 0.10.1
+  resolution: "@rometools/cli-linux-arm64@npm:0.10.1"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@rometools/cli-linux-x64@npm:0.10.1-next":
-  version: 0.10.1-next
-  resolution: "@rometools/cli-linux-x64@npm:0.10.1-next"
+"@rometools/cli-linux-x64@npm:0.10.1":
+  version: 0.10.1
+  resolution: "@rometools/cli-linux-x64@npm:0.10.1"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@rometools/cli-win32-arm64@npm:0.10.1-next":
-  version: 0.10.1-next
-  resolution: "@rometools/cli-win32-arm64@npm:0.10.1-next"
+"@rometools/cli-win32-arm64@npm:0.10.1":
+  version: 0.10.1
+  resolution: "@rometools/cli-win32-arm64@npm:0.10.1"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@rometools/cli-win32-x64@npm:0.10.1-next":
-  version: 0.10.1-next
-  resolution: "@rometools/cli-win32-x64@npm:0.10.1-next"
+"@rometools/cli-win32-x64@npm:0.10.1":
+  version: 0.10.1
+  resolution: "@rometools/cli-win32-x64@npm:0.10.1"
   conditions: os=win32 & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@rometools/wasm-bundler@npm:0.10.1-next":
-  version: 0.10.1-next
-  resolution: "@rometools/wasm-bundler@npm:0.10.1-next"
-  checksum: 6390bbfcaa3e5ce1bea0ac878cb93224016e225bdedcf798856743445429ae26b477f3c7a31a4b48d301444575e5bd5430e03542901d4445b089b0a18c5a899c
-  languageName: node
-  linkType: hard
-
-"@rometools/wasm-nodejs@npm:0.10.1-next":
-  version: 0.10.1-next
-  resolution: "@rometools/wasm-nodejs@npm:0.10.1-next"
-  checksum: d43eb9e6f77ffb3fab73e471a9a7d5d3f49fa2c4fa8a63cae0bfaaf488f97d31ecb252e29b9c84342fb23027e3ba8d092fa86a58fe7ff0965afdc7c1dea9e99f
-  languageName: node
-  linkType: hard
-
-"@rometools/wasm-web@npm:0.10.1-next":
-  version: 0.10.1-next
-  resolution: "@rometools/wasm-web@npm:0.10.1-next"
-  checksum: ceea21b8526dafc3dff1e72db8b0e1673a0cc57ff196ec003a6f77b7d9f15c90192280285796de45f4e7a490cab9e3777736e56f91d77d23266ecab18fd21f8a
   languageName: node
   linkType: hard
 
@@ -5615,18 +5594,15 @@ __metadata:
   linkType: hard
 
 "rome@npm:next":
-  version: 0.10.1-next
-  resolution: "rome@npm:0.10.1-next"
+  version: 0.10.1
+  resolution: "rome@npm:0.10.1"
   dependencies:
-    "@rometools/cli-darwin-arm64": 0.10.1-next
-    "@rometools/cli-darwin-x64": 0.10.1-next
-    "@rometools/cli-linux-arm64": 0.10.1-next
-    "@rometools/cli-linux-x64": 0.10.1-next
-    "@rometools/cli-win32-arm64": 0.10.1-next
-    "@rometools/cli-win32-x64": 0.10.1-next
-    "@rometools/wasm-bundler": 0.10.1-next
-    "@rometools/wasm-nodejs": 0.10.1-next
-    "@rometools/wasm-web": 0.10.1-next
+    "@rometools/cli-darwin-arm64": 0.10.1
+    "@rometools/cli-darwin-x64": 0.10.1
+    "@rometools/cli-linux-arm64": 0.10.1
+    "@rometools/cli-linux-x64": 0.10.1
+    "@rometools/cli-win32-arm64": 0.10.1
+    "@rometools/cli-win32-x64": 0.10.1
   dependenciesMeta:
     "@rometools/cli-darwin-arm64":
       optional: true
@@ -5640,15 +5616,9 @@ __metadata:
       optional: true
     "@rometools/cli-win32-x64":
       optional: true
-    "@rometools/wasm-bundler":
-      optional: true
-    "@rometools/wasm-nodejs":
-      optional: true
-    "@rometools/wasm-web":
-      optional: true
   bin:
     rome: bin/rome
-  checksum: 8fee3f3a8d6cfec766b45ff81877b9ead1f8921a6d4ac9642aa116d8601a6ebb80dc0079481f8e5a68bc83d33fbc8f52138449a962d063c68269d0841bb347b2
+  checksum: 28a4671ebd4b961e6af31af79ab24526cbb4ef6f2889f9f21538a358413166ea6b79469acefb466e5284434a61880108dad8096511a949488e252a39cd44bf62
   languageName: node
   linkType: hard
 

@@ -31,7 +31,7 @@
     "publish": "yarn npm publish --tolerate-republish"
   },
   "devDependencies": {
-    "tsup": "6.2.3",
+    "tsup": "6.5.0",
     "typescript": "4.8.2"
   },
   "funding": [

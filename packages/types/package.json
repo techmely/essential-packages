@@ -28,11 +28,12 @@
     "build": "tsup --dts",
     "dev": "tsup --watch",
     "clean": "rimraf dist",
-    "publish": "yarn npm publish --tolerate-republish"
+    "publish": "yarn npm publish --tolerate-republish",
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "tsup": "6.2.3",
-    "typescript": "4.8.2"
+    "tsup": "6.3.0",
+    "typescript": "4.8.4"
   },
   "funding": [
     {

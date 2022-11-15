@@ -1,8 +1,0 @@
-{
-  "threshold": 1,
-  "reporters": ["html", "console"],
-  "format": "typescript",
-  "ignore": ["**/__snapshots__/**", "packages/**/dist"],
-  "absolute": true,
-  "gitignore": true
-}

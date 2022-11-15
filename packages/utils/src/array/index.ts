@@ -5,7 +5,7 @@
  * @returns {T[]} - New array with unique value
  */
 export function unique<T>(array: readonly T[]): T[] {
-  return [...new Set(array)];
+	return [...new Set(array)];
 }
 
 /**
@@ -16,7 +16,7 @@ export function unique<T>(array: readonly T[]): T[] {
  * @returns {T[]} - New array was sliced
  */
 export function take<T>(array: readonly T[], limit: number): T[] {
-  return array.slice(0, limit);
+	return array.slice(0, limit);
 }
 
 /**
@@ -28,16 +28,16 @@ export function take<T>(array: readonly T[], limit: number): T[] {
  * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
  */
 export function findLastIndex<T>(
-  array: T[],
-  predicate: (value: T, index: number, obj: T[]) => boolean
+	array: T[],
+	predicate: (value: T, index: number, obj: T[]) => boolean,
 ): number {
-  let l = array.length;
-  while (l--) {
-    if (predicate(array[l], l, array)) {
-      return l;
-    }
-  }
-  return -1;
+	let l = array.length;
+	while (l--) {
+		if (predicate(array[l], l, array)) {
+			return l;
+		}
+	}
+	return -1;
 }
 
 /**
@@ -57,14 +57,14 @@ export function findLastIndex<T>(
  * // => [['a', 'b', 'c'], ['d']]
  */
 export function chunk<T>(array: readonly T[], size = 1) {
-  if (!array || array.length === 0) {
-    return [];
-  }
+	if (!array || array.length === 0) {
+		return [];
+	}
 
-  const chunkLength = Math.ceil(array.length / size);
+	const chunkLength = Math.ceil(array.length / size);
 
-  return Array.from({ length: chunkLength }, (_v, i) => {
-    const start = i * size;
-    return array.slice(start, start + size);
-  });
+	return Array.from({ length: chunkLength }, (_v, i) => {
+		const start = i * size;
+		return array.slice(start, start + size);
+	});
 }

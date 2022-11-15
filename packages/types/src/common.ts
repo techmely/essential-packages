@@ -3,15 +3,15 @@ export type UnDef<T> = T | undefined;
 export type NullList<T> = T | undefined | null;
 
 export interface DictionaryNum<T> {
-  [id: number]: UnDef<T>;
+	[id: number]: T;
 }
 export interface Dictionary<T> extends DictionaryNum<T> {
-  [id: string]: UnDef<T>;
+	[id: string]: T;
 }
 
 export interface EntityState<T> {
-  ids: string[];
-  entities: Dictionary<T>;
+	ids: string[];
+	entities: Dictionary<T>;
 }
 
 export type VoidFunc<T> = (value: T) => void;

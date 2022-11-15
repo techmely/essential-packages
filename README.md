@@ -1,4 +1,4 @@
-[![Tests](https://github.com/TechMeLy/utils/workflows/CI/badge.svg)](https://github.com/TechMeLy/utils/actions?workflow=CI) [![install size](https://packagephobia.com/badge?p=@techmely/utils)](https://packagephobia.com/result?p=%40techmely%2Futils) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/5be3381428424f20831c97d76b811aab)](https://www.codacy.com/gh/TechMeLy/utils/dashboard?utm_source=github.com&utm_medium=referral&utm_content=TechMeLy/utils&utm_campaign=Badge_Grade) [![DeepScan grade](https://deepscan.io/api/teams/15239/projects/18403/branches/449716/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=15239&pid=18403&bid=449716) [![Dependabot](https://flat.badgen.net/dependabot/TechMeLy/template-typescript-starter?icon=dependabot)](https://dependabot.com/) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier) [![PRs or Discussion welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![npm version](https://badgen.net/npm/v/my-ts-lib)](https://npm.im/my-ts-lib)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5be3381428424f20831c97d76b811aab)](https://www.codacy.com/gh/TechMeLy/utils/dashboard?utm_source=github.com&utm_medium=referral&utm_content=TechMeLy/utils&utm_campaign=Badge_Grade) [![DeepScan grade](https://deepscan.io/api/teams/15239/projects/18403/branches/449716/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=15239&pid=18403&bid=449716) [![PRs or Discussion welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 ---
 
@@ -12,10 +12,10 @@
 
 - 📦 <5kb mini libraries
 - Tree-shakable ESM
-- Unit Test coverage ...% with [vitest](https://vitest.dev)
+- Unit Test coverage 80% with [vitest](https://vitest.dev)
 - Code quality analysis is A+ with [codacy](https://www.codacy.com) and [deepscan](https://deepscan.io)
 - Bundle to commonjs and es-module with [tsup](https://github.com/egoist/tsup)
-- Package manager [pnpm](https://pnpm.io), safe and fast
+- Package manager [yarn 3](https://yarnpkg.com), safe and fast
 - Release with [semantic-release](https://npm.im/semantic-release)
 
 ## Install to use in your project
@@ -40,9 +40,11 @@ pnpm add -D @techmely/utils
 
 ## How to contributes
 
-1. Run `pnpm install` to install all dependencies
+1. Run `yarn` to install all dependencies
 
-2. Run others command in `package.json` with `pnpm run ...`
+2. Install VsCode Extension: Rome
+3. CRUD feature and do not forget to add unit test for them
+   - Remember add typing for all functions
 
 ## License
 

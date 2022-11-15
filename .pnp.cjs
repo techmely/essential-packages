@@ -49,7 +49,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@ls-lint/ls-lint", "npm:1.11.2"],\
-            ["@types/node", "npm:18.7.15"],\
+            ["@types/node", "npm:18.11.9"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.18"],\
             ["bundlesize", "npm:0.18.1"],\
             ["cross-env", "npm:7.0.3"],\
@@ -414,7 +414,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@techmely/open-sources", "workspace:."],\
             ["@ls-lint/ls-lint", "npm:1.11.2"],\
-            ["@types/node", "npm:18.7.15"],\
+            ["@types/node", "npm:18.11.9"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.18"],\
             ["bundlesize", "npm:0.18.1"],\
             ["cross-env", "npm:7.0.3"],\
@@ -464,7 +464,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@techmely/utils", "workspace:packages/utils"],\
             ["@techmely/types", "workspace:packages/types"],\
-            ["@types/node", "npm:18.7.15"],\
+            ["@types/node", "npm:18.11.9"],\
             ["chalk", "npm:5.0.1"],\
             ["dayjs", "npm:1.11.5"],\
             ["execa", "npm:6.1.0"],\
@@ -633,6 +633,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-10.17.60-63ac1f669f-2cdb3a77d0.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:10.17.60"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:18.11.9", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.11.9-d21dd6ec05-cc0aae109e.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:18.11.9"]\
           ],\
           "linkType": "HARD"\
         }],\
@@ -5484,7 +5491,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.11"],\
             ["@tsconfig/node14", "npm:1.0.3"],\
             ["@tsconfig/node16", "npm:1.0.3"],\
-            ["@types/node", "npm:18.7.15"],\
+            ["@types/node", "npm:18.11.9"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\

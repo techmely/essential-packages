@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "1.5.6",
+  "version": "1.5.7",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -23,7 +23,7 @@
     "build": "tsup --dts",
     "build:dev": "tsup",
     "clean": "rimraf dist",
-    "publish": "ts-node ../../scripts/publishPkg.ts",
+    "publish": "node ../../scripts/publishPkg.js",
     "type-check": "tsc --noEmit --project ./tsconfig.json"
   },
   "peerDependencies": {

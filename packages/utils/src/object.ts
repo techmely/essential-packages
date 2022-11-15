@@ -1,5 +1,5 @@
-import { isNotEmpty, isArray, isDef, isNotNull, isObject, isUndef } from "../is";
-import { DeepMerge } from "../types";
+import { isNotEmpty, isArray, isDef, isNotNull, isObject, isUndef } from "./is";
+import { DeepMerge } from "./types";
 
 /**
  * @description Deep merge Object
@@ -165,7 +165,7 @@ function pick<T>(from: T, val: string) {
 		.replace(/\[([^\[\]]*)\]/g, ".$1.")
 		.split(".")
 		.filter((t) => t !== "")
-		.reduce((prev, cur) => prev && prev[cur], from);
+		.reduce((prev, cur) => prev?.[cur], from);
 }
 
 export function objectGet<T>(from: T, selector: string) {

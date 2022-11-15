@@ -207,23 +207,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/cli@npm:14.6.4":
-  version: 14.6.4
-  resolution: "@nrwl/cli@npm:14.6.4"
+"@nrwl/cli@npm:15.0.13":
+  version: 15.0.13
+  resolution: "@nrwl/cli@npm:15.0.13"
   dependencies:
-    nx: 14.6.4
-  checksum: a6cf1a746f0eba6eec62f9fe41ae5810c11796d7db1d6a0e685a034b81aeba1deecedffe351727d1ae9f090bccb37f516e716c909ec08e925a54be447bea3389
+    nx: 15.0.13
+  checksum: 0fa1e87e0e2c23b8c28499176dd64fa7fca1713cf12065ef94fa653a67f2ca8eae4f1be0006edb18752547835bcdf0ec2392d22c2a04610f558e93a5fe5a025a
   languageName: node
   linkType: hard
 
-"@nrwl/tao@npm:14.6.4":
-  version: 14.6.4
-  resolution: "@nrwl/tao@npm:14.6.4"
+"@nrwl/tao@npm:15.0.13":
+  version: 15.0.13
+  resolution: "@nrwl/tao@npm:15.0.13"
   dependencies:
-    nx: 14.6.4
+    nx: 15.0.13
   bin:
     tao: index.js
-  checksum: 1dd0a49cc3e90f0e5488a74334c707b960eab6d63502c6afba676eca73af186e2ab3178b4a5d9ad73537819dbcf622af95bfdd571d37b8d6e5836efcbcc35843
+  checksum: 4e66ccc19c97e297c4f23a46d9533f9835c060b01a6b8e1c44483c1ee80940cb6641a8799bb540b97490bd28a5eec600813b621c254ad9a77af4b3702b6e100a
   languageName: node
   linkType: hard
 
@@ -311,7 +311,7 @@ __metadata:
     jscpd: 3.4.5
     kolorist: 1.5.1
     lodash-es: 4.17.21
-    nx: ^14.6.4
+    nx: ^15.0.13
     prettier: 2.7.1
     rimraf: 3.0.2
     rome: 0.7.0-next.f6510d6
@@ -604,6 +604,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@yarnpkg/lockfile@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@yarnpkg/lockfile@npm:1.1.0"
+  checksum: 05b881b4866a3546861fee756e6d3812776ea47fa6eb7098f983d6d0eefa02e12b66c3fff931574120f196286a7ad4879ce02743c8bb2be36c6a576c7852083a
+  languageName: node
+  linkType: hard
+
 "@yarnpkg/parsers@npm:^3.0.0-rc.18":
   version: 3.0.0-rc.18
   resolution: "@yarnpkg/parsers@npm:3.0.0-rc.18"
@@ -647,6 +654,17 @@ __metadata:
   bin:
     shell: ./lib/cli.js
   checksum: eca01879e4004a96b5a666adbe211ed885b595d726fee028cd3791867b8b8783b481230e2164d4964452d9387077fb10dc2bd5357559258c26f33c498bf45e5a
+  languageName: node
+  linkType: hard
+
+"@zkochan/js-yaml@npm:0.0.6":
+  version: 0.0.6
+  resolution: "@zkochan/js-yaml@npm:0.0.6"
+  dependencies:
+    argparse: ^2.0.1
+  bin:
+    js-yaml: bin/js-yaml.js
+  checksum: 51b81597a1d1d79c778b8fae48317eaad78d75223d0b7477ad2b35f47cf63b19504da430bb7a03b326e668b282874242cc123e323e57293be038684cb5e755f8
   languageName: node
   linkType: hard
 
@@ -882,6 +900,17 @@ __metadata:
   dependencies:
     follow-redirects: ^1.14.0
   checksum: 44245f24ac971e7458f3120c92f9d66d1fc695e8b97019139de5b0cc65d9b8104647db01e5f46917728edfc0cfd88eb30fc4c55e6053eef4ace76768ce95ff3c
+  languageName: node
+  linkType: hard
+
+"axios@npm:^1.0.0":
+  version: 1.1.3
+  resolution: "axios@npm:1.1.3"
+  dependencies:
+    follow-redirects: ^1.15.0
+    form-data: ^4.0.0
+    proxy-from-env: ^1.1.0
+  checksum: cab3b17bf6092c9387f7023d699db093cfa23650b56c4422cd474d124b78b2e3b5a520f932c330664a58ab85b867b1c25a95cace475ef72d236888c852b84e6d
   languageName: node
   linkType: hard
 
@@ -1310,6 +1339,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cliui@npm:^8.0.1":
+  version: 8.0.1
+  resolution: "cliui@npm:8.0.1"
+  dependencies:
+    string-width: ^4.2.0
+    strip-ansi: ^6.0.1
+    wrap-ansi: ^7.0.0
+  checksum: 79648b3b0045f2e285b76fb2e24e207c6db44323581e421c3acbd0e86454cba1b37aea976ab50195a49e7384b871e6dfb2247ad7dec53c02454ac6497394cb56
+  languageName: node
+  linkType: hard
+
 "clone-response@npm:^1.0.2":
   version: 1.0.3
   resolution: "clone-response@npm:1.0.3"
@@ -1374,7 +1414,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"combined-stream@npm:^1.0.6":
+"combined-stream@npm:^1.0.6, combined-stream@npm:^1.0.8":
   version: 1.0.8
   resolution: "combined-stream@npm:1.0.8"
   dependencies:
@@ -2113,6 +2153,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.15.0":
+  version: 1.15.2
+  resolution: "follow-redirects@npm:1.15.2"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: faa66059b66358ba65c234c2f2a37fcec029dc22775f35d9ad6abac56003268baf41e55f9ee645957b32c7d9f62baf1f0b906e68267276f54ec4b4c597c2b190
+  languageName: node
+  linkType: hard
+
 "form-data@npm:^2.2.0":
   version: 2.5.1
   resolution: "form-data@npm:2.5.1"
@@ -2121,6 +2171,17 @@ __metadata:
     combined-stream: ^1.0.6
     mime-types: ^2.1.12
   checksum: 5134ada56cc246b293a1ac7678dba6830000603a3979cf83ff7b2f21f2e3725202237cfb89e32bcb38a1d35727efbd3c3a22e65b42321e8ade8eec01ce755d08
+  languageName: node
+  linkType: hard
+
+"form-data@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "form-data@npm:4.0.0"
+  dependencies:
+    asynckit: ^0.4.0
+    combined-stream: ^1.0.8
+    mime-types: ^2.1.12
+  checksum: 01135bf8675f9d5c61ff18e2e2932f719ca4de964e3be90ef4c36aacfc7b9cb2fceb5eca0b7e0190e3383fe51c5b37f4cb80b62ca06a99aaabfcfd6ac7c9328c
   languageName: node
   linkType: hard
 
@@ -2945,10 +3006,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsonc-parser@npm:3.0.0":
-  version: 3.0.0
-  resolution: "jsonc-parser@npm:3.0.0"
-  checksum: 1df2326f1f9688de30c70ff19c5b2a83ba3b89a1036160da79821d1361090775e9db502dc57a67c11b56e1186fc1ed70b887f25c5febf9a3ec4f91435836c99d
+"jsonc-parser@npm:3.2.0":
+  version: 3.2.0
+  resolution: "jsonc-parser@npm:3.2.0"
+  checksum: 946dd9a5f326b745aa326d48a7257e3f4a4b62c5e98ec8e49fa2bdd8d96cef7e6febf1399f5c7016114fd1f68a1c62c6138826d5d90bc650448e3cf0951c53c7
   languageName: node
   linkType: hard
 
@@ -3533,13 +3594,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nx@npm:14.6.4, nx@npm:^14.6.4":
-  version: 14.6.4
-  resolution: "nx@npm:14.6.4"
+"nx@npm:15.0.13, nx@npm:^15.0.13":
+  version: 15.0.13
+  resolution: "nx@npm:15.0.13"
   dependencies:
-    "@nrwl/cli": 14.6.4
-    "@nrwl/tao": 14.6.4
+    "@nrwl/cli": 15.0.13
+    "@nrwl/tao": 15.0.13
     "@parcel/watcher": 2.0.4
+    "@yarnpkg/lockfile": ^1.1.0
+    "@yarnpkg/parsers": ^3.0.0-rc.18
+    "@zkochan/js-yaml": 0.0.6
+    axios: ^1.0.0
     chalk: 4.1.0
     chokidar: ^3.5.1
     cli-cursor: 3.1.0
@@ -3554,19 +3619,20 @@ __metadata:
     glob: 7.1.4
     ignore: ^5.0.4
     js-yaml: 4.1.0
-    jsonc-parser: 3.0.0
+    jsonc-parser: 3.2.0
     minimatch: 3.0.5
     npm-run-path: ^4.0.1
     open: ^8.4.0
     semver: 7.3.4
     string-width: ^4.2.3
+    strong-log-transformer: ^2.1.0
     tar-stream: ~2.2.0
     tmp: ~0.2.1
     tsconfig-paths: ^3.9.0
     tslib: ^2.3.0
     v8-compile-cache: 2.3.0
-    yargs: ^17.4.0
-    yargs-parser: 21.0.1
+    yargs: ^17.6.2
+    yargs-parser: 21.1.1
   peerDependencies:
     "@swc-node/register": ^1.4.2
     "@swc/core": ^1.2.173
@@ -3577,7 +3643,7 @@ __metadata:
       optional: true
   bin:
     nx: bin/nx.js
-  checksum: 5d3c692e71a2b09547850460eb99aaf11d1830a30e1fbbf6694f5828ecc5188339af39f9c5a8efd78d566901f0c382c09797b891cfbab22be7c788a01b08521e
+  checksum: 25003f30a8dd3a816e975cdbbd33b73ab9e405f055dc9d288534868afcf46e868da014cedb7df443118ff20277c1f4d216ce85a680bcc2d27b97a3919b114a02
   languageName: node
   linkType: hard
 
@@ -3872,6 +3938,13 @@ __metadata:
   dependencies:
     asap: ~2.0.6
   checksum: 45d65ffe4fbd9172ef848f790ac1366822e63f063a5ef42a14e75b577ffa3c37870a9d8472729d9d429d7c8a770428f9d13650b52aafaa361dcc69cf84873b20
+  languageName: node
+  linkType: hard
+
+"proxy-from-env@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "proxy-from-env@npm:1.1.0"
+  checksum: ed7fcc2ba0a33404958e34d95d18638249a68c430e30fcb6c478497d72739ba64ce9810a24f53a7d921d0c065e5b78e3822759800698167256b04659366ca4d4
   languageName: node
   linkType: hard
 
@@ -4592,6 +4665,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"strong-log-transformer@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "strong-log-transformer@npm:2.1.0"
+  dependencies:
+    duplexer: ^0.1.1
+    minimist: ^1.2.0
+    through: ^2.3.4
+  bin:
+    sl-log-transformer: bin/sl-log-transformer.js
+  checksum: abf9a4ac143118f26c3a0771b204b02f5cf4fa80384ae158f25e02bfbff761038accc44a7f65869ccd5a5995a7f2c16b1466b83149644ba6cecd3072a8927297
+  languageName: node
+  linkType: hard
+
 "sucrase@npm:^3.20.3":
   version: 3.25.0
   resolution: "sucrase@npm:3.25.0"
@@ -4730,7 +4816,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"through@npm:2, through@npm:~2.3, through@npm:~2.3.1":
+"through@npm:2, through@npm:^2.3.4, through@npm:~2.3, through@npm:~2.3.1":
   version: 2.3.8
   resolution: "through@npm:2.3.8"
   checksum: a38c3e059853c494af95d50c072b83f8b676a9ba2818dcc5b108ef252230735c54e0185437618596c790bbba8fcdaef5b290405981ffa09dce67b1f1bf190cbd
@@ -5276,32 +5362,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs-parser@npm:21.0.1":
-  version: 21.0.1
-  resolution: "yargs-parser@npm:21.0.1"
-  checksum: c3ea2ed12cad0377ce3096b3f138df8267edf7b1aa7d710cd502fe16af417bafe4443dd71b28158c22fcd1be5dfd0e86319597e47badf42ff83815485887323a
-  languageName: node
-  linkType: hard
-
-"yargs-parser@npm:^21.0.0":
+"yargs-parser@npm:21.1.1, yargs-parser@npm:^21.1.1":
   version: 21.1.1
   resolution: "yargs-parser@npm:21.1.1"
   checksum: ed2d96a616a9e3e1cc7d204c62ecc61f7aaab633dcbfab2c6df50f7f87b393993fe6640d017759fe112d0cb1e0119f2b4150a87305cc873fd90831c6a58ccf1c
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.4.0":
-  version: 17.5.1
-  resolution: "yargs@npm:17.5.1"
+"yargs@npm:^17.6.2":
+  version: 17.6.2
+  resolution: "yargs@npm:17.6.2"
   dependencies:
-    cliui: ^7.0.2
+    cliui: ^8.0.1
     escalade: ^3.1.1
     get-caller-file: ^2.0.5
     require-directory: ^2.1.1
     string-width: ^4.2.3
     y18n: ^5.0.5
-    yargs-parser: ^21.0.0
-  checksum: 00d58a2c052937fa044834313f07910fd0a115dec5ee35919e857eeee3736b21a4eafa8264535800ba8bac312991ce785ecb8a51f4d2cc8c4676d865af1cfbde
+    yargs-parser: ^21.1.1
+  checksum: 47da1b0d854fa16d45a3ded57b716b013b2179022352a5f7467409da5a04a1eef5b3b3d97a2dfc13e8bbe5f2ffc0afe3bc6a4a72f8254e60f5a4bd7947138643
   languageName: node
   linkType: hard
 

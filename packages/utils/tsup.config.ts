@@ -1,4 +1,4 @@
-import { getTsupOptions } from "./src/build-config";
+import { getTsupOptions } from "./src/config";
 import { defineConfig } from "tsup";
 import pkg from "./package.json";
 

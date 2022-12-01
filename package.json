@@ -40,7 +40,7 @@
     "@changesets/changelog-github": "^0.4.7",
     "@changesets/cli": "^2.25.0",
     "@ls-lint/ls-lint": "1.11.2",
-    "@types/node": "18.11.7",
+    "@types/node": "18.11.10",
     "@yarnpkg/sdks": "^3.0.0-rc.26",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",

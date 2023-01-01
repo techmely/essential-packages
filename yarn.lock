@@ -421,7 +421,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jscpd/finder@npm:^3.5.0":
+"@jscpd/finder@npm:^3.5.1":
   version: 3.5.1
   resolution: "@jscpd/finder@npm:3.5.1"
   dependencies:
@@ -439,13 +439,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jscpd/html-reporter@npm:^3.5.0":
-  version: 3.5.0
-  resolution: "@jscpd/html-reporter@npm:3.5.0"
+"@jscpd/html-reporter@npm:^3.5.3":
+  version: 3.5.3
+  resolution: "@jscpd/html-reporter@npm:3.5.3"
   dependencies:
     colors: 1.4.0
     fs-extra: ^9.0.1
-  checksum: 38cde53a4959908e724bd535e1da4b93adcb486c6f08c928c69b237b347e5a1d2bf696f09febf804efdc2905fe47b2861ac12e2eec015db73f2616ad62eac53a
+  checksum: 16efe1dcf271208ee5264378149729770632d57968ed73f8fe572dc586a10de8264830fa53b608f9bcf6458dcde814bc01daab095c546c0b713a29edfd8ebd78
   languageName: node
   linkType: hard
 
@@ -678,7 +678,7 @@ __metadata:
     fast-glob: ^3.2.12
     fs-extra: ^10.1.0
     happy-dom: 7.6.6
-    jscpd: 3.5.0
+    jscpd: 3.5.3
     kolorist: 1.6.0
     nx: ^15.0.4
     prettier-plugin-svelte: ^2.8.0
@@ -3902,21 +3902,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jscpd@npm:3.5.0":
-  version: 3.5.0
-  resolution: "jscpd@npm:3.5.0"
+"jscpd@npm:3.5.3":
+  version: 3.5.3
+  resolution: "jscpd@npm:3.5.3"
   dependencies:
     "@jscpd/core": ^3.5.0
-    "@jscpd/finder": ^3.5.0
-    "@jscpd/html-reporter": ^3.5.0
-    "@jscpd/tokenizer": ^3.5.0
+    "@jscpd/finder": ^3.5.1
+    "@jscpd/html-reporter": ^3.5.3
+    "@jscpd/tokenizer": ^3.5.1
     colors: 1.4.0
     commander: ^5.0.0
     fs-extra: ^9.1.0
     gitignore-to-glob: ^0.3.0
   bin:
     jscpd: bin/jscpd
-  checksum: 80e942e404ce954d3e009767e94241d09666d6aabe2c088e78540d33559324951eaa3d6ed0de4fe10d11c66b99530596ad17e68eb69e6762ae9cee7d398931c2
+  checksum: 959b0e9a7a1c3c7c0c5866bf954397719fc17ae90c9d944f7334ae5c64c779a7187677214be098a0427dfb1f1b42476d05361c8d3aabd92ae2c28c6144ad4c89
   languageName: node
   linkType: hard
 

@@ -1,0 +1,62 @@
+{
+  "name": "@techmely/ui-react",
+  "version": "1.0.0",
+  "description": "React Design System Design for @techmely organization",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techmely/utils/tree/dev/packages/utils"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "tag": "latest"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup --dts",
+    "build:dev": "tsup",
+    "clean": "rimraf dist",
+    "publish": "node ../../scripts/publishPkg.js",
+    "type-check": "tsc --noEmit --project ./tsconfig.json"
+  },
+  "peerDependencies": {
+    "dayjs": "^1.11.6"
+  },
+  "peerDependenciesMeta": {
+    "dayjs": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@techmely/types": "workspace:packages/types",
+    "@types/node": "18.11.18",
+    "chalk": "^5.2.0",
+    "dayjs": "^1.11.7",
+    "execa": "^6.1.0",
+    "tslib": "^2.4.1",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ],
+  "keywords": [
+    "techmely",
+    "techmely-component",
+    "techmely-utils"
+  ]
+}

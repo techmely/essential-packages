@@ -1,0 +1,51 @@
+{
+  "name": "@techmely/eslint-base",
+  "version": "1.0.0",
+  "description": "Eslint base config for all project",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techmely/utils/tree/dev/packages/utils"
+  },
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "tag": "latest"
+  },
+  "files": [
+    "."
+  ],
+  "scripts": {
+    "publish": "node ../../scripts/publishPkg.js"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unicorn": "^45.0.2"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ],
+  "keywords": [
+    "techmely",
+    "techmely-component",
+    "techmely-utils",
+    "kungfutech"
+  ]
+}

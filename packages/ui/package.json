@@ -1,7 +1,7 @@
 {
-  "name": "@techmely/utils",
-  "version": "1.5.8",
-  "description": "Collection of helpful JavaScript / TypeScript utils",
+  "name": "@techmely/ui-react",
+  "version": "1.0.0",
+  "description": "React Design System Design for @techmely organization",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "repository": {

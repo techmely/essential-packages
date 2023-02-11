@@ -1,13 +1,10 @@
 {
-  "name": "@techmely/ts-config",
+  "name": "@techmely/configs",
   "version": "1.2.0",
   "license": "MIT",
   "main": "index.js",
   "files": [
-    "base.json",
-    "nextjs.json",
-    "node.json",
-    "ui-react-lib.json"
+    "."
   ],
   "publishConfig": {
     "access": "public",

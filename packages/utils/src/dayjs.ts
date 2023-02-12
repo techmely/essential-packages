@@ -3,7 +3,6 @@ import type { OpUnitType, QUnitType, ConfigType } from "dayjs";
 import timezone from "dayjs/plugin/timezone.js";
 import utc from "dayjs/plugin/utc.js";
 import relativeTime from "dayjs/plugin/relativeTime.js";
-import updateLocale from "dayjs/plugin/updateLocale.js";
 
 type CompareDateConfig = {
 	unit?: QUnitType | OpUnitType;
@@ -11,12 +10,10 @@ type CompareDateConfig = {
 };
 
 dayjs.extend(utc);
-dayjs.extend(updateLocale);
 dayjs.extend(relativeTime);
 dayjs.extend(timezone);
 const timeZone = dayjs.tz.guess();
 dayjs.tz.setDefault(timeZone);
-dayjs.updateLocale("vi", {});
 
 /**
  * @param date

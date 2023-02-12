@@ -23,20 +23,6 @@ export function formatNumber(
 
 /**
  *
- * @param price
- * @param precision
- * @returns
- */
-export function formatPrice(
-	price: NullList<number | string>,
-	precision = 0,
-	defaultValue: string | number = "-",
-) {
-	return formatNumber(price, precision, defaultValue);
-}
-
-/**
- *
  * @param volume
  * @param precision
  * @param defaultValue

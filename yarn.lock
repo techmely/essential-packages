@@ -2134,9 +2134,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@techmely/ui-react@workspace:packages/ui":
+"@techmely/ui@workspace:packages/ui":
   version: 0.0.0-use.local
-  resolution: "@techmely/ui-react@workspace:packages/ui"
+  resolution: "@techmely/ui@workspace:packages/ui"
   dependencies:
     "@builder.io/eslint-plugin-mitosis": 0.0.14
     "@builder.io/mitosis": 0.0.90

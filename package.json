@@ -35,12 +35,14 @@
     "lint:bundlesize": "bundlesize",
     "lint:duplicate": "jscpd"
   },
-  "packageManager": "yarn@3.2.4",
+  "packageManager": "yarn@3.4.1",
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.0",
     "@ls-lint/ls-lint": "1.11.2",
+    "@testing-library/react": "13.4.0",
     "@types/node": "18.13.0",
+    "@vitejs/plugin-react": "3.1.0",
     "@yarnpkg/sdks": "^3.0.0-rc.34",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",

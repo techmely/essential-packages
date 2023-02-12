@@ -1,12 +1,12 @@
 {
   "name": "@techmely/ui-react",
   "version": "1.0.0",
-  "description": "React Design System Design for @techmely organization",
+  "description": "Design System Design for @techmely organization",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/techmely/utils/tree/dev/packages/utils"
+    "url": "https://github.com/techmely/monorepo/tree/dev/packages/ui"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -20,29 +20,18 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --dts",
-    "build:dev": "tsup",
+    "build": "mitosis build",
     "clean": "rimraf dist",
     "publish": "node ../../scripts/publishPkg.js",
     "type-check": "tsc --noEmit --project ./tsconfig.json"
   },
-  "peerDependencies": {
-    "dayjs": "^1.11.6"
-  },
-  "peerDependenciesMeta": {
-    "dayjs": {
-      "optional": true
-    }
+  "dependencies": {
+    "@builder.io/mitosis": "0.0.90"
   },
   "devDependencies": {
-    "@techmely/types": "workspace:packages/types",
-    "@types/node": "18.13.0",
-    "chalk": "^5.2.0",
-    "dayjs": "^1.11.7",
-    "execa": "^6.1.0",
-    "tslib": "^2.5.0",
-    "tsup": "^6.6.0",
-    "typescript": "^4.9.5"
+    "@builder.io/eslint-plugin-mitosis": "0.0.14",
+    "@builder.io/mitosis-cli": "0.0.49",
+    "@techmely/types": "workspace:packages/types"
   },
   "funding": [
     {

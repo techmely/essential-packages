@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/techmely/utils/tree/dev/packages/types"
+    "url": "https://github.com/techmely/monorepo/tree/dev/packages/types"
   },
   "engines": {
     "node": ">=16.15.1",

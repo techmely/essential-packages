@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@techmely/types": "workspace:packages/types",
-    "@types/node": "18.11.7",
+    "@types/node": "18.14.2",
     "chalk": "^5.1.2",
     "dayjs": "^1.11.6",
     "execa": "^6.1.0",

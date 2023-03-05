@@ -31,9 +31,9 @@
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
-    "next": "^13.1.6",
+    "next": "^13.2.3",
     "react": "^18.2.0",
-    "tsup": "^6.6.0"
+    "tsup": "6.6.3"
   },
   "funding": [
     {

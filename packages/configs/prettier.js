@@ -15,7 +15,7 @@ module.exports = {
 	htmlWhitespaceSensitivity: "strict",
 	endOfLine: "lf",
 	rangeStart: 0,
-	importOrder: ["^@techmely/core(.*)$", "^@@techmely/ui(.*)$", "^[./]"],
+	importOrder: ["^@techmely/core(.*)$", "^@techmely/ui(.*)$", "^[./]"],
 	importOrderSeparation: true,
 	importOrderSortSpecifiers: true,
 	overrides: [

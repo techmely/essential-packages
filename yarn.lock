@@ -2204,7 +2204,7 @@ __metadata:
     "@types/react": ^18.0.28
     next: ^13.2.3
     react: ^18.2.0
-    tsup: ^6.6.3
+    tsup: 6.6.3
   peerDependencies:
     next: ^12 || ^13
     react: ^17 || ^18

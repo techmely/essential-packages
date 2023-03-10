@@ -13,6 +13,7 @@ export * from "./number";
 export * from "./object";
 export * from "./path";
 export * from "./regex";
+export * from "./stream";
 export * from "./string";
 
 export * from "./vector";

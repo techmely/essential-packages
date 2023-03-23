@@ -8,7 +8,6 @@
     "useUnknownInCatchVariables": false,
     "noUnusedLocals": false,
     "noImplicitAny": false,
-    "suppressExcessPropertyErrors": true,
     "declaration": true,
     "importHelpers": true,
     "allowJs": true,

@@ -671,7 +671,7 @@ __metadata:
     "@changesets/changelog-github": ^0.4.7
     "@changesets/cli": ^2.25.0
     "@ls-lint/ls-lint": 1.11.2
-    "@types/node": 18.14.6
+    "@types/node": 18.15.11
     "@yarnpkg/sdks": ^3.0.0-rc.26
     bundlesize: 0.18.1
     cross-env: 7.0.3
@@ -713,7 +713,7 @@ __metadata:
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:
     "@techmely/types": "workspace:packages/types"
-    "@types/node": 18.14.6
+    "@types/node": 18.15.11
     chalk: ^5.1.2
     dayjs: ^1.11.6
     execa: ^6.1.0
@@ -871,10 +871,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.14.6":
-  version: 18.14.6
-  resolution: "@types/node@npm:18.14.6"
-  checksum: 2f88f482cabadc6dbddd627a1674239e68c3c9beab56eb4ae2309fb96fd17fc3a509d99b0309bafe13b58529574f49ecf3a583f2ebe2896dd32fe4be436dc96e
+"@types/node@npm:18.15.11":
+  version: 18.15.11
+  resolution: "@types/node@npm:18.15.11"
+  checksum: 977b4ad04708897ff0eb049ecf82246d210939c82461922d20f7d2dcfd81bbc661582ba3af28869210f7e8b1934529dcd46bff7d448551400f9d48b9d3bddec3
   languageName: node
   linkType: hard
 

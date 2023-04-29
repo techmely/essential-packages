@@ -49,7 +49,7 @@
     "happy-dom": "7.6.6",
     "jscpd": "3.5.0",
     "kolorist": "1.6.0",
-    "nx": "^15.0.4",
+    "nx": "^16.0.1",
     "prettier-plugin-svelte": "^2.8.0",
     "rimraf": "4.3.0",
     "rome": "next",

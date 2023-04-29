@@ -26,12 +26,12 @@
     "type-check": "tsc --noEmit --project ./tsconfig.json"
   },
   "dependencies": {
-    "@builder.io/mitosis": "0.0.96",
-    "@floating-ui/dom": "1.2.6"
+    "@builder.io/mitosis": "0.0.99",
+    "@floating-ui/dom": "1.2.7"
   },
   "devDependencies": {
     "@builder.io/eslint-plugin-mitosis": "0.0.14",
-    "@builder.io/mitosis-cli": "0.0.55",
+    "@builder.io/mitosis-cli": "0.0.58",
     "@techmely/types": "workspace:packages/types"
   },
   "funding": [

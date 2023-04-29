@@ -20,7 +20,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --dts",
+    "build": "tsup",
     "clean": "rimraf dist",
     "publish": "node ../../scripts/publishPkg.js",
     "type-check": "tsc --noEmit --project ./tsconfig.json"

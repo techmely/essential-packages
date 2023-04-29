@@ -403,6 +403,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jscpd/core@npm:^3.5.4":
+  version: 3.5.4
+  resolution: "@jscpd/core@npm:3.5.4"
+  dependencies:
+    eventemitter3: ^4.0.4
+  checksum: 39fe670a3c003952342006750d9c5add332fdde7ac374dc0d8ff6f1e0ad141432b0df6ae8128459277acd5aec042a2582929631002b113a6d5bfcf447794a0b2
+  languageName: node
+  linkType: hard
+
 "@jscpd/finder@npm:*":
   version: 3.5.0
   resolution: "@jscpd/finder@npm:3.5.0"
@@ -421,13 +430,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jscpd/finder@npm:^3.5.0":
-  version: 3.5.1
-  resolution: "@jscpd/finder@npm:3.5.1"
+"@jscpd/finder@npm:^3.5.5":
+  version: 3.5.5
+  resolution: "@jscpd/finder@npm:3.5.5"
   dependencies:
-    "@jscpd/core": ^3.5.0
-    "@jscpd/tokenizer": ^3.5.1
-    blamer: ^1.0.1
+    "@jscpd/core": ^3.5.4
+    "@jscpd/tokenizer": ^3.5.4
+    blamer: ^1.0.3
     bytes: ^3.1.0
     cli-table3: ^0.6.0
     colors: 1.4.0
@@ -435,17 +444,17 @@ __metadata:
     fs-extra: ^9.0.0
     markdown-table: ^2.0.0
     pug: ^3.0.1
-  checksum: 52b92173862fd697148c9a25f922878c6267e396f006c85fb13856830425b8d098778367c4b646f96a0e85501c2f359016d98b9d6eefacfbbefc966f44c271b7
+  checksum: a7ce98c8bb524cb35410b7c19ab4bf4b32275f6f030a8a62b2c04489f5d9ecb26e155bdb98816d7b305cfb2547f69f5ebd86c6b8543b9829b3e8faa07f22c329
   languageName: node
   linkType: hard
 
-"@jscpd/html-reporter@npm:^3.5.0":
-  version: 3.5.0
-  resolution: "@jscpd/html-reporter@npm:3.5.0"
+"@jscpd/html-reporter@npm:^3.5.4":
+  version: 3.5.4
+  resolution: "@jscpd/html-reporter@npm:3.5.4"
   dependencies:
     colors: 1.4.0
     fs-extra: ^9.0.1
-  checksum: 38cde53a4959908e724bd535e1da4b93adcb486c6f08c928c69b237b347e5a1d2bf696f09febf804efdc2905fe47b2861ac12e2eec015db73f2616ad62eac53a
+  checksum: 83fe53b997ff1153fee1cde4c6a3c44ee7a5aef65738cc36c17a131f2b19771897cbc6c0a0ecc5bc9882ed13300554c72997b7e1f1f84856406d881b8c958d07
   languageName: node
   linkType: hard
 
@@ -460,14 +469,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jscpd/tokenizer@npm:^3.5.1":
-  version: 3.5.1
-  resolution: "@jscpd/tokenizer@npm:3.5.1"
+"@jscpd/tokenizer@npm:^3.5.4":
+  version: 3.5.4
+  resolution: "@jscpd/tokenizer@npm:3.5.4"
   dependencies:
-    "@jscpd/core": ^3.5.0
+    "@jscpd/core": ^3.5.4
     reprism: ^0.0.11
     spark-md5: ^3.0.1
-  checksum: d829698e1b071fbc572382092c474e30b374684794a0b8d6238f6368a37d56be0a418fda0b8415994b732e4fac63ee257305e2eab51cbda0a22e4c30856c251d
+  checksum: 20589d3984f0fac752eca291e1d00662b5d44f9af112a1bd66444c932434bb8244b5539b125932d653ade7a7fb9866080346f583b61786815cce3e312c093c9e
   languageName: node
   linkType: hard
 
@@ -678,7 +687,7 @@ __metadata:
     fast-glob: ^3.2.12
     fs-extra: ^10.1.0
     happy-dom: 7.6.6
-    jscpd: 3.5.0
+    jscpd: 3.5.5
     kolorist: 1.6.0
     nx: ^15.0.4
     prettier-plugin-svelte: ^2.8.0
@@ -1399,6 +1408,16 @@ __metadata:
     which: ^2.0.2
     xml2js: ^0.4.23
   checksum: a1564aaa67464e50c1b90b00d72c0d31415759d198917c8e434cd240e9e46018d1d215401a98df5977ddbb79ee66282fce3660ed12508431419cdfd4ae61f426
+  languageName: node
+  linkType: hard
+
+"blamer@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "blamer@npm:1.0.3"
+  dependencies:
+    execa: ^4.0.0
+    which: ^2.0.2
+  checksum: 813984991e86e14f3c65a00ffb28338b622edff92f77b8bee456712b2aa97c05c918898827c38cd411f4cb7b857fc944a11a2f8b47d22465375e8e79da3038b1
   languageName: node
   linkType: hard
 
@@ -3914,21 +3933,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jscpd@npm:3.5.0":
-  version: 3.5.0
-  resolution: "jscpd@npm:3.5.0"
+"jscpd@npm:3.5.5":
+  version: 3.5.5
+  resolution: "jscpd@npm:3.5.5"
   dependencies:
-    "@jscpd/core": ^3.5.0
-    "@jscpd/finder": ^3.5.0
-    "@jscpd/html-reporter": ^3.5.0
-    "@jscpd/tokenizer": ^3.5.0
+    "@jscpd/core": ^3.5.4
+    "@jscpd/finder": ^3.5.5
+    "@jscpd/html-reporter": ^3.5.4
+    "@jscpd/tokenizer": ^3.5.4
     colors: 1.4.0
     commander: ^5.0.0
     fs-extra: ^9.1.0
     gitignore-to-glob: ^0.3.0
   bin:
     jscpd: bin/jscpd
-  checksum: 80e942e404ce954d3e009767e94241d09666d6aabe2c088e78540d33559324951eaa3d6ed0de4fe10d11c66b99530596ad17e68eb69e6762ae9cee7d398931c2
+  checksum: 08e34e50eb722a3d0db3b2d8a49a535092c694bd0bbd8e8735692d3744f8c12354f6b88ee66e8f1b8cb4a02d56a9e03506f3913ca92efa6702070f795edda9d9
   languageName: node
   linkType: hard
 

@@ -679,7 +679,7 @@ __metadata:
     fs-extra: ^10.1.0
     happy-dom: 7.6.6
     jscpd: 3.5.0
-    kolorist: 1.6.0
+    kolorist: 1.8.0
     nx: ^15.0.4
     prettier-plugin-svelte: ^2.8.0
     rimraf: 4.3.0
@@ -4029,10 +4029,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kolorist@npm:1.6.0":
-  version: 1.6.0
-  resolution: "kolorist@npm:1.6.0"
-  checksum: 4d898b782ceaaac3a51d9820a13563fcd0ed516d5493374a0e04ceda93ed4d74f9e267e8da5fb4453e508099b9f6b22e38ac1bff92fdc227081f460c003401c0
+"kolorist@npm:1.8.0":
+  version: 1.8.0
+  resolution: "kolorist@npm:1.8.0"
+  checksum: b056de671acc8a17f1e78d6d46c47dae3e06481eabc9fed213dd9079a7454fd3a7ea1226ec718df81c9208877f7475d038ac27a400958fec278d975839e33643
   languageName: node
   linkType: hard
 

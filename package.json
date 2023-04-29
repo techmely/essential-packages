@@ -48,7 +48,7 @@
     "fs-extra": "^10.1.0",
     "happy-dom": "7.6.6",
     "jscpd": "3.5.0",
-    "kolorist": "1.6.0",
+    "kolorist": "1.8.0",
     "nx": "^15.0.4",
     "prettier-plugin-svelte": "^2.8.0",
     "rimraf": "4.3.0",

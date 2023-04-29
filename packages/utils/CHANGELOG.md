@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.9
+
+### Patch Changes
+
+- Add check is client mobile and is android device function
+
 ## 1.5.8
 
 ### Patch Changes

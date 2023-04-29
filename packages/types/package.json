@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/techmely/utils/tree/dev/packages/types"
+    "url": "https://github.com/techmely/monorepo/tree/dev/packages/types"
   },
   "engines": {
     "node": ">=16.15.1",
@@ -32,8 +32,8 @@
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "tsup": "6.3.0",
-    "typescript": "4.8.4"
+    "tsup": "6.7.0",
+    "typescript": "5.0.4"
   },
   "funding": [
     {

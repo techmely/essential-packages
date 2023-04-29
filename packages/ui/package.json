@@ -1,0 +1,52 @@
+{
+  "name": "@techmely/ui",
+  "version": "1.0.0",
+  "description": "Design System Design for @techmely organization",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techmely/monorepo/tree/dev/packages/ui"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "tag": "latest"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "mitosis build",
+    "clean": "rimraf dist",
+    "publish": "node ../../scripts/publishPkg.js",
+    "type-check": "tsc --noEmit --project ./tsconfig.json"
+  },
+  "dependencies": {
+    "@builder.io/mitosis": "0.0.99",
+    "@floating-ui/dom": "1.2.7"
+  },
+  "devDependencies": {
+    "@builder.io/eslint-plugin-mitosis": "0.0.14",
+    "@builder.io/mitosis-cli": "0.0.58",
+    "@techmely/types": "workspace:packages/types"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ],
+  "keywords": [
+    "techmely",
+    "techmely-component",
+    "techmely-utils"
+  ]
+}

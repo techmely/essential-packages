@@ -60,6 +60,7 @@
     "homemage",
     "inmemory",
     "kolorist",
+    "kungfutech",
     "lerp",
     "letiables",
     "lozad",
@@ -88,4 +89,6 @@
     "vite",
     "vitest"
   ],
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

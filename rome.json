@@ -8,6 +8,9 @@
       },
       "style": {
         "recommended": true
+      },
+      "suspicious": {
+        "noExplicitAny": "warn"
       }
     },
     "ignore": ["node_modules", "apps/**/node_modules", "libs/**/node_modules"]

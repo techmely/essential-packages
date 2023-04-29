@@ -1,0 +1,55 @@
+{
+  "name": "@techmely/next-time",
+  "version": "1.0.0",
+  "description": "NextJs time component for everyone use",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techmely/monorepo/tree/dev/packages/next-time"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "tag": "latest"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup --dts",
+    "clean": "rimraf dist",
+    "publish": "node ../../scripts/publishPkg.js",
+    "type-check": "tsc --noEmit --project ./tsconfig.json"
+  },
+  "peerDependencies": {
+    "next": "^12 || ^13",
+    "react": "^17 || ^18"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "next": "^13.3.1",
+    "react": "^18.2.0",
+    "tsup": "6.7.0"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ],
+  "keywords": [
+    "next time",
+    "next-time",
+    "techmely",
+    "techmely-component",
+    "techmely-utils"
+  ]
+}

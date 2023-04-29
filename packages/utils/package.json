@@ -1,12 +1,12 @@
 {
   "name": "@techmely/utils",
-  "version": "1.5.8",
+  "version": "1.5.9",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/techmely/utils/tree/dev/packages/utils"
+    "url": "https://github.com/techmely/monorepo/tree/dev/packages/utils"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -36,13 +36,13 @@
   },
   "devDependencies": {
     "@techmely/types": "workspace:packages/types",
-    "@types/node": "18.14.6",
-    "chalk": "^5.1.2",
-    "dayjs": "^1.11.6",
-    "execa": "^6.1.0",
-    "tslib": "^2.4.0",
-    "tsup": "^6.3.0",
-    "typescript": "^4.8.4"
+    "@types/node": "18.16.3",
+    "chalk": "^5.2.0",
+    "dayjs": "^1.11.7",
+    "execa": "^7.1.1",
+    "tslib": "^2.5.0",
+    "tsup": "6.7.0",
+    "typescript": "5.0.4"
   },
   "funding": [
     {

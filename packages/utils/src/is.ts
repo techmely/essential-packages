@@ -124,3 +124,10 @@ export function isPngImage(buffer: Buffer | Uint8Array): boolean {
 		buffer[7] === 0x0a
 	);
 }
+
+export const isAndroid = isBrowser ? /(android)/i.test(navigator.userAgent) : false;
+
+// @ts-expect-error Ignore type check
+const match = isBrowser ? window.matchMedia || window.msMatchMedia : undefined;
+
+export const isMobile = isBrowser ? match?.("(pointer:coarse)")?.matches : false;

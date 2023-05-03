@@ -76,7 +76,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"],\
             ["vite", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:4.3.3"],\
             ["vitest", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:0.30.1"],\
-            ["zx", "npm:7.2.1"]\
+            ["zx", "npm:7.2.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2020,7 +2020,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typescript", "patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"],\
             ["vite", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:4.3.3"],\
             ["vitest", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:0.30.1"],\
-            ["zx", "npm:7.2.1"]\
+            ["zx", "npm:7.2.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2296,13 +2296,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:18.14.6", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.14.6-7d0665d471-2f88f482ca.zip/node_modules/@types/node/",\
-          "packageDependencies": [\
-            ["@types/node", "npm:18.14.6"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:18.16.3", {\
           "packageLocation": "./.yarn/cache/@types-node-npm-18.16.3-4036a5f5f3-816b39d45b.zip/node_modules/@types/node/",\
           "packageDependencies": [\
@@ -2422,10 +2415,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/which", [\
-        ["npm:2.0.2", {\
-          "packageLocation": "./.yarn/cache/@types-which-npm-2.0.2-a13b6bc8eb-8626a3c2f6.zip/node_modules/@types/which/",\
+        ["npm:3.0.0", {\
+          "packageLocation": "./.yarn/cache/@types-which-npm-3.0.0-3d41ceeb57-0dccb4b39b.zip/node_modules/@types/which/",\
           "packageDependencies": [\
-            ["@types/which", "npm:2.0.2"]\
+            ["@types/which", "npm:3.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5765,6 +5758,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["fx", [\
+        ["npm:27.0.0", {\
+          "packageLocation": "./.yarn/cache/fx-npm-27.0.0-17f6233090-0aba655dd9.zip/node_modules/fx/",\
+          "packageDependencies": [\
+            ["fx", "npm:27.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["gauge", [\
         ["npm:2.7.4", {\
           "packageLocation": "./.yarn/cache/gauge-npm-2.7.4-2189a73529-a89b53cee6.zip/node_modules/gauge/",\
@@ -6037,6 +6039,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/globby-npm-13.1.3-3b0bb18d0b-93f06e0200.zip/node_modules/globby/",\
           "packageDependencies": [\
             ["globby", "npm:13.1.3"],\
+            ["dir-glob", "npm:3.0.1"],\
+            ["fast-glob", "npm:3.2.12"],\
+            ["ignore", "npm:5.2.0"],\
+            ["merge2", "npm:1.4.1"],\
+            ["slash", "npm:4.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:13.1.4", {\
+          "packageLocation": "./.yarn/cache/globby-npm-13.1.4-5cc5a75c0e-e8bc138799.zip/node_modules/globby/",\
+          "packageDependencies": [\
+            ["globby", "npm:13.1.4"],\
             ["dir-glob", "npm:3.0.1"],\
             ["fast-glob", "npm:3.2.12"],\
             ["ignore", "npm:5.2.0"],\
@@ -7963,10 +7977,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["npm:3.2.10", {\
-          "packageLocation": "./.yarn/cache/node-fetch-npm-3.2.10-b87c28708a-e65322431f.zip/node_modules/node-fetch/",\
+        ["npm:3.3.1", {\
+          "packageLocation": "./.yarn/cache/node-fetch-npm-3.3.1-576511fc5a-62145fd3ba.zip/node_modules/node-fetch/",\
           "packageDependencies": [\
-            ["node-fetch", "npm:3.2.10"],\
+            ["node-fetch", "npm:3.3.1"],\
             ["data-uri-to-buffer", "npm:4.0.0"],\
             ["fetch-blob", "npm:3.2.0"],\
             ["formdata-polyfill", "npm:4.0.10"]\
@@ -11309,10 +11323,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:2.2.1", {\
-          "packageLocation": "./.yarn/cache/yaml-npm-2.2.1-b7f7f5e84d-84f68cbe46.zip/node_modules/yaml/",\
+        ["npm:2.2.2", {\
+          "packageLocation": "./.yarn/cache/yaml-npm-2.2.2-6e3cddb343-d90c235e09.zip/node_modules/yaml/",\
           "packageDependencies": [\
-            ["yaml", "npm:2.2.1"]\
+            ["yaml", "npm:2.2.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11409,24 +11423,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["zx", [\
-        ["npm:7.2.1", {\
-          "packageLocation": "./.yarn/cache/zx-npm-7.2.1-dc2fa8860f-fbd9d2534f.zip/node_modules/zx/",\
+        ["npm:7.2.2", {\
+          "packageLocation": "./.yarn/cache/zx-npm-7.2.2-3042f3221f-6d9538001c.zip/node_modules/zx/",\
           "packageDependencies": [\
-            ["zx", "npm:7.2.1"],\
+            ["zx", "npm:7.2.2"],\
             ["@types/fs-extra", "npm:11.0.1"],\
             ["@types/minimist", "npm:1.2.2"],\
-            ["@types/node", "npm:18.14.6"],\
+            ["@types/node", "npm:18.16.3"],\
             ["@types/ps-tree", "npm:1.1.2"],\
-            ["@types/which", "npm:2.0.2"],\
+            ["@types/which", "npm:3.0.0"],\
             ["chalk", "npm:5.2.0"],\
-            ["fs-extra", "npm:11.1.0"],\
-            ["globby", "npm:13.1.3"],\
+            ["fs-extra", "npm:11.1.1"],\
+            ["fx", "npm:27.0.0"],\
+            ["globby", "npm:13.1.4"],\
             ["minimist", "npm:1.2.8"],\
-            ["node-fetch", "npm:3.2.10"],\
+            ["node-fetch", "npm:3.3.1"],\
             ["ps-tree", "npm:1.2.0"],\
             ["webpod", "npm:0.0.2"],\
             ["which", "npm:3.0.0"],\
-            ["yaml", "npm:2.2.1"]\
+            ["yaml", "npm:2.2.2"]\
           ],\
           "linkType": "HARD"\
         }]\

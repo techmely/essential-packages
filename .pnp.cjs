@@ -65,7 +65,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fast-glob", "npm:3.2.12"],\
             ["fs-extra", "npm:11.1.1"],\
             ["happy-dom", "npm:9.10.1"],\
-            ["jscpd", "npm:3.5.5"],\
+            ["jscpd", "npm:3.5.9"],\
             ["kolorist", "npm:1.8.0"],\
             ["nx", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:16.0.1"],\
             ["prettier-plugin-svelte", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:2.10.0"],\
@@ -1496,14 +1496,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@jscpd/core", [\
-        ["npm:3.5.0", {\
-          "packageLocation": "./.yarn/cache/@jscpd-core-npm-3.5.0-8a5b5a3be8-d25cd48897.zip/node_modules/@jscpd/core/",\
-          "packageDependencies": [\
-            ["@jscpd/core", "npm:3.5.0"],\
-            ["eventemitter3", "npm:4.0.7"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:3.5.4", {\
           "packageLocation": "./.yarn/cache/@jscpd-core-npm-3.5.4-39301d9c4e-39fe670a3c.zip/node_modules/@jscpd/core/",\
           "packageDependencies": [\
@@ -1514,23 +1506,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@jscpd/finder", [\
-        ["npm:3.5.0", {\
-          "packageLocation": "./.yarn/cache/@jscpd-finder-npm-3.5.0-d3301b27b9-dcfb510046.zip/node_modules/@jscpd/finder/",\
-          "packageDependencies": [\
-            ["@jscpd/finder", "npm:3.5.0"],\
-            ["@jscpd/core", "npm:3.5.0"],\
-            ["@jscpd/tokenizer", "npm:3.5.0"],\
-            ["blamer", "npm:1.0.1"],\
-            ["bytes", "npm:3.1.2"],\
-            ["cli-table3", "npm:0.6.3"],\
-            ["colors", "npm:1.4.0"],\
-            ["fast-glob", "npm:3.2.12"],\
-            ["fs-extra", "npm:9.1.0"],\
-            ["markdown-table", "npm:2.0.0"],\
-            ["pug", "npm:3.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:3.5.5", {\
           "packageLocation": "./.yarn/cache/@jscpd-finder-npm-3.5.5-b372ef30f4-a7ce98c8bb.zip/node_modules/@jscpd/finder/",\
           "packageDependencies": [\
@@ -1550,28 +1525,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@jscpd/html-reporter", [\
-        ["npm:3.5.4", {\
-          "packageLocation": "./.yarn/cache/@jscpd-html-reporter-npm-3.5.4-d965db9d8b-83fe53b997.zip/node_modules/@jscpd/html-reporter/",\
+        ["npm:3.5.9", {\
+          "packageLocation": "./.yarn/cache/@jscpd-html-reporter-npm-3.5.9-59f58e9b4f-8b92b84f9f.zip/node_modules/@jscpd/html-reporter/",\
           "packageDependencies": [\
-            ["@jscpd/html-reporter", "npm:3.5.4"],\
-            ["@jscpd/finder", "npm:3.5.0"],\
+            ["@jscpd/html-reporter", "npm:3.5.9"],\
+            ["@jscpd/finder", "npm:3.5.5"],\
             ["colors", "npm:1.4.0"],\
-            ["fs-extra", "npm:9.1.0"]\
+            ["fs-extra", "npm:9.1.0"],\
+            ["pug", "npm:3.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@jscpd/tokenizer", [\
-        ["npm:3.5.0", {\
-          "packageLocation": "./.yarn/cache/@jscpd-tokenizer-npm-3.5.0-8b0851a46c-8cd41a25f2.zip/node_modules/@jscpd/tokenizer/",\
-          "packageDependencies": [\
-            ["@jscpd/tokenizer", "npm:3.5.0"],\
-            ["@jscpd/core", "npm:3.5.0"],\
-            ["reprism", "npm:0.0.11"],\
-            ["spark-md5", "npm:3.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:3.5.4", {\
           "packageLocation": "./.yarn/cache/@jscpd-tokenizer-npm-3.5.4-162f50fe60-20589d3984.zip/node_modules/@jscpd/tokenizer/",\
           "packageDependencies": [\
@@ -2009,7 +1975,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fast-glob", "npm:3.2.12"],\
             ["fs-extra", "npm:11.1.1"],\
             ["happy-dom", "npm:9.10.1"],\
-            ["jscpd", "npm:3.5.5"],\
+            ["jscpd", "npm:3.5.9"],\
             ["kolorist", "npm:1.8.0"],\
             ["nx", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:16.0.1"],\
             ["prettier-plugin-svelte", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:2.10.0"],\
@@ -3325,16 +3291,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["blamer", [\
-        ["npm:1.0.1", {\
-          "packageLocation": "./.yarn/cache/blamer-npm-1.0.1-0c26ba6896-a1564aaa67.zip/node_modules/blamer/",\
-          "packageDependencies": [\
-            ["blamer", "npm:1.0.1"],\
-            ["execa", "npm:4.1.0"],\
-            ["which", "npm:2.0.2"],\
-            ["xml2js", "npm:0.4.23"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:1.0.3", {\
           "packageLocation": "./.yarn/cache/blamer-npm-1.0.3-8b8365ad9d-813984991e.zip/node_modules/blamer/",\
           "packageDependencies": [\
@@ -6984,13 +6940,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["jscpd", [\
-        ["npm:3.5.5", {\
-          "packageLocation": "./.yarn/cache/jscpd-npm-3.5.5-dee3bdc561-08e34e50eb.zip/node_modules/jscpd/",\
+        ["npm:3.5.9", {\
+          "packageLocation": "./.yarn/cache/jscpd-npm-3.5.9-82358af1ef-520b48c9f4.zip/node_modules/jscpd/",\
           "packageDependencies": [\
-            ["jscpd", "npm:3.5.5"],\
+            ["jscpd", "npm:3.5.9"],\
             ["@jscpd/core", "npm:3.5.4"],\
             ["@jscpd/finder", "npm:3.5.5"],\
-            ["@jscpd/html-reporter", "npm:3.5.4"],\
+            ["@jscpd/html-reporter", "npm:3.5.9"],\
             ["@jscpd/tokenizer", "npm:3.5.4"],\
             ["colors", "npm:1.4.0"],\
             ["commander", "npm:5.1.0"],\
@@ -9459,15 +9415,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["sax", [\
-        ["npm:1.2.4", {\
-          "packageLocation": "./.yarn/cache/sax-npm-1.2.4-178f05f12f-d3df7d32b8.zip/node_modules/sax/",\
-          "packageDependencies": [\
-            ["sax", "npm:1.2.4"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["semver", [\
         ["npm:5.7.1", {\
           "packageLocation": "./.yarn/cache/semver-npm-5.7.1-40bcea106b-57fd0acfd0.zip/node_modules/semver/",\
@@ -11238,26 +11185,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/wrappy-npm-1.0.2-916de4d4b3-159da4805f.zip/node_modules/wrappy/",\
           "packageDependencies": [\
             ["wrappy", "npm:1.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["xml2js", [\
-        ["npm:0.4.23", {\
-          "packageLocation": "./.yarn/cache/xml2js-npm-0.4.23-93a8b2e10b-ca0cf2dfbf.zip/node_modules/xml2js/",\
-          "packageDependencies": [\
-            ["xml2js", "npm:0.4.23"],\
-            ["sax", "npm:1.2.4"],\
-            ["xmlbuilder", "npm:11.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["xmlbuilder", [\
-        ["npm:11.0.1", {\
-          "packageLocation": "./.yarn/cache/xmlbuilder-npm-11.0.1-b8b04dc929-7152695e16.zip/node_modules/xmlbuilder/",\
-          "packageDependencies": [\
-            ["xmlbuilder", "npm:11.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\

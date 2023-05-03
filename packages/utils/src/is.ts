@@ -131,3 +131,8 @@ export const isAndroid = isBrowser ? /(android)/i.test(navigator.userAgent) : fa
 const match = isBrowser ? window.matchMedia || window.msMatchMedia : undefined;
 
 export const isMobile = isBrowser ? match?.("(pointer:coarse)")?.matches : false;
+
+// Crawl from https://github.com/johannschopplich/unlazy/blob/main/packages/core/src/utils/index.ts#LL4C1-L4C122
+export const isCrawler =
+	isBrowser &&
+	(!("onscroll" in window) || /(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent));

@@ -1699,7 +1699,7 @@ __metadata:
     cross-env: 7.0.3
     fast-glob: ^3.2.12
     fs-extra: ^11.1.1
-    happy-dom: 9.10.1
+    happy-dom: 9.10.7
     jscpd: 3.5.5
     kolorist: 1.8.0
     nx: ^16.0.1
@@ -5348,9 +5348,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"happy-dom@npm:9.10.1":
-  version: 9.10.1
-  resolution: "happy-dom@npm:9.10.1"
+"happy-dom@npm:9.10.7":
+  version: 9.10.7
+  resolution: "happy-dom@npm:9.10.7"
   dependencies:
     css.escape: ^1.5.1
     he: ^1.2.0
@@ -5358,7 +5358,7 @@ __metadata:
     webidl-conversions: ^7.0.0
     whatwg-encoding: ^2.0.0
     whatwg-mimetype: ^3.0.0
-  checksum: 282cd16c67a7cf9fd5dbc20f112a2e36092bfa2cab53c21a59db8078c4151483e8c45eaf8889edd4537f00738bf3d5c0140fdab8a49a6929b076ce20c8e1e731
+  checksum: 74d874f08f450d2fa3b3f3692861df5e7dd7a605405de1f774b304797a0dbb4980c1b1fccca8e7e1a03d6cd950305a7e1cfb0a2887d6159157e7f0fbdddafcd1
   languageName: node
   linkType: hard
 

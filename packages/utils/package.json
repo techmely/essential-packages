@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "1.5.9",
+  "version": "1.5.10",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",

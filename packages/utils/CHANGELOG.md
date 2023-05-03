@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.10
+
+### Patch Changes
+
+- Add new is crwaler check function
+
 ## 1.5.9
 
 ### Patch Changes

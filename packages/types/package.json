@@ -1,55 +1,55 @@
 {
-  "name": "@techmely/types",
-  "version": "1.4.0",
-  "description": "Techmely types definitions",
-  "author": "Harry Tran <nhattq.coding@gmail.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/techmely/monorepo/tree/dev/packages/types"
-  },
-  "engines": {
-    "node": ">=16.15.1",
-    "npm": ">=8.11.0"
-  },
-  "source": "src/index.ts",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
-  "publishConfig": {
-    "access": "public",
-    "directory": "dist",
-    "tag": "latest"
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "tsup --dts",
-    "dev": "tsup --watch",
-    "clean": "rimraf dist",
-    "publish": "yarn npm publish --tolerate-republish",
-    "type-check": "tsc --noEmit"
-  },
-  "devDependencies": {
-    "tsup": "6.7.0",
-    "typescript": "5.0.4"
-  },
-  "funding": [
-    {
-      "type": "ko-fi",
-      "url": "https://ko-fi.com/harrytran998"
-    },
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/harrytran998"
-    }
-  ],
-  "bugs": {
-    "url": "https://github.com/techmely/techmely/issues"
-  },
-  "keywords": [
-    "techmely",
-    "types"
-  ]
+	"name": "@techmely/types",
+	"version": "1.4.0",
+	"description": "Techmely types definitions",
+	"author": "Harry Tran <nhattq.coding@gmail.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/techmely/monorepo/tree/dev/packages/types"
+	},
+	"engines": {
+		"node": ">=18.16.0",
+		"npm": ">=8.11.0"
+	},
+	"source": "src/index.ts",
+	"main": "dist/index.js",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
+	"publishConfig": {
+		"access": "public",
+		"directory": "dist",
+		"tag": "latest"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsup --dts",
+		"dev": "tsup --watch",
+		"clean": "rimraf dist",
+		"publish": "yarn npm publish --tolerate-republish",
+		"type-check": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"tsup": "6.7.0",
+		"typescript": "5.0.4"
+	},
+	"funding": [
+		{
+			"type": "ko-fi",
+			"url": "https://ko-fi.com/harrytran998"
+		},
+		{
+			"type": "patreon",
+			"url": "https://www.patreon.com/harrytran998"
+		}
+	],
+	"bugs": {
+		"url": "https://github.com/techmely/techmely/issues"
+	},
+	"keywords": [
+		"techmely",
+		"types"
+	]
 }

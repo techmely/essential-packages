@@ -54,6 +54,7 @@ export function getRandomString(length: number, alphanumeric?: "a" | "n"): strin
 
 	while (i++ < length) {
 		let r = Math.trunc(Math.random() * (max - min) + min);
+		// rome-ignore lint/suspicious/noAssignInExpressions: <explanation>
 		str += String.fromCodePoint((r += r > 9 ? (r < 36 ? 55 : 61) : 48));
 	}
 	return str;

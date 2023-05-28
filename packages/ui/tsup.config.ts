@@ -15,6 +15,7 @@ export const TECHMELY_BANNER = (packageName: string) => `
 export default defineConfig(
 	{
 		entry: "src/index.ts",
+		serverEntry: true,
 	},
 	{
 		tsupOptions(config) {

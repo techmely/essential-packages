@@ -52,7 +52,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@changesets/cli", "npm:2.26.1"],\
             ["@ls-lint/ls-lint", "npm:1.11.2"],\
             ["@testing-library/react", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:14.0.0"],\
-            ["@types/node", "npm:18.16.3"],\
+            ["@types/node", "npm:20.2.5"],\
             ["@vitejs/plugin-react", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:4.0.0"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.42"],\
             ["bundlesize", "npm:0.18.1"],\
@@ -1852,7 +1852,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@changesets/cli", "npm:2.26.1"],\
             ["@ls-lint/ls-lint", "npm:1.11.2"],\
             ["@testing-library/react", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:14.0.0"],\
-            ["@types/node", "npm:18.16.3"],\
+            ["@types/node", "npm:20.2.5"],\
             ["@vitejs/plugin-react", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:4.0.0"],\
             ["@yarnpkg/sdks", "npm:3.0.0-rc.42"],\
             ["bundlesize", "npm:0.18.1"],\
@@ -1907,7 +1907,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@techmely/utils", "workspace:packages/utils"],\
             ["@techmely/types", "workspace:packages/types"],\
-            ["@types/node", "npm:18.16.3"],\
+            ["@types/node", "npm:20.2.5"],\
             ["chalk", "npm:5.2.0"],\
             ["dayjs", "npm:1.11.7"],\
             ["execa", "npm:7.1.1"],\
@@ -2145,10 +2145,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:18.16.3", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.16.3-4036a5f5f3-816b39d45b.zip/node_modules/@types/node/",\
+        ["npm:20.2.5", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.2.5-0014d2d9ce-38ce7c7e9d.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:18.16.3"]\
+            ["@types/node", "npm:20.2.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8930,7 +8930,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.11"],\
             ["@tsconfig/node14", "npm:1.0.3"],\
             ["@tsconfig/node16", "npm:1.0.3"],\
-            ["@types/node", "npm:18.16.3"],\
+            ["@types/node", "npm:20.2.5"],\
             ["@types/swc__core", null],\
             ["@types/swc__wasm", null],\
             ["@types/typescript", null],\
@@ -9253,7 +9253,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["vite", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:4.3.3"],\
             ["@types/less", null],\
-            ["@types/node", "npm:18.16.3"],\
+            ["@types/node", "npm:20.2.5"],\
             ["@types/sass", null],\
             ["@types/stylus", null],\
             ["@types/sugarss", null],\

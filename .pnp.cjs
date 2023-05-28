@@ -59,7 +59,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-env", "npm:7.0.3"],\
             ["fast-glob", "npm:3.2.12"],\
             ["fs-extra", "npm:11.1.1"],\
-            ["happy-dom", "npm:9.10.1"],\
+            ["happy-dom", "npm:9.20.3"],\
             ["jscpd", "npm:3.5.5"],\
             ["kolorist", "npm:1.8.0"],\
             ["nx", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:16.0.1"],\
@@ -1859,7 +1859,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cross-env", "npm:7.0.3"],\
             ["fast-glob", "npm:3.2.12"],\
             ["fs-extra", "npm:11.1.1"],\
-            ["happy-dom", "npm:9.10.1"],\
+            ["happy-dom", "npm:9.20.3"],\
             ["jscpd", "npm:3.5.5"],\
             ["kolorist", "npm:1.8.0"],\
             ["nx", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:16.0.1"],\
@@ -4064,6 +4064,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["entities", [\
+        ["npm:4.5.0", {\
+          "packageLocation": "./.yarn/cache/entities-npm-4.5.0-7cdb83b832-853f8ebd5b.zip/node_modules/entities/",\
+          "packageDependencies": [\
+            ["entities", "npm:4.5.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["env-paths", [\
         ["npm:2.2.1", {\
           "packageLocation": "./.yarn/cache/env-paths-npm-2.2.1-7c7577428c-65b5df55a8.zip/node_modules/env-paths/",\
@@ -4993,12 +5002,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["happy-dom", [\
-        ["npm:9.10.1", {\
-          "packageLocation": "./.yarn/cache/happy-dom-npm-9.10.1-ae859a2c2c-282cd16c67.zip/node_modules/happy-dom/",\
+        ["npm:9.20.3", {\
+          "packageLocation": "./.yarn/cache/happy-dom-npm-9.20.3-5477cbbed8-7c737a0005.zip/node_modules/happy-dom/",\
           "packageDependencies": [\
-            ["happy-dom", "npm:9.10.1"],\
+            ["happy-dom", "npm:9.20.3"],\
             ["css.escape", "npm:1.5.1"],\
-            ["he", "npm:1.2.0"],\
+            ["entities", "npm:4.5.0"],\
             ["iconv-lite", "npm:0.6.3"],\
             ["webidl-conversions", "npm:7.0.0"],\
             ["whatwg-encoding", "npm:2.0.0"],\
@@ -5101,15 +5110,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/has-unicode-npm-2.0.1-893adb4747-1eab07a743.zip/node_modules/has-unicode/",\
           "packageDependencies": [\
             ["has-unicode", "npm:2.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["he", [\
-        ["npm:1.2.0", {\
-          "packageLocation": "./.yarn/cache/he-npm-1.2.0-3b73a2ff07-3d4d6babcc.zip/node_modules/he/",\
-          "packageDependencies": [\
-            ["he", "npm:1.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9408,7 +9408,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chai", "npm:4.3.7"],\
             ["concordance", "npm:5.0.4"],\
             ["debug", "virtual:b86a9fb34323a98c6519528ed55faa0d9b44ca8879307c0b29aa384bde47ff59a7d0c9051b31246f14521dfb71ba3c5d6d0b35c29fffc17bf875aa6ad977d9e8#npm:4.3.4"],\
-            ["happy-dom", "npm:9.10.1"],\
+            ["happy-dom", "npm:9.20.3"],\
             ["jsdom", null],\
             ["local-pkg", "npm:0.4.3"],\
             ["magic-string", "npm:0.30.0"],\

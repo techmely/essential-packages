@@ -48,6 +48,7 @@
     "changesets",
     "codacy",
     "codeql",
+    "combobox",
     "compat",
     "decamelize",
     "decamelized",
@@ -77,6 +78,7 @@
     "posva",
     "preactjs",
     "preinstall",
+    "pressable",
     "progressbar",
     "quicktime",
     "sarif",
@@ -86,6 +88,7 @@
     "treeshake",
     "tsup",
     "typedefs",
+    "unocss",
     "vite",
     "vitest"
   ],

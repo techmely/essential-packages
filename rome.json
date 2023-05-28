@@ -1,23 +1,24 @@
 {
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true,
-      "correctness": {
-        "recommended": true
-      },
-      "style": {
-        "recommended": true
-      },
-      "suspicious": {
-        "noExplicitAny": "warn"
-      }
-    },
-    "ignore": ["node_modules", "apps/**/node_modules", "libs/**/node_modules"]
-  },
-  "formatter": {
-    "enabled": true,
-    "indentStyle": "tab",
-    "lineWidth": 100
-  }
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"recommended": true
+			},
+			"style": {
+				"recommended": true
+			},
+			"suspicious": {
+				"noExplicitAny": "warn"
+			}
+		},
+		"ignore": ["node_modules", "packages/**/node_modules", "packages/ui/dist"]
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"lineWidth": 100,
+		"ignore": ["node_modules", "packages/**/node_modules", "packages/ui/dist"]
+	}
 }

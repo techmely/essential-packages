@@ -2,7 +2,6 @@ import { fileURLToPath } from "url";
 import path from "path";
 import type { AliasOptions } from "vite";
 import { defineConfig } from "vitest/config";
-import viteReact from "@vitejs/plugin-react";
 
 const r = (p: string) => path.resolve(path.dirname(fileURLToPath(import.meta.url)), p);
 
@@ -12,7 +11,6 @@ export const alias: AliasOptions = {
 };
 
 export default defineConfig({
-	plugins: [viteReact()],
 	resolve: {
 		alias,
 	},

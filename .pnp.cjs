@@ -50,7 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@changesets/changelog-github", "npm:0.4.8"],\
             ["@changesets/cli", "npm:2.26.1"],\
-            ["@ls-lint/ls-lint", "npm:1.11.2"],\
+            ["@ls-lint/ls-lint", "npm:2.0.0"],\
             ["@testing-library/react", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:14.0.0"],\
             ["@types/node", "npm:18.16.3"],\
             ["@vitejs/plugin-react", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:4.0.0"],\
@@ -1469,10 +1469,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@ls-lint/ls-lint", [\
-        ["npm:1.11.2", {\
-          "packageLocation": "./.yarn/unplugged/@ls-lint-ls-lint-npm-1.11.2-3b38e5abbd/node_modules/@ls-lint/ls-lint/",\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/unplugged/@ls-lint-ls-lint-npm-2.0.0-ca32b2a8c2/node_modules/@ls-lint/ls-lint/",\
           "packageDependencies": [\
-            ["@ls-lint/ls-lint", "npm:1.11.2"]\
+            ["@ls-lint/ls-lint", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1850,7 +1850,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@techmely/monorepo", "workspace:."],\
             ["@changesets/changelog-github", "npm:0.4.8"],\
             ["@changesets/cli", "npm:2.26.1"],\
-            ["@ls-lint/ls-lint", "npm:1.11.2"],\
+            ["@ls-lint/ls-lint", "npm:2.0.0"],\
             ["@testing-library/react", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:14.0.0"],\
             ["@types/node", "npm:18.16.3"],\
             ["@vitejs/plugin-react", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:4.0.0"],\

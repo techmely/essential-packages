@@ -1583,7 +1583,7 @@ __metadata:
     "@changesets/cli": ^2.26.1
     "@ls-lint/ls-lint": 1.11.2
     "@testing-library/react": 14.0.0
-    "@types/node": 18.16.3
+    "@types/node": 20.3.1
     "@vitejs/plugin-react": 4.0.0
     "@yarnpkg/sdks": ^3.0.0-rc.42
     bundlesize: 0.18.1
@@ -1635,7 +1635,7 @@ __metadata:
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:
     "@techmely/types": "workspace:packages/types"
-    "@types/node": 18.16.3
+    "@types/node": 20.3.1
     chalk: ^5.2.0
     dayjs: ^1.11.7
     execa: ^7.1.1
@@ -1822,10 +1822,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.16.3":
-  version: 18.16.3
-  resolution: "@types/node@npm:18.16.3"
-  checksum: 816b39d45b05ebdc6f362b630970df3f6d82f71d418a2555353522f4eeeb078fa201de5299f02c09a09faa975e43b2745fe19c263d44069f87ddf37d6c37b717
+"@types/node@npm:20.3.1":
+  version: 20.3.1
+  resolution: "@types/node@npm:20.3.1"
+  checksum: 63a393ab6d947be17320817b35d7277ef03728e231558166ed07ee30b09fd7c08861be4d746f10fdc63ca7912e8cd023939d4eab887ff6580ff704ff24ed810c
   languageName: node
   linkType: hard
 

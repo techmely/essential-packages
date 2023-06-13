@@ -7,11 +7,9 @@
 		"type": "git",
 		"url": "https://github.com/techmely/techmely.git"
 	},
-	"workspaces": [
-		"packages/*"
-	],
+	"workspaces": ["packages/*"],
 	"scripts": {
-		"preinstall": "npx only-allow yarn",
+		"preinstall": "npx only-allow pnpm",
 		"postinstall": "make git-hooks",
 		"build:deps": "nx run-many --target=build --all",
 		"build:types": "nx build @techmely/types",
@@ -21,9 +19,7 @@
 		"test:unit": "vitest --passWithNoTests",
 		"test:unit:run": "vitest run --passWithNoTests",
 		"test:unit:coverage": "vitest --coverage",
-		"publish:stable": "yarn bump:stable && yarn clean && yarn build:deps && nx run-many --target=publish",
-		"bump:stable": "yarn version apply --all",
-		"bump:check": "yarn version check",
+		"publish": "changeset publish",
 		"lint:format": "rome format packages/**/src/**/*.ts --write",
 		"lint:check": "rome format packages/**/src/**/*.ts",
 		"lint:types": "nx run-many --target=type-check",
@@ -36,7 +32,7 @@
 		"@changesets/cli": "^2.26.1",
 		"@ls-lint/ls-lint": "2.0.0",
 		"@testing-library/react": "14.0.0",
-		"@types/node": "18.16.3",
+		"@types/node": "18.16.18",
 		"@yarnpkg/sdks": "^3.0.0-rc.42",
 		"bundlesize": "0.18.1",
 		"cross-env": "7.0.3",
@@ -45,16 +41,16 @@
 		"happy-dom": "9.20.3",
 		"jscpd": "3.5.9",
 		"kolorist": "1.8.0",
-		"nx": "^16.2.2",
-		"prettier-plugin-svelte": "^2.10.0",
+		"nx": "^16.3.2",
+		"prettier-plugin-svelte": "^2.10.1",
 		"rimraf": "5.0.1",
-		"rome": "^12.1.2",
+		"rome": "^12.1.3",
 		"ts-node": "^10.9.1",
-		"tslib": "^2.5.2",
-		"typescript": "5.0.4",
-		"unocss": "0.52.4",
+		"tslib": "^2.5.3",
+		"typescript": "5.1.3",
+		"unocss": "0.53.1",
 		"vite": "^4.3.9",
-		"vitest": "^0.31.1",
+		"vitest": "^0.32.0",
 		"zx": "7.2.2"
 	},
 	"engines": {
@@ -68,14 +64,8 @@
 	"jscpd": {
 		"threshold": 0.1,
 		"pattern": "packages/**/src/**/*.ts",
-		"reporters": [
-			"html",
-			"console"
-		],
-		"ignore": [
-			"**/__snapshots__/**",
-			"packages/**/test/**/*.ts"
-		],
+		"reporters": ["html", "console"],
+		"ignore": ["**/__snapshots__/**", "packages/**/test/**/*.ts"],
 		"absolute": true,
 		"gitignore": true
 	},

@@ -1,25 +1,17 @@
 import * as dialog from "@zag-js/dialog";
 import { normalizeProps, useMachine } from "@zag-js/solid";
 import {
+	Accessor,
 	Show,
+	createContext,
 	createMemo,
 	createUniqueId,
-	type ParentComponent,
 	useContext,
-	createContext,
-	Accessor,
-	Component,
-	JSX,
+	type ParentComponent,
 } from "solid-js";
 import { Portal } from "solid-js/web";
-import { SvgUse } from "./SvgUse";
-
-type Props = {
-	isOpen: boolean;
-	title: string;
-	description: string;
-	onClose: () => void;
-};
+import SvgUse from "../SvgUse";
+import { DialogProps } from "./types";
 
 const DialogContext = createContext<Accessor<ReturnType<typeof dialog.connect>>>();
 export const useDialog = () => useContext(DialogContext);
@@ -41,7 +33,7 @@ export const useDialog = () => useContext(DialogContext);
 // 	);
 // };
 
-export const Dialog: ParentComponent<Props> = ({
+const Dialog: ParentComponent<DialogProps> = ({
 	children,
 	isOpen,
 	title,
@@ -72,3 +64,5 @@ export const Dialog: ParentComponent<Props> = ({
 		</DialogContext.Provider>
 	);
 };
+
+export default Dialog;

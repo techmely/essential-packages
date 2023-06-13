@@ -1,4 +1,4 @@
-import { Component, JSX } from "solid-js";
+import type { JSX } from "solid-js";
 
 type SvgId =
 	| "brand-twitter"
@@ -21,22 +21,7 @@ type SvgId =
 	| (string & {});
 
 export interface SvgUseProps extends JSX.SvgSVGAttributes<SVGSVGElement> {
-	id: SvgId;
+	id?: SvgId;
 	label?: string;
 	basePath?: string;
 }
-
-export const SvgUse: Component<SvgUseProps> = ({
-	id,
-	label = `Present ${id} Icon`,
-	basePath,
-	...rest
-}) => {
-	const baseAssetPath = `${basePath}/images/svg/all.svg#${id}`;
-	return (
-		// rome-ignore lint/a11y/noSvgWithoutTitle: Bug in romes a11y lint
-		<svg role="img" aria-label={label} {...rest}>
-			<use href={baseAssetPath} />
-		</svg>
-	);
-};

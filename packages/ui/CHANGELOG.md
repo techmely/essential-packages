@@ -1,5 +1,11 @@
 # @techmely/ui
 
+## 0.0.6
+
+### Patch Changes
+
+- UI: Update button variants
+
 ## 0.0.5
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
 	"name": "@techmely/ui",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "Techmely UI",
 	"author": "Harry Tran <nhattq.coding@gmail.com>",
 	"license": "MIT",
@@ -15,8 +15,7 @@
 	"main": "index.jsx",
 	"publishConfig": {
 		"access": "public",
-		"directory": "dist",
-		"tag": "latest"
+		"directory": "dist"
 	},
 	"files": [
 		"."

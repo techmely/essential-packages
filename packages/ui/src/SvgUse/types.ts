@@ -4,6 +4,7 @@ type SvgId =
 	| "brand-twitter"
 	| "brand-linkedin"
 	| "brand-facebook"
+	| "brand-github"
 	| "brand-telegram"
 	| "brand-google"
 	| "outline-clock"

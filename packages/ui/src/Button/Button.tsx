@@ -3,12 +3,12 @@ import { JSX, ParentComponent, Show } from "solid-js";
 import SvgUse, { type SvgUseProps } from "../SvgUse";
 
 const buttonVariants = cva(
-	"flex-center rounded-md text-sm transition-colors focus-visible:(outline-none ring-2 ring-offset-2) disabled:(opacity-50 cursor-not-allowed) ring-offset-gray-100",
+	"inline-flex items-center justify-center rounded-md text-sm transition-colors focus-visible:(outline-none ring-2 ring-offset-2) disabled:(opacity-50 cursor-not-allowed) ring-offset-gray-100 uppercase select-none",
 	{
 		variants: {
 			variant: {
-				primary: "bg-primary text-gray-300 hover:bg-primary bg-opacity-90",
-				outline: "bg",
+				primary: "bg-primary text-gray-300 hover:bg-primary bg-opacity-90 text-white",
+				outline: "border hover:bg-white/10",
 				secondary: "bg-blue-600 border-blue-700 focus:ring-blue-500",
 				ghost: "",
 				link: "underline-offset-4 hover:underline text-primary",

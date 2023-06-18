@@ -4,7 +4,7 @@ import pkg from "./package.json";
 
 const universalOptions = getTsupOptions(pkg, {
 	tsupOptions: {
-		target: "node16",
+		target: "node18",
 		entry: ["src/index.ts", "src/**/*.ts"],
 	},
 });

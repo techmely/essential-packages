@@ -17,14 +17,12 @@
 		"access": "public",
 		"directory": "dist"
 	},
-	"files": [
-		"."
-	],
+	"files": ["."],
 	"scripts": {
 		"prepublish": "npm run clean && npm run build",
 		"build": "tsc --build && cp package.json dist/package.json",
 		"clean": "rimraf dist tsconfig.tsbuildinfo",
-		"publish": "pnpm publish",
+		"publish": "node ../../scripts/publishPkg.js ",
 		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
@@ -74,10 +72,5 @@
 	"bugs": {
 		"url": "https://github.com/techmely/techmely/issues"
 	},
-	"keywords": [
-		"techmely",
-		"ui",
-		"design system",
-		"design token"
-	]
+	"keywords": ["techmely", "ui", "design system", "design token"]
 }

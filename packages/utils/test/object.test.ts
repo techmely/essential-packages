@@ -1,4 +1,4 @@
-import { deepMerge } from "../src/object";
+import { deepMerge, objectCamel2Snake } from "../src/object";
 import { describe, expect, it } from "vitest";
 
 describe("Object test", () => {
@@ -24,6 +24,14 @@ describe("Object test", () => {
 			const obj1 = { a: ["A", "B"] };
 			const obj2 = { a: ["C"], b: ["D"] };
 			expect(deepMerge({}, obj1, obj2)).toEqual({ a: ["C"], b: ["D"] });
+		});
+	});
+	describe("Camel case object to snake case object", () => {
+		it("Should xxx", () => {
+			const obj1 = { abc: 1, helloWorld: "ok", nani1: "LOL", ohmy11God: "ohmy11God" };
+			const obj2 = { abc: 1, hello_world: "ok", nani_1: "LOL", ohmy_1_1_god: "ohmy11God" };
+			const result = objectCamel2Snake(obj1);
+			expect(result).toEqual(obj2);
 		});
 	});
 });

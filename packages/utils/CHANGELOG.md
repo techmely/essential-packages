@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.12
+
+### Patch Changes
+
+- add func camel object to snake case object
+
 ## 1.5.11
 
 ### Patch Changes

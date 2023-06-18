@@ -1,6 +1,6 @@
 {
 	"name": "@techmely/ui",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"description": "Techmely UI",
 	"author": "Harry Tran <nhattq.coding@gmail.com>",
 	"license": "MIT",
@@ -17,7 +17,9 @@
 		"access": "public",
 		"directory": "dist"
 	},
-	"files": ["."],
+	"files": [
+		"."
+	],
 	"scripts": {
 		"prepublish": "npm run clean && npm run build",
 		"build": "tsc --build && cp package.json dist/package.json",
@@ -72,5 +74,10 @@
 	"bugs": {
 		"url": "https://github.com/techmely/techmely/issues"
 	},
-	"keywords": ["techmely", "ui", "design system", "design token"]
+	"keywords": [
+		"techmely",
+		"ui",
+		"design system",
+		"design token"
+	]
 }

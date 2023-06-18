@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.11
+
+### Patch Changes
+
+- Add camel to snake func
+
 ## 1.5.10
 
 ### Patch Changes

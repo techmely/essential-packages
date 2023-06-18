@@ -17,9 +17,7 @@
 		"access": "public",
 		"directory": "dist"
 	},
-	"files": [
-		"."
-	],
+	"files": ["."],
 	"scripts": {
 		"prepublish": "npm run clean && npm run build",
 		"build": "tsc --build && cp package.json dist/package.json",
@@ -28,7 +26,6 @@
 		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
-		"class-variance-authority": "0.6.0",
 		"@zag-js/accordion": "0.10.2",
 		"@zag-js/checkbox": "0.10.2",
 		"@zag-js/combobox": "0.10.2",
@@ -47,29 +44,20 @@
 		"@zag-js/tabs": "0.10.2",
 		"@zag-js/tags-input": "0.10.2",
 		"@zag-js/toast": "0.10.2",
-		"@zag-js/tooltip": "0.10.2"
+		"@zag-js/tooltip": "0.10.2",
+		"class-variance-authority": "0.6.0"
 	},
 	"peerDependencies": {
 		"solid-js": "^1.7.5"
 	},
 	"devDependencies": {
-		"@babel/core": "7.22.5",
-		"@babel/preset-env": "7.22.5",
-		"@babel/preset-typescript": "7.22.5",
 		"@unocss/core": "0.53.1",
 		"@unocss/preset-uno": "0.53.1",
 		"@zag-js/solid": "0.10.2",
-		"babel-preset-solid": "1.7.4",
-		"rollup": "3.25.1",
-		"rollup-preset-solid": "2.0.1",
 		"solid-js": "^1.7.6",
-		"tsup": "6.7.0",
-		"tsup-preset-solid": "0.1.8",
+		"tsup": "7.0.0",
 		"typescript": "5.1.3",
-		"unocss": "0.53.1",
-		"vite": "4.3.9",
-		"vite-plugin-dts": "2.3.0",
-		"vite-plugin-solid": "2.7.0"
+		"unocss": "0.53.1"
 	},
 	"funding": [
 		{
@@ -84,10 +72,5 @@
 	"bugs": {
 		"url": "https://github.com/techmely/techmely/issues"
 	},
-	"keywords": [
-		"techmely",
-		"ui",
-		"design system",
-		"design token"
-	]
+	"keywords": ["techmely", "ui", "design system", "design token"]
 }

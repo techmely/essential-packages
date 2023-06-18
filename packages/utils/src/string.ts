@@ -10,8 +10,12 @@ export const hyphenate = cacheStringFunction((str: string) =>
 	str.replace(hyphenateRE, "-$1").toLowerCase(),
 );
 
-export const snake2camel = cacheStringFunction((src: string) => {
-	return src.replace(/_([a-z])/g, (g) => g[1].toUpperCase());
+export const snake2camel = cacheStringFunction((str: string) => {
+	return str.replace(/_([a-z])/g, (g) => g[1].toUpperCase());
+});
+
+export const camel2snake = cacheStringFunction((str: string) => {
+	return str.replace(/[A-Z]/g, (char) => `_${char.toLocaleLowerCase()}`);
 });
 
 export const capitalizeFirst = cacheStringFunction((value: string) => {

@@ -6,6 +6,7 @@ import {
 	capitalizeFirst,
 	hyphenate,
 	snake2camel,
+	camel2snake,
 } from "../src/string";
 
 describe.concurrent("Test valid is", () => {
@@ -45,5 +46,11 @@ describe.concurrent("Test valid is", () => {
 		expect(snake2camel("hello_world")).toEqual("helloWorld");
 		expect(snake2camel("hello_world_1")).toEqual("helloWorld_1");
 		expect(snake2camel("_hello_world_xX12")).toEqual("HelloWorldXX12");
+	});
+
+	test("Should return camel to snake case value", () => {
+		expect(camel2snake("helloWorld")).toEqual("hello_world");
+		expect(camel2snake("helloWorld1")).toEqual("hello_world1");
+		expect(camel2snake("HelloWorldXX12")).toEqual("_hello_world_x_x12");
 	});
 });

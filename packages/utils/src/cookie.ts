@@ -1,4 +1,33 @@
-export const CookieServices = (nodeEnv: string, env: string, cookieDomain: string) => {
+export const parseCookie = (cookies: string): any => {
+	return cookies?.split("; ")?.reduce((prev, current) => {
+		const [name, ...value] = current.split("=");
+		// eslint-disable-next-line no-param-reassign
+		prev[name] = value.join("=");
+		return prev;
+	}, {});
+};
+
+export const listenCookieChange = (
+	callback: ({ oldCookie, newCookie }) => void,
+	interval = 500,
+) => {
+	let lastCookie = document.cookie;
+	setInterval(() => {
+		const { cookie } = document;
+		if (cookie !== lastCookie) {
+			try {
+				callback({
+					oldCookie: parseCookie(lastCookie),
+					newCookie: parseCookie(cookie),
+				});
+			} finally {
+				lastCookie = cookie;
+			}
+		}
+	}, interval);
+};
+
+export const CookieServices = <T>(nodeEnv: string, env: string, cookieDomain: string) => {
 	const cookieTokenName = `token_${env}`;
 
 	return {
@@ -6,12 +35,12 @@ export const CookieServices = (nodeEnv: string, env: string, cookieDomain: strin
 		/**
 		 * {@link https://stackoverflow.com/a/15724300}
 		 */
-		get<T>(name: string) {
+		get<Type>(name: T | (string & {})) {
 			if (typeof window !== "undefined") {
 				const value = `; ${document.cookie}`;
 				const parts = value.split(`; ${name}=`);
 				if (parts.length === 2) {
-					return parts.pop()?.split(";").shift() as unknown as T;
+					return parts.pop()?.split(";").shift() as unknown as Type;
 				}
 				return null;
 			}
@@ -24,44 +53,18 @@ export const CookieServices = (nodeEnv: string, env: string, cookieDomain: strin
 					? `${cookieName}=; path=/; Domain=${cookieDomain}; ${isSecure ? "Secure" : ""}`
 					: `${cookieName}=; path=/; Secure`;
 		},
-		setAppToken(token: string) {
+		setToken(token: string) {
 			document.cookie =
 				nodeEnv === "production"
 					? `${cookieTokenName}=${token}; path=/; Domain=${cookieDomain}; Secure`
 					: `${cookieTokenName}=${token}; path=/; Secure`;
 		},
-		getAppToken() {
+		getToken() {
 			const appToken = this.get<string>(cookieTokenName);
 			return appToken;
 		},
-		removeAppToken() {
+		removeToken() {
 			this.remove(cookieTokenName, { secure: true });
-		},
-		parseCookie: (cookies: string): any => {
-			return cookies?.split("; ")?.reduce((prev, current) => {
-				const [name, ...value] = current.split("=");
-				// eslint-disable-next-line no-param-reassign
-				prev[name] = value.join("=");
-				return prev;
-			}, {});
-		},
-		listenCookieChange(callback: ({ oldCookie, newCookie }) => void, interval = 500) {
-			let lastCookie = document.cookie;
-			setInterval(() => {
-				const { cookie } = document;
-				if (cookie !== lastCookie) {
-					try {
-						callback({
-							oldCookie: this.parseCookie(lastCookie),
-							newCookie: this.parseCookie(cookie),
-						});
-					} finally {
-						lastCookie = cookie;
-					}
-				}
-			}, interval);
 		},
 	};
 };
-
-export type ICookieServices = ReturnType<typeof CookieServices>;

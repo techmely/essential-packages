@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.13
+
+### Patch Changes
+
+- Update cookie services
+
 ## 1.5.12
 
 ### Patch Changes

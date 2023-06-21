@@ -1,6 +1,6 @@
 {
 	"name": "@techmely/utils",
-	"version": "1.5.12",
+	"version": "1.5.13",
 	"description": "Collection of helpful JavaScript / TypeScript utils",
 	"author": "Harry Tran <nhattq.coding@gmail.com>",
 	"license": "MIT",
@@ -36,7 +36,7 @@
 	},
 	"devDependencies": {
 		"@techmely/types": "workspace:*",
-		"@types/node": "18.16.18",
+		"@types/node": "20.3.1",
 		"chalk": "^5.2.0",
 		"dayjs": "^1.11.8",
 		"execa": "^7.1.1",

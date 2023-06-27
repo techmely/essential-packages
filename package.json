@@ -37,7 +37,7 @@
     "@ls-lint/ls-lint": "1.11.2",
     "@testing-library/react": "14.0.0",
     "@types/node": "18.16.3",
-    "@vitejs/plugin-react": "4.0.0",
+    "@vitejs/plugin-react": "4.0.1",
     "@yarnpkg/sdks": "^3.0.0-rc.42",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",

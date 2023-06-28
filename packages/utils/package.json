@@ -41,7 +41,7 @@
     "dayjs": "^1.11.7",
     "execa": "^7.1.1",
     "tslib": "^2.5.0",
-    "tsup": "7.0.0",
+    "tsup": "7.1.0",
     "typescript": "5.0.4"
   },
   "funding": [

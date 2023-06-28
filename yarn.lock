@@ -1611,7 +1611,7 @@ __metadata:
     "@types/react": ^18.2.0
     next: ^13.3.1
     react: ^18.2.0
-    tsup: 7.0.0
+    tsup: 7.1.0
     typescript: 5.0.4
   peerDependencies:
     next: ^12 || ^13
@@ -1623,7 +1623,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@techmely/types@workspace:packages/types"
   dependencies:
-    tsup: 7.0.0
+    tsup: 7.1.0
     typescript: 5.0.4
   languageName: unknown
   linkType: soft
@@ -1638,7 +1638,7 @@ __metadata:
     dayjs: ^1.11.7
     execa: ^7.1.1
     tslib: ^2.5.0
-    tsup: 7.0.0
+    tsup: 7.1.0
     typescript: 5.0.4
   peerDependencies:
     dayjs: ^1.11.6
@@ -8138,9 +8138,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsup@npm:7.0.0":
-  version: 7.0.0
-  resolution: "tsup@npm:7.0.0"
+"tsup@npm:7.1.0":
+  version: 7.1.0
+  resolution: "tsup@npm:7.1.0"
   dependencies:
     bundle-require: ^4.0.0
     cac: ^6.7.12
@@ -8170,7 +8170,7 @@ __metadata:
   bin:
     tsup: dist/cli-default.js
     tsup-node: dist/cli-node.js
-  checksum: 25dda9ca37ab1763986dc34a8eabf2c3d3184834b33b2026907b7bbcf1cea3a4841e645cc3cdd1011eb8aaf9ce9959ddfb9cfeeee8efee0e485f3bae232aacf5
+  checksum: 5639c0f4990a89de6e55f9d77f53b8c3706e6d24700e37dd1fc696abda83017b02be7f514f4e7ce655b1e443b8f4d09ca0aca398b5767cad23466a18bd6e06b2
   languageName: node
   linkType: hard
 

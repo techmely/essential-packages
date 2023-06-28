@@ -34,7 +34,7 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.1",
-    "@ls-lint/ls-lint": "1.11.2",
+    "@ls-lint/ls-lint": "2.0.1",
     "@testing-library/react": "14.0.0",
     "@types/node": "18.16.3",
     "@vitejs/plugin-react": "4.0.1",

@@ -1262,13 +1262,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ls-lint/ls-lint@npm:1.11.2":
-  version: 1.11.2
-  resolution: "@ls-lint/ls-lint@npm:1.11.2"
+"@ls-lint/ls-lint@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@ls-lint/ls-lint@npm:2.0.1"
   bin:
     ls-lint: bin/cli.js
-  checksum: 7070fd249823be54710991e3edc60c8047a2a1dd6bf91f0d685845b6501a31166a2391d5b081146d843fe046b23f63a716ebd7bab93c7a8756b2fc2d5553f719
-  conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64)
+  checksum: b362833b171007ff523610f37589e0750748090d0e71a872fc74dd311db65a9bc701309056658990310052870b5f491ee11da50cf7950dc9b4d5e64d7929fbbf
+  conditions: (os=darwin | os=linux | os=win32) & (cpu=x64 | cpu=arm64 | cpu=s390x)
   languageName: node
   linkType: hard
 
@@ -1579,7 +1579,7 @@ __metadata:
   dependencies:
     "@changesets/changelog-github": ^0.4.8
     "@changesets/cli": ^2.26.1
-    "@ls-lint/ls-lint": 1.11.2
+    "@ls-lint/ls-lint": 2.0.1
     "@testing-library/react": 14.0.0
     "@types/node": 18.16.3
     "@vitejs/plugin-react": 4.0.1

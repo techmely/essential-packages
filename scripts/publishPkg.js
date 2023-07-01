@@ -13,7 +13,7 @@ publishPkg();
 async function publishPkg() {
 	try {
 		await cpBasePkgJson();
-		await execSync("pnpm publish", { cwd: buildPath });
+		await execSync("yarn publish", { cwd: buildPath });
 		// Need to remove after build to guarantee the unique package.json in each package
 		await execSync("rm -rf package.json", { cwd: buildPath });
 		console.log("Published successfully!");
@@ -36,6 +36,7 @@ async function cpBasePkgJson() {
 	};
 
 	const destination = path.resolve(buildPath, "./package.json");
+	console.log("cpBasePkgJson  👻  destination:", destination);
 	await fse.writeFile(destination, JSON.stringify(newPkgData, null, 2), "utf8");
 	console.log(`Generated package.json in ${destination}`);
 }

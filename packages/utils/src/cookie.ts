@@ -62,6 +62,8 @@ export class CookieService {
 	}
 
 	get(name: string, options?: CookieParseOptions) {
+		if (typeof window === "undefined") return undefined;
+
 		try {
 			const cookies = parse(document.cookie, options);
 			return cookies[name];

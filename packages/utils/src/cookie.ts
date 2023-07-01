@@ -1,11 +1,4 @@
-export const parseCookie = (cookies: string): any => {
-	return cookies?.split("; ")?.reduce((prev, current) => {
-		const [name, ...value] = current.split("=");
-		// eslint-disable-next-line no-param-reassign
-		prev[name] = value.join("=");
-		return prev;
-	}, {});
-};
+import { CookieSerializeOptions, serialize, parse, CookieParseOptions } from "cookie";
 
 export const listenCookieChange = (
 	callback: ({ oldCookie, newCookie }) => void,
@@ -17,8 +10,8 @@ export const listenCookieChange = (
 		if (cookie !== lastCookie) {
 			try {
 				callback({
-					oldCookie: parseCookie(lastCookie),
-					newCookie: parseCookie(cookie),
+					oldCookie: parse(lastCookie),
+					newCookie: parse(cookie),
 				});
 			} finally {
 				lastCookie = cookie;
@@ -27,44 +20,69 @@ export const listenCookieChange = (
 	}, interval);
 };
 
-export const CookieServices = <T>(nodeEnv: string, env: string, cookieDomain: string) => {
-	const cookieTokenName = `token_${env}`;
+type NodeEnv = "development" | "production";
 
-	return {
-		authToken: cookieTokenName,
-		/**
-		 * {@link https://stackoverflow.com/a/15724300}
-		 */
-		get<Type>(name: T | (string & {})) {
-			if (typeof window !== "undefined") {
-				const value = `; ${document.cookie}`;
-				const parts = value.split(`; ${name}=`);
-				if (parts.length === 2) {
-					return parts.pop()?.split(";").shift() as unknown as Type;
-				}
-				return null;
-			}
-			return null;
-		},
-		remove(cookieName: string, options?: { secure?: boolean }) {
-			const isSecure = options?.secure;
-			document.cookie =
-				nodeEnv === "production"
-					? `${cookieName}=; path=/; Domain=${cookieDomain}; ${isSecure ? "Secure" : ""}`
-					: `${cookieName}=; path=/; Secure`;
-		},
-		setToken(token: string) {
-			document.cookie =
-				nodeEnv === "production"
-					? `${cookieTokenName}=${token}; path=/; Domain=${cookieDomain}; Secure`
-					: `${cookieTokenName}=${token}; path=/; Secure`;
-		},
-		getToken() {
-			const appToken = this.get<string>(cookieTokenName);
-			return appToken;
-		},
-		removeToken() {
-			this.remove(cookieTokenName, { secure: true });
-		},
-	};
-};
+export class CookieService {
+	public nodeEnv: NodeEnv;
+
+	public env: string;
+
+	public domain: string;
+
+	public tokenName: string;
+
+	public constructor(nodeEnv: NodeEnv, env: string, cookieDomain: string) {
+		this.nodeEnv = nodeEnv;
+		this.env = env;
+		this.domain = cookieDomain;
+		this.tokenName = `token_${this.env}`;
+	}
+
+	set(key: string, value: string, options?: CookieSerializeOptions) {
+		const defaultOptions: CookieSerializeOptions = {
+			secure: true,
+			path: "/",
+			domain: this.domain,
+			priority: "medium",
+			httpOnly: false,
+			...options,
+		};
+		try {
+			document.cookie = serialize(key, value, defaultOptions);
+		} catch (error) {
+			console.error({ error });
+		}
+	}
+
+	setSecureToken(token: string) {
+		document.cookie =
+			this.env === "development"
+				? `${this.tokenName}=${token}; path=/; Secure`
+				: `${this.tokenName}=${token}; path=/; Domain=${this.domain}; Secure`;
+	}
+
+	get(name: string, options?: CookieParseOptions) {
+		try {
+			const cookies = parse(document.cookie, options);
+			return cookies[name];
+		} catch (error) {
+			console.error({ error });
+			return undefined;
+		}
+	}
+
+	getSecureToken() {
+		const token = this.get(this.tokenName);
+		if (token) {
+			return token;
+		}
+		return undefined;
+	}
+
+	clearSecureToken() {
+		document.cookie =
+			this.env === "development"
+				? `${this.tokenName}=; path=/; Secure`
+				: `${this.tokenName}=; path=/; Domain=${this.domain}; Secure`;
+	}
+}

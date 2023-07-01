@@ -202,6 +202,10 @@ importers:
     publishDirectory: dist
 
   packages/utils:
+    dependencies:
+      cookie:
+        specifier: 0.5.0
+        version: 0.5.0
     devDependencies:
       '@techmely/types':
         specifier: workspace:*
@@ -6708,7 +6712,6 @@ packages:
   /cookie@0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
     engines: {node: '>= 0.6'}
-    dev: true
 
   /core-js-compat@3.31.0:
     resolution: {integrity: sha512-hM7YCu1cU6Opx7MXNu0NuumM0ezNeAeRKadixyiQELWY3vT3De9S4J5ZBMraWV2vZnrE1Cirl0GtFtDtMUXzPw==}

@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.15
+
+### Patch Changes
+
+- Update SSR cookie services class
+
 ## 1.5.14
 
 ### Patch Changes

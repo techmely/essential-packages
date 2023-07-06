@@ -7,6 +7,7 @@ import {
 	hyphenate,
 	snake2camel,
 	camel2snake,
+	cutString,
 } from "../src/string";
 
 describe.concurrent("Test valid is", () => {
@@ -52,5 +53,14 @@ describe.concurrent("Test valid is", () => {
 		expect(camel2snake("helloWorld")).toEqual("hello_world");
 		expect(camel2snake("helloWorld1")).toEqual("hello_world_1");
 		expect(camel2snake("HelloWorldXX12")).toEqual("_hello_world_x_x_1_2");
+	});
+
+	test("Should cut string value like expect", () => {
+		expect(cutString("helloWorld", 3)).toEqual("hel");
+		expect(cutString("helloWorld1", 4)).toEqual("hell");
+		expect(cutString("HelloWorldXX12", 5)).toEqual("Hello");
+		// @ts-expect-error Expect typing error
+		expect(cutString(undefined, 9)).toEqual(undefined);
+		expect(cutString("", 9)).toEqual("");
 	});
 });

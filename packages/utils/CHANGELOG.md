@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.16
+
+### Patch Changes
+
+- Add invarient function
+
 ## 1.5.15
 
 ### Patch Changes

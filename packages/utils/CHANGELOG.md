@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.19
+
+### Patch Changes
+
+- Add first unique string & array
+
 ## 1.5.18
 
 ### Patch Changes

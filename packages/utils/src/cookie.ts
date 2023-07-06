@@ -38,6 +38,18 @@ export class CookieService {
 		this.tokenName = `token_${this.env}`;
 	}
 
+	get(name: string, options?: CookieParseOptions) {
+		if (typeof window === "undefined") return undefined;
+
+		try {
+			const cookies = parse(document.cookie, options);
+			return cookies[name];
+		} catch (error) {
+			console.error({ error });
+			return undefined;
+		}
+	}
+
 	set(key: string, value: string, options?: CookieSerializeOptions) {
 		const defaultOptions: CookieSerializeOptions = {
 			secure: true,
@@ -54,26 +66,14 @@ export class CookieService {
 		}
 	}
 
-	setSecureToken(token: string) {
+	setToken(token: string) {
 		document.cookie =
 			this.env === "development"
 				? `${this.tokenName}=${token}; path=/; Secure`
 				: `${this.tokenName}=${token}; path=/; Domain=${this.domain}; Secure`;
 	}
 
-	get(name: string, options?: CookieParseOptions) {
-		if (typeof window === "undefined") return undefined;
-
-		try {
-			const cookies = parse(document.cookie, options);
-			return cookies[name];
-		} catch (error) {
-			console.error({ error });
-			return undefined;
-		}
-	}
-
-	getSecureToken() {
+	getToken() {
 		const token = this.get(this.tokenName);
 		if (token) {
 			return token;
@@ -81,7 +81,7 @@ export class CookieService {
 		return undefined;
 	}
 
-	clearSecureToken() {
+	clearToken() {
 		document.cookie =
 			this.env === "development"
 				? `${this.tokenName}=; path=/; Secure`

@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.17
+
+### Patch Changes
+
+- Update naming cookie services
+
 ## 1.5.16
 
 ### Patch Changes

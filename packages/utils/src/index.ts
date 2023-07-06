@@ -8,6 +8,7 @@ export * from "./cookie";
 export * from "./date";
 export * from "./download";
 export * from "./generate";
+export * from "./invariant";
 export * from "./is";
 export * from "./number";
 export * from "./object";

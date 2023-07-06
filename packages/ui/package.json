@@ -17,7 +17,9 @@
 		"access": "public",
 		"directory": "dist"
 	},
-	"files": ["."],
+	"files": [
+		"."
+	],
 	"scripts": {
 		"prepublish": "npm run clean && npm run build",
 		"build": "tsc --build && cp package.json dist/package.json",
@@ -26,38 +28,38 @@
 		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
-		"@zag-js/accordion": "0.10.2",
-		"@zag-js/checkbox": "0.10.2",
-		"@zag-js/combobox": "0.10.2",
-		"@zag-js/dialog": "0.10.2",
-		"@zag-js/menu": "0.10.2",
-		"@zag-js/number-input": "0.10.2",
-		"@zag-js/pagination": "0.10.2",
-		"@zag-js/pin-input": "0.10.2",
-		"@zag-js/popover": "0.10.2",
-		"@zag-js/pressable": "0.10.2",
-		"@zag-js/radio-group": "0.10.2",
-		"@zag-js/range-slider": "0.10.2",
-		"@zag-js/rating-group": "0.10.2",
-		"@zag-js/select": "0.10.2",
-		"@zag-js/solid": "0.10.2",
-		"@zag-js/tabs": "0.10.2",
-		"@zag-js/tags-input": "0.10.2",
-		"@zag-js/toast": "0.10.2",
-		"@zag-js/tooltip": "0.10.2",
-		"class-variance-authority": "0.6.0"
+		"@zag-js/accordion": "0.10.5",
+		"@zag-js/checkbox": "0.10.5",
+		"@zag-js/combobox": "0.10.5",
+		"@zag-js/dialog": "0.10.5",
+		"@zag-js/menu": "0.10.5",
+		"@zag-js/number-input": "0.10.5",
+		"@zag-js/pagination": "0.10.5",
+		"@zag-js/pin-input": "0.10.5",
+		"@zag-js/popover": "0.10.5",
+		"@zag-js/pressable": "0.10.5",
+		"@zag-js/radio-group": "0.10.5",
+		"@zag-js/range-slider": "0.10.5",
+		"@zag-js/rating-group": "0.10.5",
+		"@zag-js/select": "0.10.5",
+		"@zag-js/solid": "0.10.5",
+		"@zag-js/tabs": "0.10.5",
+		"@zag-js/tags-input": "0.10.5",
+		"@zag-js/toast": "0.10.5",
+		"@zag-js/tooltip": "0.10.5",
+		"class-variance-authority": "0.6.1"
 	},
 	"peerDependencies": {
 		"solid-js": "^1.7.5"
 	},
 	"devDependencies": {
-		"@unocss/core": "0.53.1",
-		"@unocss/preset-uno": "0.53.1",
+		"@unocss/core": "0.53.4",
+		"@unocss/preset-uno": "0.53.4",
 		"@zag-js/solid": "0.10.2",
-		"solid-js": "^1.7.6",
-		"tsup": "7.0.0",
-		"typescript": "5.1.3",
-		"unocss": "0.53.1"
+		"solid-js": "^1.7.7",
+		"tsup": "7.1.0",
+		"typescript": "5.1.6",
+		"unocss": "0.53.4"
 	},
 	"funding": [
 		{
@@ -72,5 +74,10 @@
 	"bugs": {
 		"url": "https://github.com/techmely/techmely/issues"
 	},
-	"keywords": ["techmely", "ui", "design system", "design token"]
+	"keywords": [
+		"techmely",
+		"ui",
+		"design system",
+		"design token"
+	]
 }

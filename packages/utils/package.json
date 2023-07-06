@@ -1,6 +1,6 @@
 {
 	"name": "@techmely/utils",
-	"version": "1.5.14",
+	"version": "1.5.16",
 	"description": "Collection of helpful JavaScript / TypeScript utils",
 	"author": "Harry Tran <nhattq.coding@gmail.com>",
 	"license": "MIT",
@@ -27,8 +27,8 @@
 		"type-check": "tsc --noEmit --project ./tsconfig.json"
 	},
 	"peerDependencies": {
-		"dayjs": "^1.11.6",
-		"cookie": "0.5.0"
+		"cookie": "0.5.0",
+		"dayjs": "^1.11.6"
 	},
 	"peerDependenciesMeta": {
 		"dayjs": {
@@ -40,13 +40,13 @@
 	},
 	"devDependencies": {
 		"@techmely/types": "workspace:*",
-		"@types/node": "20.3.1",
-		"chalk": "^5.2.0",
-		"dayjs": "^1.11.8",
+		"@types/node": "20.4.0",
+		"chalk": "^5.3.0",
+		"dayjs": "^1.11.9",
 		"execa": "^7.1.1",
-		"tslib": "^2.5.3",
-		"tsup": "7.0.0",
-		"typescript": "5.1.3"
+		"tslib": "^2.6.0",
+		"tsup": "7.1.0",
+		"typescript": "5.1.6"
 	},
 	"funding": [
 		{

@@ -8,6 +8,15 @@
 
 <hr>
 
+## Goals
+
+- Typescript support
+- Tree-shaking
+- No dependencies
+- High performance
+- Documentation
+- Well tested
+
 ## Features
 
 - 📦 <5kb mini libraries

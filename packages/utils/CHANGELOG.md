@@ -1,6 +1,6 @@
 # @techmely/utils
 
-## 1.5.17
+## 1.5.18
 
 ### Patch Changes
 

@@ -41,7 +41,7 @@
 		"@storybook/html-vite": "7.0.26",
 		"@storybook/testing-library": "0.2.0",
 		"@testing-library/react": "14.0.0",
-		"@types/node": "20.4.0",
+		"@types/node": "20.4.1",
 		"@yarnpkg/sdks": "3.0.0-rc.48",
 		"bundlesize": "0.18.1",
 		"cross-env": "7.0.3",
@@ -59,8 +59,8 @@
 		"tslib": "^2.6.0",
 		"typescript": "5.1.6",
 		"unocss": "0.53.4",
-		"vite": "^4.4.0",
-		"vitest": "^0.32.4",
+		"vite": "^4.4.2",
+		"vitest": "^0.33.0",
 		"zx": "7.2.3"
 	},
 	"engines": {

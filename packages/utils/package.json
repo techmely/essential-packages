@@ -40,7 +40,7 @@
 	},
 	"devDependencies": {
 		"@techmely/types": "workspace:*",
-		"@types/node": "20.4.0",
+		"@types/node": "20.4.1",
 		"chalk": "^5.3.0",
 		"dayjs": "^1.11.9",
 		"execa": "^7.1.1",

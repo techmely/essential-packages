@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.20
+
+### Patch Changes
+
+- Add normalize array func
+
 ## 1.5.19
 
 ### Patch Changes

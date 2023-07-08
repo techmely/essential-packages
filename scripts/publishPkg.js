@@ -36,7 +36,6 @@ async function cpBasePkgJson() {
 	};
 
 	const destination = path.resolve(buildPath, "./package.json");
-	console.log("cpBasePkgJson  👻  destination:", destination);
 	await fse.writeFile(destination, JSON.stringify(newPkgData, null, 2), "utf8");
 	console.log(`Generated package.json in ${destination}`);
 }

@@ -11,7 +11,7 @@
 		"packages/*"
 	],
 	"scripts": {
-		"preinstall": "npx only-allow pnpm",
+		"preinstall": "npx only-allow yarn",
 		"postinstall": "make git-hooks",
 		"build:deps": "nx run-many --target=build --all",
 		"build:types": "nx build @techmely/types",
@@ -28,7 +28,7 @@
 		"lint:bundlesize": "bundlesize",
 		"lint:duplicate": "jscpd"
 	},
-	"packageManager": "yarn@3.5.0",
+	"packageManager": "yarn@3.6.1",
 	"devDependencies": {
 		"@changesets/changelog-github": "^0.4.8",
 		"@changesets/cli": "^2.26.2",
@@ -42,7 +42,6 @@
 		"@storybook/testing-library": "0.2.0",
 		"@testing-library/react": "14.0.0",
 		"@types/node": "20.4.0",
-		"@yarnpkg/sdks": "3.0.0-rc.48",
 		"bundlesize": "0.18.1",
 		"cross-env": "7.0.3",
 		"fast-glob": "^3.3.0",
@@ -69,7 +68,7 @@
 	},
 	"volta": {
 		"node": "18.6.0",
-		"yarn": "3.4.1"
+		"yarn": "3.6.1"
 	},
 	"jscpd": {
 		"threshold": 0.1,

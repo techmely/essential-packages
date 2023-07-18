@@ -11,7 +11,7 @@ git-hooks:
 .PHONY: yarn-latest
 yarn-latest:
 	# Config git settings
-	yarn set version latest
+	yarn set version berry
 
 	# Plugin
 

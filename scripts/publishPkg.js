@@ -13,9 +13,12 @@ publishPkg();
 async function publishPkg() {
 	try {
 		await cpBasePkgJson();
-		await execSync("yarn publish", { cwd: buildPath });
+		await fse.writeFile(`${buildPath}/yarn.lock`, "");
+		await execSync("yarn", { cwd: buildPath });
+		await execSync("rm -rf .yarn && rm -rf node_modules", { cwd: buildPath });
+		await execSync("yarn npm publish --tolerate-republish", { cwd: buildPath });
 		// Need to remove after build to guarantee the unique package.json in each package
-		await execSync("rm -rf package.json", { cwd: buildPath });
+		await execSync("rm -rf package.json yarn.lock", { cwd: buildPath });
 		console.log("Published successfully!");
 	} catch (error) {
 		console.log(error);

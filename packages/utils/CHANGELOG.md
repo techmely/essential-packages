@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.21
+
+### Patch Changes
+
+- Fix cookie services typing
+
 ## 1.5.20
 
 ### Patch Changes

@@ -1,6 +1,7 @@
 export * from "./array";
 export * from "./bytes";
 export * from "./calculate";
+export * from "./cache";
 export * from "./colors";
 export * from "./convert";
 export * from "./cookie";

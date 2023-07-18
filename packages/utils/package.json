@@ -1,6 +1,6 @@
 {
 	"name": "@techmely/utils",
-	"version": "1.5.20",
+	"version": "1.5.21",
 	"description": "Collection of helpful JavaScript / TypeScript utils",
 	"author": "Harry Tran <nhattq.coding@gmail.com>",
 	"license": "MIT",
@@ -16,9 +16,7 @@
 		"directory": "dist",
 		"tag": "latest"
 	},
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build": "tsup --dts",
 		"build:dev": "tsup",
@@ -31,17 +29,19 @@
 		"dayjs": "^1.11.6"
 	},
 	"peerDependenciesMeta": {
-		"dayjs": {
+		"cookie": {
 			"optional": true
 		},
-		"cookie": {
+		"dayjs": {
 			"optional": true
 		}
 	},
 	"devDependencies": {
 		"@techmely/types": "workspace:*",
-		"@types/node": "20.4.1",
+		"@types/cookie": "0.5.1",
+		"@types/node": "20.4.0",
 		"chalk": "^5.3.0",
+		"cookie": "0.5.0",
 		"dayjs": "^1.11.9",
 		"execa": "^7.1.1",
 		"tslib": "^2.6.0",
@@ -58,9 +58,5 @@
 			"url": "https://www.patreon.com/harrytran998"
 		}
 	],
-	"keywords": [
-		"techmely",
-		"techmely-component",
-		"techmely-utils"
-	]
+	"keywords": ["techmely", "techmely-component", "techmely-utils"]
 }

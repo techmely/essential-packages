@@ -38,7 +38,7 @@ export class CookieService {
 		this.tokenName = `token_${this.env}`;
 	}
 
-	get(name: string, options?: CookieParseOptions) {
+	get(name: string, options?: CookieParseOptions): string | undefined {
 		if (typeof window === "undefined") return undefined;
 
 		try {
@@ -75,10 +75,7 @@ export class CookieService {
 
 	getToken() {
 		const token = this.get(this.tokenName);
-		if (token) {
-			return token;
-		}
-		return undefined;
+		return token;
 	}
 
 	clearToken() {

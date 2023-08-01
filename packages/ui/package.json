@@ -39,7 +39,7 @@
 		"@zag-js/popover": "0.10.5",
 		"@zag-js/pressable": "0.10.5",
 		"@zag-js/radio-group": "0.10.5",
-		"@zag-js/range-slider": "0.10.5",
+		"@zag-js/range-slider": "0.13.0",
 		"@zag-js/rating-group": "0.10.5",
 		"@zag-js/select": "0.10.5",
 		"@zag-js/solid": "0.10.5",

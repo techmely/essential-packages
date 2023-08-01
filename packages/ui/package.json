@@ -43,7 +43,7 @@
 		"@zag-js/rating-group": "0.10.5",
 		"@zag-js/select": "0.10.5",
 		"@zag-js/solid": "0.10.5",
-		"@zag-js/tabs": "0.10.5",
+		"@zag-js/tabs": "0.13.0",
 		"@zag-js/tags-input": "0.10.5",
 		"@zag-js/toast": "0.10.5",
 		"@zag-js/tooltip": "0.10.5",

@@ -33,7 +33,7 @@
 		"@zag-js/combobox": "0.10.5",
 		"@zag-js/dialog": "0.10.5",
 		"@zag-js/menu": "0.10.5",
-		"@zag-js/number-input": "0.10.5",
+		"@zag-js/number-input": "0.13.0",
 		"@zag-js/pagination": "0.10.5",
 		"@zag-js/pin-input": "0.10.5",
 		"@zag-js/popover": "0.10.5",

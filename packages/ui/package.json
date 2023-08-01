@@ -47,7 +47,7 @@
 		"@zag-js/tags-input": "0.10.5",
 		"@zag-js/toast": "0.10.5",
 		"@zag-js/tooltip": "0.10.5",
-		"class-variance-authority": "0.6.1"
+		"class-variance-authority": "0.7.0"
 	},
 	"peerDependencies": {
 		"solid-js": "^1.7.5"

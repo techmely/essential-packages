@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.22
+
+### Patch Changes
+
+- Add some typings + remove unnessary files
+
 ## 1.5.21
 
 ### Patch Changes

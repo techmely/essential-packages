@@ -19,7 +19,6 @@ export * from "./stream";
 export * from "./string";
 
 export * from "./vector";
-export * from "./types";
 
 const __DEV__ = process.env.NODE_ENV !== "production";
 

@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.4.1
+
+### Patch Changes
+
+- Add some typings + remove unnessary files
+
 ### Patch Changes
 
 - [`d423a21`](undefined) - Update Dayjs utils + Bump latest dependencies

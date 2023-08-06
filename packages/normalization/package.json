@@ -1,6 +1,6 @@
 {
 	"name": "@techmely/normalization",
-	"version": "1.0.0",
+	"version": "0.0.0",
 	"description": "Manage normalize state with fastest transform",
 	"author": "Harry Tran <nhattq.coding@gmail.com>",
 	"license": "MIT",
@@ -23,10 +23,10 @@
 	},
 	"files": ["dist"],
 	"scripts": {
-		"build": "unbuild",
+		"build": "echo PLACEHOLDER",
 		"stub": "unbuild --stub",
 		"clean": "rimraf dist",
-		"publish": "node ../../scripts/publishPkg.js",
+		"publish": "echo PLACEHOLDER",
 		"type-check": "tsc --noEmit --project ./tsconfig.json"
 	},
 	"dependencies": {

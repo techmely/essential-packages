@@ -16,7 +16,9 @@
 		"directory": "dist",
 		"tag": "latest"
 	},
-	"files": ["dist"],
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"build": "tsup --dts",
 		"build:dev": "tsup",
@@ -39,13 +41,13 @@
 	"devDependencies": {
 		"@techmely/types": "workspace:*",
 		"@types/cookie": "0.5.1",
-		"@types/node": "20.4.0",
+		"@types/node": "20.4.8",
 		"chalk": "^5.3.0",
 		"cookie": "0.5.0",
 		"dayjs": "^1.11.9",
-		"execa": "^7.1.1",
-		"tslib": "^2.6.0",
-		"tsup": "7.1.0",
+		"execa": "^7.2.0",
+		"tslib": "^2.6.1",
+		"tsup": "7.2.0",
 		"typescript": "5.1.6"
 	},
 	"funding": [
@@ -58,5 +60,8 @@
 			"url": "https://www.patreon.com/harrytran998"
 		}
 	],
-	"keywords": ["techmely", "techmely-component", "techmely-utils"]
+	"keywords": [
+		"techmely",
+		"techmely-utils"
+	]
 }

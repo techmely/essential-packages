@@ -1,6 +1,6 @@
+import type { CamelToSnakeNested, DeepMerge } from "@techmely/types";
 import { isNotEmpty, isArray, isDef, isNotNull, isObject, isUndef } from "./is";
 import { camel2snake } from "./string";
-import { DeepMerge } from "./types";
 
 /**
  * @description Deep merge Object
@@ -67,7 +67,7 @@ export function removeEmptyObj(obj: any) {
  * @param {any} obj - The input obj
  * @returns {any} - the clean obj
  */
-export function removeUndefObj<T extends Record<string, any>>(obj: T): T {
+export function removeUndefObj<T extends Record<string, unknown>>(obj: T): T {
 	Object.keys(obj).forEach((key: string) => (isUndef(obj[key]) ? obj[key] === undefined : {}));
 	return obj;
 }
@@ -177,16 +177,6 @@ export function objectGet<T>(from: T, selector: string) {
 export function objectGets<T>(from: T, ...selectors: string[]) {
 	return [...selectors].map((s) => pick(from, s));
 }
-
-type CamelToSnakeCase<S extends string> = S extends `${infer T}${infer U}`
-	? `${T extends Capitalize<T> ? "_" : ""}${Lowercase<T>}${CamelToSnakeCase<U>}`
-	: S;
-
-type CamelToSnakeNested<T> = T extends object
-	? {
-			[K in keyof T as CamelToSnakeCase<K & string>]: CamelToSnakeNested<T[K]>;
-	  }
-	: T;
 
 export function objectCamel2Snake<T extends Object>(obj: T) {
 	return Object.entries(obj).reduce(

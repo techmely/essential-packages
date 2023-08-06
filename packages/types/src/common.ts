@@ -26,3 +26,19 @@ export type IsAny<T, True, False = never> = true | false extends (T extends neve
 export type PreventAny<S, T> = IsAny<S, EntityState<T>, S>;
 
 export type Comparer<T> = (a: T, b: T) => number;
+
+export type MergeInsertions<T> = T extends Record<string, any>
+	? {
+			[K in keyof T]: MergeInsertions<T[K]>;
+	  }
+	: T;
+
+export type DeepMerge<F, S> = MergeInsertions<{
+	[K in keyof F | keyof S]: K extends keyof S & keyof F
+		? DeepMerge<F[K], S[K]>
+		: K extends keyof S
+		? S[K]
+		: K extends keyof F
+		? F[K]
+		: never;
+}>;

@@ -2,18 +2,27 @@ export type Nullable<T> = T | null;
 export type UnDef<T> = T | undefined;
 export type NullList<T> = T | undefined | null;
 
-export interface DictionaryNum<T> {
+export interface DictNum<T> {
 	[id: number]: T;
 }
-export interface Dictionary<T> extends DictionaryNum<T> {
+export interface Dict<T> extends DictNum<T> {
 	[id: string]: T;
 }
 
 export interface EntityState<T> {
 	ids: string[];
-	entities: Dictionary<T>;
+	entities: Dict<T>;
 }
 
 export type VoidFunc<T> = (value: T) => void;
 
 export type StringEnum<T> = T | (string & Record<never, never>);
+
+// test if we are going the left AND right path in the condition
+export type IsAny<T, True, False = never> = true | false extends (T extends never ? true : false)
+	? True
+	: False;
+
+export type PreventAny<S, T> = IsAny<S, EntityState<T>, S>;
+
+export type Comparer<T> = (a: T, b: T) => number;

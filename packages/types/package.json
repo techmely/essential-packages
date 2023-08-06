@@ -12,28 +12,29 @@
 		"node": ">=18.16.0",
 		"npm": ">=8.11.0"
 	},
-	"source": "src/index.ts",
-	"main": "dist/index.js",
-	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
 	"publishConfig": {
 		"access": "public",
 		"directory": "dist",
 		"tag": "latest"
 	},
+	"exports": {
+		"import": "./dist/index.mjs",
+		"types": "./dist//index.d.ts",
+		"require": "./dist/index.cjs"
+	},
 	"files": [
 		"dist"
 	],
 	"scripts": {
-		"build": "tsup --dts",
-		"dev": "tsup --watch",
+		"build": "unbuild",
+		"stub": "unbuild --stub",
 		"clean": "rimraf dist",
 		"publish": "yarn npm publish --tolerate-republish",
 		"type-check": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"tsup": "7.1.0",
-		"typescript": "5.1.6"
+		"unbuild": "1.2.1"
 	},
 	"funding": [
 		{

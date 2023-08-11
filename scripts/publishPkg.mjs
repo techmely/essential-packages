@@ -29,11 +29,10 @@ publishPkgNah();
 
 async function cpBasePkgJson() {
 	const basePkgData = await fse.readFile(path.resolve(root, "./package.json"), "utf8");
-	const { scripts, devDependencies, exports, ...rest } = JSON.parse(basePkgData);
+	const { scripts, devDependencies, files, exports, ...rest } = JSON.parse(basePkgData);
 
 	const newPkgData = {
 		...rest,
-		file: ["*"],
 		sideEffects: false,
 		types: "./index.d.ts",
 		typings: "./index.d.ts",

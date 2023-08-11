@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.24
+
+### Patch Changes
+
+- Fix wrong publish packages
+
 ## 1.5.23
 
 ### Patch Changes

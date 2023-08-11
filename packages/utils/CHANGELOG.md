@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.5.23
+
+### Patch Changes
+
+- Add function check base 64 format
+
 ## 1.5.22
 
 ### Patch Changes

@@ -1,0 +1,38 @@
+{
+	"name": "@techmely/reset-css",
+	"version": "1.0.0",
+	"description": "Techmely Reset CSS",
+	"author": "Harry Tran <nhattq.coding@gmail.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/techmely/monorepo/tree/dev/packages/reset-css"
+	},
+	"publishConfig": {
+		"access": "public",
+		"directory": "dist",
+		"tag": "latest"
+	},
+	"exports": {
+		".": {
+			"default": "./reset.css"
+		}
+	},
+	"scripts": {
+		"publish": "npm publish"
+	},
+	"funding": [
+		{
+			"type": "ko-fi",
+			"url": "https://ko-fi.com/harrytran998"
+		},
+		{
+			"type": "patreon",
+			"url": "https://www.patreon.com/harrytran998"
+		}
+	],
+	"bugs": {
+		"url": "https://github.com/techmely/techmely/issues"
+	},
+	"keywords": ["techmely", "reset-css"]
+}

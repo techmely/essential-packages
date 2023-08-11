@@ -16,14 +16,12 @@
 		"directory": "dist",
 		"tag": "latest"
 	},
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"scripts": {
 		"build": "tsup --dts",
 		"build:dev": "tsup",
 		"clean": "rimraf dist",
-		"publish": "node ../../scripts/publishPkg.js",
+		"publish": "node ../../scripts/publishPkg.mjs",
 		"type-check": "tsc --noEmit --project ./tsconfig.json"
 	},
 	"peerDependencies": {
@@ -60,8 +58,5 @@
 			"url": "https://www.patreon.com/harrytran998"
 		}
 	],
-	"keywords": [
-		"techmely",
-		"techmely-utils"
-	]
+	"keywords": ["techmely", "techmely-utils"]
 }

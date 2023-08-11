@@ -125,6 +125,8 @@ export function isPngImage(buffer: Buffer | Uint8Array): boolean {
 	);
 }
 
+export const isBase64 = /^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$/;
+
 export const isAndroid = isBrowser ? /(android)/i.test(navigator.userAgent) : false;
 
 // @ts-expect-error Ignore type check

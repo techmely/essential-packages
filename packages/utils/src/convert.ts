@@ -22,3 +22,7 @@ export function intToBuffer(integer: number | bigint): Buffer {
 	const hex = intToHex(integer);
 	return Buffer.from(hex, "hex");
 }
+
+export function toBoolean(val: boolean | string | undefined) {
+	return val ? val !== "false" : false;
+}

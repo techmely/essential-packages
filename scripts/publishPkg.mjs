@@ -42,7 +42,7 @@ async function cpBasePkgJson() {
 
 	const destination = path.resolve(buildPath, "./package.json");
 	await fse.writeFile(destination, JSON.stringify(newPkgData, null, 2), "utf8");
-	console.log(`Created package.json in ${destination}`);
+	echo(`Created package.json in ${destination}`);
 }
 
 async function cpBaseFiles(file) {
@@ -51,7 +51,7 @@ async function cpBaseFiles(file) {
 	const sourceFile = await fse.readFile(sourcePath, "utf8");
 	// Currently, bun not support copy file --> use writeFile instead
 	await fse.writeFile(targetPath, sourceFile, "utf8");
-	console.log(`Copied ${humanizePathname(sourcePath)} to ${humanizePathname(targetPath)}`);
+	echo(`Copied ${humanizePathname(sourcePath)} to ${humanizePathname(targetPath)}`);
 }
 
 function humanizePathname(_path) {

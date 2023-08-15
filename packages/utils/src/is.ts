@@ -1,3 +1,7 @@
+import { toBoolean } from "./convert";
+import { envs, nodeENV } from "./env";
+import { platform } from "./process";
+
 export function isNotNull<T>(v: T | null): v is Exclude<T, null> {
 	return v !== null;
 }
@@ -32,9 +36,6 @@ export const isPromise = <T = any>(val: unknown): val is Promise<T> => {
 
 export const isFalsy = (val: any): val is false | undefined | null =>
 	isNotNull(val) && isDef(val) && isNotEmpty(val);
-
-export const isWindow = (val: any): boolean =>
-	typeof window !== "undefined" && toString.call(val) === "[object Window]";
 
 export const isStream = (val: any) =>
 	val !== null && typeof val === "object" && typeof val.pipe === "function";
@@ -138,3 +139,23 @@ export const isMobile = isBrowser ? match?.("(pointer:coarse)")?.matches : false
 export const isCrawler =
 	isBrowser &&
 	(!("onscroll" in window) || /(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent));
+
+export const isCI = toBoolean(envs.CI);
+
+/** Detect if `NODE_ENV` environment variable is `test` */
+export const isNodeTest = nodeENV === "test" || toBoolean(envs.TEST);
+
+/** Detect if `NODE_ENV` environment variable is `production` */
+export const isNodeProd = nodeENV === "production";
+
+/** Detect if `NODE_ENV` environment variable is `dev` or `development` */
+export const isNodeDev = nodeENV === "dev" || nodeENV === "development";
+
+/** Detect if process.platform is Windows */
+export const isWindows = /^win/i.test(platform);
+
+/** Detect if process.platform is Linux */
+export const isLinux = /^linux/i.test(platform);
+
+/** Detect if process.platform is macOS (darwin kernel) */
+export const isMacOS = /^darwin/i.test(platform);

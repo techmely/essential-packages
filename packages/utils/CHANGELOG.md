@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.6.0
+
+### Minor Changes
+
+- Add more techmley functions
+
 ## 1.5.24
 
 ### Patch Changes

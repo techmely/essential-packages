@@ -1,6 +1,7 @@
 export type Nullable<T> = T | null;
 export type UnDef<T> = T | undefined;
 export type NullList<T> = T | undefined | null;
+export type EntityId = number | string;
 
 export interface DictNum<T> {
 	[id: number]: T;

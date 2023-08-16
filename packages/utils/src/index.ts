@@ -10,6 +10,7 @@ export * from "./date";
 export * from "./download";
 export * from "./env";
 export * from "./generate";
+export * from "./http";
 export * from "./invariant";
 export * from "./is";
 export * from "./number";

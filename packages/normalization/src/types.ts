@@ -1,8 +1,6 @@
 // Heavy inspire from https://github.com/reduxjs/redux-toolkit/blob/master/packages/toolkit/src/entities/models.ts
 
-import type { PreventAny, Dict, Comparer } from "@techmely/types";
-
-export type EntityId = number | string;
+import type { PreventAny, Dict, Comparer, EntityId } from "@techmely/types";
 
 export type IdSelector<T> = (model: T) => EntityId;
 

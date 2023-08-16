@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.6.1
+
+### Patch Changes
+
+- Add entity-id type + number precision functions
+
 ## 1.6.0
 
 ### Minor Changes

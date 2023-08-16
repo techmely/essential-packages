@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.4.2
+
+### Patch Changes
+
+- Add entity-id type + number precision functions
+
 ## 1.4.1
 
 ### Patch Changes

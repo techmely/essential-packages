@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.7.0
+
+### Minor Changes
+
+- Add http status code
+
 ## 1.6.1
 
 ### Patch Changes

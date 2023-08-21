@@ -1,4 +1,5 @@
-import type { EntityState, IdSelector, Update, EntityId } from "./types";
+import { EntityId } from "@techmely/types";
+import type { EntityState, IdSelector, Update } from "./types";
 
 export function selectIdValue<T>(entity: T, selectId: IdSelector<T>) {
 	const key = selectId(entity);

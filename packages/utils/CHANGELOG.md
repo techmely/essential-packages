@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.8.0
+
+### Minor Changes
+
+- Add Tree Entity + Pick object function
+
 ## 1.7.0
 
 ### Minor Changes

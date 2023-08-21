@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.5.0
+
+### Minor Changes
+
+- Add Tree Entity + Pick object function
+
 ## 1.4.2
 
 ### Patch Changes

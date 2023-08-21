@@ -17,8 +17,8 @@
 		"test.unit.run": "vitest run --passWithNoTests",
 		"test.unit.coverage": "vitest --coverage",
 		"publish": "nx run-many -t publish",
-		"lint.format": "rome format packages/**/src/**/*.ts --write",
-		"lint.check": "rome format packages/**/src/**/*.ts",
+		"lint.format": "rome check --apply packages/**/src/**/*.ts",
+		"lint.check": "rome check packages",
 		"lint.types": "nx run-many --target=type-check",
 		"lint.bundlesize": "bundlesize",
 		"lint.duplicate": "jscpd"

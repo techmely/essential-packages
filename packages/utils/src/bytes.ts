@@ -44,4 +44,4 @@ export const formatBytes = (bytes: number, options?: Partial<FormatBytesOptions>
  * @param {number} bytes The number of bytes that are being checked
  * @returns {number} The number of appropriate decimal places
  */
-export const formatDecimals = (bytes: number = 0): number => (bytes >= 1e9 ? 2 : 0);
+export const formatDecimals = (bytes = 0): number => (bytes >= 1e9 ? 2 : 0);

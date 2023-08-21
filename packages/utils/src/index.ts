@@ -15,7 +15,6 @@ export * from "./invariant";
 export * from "./is";
 export * from "./number";
 export * from "./object";
-export * from "./path";
 export * from "./process";
 export * from "./regex";
 export * from "./stream";

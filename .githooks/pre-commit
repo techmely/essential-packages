@@ -5,12 +5,8 @@ textInformation='\033[1;34m'
 textSuccess='\033[1;32m'
 
 echo -e "$textInformation \nStart lint code quality with rome"
-yarn lint:check
+bun run lint.check
 echo -e "$textSuccess \nCheck rome format successfully."
-
-echo -e "$textInformation \nStart to check typings in projects"
-yarn lint:types
-echo -e "$textSuccess Check typings successfully."
 
 # echo -e "$textInformation Start to check typings in projects"
 # yarn lint:duplicate

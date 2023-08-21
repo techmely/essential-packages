@@ -10,15 +10,16 @@
 				"recommended": true
 			},
 			"suspicious": {
-				"noExplicitAny": "warn"
+				"noExplicitAny": "off"
 			}
-		},
-		"ignore": ["node_modules", "packages/**/node_modules", "packages/ui/dist"]
+		}
 	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab",
-		"lineWidth": 100,
-		"ignore": ["node_modules", "packages/**/node_modules", "packages/ui/dist"]
+		"lineWidth": 100
+	},
+	"files": {
+		"ignore": ["node_modules", "coverage", "cache", "dist", "packages/**/**/*.d.ts"]
 	}
 }

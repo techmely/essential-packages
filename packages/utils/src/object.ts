@@ -1,5 +1,5 @@
-import type { CamelToSnakeNested, DeepMerge } from "@techmely/types";
-import { isNotEmpty, isArray, isDef, isNotNull, isObject, isUndef } from "./is";
+import type { CamelToSnakeNested, DeepMerge, Tree } from "@techmely/types";
+import { isArray, isDef, isNotEmpty, isNotNull, isObject, isUndef } from "./is";
 import { camel2snake } from "./string";
 
 /**
@@ -142,45 +142,45 @@ export function objectEntries<T extends object>(obj: T) {
 	return Object.entries(obj) as [keyof T, T[keyof T]][];
 }
 
-/**
- * Create a new subset object by giving keys
- *
- * @category Object
- */
-export function objectPick<O extends Object, T extends keyof O>(
-	obj: O,
-	keys: T[],
-	omitUndefined = false,
-) {
-	return keys.reduce((n, k) => {
-		if (k in obj) {
-			if (!omitUndefined || obj[k] !== undefined) {
-				n[k] = obj[k];
-			}
-		}
-		return n;
-	}, {} as Pick<O, T>);
-}
-
-function pick<T>(from: T, val: string) {
-	return val
-		.replace(/\[([^\[\]]*)\]/g, ".$1.")
-		.split(".")
-		.filter((t) => t !== "")
-		.reduce((prev, cur) => prev?.[cur], from);
-}
-
-export function objectGet<T>(from: T, selector: string) {
-	return pick(from, selector);
-}
-
-export function objectGets<T>(from: T, ...selectors: string[]) {
-	return [...selectors].map((s) => pick(from, s));
-}
-
 export function objectCamel2Snake<T extends Object>(obj: T) {
 	return Object.entries(obj).reduce(
 		(acc, cur) => ({ ...acc, [camel2snake(cur[0])]: cur[1] }),
 		{} as CamelToSnakeNested<T>,
 	);
+}
+
+/**
+ * Pick nested properties from an object with path/multiple paths.
+ * Example:
+ * - pick({ a: { b: 1 } }, ["a.b"]) => { a: { b: 1 } }
+ * - pick({ a: { b: 1 } }, "a") => { a: { b: 1 } }
+ */
+export function pick(state: Tree, paths: string | string[]): Tree {
+	if (Array.isArray(paths)) {
+		return paths.reduce<Tree>((acc, path) => {
+			const _paths = path.split(".");
+			return set(acc, _paths, get(state, _paths));
+		}, {});
+	}
+	return get(state, paths.split("."));
+}
+
+function get(state: Tree, paths: string[]) {
+	return paths.reduce((acc, path) => acc?.[path], state);
+}
+
+/**
+ * avoids prototype pollution
+ */
+const ProtoRE = /^(__proto__)$/;
+
+function set(state: Tree, paths: string[], val: unknown): Tree {
+	const last = paths.at(-1);
+	if (last === undefined) return state;
+
+	const restPaths = paths.slice(0, -1);
+	// rome-ignore lint/suspicious/noAssignInExpressions: <explanation>
+	const result = restPaths.reduce((obj, p) => (ProtoRE.test(p) ? {} : (obj[p] ||= {})), state);
+	result[last] = val;
+	return state;
 }

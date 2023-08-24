@@ -32,7 +32,12 @@ export function deepMerge<T extends Record<string, any>, S extends Record<string
 					target[key] = {};
 				}
 
-				deepMerge(target[key], source[key]);
+				if (isMergeableObject(target[key])) {
+					deepMerge(target[key], source[key]);
+				} else {
+					// @ts-expect-error I do not know how to fix this
+					target[key] = source[key];
+				}
 			} else {
 				// @ts-expect-error I do not know how to fix this
 				target[key] = source[key];

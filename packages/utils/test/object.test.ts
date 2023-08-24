@@ -25,6 +25,11 @@ describe("Object test", () => {
 			const obj2 = { a: ["C"], b: ["D"] };
 			expect(deepMerge({}, obj1, obj2)).toEqual({ a: ["C"], b: ["D"] });
 		});
+		it("should override plain value", () => {
+			const obj1 = { a: { x: 1 } };
+			const obj2 = { a: { x: { f: 2 } } } as any;
+			expect(deepMerge({}, obj1, obj2)).toEqual({ a: { x: { f: 2 } } });
+		});
 	});
 	describe("Camel case object to snake case object", () => {
 		it("Should transform correctly", () => {

@@ -1,10 +1,14 @@
-import { isNotEmpties, isArray } from "../src";
+import { isNotEmpties, isArray, isEmpty } from "../src";
 import { describe, expect, test } from "vitest";
 
 describe.concurrent("Test valid is", () => {
 	test("Should return true", () => {
 		expect(isNotEmpties("test", "test")).toEqual(true);
 		expect(isNotEmpties("test", "test", "test")).toEqual(true);
+	});
+	test("Should return false when check is Empty", () => {
+		expect(isEmpty("test")).toEqual(false);
+		expect(isEmpty("   ")).toEqual(true);
 	});
 
 	test("Should return false", () => {

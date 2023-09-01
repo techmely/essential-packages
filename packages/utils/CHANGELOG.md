@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.9.0
+
+### Minor Changes
+
+- Fix typing check string empty and replace cookie lib with internal cookie function
+
 ## 1.8.0
 
 ### Minor Changes

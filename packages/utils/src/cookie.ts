@@ -434,7 +434,7 @@ export class CookieService {
 			secure: true,
 			path: "/",
 			domain: this.domain,
-			priority: "medium",
+			priority: "Medium",
 			httpOnly: false,
 			...options,
 		};

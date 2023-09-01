@@ -52,7 +52,7 @@ const isEmptyArr = <T>(array: ReadonlyArray<T> | undefined): array is EmptyArray
  * Check a value is empty or not
  * Currently not support check WeakMap/WeakSet/WeakRef
  */
-export function isEmpty<T = unknown>(val: T): val is T {
+export function isEmpty<T = unknown>(val: T): boolean {
 	if (!val) {
 		return true;
 	}
@@ -75,7 +75,7 @@ export function isEmpty<T = unknown>(val: T): val is T {
 	return false;
 }
 
-export function isNotEmpty<T = unknown>(val: T): val is T {
+export function isNotEmpty<T = unknown>(val: T): boolean {
 	return !isEmpty(val);
 }
 

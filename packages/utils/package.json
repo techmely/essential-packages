@@ -36,13 +36,13 @@
 	},
 	"devDependencies": {
 		"@techmely/types": "workspace:*",
-		"@types/node": "20.4.8",
+		"@types/node": "20.5.7",
 		"chalk": "^5.3.0",
 		"dayjs": "^1.11.9",
-		"execa": "^7.2.0",
+		"execa": "^8.0.1",
 		"tslib": "^2.6.1",
 		"tsup": "7.2.0",
-		"typescript": "5.1.6"
+		"typescript": "5.2.2"
 	},
 	"funding": [
 		{

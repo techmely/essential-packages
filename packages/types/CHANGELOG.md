@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.5.1
+
+### Patch Changes
+
+- Chore: remove unnecessary engine in package
+
 ## 1.5.0
 
 ### Minor Changes

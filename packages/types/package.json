@@ -1,16 +1,12 @@
 {
 	"name": "@techmely/types",
-	"version": "1.5.0",
+	"version": "1.5.1",
 	"description": "Techmely types definitions",
 	"author": "Harry Tran <nhattq.coding@gmail.com>",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/techmely/monorepo/tree/dev/packages/types"
-	},
-	"engines": {
-		"node": ">=18.16.0",
-		"npm": ">=8.11.0"
 	},
 	"types": "dist/index.d.ts",
 	"publishConfig": {

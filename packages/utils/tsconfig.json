@@ -1,6 +1,6 @@
 {
   "extends": "../configs/tsconfig.base.json",
-  "include": ["src"],
+  "include": ["src", "../../reset.d.ts"],
   "exclude": ["dist", "node_modules"],
   "compilerOptions": {
     "baseUrl": ".",

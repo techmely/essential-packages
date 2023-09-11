@@ -136,10 +136,10 @@ export function readFileSync(filePath: string): string {
   return fs.readFileSync(filePath, "utf8");
 }
 
-async function getDataPath(directoryPath: string, fileName: string) {
+async function getDataPath<T = any>(directoryPath: string, fileName: string) {
   const packageJsonPath = path.join(directoryPath, fileName);
   const pkg = await readFile(packageJsonPath);
-  const packageJsonData = JSON.parse(pkg);
+  const packageJsonData = JSON.parse(pkg) as T;
   return {
     path: packageJsonPath,
     data: packageJsonData,
@@ -151,7 +151,7 @@ export async function findNearestFile<T>(
   directoryPath: string = path.resolve(),
 ): Promise<{ path: string; data: T }> {
   try {
-    const data = await getDataPath(directoryPath, fileName);
+    const data = await getDataPath<T>(directoryPath, fileName);
     return data;
   } catch (error) {
     const parentDirectoryPath = path.dirname(directoryPath);

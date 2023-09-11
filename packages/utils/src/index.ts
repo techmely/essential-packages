@@ -29,7 +29,7 @@ export const EMPTY_ARR = __DEV__ ? Object.freeze([]) : [];
 export const noop = () => {};
 
 export const assert = (condition: boolean, message: string): asserts condition => {
-	if (!condition) {
-		throw new Error(message);
-	}
+  if (!condition) {
+    throw new Error(message);
+  }
 };

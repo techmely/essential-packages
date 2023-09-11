@@ -6,13 +6,13 @@
  * @returns {number} - The random number
  */
 export function getRandomIntInclusive(min: number, max: number): number {
-	const _min = Math.ceil(min);
-	const _max = Math.floor(max);
-	return Math.floor(Math.random() * (_max - _min + 1) + _min); //The maximum is inclusive and the minimum is inclusive
+  const _min = Math.ceil(min);
+  const _max = Math.floor(max);
+  return Math.floor(Math.random() * (_max - _min + 1) + _min); //The maximum is inclusive and the minimum is inclusive
 }
 
 export function getRandomInt(min: number, max: number): number {
-	const _min = Math.ceil(min);
-	const _max = Math.floor(max);
-	return Math.floor(Math.random() * (_max - _min) + _min); //The maximum is exclusive and the minimum is inclusive
+  const _min = Math.ceil(min);
+  const _max = Math.floor(max);
+  return Math.floor(Math.random() * (_max - _min) + _min); //The maximum is exclusive and the minimum is inclusive
 }

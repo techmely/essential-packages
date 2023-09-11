@@ -2,49 +2,49 @@ import { EntityId } from "@techmely/types";
 import type { EntityState, IdSelector, Update } from "./types";
 
 export function selectIdValue<T>(entity: T, selectId: IdSelector<T>) {
-	const key = selectId(entity);
+  const key = selectId(entity);
 
-	if (process.env.NODE_ENV !== "production" && key === undefined) {
-		console.warn(
-			"The entity passed to the `selectId` implementation returned undefined.",
-			"You should probably provide your own `selectId` implementation.",
-			"The entity that was passed:",
-			entity,
-			"The `selectId` implementation:",
-			selectId.toString(),
-		);
-	}
+  if (process.env.NODE_ENV !== "production" && key === undefined) {
+    console.warn(
+      "The entity passed to the `selectId` implementation returned undefined.",
+      "You should probably provide your own `selectId` implementation.",
+      "The entity that was passed:",
+      entity,
+      "The `selectId` implementation:",
+      selectId.toString(),
+    );
+  }
 
-	return key;
+  return key;
 }
 
 export function ensureEntitiesArray<T>(entities: readonly T[] | Record<EntityId, T>): readonly T[] {
-	if (!Array.isArray(entities)) {
-		// rome-ignore lint/style/noParameterAssign: Will mutate the entities object
-		entities = Object.values(entities);
-	}
+  if (!Array.isArray(entities)) {
+    // biome-ignore lint/style/noParameterAssign: Will mutate the entities object
+    entities = Object.values(entities);
+  }
 
-	return entities;
+  return entities;
 }
 
 export function splitAddedUpdatedEntities<T>(
-	newEntities: readonly T[] | Record<EntityId, T>,
-	selectId: IdSelector<T>,
-	state: EntityState<T>,
+  newEntities: readonly T[] | Record<EntityId, T>,
+  selectId: IdSelector<T>,
+  state: EntityState<T>,
 ): [T[], Update<T>[]] {
-	// rome-ignore lint/style/noParameterAssign: Will mutate the entities object
-	newEntities = ensureEntitiesArray(newEntities);
+  // biome-ignore lint/style/noParameterAssign: Will mutate the entities object
+  newEntities = ensureEntitiesArray(newEntities);
 
-	const added: T[] = [];
-	const updated: Update<T>[] = [];
+  const added: T[] = [];
+  const updated: Update<T>[] = [];
 
-	for (const entity of newEntities) {
-		const id = selectIdValue(entity, selectId);
-		if (id in state.entities) {
-			updated.push({ id, changes: entity });
-		} else {
-			added.push(entity);
-		}
-	}
-	return [added, updated];
+  for (const entity of newEntities) {
+    const id = selectIdValue(entity, selectId);
+    if (id in state.entities) {
+      updated.push({ id, changes: entity });
+    } else {
+      added.push(entity);
+    }
+  }
+  return [added, updated];
 }

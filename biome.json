@@ -1,0 +1,38 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "recommended": true
+      },
+      "style": {
+        "recommended": true
+      },
+      "suspicious": {
+        "noExplicitAny": "off"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentSize": 2,
+    "indentStyle": "space",
+    "lineWidth": 100,
+    "formatWithErrors": false
+  },
+  "files": {
+    "ignore": [
+      "node_modules",
+      "coverage",
+      "cache",
+      "dist",
+      "packages/**/**/*.d.ts",
+      ".vscode"
+    ]
+  }
+}

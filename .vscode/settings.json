@@ -32,9 +32,12 @@
   // Event Triggers
   // ===
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "rome.rome",
+  "editor.defaultFormatter": "biomejs.biome",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.organizeImports.biome": true,
+    "quickfix.biome": true,
+    "source.fixAll": true,
+    "source.addMissingImports": true
   },
   "npm.packageManager": "yarn",
   "cSpell.words": [
@@ -42,6 +45,7 @@
     "argb",
     "avif",
     "bahmutov",
+    "biomejs",
     "bumpp",
     "bundlesize",
     "cacheable",
@@ -94,6 +98,4 @@
     "vite",
     "vitest"
   ],
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
 }

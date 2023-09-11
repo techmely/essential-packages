@@ -1,12 +1,12 @@
-import { isArray } from "./is";
 import { clamp, lerp } from "./calculate";
+import { isArray } from "./is";
 
 /**
  * Negate a vector.
  * @param A
  */
 export function neg(A: number[]) {
-	return [-A[0], -A[1]];
+  return [-A[0], -A[1]];
 }
 
 /**
@@ -15,7 +15,7 @@ export function neg(A: number[]) {
  * @param B
  */
 export function add(A: number[], B: number[]) {
-	return [A[0] + B[0], A[1] + B[1]];
+  return [A[0] + B[0], A[1] + B[1]];
 }
 
 /**
@@ -24,7 +24,7 @@ export function add(A: number[], B: number[]) {
  * @param B
  */
 export function sub(A: number[], B: number[]) {
-	return [A[0] - B[0], A[1] - B[1]];
+  return [A[0] - B[0], A[1] - B[1]];
 }
 
 /**
@@ -33,8 +33,8 @@ export function sub(A: number[], B: number[]) {
  * @param B
  */
 export function vec(A: number[], B: number[]) {
-	// A, B as vectors get the vector from A to B
-	return [B[0] - A[0], B[1] - A[1]];
+  // A, B as vectors get the vector from A to B
+  return [B[0] - A[0], B[1] - A[1]];
 }
 
 /**
@@ -43,7 +43,7 @@ export function vec(A: number[], B: number[]) {
  * @param n
  */
 export function mul(A: number[], n: number) {
-	return [A[0] * n, A[1] * n];
+  return [A[0] * n, A[1] * n];
 }
 
 /**
@@ -52,7 +52,7 @@ export function mul(A: number[], n: number) {
  * @param n
  */
 export function div(A: number[], n: number) {
-	return [A[0] / n, A[1] / n];
+  return [A[0] / n, A[1] / n];
 }
 
 /**
@@ -60,7 +60,7 @@ export function div(A: number[], n: number) {
  * @param A
  */
 export function per(A: number[]) {
-	return [A[1], -A[0]];
+  return [A[1], -A[0]];
 }
 
 /**
@@ -69,7 +69,7 @@ export function per(A: number[]) {
  * @param B
  */
 export function dpr(A: number[], B: number[]) {
-	return A[0] * B[0] + A[1] * B[1];
+  return A[0] * B[0] + A[1] * B[1];
 }
 
 /**
@@ -77,7 +77,7 @@ export function dpr(A: number[], B: number[]) {
  * @param A
  */
 export function len(A: number[]) {
-	return Math.hypot(A[0], A[1]);
+  return Math.hypot(A[0], A[1]);
 }
 
 /**
@@ -85,7 +85,7 @@ export function len(A: number[]) {
  * @param A
  */
 export function len2(A: number[]) {
-	return A[0] * A[0] + A[1] * A[1];
+  return A[0] * A[0] + A[1] * A[1];
 }
 
 /**
@@ -94,7 +94,7 @@ export function len2(A: number[]) {
  * @param B
  */
 export function dist2(A: number[], B: number[]) {
-	return len2(sub(A, B));
+  return len2(sub(A, B));
 }
 
 /**
@@ -102,7 +102,7 @@ export function dist2(A: number[], B: number[]) {
  * @param A
  */
 export function uni(A: number[]) {
-	return div(A, len(A));
+  return div(A, len(A));
 }
 
 /**
@@ -111,7 +111,7 @@ export function uni(A: number[]) {
  * @param B
  */
 export function dist(A: number[], B: number[]) {
-	return Math.hypot(A[1] - B[1], A[0] - B[0]);
+  return Math.hypot(A[1] - B[1], A[0] - B[0]);
 }
 
 /**
@@ -120,7 +120,7 @@ export function dist(A: number[], B: number[]) {
  * @param B
  */
 export function med(A: number[], B: number[]) {
-	return mul(add(A, B), 0.5);
+  return mul(add(A, B), 0.5);
 }
 
 /**
@@ -130,16 +130,16 @@ export function med(A: number[], B: number[]) {
  * @param r rotation in radians
  */
 export function rotAround(A: number[], C: number[], r: number) {
-	const s = Math.sin(r);
-	const c = Math.cos(r);
+  const s = Math.sin(r);
+  const c = Math.cos(r);
 
-	const px = A[0] - C[0];
-	const py = A[1] - C[1];
+  const px = A[0] - C[0];
+  const py = A[1] - C[1];
 
-	const nx = px * c - py * s;
-	const ny = px * s + py * c;
+  const nx = px * c - py * s;
+  const ny = px * s + py * c;
 
-	return [nx + C[0], ny + C[1]];
+  return [nx + C[0], ny + C[1]];
 }
 
 /**
@@ -149,22 +149,22 @@ export function rotAround(A: number[], C: number[], r: number) {
  * @param t scalar
  */
 export function lrp(A: number[], B: number[], t: number) {
-	return add(A, mul(vec(A, B), t));
+  return add(A, mul(vec(A, B), t));
 }
 
 //  isLeft: >0 for counterclockwise
 //          =0 for none (degenerate)
 //          <0 for clockwise
 export function isLeft(p1: number[], pc: number[], p2: number[]) {
-	return (pc[0] - p1[0]) * (p2[1] - p1[1]) - (p2[0] - p1[0]) * (pc[1] - p1[1]);
+  return (pc[0] - p1[0]) * (p2[1] - p1[1]) - (p2[0] - p1[0]) * (pc[1] - p1[1]);
 }
 
 export function clockwise(p1: number[], pc: number[], p2: number[]) {
-	return isLeft(p1, pc, p2) > 0;
+  return isLeft(p1, pc, p2) > 0;
 }
 
 export function isEqual(a: number[], b: number[]) {
-	return a[0] === b[0] && a[1] === b[1];
+  return a[0] === b[0] && a[1] === b[1];
 }
 
 /**
@@ -173,19 +173,19 @@ export function isEqual(a: number[], b: number[]) {
  * @returns number[][]
  */
 export function toPointsArray<
-	T extends number[],
-	K extends { x: number; y: number; pressure?: number },
+  T extends number[],
+  K extends { x: number; y: number; pressure?: number },
 >(points: (T | K)[]): number[][] {
-	if (isArray(points[0])) {
-		return (points as number[][]).map(([x, y, pressure = 0.5]) => [x, y, pressure]);
-	}
-	return (
-		points as {
-			x: number;
-			y: number;
-			pressure?: number;
-		}[]
-	).map(({ x, y, pressure = 0.5 }) => [x, y, pressure]);
+  if (isArray(points[0])) {
+    return (points as number[][]).map(([x, y, pressure = 0.5]) => [x, y, pressure]);
+  }
+  return (
+    points as {
+      x: number;
+      y: number;
+      pressure?: number;
+    }[]
+  ).map(({ x, y, pressure = 0.5 }) => [x, y, pressure]);
 }
 
 /**
@@ -197,18 +197,18 @@ export function toPointsArray<
  * @returns
  */
 export function getStrokeRadius(
-	size: number,
-	thinning: number,
-	easing: (t: number) => number,
-	pressure = 0.5,
+  size: number,
+  thinning: number,
+  easing: (t: number) => number,
+  pressure = 0.5,
 ) {
-	if (!thinning) {
-		return size / 2;
-	}
-	const newPressure = clamp(easing(pressure), 0, 1);
-	return (
-		(thinning < 0
-			? lerp(size, size + size * clamp(thinning, -0.95, -0.05), newPressure)
-			: lerp(size - size * clamp(thinning, 0.05, 0.95), size, newPressure)) / 2
-	);
+  if (!thinning) {
+    return size / 2;
+  }
+  const newPressure = clamp(easing(pressure), 0, 1);
+  return (
+    (thinning < 0
+      ? lerp(size, size + size * clamp(thinning, -0.95, -0.05), newPressure)
+      : lerp(size - size * clamp(thinning, 0.05, 0.95), size, newPressure)) / 2
+  );
 }

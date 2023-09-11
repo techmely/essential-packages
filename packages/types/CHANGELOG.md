@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.5.2
+
+### Patch Changes
+
+- Update typing name + add unique object array function
+
 ## 1.5.1
 
 ### Patch Changes

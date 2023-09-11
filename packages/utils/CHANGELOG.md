@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.9.1
+
+### Patch Changes
+
+- Update typing name + add unique object array function
+
 ## 1.9.0
 
 ### Minor Changes

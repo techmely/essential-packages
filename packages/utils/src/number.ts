@@ -160,7 +160,7 @@ export const Divide = npCreateOperation((num1, num2) => {
   CheckBoundary(num2Changed);
 
   // fix: Something like 10 ** -4 is 0.00009999999999999999, strip corrected
-  return Times(num1Changed / num2Changed, Strip(10 ** DigitLength(num2) - DigitLength(num1)));
+  return Times(num1Changed / num2Changed, Strip(10 ** (DigitLength(num2) - DigitLength(num1))));
 });
 
 /**

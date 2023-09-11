@@ -26,13 +26,6 @@
     "formatWithErrors": false
   },
   "files": {
-    "ignore": [
-      "node_modules",
-      "coverage",
-      "cache",
-      "dist",
-      "packages/**/**/*.d.ts",
-      ".vscode"
-    ]
+    "ignore": ["node_modules", "coverage", "cache", "dist", "packages/**/**/*.d.ts", ".vscode"]
   }
 }

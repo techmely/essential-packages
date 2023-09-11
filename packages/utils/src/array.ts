@@ -1,5 +1,7 @@
+import type { Entity } from "@techmely/types";
+
 /**
- * @description Take only unique value from an array
+ * @description Take only unique value from an array - Only work with primitives like string, number
  * @template T
  * @param {T[]} array - The input array
  * @returns {T[]} - New array with unique value
@@ -8,6 +10,24 @@ export function unique<T>(array: readonly T[]): T[] {
   return [...new Set(array)];
 }
 
+/**
+ * Take only unique object with specific key
+ * @template T
+ * @param items
+ * @param uniqueKey The key of object to specific the uniqueness
+ * @returns {T[]} New array with unique object
+ */
+export function uniqueObj<T>(items: readonly T[], uniqueKey: keyof T): T[] {
+  const map = new Map<T[keyof T], T>();
+  // We use for loop for high performance with large array
+  for (const item of items) {
+    const key = item[uniqueKey];
+    if (!map.has(key)) {
+      map.set(key, item);
+    }
+  }
+  return [...map.values()];
+}
 /**
  * @description Creates a slice of array with n elements taken from the beginning.
  * @template T
@@ -65,13 +85,15 @@ export function groupBy<K, V>(list: V[], keyGetter: (input: V) => K): Map<K, V[]
   });
   return map;
 }
-
-export const remove = <T>(arr: T[], el: T) => {
+/**
+ * Remove item if that item exist on the array
+ */
+export function remove<T>(arr: T[], el: T) {
   const i = arr.indexOf(el);
   if (i > -1) {
     arr.splice(i, 1);
   }
-};
+}
 
 /**
  * Get random items from an array
@@ -92,33 +114,13 @@ export function shuffle<T>(array: T[]): T[] {
 }
 
 /**
- * A specialized version of `forEach` for arrays.
- *
- * @private
- * @param {Array} [array] The array to iterate over.
- * @param {Function} iteratee The function invoked per iteration.
- * @returns {Array} Returns `array`.
- */
-export function arrayEach(array, iteratee) {
-  let index = -1;
-  const length = array.length;
-
-  while (++index < length) {
-    if (iteratee(array[index], index, array) === false) {
-      break;
-    }
-  }
-  return array;
-}
-
-/**
  * Creates an array of elements split into groups the length of `size`.
  * If `array` can't be split evenly, the final chunk will be the remaining
  * elements.
  *
  * @param {Array} array The array to process.
  * @param {number} [size=1] The length of each chunk
- * @returns {Array} Returns the new array of chunks.
+ * Returns the new array of chunks.
  * @example
  *
  * chunk(['a', 'b', 'c', 'd'], 2)
@@ -127,7 +129,7 @@ export function arrayEach(array, iteratee) {
  * chunk(['a', 'b', 'c', 'd'], 3)
  * // => [['a', 'b', 'c'], ['d']]
  */
-export function chunk<T>(array: readonly T[], size = 1) {
+export function chunk<T>(array: readonly T[], size = 1): T[][] {
   if (!array || array.length === 0) {
     return [];
   }

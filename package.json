@@ -26,7 +26,7 @@
     "@changesets/changelog-github": "^0.4.8",
     "@total-typescript/ts-reset": "0.5.1",
     "@changesets/cli": "^2.26.2",
-    "@ls-lint/ls-lint": "2.0.1",
+    "@ls-lint/ls-lint": "2.1.0",
     "@types/node": "20.5.7",
     "bun-types": "0.8.1",
     "bundlesize": "0.18.1",

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "Node",
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "useUnknownInCatchVariables": false
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "@techmely/nuxt-pinia-persist",
+  "version": "1.0.4",
+  "description": "Pinia Persist like Redux-Persist for Nuxt 3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techmely/essential-modules.git",
+    "directory": "modules/nuxt-pinia-persist"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "nuxi prepare playground && nuxt-module-build build",
+    "dev": "nuxi dev playground --dotenv .env.test",
+    "dev.build": "nuxi build playground",
+    "clean": "rm -rf node_modules",
+    "publish": "npm publish"
+  },
+  "dependencies": {
+    "@nuxt/kit": "3.7.4",
+    "@techmely/utils": "^1.9.1",
+    "@techmely/vue-pinia-persist": "1.0.4",
+    "defu": "^6.1.2"
+  },
+  "peerDependencies": {
+    "pinia": "^2.1.0"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^0.8.3",
+    "@nuxt/kit": "3.7.4",
+    "@nuxt/module-builder": "^0.5.1",
+    "@nuxt/schema": "^3.7.4",
+    "@nuxt/test-utils": "3.7.3",
+    "@types/node": "20.8.0",
+    "nuxt": "^3.7.4",
+    "pinia": "^2.1.6"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "tag": "latest"
+  }
+}

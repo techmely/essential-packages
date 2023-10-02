@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "@playground/nuxt-pinia-persist",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev --dotenv .env.test",
+    "build": "nuxt build",
+    "generate": "nuxt generate"
+  },
+  "devDependencies": {
+    "nuxt": "^3.7.0",
+    "@nuxt/kit": "^3.7.0"
+  }
+}

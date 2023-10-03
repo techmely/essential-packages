@@ -1,13 +1,4 @@
-<!--
-Get your module up and running quickly.
-
-Find and replace all on all files (CMD+SHIFT+F):
-- Name: My Module
-- Package name: my-module
-- Description: My new Nuxt module
--->
-
-# My Module
+# Nuxt partytown
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -16,45 +7,41 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 My new Nuxt module for doing amazing things.
 
-Inspire by https://github.com/dargmuesli/nuxt-cookie-control
-
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
+<!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/@techmely/nuxt-pinia-persist?file=playground%2Fapp.vue) -->
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Features
 
-<!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+- Lightweight - Just only import partytown lib
+- Integrate with Partytown easy on Nuxt 3! Just need to focus on configs partytown
 
 ## Quick Setup
 
-1. Add `my-module` dependency to your project
+1. Add `@techmely/nuxt-pinia-persist` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D my-module
+pnpm add -D @techmely/nuxt-pinia-persist
 
 # Using yarn
-yarn add --dev my-module
+yarn add --dev @techmely/nuxt-pinia-persist
 
 # Using npm
-npm install --save-dev my-module
+npm install --save-dev @techmely/nuxt-pinia-persist
 ```
 
-2. Add `my-module` to the `modules` section of `nuxt.config.ts`
+2. Add `@techmely/nuxt-pinia-persist` to the `modules` section of `nuxt.config.ts`
 
-```js
+```ts
 export default defineNuxtConfig({
   modules: [
-    'my-module'
+    '@techmely/nuxt-pinia-persist'
   ]
 })
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+3. Enjoy
 
 ## Development
 
@@ -64,6 +51,10 @@ npm install
 
 # Generate type stubs
 npm run dev:prepare
+
+# Copy public/partytown from this folder --> Playground
+mkdir -p modules/nuxt-pinia-persist/playground/public/partytown
+cp -R modules/nuxt-pinia-persist/public/partytown modules/nuxt-pinia-persist/playground/public/partytown
 
 # Develop with the playground
 npm run dev
@@ -83,14 +74,15 @@ npm run release
 ```
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/my-module
+[npm-version-src]: https://img.shields.io/npm/v/@techmely/nuxt-pinia-persist/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/@techmely/nuxt-pinia-persist
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/my-module
+[npm-downloads-src]: https://img.shields.io/npm/dm/@techmely/nuxt-pinia-persist.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/@techmely/nuxt-pinia-persist
 
-[license-src]: https://img.shields.io/npm/l/my-module.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/my-module
+[license-src]: https://img.shields.io/npm/l/@techmely/nuxt-pinia-persist.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/@techmely/nuxt-pinia-persist
 
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
+****

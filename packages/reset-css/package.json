@@ -13,6 +13,9 @@
   "exports": {
     ".": {
       "default": "./reset.css"
+    },
+    "./minify": {
+      "default": "./reset.min.css"
     }
   },
   "scripts": {

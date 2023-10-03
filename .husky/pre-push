@@ -1,4 +1,4 @@
 #!/bin/bash -e
 
 echo -e "\nStart run units test\n"
-bun run test.unit.run
+yarn run test.unit.run

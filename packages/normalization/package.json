@@ -1,56 +1,47 @@
 {
-	"name": "@techmely/normalization",
-	"version": "0.0.0",
-	"description": "Manage normalize state with fastest transform",
-	"author": "Harry Tran <nhattq.coding@gmail.com>",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/techmely/monorepo/tree/dev/packages/normalization"
-	},
-	"main": "dist/index.js",
-	"module": "dist/index.mjs",
-	"types": "dist/index.d.ts",
-	"publishConfig": {
-		"access": "public",
-		"directory": "dist",
-		"tag": "latest"
-	},
-	"exports": {
-		"import": "./dist/index.mjs",
-		"types": "./dist//index.d.ts",
-		"require": "./dist/index.cjs"
-	},
-	"files": [
-		"dist"
-	],
-	"scripts": {
-		"build": "echo PLACEHOLDER",
-		"stub": "unbuild --stub",
-		"clean": "rimraf dist",
-		"publish": "echo PLACEHOLDER",
-		"type-check": "tsc --noEmit --project ./tsconfig.json"
-	},
-	"dependencies": {
-		"mutative": "0.6.0"
-	},
-	"devDependencies": {
-		"@techmely/types": "workspace:*",
-		"unbuild": "2.0.0"
-	},
-	"funding": [
-		{
-			"type": "ko-fi",
-			"url": "https://ko-fi.com/harrytran998"
-		},
-		{
-			"type": "patreon",
-			"url": "https://www.patreon.com/harrytran998"
-		}
-	],
-	"keywords": [
-		"techmely",
-		"techmely-normalization",
-		"techmely-utils"
-	]
+  "name": "@techmely/normalization",
+  "version": "0.0.0",
+  "description": "Manage normalize state with fastest transform",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/types",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "tag": "latest"
+  },
+  "exports": {
+    "import": "./dist/index.mjs",
+    "types": "./dist//index.d.ts",
+    "require": "./dist/index.cjs"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "echo PLACEHOLDER",
+    "stub": "unbuild --stub",
+    "clean": "rimraf dist",
+    "publish": "echo PLACEHOLDER",
+    "type-check": "tsc --noEmit --project ./tsconfig.json"
+  },
+  "dependencies": {
+    "mutative": "0.6.0"
+  },
+  "devDependencies": {
+    "@techmely/types": "workspace:*",
+    "unbuild": "2.0.0"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ],
+  "keywords": ["techmely", "techmely-normalization", "techmely-utils"]
 }

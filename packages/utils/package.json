@@ -4,10 +4,7 @@
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/techmely/monorepo/tree/dev/packages/utils"
-  },
+  "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/utils",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -16,9 +13,7 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "tsup --dts",
     "build:dev": "tsup",
@@ -54,8 +49,5 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-utils"
-  ]
+  "keywords": ["techmely", "techmely-utils"]
 }

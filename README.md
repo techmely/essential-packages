@@ -1,4 +1,38 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5be3381428424f20831c97d76b811aab)](https://www.codacy.com/gh/TechMeLy/utils/dashboard?utm_source=github.com&utm_medium=referral&utm_content=TechMeLy/utils&utm_campaign=Badge_Grade) [![DeepScan grade](https://deepscan.io/api/teams/15239/projects/18403/branches/449716/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=15239&pid=18403&bid=449716) [![PRs or Discussion welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+# Techmely Essential Packages
+
+<!-- PROJECT LOGO -->
+<p align="center">
+  <a href="https://github.com/techmely/essential-packages">
+   <img src="https://i.ibb.co/3zBkRpd/LogoX300.png" alt="Logo">
+  </a>
+
+  <h3 align="center">Make your dreams come true easier with Techmely
+</h3>
+
+  <p align="center">
+    The essential packages to help you start your SAAS, product in a day!.
+    It's safe, performance and FREE! Start this if you can!
+    <br />
+    <a href="https://techmely.com"><strong>Learn more »</strong></a>
+    <br />
+    <br />
+    <a href="https://chat.techmely.com">Discord</a>
+    ·
+    <a href="https://techmely.com/essential-packages">Website</a>
+    ·
+    <a href="https://github.com/techmely/essential-packages/issues">Issues</a>
+  </p>
+</p>
+
+<p align="center">
+   <a href="https://chat.techmely.com"><img src="https://img.shields.io/badge/Discord-chat.techmely.com-%234A154B" alt="Join Techmely Discord"></a>
+   <a href="https://status.techmely.com"><img height="20px" src="https://betteruptime.com/status-badges/v1/monitor/a9kf.svg" alt="Uptime"></a>
+   <a href="https://github.com/techmely/essential-packages.com/stargazers"><img src="https://img.shields.io/github/stars/techmely/essential-packages" alt="Github Stars"></a>
+   <a href="https://github.com/techmely/essential-packages.com/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-purple" alt="License"></a>
+   <a href="https://github.com/techmely/essential-packages/pulse"><img src="https://img.shields.io/github/commit-activity/m/techmely/essential-packages" alt="Commits-per-month"></a>
+   <a href="https://youtube.com/@techmely"><img src="https://img.shields.io/youtube/channel/subscribers/UCg3EWZXQK0bnbQISG50Nwfg"></a>
+   <a href="https://contributor-covenant.org/version/1/4/code-of-conduct/ "><img src="https://img.shields.io/badge/Contributor%20Covenant-1.4-purple" /></a>
+</p>
 
 ---
 
@@ -8,45 +42,39 @@
 
 <hr>
 
-## Goals
+## Goals of project
 
 - Typescript support
 - Tree-shaking
-- No dependencies
-- High performance
+- Have no dependencies as possible
+- High performance(Design with modular in mind - minimal, readable and well thought out API)
+- Full tested with the code coverage 100%
 - Documentation
-- Well tested
 
 ## Features
 
-- 📦 <5kb mini libraries
-- Tree-shakable ESM
-- Unit Test coverage 80% with [vitest](https://vitest.dev)
-- Code quality analysis is A+ with [codacy](https://www.codacy.com) and [deepscan](https://deepscan.io)
-- Bundle to commonjs and es-module with [tsup](https://github.com/egoist/tsup)
-- Package manager [pnpm](https://pnpm.io), safe and fast
-- Release with [semantic-release](https://npm.im/semantic-release)
+| Project      | Features |  State Quality |
+| :---        |    :---   |          :----: |
+| @techmely/nuxt-partytown      | Integrate with Partytown easy on Nuxt 3! Just need to focus on configs partytown       | Title       | Title       |
+| @techmely/vue-pinia-persist   | Text        | Text        | Text        |
+| @techmely/reset-css   | Text        | Text        | Text        |
+|  @techmely/utils   |  <div>📦 <5kb mini libraries Tree-shakable ESM Unit Test coverage 80% with [vitest](https://vitest.dev) Code quality analysis is A+ with [codacy](https://www.codacy.com) and [deepscan](https://deepscan.io)</div>        | Text        | Text        |
+
+
 
 ## Install to use in your project
 
-With npm
+You just need to change the `postfix` of project like `utils`, `reset-css`, `vue-partytown`...
+
+
+Example:
 
 ```bash
 npm i --save-dev @techmely/utils
+yarn add @techmely/utils
+pnpm add @techmely/utils
+bun add @techmely/utils
 ```
-
-With yarn
-
-```bash
-yarn add -D @techmely/utils
-```
-
-With pnpm
-
-```bash
-pnpm add -D @techmely/utils
-```
-
 ## How to contributes
 
 1. Run `yarn` to install all dependencies
@@ -54,6 +82,9 @@ pnpm add -D @techmely/utils
 2. Install VsCode Extension: Rome
 3. CRUD feature and do not forget to add unit test for them
    - Remember add typing for all functions
+
+4. Create the pull request --> Please request me for review code
+5. After Techmely Team approved PR --> Merge to main --> CI/CD automation release new version
 
 ## License
 

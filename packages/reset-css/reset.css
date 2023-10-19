@@ -14,9 +14,6 @@
     -webkit-text-size-adjust: 100%; /* 2 */
     -moz-tab-size: 4; /* 3 */
     tab-size: 4; /* 3 */
-    /* See https://github.com/system-fonts/modern-font-stacks#neo-grotesque */
-    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif,
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
   }
 
   /*
@@ -73,7 +70,7 @@
   }
 
   /*
-  8. Avoid text overflows
+  8. Avoid text overflows + Headings are unstyled
   */
   p,
   h1,
@@ -82,6 +79,8 @@
   h4,
   h5,
   h6 {
+    font-size: inherit;
+    font-weight: inherit;
     overflow-wrap: break-word;
   }
 
@@ -132,16 +131,12 @@
   }
 
   /*
-  1. Use the user's configured `mono` font family by default.
   2. Correct the odd `em` font sizing in all browsers.
   */
-
   code,
   kbd,
   samp,
   pre {
-    font-family: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif,
-      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
     font-size: 1em; /* 2 */
   }
 
@@ -238,7 +233,6 @@
   /*
   Add the correct display in Chrome and Safari.
   */
-
   summary {
     display: list-item;
   }

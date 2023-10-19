@@ -1,6 +1,6 @@
 {
   "name": "@techmely/reset-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Techmely Reset CSS",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -34,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": ["techmely", "reset-css"]
+  "keywords": [
+    "techmely",
+    "reset-css"
+  ]
 }

@@ -1,21 +1,18 @@
 {
   "name": "@techmely/reset-css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Techmely Reset CSS",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/types",
-  "publishConfig": {
-    "access": "public",
-    "directory": "dist",
-    "tag": "latest"
-  },
+  "files": [
+    ".",
+    "./reset.css",
+    "./reset.min.css"
+  ],
   "exports": {
     ".": {
       "default": "./reset.css"
-    },
-    "./minify": {
-      "default": "./reset.min.css"
     }
   },
   "scripts": {
@@ -37,5 +34,10 @@
   "keywords": [
     "techmely",
     "reset-css"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "tag": "latest"
+  }
 }

@@ -1,5 +1,11 @@
 # @techmely/reset-css
 
+## 1.0.2
+
+### Patch Changes
+
+- Fix exports files
+
 ## 1.0.1
 
 ### Patch Changes

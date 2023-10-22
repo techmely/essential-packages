@@ -17,6 +17,7 @@ export * from "./number";
 export * from "./object";
 export * from "./process";
 export * from "./regex";
+export * from "./singleton";
 export * from "./stream";
 export * from "./string";
 

@@ -394,8 +394,8 @@ __metadata:
   linkType: hard
 
 "@babel/traverse@npm:^7.22.5, @babel/traverse@npm:^7.23.0":
-  version: 7.23.0
-  resolution: "@babel/traverse@npm:7.23.0"
+  version: 7.23.2
+  resolution: "@babel/traverse@npm:7.23.2"
   dependencies:
     "@babel/code-frame": "npm:^7.22.13"
     "@babel/generator": "npm:^7.23.0"
@@ -407,7 +407,7 @@ __metadata:
     "@babel/types": "npm:^7.23.0"
     debug: "npm:^4.1.0"
     globals: "npm:^11.1.0"
-  checksum: 84f93e64179965a0de6109a8b1ce92d66eb52a76e8ba325d27bdec6952cedd8fc98eabf09fe443ef667a051300dc7ed8924e7bf61a87ad456501d1da46657509
+  checksum: d096c7c4bab9262a2f658298a3c630ae4a15a10755bb257ae91d5ab3e3b2877438934859c8d34018b7727379fe6b26c4fa2efc81cf4c462a7fe00caf79fa02ff
   languageName: node
   linkType: hard
 
@@ -11642,11 +11642,11 @@ __metadata:
   linkType: hard
 
 "undici@npm:^5.23.0":
-  version: 5.25.3
-  resolution: "undici@npm:5.25.3"
+  version: 5.26.3
+  resolution: "undici@npm:5.26.3"
   dependencies:
     "@fastify/busboy": "npm:^2.0.0"
-  checksum: 385c70a7212a965c412e0854856bb74c084b4f9bbe55403d72178cb1c8bd0d8e5d657c52c57294c150c80ce96cdf40feeb4f796c4e1f11d0017cc8a4cfda3e5a
+  checksum: af418c4ea429fdd63640b780a21c4f790685f60aa3766663bbff1081c3d20a70da70cbb4d4955d5c0c78f06cd13527d171edf3a65db8476a6c02539f495e9f48
   languageName: node
   linkType: hard
 

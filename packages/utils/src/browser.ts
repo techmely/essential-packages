@@ -1,6 +1,7 @@
+// Take this from https://developer.chrome.com/blog/using-requestidlecallback
+
 import { isBrowser } from "./is";
 
-// Shim from https://developers.google.com/web/updates/2015/08/using-requestidlecallback
 function requestIdleCallbackShim(cb: any) {
   const start = Date.now();
   return setTimeout(function () {

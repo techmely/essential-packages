@@ -1,5 +1,11 @@
 # @techmely/reset-css
 
+## 1.0.3
+
+### Patch Changes
+
+- Fix: add border none to button
+
 ## 1.0.2
 
 ### Patch Changes

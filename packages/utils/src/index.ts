@@ -1,4 +1,5 @@
 export * from "./array";
+export * from "./browser";
 export * from "./bytes";
 export * from "./calculate";
 export * from "./cache";
@@ -23,14 +24,4 @@ export * from "./string";
 
 export * from "./vector";
 
-const __DEV__ = process.env.NODE_ENV !== "production";
-
-export const EMPTY_OBJ: { readonly [key: string]: any } = __DEV__ ? Object.freeze({}) : {};
-export const EMPTY_ARR = __DEV__ ? Object.freeze([]) : [];
 export const noop = () => {};
-
-export const assert = (condition: boolean, message: string): asserts condition => {
-  if (!condition) {
-    throw new Error(message);
-  }
-};

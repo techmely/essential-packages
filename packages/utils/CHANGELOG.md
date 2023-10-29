@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.9.4
+
+### Patch Changes
+
+- Add tiny emitter func + merge streams
+
 ## 1.9.3
 
 ### Patch Changes

@@ -32,7 +32,7 @@
     "pinia": "^2.1.0"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^0.8.3",
+    "@nuxt/devtools": "^1.0.0",
     "@nuxt/kit": "3.7.4",
     "@nuxt/module-builder": "^0.5.1",
     "@nuxt/schema": "^3.7.4",

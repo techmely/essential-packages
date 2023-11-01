@@ -2377,7 +2377,7 @@ __metadata:
     "@techmely/utils": "npm:^1.9.1"
     cookie: "npm:^0.5.0"
     pinia: "npm:^2.1.6"
-    ts-essentials: "npm:9.4.0"
+    ts-essentials: "npm:9.4.1"
     unbuild: "npm:2.0.0"
     vitest: "npm:^0.34.4"
     vue: "npm:^3.3.4"
@@ -11300,15 +11300,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-essentials@npm:9.4.0":
-  version: 9.4.0
-  resolution: "ts-essentials@npm:9.4.0"
+"ts-essentials@npm:9.4.1":
+  version: 9.4.1
+  resolution: "ts-essentials@npm:9.4.1"
   peerDependencies:
     typescript: ">=4.1.0"
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: fa362e696b1acf12f9c5ae3df1c083e5259bdbd8c916939e1eb8ea63320c9a71325057b17b2de052fc95c3e0346e50250f3b1534f6d7f71635e046ff099e3f90
+  checksum: 03f195f1f8935c5e72615e05d5ca160aeb987ba23e1f7ffad2dc4ac47604a6931621bf120279c3325513894a2040cee01070f4df95c1e3bac6435c25339eb519
   languageName: node
   linkType: hard
 

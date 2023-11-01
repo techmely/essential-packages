@@ -9067,8 +9067,8 @@ __metadata:
   linkType: hard
 
 "pinia@npm:^2.1.6":
-  version: 2.1.6
-  resolution: "pinia@npm:2.1.6"
+  version: 2.1.7
+  resolution: "pinia@npm:2.1.7"
   dependencies:
     "@vue/devtools-api": "npm:^6.5.0"
     vue-demi: "npm:>=0.14.5"
@@ -9081,7 +9081,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 8f26107349dc806f7d48f44b4cb9006ba45caff6f64cc8ddd59740a012b1b091f87c0611fed8154e30d91a3fbda9efbe00a761a33ccc559ca7b52f70abd20f6f
+  checksum: f4380a4db04b5b8565ed8a6843821d91f8f650d79dd9f0094005248bd963521b8a73419032fda76541e59b895b0e7852e67ca9d0408162cc391ce5a1bcbda445
   languageName: node
   linkType: hard
 

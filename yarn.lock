@@ -1655,7 +1655,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/schema@npm:3.7.4, @nuxt/schema@npm:^3.7.3, @nuxt/schema@npm:^3.7.4":
+"@nuxt/schema@npm:3.7.4":
   version: 3.7.4
   resolution: "@nuxt/schema@npm:3.7.4"
   dependencies:
@@ -1671,6 +1671,25 @@ __metadata:
     unimport: "npm:^3.3.0"
     untyped: "npm:^1.4.0"
   checksum: f3c52fbc5f13e979a6c6a2f824fde2ff6069cd90013f7109fb1f6df02ee007ae12a32d825e6c3787f5aa4e18c983bf4bc6d4dfea9182280317015ad194fd379b
+  languageName: node
+  linkType: hard
+
+"@nuxt/schema@npm:^3.7.3, @nuxt/schema@npm:^3.7.4":
+  version: 3.8.0
+  resolution: "@nuxt/schema@npm:3.8.0"
+  dependencies:
+    "@nuxt/ui-templates": "npm:^1.3.1"
+    consola: "npm:^3.2.3"
+    defu: "npm:^6.1.2"
+    hookable: "npm:^5.5.3"
+    pathe: "npm:^1.1.1"
+    pkg-types: "npm:^1.0.3"
+    postcss-import-resolver: "npm:^2.0.0"
+    std-env: "npm:^3.4.3"
+    ufo: "npm:^1.3.1"
+    unimport: "npm:^3.4.0"
+    untyped: "npm:^1.4.0"
+  checksum: d7f1a109e4a0cbca05b7739e6e33773a40b63003b53f74f2dffa52c4de536d1a29122792b5375d61bfcf31b6c56b901411f132eb0ef32111d1a65b23358779f5
   languageName: node
   linkType: hard
 
@@ -11557,7 +11576,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ufo@npm:^1.1.2, ufo@npm:^1.2.0, ufo@npm:^1.3.0":
+"ufo@npm:^1.1.2, ufo@npm:^1.2.0, ufo@npm:^1.3.0, ufo@npm:^1.3.1":
   version: 1.3.1
   resolution: "ufo@npm:1.3.1"
   checksum: 9348ff03f76820116c4735625ee894912bc92b6d49dc63474a89a35d2752265421a405f0033b961bb0b885d460c915e7860adb6dc854422faf3483882f14ba86
@@ -11675,7 +11694,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unimport@npm:^3.3.0":
+"unimport@npm:^3.3.0, unimport@npm:^3.4.0":
   version: 3.4.0
   resolution: "unimport@npm:3.4.0"
   dependencies:

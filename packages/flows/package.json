@@ -1,0 +1,38 @@
+{
+  "name": "@techmely/flows",
+  "description": "State management with Solid following Flux Architecture",
+  "author": {
+    "name": "Harry Tran",
+    "email": "nhattq.coding@gmail.com",
+    "url": "https://github.com/harrytran998"
+  },
+  "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/flows",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "watch": "tsup --watch"
+  },
+  "dependencies": {
+    "@techmely/utils": "1.9.4",
+    "mutative": "0.6.0"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.8.4"
+  },
+  "devDependencies": {
+    "@solidjs/testing-library": "0.8.4",
+    "solid-js": "^1.8.5",
+    "ts-essentials": "9.4.1",
+    "tsup": "7.2.0"
+  }
+}

@@ -16,7 +16,9 @@
     "types": "./dist//index.d.ts",
     "require": "./dist/index.cjs"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "unbuild",
     "stub": "unbuild --stub",
@@ -40,5 +42,8 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": ["techmely", "types"]
+  "keywords": [
+    "techmely",
+    "types"
+  ]
 }

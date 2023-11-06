@@ -54,6 +54,7 @@
     "codeql",
     "combobox",
     "compat",
+    "computeds",
     "decamelize",
     "decamelized",
     "eslintignore",

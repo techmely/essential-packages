@@ -1,76 +1,85 @@
-import type { Accessor, Setter } from "solid-js";
-import type { MarkRequired } from "ts-essentials";
+import type { Tree } from "@techmely/types";
 
-export type FlowStateType = "flow" | "computed" | "proxy";
-export type Lazy<T> = T | (() => T);
-export type Parameter<T> = T extends (arg: infer U) => any ? U : never;
-export type Comparator<T> = false | ((pre: T, next: T) => boolean);
+/**
+ * Type alias for any function with any number of arguments and any return type.
+ */
+export type AnyFunc = (...args: any[]) => any;
+export type AnyFuncRecords = { readonly [K in string]: AnyFunc };
 
-export type FlowStateOptions<T> = {
-  name?: string;
-  comparator?: Comparator<T>;
+/**
+ * type alias for an object with string keys and `Action` function values
+ * @returns a generic set of `Action` functions
+ */
+export type FlowActions<T extends AnyFuncRecords> = { readonly [K in keyof T]: T[K] };
+
+/**
+ * Interface to be extended by the user when they add properties through plugins.
+ */
+
+// biome-ignore lint/suspicious/noEmptyInterface: Ignore
+export interface FlowCustomProperties<
+  Id extends string = string,
+  S extends Tree = Tree,
+  G = _GettersTree<S>,
+  A = _ActionsTree,
+> {}
+
+/**
+ * Properties that are added to every `store.$state` by `flow.use()`.
+ */
+
+// biome-ignore lint/suspicious/noEmptyInterface: Ignore
+export interface FlowCustomStateProperties<S extends Tree = Tree> {}
+
+export type FlowStore<
+  S extends Record<string, unknown>,
+  A extends AnyFuncRecords,
+  // biome-ignore lint/complexity/noBannedTypes: Typescript
+  G extends AnyFuncRecords = {},
+> = {
+  state: S;
+  getters: G;
+  actions: FlowActions<A>;
+  plugins: FlowStorePlugin<S, A, G>[];
+  _p: FlowStorePlugin<S, A, G>[];
 };
 
-export interface FlowState<T> extends MarkRequired<FlowStateOptions<T>, "name"> {
-  type: FlowStateType;
-  initValue: Lazy<T>;
+export type FactoryFlowStore<
+  S extends Record<string, unknown>,
+  A extends AnyFuncRecords,
+  // biome-ignore lint/complexity/noBannedTypes: Typescript
+  G extends AnyFuncRecords = {},
+> = (initValue?: S | ((fallback: S) => S)) => FlowStore<S, A, G>;
+
+export interface FlowPluginContext<
+  S extends Record<string, unknown>,
+  A extends AnyFuncRecords,
+  // biome-ignore lint/complexity/noBannedTypes: Typescript
+  G extends AnyFuncRecords = {},
+> {
+  flow: FlowStore<S, A, G>;
 }
+export interface FlowStorePlugin<
+  S extends Record<string, unknown>,
+  A extends AnyFuncRecords,
+  // biome-ignore lint/complexity/noBannedTypes: Typescript
+  G extends AnyFuncRecords = {},
+> {
+  (context: FlowPluginContext<S, A, G>):
+    | Partial<FlowCustomProperties & FlowCustomStateProperties>
+    | (() => void);
+}
+
+export type _GettersTree<S extends Tree> = Record<
+  string,
+  ((state: FlowCustomStateProperties<S>) => any) | (() => any)
+>;
 
 /**
- * Computed
+ * Type of an object of Actions. For internal usage only.
+ * For internal use **only**
  */
-
-export interface FlowStateContext {
-  get<T>(state: FlowState<T>): T;
-  get<T>(state: ComputationFlowState<T>): T;
-  get<T, A, R>(state: ProxyFlowState<T, A, R>): T;
-
-  set<T>(state: FlowState<T>, value: Parameter<Setter<T>>): void;
-  set<T, A, R>(state: ProxyFlowState<T, A, R>, action: A): R;
-}
-
-export type ComputationWithInitial<T> = (context: FlowStateContext, prev: T) => T;
-export type ComputationWithoutInitial<T> = (context: FlowStateContext, prev?: T) => T;
-export type ComputationFlowContext<T> = ComputationWithInitial<T> | ComputationWithoutInitial<T>;
-export type ComputedFlow<T> = ComputationFlowStateWithInit<T> | ComputationFlowStateWithoutInit<T>;
-
-export type ComputationWithInitOptions<T> = FlowStateOptions<T> & { initValue: Lazy<T> };
-export type ComputationWithoutInitOptions<T> = FlowStateOptions<T>;
-export type ComputationOptions<T> =
-  | ComputationWithInitOptions<T>
-  | ComputationWithoutInitOptions<T>;
-
-export interface ComputationFlowStateWithoutInit<T> extends FlowState<T> {
-  type: "computed";
-  computation: ComputationWithoutInitial<T>;
-}
-
-export interface ComputationFlowStateWithInit<T> extends FlowState<T> {
-  type: "computed";
-  computation: ComputationWithInitial<T>;
-}
-
-export type ComputationFlowState<T> =
-  | ComputationFlowStateWithoutInit<T>
-  | ComputationFlowStateWithInit<T>;
-
-/**
- * PROXY
- */
-export type ProxySignal<T, A, V> = [Accessor<T>, (action: A) => V];
-
-interface ProxyGetSet<T, A, V> {
-  get: (context: FlowStateContext) => T;
-  set: (context: FlowStateContext, action: A) => V;
-}
-export interface ProxyFlowState<T, A, V> extends ProxyGetSet<T, A, V> {
-  name: string;
-  type: FlowStateType;
-  comparator?: Comparator<T>;
-}
-export interface ProxyFlowOptions<T, A, V> extends FlowStateOptions<T>, ProxyGetSet<T, A, V> {}
-
-export type FlowGetSetState<T, A, V> = FlowState<T> | ComputedFlow<T> | ProxyFlowState<T, A, V>;
+export type _ActionsTree = Record<string, (...args: any[]) => any>;
 
 export type AnyAction<T extends string = string> = {
   type: T;

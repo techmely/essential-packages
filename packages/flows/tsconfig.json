@@ -1,5 +1,4 @@
 {
-  "include": ["src"],
   "exclude": ["dist", "node_modules"],
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
@@ -25,6 +24,7 @@
     "useUnknownInCatchVariables": false,
     "verbatimModuleSyntax": false,
     "jsx": "preserve",
+    "jsxImportSource": "solid-js",
     "paths": {
       "@techmely/utils": ["../utils/src/index.ts"],
       "@techmely/utils/*": ["../utils/src/*"]

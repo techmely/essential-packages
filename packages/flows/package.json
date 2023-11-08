@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "@solidjs/testing-library": "0.8.4",
+    "@techmely/types": "1.5.2",
     "solid-js": "^1.8.5",
     "ts-essentials": "9.4.1",
     "tsup": "7.2.0"

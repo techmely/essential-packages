@@ -1,5 +1,11 @@
 # @techmely/flows
 
+## 1.1.0
+
+### Minor Changes
+
+- Refactor: update store to new api model
+
 ## 1.0.1
 
 ### Patch Changes

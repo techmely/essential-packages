@@ -1,5 +1,12 @@
 # @techmely/flows
 
+## 1.1.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @techmely/utils@1.9.5
+
 ## 1.1.0
 
 ### Minor Changes

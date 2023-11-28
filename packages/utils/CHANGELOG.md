@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.9.5
+
+### Patch Changes
+
+- Fix remove side effects on @techmely/utils
+
 ## 1.9.4
 
 ### Patch Changes

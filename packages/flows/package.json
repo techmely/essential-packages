@@ -7,7 +7,7 @@
     "url": "https://github.com/harrytran998"
   },
   "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/flows",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "types": "dist/index.d.ts",
   "files": [
@@ -27,7 +27,7 @@
     "publish": "npm publish"
   },
   "dependencies": {
-    "@techmely/utils": "1.9.4",
+    "@techmely/utils": "1.9.5",
     "mutative": "0.6.0"
   },
   "peerDependencies": {

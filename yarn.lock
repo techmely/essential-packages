@@ -2627,7 +2627,7 @@ __metadata:
   dependencies:
     "@solidjs/testing-library": "npm:0.8.4"
     "@techmely/types": "npm:1.5.2"
-    "@techmely/utils": "npm:1.9.4"
+    "@techmely/utils": "npm:1.9.5"
     mutative: "npm:0.6.0"
     solid-js: "npm:^1.8.5"
     ts-essentials: "npm:9.4.1"
@@ -2729,7 +2729,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@techmely/utils@npm:1.9.4, @techmely/utils@npm:^1.9.1, @techmely/utils@workspace:packages/utils":
+"@techmely/utils@npm:1.9.5, @techmely/utils@npm:^1.9.1, @techmely/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:
@@ -11391,10 +11391,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"seroval@npm:^0.12.0":
-  version: 0.12.3
-  resolution: "seroval@npm:0.12.3"
-  checksum: 06a64138459e4b331010e230586a2c8ab2f9fcc2a9274a07a4e15e49bf923192cde84f787a5a36585687afb2d68b8f3db991e5e87129eb3aa03407019bf53c5e
+"seroval@npm:^0.14.1":
+  version: 0.14.1
+  resolution: "seroval@npm:0.14.1"
+  checksum: 53ee18d2d74750081ce5deb903aca36101b723adcfbc0f9c0697a3f01238dd810fec9fb9e20ac2a46e3791e274bbf7a716874b03efd6e0e81b80f7c1f747cbdb
   languageName: node
   linkType: hard
 
@@ -11663,12 +11663,12 @@ __metadata:
   linkType: hard
 
 "solid-js@npm:^1.8.5":
-  version: 1.8.5
-  resolution: "solid-js@npm:1.8.5"
+  version: 1.8.6
+  resolution: "solid-js@npm:1.8.6"
   dependencies:
     csstype: "npm:^3.1.0"
-    seroval: "npm:^0.12.0"
-  checksum: c1cb42dbdde3e54efc6d4542e6944d5ca7becb7af738ce432b7cfc36c080b7d7ed2f66b6f54cd1530a8154e0e028b84d60874a422e0b0c1d8d07284094be30ad
+    seroval: "npm:^0.14.1"
+  checksum: 3161e99b3eb85caed9ce24febd1a1bc1c59007d54390ecb3cee435116729fb272d7f06798787dff7586533605ca4a9ae78a80dc8b7ae32ae8ca4bf6b591b90c5
   languageName: node
   linkType: hard
 

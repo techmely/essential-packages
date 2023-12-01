@@ -1859,8 +1859,8 @@ __metadata:
   linkType: hard
 
 "@nuxt/module-builder@npm:^0.5.2":
-  version: 0.5.2
-  resolution: "@nuxt/module-builder@npm:0.5.2"
+  version: 0.5.4
+  resolution: "@nuxt/module-builder@npm:0.5.4"
   dependencies:
     citty: "npm:^0.1.4"
     consola: "npm:^3.2.3"
@@ -1868,12 +1868,12 @@ __metadata:
     pathe: "npm:^1.1.1"
     unbuild: "npm:^2.0.0"
   peerDependencies:
-    "@nuxt/kit": ^3.7.4
-    nuxi: ^3.9.0
+    "@nuxt/kit": ^3.8.1
+    nuxi: ^3.9.1
   bin:
     nuxt-build-module: dist/cli.mjs
     nuxt-module-build: dist/cli.mjs
-  checksum: 7b2b9d17d9c5caa458f87d9b2502d246eb6905a034ac7fbeb311322e150e1e4b1a26a40c5d9db7a4ab2b639c9e2e632a849e53e465812fca2f227159b37742a3
+  checksum: 5038fbc05016750e9dd6558ec4900941f8b71473c6517c53b44ed2723e0ea69709801761eaf0c2dd2b17f0cb871f316fff93be2451052d57eb9bcf958b7e37d2
   languageName: node
   linkType: hard
 
@@ -2627,7 +2627,7 @@ __metadata:
   dependencies:
     "@solidjs/testing-library": "npm:0.8.4"
     "@techmely/types": "npm:1.5.2"
-    "@techmely/utils": "npm:1.9.4"
+    "@techmely/utils": "npm:1.9.5"
     mutative: "npm:0.6.0"
     solid-js: "npm:^1.8.5"
     ts-essentials: "npm:9.4.1"
@@ -2729,7 +2729,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@techmely/utils@npm:1.9.4, @techmely/utils@npm:^1.9.1, @techmely/utils@workspace:packages/utils":
+"@techmely/utils@npm:1.9.5, @techmely/utils@npm:^1.9.1, @techmely/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:

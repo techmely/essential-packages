@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.9.6
+
+### Patch Changes
+
+- Add custom error class in return message on invariant function
+
 ## 1.9.5
 
 ### Patch Changes

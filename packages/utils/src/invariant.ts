@@ -1,13 +1,19 @@
-const isProduction = process.env.NODE_ENV === "production";
 const prefix = "Invariant failed";
 
-// Throw an error if the condition fails
-// Strip out error messages for production
-// > Not providing an inline default argument for message as the result is smaller
+/**
+ * Throw an error if the condition fails
+ * Strip out error messages for production
+ * > Not providing an inline default argument for message as the result is smaller
+ */
+
+export function invariant(condition: any, message?: string | (() => string)): asserts condition ;
+export function invariant(condition: any, exception?: any): asserts condition ;
 export function invariant(
   condition: any,
-  // Can provide a string, or a function that returns a string for cases where
-  // the message takes a fair amount of effort to compute
+  /**
+   * Can provide a string, a function, or an Error Class that returns a string for cases where
+   * the message takes a fair amount of effort to compute
+   */
   message?: string | (() => string),
 ): asserts condition {
   if (condition) {
@@ -15,19 +21,20 @@ export function invariant(
   }
   // Condition not passed
 
-  // In production we strip the message but still throw
-  if (isProduction) {
-    throw new Error(prefix);
-  }
-
   // When not in production we allow the message to pass through
   // *This block will be removed in production builds*
+  if (typeof message === "string" || typeof message === "function") {
+    const provided = typeof message === "function" ? message() : message;
+    // Options:
+    // 1. message provided: `${prefix}: ${provided}`
+    // 2. message not provided: prefix
+    const value = provided ? `${prefix}: ${provided}` : prefix;
+    throw new Error(value);
+  }
 
-  const provided: string | undefined = typeof message === "function" ? message() : message;
-
-  // Options:
-  // 1. message provided: `${prefix}: ${provided}`
-  // 2. message not provided: prefix
-  const value: string = provided ? `${prefix}: ${provided}` : prefix;
-  throw new Error(value);
+  /**
+   * Custom error class
+   */
+  if (message) throw message;
+  throw new Error(prefix);
 }

@@ -34,10 +34,10 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "biomejs.biome",
   "editor.codeActionsOnSave": {
-    "source.organizeImports.biome": true,
-    "quickfix.biome": true,
-    "source.fixAll": true,
-    "source.addMissingImports": true
+    "source.organizeImports.biome": "explicit",
+    "quickfix.biome": "explicit",
+    "source.fixAll": "explicit",
+    "source.addMissingImports": "explicit"
   },
   "npm.packageManager": "yarn",
   "cSpell.words": [

@@ -31,12 +31,12 @@
     "vue": "^3.3.0"
   },
   "devDependencies": {
-    "cookie": "^0.5.0",
+    "cookie": "^0.6.0",
     "pinia": "^2.1.7",
     "ts-essentials": "9.4.1",
     "unbuild": "2.0.0",
-    "vitest": "0.34.6",
-    "vue": "^3.3.7"
+    "vitest": "1.1.0",
+    "vue": "^3.3.13"
   },
   "publishConfig": {
     "access": "public",

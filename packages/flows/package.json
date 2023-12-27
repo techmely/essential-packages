@@ -28,17 +28,17 @@
   },
   "dependencies": {
     "@techmely/utils": "1.9.6",
-    "mutative": "0.6.0"
+    "mutative": "1.0.2"
   },
   "peerDependencies": {
     "solid-js": "^1.8.4"
   },
   "devDependencies": {
-    "@solidjs/testing-library": "0.8.4",
+    "@solidjs/testing-library": "0.8.5",
     "@techmely/types": "1.5.2",
-    "solid-js": "^1.8.5",
+    "solid-js": "^1.8.7",
     "ts-essentials": "9.4.1",
-    "tsup": "7.2.0"
+    "tsup": "8.0.1"
   },
   "publishConfig": {
     "access": "public",

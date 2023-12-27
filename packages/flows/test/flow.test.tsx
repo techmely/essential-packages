@@ -1,4 +1,4 @@
-import { sleep } from "@techmely/utils/promises";
+import { sleep } from "@techmely/utils/sleep";
 import { describe, expect, it } from "vitest";
 
 import { defineFlowStore } from "../src";

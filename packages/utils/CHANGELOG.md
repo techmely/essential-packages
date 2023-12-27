@@ -1,5 +1,14 @@
 # @techmely/utils
 
+## 1.10.0
+
+### Minor Changes
+
+- Add generate unique id with nanoid
+- Add promise: cancelable, defer, timeout, delay, queue
+- Add convert hrm time
+- Add high-res time-span
+
 ## 1.9.6
 
 ### Patch Changes

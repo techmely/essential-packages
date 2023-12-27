@@ -25,7 +25,9 @@ export function deepMerge<T extends Record<string, any>, S extends Record<string
   }
 
   if (isMergeableObject(target) && isMergeableObject(source)) {
-    Object.keys(source).forEach((key) => {
+    const sourceKeys = Object.keys(source);
+
+    for (const key of sourceKeys) {
       if (isMergeableObject(source[key])) {
         if (!target[key]) {
           // @ts-expect-error I do not know how to fix this
@@ -42,7 +44,7 @@ export function deepMerge<T extends Record<string, any>, S extends Record<string
         // @ts-expect-error I do not know how to fix this
         target[key] = source[key];
       }
-    });
+    }
   }
 
   return deepMerge(target, ...sources);
@@ -73,7 +75,10 @@ export function removeEmptyObj(obj: any) {
  * @returns {any} - the clean obj
  */
 export function removeUndefObj<T extends Record<string, unknown>>(obj: T): T {
-  Object.keys(obj).forEach((key: string) => (isUndef(obj[key]) ? obj[key] === undefined : {}));
+  const keys = Object.keys(obj);
+  for (const key of keys) {
+    isUndef(obj[key]) ? obj[key] === undefined : {};
+  }
   return obj;
 }
 

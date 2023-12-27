@@ -1,5 +1,3 @@
-import type { Entity } from "@techmely/types";
-
 /**
  * @description Take only unique value from an array - Only work with primitives like string, number
  * @template T
@@ -74,7 +72,7 @@ export function findLastIndex<T>(
 
 export function groupBy<K, V>(list: V[], keyGetter: (input: V) => K): Map<K, V[]> {
   const map = new Map<K, V[]>();
-  list.forEach((item) => {
+  for (const item of list) {
     const key = keyGetter(item);
     const collection = map.get(key);
     if (collection) {
@@ -82,7 +80,7 @@ export function groupBy<K, V>(list: V[], keyGetter: (input: V) => K): Map<K, V[]
     } else {
       map.set(key, [item]);
     }
-  });
+  }
   return map;
 }
 /**
@@ -165,7 +163,7 @@ export function normalize<T>(array: T[], key: keyof T): Record<typeof key, T> {
   return array.reduce((acc, cur) => {
     const keyValue = cur[key] as string | number | undefined;
     if (keyValue) {
-      return { ...acc, [keyValue]: cur };
+      return Object.assign(acc, { [keyValue]: cur });
     }
     return acc;
   }, {} as Record<typeof key, T>);

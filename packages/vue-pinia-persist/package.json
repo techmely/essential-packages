@@ -35,7 +35,7 @@
     "pinia": "^2.1.7",
     "ts-essentials": "9.4.1",
     "unbuild": "2.0.0",
-    "vitest": "1.1.0",
+    "vitest": "1.1.1",
     "vue": "^3.3.13"
   },
   "publishConfig": {

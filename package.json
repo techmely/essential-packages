@@ -29,7 +29,7 @@
     "@playwright/test": "1.40.1",
     "@total-typescript/ts-reset": "0.5.1",
     "@types/node": "20.10.5",
-    "@vitest/coverage-v8": "1.1.0",
+    "@vitest/coverage-v8": "1.1.1",
     "bun-types": "1.0.20",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",

@@ -2901,7 +2901,7 @@ __metadata:
     "@playwright/test": "npm:1.40.1"
     "@total-typescript/ts-reset": "npm:0.5.1"
     "@types/node": "npm:20.10.5"
-    "@vitest/coverage-v8": "npm:1.1.0"
+    "@vitest/coverage-v8": "npm:1.1.1"
     bun-types: "npm:1.0.20"
     bundlesize: "npm:0.18.1"
     cross-env: "npm:7.0.3"
@@ -2983,7 +2983,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@techmely/utils@npm:1.9.6, @techmely/utils@npm:^1.9.1, @techmely/utils@workspace:packages/utils":
+"@techmely/utils@npm:1.9.6":
+  version: 1.9.6
+  resolution: "@techmely/utils@npm:1.9.6"
+  peerDependencies:
+    dayjs: ^1.11.6
+  peerDependenciesMeta:
+    dayjs:
+      optional: true
+  checksum: fac3667a406510440081c5c3971e7598c84db1d9eb0158a90b8c2e38929ad436326b018026e1d42ff5763d7af8e9f24725beacc10ef4903e7a9eda46c493e818
+  languageName: node
+  linkType: hard
+
+"@techmely/utils@npm:^1.9.1, @techmely/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:
@@ -2993,6 +3005,7 @@ __metadata:
     dayjs: "npm:^1.11.10"
     execa: "npm:^8.0.1"
     nanoid: "npm:^5.0.4"
+    time-span: "npm:5.1.0"
     tslib: "npm:^2.6.2"
     tsup: "npm:8.0.1"
     typescript: "npm:5.3.3"
@@ -3375,9 +3388,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/coverage-v8@npm:1.1.0":
-  version: 1.1.0
-  resolution: "@vitest/coverage-v8@npm:1.1.0"
+"@vitest/coverage-v8@npm:1.1.1":
+  version: 1.1.1
+  resolution: "@vitest/coverage-v8@npm:1.1.1"
   dependencies:
     "@ampproject/remapping": "npm:^2.2.1"
     "@bcoe/v8-coverage": "npm:^0.2.3"
@@ -3394,7 +3407,7 @@ __metadata:
     v8-to-istanbul: "npm:^9.2.0"
   peerDependencies:
     vitest: ^1.0.0
-  checksum: 4be7c5e7c44df3da8bc38990f7a24083cb443317f7c586faecb728d1eb0c6e3cab5ef83d22c7ae59b9afd4cfb378475819f97650eb2f6d529604c8c744df15f9
+  checksum: fb6df4c9fd4b70a3877492927ae2693abc2afd4deab51bfb9ea30f3dcb4f6a586817f5692cbfe0238f9447df717143ef716b5617e42d64f6cb1e4434e04c8a80
   languageName: node
   linkType: hard
 
@@ -5082,6 +5095,13 @@ __metadata:
     "@babel/parser": "npm:^7.6.0"
     "@babel/types": "npm:^7.6.1"
   checksum: 15129adef19b1af2c3ade8bd38f97c34781bf461472a30ab414384b28d072be83070c8d2175787c045ef7c222c415101ae609936e7903427796a0c0eca8449fd
+  languageName: node
+  linkType: hard
+
+"convert-hrtime@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "convert-hrtime@npm:5.0.0"
+  checksum: 2092e51aab205e1141440e84e2a89f8881e68e47c1f8bc168dfd7c67047d8f1db43bac28044bc05749205651fead4e7910f52c7bb6066213480df99e333e9f47
   languageName: node
   linkType: hard
 
@@ -12499,6 +12519,15 @@ __metadata:
   version: 2.3.8
   resolution: "through@npm:2.3.8"
   checksum: 4b09f3774099de0d4df26d95c5821a62faee32c7e96fb1f4ebd54a2d7c11c57fe88b0a0d49cf375de5fee5ae6bf4eb56dbbf29d07366864e2ee805349970d3cc
+  languageName: node
+  linkType: hard
+
+"time-span@npm:5.1.0":
+  version: 5.1.0
+  resolution: "time-span@npm:5.1.0"
+  dependencies:
+    convert-hrtime: "npm:^5.0.0"
+  checksum: 37b8284c53f4ee320377512ac19e3a034f2b025f5abd6959b8c1d0f69e0f06ab03681df209f2e452d30129e7b1f25bf573fb0f29d57e71f9b4a6b5b99f4c4b9e
   languageName: node
   linkType: hard
 

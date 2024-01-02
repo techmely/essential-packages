@@ -11,6 +11,9 @@ const __dirname = path.dirname(__filename);
 const root = process.cwd();
 const buildPath = path.join(root, "./dist");
 
+const argv = process.argv;
+const isIgnoreRewriteModule = argv[2] === "--ignore-rewrite";
+
 async function publishPkgNah() {
   try {
     await cpBasePkgJson();
@@ -33,10 +36,10 @@ async function cpBasePkgJson() {
 
   const newPkgData = {
     ...rest,
-    types: "./index.d.ts",
-    typings: "./index.d.ts",
-    main: "./index.js",
-    module: "./index.mjs",
+    types: isIgnoreRewriteModule ? rest.types : "./index.d.ts",
+    typings: isIgnoreRewriteModule ? rest.typings : "./index.d.ts",
+    main: isIgnoreRewriteModule ? rest.main : "./index.js",
+    module: isIgnoreRewriteModule ? rest.module : "./index.mjs",
   };
 
   const destination = path.resolve(buildPath, "./package.json");

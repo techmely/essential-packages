@@ -1,11 +1,11 @@
 {
   "name": "@techmely/vike-react-query",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://techmely.com/libraries/vike-react-query",
   "bugs": {
-    "url": "https://github.com/techmely/techmely/issues"
+    "url": "https://github.com/techmely/essential-packages/issues"
   },
-  "repository": "https://github.com/techmely/techmely/tree/dev/packages/vike/react-query",
+  "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/vike/react-query",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
@@ -15,14 +15,31 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --entry src/index.ts --sourcemap --clean --dts --format esm,cjs",
-    "publish": "npm publish"
+    "build": "tsup --entry src/index.ts --entry src/config.ts --entry src/ReactQueryProvider.tsx --entry src/FallbackErrorBoundary.tsx --sourcemap --clean --dts --format esm",
+    "publish": "node ../../scripts/publishPkg.mjs"
   },
   "peerDependencies": {
+    "@tanstack/react-query": "^5.17.0",
+    "@techmely/vike-react": "workspace:*",
+    "devalue": "^4.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-streaming": "0.3.18",
+    "react-error-boundary": "^4.0.12",
+    "react-streaming": "^0.3.18",
     "vike": "^0.4.152"
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "^5.17.0",
+    "@techmely/vike-react": "workspace:*",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "devalue": "^4.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.12",
+    "react-streaming": "^0.3.18",
+    "tsup": "8.0.1",
+    "vike": "^0.4.153"
   },
   "publishConfig": {
     "access": "public",
@@ -43,43 +60,5 @@
     "techmely",
     "techmely-react",
     "vike react"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
-    },
-    "./usePageContext": {
-      "types": "./dist/composables/usePageContext.d.ts",
-      "require": "./dist/composables/usePageContext.cjs",
-      "import": "./dist/composables/usePageContext.js"
-    },
-    "./useData": {
-      "types": "./dist/composables/useData.d.ts",
-      "require": "./dist/composables/useData.cjs",
-      "import": "./dist/composables/useData.js"
-    },
-    "./ClientOnly": {
-      "types": "./dist/components/ClientOnly.d.ts",
-      "require": "./dist/components/ClientOnly.cjs",
-      "import": "./dist/components/ClientOnly.js"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      ".": [
-        "./dist/index.d.ts"
-      ],
-      "usePageContext": [
-        "./dist/composables/usePageContext.d.ts"
-      ],
-      "useData": [
-        "./dist/composables/useData.d.ts"
-      ],
-      "ClientOnly": [
-        "./dist/components/ClientOnly.d.ts"
-      ]
-    }
-  }
+  ]
 }

@@ -94,6 +94,7 @@
     "sarif",
     "shipjs",
     "stylelint",
+    "tanstack",
     "techmely",
     "treeshake",
     "tsup",

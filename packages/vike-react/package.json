@@ -1,12 +1,12 @@
 {
   "name": "@techmely/vike-react",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://techmely.com/libraries/vike-react",
   "bugs": {
-    "url": "https://github.com/techmely/techmely/issues"
+    "url": "https://github.com/techmely/essential-packages/issues"
   },
   "repository": {
-    "url": "git+https://github.com/techmely/techmely.git#main"
+    "url": "git+https://github.com/techmely/essential-packages.git#main"
   },
   "license": "MIT",
   "type": "module",
@@ -47,7 +47,7 @@
   "typesVersions": {
     "*": {
       ".": [
-        "./+config.d.ts"
+        "./_config.d.ts"
       ],
       "usePageContext": [
         "./usePageContext.d.ts"

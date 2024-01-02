@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 0.1.6
+
+### Patch Changes
+
+- Update naming + export esm
+
 ## 0.1.5
 
 ### Patch Changes

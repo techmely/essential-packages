@@ -40,4 +40,4 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
   };
 };
 
-export { onRenderHtml };
+export default onRenderHtml;

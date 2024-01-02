@@ -1,16 +1,18 @@
 import type { EntityId, StringEnum } from "@techmely/types";
 import type { ReactElement } from "react";
 
-type Component = (props: any) => ReactElement;
+
 
 declare global {
   type PageProps = Record<string, any>;
   type RenderMode = "SPA" | "SSR" | "HTML";
+  type VikeReactComponent = (props: any) => ReactElement;
+  type ImportString = `import:${string}`;
   namespace VikePackages {
     interface ConfigVikeReact {
-      Layout?: Component;
-      Page?: Component;
-      QueryProvider?: Component;
+      Layout?: VikeReactComponent | ImportString;
+      Page?: VikeReactComponent | ImportString;
+      ReactQueryProvider?: VikeReactComponent | ImportString;
       Head?: HeadMetadata;
       pageProps?: Record<string, any>;
       metadata?: Record<StringEnum<"userAgent" | "isMobile" | "locale">, any>;
@@ -50,8 +52,8 @@ declare global {
   namespace Vike {
     interface PageContext {
       Head?: HeadMetadata;
-      Layout?: Component;
-      Page?: Component;
+      Layout?: VikeReactComponent;
+      Page?: VikeReactComponent;
       pageProps?: Record<string, any>;
       data?: Record<StringEnum<'title'>, any>;
       /**

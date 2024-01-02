@@ -24,8 +24,8 @@ const VikeConfig = {
   clientRouting: true,
   hydrationCanBeAborted: true,
   prefetchStaticAssets: "hover",
-  onRenderHtml: "import:@techmely/vike-react/onRenderHtml:onRenderHtml",
-  onRenderClient: "import:@techmely/vike-react/onRenderClient:onRenderClient",
+  onRenderHtml: "import:@techmely/vike-react/onRenderHtml:default",
+  onRenderClient: "import:@techmely/vike-react/onRenderClient:default",
   meta: {
     Head: {
       env: serverOnly,

@@ -3,16 +3,17 @@ import type { PageContext } from "vike/types";
 import { PageContextProvider } from "./PageContextProvider";
 
 export function AppPage(pageContext: PageContext) {
-  const Layout = pageContext.config.Layout || PassThrough;
-  const QueryProvider = pageContext.config.QueryProvider || PassThrough;
+  const Layout = (pageContext.config.Layout as VikeReactComponent) || PassThrough;
+  const ReactQueryProvider =
+    (pageContext.config.ReactQueryProvider as VikeReactComponent) || PassThrough;
   const { Page, pageProps } = pageContext;
 
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
-        <QueryProvider pageContext={pageContext}>
+        <ReactQueryProvider pageContext={pageContext}>
           <Layout>{Page ? <Page {...pageProps} /> : null}</Layout>
-        </QueryProvider>
+        </ReactQueryProvider>
       </PageContextProvider>
     </React.StrictMode>
   );

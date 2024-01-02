@@ -35,4 +35,4 @@ const onRenderClient: OnRenderClientSync = (pageContext) => {
   }
 };
 
-export { onRenderClient };
+export default onRenderClient;

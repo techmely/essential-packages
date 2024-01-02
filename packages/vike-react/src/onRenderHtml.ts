@@ -2,9 +2,9 @@ import { renderToString } from "react-dom/server";
 import { renderToStream } from "react-streaming/server";
 import { dangerouslySkipEscape, escapeInject } from "vike/server";
 import type { OnRenderHtmlAsync } from "vike/types";
-import { AppPage } from "./renderer/App";
-import generateAppHead from "./renderer/AppHead";
-import { AppScriptBody } from "./renderer/AppScriptBody";
+import { AppPage } from "./utils/App";
+import generateAppHead from "./utils/AppHead";
+import { AppScriptBody } from "./utils/AppScriptBody";
 
 const viteEnv = process.env.VITE_ENV || "production";
 

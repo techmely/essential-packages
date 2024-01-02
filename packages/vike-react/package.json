@@ -1,0 +1,86 @@
+{
+  "name": "@techmely/vike-react",
+  "version": "0.1.5",
+  "homepage": "https://techmely.com/libraries/vike-react",
+  "bugs": {
+    "url": "https://github.com/techmely/techmely/issues"
+  },
+  "repository": {
+    "url": "git+https://github.com/techmely/techmely.git#main"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "+config.js",
+  "module": "+config.mjs",
+  "types": "_config.d.ts",
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup --entry src/+config.ts --entry src/ClientOnly.tsx --entry src/useData.ts --entry src/usePageContext.ts --entry src/onRenderClient.ts --entry src/onRenderHtml.ts --sourcemap --clean --dts --format esm",
+    "publish": "node ../../scripts/publishPkg.mjs --ignore-rewrite"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-streaming": "0.3.18",
+    "vike": "^0.4.152"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-streaming": "0.3.18",
+    "tsup": "8.0.1",
+    "vike": "^0.4.153"
+  },
+  "exports": {
+    ".": "./+config.js",
+    "./onRenderHtml": "./onRenderHtml.js",
+    "./onRenderClient": "./onRenderClient.js",
+    "./usePageContext": "./usePageContext.js",
+    "./useData": "./useData.js",
+    "./ClientOnly": "./ClientOnly.js"
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./+config.d.ts"
+      ],
+      "usePageContext": [
+        "./usePageContext.d.ts"
+      ],
+      "useData": [
+        "./useData.d.ts"
+      ],
+      "onRenderHtml": [
+        "./onRenderHtml.d.ts"
+      ],
+      "onRenderClient": [
+        "./onRenderClient.d.ts"
+      ]
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "tag": "latest"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/techmely"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/techmely"
+    }
+  ],
+  "keywords": [
+    "techmely",
+    "techmely-react",
+    "vike react"
+  ]
+}

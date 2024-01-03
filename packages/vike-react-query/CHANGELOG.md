@@ -1,5 +1,16 @@
 # @techmely/vike-react-query
 
+## 0.1.11
+
+### Patch Changes
+
+- Fix pink peer-deps
+
+- Upgrade vike deps
+
+- Updated dependencies []:
+  - @techmely/vike-react@0.1.10
+
 ## 0.1.10
 
 ### Patch Changes

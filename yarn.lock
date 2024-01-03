@@ -3211,7 +3211,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-streaming: 0.3.18
-    vike: ^0.4.152
+    vike: ^0.4.153
   languageName: unknown
   linkType: soft
 
@@ -3233,14 +3233,14 @@ __metadata:
     vike: "npm:^0.4.153"
   peerDependencies:
     "@tanstack/react-query": ^5.17.0
-    "@techmely/utils": "workspace:*"
-    "@techmely/vike-react": "workspace:*"
+    "@techmely/utils": ^1.10.0
+    "@techmely/vike-react": ^0.1.9
     devalue: ^4.3.2
     react: ^18.2.0
     react-dom: ^18.2.0
     react-error-boundary: ^4.0.12
     react-streaming: ^0.3.18
-    vike: ^0.4.152
+    vike: ^0.4.153
   languageName: unknown
   linkType: soft
 
@@ -3259,7 +3259,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-streaming: 0.3.18
-    vike: ^0.4.152
+    vike: ^0.4.153
   languageName: unknown
   linkType: soft
 

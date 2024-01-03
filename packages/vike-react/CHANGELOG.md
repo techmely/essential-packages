@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 0.1.7
+
+### Patch Changes
+
+- Fix missing import react in onRenderHtml
+
 ## 0.1.6
 
 ### Patch Changes

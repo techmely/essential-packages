@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react-query",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://techmely.com/libraries/vike-react-query",
   "bugs": {
     "url": "https://github.com/techmely/essential-packages/issues"
@@ -11,7 +11,9 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup --entry src/index.ts --entry src/+config.ts --entry src/ReactQueryProvider.tsx --entry src/FallbackErrorBoundary.tsx --sourcemap --clean --dts --format esm",
     "publish": "node ../../scripts/publishPkg.mjs"
@@ -54,5 +56,9 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": ["techmely", "techmely-react", "vike react"]
+  "keywords": [
+    "techmely",
+    "techmely-react",
+    "vike react"
+  ]
 }

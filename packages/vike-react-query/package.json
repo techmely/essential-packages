@@ -11,11 +11,9 @@
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
-    "build": "tsup --entry src/index.ts --entry src/config.ts --entry src/ReactQueryProvider.tsx --entry src/FallbackErrorBoundary.tsx --sourcemap --clean --dts --format esm",
+    "build": "tsup --entry src/index.ts --entry src/+config.ts --entry src/ReactQueryProvider.tsx --entry src/FallbackErrorBoundary.tsx --sourcemap --clean --dts --format esm",
     "publish": "node ../../scripts/publishPkg.mjs"
   },
   "peerDependencies": {
@@ -56,9 +54,5 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-react",
-    "vike react"
-  ]
+  "keywords": ["techmely", "techmely-react", "vike react"]
 }

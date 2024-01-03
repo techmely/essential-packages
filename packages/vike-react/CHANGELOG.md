@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 0.1.9
+
+### Patch Changes
+
+- Fix export module
+
 ## 0.1.8
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "homepage": "https://techmely.com/libraries/vike-react",
   "bugs": {
     "url": "https://github.com/techmely/essential-packages/issues"
@@ -10,17 +10,13 @@
   },
   "license": "MIT",
   "type": "module",
-  "main": "+config.js",
-  "module": "+config.mjs",
-  "types": "_config.d.ts",
-  "files": [
-    "dist",
-    "CHANGELOG.md"
-  ],
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": ["dist", "CHANGELOG.md"],
   "scripts": {
     "build": "tsup --entry src/+config.h.ts --entry src/index.ts --entry src/useData.ts --entry src/usePageContext.ts --entry src/onRenderClient.tsx --entry src/onRenderHtml.tsx --sourcemap --clean --dts --format esm && yarn fix.build",
     "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts",
-    "publish": "node ../../scripts/publishPkg.mjs"
+    "publish": "node ../../scripts/publishPkg.mjs --only-esm"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -52,9 +48,5 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-react",
-    "vike react"
-  ]
+  "keywords": ["techmely", "techmely-react", "vike react"]
 }

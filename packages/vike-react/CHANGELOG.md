@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 0.1.8
+
+### Patch Changes
+
+- Fix building & naming convention for vike-react packages
+
 ## 0.1.7
 
 ### Patch Changes

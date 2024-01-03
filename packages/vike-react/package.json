@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "homepage": "https://techmely.com/libraries/vike-react",
   "bugs": {
     "url": "https://github.com/techmely/essential-packages/issues"
@@ -18,8 +18,9 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "build": "tsup --entry src/+config.ts --entry src/ClientOnly.tsx --entry src/useData.ts --entry src/usePageContext.ts --entry src/onRenderClient.ts --entry src/onRenderHtml.ts --sourcemap --clean --dts --format esm",
-    "publish": "node ../../scripts/publishPkg.mjs --ignore-rewrite"
+    "build": "tsup --entry src/+config.h.ts --entry src/index.ts --entry src/useData.ts --entry src/usePageContext.ts --entry src/onRenderClient.tsx --entry src/onRenderHtml.tsx --sourcemap --clean --dts --format esm && yarn fix.build",
+    "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts",
+    "publish": "node ../../scripts/publishPkg.mjs"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -35,33 +36,6 @@
     "react-streaming": "0.3.18",
     "tsup": "8.0.1",
     "vike": "^0.4.153"
-  },
-  "exports": {
-    ".": "./+config.js",
-    "./onRenderHtml": "./onRenderHtml.js",
-    "./onRenderClient": "./onRenderClient.js",
-    "./usePageContext": "./usePageContext.js",
-    "./useData": "./useData.js",
-    "./ClientOnly": "./ClientOnly.js"
-  },
-  "typesVersions": {
-    "*": {
-      ".": [
-        "./_config.d.ts"
-      ],
-      "usePageContext": [
-        "./usePageContext.d.ts"
-      ],
-      "useData": [
-        "./useData.d.ts"
-      ],
-      "onRenderHtml": [
-        "./onRenderHtml.d.ts"
-      ],
-      "onRenderClient": [
-        "./onRenderClient.d.ts"
-      ]
-    }
   },
   "publishConfig": {
     "access": "public",

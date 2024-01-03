@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 0.1.2
+
+### Patch Changes
+
+- rename configjs file + typing
+
 ## 0.1.1
 
 ### Patch Changes

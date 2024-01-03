@@ -11,6 +11,9 @@ const __dirname = path.dirname(__filename);
 const root = process.cwd();
 const buildPath = path.join(root, "./dist");
 
+const argv = process.argv;
+const isOnlyEsm = argv[2] === "--only-esm";
+
 async function publishPkgNah() {
   try {
     await cpBasePkgJson();
@@ -36,7 +39,7 @@ async function cpBasePkgJson() {
     types: "./index.d.ts",
     typings: "./index.d.ts",
     main: "./index.js",
-    module: "./index.mjs",
+    ...(!isOnlyEsm && { module: "./index.mjs" }),
   };
 
   const destination = path.resolve(buildPath, "./package.json");

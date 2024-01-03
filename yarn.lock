@@ -3232,6 +3232,7 @@ __metadata:
     vike: "npm:^0.4.153"
   peerDependencies:
     "@tanstack/react-query": ^5.17.0
+    "@techmely/utils": "workspace:*"
     "@techmely/vike-react": "workspace:*"
     devalue: ^4.3.2
     react: ^18.2.0

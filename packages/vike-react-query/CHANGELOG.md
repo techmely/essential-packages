@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 0.1.8
+
+### Patch Changes
+
+- Fix unnessary modules config package.json
+
 ## 0.1.7
 
 ### Patch Changes

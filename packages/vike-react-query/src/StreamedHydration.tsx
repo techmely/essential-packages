@@ -1,6 +1,6 @@
 import { type DehydratedState, type QueryClient, dehydrate, hydrate } from "@tanstack/react-query";
 import { uneval } from "devalue";
-import type { FC, PropsWithChildren } from "react";
+import React, { type PropsWithChildren } from "react";
 import { useStream } from "react-streaming";
 
 declare global {
@@ -14,7 +14,7 @@ type Props = {
   client: QueryClient;
 };
 
-export const StreamedHydration: FC<PropsWithChildren<Props>> = ({ children, client }) => {
+export const StreamedHydration: React.FC<PropsWithChildren<Props>> = ({ children, client }) => {
   const stream = useStream();
   const isSSR = !!stream;
 

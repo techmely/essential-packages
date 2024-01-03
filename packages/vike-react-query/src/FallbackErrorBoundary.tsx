@@ -1,6 +1,6 @@
 import { QueryErrorResetBoundary } from "@tanstack/react-query";
 import { nodeENV } from "@techmely/utils";
-import type { CSSProperties, FC, PropsWithChildren } from "react";
+import React, { type CSSProperties, type FC, type PropsWithChildren } from "react";
 import { ErrorBoundary, type FallbackProps } from "react-error-boundary";
 
 const pageStyle: CSSProperties = {

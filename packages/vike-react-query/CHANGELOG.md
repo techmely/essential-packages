@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 0.1.9
+
+### Patch Changes
+
+- Fix import paths vike-query
+
 ## 0.1.8
 
 ### Patch Changes

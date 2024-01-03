@@ -25,6 +25,9 @@
     "useUnknownInCatchVariables": false,
     "verbatimModuleSyntax": true,
     "jsx": "preserve",
-    "types": ["@techmely/vike-react/dist/+config.h"]
+    "types": ["@techmely/vike-react/dist/+config.h"],
+    "paths": {
+      "@techmely/utils/*": ["../utils/dist/*"]
+    }
   }
 }

@@ -3179,7 +3179,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@techmely/utils@npm:^1.9.1, @techmely/utils@workspace:packages/utils":
+"@techmely/utils@npm:^1.9.1, @techmely/utils@workspace:*, @techmely/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:
@@ -3220,6 +3220,7 @@ __metadata:
   resolution: "@techmely/vike-react-query@workspace:packages/vike-react-query"
   dependencies:
     "@tanstack/react-query": "npm:^5.17.0"
+    "@techmely/utils": "workspace:*"
     "@techmely/vike-react": "workspace:*"
     "@types/react": "npm:^18.2.46"
     "@types/react-dom": "npm:^18.2.18"

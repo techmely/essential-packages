@@ -1,5 +1,5 @@
 import { QueryErrorResetBoundary } from "@tanstack/react-query";
-import { nodeENV } from "@techmely/utils/env";
+import { nodeENV } from "@techmely/utils/env.js";
 import React, { type CSSProperties, type FC, type PropsWithChildren } from "react";
 import { ErrorBoundary, type FallbackProps } from "react-error-boundary";
 

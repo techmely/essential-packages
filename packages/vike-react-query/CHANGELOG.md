@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 0.1.7
+
+### Patch Changes
+
+- Fix typing of document.getElementsByClassName
+
 ## 0.1.6
 
 ### Patch Changes

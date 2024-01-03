@@ -24,7 +24,7 @@ export const StreamedHydration: React.FC<PropsWithChildren<Props>> = ({ children
         __reactQueryDehydrated__=[];
         __reactQueryClear__ = () => {
           Array.from(document
-            .getElementByClassName("__reactQueryDehydrated__"))
+            .getElementsByClassName("__reactQueryDehydrated__"))
             .forEach(e => e.remove())
         };
         __reactQueryClear__();

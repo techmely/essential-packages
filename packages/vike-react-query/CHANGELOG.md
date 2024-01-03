@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 0.1.3
+
+### Patch Changes
+
+- Fix warning vike with unnessary code
+
 ## 0.1.2
 
 ### Patch Changes

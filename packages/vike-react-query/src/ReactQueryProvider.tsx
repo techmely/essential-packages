@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { type FC, type PropsWithChildren, useState } from "react";
+import React, { type FC, type PropsWithChildren, useState } from "react";
 import type { PageContext } from "vike/types";
 import { StreamedHydration } from "./StreamedHydration";
 

@@ -1,5 +1,14 @@
 # @techmely/vike-react-query
 
+## 0.1.5
+
+### Patch Changes
+
+- Fix building & naming convention for vike-react packages
+
+- Updated dependencies []:
+  - @techmely/vike-react@0.1.8
+
 ## 0.1.4
 
 ### Patch Changes

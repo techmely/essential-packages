@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 0.1.12
+
+### Patch Changes
+
+- rename from ClientWrapper to AppWrapper
+
 ## 0.1.11
 
 ### Patch Changes

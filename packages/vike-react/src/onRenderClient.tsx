@@ -2,19 +2,9 @@ import { type Root, createRoot, hydrateRoot } from "react-dom/client";
 import type { OnRenderClientSync } from "vike/types";
 import { AppPage } from "./utils/App";
 
-// function initActions() {
-//   inject();
-//   const match = window.matchMedia || window.msMatchMedia;
-
-//   window.isMobile = match?.("(pointer:coarse)").matches;
-//   window.addEventListener("click", (e) => {
-//     handleAnalytics(e);
-//   });
-// }
-
 let app: Root;
 const onRenderClient: OnRenderClientSync = (pageContext) => {
-  const page = AppPage(pageContext);
+  const page = AppPage(pageContext, false);
 
   const container = document.getElementById("root");
   if (!container) throw new Error("Aww - No root element - No app");

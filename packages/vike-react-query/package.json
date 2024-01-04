@@ -30,7 +30,7 @@
     "vike": "^0.4.153"
   },
   "devDependencies": {
-    "@tanstack/react-query": "^5.17.0",
+    "@tanstack/react-query": "^5.17.1",
     "@techmely/utils": "workspace:*",
     "@techmely/vike-react": "workspace:*",
     "@types/react": "^18.2.46",

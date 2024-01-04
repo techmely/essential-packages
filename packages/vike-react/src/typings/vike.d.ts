@@ -13,6 +13,10 @@ declare global {
       Layout?: VikeReactComponent | ImportString;
       Page?: VikeReactComponent | ImportString;
       ReactQueryProvider?: VikeReactComponent | ImportString;
+      /**
+       * Some wrapper you want to add something like Provider, Init function or something
+       */
+      ClientWrapper?: VikeReactComponent | ImportString;
       Head?: HeadMetadata;
       pageProps?: Record<string, any>;
       metadata?: Record<StringEnum<"userAgent" | "isMobile" | "locale">, any>;

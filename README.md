@@ -53,12 +53,14 @@
 
 ## Features
 
-| Project      | Features |  State Quality |
-| :---        |    :---   |          :----: |
-| @techmely/nuxt-partytown      | Integrate with Partytown easy on Nuxt 3! Just need to focus on configs partytown       | ...            |
-| @techmely/vue-pinia-persist   | Persist store like Redux, but for Vue        | ...       |
-| @techmely/reset-css   | The customize reset css with the minimal config work for every modern browsers        | ...        |
-|  @techmely/utils   |  <div>📦 <5kb mini libraries Tree-shakable ESM Unit Test coverage 80% with [vitest](https://vitest.dev) Code quality analysis is A+ with [codacy](https://www.codacy.com) and [deepscan](https://deepscan.io)</div>        | ...               |
+| Project                     | Features                                                                                                                                                                                                           | State Quality |
+|:----------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------:|
+| @techmely/nuxt-partytown    | Integrate with Partytown easy on Nuxt 3! Just need to focus on configs partytown                                                                                                                                   |      Used in production      |
+| @techmely/vue-pinia-persist | Persist store like Redux, but for Vue                                                                                                                                                                              |      Used in production      |
+| @techmely/reset-css         | The customize reset css with the minimal config work for every modern browsers                                                                                                                                     |      Used in production      |
+| @techmely/utils             | <div>📦 <5kb mini libraries Tree-shakable ESM Unit Test coverage 80% with [vitest](https://vitest.dev) Code quality analysis is A+ with [codacy](https://www.codacy.com) and [deepscan](https://deepscan.io)</div> |      Used in production      |
+| @techmely/vike-react             | <div>React integration for Vike of Techmely Version</div> |      Used in production      |
+| @techmely/vike-react-query             | <div>ReactQuery integration for Vike of Techmely Version</div> |      Used in production      |
 
 
 

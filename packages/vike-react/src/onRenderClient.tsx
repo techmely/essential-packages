@@ -4,7 +4,7 @@ import { AppPage } from "./utils/App";
 
 let app: Root;
 const onRenderClient: OnRenderClientSync = (pageContext) => {
-  const page = AppPage(pageContext, false);
+  const page = AppPage(pageContext);
 
   const container = document.getElementById("root");
   if (!container) throw new Error("Aww - No root element - No app");

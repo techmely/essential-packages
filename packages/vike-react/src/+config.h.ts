@@ -36,6 +36,9 @@ const VikeConfig = {
     ReactQueryProvider: {
       env: serverClient,
     },
+    AppWrapper: {
+      env: serverClient,
+    },
     locale: {
       env: serverClient,
     },

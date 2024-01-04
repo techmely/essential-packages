@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 0.1.11
+
+### Patch Changes
+
+- Add client wrapper for app page
+
 ## 0.1.10
 
 ### Patch Changes

@@ -9,13 +9,12 @@
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup --entry src/index.ts --sourcemap --clean --dts --format esm,cjs",
+    "build": "echo BUILD",
     "publish": "npm publish"
   },
   "peerDependencies": {

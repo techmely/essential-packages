@@ -1,7 +1,11 @@
-.PHONY: e2e.headless
 e2e.headless:
 	yarn playwright test --headed
 
-.PHONY: e2e.open
 e2e.open:
 	yarn playwright test --project=chromium --ui
+
+build.vike:
+	yarn nx run-many -t build -p @techmely/vike-react @techmely/vike-react-query
+
+build:
+	yarn nx run-many -t build -p --parallel=10

@@ -3111,7 +3111,6 @@ __metadata:
     ts-node: "npm:^10.9.2"
     tslib: "npm:^2.6.2"
     typescript: "npm:5.3.3"
-    unbuild: "npm:2.0.0"
     vite: "npm:^5.0.10"
     vite-plugin-solid: "npm:2.8.0"
     vitest: "npm:1.1.1"
@@ -3123,9 +3122,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@techmely/normalization@workspace:packages/normalization"
   dependencies:
-    "@techmely/types": "workspace:*"
+    "@techmely/types": "npm:1.5.2"
     mutative: "npm:1.0.2"
-    unbuild: "npm:2.0.0"
   languageName: unknown
   linkType: soft
 
@@ -3170,11 +3168,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@techmely/types@workspace:*, @techmely/types@workspace:packages/types":
+"@techmely/types@npm:1.5.2, @techmely/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@techmely/types@workspace:packages/types"
   dependencies:
-    unbuild: "npm:2.0.0"
+    tsup: "npm:8.0.1"
   languageName: unknown
   linkType: soft
 
@@ -3182,7 +3180,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:
-    "@techmely/types": "workspace:*"
+    "@techmely/types": "npm:1.5.2"
     "@types/node": "npm:20.10.6"
     chalk: "npm:^5.3.0"
     dayjs: "npm:^1.11.10"
@@ -3233,7 +3231,7 @@ __metadata:
   peerDependencies:
     "@tanstack/react-query": ^5.17.0
     "@techmely/utils": ^1.10.0
-    "@techmely/vike-react": ^0.1.12
+    "@techmely/vike-react": ^0.1.13
     devalue: ^4.3.2
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -3270,7 +3268,7 @@ __metadata:
     cookie: "npm:^0.6.0"
     pinia: "npm:^2.1.7"
     ts-essentials: "npm:9.4.1"
-    unbuild: "npm:2.0.0"
+    tsup: "npm:8.0.1"
     vitest: "npm:1.1.1"
     vue: "npm:^3.4.5"
   peerDependencies:
@@ -13478,7 +13476,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unbuild@npm:2.0.0, unbuild@npm:^2.0.0":
+"unbuild@npm:^2.0.0":
   version: 2.0.0
   resolution: "unbuild@npm:2.0.0"
   dependencies:

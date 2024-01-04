@@ -5,29 +5,25 @@
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/types",
+  "type": "module",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public",
     "directory": "dist",
     "tag": "latest"
   },
-  "exports": {
-    "import": "./dist/index.mjs",
-    "types": "./dist//index.d.ts",
-    "require": "./dist/index.cjs"
-  },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
-    "stub": "unbuild --stub",
+    "build": "tsup src/index.ts --clean --dts --format esm",
     "clean": "rimraf dist",
     "publish": "npm publish",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "unbuild": "2.0.0"
+    "tsup": "8.0.1"
   },
   "funding": [
     {

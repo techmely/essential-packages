@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 0.1.14
+
+### Patch Changes
+
+- Update vike-react
+
 ## 0.1.13
 
 ### Patch Changes

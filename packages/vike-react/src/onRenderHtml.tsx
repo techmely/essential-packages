@@ -28,7 +28,9 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="${lang}" data-app-env=${viteEnv}>
       <head>${appHead}</head>
-      <body id="root">${pageStream}${AppScriptBody}</body>
+      <body>
+        <div id="root">${pageStream}${AppScriptBody}</>
+      </body>
     </html>`;
 
   return {

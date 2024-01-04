@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 0.1.13
+
+### Patch Changes
+
+- Fix create root direct in body, should be wrap by a div in body
+
 ## 0.1.12
 
 ### Patch Changes

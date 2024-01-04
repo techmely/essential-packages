@@ -36,7 +36,7 @@
     "ts-essentials": "9.4.1",
     "unbuild": "2.0.0",
     "vitest": "1.1.1",
-    "vue": "^3.4.4"
+    "vue": "^3.4.5"
   },
   "publishConfig": {
     "access": "public",

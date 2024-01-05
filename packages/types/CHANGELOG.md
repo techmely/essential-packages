@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.5.3
+
+### Patch Changes
+
+- Upgrade typings for project
+
 ## 1.5.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @techmely/metrics
 
+## 1.0.1
+
+### Patch Changes
+
+- Update typing using port from techmely.types
+
 ## 1.0.0
 
 ### Major Changes

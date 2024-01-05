@@ -1,5 +1,11 @@
 # @techmely/logger
 
+## 1.0.2
+
+### Patch Changes
+
+- Update typing using port from techmely.types
+
 ## 1.0.1
 
 ### Patch Changes

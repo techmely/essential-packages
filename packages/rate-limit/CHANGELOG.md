@@ -1,5 +1,11 @@
 # @techmely/rate-limit
 
+## 1.1.2
+
+### Patch Changes
+
+- Fix peer deps using workspace
+
 ## 1.1.1
 
 ### Patch Changes

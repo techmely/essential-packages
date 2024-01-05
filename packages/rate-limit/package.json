@@ -1,6 +1,6 @@
 {
   "name": "@techmely/rate-limit",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Techmely Rate Limit",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -23,8 +23,8 @@
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@techmely/logger": "workspace:*",
-    "@techmely/metrics": "workspace:*",
+    "@techmely/logger": "1.0.2",
+    "@techmely/metrics": "1.0.1",
     "valibot": "^0.25.0"
   },
   "devDependencies": {

@@ -13,20 +13,22 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
-    "build": "tsup --entry src/index.ts --entry src/cloudflare.rate-limit.ts --clean --dts --format esm",
+    "build": "tsup --entry src/index.ts --entry src/cloudflare.do.rate-limit.ts --entry src/cloudflare.rate-limit.ts --clean --dts --format esm",
     "clean": "rimraf dist",
     "publish": "node ../../scripts/publishPkg.mjs",
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
+    "@techmely/logger": "workspace:*",
+    "@techmely/metrics": "workspace:*",
     "valibot": "^0.25.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20231218.0",
+    "@techmely/logger": "workspace:*",
+    "@techmely/metrics": "workspace:*",
     "tsup": "8.0.1",
     "valibot": "^0.25.0"
   },
@@ -43,8 +45,5 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": [
-    "techmely",
-    "rate limit"
-  ]
+  "keywords": ["techmely", "rate limit"]
 }

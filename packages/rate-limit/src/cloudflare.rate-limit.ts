@@ -1,53 +1,59 @@
-import { number, object, safeParse } from "valibot";
-type CfMemory = {
-  current: number;
-  alarmScheduled?: number;
+import type { LoggerPort } from "@techmely/logger";
+import type { MetricsPort } from "@techmely/metrics";
+import type { RateLimitRequest, RateLimitResponse, RateLimiterPort } from "./rate-limit.port";
+
+type CfRateLimiterOptions = {
+  domain?: string;
+  logger: LoggerPort;
+  metrics: MetricsPort;
 };
 
-const requestSchema = object({
-  reset: number(),
-});
+export class CfRateLimiter implements RateLimiterPort {
+  readonly #namespace: DurableObjectNamespace;
+  readonly #domain: string;
+  readonly #logger: LoggerPort;
+  readonly #metrics: MetricsPort;
 
-export class CfRateLimiter {
-  #state: DurableObjectState;
-  #memory: CfMemory;
-  #storageKey = "rl";
-
-  constructor(state: DurableObjectState) {
-    this.#state = state;
-    this.#state.blockConcurrencyWhile(async () => {
-      const m = await this.#state.storage.get<CfMemory>(this.#storageKey);
-      if (m) this.#memory = m;
-    });
-    this.#memory ??= {
-      current: 0,
-    };
+  constructor(namespace: DurableObjectNamespace, options: CfRateLimiterOptions) {
+    this.#namespace = namespace;
+    this.#domain = options.domain || "techmely.com";
+    this.#logger = options.logger;
+    this.#metrics = options.metrics;
   }
+  async limit(req: RateLimitRequest): Promise<RateLimitResponse> {
+    const start = performance.now();
+    const now = Date.now();
+    const window = Math.floor(now / req.interval);
+    const reset = (window + 1) & req.interval;
+    const keyWindow = [req.id, window].join(":");
 
-  async fetch(request: Request) {
-    const reqValue = await request.json();
-    const req = safeParse(requestSchema, reqValue);
-    if (!req.success) {
-      console.log("Invalid DO req", req.issues[0].message);
-      return Response.json({ current: 0 });
+    try {
+      const obj = this.#namespace.get(this.#namespace.idFromName(keyWindow));
+      const url = `https://${this.#domain}/rate-limit`;
+      const res = await obj.fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ reset }),
+      });
+      const json = await res.json<{ current: number }>();
+      const current = json.current;
+      return {
+        current,
+        reset,
+        passed: current < req.limit,
+      };
+    } catch (error) {
+      this.#logger.error("Rate limit failed", { key: req.id });
+      return {
+        current: 0,
+        reset,
+        passed: false,
+      };
+    } finally {
+      this.#metrics.emit("usageLimit", {
+        latency: performance.now() - start,
+        keyId: req.id,
+      });
     }
-
-    this.#memory.current += 1;
-    if (!this.#memory.alarmScheduled) {
-      this.#memory.alarmScheduled = req.output.reset;
-      await this.#state.storage.setAlarm(this.#memory.alarmScheduled);
-    }
-    await this.#state.storage.put(this.#storageKey, this.#memory);
-
-    return Response.json({
-      current: this.#memory.current,
-    });
-  }
-
-  /**
-   * alarm is called to clean up all state, which will remove the durable object from existence.
-   */
-  async alarm() {
-    await this.#state.storage.deleteAll();
   }
 }

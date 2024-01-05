@@ -9,3 +9,6 @@ build.vike:
 
 build:
 	yarn nx run-many -t build -p --parallel=10
+
+publish:
+	yarn nx run-many -t publish -p --parallel=10

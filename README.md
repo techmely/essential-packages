@@ -61,6 +61,11 @@
 | @techmely/utils             | <div>📦 <5kb mini libraries Tree-shakable ESM Unit Test coverage 80% with [vitest](https://vitest.dev) Code quality analysis is A+ with [codacy](https://www.codacy.com) and [deepscan](https://deepscan.io)</div> |      Used in production      |
 | @techmely/vike-react             | <div>React integration for Vike of Techmely Version</div> |      Used in production      |
 | @techmely/vike-react-query             | <div>ReactQuery integration for Vike of Techmely Version</div> |      Used in production      |
+| @techmely/cache             | <div>Cache layer for all runtime</div> |      Memory, Zone CF, redis cache      |
+| @techmely/logger             | <div>Logger for all runtime</div> |      Console, Axiom      |
+| @techmely/metrics             | <div>Metrics with axiom</div> |      Used in production      |
+| @techmely/rate-limit             | <div>Rate limit for all runtime </div> |      Currently only Cloudflare      |
+| @techmely/usage-limit             | <div>Usage limit for all runtime</div> |      Currently only Cloudflare      |
 
 
 

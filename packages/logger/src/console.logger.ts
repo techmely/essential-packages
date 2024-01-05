@@ -1,5 +1,4 @@
-import type { Records } from "@techmely/types";
-import type { LoggerPort } from "./logger.port";
+import type { LoggerPort, Records } from "@techmely/types";
 
 export class ConsoleLogger implements LoggerPort {
   readonly #fields?: Records;

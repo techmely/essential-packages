@@ -1,5 +1,5 @@
 import type { EntityId, StringEnum } from "@techmely/types";
-import type { ReactElement } from "react";
+import type { FC } from "react";
 
 
 
@@ -10,13 +10,13 @@ declare global {
   type ImportString = `import:${string}`;
   namespace VikePackages {
     interface ConfigVikeReact {
-      Layout?: VikeReactComponent | ImportString;
-      Page?: VikeReactComponent | ImportString;
-      ReactQueryProvider?: VikeReactComponent | ImportString;
+      Layout?: FC<any> | ImportString;
+      Page?: FC<any> | ImportString;
+      ReactQueryProvider?: FC<any> | ImportString;
       /**
        * Some wrapper you want to add something like Provider, Init function or something
        */
-      AppWrapper?: VikeReactComponent | ImportString;
+      AppWrapper?: FC<any> | ImportString;
       Head?: HeadMetadata;
       pageProps?: Record<string, any>;
       metadata?: Record<StringEnum<"userAgent" | "isMobile" | "locale">, any>;
@@ -56,8 +56,8 @@ declare global {
   namespace Vike {
     interface PageContext {
       Head?: HeadMetadata;
-      Layout?: VikeReactComponent;
-      Page?: VikeReactComponent;
+      Layout?: FC<any>;
+      Page?: FC<any>;
       pageProps?: Record<string, any>;
       data?: Record<StringEnum<'title'>, any>;
       /**

@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 0.1.15
+
+### Patch Changes
+
+- Update vike react componet typing
+
 ## 0.1.14
 
 ### Patch Changes

@@ -1117,6 +1117,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cloudflare/workers-types@npm:4.20231218.0":
+  version: 4.20231218.0
+  resolution: "@cloudflare/workers-types@npm:4.20231218.0"
+  checksum: 96821a4aab6cf5fdf0767b77dd5804c6da179b5acdebce24b11fb2f730e851d29eb70e012a2e504b8690f8ad6763001325a0bda9d156c70135b5b76adb5e1f8d
+  languageName: node
+  linkType: hard
+
 "@colors/colors@npm:1.5.0":
   version: 1.5.0
   resolution: "@colors/colors@npm:1.5.0"
@@ -3090,13 +3097,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@techmely/cache@workspace:packages/cache":
+  version: 0.0.0-use.local
+  resolution: "@techmely/cache@workspace:packages/cache"
+  dependencies:
+    "@techmely/metrics": "workspace:*"
+    "@techmely/types": "workspace:*"
+    hono: "npm:^3.12.0"
+    tsup: "npm:8.0.1"
+  languageName: unknown
+  linkType: soft
+
 "@techmely/configs@workspace:packages/configs":
   version: 0.0.0-use.local
   resolution: "@techmely/configs@workspace:packages/configs"
   languageName: unknown
   linkType: soft
 
-"@techmely/logger@workspace:packages/logger":
+"@techmely/logger@workspace:*, @techmely/logger@workspace:packages/logger":
   version: 0.0.0-use.local
   resolution: "@techmely/logger@workspace:packages/logger"
   dependencies:
@@ -3105,6 +3123,24 @@ __metadata:
     tsup: "npm:8.0.1"
   peerDependencies:
     "@axiomhq/js": ^1.0.0-rc.1
+  peerDependenciesMeta:
+    "@axiomhq/js":
+      optional: true
+  languageName: unknown
+  linkType: soft
+
+"@techmely/metrics@workspace:*, @techmely/metrics@workspace:packages/metrics":
+  version: 0.0.0-use.local
+  resolution: "@techmely/metrics@workspace:packages/metrics"
+  dependencies:
+    "@axiomhq/js": "npm:^1.0.0-rc.1"
+    "@techmely/types": "workspace:*"
+    tsup: "npm:8.0.1"
+  peerDependencies:
+    "@axiomhq/js": ^1.0.0-rc.1
+  peerDependenciesMeta:
+    "@axiomhq/js":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -3144,7 +3180,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@techmely/normalization@workspace:packages/normalization"
   dependencies:
-    "@techmely/types": "npm:1.5.2"
+    "@techmely/types": "npm:1.5.3"
     mutative: "npm:1.0.2"
   languageName: unknown
   linkType: soft
@@ -3173,8 +3209,8 @@ __metadata:
     "@nuxt/module-builder": "npm:^0.5.5"
     "@nuxt/schema": "npm:^3.9.0"
     "@nuxt/test-utils": "npm:3.9.0"
-    "@techmely/utils": "npm:^1.9.1"
-    "@techmely/vue-pinia-persist": "npm:1.0.4"
+    "@techmely/utils": "npm:^1.10.1"
+    "@techmely/vue-pinia-persist": "npm:1.0.5"
     "@types/node": "npm:20.10.6"
     defu: "npm:^6.1.3"
     nuxt: "npm:^3.9.0"
@@ -3184,13 +3220,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@techmely/rate-limit@workspace:packages/rate-limit":
+  version: 0.0.0-use.local
+  resolution: "@techmely/rate-limit@workspace:packages/rate-limit"
+  dependencies:
+    "@cloudflare/workers-types": "npm:4.20231218.0"
+    "@techmely/logger": "workspace:*"
+    "@techmely/metrics": "workspace:*"
+    tsup: "npm:8.0.1"
+    valibot: "npm:^0.25.0"
+  peerDependencies:
+    "@techmely/logger": "workspace:*"
+    "@techmely/metrics": "workspace:*"
+    valibot: ^0.25.0
+  languageName: unknown
+  linkType: soft
+
 "@techmely/reset-css@workspace:packages/reset-css":
   version: 0.0.0-use.local
   resolution: "@techmely/reset-css@workspace:packages/reset-css"
   languageName: unknown
   linkType: soft
 
-"@techmely/types@npm:1.5.2, @techmely/types@workspace:*, @techmely/types@workspace:packages/types":
+"@techmely/types@npm:1.5.3, @techmely/types@workspace:*, @techmely/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@techmely/types@workspace:packages/types"
   dependencies:
@@ -3198,11 +3250,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@techmely/utils@npm:^1.9.1, @techmely/utils@workspace:*, @techmely/utils@workspace:packages/utils":
+"@techmely/usage-limit@workspace:packages/usage-limit":
+  version: 0.0.0-use.local
+  resolution: "@techmely/usage-limit@workspace:packages/usage-limit"
+  dependencies:
+    "@cloudflare/workers-types": "npm:4.20231218.0"
+    "@techmely/logger": "workspace:*"
+    "@techmely/metrics": "workspace:*"
+    tsup: "npm:8.0.1"
+    valibot: "npm:^0.25.0"
+  peerDependencies:
+    "@techmely/logger": "workspace:*"
+    "@techmely/metrics": "workspace:*"
+    valibot: ^0.25.0
+  languageName: unknown
+  linkType: soft
+
+"@techmely/utils@npm:^1.10.1, @techmely/utils@workspace:*, @techmely/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:
-    "@techmely/types": "npm:1.5.2"
+    "@techmely/types": "npm:1.5.3"
     "@types/node": "npm:20.10.6"
     chalk: "npm:^5.3.0"
     dayjs: "npm:^1.11.10"
@@ -3252,7 +3320,7 @@ __metadata:
     vike: "npm:^0.4.153"
   peerDependencies:
     "@tanstack/react-query": ^5.17.0
-    "@techmely/utils": ^1.10.0
+    "@techmely/utils": ^1.10.1
     "@techmely/vike-react": ^0.1.15
     devalue: ^4.3.2
     react: ^18.2.0
@@ -3282,11 +3350,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@techmely/vue-pinia-persist@npm:1.0.4, @techmely/vue-pinia-persist@workspace:packages/vue-pinia-persist":
+"@techmely/vue-pinia-persist@npm:1.0.5, @techmely/vue-pinia-persist@workspace:packages/vue-pinia-persist":
   version: 0.0.0-use.local
   resolution: "@techmely/vue-pinia-persist@workspace:packages/vue-pinia-persist"
   dependencies:
-    "@techmely/utils": "npm:^1.9.1"
+    "@techmely/utils": "npm:^1.10.1"
     cookie: "npm:^0.6.0"
     pinia: "npm:^2.1.7"
     ts-essentials: "npm:9.4.1"
@@ -7832,6 +7900,13 @@ __metadata:
   dependencies:
     function-bind: "npm:^1.1.2"
   checksum: 5d415b114f410661208c95e7ab4879f1cc2765b8daceff4dc8718317d1cb7b9ffa7c5d1eafd9a4389c9aab7445d6ea88e05f3096cb1e529618b55304956b87fc
+  languageName: node
+  linkType: hard
+
+"hono@npm:^3.12.0":
+  version: 3.12.0
+  resolution: "hono@npm:3.12.0"
+  checksum: e10dd70e5eda44c76e8e5dae807963841475449fbb4100421ec2e5e680734644006f6133e8a8edf66ac8d47aad114a704db52b53cab2f292a8d17f02342fcff1
   languageName: node
   linkType: hard
 
@@ -13880,6 +13955,13 @@ __metadata:
     "@types/istanbul-lib-coverage": "npm:^2.0.1"
     convert-source-map: "npm:^2.0.0"
   checksum: e691ba4dd0dea4a884e52c37dbda30cce6f9eeafe9b26721e449429c6bb0f4b6d1e33fabe7711d0f67f7a34c3bfd56c873f7375bba0b1534e6a2843ce99550e5
+  languageName: node
+  linkType: hard
+
+"valibot@npm:^0.25.0":
+  version: 0.25.0
+  resolution: "valibot@npm:0.25.0"
+  checksum: 89edf8a048a287d586748965888f64d98855883c81752afa0ff7f2454f0bfee2b095af4ec5eddb3ff0462dbfae68b363e0657e9a2b9dca7f3ce69a9e7a468c5d
   languageName: node
   linkType: hard
 

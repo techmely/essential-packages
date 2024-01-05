@@ -20,12 +20,12 @@
   },
   "formatter": {
     "enabled": true,
-    "indentSize": 2,
+    "indentWidth": 2,
     "indentStyle": "space",
     "lineWidth": 100,
     "formatWithErrors": false
   },
   "files": {
-    "ignore": ["node_modules", "coverage", "cache", "dist", "packages/**/**/*.d.ts", ".vscode"]
+    "ignore": ["node_modules", "coverage", "dist", "packages/**/**/*.d.ts", ".vscode"]
   }
 }

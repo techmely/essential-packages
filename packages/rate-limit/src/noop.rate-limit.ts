@@ -1,4 +1,4 @@
-import type { RateLimitRequest, RateLimiterPort } from "./rate-limit.port";
+import type { RateLimitRequest, RateLimiterPort } from "@techmely/types";
 
 export class NoopRateLimiter implements RateLimiterPort {
   async limit(_req: RateLimitRequest) {

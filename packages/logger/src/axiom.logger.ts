@@ -17,7 +17,7 @@ export class AxiomLogger implements LoggerPort {
 
   constructor(token: string, options: AxiomLoggerOptions) {
     this.#consoleLogger = new ConsoleLogger();
-    this.#axiomDataset = options.dataset || `cf_api_${options.environment}`;
+    this.#axiomDataset = options.dataset || `cf_api_log_${options.environment}`;
     this.#ax = new Axiom({ token });
     this.#meta = options.meta || {};
   }

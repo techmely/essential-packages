@@ -1,4 +1,4 @@
-import type { CamelToSnakeNested, DeepMerge, Tree } from "@techmely/types";
+import type { CamelToSnakeNested, DeepMerge, Records } from "@techmely/types";
 import { isArray, isDef, isNotEmpty, isNotNull, isObject, isUndef } from "./is";
 import { camel2snake } from "./string";
 
@@ -152,8 +152,10 @@ export function objectEntries<T extends object>(obj: T) {
   return Object.entries(obj) as [keyof T, T[keyof T]][];
 }
 
+// biome-ignore lint/complexity/noBannedTypes: Ignore here
 export function objectCamel2Snake<T extends Object>(obj: T) {
   return Object.entries(obj).reduce(
+    // biome-ignore lint/performance/noAccumulatingSpread: Ignore here
     (acc, cur) => ({ ...acc, [camel2snake(cur[0])]: cur[1] }),
     {} as CamelToSnakeNested<T>,
   );
@@ -165,9 +167,9 @@ export function objectCamel2Snake<T extends Object>(obj: T) {
  * - pick({ a: { b: 1 } }, ["a.b"]) => { a: { b: 1 } }
  * - pick({ a: { b: 1 } }, "a") => { a: { b: 1 } }
  */
-export function pick(state: Tree, paths: string | string[]): Tree {
+export function pick(state: Records, paths: string | string[]): Records {
   if (Array.isArray(paths)) {
-    return paths.reduce<Tree>((acc, path) => {
+    return paths.reduce<Records>((acc, path) => {
       const _paths = path.split(".");
       return set(acc, _paths, get(state, _paths));
     }, {});
@@ -175,7 +177,7 @@ export function pick(state: Tree, paths: string | string[]): Tree {
   return get(state, paths.split("."));
 }
 
-function get(state: Tree, paths: string[]) {
+function get(state: Records, paths: string[]) {
   return paths.reduce((acc, path) => acc?.[path], state);
 }
 
@@ -184,7 +186,7 @@ function get(state: Tree, paths: string[]) {
  */
 const ProtoRE = /^(__proto__)$/;
 
-function set(state: Tree, paths: string[], val: unknown): Tree {
+function set(state: Records, paths: string[], val: unknown): Records {
   const last = paths.at(-1);
   if (last === undefined) return state;
 

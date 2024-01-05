@@ -131,6 +131,7 @@ export interface CookieParseOptions {
  * obs-text      = %x80-FF
  */
 
+// biome-ignore lint/suspicious/noControlCharactersInRegex: Ignore this
 const fieldContentRegExp = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
 
 /**
@@ -251,7 +252,7 @@ export function serializeCookie(
   if (null != opt.maxAge) {
     const maxAge = opt.maxAge - 0;
 
-    if (isNaN(maxAge) || !isFinite(maxAge)) {
+    if (Number.isNaN(maxAge) || !Number.isFinite(maxAge)) {
       throw new TypeError("option maxAge is invalid");
     }
 
@@ -277,7 +278,7 @@ export function serializeCookie(
   if (opt.expires) {
     const expires = opt.expires;
 
-    if (!isDate(expires) || isNaN(expires.valueOf())) {
+    if (!isDate(expires) || Number.isNaN(expires.valueOf())) {
       throw new TypeError("option expires is invalid");
     }
 
@@ -371,7 +372,7 @@ function encode(val: string): string {
  * @private
  */
 
-function tryDecode(str: string, decode: Function) {
+function tryDecode(str: string, decode: (v: string) => void) {
   try {
     return decode(str);
   } catch (e) {

@@ -1,4 +1,4 @@
-import { EnvObject, envs } from "./env";
+import { type EnvObject, envs } from "./env";
 
 export interface Process extends Partial<Omit<typeof globalThis.process, "versions">> {
   env: EnvObject;

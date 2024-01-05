@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 1.10.1
+
+### Patch Changes
+
+- Upgrade typings for project
+
 ## 1.10.0
 
 ### Minor Changes

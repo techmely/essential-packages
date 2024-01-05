@@ -1,4 +1,4 @@
-import { ResponseTime, convertHrTime } from "./convert";
+import { type ResponseTime, convertHrTime } from "./convert";
 
 export function timeSpan() {
   const start = process.hrtime.bigint();

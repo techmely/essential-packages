@@ -4,12 +4,10 @@ import { isBrowser } from "./is";
 
 function requestIdleCallbackShim(cb: any) {
   const start = Date.now();
-  return setTimeout(function () {
+  return setTimeout(() => {
     cb({
       didTimeout: false,
-      timeRemaining: function () {
-        return Math.max(0, 50 - (Date.now() - start));
-      },
+      timeRemaining: () => Math.max(0, 50 - (Date.now() - start)),
     });
   }, 1);
 }

@@ -1,0 +1,48 @@
+{
+  "name": "@techmely/cache",
+  "version": "0.0.0",
+  "description": "Techmely cache",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/types",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "tag": "latest"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --clean --dts --format esm",
+    "clean": "rimraf dist",
+    "publish": "node ../../scripts/publishPkg.mjs",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@techmely/metrics": "workspace:*",
+    "@techmely/types": "workspace:*",
+    "hono": "^3.12.0",
+    "tsup": "8.0.1"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/techmely/techmely/issues"
+  },
+  "keywords": [
+    "techmely",
+    "cache"
+  ]
+}

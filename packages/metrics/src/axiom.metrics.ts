@@ -1,6 +1,5 @@
 import { Axiom } from "@axiomhq/js";
-import type { Records, RuntimeEnv } from "@techmely/types";
-import type { MetricEventPort, MetricsPort } from "./metrics.port";
+import type { MetricEventPort, MetricsPort, Records, RuntimeEnv } from "@techmely/types";
 
 type AxiomMetricsOptions = {
   environment: RuntimeEnv;

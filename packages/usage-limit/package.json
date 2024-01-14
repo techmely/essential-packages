@@ -13,11 +13,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
-    "build": "tsup --entry src/index.ts --clean --dts --format esm",
+    "build": "tsup src/index.ts --clean --dts --format esm",
     "clean": "rimraf dist",
     "publish": "node ../../scripts/publishPkg.mjs",
     "type-check": "tsc --noEmit"
@@ -47,8 +45,5 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": [
-    "techmely",
-    "usage-limit"
-  ]
+  "keywords": ["techmely", "usage-limit"]
 }

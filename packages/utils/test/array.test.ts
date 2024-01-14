@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { normalize, take, unique, uniqueObj } from "../src/array";
+import { normalize } from "../src/normalizeArray";
+import { take } from "../src/take";
+import { unique } from "../src/uniqueArray";
+import { uniqueObj } from "../src/uniqueObject";
 
 describe("Array utils test", () => {
   describe("Unique array", () => {

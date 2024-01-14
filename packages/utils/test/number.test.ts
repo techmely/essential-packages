@@ -1,17 +1,15 @@
 import { describe, expect, test } from "vitest";
-import { isNumber } from "../src/is";
-import {
-  DigitLength,
-  Divide,
-  Float2Fixed,
-  Minus,
-  Plus,
-  Round,
-  Strip,
-  Times,
-  formatLot10Volume,
-  formatNumber,
-} from "../src/number";
+import { formatLot10Volume } from "../src/formatLot10Volume";
+import { formatNumber } from "../src/formatNumber";
+import { isNumber } from "../src/isNumber";
+import { digitLengthPrecision } from "../src/numberDigitLengthPrecision";
+import { dividePrecision } from "../src/numberDivinePrecision";
+import { float2FixedPrecision } from "../src/numberFloat2FixedPrecision";
+import { minusPrecision } from "../src/numberMinusPrecision";
+import { plusPrecision } from "../src/numberPlusPrecision";
+import { roundPrecision } from "../src/numberRoundPrecision";
+import { stripPrecision } from "../src/numberStripPrecision";
+import { timesPrecision } from "../src/numberTimesPrecision";
 
 const dataTestFormatNumber = [
   [123123, 0, "-", "123,123"],
@@ -55,11 +53,11 @@ describe("Format number to desire form", () => {
 
 describe("Check number precision", () => {
   test("Np Strip can eliminate rounding errors", () => {
-    expect(Strip(0.09999999999999998)).toBe(0.1);
+    expect(stripPrecision(0.09999999999999998)).toBe(0.1);
     // biome-ignore lint/correctness/noPrecisionLoss: Ignore test
-    expect(Strip(1.0000000000000001)).toBe(1);
-    expect(Strip("0.09999999999999998")).toBe(0.1);
-    expect(Strip("1.0000000000000001")).toBe(1);
+    expect(stripPrecision(1.0000000000000001)).toBe(1);
+    expect(stripPrecision("0.09999999999999998")).toBe(0.1);
+    expect(stripPrecision("1.0000000000000001")).toBe(1);
   });
 
   const dataDigitLength = [
@@ -88,7 +86,7 @@ describe("Check number precision", () => {
   test.concurrent.each(dataDigitLength)(
     "DigitLength can do digitLength operation from %s to %d",
     (input, output) => {
-      expect(DigitLength(input)).toBe(output);
+      expect(digitLengthPrecision(input)).toBe(output);
     },
   );
 
@@ -118,7 +116,7 @@ describe("Check number precision", () => {
   test.concurrent.each(dataFloat2Fixed)(
     "Float2Fixed can change float %s to fixed %d",
     (input, output) => {
-      expect(Float2Fixed(input)).toBe(output);
+      expect(float2FixedPrecision(input)).toBe(output);
     },
   );
 
@@ -146,12 +144,12 @@ describe("Check number precision", () => {
   ];
 
   test.concurrent.each(dataPlus)("Plus operation: %s + %s = %d", (a, b, output) => {
-    expect(Plus(a, b)).toBe(output);
+    expect(plusPrecision(a, b)).toBe(output);
   });
-  expect(Plus("-1", "0", "2", "3", 4)).toBe(8);
-  expect(Plus(0.1, 0.2, 0.3)).toBe(0.6);
-  expect(Plus("0.1", "0.2", "0.3")).toBe(0.6);
-  expect(Plus(...new Array(500).fill(1)) === 500);
+  expect(plusPrecision("-1", "0", "2", "3", 4)).toBe(8);
+  expect(plusPrecision(0.1, 0.2, 0.3)).toBe(0.6);
+  expect(plusPrecision("0.1", "0.2", "0.3")).toBe(0.6);
+  expect(plusPrecision(...new Array(500).fill(1)) === 500);
 
   const dataMinus = [
     [0.07, 0.01, 0.06],
@@ -189,16 +187,16 @@ describe("Check number precision", () => {
   ];
 
   test.concurrent.each(dataMinus)("Minus operation: %s - %s = %d", (a, b, output) => {
-    expect(Minus(a, b)).toBe(output);
+    expect(minusPrecision(a, b)).toBe(output);
   });
 
-  expect(Minus(6, 3, 2) === 1);
-  expect(Minus(6, 3, 2, 1) === 0);
-  expect(Minus(6, 3, 2, 1, 2, 3) === -5);
-  expect(Minus(6, 3, 2, 1, 2, 3, -5) === -10);
-  expect(Minus("6", "3", "2") === 1);
-  expect(Minus("6", "3", "2", "1", "2", "3") === -5);
-  expect(Minus(500, ...new Array(500).fill(1)) === 0);
+  expect(minusPrecision(6, 3, 2) === 1);
+  expect(minusPrecision(6, 3, 2, 1) === 0);
+  expect(minusPrecision(6, 3, 2, 1, 2, 3) === -5);
+  expect(minusPrecision(6, 3, 2, 1, 2, 3, -5) === -10);
+  expect(minusPrecision("6", "3", "2") === 1);
+  expect(minusPrecision("6", "3", "2", "1", "2", "3") === -5);
+  expect(minusPrecision(500, ...new Array(500).fill(1)) === 0);
 
   const dataTimes = [
     [0.07, 100, 7],
@@ -243,15 +241,15 @@ describe("Check number precision", () => {
   ];
 
   test.concurrent.each(dataTimes)("Times operation: %s * %s = %d", (a, b, output) => {
-    expect(Times(a, b)).toBe(output);
+    expect(timesPrecision(a, b)).toBe(output);
   });
 
-  expect(Times(2, 2, 3) === 12);
-  expect(Times(2, 2, 3, 0.1) === 1.2);
-  expect(Times("2", "2", "3") === 12);
-  expect(Times("2", "2", "3", "0.1") === 1.2);
+  expect(timesPrecision(2, 2, 3) === 12);
+  expect(timesPrecision(2, 2, 3, 0.1) === 1.2);
+  expect(timesPrecision("2", "2", "3") === 12);
+  expect(timesPrecision("2", "2", "3", "0.1") === 1.2);
 
-  expect(Times(...new Array(500).fill(1)) === 1);
+  expect(timesPrecision(...new Array(500).fill(1)) === 1);
   // expect(npTimes(-3, 2.3333333333333335) === 7);
   // expect(npTimes(-0.076, -92.10526315789471) === 7);
 
@@ -299,12 +297,12 @@ describe("Check number precision", () => {
   ];
 
   test.concurrent.each(dataDivide)("Divide operation: %s / %s = %d", (a, b, output) => {
-    expect(Divide(a, b)).toBe(output);
+    expect(dividePrecision(a, b)).toBe(output);
   });
-  expect(Divide("12", "3", "2")).toBe(2);
-  expect(Divide(12, 3, 2)).toBe(2);
-  expect(Divide(1024, 4, 8, 2) === 16);
-  expect(Divide(...new Array(500).fill(1)) === 1);
+  expect(dividePrecision("12", "3", "2")).toBe(2);
+  expect(dividePrecision(12, 3, 2)).toBe(2);
+  expect(dividePrecision(1024, 4, 8, 2) === 16);
+  expect(dividePrecision(...new Array(500).fill(1)) === 1);
 
   const dataRound = [
     [0, 1, 0],
@@ -352,6 +350,6 @@ describe("Check number precision", () => {
   ];
   test.concurrent.each(dataRound)("Round %s with %d fixed = %d", (a, b, output) => {
     // @ts-expect-error Ignore type check
-    expect(Round(a, b)).toBe(output);
+    expect(roundPrecision(a, b)).toBe(output);
   });
 });

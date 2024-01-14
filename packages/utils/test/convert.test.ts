@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { convertHrTime } from "../src/convert";
+import { convertHrTime } from "../src/convertHrTime";
 
 describe("Convert hr-time", () => {
   it("Should convert correctly", () => {

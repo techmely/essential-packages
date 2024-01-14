@@ -1,6 +1,5 @@
-// import { CookieSerializeOptions, serialize, parse, CookieParseOptions } from "cookie";
-
-import { isDate } from "./is";
+import type { NodeEnv } from "@techmely/types";
+import { isDate } from "./isDate";
 
 /**
  * Additional serialization options
@@ -399,8 +398,6 @@ export const listenCookieChange = (
     }
   }, interval);
 };
-
-type NodeEnv = "development" | "production";
 
 export class CookieService {
   public nodeEnv: NodeEnv;

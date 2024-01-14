@@ -6,6 +6,7 @@ const universalOptions = getTsupOptions(pkg, {
   tsupOptions: {
     treeshake: false,
     target: "node18",
+    format: ["cjs", "esm", "iife"],
     entry: ["src/index.ts", "src/**/*.ts"],
   },
 });

@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.6.1
+
+### Patch Changes
+
+- Add node env + rename some typing
+
 ## 1.6.0
 
 ### Minor Changes

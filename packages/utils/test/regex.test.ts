@@ -44,34 +44,34 @@ const dataTest = {
 
 describe("Check regex", () => {
   describe("Test valid phone", () => {
-    dataTest.valid.phone.forEach((phone) => {
+    for (const phone of dataTest.valid.phone) {
       test(`Should return true when phone is ${phone}`, () => {
         expect(isValidVnPhone(phone)).toEqual(true);
       });
-    });
+    }
   });
 
   describe("Test invalid phone", () => {
-    dataTest.invalid.phone.forEach((phone) => {
+    for (const phone of dataTest.invalid.phone) {
       test(`Should return false when phone is use ${phone}`, () => {
         expect(isValidVnPhone(phone)).toEqual(false);
       });
-    });
+    }
   });
 
   describe("Test valid email", () => {
-    dataTest.valid.email.forEach((email) => {
+    for (const email of dataTest.valid.email) {
       it(`When user use ${email}`, () => {
         expect(isValidEmail(email)).toEqual(true);
       });
-    });
+    }
   });
 
   describe("Test invalid email", () => {
-    dataTest.invalid.email.forEach((email) => {
+    for (const email of dataTest.invalid.email) {
       it(`When user use ${email}`, () => {
         expect(isValidEmail(email)).toEqual(false);
       });
-    });
+    }
   });
 });

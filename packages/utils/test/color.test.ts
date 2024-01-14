@@ -1,20 +1,18 @@
 import { ComputeRange } from "@techmely/types";
 import { describe, expect, it, test } from "vitest";
-import { isHex, percentToHex } from "../src";
+import { isHex } from "../src/isHexColor";
+import { percentToHex } from "../src/percentToHex";
 
-describe("Colors utilities", () => {
-  describe("Check hex color", () => {
-    const validHexColors = ["#2f2f2f", "#010000"];
-    const invalidHexColors = ["#checkhex", "#0101"];
-    it("Should return boolean value when check element is Hex color", () => {
-      validHexColors.forEach((hex) => {
-        expect(isHex(hex)).toBe(true);
-      });
-
-      invalidHexColors.forEach((hex) => {
-        expect(isHex(hex)).toBe(false);
-      });
-    });
+describe("Check hex color", () => {
+  const validHexColors = ["#2f2f2f", "#010000"];
+  const invalidHexColors = ["#checkhex", "#0101"];
+  it("Should return boolean value when check element is Hex color", () => {
+    for (const hex of validHexColors) {
+      expect(isHex(hex)).toBe(true);
+    }
+    for (const hex of invalidHexColors) {
+      expect(isHex(hex)).toBe(false);
+    }
   });
 });
 
@@ -136,6 +134,7 @@ const hexValues = [
 
 describe("Check convert percent number to hex value(opacity", () => {
   test("Should convert correctly", () => {
+    // biome-ignore lint/complexity/noForEach: We need index
     percents.forEach((percent, index) => {
       expect(percentToHex(percent)).toBe(hexValues[index]);
     });

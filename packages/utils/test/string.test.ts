@@ -4,11 +4,11 @@ import {
   camelize,
   capitalizeFirst,
   cutString,
-  getRandomString,
   hyphenate,
   slugify,
   snake2camel,
-} from "../src/string";
+} from "../src";
+import { getRandomString } from "../src/getRandomString";
 
 describe.concurrent("Test valid is", () => {
   test("Should get the right length string", () => {

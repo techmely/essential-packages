@@ -1,4 +1,4 @@
-import { getRandomInt } from "./generate";
+import { getRandomInt } from "./getRandomInt";
 
 const createAbortError = () => {
   const error = new Error("Delay aborted");

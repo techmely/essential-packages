@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.0.0
+
+### Major Changes
+
+- Flat all functions to 1 func - 1 file
+
 ## 1.10.1
 
 ### Patch Changes

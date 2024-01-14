@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { firstUniqueArr, firstUniqueChar } from "../src/unique";
+import { firstUniqueArr, firstUniqueChar } from "../src";
 
 describe("Should check unique functions", () => {
   const dataSetArr = [

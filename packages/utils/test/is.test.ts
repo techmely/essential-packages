@@ -1,5 +1,7 @@
 import { describe, expect, test } from "vitest";
-import { isArray, isEmpty, isNotEmpties } from "../src";
+import { isArray } from "../src/isArray";
+import { isEmpty } from "../src/isEmpty";
+import { isNotEmpties } from "../src/isNotEmpties";
 
 describe.concurrent("Test valid is", () => {
   test("Should return true", () => {

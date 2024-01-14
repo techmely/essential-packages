@@ -17,8 +17,6 @@ export const urlRegex =
   /(((^https?:(?:\/\/)?)(?:[\w$&+,:;=-]+@)?[\d.A-Za-z-]+(?::\d+)?|(?:www.|[\w$&+,:;=-]+@)[\d.A-Za-z-]+)((?:\/[\w%+./~-]*)?\??[\w%&+.;=@-]*(?:#\w*)?)?)$/;
 export const isValidUrl = (path: string) => urlRegex.test(path);
 
-export const hexColor = /^#(([\da-f]{2}){3,4})$/;
-
 export const multilineCommentsRegex = /\/\*(.|[\r\n])*?\*\//gm;
 export const singlelineCommentsRegex = /\/\/.*/g;
 export const escapedSpaceCharactersRegex = /( |\\t|\\n|\\f|\\r)+/g;

@@ -53,9 +53,7 @@ describe("parseCookie(str, options)", () => {
     it("should specify alternative value decoder", () => {
       expect(
         parseCookie('foo="YmFy"', {
-          decode: function (v) {
-            return Buffer.from(v, "base64").toString();
-          },
+          decode: (v) => Buffer.from(v, "base64").toString(),
         }),
       ).toStrictEqual({ foo: "bar" });
     });
@@ -106,9 +104,7 @@ describe("serializeCookie(name, value, options)", () => {
     it("should specify alternative value encoder", () => {
       expect(
         serializeCookie("foo", "bar", {
-          encode: function (v) {
-            return Buffer.from(v, "utf8").toString("base64");
-          },
+          encode: (v) => Buffer.from(v, "utf8").toString("base64"),
         }),
       ).toEqual("foo=YmFy");
     });
@@ -116,9 +112,7 @@ describe("serializeCookie(name, value, options)", () => {
     it("should throw when returned value is invalid", () => {
       expect(() =>
         serializeCookie("foo", "+ \n", {
-          encode: function (v) {
-            return v;
-          },
+          encode: (v) => v,
         }),
       ).throw(/argument val is invalid/);
     });

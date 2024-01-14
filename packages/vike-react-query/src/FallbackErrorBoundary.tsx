@@ -1,5 +1,5 @@
 import { QueryErrorResetBoundary } from "@tanstack/react-query";
-import { nodeENV } from "@techmely/utils";
+import { globProcess } from "@techmely/utils";
 import React, { type CSSProperties, type FC, type PropsWithChildren } from "react";
 import { ErrorBoundary, type FallbackProps } from "react-error-boundary";
 
@@ -41,7 +41,7 @@ const Fallback: FC<FallbackProps> = ({ resetErrorBoundary, error }) => {
       <button type="button" style={buttonStyle} onClick={() => resetErrorBoundary()}>
         Try again
       </button>
-      {nodeENV === "development" && <pre>{getErrorStack(error)}</pre>}
+      {globProcess.env.NODE_ENV === "development" && <pre>{getErrorStack(error)}</pre>}
     </div>
   );
 };
@@ -49,7 +49,7 @@ const Fallback: FC<FallbackProps> = ({ resetErrorBoundary, error }) => {
 const FallbackErrorBoundary: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
-      {nodeENV === "development" ? (
+      {globProcess.env.NODE_ENV === "development" ? (
         <QueryErrorResetBoundary>
           {({ reset }) => (
             <ErrorBoundary onReset={reset} FallbackComponent={Fallback}>

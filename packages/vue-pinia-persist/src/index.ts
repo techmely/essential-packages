@@ -86,7 +86,8 @@ function mapPersist({ id, storage, globalConfig }: PersistMapMaterials, p: Persi
     onBeforeRestore: p?.onBeforeRestore || globalConfig?.onBeforeRestore || noop,
     detached: globalConfig?.detached || p?.detached !== undefined ? p.detached : true,
     version: p?.version || 1,
-    storage: p?.storage || globalConfig?.storage || storage || isBrowser ? localStorage : undefined,
+    storage:
+      p?.storage || globalConfig?.storage || storage || isBrowser() ? localStorage : undefined,
   };
 }
 

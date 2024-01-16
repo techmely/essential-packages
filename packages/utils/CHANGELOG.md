@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.0.1
+
+### Patch Changes
+
+- Add is prefers reduced motion media query
+
 ## 2.0.0
 
 ### Major Changes

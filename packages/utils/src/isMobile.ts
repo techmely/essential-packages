@@ -1,13 +1,5 @@
-function match() {
-  return typeof window !== "undefined" ? window.matchMedia || window.msMatchMedia : undefined;
-}
+import { windowMatchMedia } from "./matchMedia";
 
 export function isMobile() {
-  return typeof window !== "undefined" ? match()?.("(pointer:coarse)")?.matches : false;
-}
-
-declare global {
-  interface Window {
-    msMatchMedia(query: string): MediaQueryList;
-  }
+  return typeof window !== "undefined" ? windowMatchMedia()?.("(pointer:coarse)")?.matches : false;
 }

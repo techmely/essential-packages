@@ -3123,8 +3123,11 @@ __metadata:
     tsup: "npm:8.0.1"
   peerDependencies:
     "@axiomhq/js": ^1.0.0-rc.1
+    "@techmely/types": ^1.6.1
   peerDependenciesMeta:
     "@axiomhq/js":
+      optional: true
+    "@techmely/types":
       optional: true
   languageName: unknown
   linkType: soft
@@ -3321,7 +3324,7 @@ __metadata:
     vike: "npm:^0.4.153"
   peerDependencies:
     "@tanstack/react-query": ^5.17.0
-    "@techmely/utils": ^2.0.0
+    "@techmely/utils": ^2.0.1
     "@techmely/vike-react": ^0.1.15
     devalue: ^4.3.2
     react: ^18.2.0

@@ -1,4 +1,4 @@
-import { afterAll, beforeAll, describe, expect, test, vi } from "vitest";
+import { describe, expect, test } from "vitest";
 import {
   botPatterns,
   botRegPattern,

@@ -4,9 +4,9 @@ import { getTsupOptions } from "./src/config";
 
 const universalOptions = getTsupOptions(pkg, {
   tsupOptions: {
-    treeshake: false,
+    treeshake: true,
     target: "node18",
-    format: ["cjs", "esm", "iife"],
+    format: ["cjs", "esm"],
     entry: ["src/index.ts", "src/**/*.ts"],
   },
 });

@@ -12,6 +12,7 @@ export * from "./clamp";
 export * from "./convertHrTime";
 export * from "./cookie";
 export * from "./cutString";
+export * from "./createElement";
 export * from "./deleteProps";
 export * from "./downloadByData";
 export * from "./emitter";

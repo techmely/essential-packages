@@ -623,6 +623,10 @@ exports[`isBot > module interface > interface is as expected 1`] = `
     "Function",
   ],
   [
+    "isPrefersReducedMotion",
+    "Function",
+  ],
+  [
     "isPromise",
     "Function",
   ],
@@ -760,6 +764,10 @@ exports[`isBot > module interface > interface is as expected 1`] = `
   ],
   [
     "objectKeys",
+    "Function",
+  ],
+  [
+    "OrderedMap",
     "Function",
   ],
   [

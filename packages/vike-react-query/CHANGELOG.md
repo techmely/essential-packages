@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 1.0.1
+
+### Patch Changes
+
+- [`ce68f50`](https://github.com/techmely/essential-packages/commit/ce68f501616a8c3576d18b2beae311905fb1ce0f) Thanks [@harrytran998](https://github.com/harrytran998)! - Update packages utils
+
 ## 1.0.0
 
 ### Patch Changes

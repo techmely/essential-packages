@@ -71,6 +71,10 @@ exports[`isBot > module interface > interface is as expected 1`] = `
     "Function",
   ],
   [
+    "createElement",
+    "Function",
+  ],
+  [
     "deleteProps",
     "Function",
   ],

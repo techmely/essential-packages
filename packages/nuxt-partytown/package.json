@@ -1,6 +1,6 @@
 {
   "name": "@techmely/nuxt-partytown",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Integration with Partytown effortless",
   "repository": "https://github.com/techmely/essential-packages/tree/main/packages/nuxt-partytown",
   "license": "MIT",
@@ -32,14 +32,14 @@
   },
   "dependencies": {
     "@builder.io/partytown": "^0.8.2",
-    "@nuxt/kit": "^3.9.2"
+    "@nuxt/kit": "^3.9.3"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.8",
     "@nuxt/module-builder": "^0.5.5",
-    "@nuxt/schema": "^3.9.2",
+    "@nuxt/schema": "^3.9.3",
     "@nuxt/test-utils": "3.9.0",
-    "@types/node": "20.11.4",
-    "nuxt": "^3.9.2"
+    "@types/node": "20.11.5",
+    "nuxt": "^3.9.3"
   }
 }

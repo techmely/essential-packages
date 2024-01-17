@@ -11,7 +11,8 @@
         "recommended": true
       },
       "style": {
-        "recommended": true
+        "recommended": true,
+        "noArguments": "off"
       },
       "suspicious": {
         "noExplicitAny": "off"

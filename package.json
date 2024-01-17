@@ -25,13 +25,13 @@
     "lint.duplicate": "jscpd"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.4.1",
+    "@biomejs/biome": "1.5.2",
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.1",
     "@playwright/test": "1.41.0",
     "@testing-library/react": "14.1.2",
     "@total-typescript/ts-reset": "0.5.1",
-    "@types/node": "20.11.4",
+    "@types/node": "20.11.5",
     "@vitest/coverage-v8": "1.2.0",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",

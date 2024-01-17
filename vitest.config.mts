@@ -20,7 +20,7 @@ export default defineConfig({
     coverage: {
       reporter: ["lcovonly"],
     },
-    include: ["packages/**/test/**/*.test.ts?(x)"],
+    include: ["packages/**/**/**/*.test.?(m)ts?(x)"],
     exclude: ["node_modules", "packages/**/node_modules", "packages/**/dist"],
   },
 });

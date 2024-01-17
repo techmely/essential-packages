@@ -1,5 +1,14 @@
 # @techmely/nuxt-pinia-persist
 
+## 1.0.8
+
+### Patch Changes
+
+- Upgrade deps + upgrade ultils package
+
+- Updated dependencies []:
+  - @techmely/utils@2.0.4
+
 ## 1.0.7
 
 ### Patch Changes

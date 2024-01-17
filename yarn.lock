@@ -735,16 +735,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:1.4.1":
-  version: 1.4.1
-  resolution: "@biomejs/biome@npm:1.4.1"
+"@biomejs/biome@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@biomejs/biome@npm:1.5.2"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:1.4.1"
-    "@biomejs/cli-darwin-x64": "npm:1.4.1"
-    "@biomejs/cli-linux-arm64": "npm:1.4.1"
-    "@biomejs/cli-linux-x64": "npm:1.4.1"
-    "@biomejs/cli-win32-arm64": "npm:1.4.1"
-    "@biomejs/cli-win32-x64": "npm:1.4.1"
+    "@biomejs/cli-darwin-arm64": "npm:1.5.2"
+    "@biomejs/cli-darwin-x64": "npm:1.5.2"
+    "@biomejs/cli-linux-arm64": "npm:1.5.2"
+    "@biomejs/cli-linux-arm64-musl": "npm:1.5.2"
+    "@biomejs/cli-linux-x64": "npm:1.5.2"
+    "@biomejs/cli-linux-x64-musl": "npm:1.5.2"
+    "@biomejs/cli-win32-arm64": "npm:1.5.2"
+    "@biomejs/cli-win32-x64": "npm:1.5.2"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -752,7 +754,11 @@ __metadata:
       optional: true
     "@biomejs/cli-linux-arm64":
       optional: true
+    "@biomejs/cli-linux-arm64-musl":
+      optional: true
     "@biomejs/cli-linux-x64":
+      optional: true
+    "@biomejs/cli-linux-x64-musl":
       optional: true
     "@biomejs/cli-win32-arm64":
       optional: true
@@ -760,48 +766,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 11d3a6d0ac0e31c6f5e5e33a46a77b4e1f0846a1d6c023b597a472266e911ce5ad0513b1946eedc37d31547785909c87110e803c69f564a36d4ff045d01ed243
+  checksum: 9b56dfd722868efed0e891c7454f9bc6f322f702247688aede7e8071b5d7bedd110e4f762c01bceaa58141eef691339485256abd14c7ef4caae3659fe0aa7544
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:1.4.1":
-  version: 1.4.1
-  resolution: "@biomejs/cli-darwin-arm64@npm:1.4.1"
+"@biomejs/cli-darwin-arm64@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@biomejs/cli-darwin-arm64@npm:1.5.2"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:1.4.1":
-  version: 1.4.1
-  resolution: "@biomejs/cli-darwin-x64@npm:1.4.1"
+"@biomejs/cli-darwin-x64@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@biomejs/cli-darwin-x64@npm:1.5.2"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:1.4.1":
-  version: 1.4.1
-  resolution: "@biomejs/cli-linux-arm64@npm:1.4.1"
-  conditions: os=linux & cpu=arm64
+"@biomejs/cli-linux-arm64-musl@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:1.5.2"
+  conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:1.4.1":
-  version: 1.4.1
-  resolution: "@biomejs/cli-linux-x64@npm:1.4.1"
-  conditions: os=linux & cpu=x64
+"@biomejs/cli-linux-arm64@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@biomejs/cli-linux-arm64@npm:1.5.2"
+  conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:1.4.1":
-  version: 1.4.1
-  resolution: "@biomejs/cli-win32-arm64@npm:1.4.1"
+"@biomejs/cli-linux-x64-musl@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@biomejs/cli-linux-x64-musl@npm:1.5.2"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-linux-x64@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@biomejs/cli-linux-x64@npm:1.5.2"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@biomejs/cli-win32-arm64@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@biomejs/cli-win32-arm64@npm:1.5.2"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:1.4.1":
-  version: 1.4.1
-  resolution: "@biomejs/cli-win32-x64@npm:1.4.1"
+"@biomejs/cli-win32-x64@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@biomejs/cli-win32-x64@npm:1.5.2"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -1117,10 +1137,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:4.20231218.0":
-  version: 4.20231218.0
-  resolution: "@cloudflare/workers-types@npm:4.20231218.0"
-  checksum: 96821a4aab6cf5fdf0767b77dd5804c6da179b5acdebce24b11fb2f730e851d29eb70e012a2e504b8690f8ad6763001325a0bda9d156c70135b5b76adb5e1f8d
+"@cloudflare/workers-types@npm:4.20240117.0":
+  version: 4.20240117.0
+  resolution: "@cloudflare/workers-types@npm:4.20240117.0"
+  checksum: 900b796af2ae97257e1f6171b9c37d718c5f8ae064cea8f8d1c48e52ccde01492c5cfa61716fc703d05a6bd92e50a55f7d9e525d2c91919db76e42458c3e8e76
   languageName: node
   linkType: hard
 
@@ -2219,11 +2239,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:3.9.2, @nuxt/kit@npm:^3.9.1, @nuxt/kit@npm:^3.9.2":
-  version: 3.9.2
-  resolution: "@nuxt/kit@npm:3.9.2"
+"@nuxt/kit@npm:3.9.3, @nuxt/kit@npm:^3.9.3":
+  version: 3.9.3
+  resolution: "@nuxt/kit@npm:3.9.3"
   dependencies:
-    "@nuxt/schema": "npm:3.9.2"
+    "@nuxt/schema": "npm:3.9.3"
     c12: "npm:^1.6.1"
     consola: "npm:^3.2.3"
     defu: "npm:^6.1.4"
@@ -2241,7 +2261,7 @@ __metadata:
     unctx: "npm:^2.3.1"
     unimport: "npm:^3.7.1"
     untyped: "npm:^1.4.0"
-  checksum: 74be92da9ec4b010a1e4e2196a95974210d2cf3bfe968bc571699be2bfd17818df6b29ea14f6ce6aa4237684f28ae863553e2896c7c591130bb9a3959829f321
+  checksum: 8ab145855f164066b18c90e11d888b686571c429cd50effb07e20c75c0c2d5d88a733767e3fe11fb91706de87656313d3660ecb9a31ba36b88ddf2ffdc895aa3
   languageName: node
   linkType: hard
 
@@ -2268,6 +2288,32 @@ __metadata:
     unimport: "npm:^3.7.0"
     untyped: "npm:^1.4.0"
   checksum: 54d120738fbcfaf764bdf691a8ca250998cd09bf3d4d9344d2b8868dd32aea0df19bb38407b4242d0c539b7776232b521d7896b9993ce9bd90c024b27f870c91
+  languageName: node
+  linkType: hard
+
+"@nuxt/kit@npm:^3.9.1":
+  version: 3.9.2
+  resolution: "@nuxt/kit@npm:3.9.2"
+  dependencies:
+    "@nuxt/schema": "npm:3.9.2"
+    c12: "npm:^1.6.1"
+    consola: "npm:^3.2.3"
+    defu: "npm:^6.1.4"
+    globby: "npm:^14.0.0"
+    hash-sum: "npm:^2.0.0"
+    ignore: "npm:^5.3.0"
+    jiti: "npm:^1.21.0"
+    knitwork: "npm:^1.0.0"
+    mlly: "npm:^1.5.0"
+    pathe: "npm:^1.1.2"
+    pkg-types: "npm:^1.0.3"
+    scule: "npm:^1.2.0"
+    semver: "npm:^7.5.4"
+    ufo: "npm:^1.3.2"
+    unctx: "npm:^2.3.1"
+    unimport: "npm:^3.7.1"
+    untyped: "npm:^1.4.0"
+  checksum: 74be92da9ec4b010a1e4e2196a95974210d2cf3bfe968bc571699be2bfd17818df6b29ea14f6ce6aa4237684f28ae863553e2896c7c591130bb9a3959829f321
   languageName: node
   linkType: hard
 
@@ -2309,7 +2355,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/schema@npm:3.9.2, @nuxt/schema@npm:^3.9.1, @nuxt/schema@npm:^3.9.2":
+"@nuxt/schema@npm:3.9.2, @nuxt/schema@npm:^3.9.1":
   version: 3.9.2
   resolution: "@nuxt/schema@npm:3.9.2"
   dependencies:
@@ -2325,6 +2371,25 @@ __metadata:
     unimport: "npm:^3.7.1"
     untyped: "npm:^1.4.0"
   checksum: 8026b3ff921b0a3aeb36bb3a8c490e655874471d41206a46e9f22546fbf0df2d17420f13769ba2a3bc7a2c810b5d337c56d55000ef1e89f839b36641acf11027
+  languageName: node
+  linkType: hard
+
+"@nuxt/schema@npm:3.9.3, @nuxt/schema@npm:^3.9.3":
+  version: 3.9.3
+  resolution: "@nuxt/schema@npm:3.9.3"
+  dependencies:
+    "@nuxt/ui-templates": "npm:^1.3.1"
+    consola: "npm:^3.2.3"
+    defu: "npm:^6.1.4"
+    hookable: "npm:^5.5.3"
+    pathe: "npm:^1.1.2"
+    pkg-types: "npm:^1.0.3"
+    scule: "npm:^1.2.0"
+    std-env: "npm:^3.7.0"
+    ufo: "npm:^1.3.2"
+    unimport: "npm:^3.7.1"
+    untyped: "npm:^1.4.0"
+  checksum: 865223bf7c4b1cac866299aa3c3771fba8525d1e81638671e7ecb4cadf72405d7ff12140a22ed317245c230c73d0b94929bd8181929dcb20f5e6b76e7666a379
   languageName: node
   linkType: hard
 
@@ -2423,11 +2488,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/vite-builder@npm:3.9.2":
-  version: 3.9.2
-  resolution: "@nuxt/vite-builder@npm:3.9.2"
+"@nuxt/vite-builder@npm:3.9.3":
+  version: 3.9.3
+  resolution: "@nuxt/vite-builder@npm:3.9.3"
   dependencies:
-    "@nuxt/kit": "npm:3.9.2"
+    "@nuxt/kit": "npm:3.9.3"
     "@rollup/plugin-replace": "npm:^5.0.5"
     "@vitejs/plugin-vue": "npm:^5.0.3"
     "@vitejs/plugin-vue-jsx": "npm:^3.1.0"
@@ -2462,7 +2527,7 @@ __metadata:
     vue-bundle-renderer: "npm:^2.0.0"
   peerDependencies:
     vue: ^3.3.4
-  checksum: 3032d039135b31c4a699f84271f700884a9d335d94b95a651f8313ec321811bfbe5e8a4d243496619efbeec663cde7c0446a488a3d726e97fbcfc81b8c6388d7
+  checksum: baa422b2bae10a232b366baf55b6814bb29156437ca21ff632be8b5fb26f9c3e8bf408121eff29543b27574baaa8680708a20ba465a1c813985abddede5a8a10
   languageName: node
   linkType: hard
 
@@ -3192,13 +3257,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@techmely/monorepo@workspace:."
   dependencies:
-    "@biomejs/biome": "npm:1.4.1"
+    "@biomejs/biome": "npm:1.5.2"
     "@changesets/changelog-github": "npm:^0.5.0"
     "@changesets/cli": "npm:^2.27.1"
     "@playwright/test": "npm:1.41.0"
     "@testing-library/react": "npm:14.1.2"
     "@total-typescript/ts-reset": "npm:0.5.1"
-    "@types/node": "npm:20.11.4"
+    "@types/node": "npm:20.11.5"
     "@vitest/coverage-v8": "npm:1.2.0"
     bundlesize: "npm:0.18.1"
     cross-env: "npm:7.0.3"
@@ -3235,12 +3300,12 @@ __metadata:
   dependencies:
     "@builder.io/partytown": "npm:^0.8.2"
     "@nuxt/devtools": "npm:^1.0.8"
-    "@nuxt/kit": "npm:^3.9.2"
+    "@nuxt/kit": "npm:^3.9.3"
     "@nuxt/module-builder": "npm:^0.5.5"
-    "@nuxt/schema": "npm:^3.9.2"
+    "@nuxt/schema": "npm:^3.9.3"
     "@nuxt/test-utils": "npm:3.9.0"
-    "@types/node": "npm:20.11.4"
-    nuxt: "npm:^3.9.2"
+    "@types/node": "npm:20.11.5"
+    nuxt: "npm:^3.9.3"
   languageName: unknown
   linkType: soft
 
@@ -3249,15 +3314,15 @@ __metadata:
   resolution: "@techmely/nuxt-pinia-persist@workspace:packages/nuxt-pinia-persist"
   dependencies:
     "@nuxt/devtools": "npm:^1.0.8"
-    "@nuxt/kit": "npm:3.9.2"
+    "@nuxt/kit": "npm:3.9.3"
     "@nuxt/module-builder": "npm:^0.5.5"
-    "@nuxt/schema": "npm:^3.9.2"
+    "@nuxt/schema": "npm:^3.9.3"
     "@nuxt/test-utils": "npm:3.9.0"
     "@techmely/utils": "npm:^2.0.1"
     "@techmely/vue-pinia-persist": "npm:^1.0.7"
-    "@types/node": "npm:20.11.4"
+    "@types/node": "npm:20.11.5"
     defu: "npm:^6.1.4"
-    nuxt: "npm:^3.9.2"
+    nuxt: "npm:^3.9.3"
     pinia: "npm:^2.1.7"
   peerDependencies:
     pinia: ^2.1.0
@@ -3268,12 +3333,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@techmely/rate-limit@workspace:packages/rate-limit"
   dependencies:
-    "@cloudflare/workers-types": "npm:4.20231218.0"
+    "@cloudflare/workers-types": "npm:4.20240117.0"
     "@techmely/logger": "workspace:*"
     "@techmely/metrics": "workspace:*"
     "@techmely/types": "workspace:*"
     tsup: "npm:8.0.1"
-    valibot: "npm:^0.25.0"
+    valibot: "npm:^0.26.0"
   peerDependencies:
     "@techmely/logger": 1.0.2
     "@techmely/metrics": 1.0.1
@@ -3299,11 +3364,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@techmely/usage-limit@workspace:packages/usage-limit"
   dependencies:
-    "@cloudflare/workers-types": "npm:4.20231218.0"
+    "@cloudflare/workers-types": "npm:4.20240117.0"
     "@techmely/logger": "workspace:*"
     "@techmely/metrics": "workspace:*"
     tsup: "npm:8.0.1"
-    valibot: "npm:^0.25.0"
+    valibot: "npm:^0.26.0"
   peerDependencies:
     "@techmely/logger": "workspace:*"
     "@techmely/metrics": "workspace:*"
@@ -3316,7 +3381,7 @@ __metadata:
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:
     "@techmely/types": "npm:1.6.1"
-    "@types/node": "npm:20.11.4"
+    "@types/node": "npm:20.11.5"
     chalk: "npm:^5.3.0"
     dayjs: "npm:^1.11.10"
     execa: "npm:^8.0.1"
@@ -3365,7 +3430,7 @@ __metadata:
     vike: "npm:^0.4.156"
   peerDependencies:
     "@tanstack/react-query": ^5.17.0
-    "@techmely/utils": ^2.0.1
+    "@techmely/utils": ^2.0.3
     "@techmely/vike-react": ^0.1.15
     devalue: ^4.3.2
     react: ^18.2.0
@@ -3612,12 +3677,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.11.4":
-  version: 20.11.4
-  resolution: "@types/node@npm:20.11.4"
+"@types/node@npm:20.11.5":
+  version: 20.11.5
+  resolution: "@types/node@npm:20.11.5"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: af6e1ad4d8f210d06d6db6c85b9aba25b022b493a4f2289e5ac693b418de746db812ab1537096e10e7cb7b78f1d835a06e61f31d93ebe36ef116bfbbf8f04c97
+  checksum: 6d18cec852f5cfbed3ec42b5c01c026e7a3f9da540d6e3d6738d4cee9979fb308cf27b6df7ba40a6553e7bc82e678f0ef53ba6e6ad52e5b86bd97b7783c2a42c
   languageName: node
   linkType: hard
 
@@ -10345,17 +10410,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nuxt@npm:^3.9.2":
-  version: 3.9.2
-  resolution: "nuxt@npm:3.9.2"
+"nuxt@npm:^3.9.3":
+  version: 3.9.3
+  resolution: "nuxt@npm:3.9.3"
   dependencies:
     "@nuxt/devalue": "npm:^2.0.2"
     "@nuxt/devtools": "npm:^1.0.8"
-    "@nuxt/kit": "npm:3.9.2"
-    "@nuxt/schema": "npm:3.9.2"
+    "@nuxt/kit": "npm:3.9.3"
+    "@nuxt/schema": "npm:3.9.3"
     "@nuxt/telemetry": "npm:^2.5.3"
     "@nuxt/ui-templates": "npm:^1.3.1"
-    "@nuxt/vite-builder": "npm:3.9.2"
+    "@nuxt/vite-builder": "npm:3.9.3"
     "@unhead/dom": "npm:^1.8.10"
     "@unhead/ssr": "npm:^1.8.10"
     "@unhead/vue": "npm:^1.8.10"
@@ -10415,7 +10480,7 @@ __metadata:
   bin:
     nuxi: bin/nuxt.mjs
     nuxt: bin/nuxt.mjs
-  checksum: 7e37aefa0254ea2a6b8c314eb98369af7afd4b251f959f349df6b6424307ec802f34cfc6ce53d113a4abcaa5473bfd41900c2ecb7e32bfdfc009e7e496ee1980
+  checksum: a976f606e3a94d8849e43fed6a6f35c2cf7b2eeb6183808d830de9d99e70696294a772dc1d0485deac38e0e7941660ae6270ecc532485f24652fe4ecdca1a3cc
   languageName: node
   linkType: hard
 
@@ -14107,10 +14172,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"valibot@npm:^0.25.0":
-  version: 0.25.0
-  resolution: "valibot@npm:0.25.0"
-  checksum: 89edf8a048a287d586748965888f64d98855883c81752afa0ff7f2454f0bfee2b095af4ec5eddb3ff0462dbfae68b363e0657e9a2b9dca7f3ce69a9e7a468c5d
+"valibot@npm:^0.26.0":
+  version: 0.26.0
+  resolution: "valibot@npm:0.26.0"
+  checksum: d4854c7ccaa6194c5172e001a98c0116b7cf3f58607d83472b38431e0203e80dd960cfc36e3a0650eeb7aec6036b4c27ad4d363f24a0541495e71b35c331b3e3
   languageName: node
   linkType: hard
 

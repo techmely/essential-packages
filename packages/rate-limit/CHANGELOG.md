@@ -1,5 +1,11 @@
 # @techmely/rate-limit
 
+## 1.1.3
+
+### Patch Changes
+
+- Upgrade deps + upgrade ultils package
+
 ## 1.1.2
 
 ### Patch Changes

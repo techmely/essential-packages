@@ -1,6 +1,6 @@
 {
   "name": "@techmely/usage-limit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Techmely usage limit",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -28,11 +28,11 @@
     "valibot": "^0.25.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20231218.0",
+    "@cloudflare/workers-types": "4.20240117.0",
     "@techmely/logger": "workspace:*",
     "@techmely/metrics": "workspace:*",
     "tsup": "8.0.1",
-    "valibot": "^0.25.0"
+    "valibot": "^0.26.0"
   },
   "funding": [
     {

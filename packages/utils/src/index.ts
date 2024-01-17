@@ -68,6 +68,7 @@ export * from "./isNumber";
 export * from "./isObject";
 export * from "./isPngImage";
 export * from "./isPrimitive";
+export * from "./isPrefersReducedMotion";
 export * from "./isPromise";
 export * from "./isRegexp";
 export * from "./isSameDay";
@@ -102,6 +103,7 @@ export * from "./numberStripPrecision";
 export * from "./numberTimesPrecision";
 export * from "./objectEntries";
 export * from "./objectKeys";
+export * from "./orderMap";
 
 export * from "./p.cancelable";
 export * from "./p.defer";

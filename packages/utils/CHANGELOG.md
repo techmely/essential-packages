@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.0.3
+
+### Patch Changes
+
+- Add new function order map
+
 ## 2.0.2
 
 ### Patch Changes

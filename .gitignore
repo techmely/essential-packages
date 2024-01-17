@@ -568,5 +568,5 @@ $RECYCLE.BIN/
 .turbo
 report
 dist
-partytown
+packages/nuxt-partytown/public/partytown
 .nx

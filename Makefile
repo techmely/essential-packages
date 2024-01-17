@@ -8,7 +8,10 @@ build.vike:
 	yarn nx run-many -t build -p @techmely/vike-react @techmely/vike-react-query
 
 build:
-	yarn nx run-many -t build -p --parallel=10
+	yarn nx run-many -t build -p
+
+clean:
+	yarn nx run-many -t clean -p
 
 publish:
-	yarn nx run-many -t publish -p --parallel=10
+	yarn nx run-many -t publish -p

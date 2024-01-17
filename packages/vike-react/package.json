@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "homepage": "https://techmely.com/libraries/vike-react",
   "bugs": {
     "url": "https://github.com/techmely/essential-packages/issues"
@@ -17,6 +17,7 @@
     "CHANGELOG.md"
   ],
   "scripts": {
+    "clean": "rimraf dist",
     "build": "tsup --entry src/+config.h.ts --entry src/index.ts --entry src/useData.ts --entry src/usePageContext.ts --entry src/onRenderClient.tsx --entry src/onRenderHtml.tsx --sourcemap --clean --dts --format esm && yarn fix.build",
     "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts",
     "publish": "node ../../scripts/publishPkg.mjs --only-esm"
@@ -28,13 +29,13 @@
     "vike": "^0.4.153"
   },
   "devDependencies": {
-    "@types/react": "^18.2.46",
+    "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-streaming": "0.3.18",
+    "react-streaming": "0.3.19",
     "tsup": "8.0.1",
-    "vike": "^0.4.153"
+    "vike": "^0.4.156"
   },
   "publishConfig": {
     "access": "public",

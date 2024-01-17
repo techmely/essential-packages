@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.0.2
+
+### Patch Changes
+
+- Upgrade deps
+
 ## 2.0.1
 
 ### Patch Changes

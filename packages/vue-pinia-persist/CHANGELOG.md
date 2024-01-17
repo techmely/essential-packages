@@ -1,5 +1,14 @@
 # @techmely/vue-pinia-persist
 
+## 1.0.7
+
+### Patch Changes
+
+- Upgrade deps
+
+- Updated dependencies []:
+  - @techmely/utils@2.0.2
+
 ## 1.0.6
 
 ### Patch Changes

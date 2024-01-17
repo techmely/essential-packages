@@ -25,6 +25,6 @@
     "useUnknownInCatchVariables": false,
     "verbatimModuleSyntax": true,
     "jsx": "preserve",
-    "types": ["@techmely/vike-react/dist/+config.h"]
+    "types": ["../vike-react/dist/index.d.ts"]
   }
 }

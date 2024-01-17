@@ -83,6 +83,3 @@ const VikeConfig = {
 } satisfies Config;
 
 export default VikeConfig;
-
-export * from "./typings/head.d";
-export * from "./typings/vike.d";

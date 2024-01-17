@@ -23,8 +23,7 @@
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@axiomhq/js": "^1.0.0-rc.1",
-    "@techmely/types": "^1.6.1"
+    "@axiomhq/js": "^1.0.0-rc.1"
   },
   "peerDependenciesMeta": {
     "@axiomhq/js": {

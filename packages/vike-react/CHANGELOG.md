@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 0.1.16
+
+### Patch Changes
+
+- Upgrade deps
+
 ## 0.1.15
 
 ### Patch Changes

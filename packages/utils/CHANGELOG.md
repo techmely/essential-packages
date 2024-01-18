@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.0.5
+
+### Patch Changes
+
+- Add subsequence & toggle class fn
+
 ## 2.0.4
 
 ### Patch Changes

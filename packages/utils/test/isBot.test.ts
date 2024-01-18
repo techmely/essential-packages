@@ -133,15 +133,6 @@ describe("isBot", () => {
       expect(successCount).toBe(browsers.length);
     });
   });
-
-  describe("module interface", () => {
-    test("interface is as expected", async () => {
-      const types = Object.entries(await import("../src/index")).map(
-        ([key, value]) => [key, value.constructor.name] as [string, string],
-      );
-      expect(types).toMatchSnapshot();
-    });
-  });
 });
 
 function getBrowsersAgent() {

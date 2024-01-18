@@ -12,10 +12,12 @@
       },
       "style": {
         "recommended": true,
-        "noArguments": "off"
+        "noArguments": "off",
+        "noParameterAssign": "warn"
       },
       "suspicious": {
-        "noExplicitAny": "off"
+        "noExplicitAny": "off",
+        "noConfusingVoidType": "warn"
       }
     }
   },

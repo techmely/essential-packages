@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.0.7
+
+### Patch Changes
+
+- Add check firefox or webkit function
+
 ## 2.0.6
 
 ### Patch Changes

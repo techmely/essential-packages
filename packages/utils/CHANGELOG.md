@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.0.6
+
+### Patch Changes
+
+- Add check browser type is function
+
 ## 2.0.5
 
 ### Patch Changes

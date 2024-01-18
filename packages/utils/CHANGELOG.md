@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.0.8
+
+### Patch Changes
+
+- Add check chrome version & webkit version
+
 ## 2.0.7
 
 ### Patch Changes

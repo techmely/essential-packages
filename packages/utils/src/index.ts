@@ -51,6 +51,8 @@ export * from "./isCrawler";
 export * from "./isDate";
 export * from "./isDefined";
 export * from "./isEdgeBrowser";
+export * from "./isGecko";
+export * from "./isWebkit";
 export * from "./isEmpties";
 export * from "./isEmpty";
 export * from "./isEmptyArray";

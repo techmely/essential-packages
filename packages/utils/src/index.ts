@@ -59,7 +59,7 @@ export * from "./isFunction";
 export * from "./isGecko";
 export * from "./isHexColor";
 export * from "./isIOS";
-export * from "./isIosChrome";
+export * from "./isChromeIOS";
 export * from "./isKeyof";
 export * from "./isLinux";
 export * from "./isMacOs";

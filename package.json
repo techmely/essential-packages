@@ -11,7 +11,7 @@
     "packages/*"
   ],
   "scripts": {
-    "postinstall": "husky install",
+    "postinstall": "node scripts/postinstall.mjs",
     "build": "nx run-many -t build --parallel 5",
     "clean": "nx run-many -t clean",
     "test.unit": "vitest --passWithNoTests",

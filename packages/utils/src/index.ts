@@ -130,6 +130,7 @@ export * from "./removeUndefinedObject";
 export * from "./requestIdleCallback";
 export * from "./shuffleArray";
 export * from "./singleton";
+export * from './stopAnimation';
 export * from "./sleep";
 export * from "./slugify";
 export * from "./snakeToCamel";

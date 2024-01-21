@@ -25,7 +25,7 @@
   "devDependencies": {
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",
-    "hono": "^3.12.5",
+    "hono": "^3.12.6",
     "tsup": "8.0.1"
   },
   "funding": [

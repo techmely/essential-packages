@@ -7,7 +7,9 @@
     "type": "git",
     "url": "https://github.com/techmely/techmely.git"
   },
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "postinstall": "node scripts/postinstall.mjs",
     "build": "nx run-many -t build --parallel 5",
@@ -26,17 +28,17 @@
     "@biomejs/biome": "1.5.2",
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.1",
-    "@playwright/test": "1.41.0",
+    "@playwright/test": "1.41.1",
     "@testing-library/jest-dom": "6.2.0",
     "@testing-library/react": "14.1.2",
     "@total-typescript/ts-reset": "0.5.1",
     "@types/node": "20.11.5",
-    "@vitest/coverage-v8": "1.2.0",
+    "@vitest/coverage-v8": "1.2.1",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
-    "happy-dom": "13.1.4",
+    "happy-dom": "13.2.0",
     "husky": "8.0.3",
     "jscpd": "3.5.10",
     "kolorist": "1.8.0",
@@ -46,8 +48,8 @@
     "tslib": "^2.6.2",
     "typescript": "5.3.3",
     "vite": "^5.0.12",
-    "vite-plugin-solid": "2.8.0",
-    "vitest": "1.2.0",
+    "vite-plugin-solid": "2.8.2",
+    "vitest": "1.2.1",
     "zx": "7.2.3"
   },
   "engines": {
@@ -56,8 +58,14 @@
   "jscpd": {
     "threshold": 0.1,
     "pattern": "packages/**/src/**/*.ts",
-    "reporters": ["html", "console"],
-    "ignore": ["**/__snapshots__/**", "packages/**/test/**/*.ts"],
+    "reporters": [
+      "html",
+      "console"
+    ],
+    "ignore": [
+      "**/__snapshots__/**",
+      "packages/**/test/**/*.ts"
+    ],
     "absolute": true,
     "gitignore": true
   },

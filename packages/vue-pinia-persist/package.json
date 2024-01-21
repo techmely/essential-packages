@@ -27,8 +27,8 @@
     "pinia": "^2.1.7",
     "ts-essentials": "9.4.1",
     "tsup": "8.0.1",
-    "vitest": "1.2.0",
-    "vue": "^3.4.14"
+    "vitest": "1.2.1",
+    "vue": "^3.4.15"
   },
   "publishConfig": {
     "access": "public",

@@ -1,3 +1,4 @@
+export * from './alias';
 export * from "./RopeSequence";
 export * from "./alphaHex";
 export * from "./cacheImportModule";

@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.0.9
+
+### Patch Changes
+
+- Add create styles tag
+
 ## 2.0.8
 
 ### Patch Changes

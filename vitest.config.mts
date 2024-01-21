@@ -16,6 +16,7 @@ export default defineConfig({
   },
   test: {
     globals: true,
+    setupFiles: ["./packages/utils/vitest-setup.ts"],
     environment: "happy-dom",
     coverage: {
       reporter: ["lcovonly"],

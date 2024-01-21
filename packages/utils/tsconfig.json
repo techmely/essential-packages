@@ -1,9 +1,9 @@
 {
   "extends": "../configs/tsconfig.base.json",
-  "include": ["src", "../../reset.d.ts"],
+  "include": ["src", "../../reset.d.ts", "./vitest-setup.ts"],
   "exclude": ["dist", "node_modules"],
   "compilerOptions": {
-    "baseUrl": ".",
-    "module": "esnext"
+    "types": ["vitest/globals"],
+    "module": "esnext",
   }
 }

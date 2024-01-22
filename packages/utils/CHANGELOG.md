@@ -1,5 +1,31 @@
 # @techmely/utils
 
+## 2.1.0
+
+### Minor Changes
+
+Add a lot of function
+- ranking
+- calculateFrequencies
+- fullScreen
+- get
+- hasDuplicates
+- isDistinctArray
+- isISOString
+- isISOStringTimeZone
+- isSlowConnection
+- listify
+- mask
+- onClickOutside
+- onScrollStop
+- parseQueryString
+- partition
+- runHeavyAsyncFn
+- scrollToTop
+- stringifyQueryObject
+- toISOStringTimezone
+
+
 ## 2.0.9
 
 ### Patch Changes

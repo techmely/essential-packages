@@ -1,4 +1,9 @@
+import { invariant } from "./invariant";
+import { isBrowser } from "./isBrowser";
+
 export function useObserverElement() {
+  invariant(isBrowser());
+
   let observer: IntersectionObserver | null = null;
 
   const callbacks = new Map<Element, CallableFunction>();
@@ -28,7 +33,5 @@ export function useObserverElement() {
     };
   };
 
-  return {
-    observe,
-  };
+  return observe;
 }

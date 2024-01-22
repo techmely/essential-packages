@@ -23,6 +23,7 @@ export * from "./emitter";
 export * from "./env";
 export * from "./escapeRegex";
 export * from "./findDuplicates";
+export * from "./findFirstDefined";
 export * from "./findLastIndex";
 export * from "./firstUniqueArray";
 export * from "./firstUniqueChar";
@@ -133,6 +134,7 @@ export * from "./runHeavyAsyncFn";
 export * from "./scrollToTop";
 export * from "./stringifyQueryObject";
 export * from "./toISOStringTimezone";
+export * from "./useObserverElement";
 export * from "./webkitVersion";
 
 export * from "./p.cancelable";

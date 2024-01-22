@@ -1,10 +1,17 @@
 # @techmely/utils
 
+## 2.1.1
+
+### Patch Changes
+
+- Add use observer element + find first define value in args
+
 ## 2.1.0
 
 ### Minor Changes
 
 Add a lot of function
+
 - ranking
 - calculateFrequencies
 - fullScreen
@@ -24,7 +31,6 @@ Add a lot of function
 - scrollToTop
 - stringifyQueryObject
 - toISOStringTimezone
-
 
 ## 2.0.9
 

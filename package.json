@@ -38,7 +38,7 @@
     "cross-env": "7.0.3",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
-    "happy-dom": "13.2.0",
+    "happy-dom": "13.2.1",
     "husky": "8.0.3",
     "jscpd": "3.5.10",
     "kolorist": "1.8.0",

@@ -1,5 +1,4 @@
 export * from "./RopeSequence";
-export * from "./alias";
 export * from "./alphaHex";
 export * from "./cacheImportModule";
 export * from "./cacheStringFunc";

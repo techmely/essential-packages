@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.1.2
+
+### Patch Changes
+
+- Add func to calc scroll percentage
+
 ## 2.1.1
 
 ### Patch Changes

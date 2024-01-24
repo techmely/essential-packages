@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.1.3
+
+### Patch Changes
+
+- Update export alias
+
 ## 2.1.2
 
 ### Patch Changes

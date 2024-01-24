@@ -3,6 +3,7 @@ export * from "./alphaHex";
 export * from "./cacheImportModule";
 export * from "./cacheStringFunc";
 export * from "./calculateFrequencies";
+export * from "./calculateScrollPercentage";
 export * from "./callOrReturn";
 export * from "./camel2Snake";
 export * from "./camel2SnakeObject";

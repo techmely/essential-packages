@@ -17,7 +17,6 @@ export interface EntityState<T> {
 }
 
 export type VoidFunc<T> = (value: T) => void;
-
 export type StringEnum<T> = T | (string & Record<never, never>);
 
 export type Records<T = any> = Record<Entity, T>;

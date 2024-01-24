@@ -1,5 +1,6 @@
 export * from "./RopeSequence";
 export * from "./alphaHex";
+export * from "./alias";
 export * from "./cacheImportModule";
 export * from "./cacheStringFunc";
 export * from "./calculateFrequencies";

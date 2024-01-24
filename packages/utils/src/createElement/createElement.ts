@@ -1,4 +1,6 @@
 import type { StringEnum } from "@techmely/types";
+import { invariant } from "../invariant";
+import { isBrowser } from "../isBrowser";
 
 type Child = string | Node | null | undefined | readonly Child[];
 
@@ -11,8 +13,7 @@ export function createElement(
   tag: StringEnum<keyof HTMLElementTagNameMap> | HTMLElement,
   ...children: any[]
 ): HTMLElement {
-  if (typeof window === "undefined") throw new Error("Not in browser environment");
-
+  invariant(isBrowser(), "Not in browser environment");
   let element = tag;
   if (typeof element === "string") element = document.createElement(element);
   let i = 1;

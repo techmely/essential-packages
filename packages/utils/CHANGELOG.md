@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.1.4
+
+### Patch Changes
+
+- Add debounce vs throttle func
+
 ## 2.1.3
 
 ### Patch Changes

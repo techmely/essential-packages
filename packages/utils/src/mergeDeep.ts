@@ -1,5 +1,4 @@
 import type { MergeDeep } from "@techmely/types";
-import { isArray } from "./isArray";
 import { isObject } from "./isObject";
 
 /**
@@ -24,17 +23,17 @@ export function mergeDeep<T extends Record<string, any>, S extends Record<string
     return target as any;
   }
 
-  if (isMergeableObject(target) && isMergeableObject(source)) {
+  if (isObject(target) && isObject(source)) {
     const sourceKeys = Object.keys(source);
 
     for (const key of sourceKeys) {
-      if (isMergeableObject(source[key])) {
+      if (isObject(source[key])) {
         if (!target[key]) {
           // @ts-expect-error I do not know how to fix this
           target[key] = {};
         }
 
-        if (isMergeableObject(target[key])) {
+        if (isObject(target[key])) {
           mergeDeep(target[key], source[key]);
         } else {
           // @ts-expect-error I do not know how to fix this
@@ -48,12 +47,4 @@ export function mergeDeep<T extends Record<string, any>, S extends Record<string
   }
 
   return mergeDeep(target, ...sources);
-}
-
-/**
- * @param {any} item - the input check
- * @returns {boolean} - value
- */
-function isMergeableObject(item: any): item is Record<string, any> {
-  return isObject(item) && !isArray(item);
 }

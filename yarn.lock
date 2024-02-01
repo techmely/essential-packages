@@ -2657,7 +2657,7 @@ __metadata:
     vike: "npm:^0.4.159"
   peerDependencies:
     "@tanstack/react-query": ^5.17.0
-    "@techmely/utils": ^2.1.0
+    "@techmely/utils": ^2.1.6
     "@techmely/vike-react": ^0.1.15
     devalue: ^4.3.2
     react: ^18.2.0
@@ -12696,8 +12696,8 @@ __metadata:
   linkType: hard
 
 "vike@npm:^0.4.159":
-  version: 0.4.159
-  resolution: "vike@npm:0.4.159"
+  version: 0.4.160
+  resolution: "vike@npm:0.4.160"
   dependencies:
     "@brillout/import": "npm:^0.2.3"
     "@brillout/json-serializer": "npm:^0.5.8"
@@ -12719,7 +12719,7 @@ __metadata:
       optional: true
   bin:
     vike: node/cli/bin-entry.js
-  checksum: ff2dae89b627cb877e4551dd92dca8a5818e471cf584bd9ebb15b0416def2431177b868b6d8d2955c2a8c9b9d763fe770dd77a93b5da1ca9411909fabf0bbd60
+  checksum: 1dee6757c3910e7db2f73bdb4f102efee7ce1ccb2ec683b3fa9d012de480ed9d3e5dae357fce3cc59235e7e8c0af2d08d358bcb6d631dc12064f8f5ce8dd67d7
   languageName: node
   linkType: hard
 

@@ -2517,7 +2517,7 @@ __metadata:
   resolution: "@techmely/normalization@workspace:packages/normalization"
   dependencies:
     "@techmely/types": "npm:1.6.1"
-    mutative: "npm:1.0.2"
+    mutative: "npm:1.0.3"
   languageName: unknown
   linkType: soft
 
@@ -2657,7 +2657,7 @@ __metadata:
     vike: "npm:^0.4.159"
   peerDependencies:
     "@tanstack/react-query": ^5.17.0
-    "@techmely/utils": ^2.1.0
+    "@techmely/utils": ^2.1.6
     "@techmely/vike-react": ^0.1.15
     devalue: ^4.3.2
     react: ^18.2.0
@@ -8578,10 +8578,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mutative@npm:1.0.2":
-  version: 1.0.2
-  resolution: "mutative@npm:1.0.2"
-  checksum: e98cf4b412c9b19858e7fa2bbe210cf8c729a043dc0245e474d27ca32d9467d3bd01e123f97f8218d516d9c7096af24c36a84caefb457b07d78ff80b7da05cb0
+"mutative@npm:1.0.3":
+  version: 1.0.3
+  resolution: "mutative@npm:1.0.3"
+  checksum: f8df5cfc8e083d56bc299781795256c46a89c8424d0cc63ac71a160128b3fe619fff68b3925304e9413f62a681133756b3c4117eb4f01fdbf6487dd8af243d93
   languageName: node
   linkType: hard
 

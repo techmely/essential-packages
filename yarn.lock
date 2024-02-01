@@ -2565,7 +2565,7 @@ __metadata:
     "@techmely/metrics": "workspace:*"
     "@techmely/types": "workspace:*"
     tsup: "npm:8.0.1"
-    valibot: "npm:^0.26.0"
+    valibot: "npm:^0.27.1"
   peerDependencies:
     "@techmely/logger": 1.0.2
     "@techmely/metrics": 1.0.1
@@ -2595,7 +2595,7 @@ __metadata:
     "@techmely/logger": "workspace:*"
     "@techmely/metrics": "workspace:*"
     tsup: "npm:8.0.1"
-    valibot: "npm:^0.26.0"
+    valibot: "npm:^0.27.1"
   peerDependencies:
     "@techmely/logger": "workspace:*"
     "@techmely/metrics": "workspace:*"
@@ -2657,7 +2657,7 @@ __metadata:
     vike: "npm:^0.4.159"
   peerDependencies:
     "@tanstack/react-query": ^5.17.0
-    "@techmely/utils": ^2.1.0
+    "@techmely/utils": ^2.1.6
     "@techmely/vike-react": ^0.1.15
     devalue: ^4.3.2
     react: ^18.2.0
@@ -12662,10 +12662,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"valibot@npm:^0.26.0":
-  version: 0.26.0
-  resolution: "valibot@npm:0.26.0"
-  checksum: d4854c7ccaa6194c5172e001a98c0116b7cf3f58607d83472b38431e0203e80dd960cfc36e3a0650eeb7aec6036b4c27ad4d363f24a0541495e71b35c331b3e3
+"valibot@npm:^0.27.1":
+  version: 0.27.1
+  resolution: "valibot@npm:0.27.1"
+  checksum: c115f2f768d29e6c4bec61b80a6f99a002a978611a1ec8d4f88e9be3f15572fc2668422c8da897db6bdcdb0eae43e02a8390b47462aaaacedf18f9fa23c99c33
   languageName: node
   linkType: hard
 

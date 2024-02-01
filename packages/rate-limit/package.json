@@ -33,7 +33,7 @@
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",
     "tsup": "8.0.1",
-    "valibot": "^0.26.0"
+    "valibot": "^0.27.1"
   },
   "funding": [
     {

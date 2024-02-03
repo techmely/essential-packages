@@ -1,15 +1,15 @@
-#!/bin/bash -e
+#!/bin/bash
 
 textBase='\033[0m'
 textInformation='\033[1;34m'
 textSuccess='\033[1;32m'
 
-echo -e "$textInformation \nStart lint code quality with rome"
+echo "$textInformation \nStart lint code quality with rome"
 yarn lint.check
-echo -e "$textSuccess \nCheck rome format successfully."
+echo "$textSuccess \nCheck rome format successfully."
 
-# echo -e "$textInformation Start to check typings in projects"
+# echo "$textInformation Start to check typings in projects"
 # yarn lint:duplicate
-# echo -e "$textSuccess Start to check typings in projects"
+# echo "$textSuccess Start to check typings in projects"
 
-echo -e "$textBase"
+echo "$textBase"

@@ -32,15 +32,15 @@
     }
   },
   "optionalDependencies": {
-    "nanoid": "^5.0.4"
+    "nanoid": "^5.0.5"
   },
   "devDependencies": {
     "@techmely/types": "1.6.1",
-    "@types/node": "20.11.5",
+    "@types/node": "20.11.16",
     "chalk": "^5.3.0",
     "dayjs": "^1.11.10",
     "execa": "^8.0.1",
-    "nanoid": "^5.0.4",
+    "nanoid": "^5.0.5",
     "time-span": "5.1.0",
     "tslib": "^2.6.2",
     "tsup": "8.0.1",

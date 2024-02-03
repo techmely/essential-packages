@@ -28,12 +28,12 @@
     "valibot": "^0.25.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20240117.0",
+    "@cloudflare/workers-types": "4.20240129.0",
     "@techmely/logger": "workspace:*",
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",
     "tsup": "8.0.1",
-    "valibot": "^0.26.0"
+    "valibot": "^0.27.1"
   },
   "funding": [
     {

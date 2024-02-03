@@ -29,13 +29,13 @@
     "vike": "^0.4.153"
   },
   "devDependencies": {
-    "@types/react": "^18.2.48",
+    "@types/react": "^18.2.52",
     "@types/react-dom": "^18.2.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-streaming": "0.3.19",
+    "react-streaming": "0.3.20",
     "tsup": "8.0.1",
-    "vike": "^0.4.159"
+    "vike": "^0.4.160"
   },
   "publishConfig": {
     "access": "public",

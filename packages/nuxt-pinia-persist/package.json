@@ -25,7 +25,7 @@
     "publish": "npm publish"
   },
   "dependencies": {
-    "@nuxt/kit": "3.9.3",
+    "@nuxt/kit": "3.10.0",
     "@techmely/utils": "^2.0.4",
     "@techmely/vue-pinia-persist": "^1.0.7",
     "defu": "^6.1.4"
@@ -35,12 +35,12 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.8",
-    "@nuxt/kit": "3.9.3",
+    "@nuxt/kit": "3.10.0",
     "@nuxt/module-builder": "^0.5.5",
-    "@nuxt/schema": "^3.9.3",
-    "@nuxt/test-utils": "3.10.0",
-    "@types/node": "20.11.5",
-    "nuxt": "^3.9.3",
+    "@nuxt/schema": "^3.10.0",
+    "@nuxt/test-utils": "3.11.0",
+    "@types/node": "20.11.16",
+    "nuxt": "^3.10.0",
     "pinia": "^2.1.7"
   },
   "publishConfig": {

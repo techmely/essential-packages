@@ -1,13 +1,19 @@
 # @techmely/utils
 
+## 2.1.7
+
+### Patch Changes
+
+- add is deep equal + check have same element
+
 ## 2.1.6
 
 ### Patch Changes
 
-* 94caa45 - feat: export news funcs + justify a little bit old core func <Harry Tran>
-* bbbf881 - feat: add func check value is plain object or not  <Harry Tran>
-* 5c3cc14 - feat: add func parse a string to a number if can <Harry Tran>
-* bfd1113 - feat: add func check is null or undefined value <Harry Tran>
+- 94caa45 - feat: export news funcs + justify a little bit old core func <Harry Tran>
+- bbbf881 - feat: add func check value is plain object or not <Harry Tran>
+- 5c3cc14 - feat: add func parse a string to a number if can <Harry Tran>
+- bfd1113 - feat: add func check is null or undefined value <Harry Tran>
 
 ## 2.1.5
 

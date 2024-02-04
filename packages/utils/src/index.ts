@@ -136,6 +136,7 @@ export * from "./onScrollStop";
 export * from "./orderMap";
 export * from "./parseQueryString";
 export * from "./partition";
+export * from "./pascalToKebabCase";
 export * from "./ranking";
 export * from "./runHeavyAsyncFn";
 export * from "./scrollToTop";
@@ -143,6 +144,7 @@ export * from "./stringifyQueryObject";
 export * from "./throttle";
 export * from "./toISOStringTimezone";
 export * from "./toNumber";
+export * from "./truncate";
 export * from "./useObserverElement";
 export * from "./webkitVersion";
 

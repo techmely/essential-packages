@@ -231,7 +231,7 @@ function objectDefProperties<Obj extends object, T extends PropertyDescriptorMap
   Record<
     keyof typeof objAddendum,
     // @ts-expect-error Ignore typecheck
-    ReturnType<typeof objAddendum[keyof typeof objAddendum]["get"]>
+    ReturnType<(typeof objAddendum)[keyof typeof objAddendum]["get"]>
   > {
   Object.defineProperties(obj, objAddendum);
 }

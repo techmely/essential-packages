@@ -2791,7 +2791,7 @@ __metadata:
     vike: "npm:^0.4.160"
   peerDependencies:
     "@tanstack/react-query": ^5.17.0
-    "@techmely/utils": ^2.1.6
+    "@techmely/utils": ^2.1.7
     "@techmely/vike-react": ^0.1.15
     devalue: ^4.3.2
     react: ^18.2.0

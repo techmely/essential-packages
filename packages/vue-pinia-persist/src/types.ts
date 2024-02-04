@@ -112,7 +112,7 @@ export type PersistMapMaterials = {
 };
 
 declare module "pinia" {
-  // rome-ignore lint/suspicious/noEmptyInterface: we need to do it here!
+  // biome-ignore lint/suspicious/noEmptyInterface: we need to do it here!
   export interface DefineStoreOptionsBase<S extends StateTree, Store> extends PersistConfig {}
 
   export interface PiniaCustomProperties {

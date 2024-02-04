@@ -7,5 +7,5 @@ import { cacheStringFunction } from "../cacheStringFunc";
  * @returns string p converted to snake-case
  */
 export const pascalToKebabCase = cacheStringFunction((p: string) => {
-  return p.replace(/[A-Z]/g, (x) => '-' + x.toLowerCase()).slice(1);
-})
+  return p.replace(/[A-Z]/g, (x) => "-" + x.toLowerCase()).slice(1);
+});

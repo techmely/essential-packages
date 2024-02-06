@@ -52,6 +52,7 @@ export * from "./intBuffer";
 export * from "./intHex";
 export * from "./invariant";
 export * from "./isAndroid";
+export * from "./isAppleDevice";
 export * from "./isArray";
 export * from "./isBase64";
 export * from "./isBoolean";

@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.1.8
+
+### Patch Changes
+
+- Add check apple device function
+
 ## 2.1.7
 
 ### Patch Changes

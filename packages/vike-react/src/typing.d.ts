@@ -1,23 +1,23 @@
 import type { EntityId, StringEnum } from "@techmely/types";
-import type { FC, ReactElement } from "react";
+import type { PageContext } from "vike/types";
+import type { PropsWithChildren, ReactElement, ReactNode } from "react";
 
 declare global {
   type PageProps = Record<string, any>;
   type RenderMode = "SPA" | "SSR" | "HTML";
-  type VikeReactComponent = (props: any) => ReactElement;
-  type ImportString = `import:${string}`;
+  type FcWithPageContext = FC<PropsWithChildren<{ pageContext: PageContext; [key: string]: any }>>;
   namespace VikePackages {
     interface ConfigVikeReact {
-      Layout?: FC<any> | ImportString;
-      Page?: FC<any> | ImportString;
-      ReactQueryProvider?: FC<any> | ImportString;
+      Layout?: FC<PropsWithChildren<any>>;
+      Page?: FC<PropsWithChildren<any>>;
+      ReactQueryProvider?: FcWithPageContext;
       /**
        * Some wrapper you want to add something like Provider, Init function or something
        */
-      AppWrapper?: FC<any> | ImportString;
+      AppWrapper?: FcWithPageContext;
       Head?: HeadMetadata;
       pageProps?: Record<string, any>;
-      metadata?: Record<StringEnum<"userAgent" | "isMobile" | "locale">, any>;
+      metadata?: Record<StringEnum<"userAgent" | "isMobile" | "locale" | "dataHeadHtml">, any>;
       /**
        * <html lang="${locale}">
        * @default 'en'
@@ -54,8 +54,8 @@ declare global {
   namespace Vike {
     interface PageContext {
       Head?: HeadMetadata;
-      Layout?: FC<any>;
-      Page?: FC<any>;
+      Layout?: FC<PropsWithChildren<any>>;
+      Page?: FC<PropsWithChildren<any>>;
       pageProps?: Record<string, any>;
       data?: Record<StringEnum<"title">, any>;
       /**
@@ -64,7 +64,7 @@ declare global {
       renderMode?: RenderMode;
       isr?: boolean | { expiration: number };
       abortReason?: string | { notAdmin: true };
-      metadata?: Record<StringEnum<"userAgent" | "isMobile" | "locale">, any>;
+      metadata?: Record<StringEnum<"userAgent" | "isMobile" | "locale" | "dataHeadHtml">, any>;
       /**
        * Whether to stream the page's HTML. Requires Server-Side Rendering (`ssr: true`).
        *
@@ -161,7 +161,15 @@ declare global {
      * <meta name="category" content="Education" />
      */
     category?: string;
+    /**
+     * The additional JSON LD
+     * @example
+     * <script type="application/ld+json">
+        {"@context": "http://schema.org"}
+       </script>
+     */
+    jsonLd?: string;
   }
 }
 
-export {}
+export {};

@@ -12,24 +12,24 @@
   "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
-  "files": [
-    "dist",
-    "CHANGELOG.md"
-  ],
+  "files": ["dist", "CHANGELOG.md"],
   "scripts": {
     "clean": "rimraf dist",
+    "upgrade.deps": "npm-check-updates -u",
     "build": "tsup --entry src/+config.h.ts --entry src/index.ts --entry src/useData.ts --entry src/usePageContext.ts --entry src/onRenderClient.tsx --entry src/onRenderHtml.tsx --sourcemap --clean --dts --format esm && yarn fix.build",
     "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts",
     "publish": "node ../../scripts/publishPkg.mjs --only-esm"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@techmely/utils": "^2.1.8",
+    "react": "18.x.x",
+    "react-dom": "18.x.x",
     "react-streaming": "0.3.18",
     "vike": "^0.4.153"
   },
   "devDependencies": {
-    "@types/react": "^18.2.55",
+    "@techmely/utils": "workspace:*",
+    "@types/react": "18.2.55",
     "@types/react-dom": "^18.2.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -52,9 +52,5 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-react",
-    "vike react"
-  ]
+  "keywords": ["techmely", "techmely-react", "vike react"]
 }

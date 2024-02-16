@@ -3,18 +3,19 @@ import { escapeInject } from "vike/server";
 import type { PageContext } from "vike/types";
 
 const robotsMap = ({ follow, index }: HeadMetaRobots) => ({
-  index: index ? "follow" : "noindex",
+  index: index ? "index" : "noindex",
   follow: follow ? "follow" : "nofollow",
 });
 
 function generateAppHead(pageContext: PageContext): TemplateWrapped {
-  const head = pageContext.config.Head || pageContext.Head || {};
+  const head = pageContext.config?.Head || pageContext?.Head || {};
   const title = head?.title || "Make your dream come true - Techmely";
   const description = head?.description || "Create the talents - To the path of liberation";
 
   const robots = Object.values(robotsMap(head?.robots || ({} as HeadMetaRobots))).join(",");
 
   const canonical = head?.canonical;
+  const jsonLd = head?.jsonLd;
   const thumbnail =
     head?.thumbnail ||
     "https://raw.githubusercontent.com/harrytran998/techmely/main/apps/public/thumbnail.web";
@@ -49,22 +50,23 @@ function generateAppHead(pageContext: PageContext): TemplateWrapped {
     <meta property="og:title" content="${title}" />
     <meta property="og:description" content="${description}" />
     <meta property="og:image" content="${thumbnail}" />
-    
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:site" content="@techmely" />
     <meta name="twitter:title" content="${title}" />
     <meta name="twitter:description" content="${description}" />
     <meta name="twitter:image" content="${thumbnail}" />
-    
+
     <script type="application/ld+json">
-{"@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Techmely",
-  "url": "https://techmely.vn",
-  "logo": "https://techmely.vn/logo.png",
-  "sameAs": ["https://www.facebook.com/techmely"]
-}
+      {"@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Techmely",
+        "url": "https://techmely.vn",
+        "logo": "https://techmely.vn/logo.png",
+        "sameAs": ["https://www.facebook.com/techmely"]
+      }
     </script>
+    ${jsonLd || ""}
     `;
   return appHead;
 }

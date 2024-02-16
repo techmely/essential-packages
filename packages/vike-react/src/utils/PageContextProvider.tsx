@@ -8,7 +8,10 @@ const { Context: VikePageContext } = getGlobalObject("PageContextProvider.ts", {
 export function PageContextProvider({
   pageContext,
   children,
-}: { pageContext: PageContext; children: React.ReactNode }) {
+}: {
+  pageContext: PageContext;
+  children: React.ReactNode;
+}) {
   if (!pageContext) throw new Error("Argument pageContext missing");
   return <VikePageContext.Provider value={pageContext}>{children}</VikePageContext.Provider>;
 }

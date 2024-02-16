@@ -15,3 +15,7 @@ clean:
 
 publish:
 	bun run nx run-many -t publish -p
+
+upgrade.deps:
+	bun run nx run-many -t upgrade.deps -p
+	bun install

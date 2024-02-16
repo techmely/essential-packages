@@ -3,7 +3,8 @@ import { fileURLToPath } from "url";
 import type { AliasOptions } from "vite";
 import { defineConfig } from "vitest/config";
 
-const r = (p: string) => path.resolve(path.dirname(fileURLToPath(import.meta.url)), p);
+const r = (p: string) =>
+  path.resolve(path.dirname(fileURLToPath(import.meta.url)), p);
 
 export const alias: AliasOptions = {
   "@techmely/types": r("./packages/types/src/"),

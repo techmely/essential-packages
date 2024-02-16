@@ -30,8 +30,11 @@ function set(state: Records, paths: string[], val: unknown): Records {
   if (last === undefined) return state;
 
   const restPaths = paths.slice(0, -1);
-  // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
-  const result = restPaths.reduce((obj, p) => (ProtoRE.test(p) ? {} : (obj[p] ||= {})), state);
+  const result = restPaths.reduce(
+    // biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
+    (obj, p) => (ProtoRE.test(p) ? {} : (obj[p] ||= {})),
+    state,
+  );
   result[last] = val;
   return state;
 }

@@ -21,7 +21,7 @@ export function downloadByData(data: BlobPart, filename: string, mime?: string, 
     tempLink.setAttribute("target", "_blank");
   }
 
-  document.body.append(tempLink);
+  document.body.appendChild(tempLink);
   tempLink.click();
   // After download File --> Remove this temporary element to the body
   document.body.removeChild(tempLink);

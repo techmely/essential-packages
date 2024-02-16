@@ -1,5 +1,5 @@
+import { expect, test, vi } from "vitest";
 import { throttle } from ".";
-
 vi.useFakeTimers();
 
 test("throttle function", () => {

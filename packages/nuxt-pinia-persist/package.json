@@ -14,19 +14,18 @@
   },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "nuxi prepare playground && nuxt-module-build build",
     "dev": "nuxi dev playground --dotenv .env.test",
     "dev.build": "nuxi build playground",
-    "clean": "rm -rf node_modules",
+    "clean": "rimraf dist",
+    "upgrade.deps": "npm-check-updates -u",
     "publish": "npm publish"
   },
   "dependencies": {
-    "@nuxt/kit": "3.10.1",
-    "@techmely/utils": "^2.0.4",
+    "@nuxt/kit": "3.10.2",
+    "@techmely/utils": "^2.1.8",
     "@techmely/vue-pinia-persist": "^1.0.7",
     "defu": "^6.1.4"
   },
@@ -35,12 +34,12 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.8",
-    "@nuxt/kit": "3.10.1",
+    "@nuxt/kit": "3.10.2",
     "@nuxt/module-builder": "^0.5.5",
-    "@nuxt/schema": "^3.10.1",
+    "@nuxt/schema": "^3.10.2",
     "@nuxt/test-utils": "3.11.0",
-    "@types/node": "20.11.17",
-    "nuxt": "^3.10.1",
+    "@types/node": "20.11.19",
+    "nuxt": "^3.10.2",
     "pinia": "^2.1.7"
   },
   "publishConfig": {

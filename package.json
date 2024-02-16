@@ -7,9 +7,7 @@
     "type": "git",
     "url": "https://github.com/techmely/techmely.git"
   },
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": ["packages/*"],
   "scripts": {
     "postinstall": "node scripts/postinstall.mjs",
     "build": "nx run-many -t build --parallel 5",
@@ -18,8 +16,8 @@
     "test.unit.run": "vitest run --passWithNoTests",
     "test.unit.coverage": "vitest --coverage",
     "publish": "nx run-many -t publish",
-    "lint.format": "biome check --apply packages",
-    "lint.check": "biome check packages",
+    "lint.format": "bunx @biomejs/biome check --apply packages",
+    "lint.check": "bunx @biomejs/biome check packages",
     "lint.types": "nx run-many --target=type-check",
     "lint.bundlesize": "bundlesize",
     "lint.duplicate": "jscpd"
@@ -28,11 +26,14 @@
     "@biomejs/biome": "1.5.3",
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.1",
+    "@cloudflare/workers-types": "4.20240208.0",
     "@playwright/test": "1.41.2",
     "@testing-library/jest-dom": "6.4.2",
     "@testing-library/react": "14.2.1",
     "@total-typescript/ts-reset": "0.5.1",
     "@types/node": "20.11.17",
+    "@types/react": "18.2.55",
+    "@types/react-dom": "^18.2.19",
     "@vitest/coverage-v8": "1.2.2",
     "bundlesize": "0.18.1",
     "cross-env": "7.0.3",
@@ -41,7 +42,10 @@
     "happy-dom": "13.3.8",
     "husky": "9.0.10",
     "jscpd": "3.5.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "kolorist": "1.8.0",
+    "npm-check-updates": "16.14.15",
     "nx": "^18.0.4",
     "rimraf": "5.0.5",
     "ts-node": "^10.9.2",
@@ -58,14 +62,8 @@
   "jscpd": {
     "threshold": 0.1,
     "pattern": "packages/**/src/**/*.ts",
-    "reporters": [
-      "html",
-      "console"
-    ],
-    "ignore": [
-      "**/__snapshots__/**",
-      "packages/**/test/**/*.ts"
-    ],
+    "reporters": ["html", "console"],
+    "ignore": ["**/__snapshots__/**", "packages/**/test/**/*.ts"],
     "absolute": true,
     "gitignore": true
   },

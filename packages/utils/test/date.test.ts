@@ -19,7 +19,6 @@ describe("Unit test Date utils", () => {
 
   describe("Check date format utils", () => {
     describe("Test valid date with default format", () => {
-      // biome-ignore lint/complexity/noForEach: We need index
       dataDateTest.forEach((date, index) => {
         test(`If user use ${date}`, () => {
           expect(formatDate(date)).toEqual(expectDefaultOutput[index]);
@@ -28,7 +27,6 @@ describe("Unit test Date utils", () => {
     });
     describe("Test valid time with HH:mm:ss format", () => {
       test("IF user use format HH:mm:ss", () => {
-        // biome-ignore lint/complexity/noForEach: We need index
         dataDateTest.forEach((date, index) => {
           expect(formatDate(date, "HH:mm:ss")).toEqual(expectTimesOutput[index]);
         });

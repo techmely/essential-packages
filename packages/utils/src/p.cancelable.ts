@@ -1,5 +1,5 @@
 class CancelError extends Error {
-  readonly name: "CancelError";
+  override readonly name: "CancelError";
 
   constructor(reason?: string) {
     super(reason || "Promise was canceled");
@@ -165,11 +165,11 @@ export class PCancelable<ValueType> extends Promise<ValueType> {
     return this.#promise.then(onFulfilled, onRejected);
   }
 
-  catch(onRejected) {
+  override catch(onRejected) {
     return this.#promise.catch(onRejected);
   }
 
-  finally(onFinally) {
+  override finally(onFinally) {
     return this.#promise.finally(onFinally);
   }
 

@@ -1,3 +1,4 @@
+import { expect, test } from "vitest";
 import { truncate } from ".";
 
 test("Should return kebab case value", () => {

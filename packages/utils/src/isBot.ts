@@ -249,7 +249,14 @@ export function isBotMatch(userAgent?: string | null): string | null {
  * Find all parts of the user agent that match a bot pattern.
  */
 export function isBotMatches(userAgent?: string | null): string[] {
-  return botPatterns.map((part) => userAgent?.match(new RegExp(part, "i"))?.[0]).filter(Boolean);
+  if (!userAgent) return [];
+  return botPatterns
+    .map((part) => {
+      const matched = userAgent.match(new RegExp(part, "i"));
+      if (!matched) return "";
+      return matched[0];
+    })
+    .filter(Boolean);
 }
 
 /**

@@ -134,7 +134,6 @@ const hexValues = [
 
 describe("Check convert percent number to hex value(opacity", () => {
   test("Should convert correctly", () => {
-    // biome-ignore lint/complexity/noForEach: We need index
     percents.forEach((percent, index) => {
       expect(percentToHex(percent)).toBe(hexValues[index]);
     });

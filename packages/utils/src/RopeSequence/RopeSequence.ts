@@ -106,7 +106,7 @@ export class RopeSequence<T> {
 export const GOOD_LEAF_SIZE = 200;
 
 class Leaf<T = any> extends RopeSequence<T> {
-  values;
+  override values;
   constructor(values) {
     super();
     this.values = values;
@@ -116,38 +116,43 @@ class Leaf<T = any> extends RopeSequence<T> {
     return this.values;
   }
 
-  sliceInner(from: number, to: number) {
+  override sliceInner(from: number, to: number) {
     if (from === 0 && to === this.length) return this;
     return new Leaf(this.values.slice(from, to));
   }
 
-  getInner(i: number) {
+  override getInner(i: number) {
     return this.values[i];
   }
 
-  forEachInner(f: RopeSequenceCallback<T>, from: number, to: number, start: number) {
+  override forEachInner(f: RopeSequenceCallback<T>, from: number, to: number, start: number) {
     for (let i = from; i < to; i++) if (f(this.values[i], start + i) === false) return false;
   }
 
-  forEachInvertedInner(f: RopeSequenceCallback<T>, from: number, to: number, start: number) {
+  override forEachInvertedInner(
+    f: RopeSequenceCallback<T>,
+    from: number,
+    to: number,
+    start: number,
+  ) {
     for (let i = from - 1; i >= to; i--) if (f(this.values[i], start + i) === false) return false;
   }
 
-  leafAppend(other: Leaf<T>) {
+  override leafAppend(other: Leaf<T>) {
     if (this.length + other.length <= GOOD_LEAF_SIZE)
       return new Leaf(this.values.concat(other.flatten()));
   }
 
-  leafPrepend(other: Leaf<T>) {
+  override leafPrepend(other: Leaf<T>) {
     if (this.length + other.length <= GOOD_LEAF_SIZE)
       return new Leaf(other.flatten().concat(this.values));
   }
 
-  set length(v: number) {
+  override set length(v: number) {
     this.length = v;
   }
 
-  get length() {
+  override get length() {
     return this.values.length;
   }
 
@@ -175,11 +180,11 @@ class Append<T = any> extends RopeSequence<T> {
     return this.left.flatten().concat(this.right.flatten());
   }
 
-  getInner(i: number) {
+  override getInner(i: number) {
     return i < this.left.length ? this.left.get(i) : this.right.get(i - this.left.length);
   }
 
-  forEachInner(f: RopeSequenceCallback<T>, from: number, to: number, start: number) {
+  override forEachInner(f: RopeSequenceCallback<T>, from: number, to: number, start: number) {
     const leftLen = this.left.length;
     if (from < leftLen && this.left.forEachInner(f, from, Math.min(to, leftLen), start) === false)
       return false;
@@ -195,7 +200,12 @@ class Append<T = any> extends RopeSequence<T> {
       return false;
   }
 
-  forEachInvertedInner(f: RopeSequenceCallback<T>, from: number, to: number, start: number) {
+  override forEachInvertedInner(
+    f: RopeSequenceCallback<T>,
+    from: number,
+    to: number,
+    start: number,
+  ) {
     const leftLen = this.left.length;
     if (
       from > leftLen &&
@@ -214,7 +224,7 @@ class Append<T = any> extends RopeSequence<T> {
       return false;
   }
 
-  sliceInner(from: number, to: number) {
+  override sliceInner(from: number, to: number) {
     if (from === 0 && to === this.length) return this;
     const leftLen = this.left.length;
     if (to <= leftLen) return this.left.slice(from, to);
@@ -222,17 +232,17 @@ class Append<T = any> extends RopeSequence<T> {
     return this.left.slice(from, leftLen).append(this.right.slice(0, to - leftLen));
   }
 
-  leafAppend(other: Leaf<T>) {
+  override leafAppend(other: Leaf<T>) {
     const inner = this.right.leafAppend(other);
     if (inner) return new Append(this.left, inner);
   }
 
-  leafPrepend(other: Leaf<T>) {
+  override leafPrepend(other: Leaf<T>) {
     const inner = this.left.leafPrepend(other);
     if (inner) return new Append(inner, this.right);
   }
 
-  appendInner(other: Leaf<T>) {
+  override appendInner(other: Leaf<T>) {
     if (this.left.depth >= Math.max(this.right.depth, other.depth) + 1)
       return new Append(this.left, new Append(this.right, other));
     return new Append(this, other);

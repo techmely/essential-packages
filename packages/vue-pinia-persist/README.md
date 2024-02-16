@@ -16,16 +16,16 @@ Persist and rehydrate pinia store
    ```bash
    npm i @techmely/vue-pinia-persist
    ```
-   
+
    ```bash
    pnpm add @techmely/vue-pinia-persist
    ```
-   
+
    ```bash
    yarn add @techmely/vue-pinia-persist
    ```
 2. Add the plugin to pinia
-   
+
    ```ts
     import { createPinia } from 'pinia'
     import { piniaPersist } from '@techmely/vue-pinia-persist'
@@ -33,7 +33,7 @@ Persist and rehydrate pinia store
     const pinia = createPinia()
     pinia.use(piniaPersist())
    ```
-   
+
 3. Enjoy
 
 ## Configuration

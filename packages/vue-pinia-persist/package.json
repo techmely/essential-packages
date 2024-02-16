@@ -7,16 +7,15 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "clean": "rimraf dist",
+    "upgrade.deps": "npm-check-updates -u",
     "build": "tsup src/index.ts --sourcemap --clean --dts --format esm",
     "publish": "npm publish"
   },
   "dependencies": {
-    "@techmely/utils": "^2.0.1"
+    "@techmely/utils": "^2.1.8"
   },
   "peerDependencies": {
     "pinia": "^2.1.0",
@@ -28,7 +27,7 @@
     "ts-essentials": "9.4.1",
     "tsup": "8.0.2",
     "vitest": "1.2.2",
-    "vue": "^3.4.18"
+    "vue": "^3.4.19"
   },
   "publishConfig": {
     "access": "public",

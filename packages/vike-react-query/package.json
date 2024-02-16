@@ -13,6 +13,7 @@
   "files": ["dist"],
   "scripts": {
     "clean": "rimraf dist",
+    "upgrade.deps": "npm-check-updates -u",
     "build": "tsup --entry src/index.ts --entry src/+config.h.ts --entry src/ReactQueryProvider.tsx --entry src/FallbackErrorBoundary.tsx --sourcemap --clean --dts --format esm && yarn fix.build",
     "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts && sed '1d' dist/+config.h.js > temp; mv temp dist/+config.h.js",
     "publish": "node ../../scripts/publishPkg.mjs --only-esm"
@@ -22,17 +23,17 @@
     "@techmely/utils": "^2.1.8",
     "@techmely/vike-react": "^0.1.15",
     "devalue": "^4.3.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "18.x.x",
+    "react-dom": "18.x.x",
     "react-error-boundary": "^4.0.12",
     "react-streaming": "^0.3.18",
     "vike": "^0.4.153"
   },
   "devDependencies": {
-    "@tanstack/react-query": "^5.20.1",
+    "@tanstack/react-query": "^5.20.5",
     "@techmely/utils": "workspace:*",
     "@techmely/vike-react": "workspace:*",
-    "@types/react": "^18.2.55",
+    "@types/react": "18.2.55",
     "@types/react-dom": "^18.2.19",
     "devalue": "^4.3.2",
     "react": "^18.2.0",

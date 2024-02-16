@@ -1,9 +1,11 @@
 import type { Config } from "vike/types";
+import FallbackErrorBoundary from "./FallbackErrorBoundary";
+import ReactQueryProvider from "./ReactQueryProvider";
 
 const config: Config = {
   queryClientConfig: undefined,
-  ReactQueryProvider: "import:@techmely/vike-react-query/ReactQueryProvider:default",
-  FallbackErrorBoundary: "import:@techmely/vike-react-query/FallbackErrorBoundary:default",
+  ReactQueryProvider,
+  FallbackErrorBoundary,
   stream: true,
   meta: {
     queryClientConfig: {

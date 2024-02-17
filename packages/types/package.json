@@ -1,6 +1,6 @@
 {
   "name": "@techmely/types",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Techmely types definitions",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -13,7 +13,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --clean --dts --format esm",
     "clean": "rimraf dist",
@@ -37,5 +39,8 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": ["techmely", "types"]
+  "keywords": [
+    "techmely",
+    "types"
+  ]
 }

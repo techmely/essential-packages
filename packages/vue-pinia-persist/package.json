@@ -1,13 +1,15 @@
 {
   "name": "@techmely/vue-pinia-persist",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Persist and rehydrate pinia store",
   "repository": "https://github.com/techmely/essential-packages/tree/main/packages/vue-pinia-persist",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
@@ -15,7 +17,7 @@
     "publish": "npm publish"
   },
   "dependencies": {
-    "@techmely/utils": "^2.1.8"
+    "@techmely/utils": "^2.1.9"
   },
   "peerDependencies": {
     "pinia": "^2.1.0",

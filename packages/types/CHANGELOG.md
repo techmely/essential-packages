@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.6.2
+
+### Patch Changes
+
+- upgrade deps
+
 ## 1.6.1
 
 ### Patch Changes

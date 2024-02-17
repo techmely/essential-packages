@@ -1,5 +1,11 @@
 # @techmely/metrics
 
+## 1.0.2
+
+### Patch Changes
+
+- upgrade deps
+
 ## 1.0.1
 
 ### Patch Changes

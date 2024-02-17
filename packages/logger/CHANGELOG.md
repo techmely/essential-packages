@@ -1,5 +1,11 @@
 # @techmely/logger
 
+## 1.0.3
+
+### Patch Changes
+
+- upgrade deps
+
 ## 1.0.2
 
 ### Patch Changes

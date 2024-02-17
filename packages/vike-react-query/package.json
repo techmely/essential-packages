@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react-query",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "https://techmely.com/libraries/vike-react-query",
   "bugs": {
     "url": "https://github.com/techmely/essential-packages/issues"
@@ -10,7 +10,9 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
@@ -20,8 +22,8 @@
   },
   "peerDependencies": {
     "@tanstack/react-query": "^5.17.0",
-    "@techmely/utils": "^2.1.8",
-    "@techmely/vike-react": "^0.1.15",
+    "@techmely/utils": "^2.1.9",
+    "@techmely/vike-react": "^0.1.17",
     "devalue": "^4.3.2",
     "react": "18.x.x",
     "react-dom": "18.x.x",
@@ -58,5 +60,9 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": ["techmely", "techmely-react", "vike react"]
+  "keywords": [
+    "techmely",
+    "techmely-react",
+    "vike react"
+  ]
 }

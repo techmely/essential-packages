@@ -1,6 +1,6 @@
 {
   "name": "@techmely/nuxt-pinia-persist",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Pinia Persist like Redux-Persist for Nuxt 3",
   "repository": "https://github.com/techmely/essential-packages/tree/main/packages/nuxt-pinia-persist",
   "license": "MIT",
@@ -16,17 +16,17 @@
   "types": "./dist/types.d.ts",
   "files": ["dist"],
   "scripts": {
-    "build": "nuxi prepare playground && nuxt-module-build build",
-    "dev": "nuxi dev playground --dotenv .env.test",
-    "dev.build": "nuxi build playground",
+    "build": "nuxt prepare playground && nuxt-module-build build",
+    "dev": "nuxt dev playground --dotenv .env.test",
+    "dev.build": "nuxt build playground",
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
     "publish": "npm publish"
   },
   "dependencies": {
     "@nuxt/kit": "3.10.2",
-    "@techmely/utils": "^2.1.8",
-    "@techmely/vue-pinia-persist": "^1.0.7",
+    "@techmely/utils": "^2.1.9",
+    "@techmely/vue-pinia-persist": "^1.0.8",
     "defu": "^6.1.4"
   },
   "peerDependencies": {

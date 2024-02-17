@@ -1,5 +1,15 @@
 # @techmely/rate-limit
 
+## 1.1.4
+
+### Patch Changes
+
+- upgrade deps
+
+- Updated dependencies []:
+  - @techmely/logger@1.0.3
+  - @techmely/metrics@1.0.2
+
 ## 1.1.3
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@techmely/nuxt-partytown",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Integration with Partytown effortless",
   "repository": "https://github.com/techmely/essential-packages/tree/main/packages/nuxt-partytown",
   "license": "MIT",
@@ -19,7 +19,9 @@
   },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "nuxi prepare playground && nuxt-module-build build",
     "dev": "nuxi dev playground --dotenv .env.test",

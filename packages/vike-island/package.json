@@ -20,7 +20,7 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-streaming": "0.3.18",
+    "react-streaming": "^0.3.18",
     "vike": "^0.4.153"
   },
   "publishConfig": {

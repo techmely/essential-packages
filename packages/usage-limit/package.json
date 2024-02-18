@@ -13,9 +13,7 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "tsup src/index.ts --clean --dts --format esm",
     "clean": "rimraf dist",
@@ -26,14 +24,13 @@
   "peerDependencies": {
     "@techmely/logger": "workspace:*",
     "@techmely/metrics": "workspace:*",
-    "valibot": "^0.25.0"
+    "valibot": "^0.28.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20240208.0",
     "@techmely/logger": "workspace:*",
     "@techmely/metrics": "workspace:*",
-    "tsup": "8.0.2",
-    "valibot": "^0.28.1"
+    "tsup": "8.0.2"
   },
   "funding": [
     {
@@ -48,8 +45,5 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": [
-    "techmely",
-    "usage-limit"
-  ]
+  "keywords": ["techmely", "usage-limit"]
 }

@@ -1,13 +1,13 @@
 {
-	"$schema": "https://unpkg.com/@changesets/config@2.2.0/schema.json",
-	"changelog": [
-		"@changesets/changelog-github",
-		{
-			"repo": "techmely/monorepo"
-		}
-	],
-	"commit": false,
-	"access": "public",
-	"baseBranch": "main",
-	"updateInternalDependencies": "patch"
+  "$schema": "https://unpkg.com/@changesets/config@3.0.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    {
+      "repo": "techmely/essential-packages"
+    }
+  ],
+  "commit": false,
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch"
 }

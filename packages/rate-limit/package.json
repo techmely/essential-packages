@@ -27,7 +27,7 @@
     "valibot": "^0.28.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20240208.0",
+    "@cloudflare/workers-types": "4.20240222.0",
     "@techmely/logger": "workspace:*",
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",

@@ -24,7 +24,9 @@
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "tsup": "8.0.2"
+    "@cloudflare/workers-types": "4.20240222.0",
+    "tsup": "8.0.2",
+    "typescript": "5.3.3"
   },
   "funding": [
     {

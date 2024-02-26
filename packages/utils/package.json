@@ -13,7 +13,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup --dts",
     "build:dev": "tsup",
@@ -43,7 +45,8 @@
     "time-span": "5.1.0",
     "tslib": "^2.6.2",
     "tsup": "8.0.2",
-    "typescript": "5.3.3"
+    "typescript": "5.3.3",
+    "vitest": "1.3.1"
   },
   "funding": [
     {
@@ -55,5 +58,8 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
-  "keywords": ["techmely", "techmely-utils"]
+  "keywords": [
+    "techmely",
+    "techmely-utils"
+  ]
 }

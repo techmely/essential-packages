@@ -27,7 +27,9 @@
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",
     "hono": "^4.0.7",
-    "tsup": "8.0.2"
+    "tslib": "2.6.2",
+    "tsup": "8.0.2",
+    "typescript": "5.3.3"
   },
   "funding": [
     {

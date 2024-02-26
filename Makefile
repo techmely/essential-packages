@@ -1,22 +1,22 @@
 e2e.headless:
-	bun run playwright test --headed
+	yarn playwright test --headed
 
 e2e.open:
-	bun run playwright test --project=chromium --ui
+	yarn playwright test --project=chromium --ui
 
 build.vike:
-	bun run nx run-many -t build -p @techmely/vike-react @techmely/vike-react-query
+	yarn nx run-many -t build -p @techmely/vike-react @techmely/vike-react-query
 
 build:
-	bun run nx run-many -t build -p
+	yarn nx run-many -t build -p
 
 clean:
-	bun run nx run-many -t clean -p
+	yarn nx run-many -t clean -p
 
 publish:
-	bun run nx run-many -t publish -p
+	yarn nx run-many -t publish -p
 
 upgrade.deps:
-	bun run upgrade.deps
-	bun run nx run-many -t upgrade.deps -p
-	bun install
+	yarn upgrade.deps
+	yarn nx run-many -t upgrade.deps -p
+	yarn install

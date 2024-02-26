@@ -2,5 +2,5 @@
 
 import { $ } from "zx";
 
-await $`bun husky`;
+await $`yarn husky`;
 await $`git config core.ignorecase false`;

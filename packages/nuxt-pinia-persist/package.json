@@ -14,7 +14,9 @@
   },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "nuxt prepare playground && nuxt-module-build build",
     "dev": "nuxt dev playground --dotenv .env.test",

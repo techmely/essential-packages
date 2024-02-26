@@ -4,7 +4,6 @@
     "paths": {
       "@techmely/*": ["./packages/*/src"]
     },
-    "types": ["@cloudflare/workers-types"]
   },
   "include": ["./packages/*/src", "./reset.d.ts"],
   "exclude": ["./node_modules", "./packages/*/node_modules"]

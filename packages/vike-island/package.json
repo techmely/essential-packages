@@ -10,7 +10,9 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
@@ -22,6 +24,9 @@
     "react-dom": "^18.2.0",
     "react-streaming": "^0.3.18",
     "vike": "^0.4.153"
+  },
+  "devDependencies": {
+    "typescript": "5.3.3"
   },
   "publishConfig": {
     "access": "public",
@@ -38,7 +43,11 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": ["techmely", "techmely-react", "vike react"],
+  "keywords": [
+    "techmely",
+    "techmely-react",
+    "vike react"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

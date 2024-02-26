@@ -1,8 +1,7 @@
-import type React from "react";
 import { invariant } from "../invariant";
 import { isBrowser } from "../isBrowser";
 
-interface CreateStyleTagOptions extends React.HtmlHTMLAttributes<any>, Record<string, any> {
+interface CreateStyleTagOptions extends Record<string, any> {
   id: string;
 }
 

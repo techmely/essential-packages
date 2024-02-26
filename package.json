@@ -7,7 +7,9 @@
     "type": "git",
     "url": "https://github.com/techmely/techmely.git"
   },
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "postinstall": "node scripts/postinstall.mjs",
     "build": "nx run-many -t build --parallel 5",
@@ -16,8 +18,8 @@
     "test.unit.run": "vitest run --passWithNoTests",
     "test.unit.coverage": "vitest --coverage",
     "publish": "nx run-many -t publish",
-    "lint.format": "bunx @biomejs/biome check --apply packages",
-    "lint.check": "bunx @biomejs/biome check packages",
+    "lint.format": "yarn dlx @biomejs/biome check --apply packages",
+    "lint.check": "yarn dlx @biomejs/biome check packages",
     "lint.types": "nx run-many --target=type-check",
     "lint.bundlesize": "bundlesize",
     "lint.duplicate": "jscpd",
@@ -43,11 +45,11 @@
     "happy-dom": "13.5.3",
     "husky": "9.0.11",
     "jscpd": "3.5.10",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "kolorist": "1.8.0",
     "npm-check-updates": "16.14.15",
     "nx": "^18.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rimraf": "5.0.5",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
@@ -63,8 +65,14 @@
   "jscpd": {
     "threshold": 0.1,
     "pattern": "packages/**/src/**/*.ts",
-    "reporters": ["html", "console"],
-    "ignore": ["**/__snapshots__/**", "packages/**/test/**/*.ts"],
+    "reporters": [
+      "html",
+      "console"
+    ],
+    "ignore": [
+      "**/__snapshots__/**",
+      "packages/**/test/**/*.ts"
+    ],
     "absolute": true,
     "gitignore": true
   },
@@ -77,5 +85,6 @@
       "type": "patreon",
       "url": "https://www.patreon.com/harrytran998"
     }
-  ]
+  ],
+  "packageManager": "yarn@4.1.0"
 }

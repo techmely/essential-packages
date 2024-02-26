@@ -3598,6 +3598,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@techmely/utils", "virtual:9dc037a99ee1cb5539123ef8fb9ea2968af9d49ac472b0f1a62ec173b39146c88a31f3a8c01303b4e78d312ef64292a7f8920d0f3687e796e8784ceec32612a4#workspace:packages/utils"],\
           ["@techmely/types", "workspace:packages/types"],\
+          ["@testing-library/jest-dom", "virtual:a9454181f83b5631c467e6714769e215eb9239d56fcffcfc456f723499e5c576058fe4daa0cde4445b77be86cb76699170d25baee57fc10d3467a7c56a7b5ebc#npm:6.4.2"],\
           ["@types/dayjs", null],\
           ["@types/node", "npm:20.11.20"],\
           ["chalk", "npm:5.3.0"],\
@@ -3620,6 +3621,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@techmely/utils", "workspace:packages/utils"],\
           ["@techmely/types", "workspace:packages/types"],\
+          ["@testing-library/jest-dom", "virtual:a9454181f83b5631c467e6714769e215eb9239d56fcffcfc456f723499e5c576058fe4daa0cde4445b77be86cb76699170d25baee57fc10d3467a7c56a7b5ebc#npm:6.4.2"],\
           ["@types/node", "npm:20.11.20"],\
           ["chalk", "npm:5.3.0"],\
           ["dayjs", "npm:1.11.10"],\
@@ -3700,6 +3702,7 @@ const RAW_RUNTIME_STATE =
           ["@tanstack/react-query", "virtual:fe3a3858508ca88a2c5524c7ad9395a080cec8ee3ff6b84293eab2281e2270452d9817d1fee0f17650b3207201e9ab3d7d64d56b218a657229a9168f1dc30651#npm:5.24.1"],\
           ["@techmely/utils", "virtual:9dc037a99ee1cb5539123ef8fb9ea2968af9d49ac472b0f1a62ec173b39146c88a31f3a8c01303b4e78d312ef64292a7f8920d0f3687e796e8784ceec32612a4#workspace:packages/utils"],\
           ["@techmely/vike-react", "virtual:fe3a3858508ca88a2c5524c7ad9395a080cec8ee3ff6b84293eab2281e2270452d9817d1fee0f17650b3207201e9ab3d7d64d56b218a657229a9168f1dc30651#workspace:packages/vike-react"],\
+          ["@testing-library/react", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:14.2.1"],\
           ["@types/react", "npm:18.2.58"],\
           ["@types/react-dom", "npm:18.2.19"],\
           ["devalue", "npm:4.3.2"],\
@@ -3708,7 +3711,8 @@ const RAW_RUNTIME_STATE =
           ["react-error-boundary", "virtual:fe3a3858508ca88a2c5524c7ad9395a080cec8ee3ff6b84293eab2281e2270452d9817d1fee0f17650b3207201e9ab3d7d64d56b218a657229a9168f1dc30651#npm:4.0.12"],\
           ["tsup", "virtual:0bd5016d91acd10d862c173cb3405daed818e09800d819275993442363c472d80f95d4f09a571e2b0c756c5341afd166775234d9ec475bbdef8dc5fb3e6d4d96#npm:8.0.2"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"],\
-          ["vike", "virtual:fe3a3858508ca88a2c5524c7ad9395a080cec8ee3ff6b84293eab2281e2270452d9817d1fee0f17650b3207201e9ab3d7d64d56b218a657229a9168f1dc30651#npm:0.4.163"]\
+          ["vike", "virtual:fe3a3858508ca88a2c5524c7ad9395a080cec8ee3ff6b84293eab2281e2270452d9817d1fee0f17650b3207201e9ab3d7d64d56b218a657229a9168f1dc30651#npm:0.4.163"],\
+          ["vitest", "virtual:7f2f87c54f6f63f536999259991df4575fd9fe7df657da47600f9a548f7554a5086f8c75f056b6981354888b096c52d31bef64a5b04e6df01ed9c3821ea1cc9a#npm:1.3.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -3796,6 +3800,37 @@ const RAW_RUNTIME_STATE =
           ["lodash", "npm:4.17.21"],\
           ["redent", "npm:3.0.0"],\
           ["vitest", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:1.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@jest/globals",\
+          "@types/bun",\
+          "@types/jest",\
+          "@types/jest__globals",\
+          "@types/vitest",\
+          "jest",\
+          "vitest"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:a9454181f83b5631c467e6714769e215eb9239d56fcffcfc456f723499e5c576058fe4daa0cde4445b77be86cb76699170d25baee57fc10d3467a7c56a7b5ebc#npm:6.4.2", {\
+        "packageLocation": "./.yarn/__virtual__/@testing-library-jest-dom-virtual-51224e832d/0/cache/@testing-library-jest-dom-npm-6.4.2-cf74bb9089-e7eba527b3.zip/node_modules/@testing-library/jest-dom/",\
+        "packageDependencies": [\
+          ["@testing-library/jest-dom", "virtual:a9454181f83b5631c467e6714769e215eb9239d56fcffcfc456f723499e5c576058fe4daa0cde4445b77be86cb76699170d25baee57fc10d3467a7c56a7b5ebc#npm:6.4.2"],\
+          ["@adobe/css-tools", "npm:4.3.3"],\
+          ["@babel/runtime", "npm:7.23.9"],\
+          ["@jest/globals", null],\
+          ["@types/bun", null],\
+          ["@types/jest", null],\
+          ["@types/jest__globals", null],\
+          ["@types/vitest", null],\
+          ["aria-query", "npm:5.3.0"],\
+          ["chalk", "npm:3.0.0"],\
+          ["css.escape", "npm:1.5.1"],\
+          ["dom-accessibility-api", "npm:0.6.3"],\
+          ["jest", null],\
+          ["lodash", "npm:4.17.21"],\
+          ["redent", "npm:3.0.0"],\
+          ["vitest", "virtual:a9454181f83b5631c467e6714769e215eb9239d56fcffcfc456f723499e5c576058fe4daa0cde4445b77be86cb76699170d25baee57fc10d3467a7c56a7b5ebc#npm:1.3.1"]\
         ],\
         "packagePeers": [\
           "@jest/globals",\

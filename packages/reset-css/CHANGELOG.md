@@ -1,5 +1,11 @@
 # @techmely/reset-css
 
+## 1.0.4
+
+### Patch Changes
+
+- Bump version & upgrade deps
+
 ## 1.0.3
 
 ### Patch Changes

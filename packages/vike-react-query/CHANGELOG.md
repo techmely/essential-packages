@@ -1,5 +1,15 @@
 # @techmely/vike-react-query
 
+## 2.0.2
+
+### Patch Changes
+
+- Bump version & upgrade deps
+
+- Updated dependencies []:
+  - @techmely/utils@2.1.10
+  - @techmely/vike-react@0.1.18
+
 ## 2.0.1
 
 ### Patch Changes

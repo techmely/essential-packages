@@ -1,5 +1,14 @@
 # @techmely/vike-react
 
+## 0.1.18
+
+### Patch Changes
+
+- Bump version & upgrade deps
+
+- Updated dependencies []:
+  - @techmely/utils@2.1.10
+
 ## 0.1.17
 
 ### Patch Changes

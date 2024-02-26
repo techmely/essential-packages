@@ -1,5 +1,15 @@
 # @techmely/usage-limit
 
+## 1.0.4
+
+### Patch Changes
+
+- Bump version & upgrade deps
+
+- Updated dependencies []:
+  - @techmely/logger@1.0.4
+  - @techmely/metrics@1.0.3
+
 ## 1.0.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.1.10
+
+### Patch Changes
+
+- Bump version & upgrade deps
+
 ## 2.1.9
 
 ### Patch Changes

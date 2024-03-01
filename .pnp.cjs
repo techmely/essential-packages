@@ -104,7 +104,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/jest-dom", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:6.4.2"],\
           ["@testing-library/react", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:14.2.1"],\
           ["@total-typescript/ts-reset", "npm:0.5.1"],\
-          ["@types/node", "npm:20.11.20"],\
+          ["@types/node", "npm:20.11.24"],\
           ["@types/react", "npm:18.2.58"],\
           ["@types/react-dom", "npm:18.2.19"],\
           ["@vitest/coverage-v8", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:1.3.1"],\
@@ -3474,7 +3474,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/jest-dom", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:6.4.2"],\
           ["@testing-library/react", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:14.2.1"],\
           ["@total-typescript/ts-reset", "npm:0.5.1"],\
-          ["@types/node", "npm:20.11.20"],\
+          ["@types/node", "npm:20.11.24"],\
           ["@types/react", "npm:18.2.58"],\
           ["@types/react-dom", "npm:18.2.19"],\
           ["@vitest/coverage-v8", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:1.3.1"],\
@@ -3513,7 +3513,7 @@ const RAW_RUNTIME_STATE =
           ["@nuxt/module-builder", "virtual:fb2b893cc481596fb96ff17802a5115febeb08acb8704ea4dee1c6310dd91c3d6605148b66bf40ed6edce5bcdf872178b3553c4e83213c9e215d47045b017925#npm:0.5.5"],\
           ["@nuxt/schema", "npm:3.10.3"],\
           ["@nuxt/test-utils", "virtual:fb2b893cc481596fb96ff17802a5115febeb08acb8704ea4dee1c6310dd91c3d6605148b66bf40ed6edce5bcdf872178b3553c4e83213c9e215d47045b017925#npm:3.11.0"],\
-          ["@types/node", "npm:20.11.20"],\
+          ["@types/node", "npm:20.11.24"],\
           ["nuxt", "virtual:fb2b893cc481596fb96ff17802a5115febeb08acb8704ea4dee1c6310dd91c3d6605148b66bf40ed6edce5bcdf872178b3553c4e83213c9e215d47045b017925#npm:3.10.3"]\
         ],\
         "linkType": "SOFT"\
@@ -3531,7 +3531,7 @@ const RAW_RUNTIME_STATE =
           ["@nuxt/test-utils", "virtual:fb2b893cc481596fb96ff17802a5115febeb08acb8704ea4dee1c6310dd91c3d6605148b66bf40ed6edce5bcdf872178b3553c4e83213c9e215d47045b017925#npm:3.11.0"],\
           ["@techmely/utils", "virtual:9dc037a99ee1cb5539123ef8fb9ea2968af9d49ac472b0f1a62ec173b39146c88a31f3a8c01303b4e78d312ef64292a7f8920d0f3687e796e8784ceec32612a4#workspace:packages/utils"],\
           ["@techmely/vue-pinia-persist", "virtual:9dc037a99ee1cb5539123ef8fb9ea2968af9d49ac472b0f1a62ec173b39146c88a31f3a8c01303b4e78d312ef64292a7f8920d0f3687e796e8784ceec32612a4#workspace:packages/vue-pinia-persist"],\
-          ["@types/node", "npm:20.11.20"],\
+          ["@types/node", "npm:20.11.24"],\
           ["defu", "npm:6.1.4"],\
           ["nuxt", "virtual:fb2b893cc481596fb96ff17802a5115febeb08acb8704ea4dee1c6310dd91c3d6605148b66bf40ed6edce5bcdf872178b3553c4e83213c9e215d47045b017925#npm:3.10.3"],\
           ["pinia", "virtual:9dc037a99ee1cb5539123ef8fb9ea2968af9d49ac472b0f1a62ec173b39146c88a31f3a8c01303b4e78d312ef64292a7f8920d0f3687e796e8784ceec32612a4#npm:2.1.7"]\
@@ -3600,7 +3600,7 @@ const RAW_RUNTIME_STATE =
           ["@techmely/types", "workspace:packages/types"],\
           ["@testing-library/jest-dom", "virtual:a9454181f83b5631c467e6714769e215eb9239d56fcffcfc456f723499e5c576058fe4daa0cde4445b77be86cb76699170d25baee57fc10d3467a7c56a7b5ebc#npm:6.4.2"],\
           ["@types/dayjs", null],\
-          ["@types/node", "npm:20.11.20"],\
+          ["@types/node", "npm:20.11.24"],\
           ["chalk", "npm:5.3.0"],\
           ["dayjs", "npm:1.11.10"],\
           ["execa", "npm:8.0.1"],\
@@ -3622,7 +3622,7 @@ const RAW_RUNTIME_STATE =
           ["@techmely/utils", "workspace:packages/utils"],\
           ["@techmely/types", "workspace:packages/types"],\
           ["@testing-library/jest-dom", "virtual:a9454181f83b5631c467e6714769e215eb9239d56fcffcfc456f723499e5c576058fe4daa0cde4445b77be86cb76699170d25baee57fc10d3467a7c56a7b5ebc#npm:6.4.2"],\
-          ["@types/node", "npm:20.11.20"],\
+          ["@types/node", "npm:20.11.24"],\
           ["chalk", "npm:5.3.0"],\
           ["dayjs", "npm:1.11.10"],\
           ["execa", "npm:8.0.1"],\
@@ -4112,6 +4112,14 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-node-npm-20.11.20-0036cdf1c0-8e8de211e6.zip/node_modules/@types/node/",\
         "packageDependencies": [\
           ["@types/node", "npm:20.11.20"],\
+          ["undici-types", "npm:5.26.5"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:20.11.24", {\
+        "packageLocation": "./.yarn/cache/@types-node-npm-20.11.24-4e19eedf98-5a62225eb4.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:20.11.24"],\
           ["undici-types", "npm:5.26.5"]\
         ],\
         "linkType": "HARD"\
@@ -11684,7 +11692,7 @@ const RAW_RUNTIME_STATE =
           ["@nuxt/ui-templates", "npm:1.3.1"],\
           ["@nuxt/vite-builder", "virtual:84db0b745156bedc998635088db898fa38e8d48bee1b48989d235c9fee68d61e7153a2b0e2930845f3c95fd43eb052fa4e68c4291b70edca15a5d20b2b7d69db#npm:3.10.3"],\
           ["@parcel/watcher", null],\
-          ["@types/node", "npm:20.11.20"],\
+          ["@types/node", "npm:20.11.24"],\
           ["@types/parcel__watcher", null],\
           ["@unhead/dom", "npm:1.8.10"],\
           ["@unhead/ssr", "npm:1.8.10"],\
@@ -15619,7 +15627,7 @@ const RAW_RUNTIME_STATE =
           ["@tsconfig/node12", "npm:1.0.11"],\
           ["@tsconfig/node14", "npm:1.0.3"],\
           ["@tsconfig/node16", "npm:1.0.4"],\
-          ["@types/node", "npm:20.11.20"],\
+          ["@types/node", "npm:20.11.24"],\
           ["@types/swc__core", null],\
           ["@types/swc__wasm", null],\
           ["@types/typescript", null],\
@@ -16521,7 +16529,7 @@ const RAW_RUNTIME_STATE =
           ["vite", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:5.1.4"],\
           ["@types/less", null],\
           ["@types/lightningcss", null],\
-          ["@types/node", "npm:20.11.20"],\
+          ["@types/node", "npm:20.11.24"],\
           ["@types/sass", null],\
           ["@types/stylus", null],\
           ["@types/sugarss", null],\
@@ -16817,7 +16825,7 @@ const RAW_RUNTIME_STATE =
           ["@types/edge-runtime__vm", null],\
           ["@types/happy-dom", null],\
           ["@types/jsdom", null],\
-          ["@types/node", "npm:20.11.20"],\
+          ["@types/node", "npm:20.11.24"],\
           ["@types/vitest__browser", null],\
           ["@types/vitest__ui", null],\
           ["@vitest/browser", null],\
@@ -16919,7 +16927,7 @@ const RAW_RUNTIME_STATE =
           ["@types/edge-runtime__vm", null],\
           ["@types/happy-dom", null],\
           ["@types/jsdom", null],\
-          ["@types/node", "npm:20.11.20"],\
+          ["@types/node", "npm:20.11.24"],\
           ["@types/vitest__browser", null],\
           ["@types/vitest__ui", null],\
           ["@vitest/browser", null],\

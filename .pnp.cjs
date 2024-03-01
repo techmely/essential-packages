@@ -112,7 +112,7 @@ const RAW_RUNTIME_STATE =
           ["cross-env", "npm:7.0.3"],\
           ["fast-glob", "npm:3.3.2"],\
           ["fs-extra", "npm:11.2.0"],\
-          ["happy-dom", "npm:13.5.3"],\
+          ["happy-dom", "npm:13.6.2"],\
           ["husky", "npm:9.0.11"],\
           ["jscpd", "npm:3.5.10"],\
           ["kolorist", "npm:1.8.0"],\
@@ -3482,7 +3482,7 @@ const RAW_RUNTIME_STATE =
           ["cross-env", "npm:7.0.3"],\
           ["fast-glob", "npm:3.3.2"],\
           ["fs-extra", "npm:11.2.0"],\
-          ["happy-dom", "npm:13.5.3"],\
+          ["happy-dom", "npm:13.6.2"],\
           ["husky", "npm:9.0.11"],\
           ["jscpd", "npm:3.5.10"],\
           ["kolorist", "npm:1.8.0"],\
@@ -8605,10 +8605,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["happy-dom", [\
-      ["npm:13.5.3", {\
-        "packageLocation": "./.yarn/cache/happy-dom-npm-13.5.3-820ffda786-3a2a71e03d.zip/node_modules/happy-dom/",\
+      ["npm:13.6.2", {\
+        "packageLocation": "./.yarn/cache/happy-dom-npm-13.6.2-cc01f04aad-0e76ab3948.zip/node_modules/happy-dom/",\
         "packageDependencies": [\
-          ["happy-dom", "npm:13.5.3"],\
+          ["happy-dom", "npm:13.6.2"],\
           ["entities", "npm:4.5.0"],\
           ["webidl-conversions", "npm:7.0.0"],\
           ["whatwg-mimetype", "npm:3.0.0"]\
@@ -16831,7 +16831,7 @@ const RAW_RUNTIME_STATE =
           ["chai", "npm:4.4.1"],\
           ["debug", "virtual:4b12ba5111caf7e8338099bdbc7cb046a9f8e079a44e74d0c03dca469876e3071ebbe671c5e90ae6b78ae33e22c205fa5ed32169a4aabd1404b13c56d09986e1#npm:4.3.4"],\
           ["execa", "npm:8.0.1"],\
-          ["happy-dom", "npm:13.5.3"],\
+          ["happy-dom", "npm:13.6.2"],\
           ["jsdom", null],\
           ["local-pkg", "npm:0.5.0"],\
           ["magic-string", "npm:0.30.7"],\

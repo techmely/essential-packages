@@ -3392,7 +3392,7 @@ const RAW_RUNTIME_STATE =
           ["@techmely/cache", "workspace:packages/cache"],\
           ["@techmely/metrics", "virtual:671cd94cde1240063f187ad74121459598c97fee5220f6c717e4c611411248badd6cdfbb95efe61df9c1f29c6cb559ee28301e9851d976919263a00a0152f8a0#workspace:packages/metrics"],\
           ["@techmely/types", "workspace:packages/types"],\
-          ["hono", "npm:4.0.7"],\
+          ["hono", "npm:4.0.8"],\
           ["tslib", "npm:2.6.2"],\
           ["tsup", "virtual:0bd5016d91acd10d862c173cb3405daed818e09800d819275993442363c472d80f95d4f09a571e2b0c756c5341afd166775234d9ec475bbdef8dc5fb3e6d4d96#npm:8.0.2"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
@@ -8733,10 +8733,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["hono", [\
-      ["npm:4.0.7", {\
-        "packageLocation": "./.yarn/cache/hono-npm-4.0.7-19b18a9b44-acadd9c49b.zip/node_modules/hono/",\
+      ["npm:4.0.8", {\
+        "packageLocation": "./.yarn/cache/hono-npm-4.0.8-24e477a2e7-52b89eabc6.zip/node_modules/hono/",\
         "packageDependencies": [\
-          ["hono", "npm:4.0.7"]\
+          ["hono", "npm:4.0.8"]\
         ],\
         "linkType": "HARD"\
       }]\

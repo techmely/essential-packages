@@ -117,7 +117,7 @@ const RAW_RUNTIME_STATE =
           ["jscpd", "npm:3.5.10"],\
           ["kolorist", "npm:1.8.0"],\
           ["npm-check-updates", "npm:16.14.15"],\
-          ["nx", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:18.0.5"],\
+          ["nx", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:18.0.6"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:18.2.0"],\
           ["rimraf", "npm:5.0.5"],\
@@ -2056,11 +2056,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@nrwl/tao", [\
-      ["npm:18.0.5", {\
-        "packageLocation": "./.yarn/cache/@nrwl-tao-npm-18.0.5-2de3e96d6f-1a103082e3.zip/node_modules/@nrwl/tao/",\
+      ["npm:18.0.6", {\
+        "packageLocation": "./.yarn/cache/@nrwl-tao-npm-18.0.6-c445d6be4c-f11f0f579d.zip/node_modules/@nrwl/tao/",\
         "packageDependencies": [\
-          ["@nrwl/tao", "npm:18.0.5"],\
-          ["nx", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:18.0.5"],\
+          ["@nrwl/tao", "npm:18.0.6"],\
+          ["nx", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:18.0.6"],\
           ["tslib", "npm:2.6.2"]\
         ],\
         "linkType": "HARD"\
@@ -2446,91 +2446,91 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@nx/nx-darwin-arm64", [\
-      ["npm:18.0.5", {\
-        "packageLocation": "./.yarn/unplugged/@nx-nx-darwin-arm64-npm-18.0.5-3ce7d7089d/node_modules/@nx/nx-darwin-arm64/",\
+      ["npm:18.0.6", {\
+        "packageLocation": "./.yarn/unplugged/@nx-nx-darwin-arm64-npm-18.0.6-fb9c4dc718/node_modules/@nx/nx-darwin-arm64/",\
         "packageDependencies": [\
-          ["@nx/nx-darwin-arm64", "npm:18.0.5"]\
+          ["@nx/nx-darwin-arm64", "npm:18.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@nx/nx-darwin-x64", [\
-      ["npm:18.0.5", {\
-        "packageLocation": "./.yarn/unplugged/@nx-nx-darwin-x64-npm-18.0.5-e155bf2eac/node_modules/@nx/nx-darwin-x64/",\
+      ["npm:18.0.6", {\
+        "packageLocation": "./.yarn/unplugged/@nx-nx-darwin-x64-npm-18.0.6-e2a76bc2f6/node_modules/@nx/nx-darwin-x64/",\
         "packageDependencies": [\
-          ["@nx/nx-darwin-x64", "npm:18.0.5"]\
+          ["@nx/nx-darwin-x64", "npm:18.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@nx/nx-freebsd-x64", [\
-      ["npm:18.0.5", {\
-        "packageLocation": "./.yarn/unplugged/@nx-nx-freebsd-x64-npm-18.0.5-11d89473e8/node_modules/@nx/nx-freebsd-x64/",\
+      ["npm:18.0.6", {\
+        "packageLocation": "./.yarn/unplugged/@nx-nx-freebsd-x64-npm-18.0.6-c88d9f2d70/node_modules/@nx/nx-freebsd-x64/",\
         "packageDependencies": [\
-          ["@nx/nx-freebsd-x64", "npm:18.0.5"]\
+          ["@nx/nx-freebsd-x64", "npm:18.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@nx/nx-linux-arm-gnueabihf", [\
-      ["npm:18.0.5", {\
-        "packageLocation": "./.yarn/unplugged/@nx-nx-linux-arm-gnueabihf-npm-18.0.5-a0f85c8ed6/node_modules/@nx/nx-linux-arm-gnueabihf/",\
+      ["npm:18.0.6", {\
+        "packageLocation": "./.yarn/unplugged/@nx-nx-linux-arm-gnueabihf-npm-18.0.6-ec49cee09e/node_modules/@nx/nx-linux-arm-gnueabihf/",\
         "packageDependencies": [\
-          ["@nx/nx-linux-arm-gnueabihf", "npm:18.0.5"]\
+          ["@nx/nx-linux-arm-gnueabihf", "npm:18.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@nx/nx-linux-arm64-gnu", [\
-      ["npm:18.0.5", {\
-        "packageLocation": "./.yarn/unplugged/@nx-nx-linux-arm64-gnu-npm-18.0.5-369a0cb10c/node_modules/@nx/nx-linux-arm64-gnu/",\
+      ["npm:18.0.6", {\
+        "packageLocation": "./.yarn/unplugged/@nx-nx-linux-arm64-gnu-npm-18.0.6-0054f252e8/node_modules/@nx/nx-linux-arm64-gnu/",\
         "packageDependencies": [\
-          ["@nx/nx-linux-arm64-gnu", "npm:18.0.5"]\
+          ["@nx/nx-linux-arm64-gnu", "npm:18.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@nx/nx-linux-arm64-musl", [\
-      ["npm:18.0.5", {\
-        "packageLocation": "./.yarn/unplugged/@nx-nx-linux-arm64-musl-npm-18.0.5-a8eb4fe0b8/node_modules/@nx/nx-linux-arm64-musl/",\
+      ["npm:18.0.6", {\
+        "packageLocation": "./.yarn/unplugged/@nx-nx-linux-arm64-musl-npm-18.0.6-55694c46b2/node_modules/@nx/nx-linux-arm64-musl/",\
         "packageDependencies": [\
-          ["@nx/nx-linux-arm64-musl", "npm:18.0.5"]\
+          ["@nx/nx-linux-arm64-musl", "npm:18.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@nx/nx-linux-x64-gnu", [\
-      ["npm:18.0.5", {\
-        "packageLocation": "./.yarn/unplugged/@nx-nx-linux-x64-gnu-npm-18.0.5-d5092c5ec5/node_modules/@nx/nx-linux-x64-gnu/",\
+      ["npm:18.0.6", {\
+        "packageLocation": "./.yarn/unplugged/@nx-nx-linux-x64-gnu-npm-18.0.6-0869cc8ba9/node_modules/@nx/nx-linux-x64-gnu/",\
         "packageDependencies": [\
-          ["@nx/nx-linux-x64-gnu", "npm:18.0.5"]\
+          ["@nx/nx-linux-x64-gnu", "npm:18.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@nx/nx-linux-x64-musl", [\
-      ["npm:18.0.5", {\
-        "packageLocation": "./.yarn/unplugged/@nx-nx-linux-x64-musl-npm-18.0.5-de1efbeddd/node_modules/@nx/nx-linux-x64-musl/",\
+      ["npm:18.0.6", {\
+        "packageLocation": "./.yarn/unplugged/@nx-nx-linux-x64-musl-npm-18.0.6-c72bde0492/node_modules/@nx/nx-linux-x64-musl/",\
         "packageDependencies": [\
-          ["@nx/nx-linux-x64-musl", "npm:18.0.5"]\
+          ["@nx/nx-linux-x64-musl", "npm:18.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@nx/nx-win32-arm64-msvc", [\
-      ["npm:18.0.5", {\
-        "packageLocation": "./.yarn/unplugged/@nx-nx-win32-arm64-msvc-npm-18.0.5-c72fff0974/node_modules/@nx/nx-win32-arm64-msvc/",\
+      ["npm:18.0.6", {\
+        "packageLocation": "./.yarn/unplugged/@nx-nx-win32-arm64-msvc-npm-18.0.6-927c6794ab/node_modules/@nx/nx-win32-arm64-msvc/",\
         "packageDependencies": [\
-          ["@nx/nx-win32-arm64-msvc", "npm:18.0.5"]\
+          ["@nx/nx-win32-arm64-msvc", "npm:18.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["@nx/nx-win32-x64-msvc", [\
-      ["npm:18.0.5", {\
-        "packageLocation": "./.yarn/unplugged/@nx-nx-win32-x64-msvc-npm-18.0.5-0017aa2a0f/node_modules/@nx/nx-win32-x64-msvc/",\
+      ["npm:18.0.6", {\
+        "packageLocation": "./.yarn/unplugged/@nx-nx-win32-x64-msvc-npm-18.0.6-e9bbece33b/node_modules/@nx/nx-win32-x64-msvc/",\
         "packageDependencies": [\
-          ["@nx/nx-win32-x64-msvc", "npm:18.0.5"]\
+          ["@nx/nx-win32-x64-msvc", "npm:18.0.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3487,7 +3487,7 @@ const RAW_RUNTIME_STATE =
           ["jscpd", "npm:3.5.10"],\
           ["kolorist", "npm:1.8.0"],\
           ["npm-check-updates", "npm:16.14.15"],\
-          ["nx", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:18.0.5"],\
+          ["nx", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:18.0.6"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:18.2.0"],\
           ["rimraf", "npm:5.0.5"],\
@@ -11744,28 +11744,28 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["nx", [\
-      ["npm:18.0.5", {\
-        "packageLocation": "./.yarn/unplugged/nx-virtual-ee2b054eb1/node_modules/nx/",\
+      ["npm:18.0.6", {\
+        "packageLocation": "./.yarn/unplugged/nx-virtual-fe7f1f8445/node_modules/nx/",\
         "packageDependencies": [\
-          ["nx", "npm:18.0.5"]\
+          ["nx", "npm:18.0.6"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:18.0.5", {\
-        "packageLocation": "./.yarn/unplugged/nx-virtual-ee2b054eb1/node_modules/nx/",\
+      ["virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:18.0.6", {\
+        "packageLocation": "./.yarn/unplugged/nx-virtual-fe7f1f8445/node_modules/nx/",\
         "packageDependencies": [\
-          ["nx", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:18.0.5"],\
-          ["@nrwl/tao", "npm:18.0.5"],\
-          ["@nx/nx-darwin-arm64", "npm:18.0.5"],\
-          ["@nx/nx-darwin-x64", "npm:18.0.5"],\
-          ["@nx/nx-freebsd-x64", "npm:18.0.5"],\
-          ["@nx/nx-linux-arm-gnueabihf", "npm:18.0.5"],\
-          ["@nx/nx-linux-arm64-gnu", "npm:18.0.5"],\
-          ["@nx/nx-linux-arm64-musl", "npm:18.0.5"],\
-          ["@nx/nx-linux-x64-gnu", "npm:18.0.5"],\
-          ["@nx/nx-linux-x64-musl", "npm:18.0.5"],\
-          ["@nx/nx-win32-arm64-msvc", "npm:18.0.5"],\
-          ["@nx/nx-win32-x64-msvc", "npm:18.0.5"],\
+          ["nx", "virtual:3af26ef29ed5e607d97c58bee5223e371a8af32262a17c8214b9d6b529c0df6db25f6875970c6faa165a29393e0dc1a5be08e748b72ff4aa3229acf00d9ea662#npm:18.0.6"],\
+          ["@nrwl/tao", "npm:18.0.6"],\
+          ["@nx/nx-darwin-arm64", "npm:18.0.6"],\
+          ["@nx/nx-darwin-x64", "npm:18.0.6"],\
+          ["@nx/nx-freebsd-x64", "npm:18.0.6"],\
+          ["@nx/nx-linux-arm-gnueabihf", "npm:18.0.6"],\
+          ["@nx/nx-linux-arm64-gnu", "npm:18.0.6"],\
+          ["@nx/nx-linux-arm64-musl", "npm:18.0.6"],\
+          ["@nx/nx-linux-x64-gnu", "npm:18.0.6"],\
+          ["@nx/nx-linux-x64-musl", "npm:18.0.6"],\
+          ["@nx/nx-win32-arm64-msvc", "npm:18.0.6"],\
+          ["@nx/nx-win32-x64-msvc", "npm:18.0.6"],\
           ["@swc-node/register", null],\
           ["@swc/core", null],\
           ["@types/swc-node__register", null],\

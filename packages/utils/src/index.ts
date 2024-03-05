@@ -141,6 +141,7 @@ export * from "./parseQueryString";
 export * from "./partition";
 export * from "./pascalToKebabCase";
 export * from "./ranking";
+export * from './removeWhitespace';
 export * from "./runHeavyAsyncFn";
 export * from "./scrollToTop";
 export * from "./stringifyQueryObject";

@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.1.11
+
+### Patch Changes
+
+- Add missing typing in flatten obj
+
 ## 2.1.10
 
 ### Patch Changes

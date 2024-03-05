@@ -27,8 +27,8 @@
   },
   "dependencies": {
     "@nuxt/kit": "3.10.3",
-    "@techmely/utils": "^2.1.9",
-    "@techmely/vue-pinia-persist": "^1.0.8",
+    "@techmely/utils": "^2.1.11",
+    "@techmely/vue-pinia-persist": "^1.0.9",
     "defu": "^6.1.4"
   },
   "peerDependencies": {
@@ -40,7 +40,7 @@
     "@nuxt/module-builder": "^0.5.5",
     "@nuxt/schema": "^3.10.3",
     "@nuxt/test-utils": "3.11.0",
-    "@types/node": "20.11.20",
+    "@types/node": "20.11.24",
     "nuxt": "^3.10.3",
     "pinia": "^2.1.7"
   },

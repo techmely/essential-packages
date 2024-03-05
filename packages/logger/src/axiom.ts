@@ -1,6 +1,6 @@
 import { Axiom } from "@axiomhq/js";
 import type { LoggerPort, LoggerPortLevel, Records, RuntimeEnv } from "@techmely/types";
-import { ConsoleLogger } from "./console.logger";
+import { ConsoleLogger } from "./console";
 
 type AxiomLoggerOptions = {
   dataset: string;

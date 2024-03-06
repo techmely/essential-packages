@@ -1,22 +1,24 @@
 import type { HttpError } from "../src/http-error";
 
 export type BeforeRequestIntercept = (
-	request: Request,
-	options: any
+  request: Request,
+  options: any,
 ) => Request | Response | void | Promise<Request | Response | void>;
 
 export type BeforeRetryState = {
-	request: Request;
-	options: any;
-	error: Error;
-	retryCount: number;
+  request: Request;
+  options: any;
+  error: Error;
+  retryCount: number;
 };
-export type BeforeRetryIntercept = (options: BeforeRetryState) => typeof stop | void | Promise<typeof stop | void>;
+export type BeforeRetryIntercept = (
+  options: BeforeRetryState,
+) => typeof stop | void | Promise<typeof stop | void>;
 
 export type AfterResponseIntercept = (
-	request: Request,
-	options: any,
-	response: Response
+  request: Request,
+  options: any,
+  response: Response,
 ) => Response | void | Promise<Response | void>;
 
 export type BeforeErrorIntercept = (error: HttpError) => HttpError | Promise<HttpError>;
@@ -29,9 +31,9 @@ export type HttpInterceptors = {
 
 	@default []
 	*/
-	beforeRequest?: BeforeRequestIntercept[];
+  beforeRequest?: BeforeRequestIntercept[];
 
-	/**
+  /**
 	This hook enables you to modify the request right before retry. Ky will make no further changes to the request after this. The hook function receives an object with the normalized request and options, an error instance, and the retry count. You could, for example, modify `request.headers` here.
 
 	If the request received a response, the error will be of type `HTTPError` and the `Response` object will be available at `error.response`. Be aware that some types of errors, such as network errors, inherently mean that a response was not received. In that case, the error will not be an instance of `HTTPError`.
@@ -56,9 +58,9 @@ export type HttpInterceptors = {
 
 	@default []
 	*/
-	beforeRetry?: BeforeRetryIntercept[];
+  beforeRetry?: BeforeRetryIntercept[];
 
-	/**
+  /**
 	This hook enables you to read and optionally modify the response. The hook function receives normalized input, options, and a clone of the response as arguments. The return value of the hook function will be used by Ky as the response object if it's an instance of [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response).
 
 	@default []
@@ -95,9 +97,9 @@ export type HttpInterceptors = {
 	});
 	```
 	*/
-	afterResponse?: AfterResponseIntercept[];
+  afterResponse?: AfterResponseIntercept[];
 
-	/**
+  /**
 	This hook enables you to modify the `HTTPError` right before it is thrown. The hook function receives a `HTTPError` as an argument and should return an instance of `HTTPError`.
 
 	@default []
@@ -123,5 +125,5 @@ export type HttpInterceptors = {
 	});
 	```
 	*/
-	beforeError?: BeforeErrorIntercept[];
-}
+  beforeError?: BeforeErrorIntercept[];
+};

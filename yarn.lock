@@ -2600,6 +2600,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@techmely/http@workspace:packages/http":
+  version: 0.0.0-use.local
+  resolution: "@techmely/http@workspace:packages/http"
+  dependencies:
+    "@techmely/types": "workspace:*"
+    tslib: "npm:2.6.2"
+    tsup: "npm:8.0.2"
+    typescript: "npm:5.3.3"
+  languageName: unknown
+  linkType: soft
+
 "@techmely/logger@workspace:*, @techmely/logger@workspace:packages/logger":
   version: 0.0.0-use.local
   resolution: "@techmely/logger@workspace:packages/logger"

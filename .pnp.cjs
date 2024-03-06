@@ -18,6 +18,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:packages/cache"\
     },\
     {\
+      "name": "@techmely/http",\
+      "reference": "workspace:packages/http"\
+    },\
+    {\
       "name": "@techmely/logger",\
       "reference": "workspace:packages/logger"\
     },\
@@ -74,6 +78,7 @@ const RAW_RUNTIME_STATE =
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
     ["@techmely/cache", ["workspace:packages/cache"]],\
+    ["@techmely/http", ["workspace:packages/http"]],\
     ["@techmely/logger", ["virtual:b62230de869182925d7830b3669016dc4e54892c28dce9704d7c0bff46acb163623ecdccf8dec6837432c6818405fc7cee8cfec48ddc6e6381521fba7d90bca0#workspace:packages/logger", "workspace:packages/logger"]],\
     ["@techmely/metrics", ["virtual:671cd94cde1240063f187ad74121459598c97fee5220f6c717e4c611411248badd6cdfbb95efe61df9c1f29c6cb559ee28301e9851d976919263a00a0152f8a0#workspace:packages/metrics", "workspace:packages/metrics"]],\
     ["@techmely/monorepo", ["workspace:."]],\
@@ -3393,6 +3398,19 @@ const RAW_RUNTIME_STATE =
           ["@techmely/metrics", "virtual:671cd94cde1240063f187ad74121459598c97fee5220f6c717e4c611411248badd6cdfbb95efe61df9c1f29c6cb559ee28301e9851d976919263a00a0152f8a0#workspace:packages/metrics"],\
           ["@techmely/types", "workspace:packages/types"],\
           ["hono", "npm:4.0.10"],\
+          ["tslib", "npm:2.6.2"],\
+          ["tsup", "virtual:0bd5016d91acd10d862c173cb3405daed818e09800d819275993442363c472d80f95d4f09a571e2b0c756c5341afd166775234d9ec475bbdef8dc5fb3e6d4d96#npm:8.0.2"],\
+          ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@techmely/http", [\
+      ["workspace:packages/http", {\
+        "packageLocation": "./packages/http/",\
+        "packageDependencies": [\
+          ["@techmely/http", "workspace:packages/http"],\
+          ["@techmely/types", "workspace:packages/types"],\
           ["tslib", "npm:2.6.2"],\
           ["tsup", "virtual:0bd5016d91acd10d862c173cb3405daed818e09800d819275993442363c472d80f95d4f09a571e2b0c756c5341afd166775234d9ec475bbdef8dc5fb3e6d4d96#npm:8.0.2"],\
           ["typescript", "patch:typescript@npm%3A5.3.3#optional!builtin<compat/typescript>::version=5.3.3&hash=e012d7"]\

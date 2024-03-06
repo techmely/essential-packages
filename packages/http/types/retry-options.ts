@@ -1,18 +1,18 @@
 export type HttpRetryOptions = {
-	/**
+  /**
 	The number of times to retry failed requests.
 	@default 1
 	*/
-	limit?: number;
+  limit?: number;
 
-	/**
+  /**
 	The HTTP methods allowed to retry.
 
 	@default ['get', 'put', 'head', 'delete', 'options', 'trace']
 	*/
-	methods?: string[];
+  methods?: string[];
 
-	/**
+  /**
 	The HTTP status codes allowed to retry.
 	@default [
     408, // Request Timeout
@@ -26,17 +26,17 @@ export type HttpRetryOptions = {
     504, //  Gateway Timeout
   ]
 	*/
-	statusCodes?: number[];
+  statusCodes?: number[];
 
-	/**
+  /**
 	The HTTP status codes allowed to retry with a `Retry-After` header.
 	@default [413, 429, 503]
 	*/
-	afterStatusCodes?: number[];
+  afterStatusCodes?: number[];
 
-	/**
+  /**
 	If the `Retry-After` header is greater than `maxRetryAfter`, the request will be canceled.
 	@default Infinity
 	*/
-	maxRetryAfter?: number;
+  maxRetryAfter?: number;
 };

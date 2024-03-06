@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.1.12
+
+### Patch Changes
+
+- Update all the things
+
 ## 2.1.11
 
 ### Patch Changes

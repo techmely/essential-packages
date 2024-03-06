@@ -24,7 +24,7 @@
     "publish": "node ../../scripts/publishPkg.mjs --only-esm"
   },
   "peerDependencies": {
-    "@techmely/utils": "^2.1.11",
+    "@techmely/utils": "^2.1.12",
     "react": "18.x.x",
     "react-dom": "18.x.x",
     "react-streaming": "^0.3.22",

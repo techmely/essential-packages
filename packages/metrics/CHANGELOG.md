@@ -1,5 +1,11 @@
 # @techmely/metrics
 
+## 1.0.4
+
+### Patch Changes
+
+- Update all the things
+
 ## 1.0.3
 
 ### Patch Changes

@@ -14,5 +14,7 @@ export function slugify(text: string): string {
     .replace(/\s+/g, "-") // Replace spaces with -
     .replace(/[Đđ]/g, "d") // Replace-all the đ char with d
     .replace(/[^\w-]+/g, "") // Remove all non-word chars
+    .replace(/[^\w-]+/g, "") // Remove all non-word chars
+    .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "-") // remove special characters
     .replace(/--+/g, "-"); // Replace multiple - with single -
 }

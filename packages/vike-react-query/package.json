@@ -22,7 +22,11 @@
   },
   "peerDependencies": {
     "@tanstack/react-query": "^5.17.0",
+<<<<<<< HEAD
     "@techmely/utils": "^2.1.12",
+=======
+    "@techmely/utils": "^2.1.13",
+>>>>>>> db312e13e033dcd0f29e1c77f3523c8264a86c9d
     "@techmely/vike-react": "^0.1.18",
     "devalue": "^4.3.2",
     "react": "18.x.x",

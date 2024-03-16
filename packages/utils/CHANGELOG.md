@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.1.13
+
+### Patch Changes
+
+- Update slugify func to remove all special chars
+
 ## 2.1.12
 
 ### Patch Changes

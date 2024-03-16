@@ -1,5 +1,11 @@
 # @techmely/logger
 
+## 1.0.5
+
+### Patch Changes
+
+- Update all the things
+
 ## 1.0.4
 
 ### Patch Changes

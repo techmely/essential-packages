@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.6.4
+
+### Patch Changes
+
+- Update all the things
+
 ## 1.6.3
 
 ### Patch Changes

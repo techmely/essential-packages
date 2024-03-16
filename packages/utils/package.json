@@ -1,6 +1,10 @@
 {
   "name": "@techmely/utils",
+<<<<<<< HEAD
   "version": "2.1.12",
+=======
+  "version": "2.1.13",
+>>>>>>> db312e13e033dcd0f29e1c77f3523c8264a86c9d
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -36,7 +40,7 @@
     "nanoid": "^5.0.6"
   },
   "devDependencies": {
-    "@techmely/types": "1.6.3",
+    "@techmely/types": "1.6.4",
     "@testing-library/jest-dom": "6.4.2",
     "@types/node": "20.11.24",
     "chalk": "^5.3.0",

@@ -1,6 +1,6 @@
 {
   "name": "@techmely/http",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Techmely Http",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -17,7 +17,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --entry src/index.ts --clean --dts --format esm",
+    "build": "tsup src/index.ts --clean --dts --format esm",
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
     "publish": "node ../../scripts/publishPkg.mjs",

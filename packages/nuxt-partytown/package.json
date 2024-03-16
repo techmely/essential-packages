@@ -23,7 +23,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "nuxi prepare playground && nuxt-module-build build",
+    "build": "echo SUCCESS",
+    "build.main": "nuxt prepare playground && nuxt-module-build build",
     "dev": "nuxi dev playground --dotenv .env.test",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",

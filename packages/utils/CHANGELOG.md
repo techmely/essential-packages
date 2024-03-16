@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.1.12
+
+### Patch Changes
+
+- Add to array buffer fnc
+
 ## 2.1.11
 
 ### Patch Changes

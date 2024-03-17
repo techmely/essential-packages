@@ -1,5 +1,15 @@
 # @techmely/usage-limit
 
+## 1.0.6
+
+### Patch Changes
+
+- Upgrade deps
+
+- Updated dependencies []:
+  - @techmely/metrics@1.0.5
+  - @techmely/logger@1.0.6
+
 ## 1.0.5
 
 ### Patch Changes

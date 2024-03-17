@@ -1,6 +1,6 @@
 {
   "name": "@techmely/cache",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Techmely cache",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -26,10 +26,10 @@
   "devDependencies": {
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",
-    "hono": "^4.0.10",
+    "hono": "^4.1.1",
     "tslib": "2.6.2",
     "tsup": "8.0.2",
-    "typescript": "5.3.3"
+    "typescript": "5.4.2"
   },
   "funding": [
     {

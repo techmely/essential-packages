@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-island",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://techmely.com/libraries/vike-island",
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
@@ -26,7 +26,7 @@
     "vike": "^0.4.153"
   },
   "devDependencies": {
-    "typescript": "5.3.3"
+    "typescript": "5.4.2"
   },
   "publishConfig": {
     "access": "public",

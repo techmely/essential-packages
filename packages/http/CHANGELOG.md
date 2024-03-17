@@ -1,5 +1,11 @@
 ## 1.0.0
 
+## 1.0.2
+
+### Patch Changes
+
+- Upgrade deps
+
 ## 1.0.1
 
 ### Patch Changes

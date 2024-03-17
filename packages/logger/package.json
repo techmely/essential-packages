@@ -1,6 +1,6 @@
 {
   "name": "@techmely/logger",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Techmely logger",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -36,11 +36,11 @@
   },
   "devDependencies": {
     "@axiomhq/js": "^1.0.0-rc.2",
-    "@cloudflare/workers-types": "4.20240222.0",
+    "@cloudflare/workers-types": "4.20240314.0",
     "@techmely/types": "workspace:*",
     "tslib": "2.6.2",
     "tsup": "8.0.2",
-    "typescript": "5.3.3"
+    "typescript": "5.4.2"
   },
   "funding": [
     {

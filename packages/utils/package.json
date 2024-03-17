@@ -1,10 +1,6 @@
 {
   "name": "@techmely/utils",
-<<<<<<< HEAD
-  "version": "2.1.12",
-=======
-  "version": "2.1.13",
->>>>>>> db312e13e033dcd0f29e1c77f3523c8264a86c9d
+  "version": "2.1.14",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -40,9 +36,9 @@
     "nanoid": "^5.0.6"
   },
   "devDependencies": {
-    "@techmely/types": "1.6.4",
+    "@techmely/types": "1.6.5",
     "@testing-library/jest-dom": "6.4.2",
-    "@types/node": "20.11.24",
+    "@types/node": "20.11.28",
     "chalk": "^5.3.0",
     "dayjs": "^1.11.10",
     "execa": "^8.0.1",
@@ -50,8 +46,8 @@
     "time-span": "5.1.0",
     "tslib": "^2.6.2",
     "tsup": "8.0.2",
-    "typescript": "5.3.3",
-    "vitest": "1.3.1"
+    "typescript": "5.4.2",
+    "vitest": "1.4.0"
   },
   "funding": [
     {

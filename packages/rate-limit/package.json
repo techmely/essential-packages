@@ -1,6 +1,6 @@
 {
   "name": "@techmely/rate-limit",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Techmely Rate Limit",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -24,19 +24,19 @@
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@techmely/logger": "1.0.5",
-    "@techmely/metrics": "1.0.4",
+    "@techmely/logger": "1.0.6",
+    "@techmely/metrics": "1.0.5",
     "valibot": "^0.28.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20240222.0",
+    "@cloudflare/workers-types": "4.20240314.0",
     "@techmely/logger": "workspace:*",
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",
     "tslib": "2.6.2",
     "tsup": "8.0.2",
-    "typescript": "5.3.3",
-    "valibot": "0.29.0"
+    "typescript": "5.4.2",
+    "valibot": "0.30.0"
   },
   "funding": [
     {

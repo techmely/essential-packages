@@ -1,6 +1,6 @@
 {
   "name": "@techmely/types",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "description": "Techmely types definitions",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -24,9 +24,9 @@
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20240222.0",
+    "@cloudflare/workers-types": "4.20240314.0",
     "tsup": "8.0.2",
-    "typescript": "5.3.3"
+    "typescript": "5.4.2"
   },
   "funding": [
     {

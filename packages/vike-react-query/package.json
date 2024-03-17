@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react-query",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "homepage": "https://techmely.com/libraries/vike-react-query",
   "bugs": {
     "url": "https://github.com/techmely/essential-packages/issues"
@@ -22,12 +22,8 @@
   },
   "peerDependencies": {
     "@tanstack/react-query": "^5.17.0",
-<<<<<<< HEAD
-    "@techmely/utils": "^2.1.12",
-=======
-    "@techmely/utils": "^2.1.13",
->>>>>>> db312e13e033dcd0f29e1c77f3523c8264a86c9d
-    "@techmely/vike-react": "^0.1.18",
+    "@techmely/utils": "^2.1.14",
+    "@techmely/vike-react": "^0.1.19",
     "devalue": "^4.3.2",
     "react": "18.x.x",
     "react-dom": "18.x.x",
@@ -36,20 +32,20 @@
     "vike": "^0.4.153"
   },
   "devDependencies": {
-    "@tanstack/react-query": "^5.25.0",
+    "@tanstack/react-query": "^5.28.4",
     "@techmely/utils": "workspace:*",
     "@techmely/vike-react": "workspace:*",
     "@testing-library/react": "14.2.1",
-    "@types/react": "18.2.63",
-    "@types/react-dom": "^18.2.20",
+    "@types/react": "18.2.66",
+    "@types/react-dom": "^18.2.22",
     "devalue": "^4.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-error-boundary": "^4.0.13",
     "tsup": "8.0.2",
-    "typescript": "5.3.3",
+    "typescript": "5.4.2",
     "vike": "^0.4.165",
-    "vitest": "1.3.1"
+    "vitest": "1.4.0"
   },
   "publishConfig": {
     "access": "public",

@@ -1,6 +1,6 @@
 {
   "name": "@techmely/nuxt-partytown",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Integration with Partytown effortless",
   "repository": "https://github.com/techmely/essential-packages/tree/main/packages/nuxt-partytown",
   "license": "MIT",
@@ -40,8 +40,8 @@
     "@nuxt/devtools": "^1.0.8",
     "@nuxt/module-builder": "^0.5.5",
     "@nuxt/schema": "^3.10.3",
-    "@nuxt/test-utils": "3.11.0",
-    "@types/node": "20.11.24",
+    "@nuxt/test-utils": "3.12.0",
+    "@types/node": "20.11.28",
     "nuxt": "^3.10.3"
   }
 }

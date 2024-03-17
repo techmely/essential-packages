@@ -1,5 +1,15 @@
 # @techmely/nuxt-pinia-persist
 
+## 1.0.11
+
+### Patch Changes
+
+- Upgrade deps
+
+- Updated dependencies []:
+  - @techmely/vue-pinia-persist@1.0.11
+  - @techmely/utils@2.1.17
+
 ## 1.0.10
 
 ### Patch Changes

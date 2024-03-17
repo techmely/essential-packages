@@ -1,6 +1,6 @@
 {
   "name": "@techmely/vike-react",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "homepage": "https://techmely.com/libraries/vike-react",
   "bugs": {
     "url": "https://github.com/techmely/essential-packages/issues"
@@ -24,7 +24,7 @@
     "publish": "node ../../scripts/publishPkg.mjs --only-esm"
   },
   "peerDependencies": {
-    "@techmely/utils": "^2.1.15",
+    "@techmely/utils": "^2.1.17",
     "react": "18.x.x",
     "react-dom": "18.x.x",
     "react-streaming": "^0.3.22",

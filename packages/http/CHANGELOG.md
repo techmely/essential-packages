@@ -1,5 +1,17 @@
 ## 1.0.0
 
+## 1.1.1
+
+### Patch Changes
+
+- Upgrade deps
+
+## 1.1.0
+
+### Minor Changes
+
+- Add https code for handle exceptions
+
 ## 1.0.5
 
 ### Patch Changes

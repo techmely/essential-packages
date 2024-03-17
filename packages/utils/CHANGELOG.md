@@ -1,5 +1,17 @@
 # @techmely/utils
 
+## 2.1.17
+
+### Patch Changes
+
+- Upgrade deps
+
+## 2.1.16
+
+### Patch Changes
+
+- Remove http to move forward to http package
+
 ## 2.1.15
 
 ### Patch Changes

@@ -9,7 +9,7 @@ export const retryStatusCodes = new Set([
   504, //  Gateway Timeout
 ]);
 
-export const responseTypes = {
+export const RESPONSE_TYPES = {
   json: "application/json",
   text: "text/*",
   formData: "multipart/form-data",
@@ -17,4 +17,16 @@ export const responseTypes = {
   blob: "*/*",
 } as const;
 
-export const requestMethods = ["get", "post", "put", "patch", "head", "delete"] as const;
+export const REQUEST_METHODS = [
+  "GET",
+  "HEAD",
+  "PATCH",
+  "POST",
+  "PUT",
+  "DELETE",
+  "CONNECT",
+  "OPTIONS",
+  "TRACE",
+] as const;
+
+export type HttpMethod = (typeof REQUEST_METHODS)[number];

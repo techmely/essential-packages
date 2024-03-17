@@ -1,5 +1,11 @@
 ## 1.0.0
 
+## 1.0.5
+
+### Patch Changes
+
+- Add missing re-export methods
+
 ## 1.0.4
 
 ### Patch Changes

@@ -1,4 +1,4 @@
-import type { HttpError } from "../src/http-error";
+import type { ExceptionBase } from "../src/exceptions";
 
 export type BeforeRequestIntercept = (
   request: Request,
@@ -21,7 +21,7 @@ export type AfterResponseIntercept = (
   response: Response,
 ) => Response | void | Promise<Response | void>;
 
-export type BeforeErrorIntercept = (error: HttpError) => HttpError | Promise<HttpError>;
+export type BeforeErrorIntercept = (error: ExceptionBase) => ExceptionBase | Promise<ExceptionBase>;
 
 export type HttpInterceptors = {
   /**

@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.1.15
+
+### Patch Changes
+
+- add lookup mime types
+
 ## 2.1.14
 
 ### Patch Changes

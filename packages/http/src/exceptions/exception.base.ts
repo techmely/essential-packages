@@ -1,6 +1,7 @@
 export interface NormalizedException {
   message: string;
   code: string;
+  statusCode: number;
   stack?: string;
   cause?: string;
   /**
@@ -15,6 +16,7 @@ export interface NormalizedException {
 
 export abstract class ExceptionBase extends Error {
   abstract code: string;
+  abstract statusCode: number;
 
   /**
    * @param {string} exMessage
@@ -34,6 +36,7 @@ export abstract class ExceptionBase extends Error {
   toJSON(): NormalizedException {
     return {
       message: this.exMessage,
+      statusCode: this.statusCode,
       code: this.code,
       stack: this.stack,
       cause: JSON.stringify(this.cause),

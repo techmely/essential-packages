@@ -47,7 +47,6 @@ export * from "./getStrokeRadius";
 export * from "./groupBy";
 export * from "./hasDuplicates";
 export * from "./haveSameElement";
-export * from "./http";
 export * from "./hyphenate";
 export * from "./intBuffer";
 export * from "./intHex";

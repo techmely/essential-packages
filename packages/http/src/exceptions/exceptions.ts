@@ -4,6 +4,10 @@ import {
   ARGUMENT_NOT_PROVIDED,
   ARGUMENT_OUT_OF_RANGE,
   CONFLICT,
+  HTTP_BAD_REQUEST,
+  HTTP_CONFLICT,
+  HTTP_INTERNAL_SERVER_ERROR,
+  HTTP_NOT_FOUND,
   INTERNAL_SERVER_ERROR,
   NOT_FOUND,
 } from "./exception.codes";
@@ -15,6 +19,7 @@ import {
  * @extends {ExceptionBase}
  */
 export class ArgumentNotProvidedException extends ExceptionBase {
+  override statusCode = HTTP_BAD_REQUEST;
   readonly code = ARGUMENT_NOT_PROVIDED;
 }
 
@@ -25,6 +30,7 @@ export class ArgumentNotProvidedException extends ExceptionBase {
  * @extends {ExceptionBase}
  */
 export class ArgumentInvalidException extends ExceptionBase {
+  override statusCode = HTTP_BAD_REQUEST;
   readonly code = ARGUMENT_INVALID;
 }
 
@@ -36,6 +42,7 @@ export class ArgumentInvalidException extends ExceptionBase {
  * @extends {ExceptionBase}
  */
 export class ArgumentOutOfRangeException extends ExceptionBase {
+  override statusCode = HTTP_BAD_REQUEST;
   readonly code = ARGUMENT_OUT_OF_RANGE;
 }
 
@@ -46,6 +53,7 @@ export class ArgumentOutOfRangeException extends ExceptionBase {
  * @extends {ExceptionBase}
  */
 export class ConflictException extends ExceptionBase {
+  override statusCode = HTTP_CONFLICT;
   readonly code = CONFLICT;
 }
 
@@ -57,7 +65,7 @@ export class ConflictException extends ExceptionBase {
  */
 export class NotFoundException extends ExceptionBase {
   static readonly message = "Not found";
-
+  override statusCode = HTTP_NOT_FOUND;
   readonly code = NOT_FOUND;
 }
 
@@ -69,6 +77,7 @@ export class NotFoundException extends ExceptionBase {
  */
 export class InternalServerErrorException extends ExceptionBase {
   override message = "Internal server error";
+  override statusCode = HTTP_INTERNAL_SERVER_ERROR;
 
   readonly code = INTERNAL_SERVER_ERROR;
 }

@@ -441,4 +441,4 @@ function lookupMineType(extention: string): string | undefined {
   return MIME_TYPES[!~idx ? tmp : tmp.substring(++idx)];
 }
 
-export { lookupMineType, MIME_TYPES };
+export { MIME_TYPES, lookupMineType };

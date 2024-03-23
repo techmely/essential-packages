@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 2.1.18
+
+### Patch Changes
+
+- Update function detect is stream value
+
 ## 2.1.17
 
 ### Patch Changes

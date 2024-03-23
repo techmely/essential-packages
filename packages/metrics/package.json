@@ -13,7 +13,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --clean --dts --format esm",
     "clean": "rimraf dist",
@@ -30,11 +32,11 @@
     }
   },
   "devDependencies": {
-    "@axiomhq/js": "^1.0.0-rc.2",
+    "@axiomhq/js": "^1.0.0-rc.3",
     "@techmely/types": "workspace:*",
     "tslib": "2.6.2",
     "tsup": "8.0.2",
-    "typescript": "5.4.2"
+    "typescript": "5.4.3"
   },
   "funding": [
     {
@@ -49,5 +51,8 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": ["techmely", "metrics"]
+  "keywords": [
+    "techmely",
+    "metrics"
+  ]
 }

@@ -24,7 +24,7 @@
     "publish": "node ../../scripts/publishPkg.mjs --only-esm"
   },
   "peerDependencies": {
-    "@techmely/utils": "^2.1.17",
+    "@techmely/utils": "^2.1.18",
     "react": "18.x.x",
     "react-dom": "18.x.x",
     "react-streaming": "^0.3.22",
@@ -32,14 +32,14 @@
   },
   "devDependencies": {
     "@techmely/utils": "workspace:*",
-    "@types/react": "18.2.66",
+    "@types/react": "18.2.69",
     "@types/react-dom": "^18.2.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-streaming": "0.3.24",
     "tsup": "8.0.2",
-    "typescript": "5.4.2",
-    "vike": "^0.4.165"
+    "typescript": "5.4.3",
+    "vike": "^0.4.167"
   },
   "publishConfig": {
     "access": "public",

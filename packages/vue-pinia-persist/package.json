@@ -28,7 +28,7 @@
     "pinia": "^2.1.7",
     "ts-essentials": "9.4.1",
     "tsup": "8.0.2",
-    "typescript": "5.4.2",
+    "typescript": "5.4.3",
     "vitest": "1.4.0",
     "vue": "^3.4.21"
   },

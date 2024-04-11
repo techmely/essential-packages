@@ -1847,7 +1847,7 @@ const RAW_RUNTIME_STATE =
           ["npmlog", "npm:5.0.1"],\
           ["rimraf", "npm:3.0.2"],\
           ["semver", "npm:7.6.0"],\
-          ["tar", "npm:6.2.0"]\
+          ["tar", "npm:6.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -6392,7 +6392,7 @@ const RAW_RUNTIME_STATE =
           ["promise-inflight", "virtual:f7322fced909999b2ea780dd2ef3be4593480ff83da4e433a2fd27f5eabc9274db99d3e8e4bd88fda2b4a30c42618a199ebd81a520651c8389cfb4066a9f4e6d#npm:1.0.1"],\
           ["rimraf", "npm:3.0.2"],\
           ["ssri", "npm:9.0.1"],\
-          ["tar", "npm:6.2.0"],\
+          ["tar", "npm:6.2.1"],\
           ["unique-filename", "npm:2.0.1"]\
         ],\
         "linkType": "HARD"\
@@ -6411,7 +6411,7 @@ const RAW_RUNTIME_STATE =
           ["minipass-pipeline", "npm:1.2.4"],\
           ["p-map", "npm:4.0.0"],\
           ["ssri", "npm:10.0.5"],\
-          ["tar", "npm:6.2.0"],\
+          ["tar", "npm:6.2.1"],\
           ["unique-filename", "npm:3.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -6430,7 +6430,7 @@ const RAW_RUNTIME_STATE =
           ["minipass-pipeline", "npm:1.2.4"],\
           ["p-map", "npm:4.0.0"],\
           ["ssri", "npm:10.0.5"],\
-          ["tar", "npm:6.2.0"],\
+          ["tar", "npm:6.2.1"],\
           ["unique-filename", "npm:3.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -9277,7 +9277,7 @@ const RAW_RUNTIME_STATE =
           ["nypm", "npm:0.3.6"],\
           ["ohash", "npm:1.1.3"],\
           ["pathe", "npm:1.1.2"],\
-          ["tar", "npm:6.2.0"]\
+          ["tar", "npm:6.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12259,7 +12259,7 @@ const RAW_RUNTIME_STATE =
           ["nopt", "npm:7.2.0"],\
           ["proc-log", "npm:3.0.0"],\
           ["semver", "npm:7.6.0"],\
-          ["tar", "npm:6.2.0"],\
+          ["tar", "npm:6.2.1"],\
           ["which", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -12277,7 +12277,7 @@ const RAW_RUNTIME_STATE =
           ["npmlog", "npm:6.0.2"],\
           ["rimraf", "npm:3.0.2"],\
           ["semver", "npm:7.6.0"],\
-          ["tar", "npm:6.2.0"],\
+          ["tar", "npm:6.2.1"],\
           ["which", "npm:2.0.2"]\
         ],\
         "linkType": "HARD"\
@@ -13137,7 +13137,7 @@ const RAW_RUNTIME_STATE =
           ["read-package-json-fast", "npm:3.0.2"],\
           ["sigstore", "npm:1.9.0"],\
           ["ssri", "npm:10.0.5"],\
-          ["tar", "npm:6.2.0"]\
+          ["tar", "npm:6.2.1"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -13162,7 +13162,7 @@ const RAW_RUNTIME_STATE =
           ["read-package-json-fast", "npm:3.0.2"],\
           ["sigstore", "npm:2.2.2"],\
           ["ssri", "npm:10.0.5"],\
-          ["tar", "npm:6.2.0"]\
+          ["tar", "npm:6.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17021,10 +17021,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["tar", [\
-      ["npm:6.2.0", {\
-        "packageLocation": "./.yarn/cache/tar-npm-6.2.0-3eb25205a7-02ca064a1a.zip/node_modules/tar/",\
+      ["npm:6.2.1", {\
+        "packageLocation": "./.yarn/cache/tar-npm-6.2.1-237800bb20-a5eca3eb50.zip/node_modules/tar/",\
         "packageDependencies": [\
-          ["tar", "npm:6.2.0"],\
+          ["tar", "npm:6.2.1"],\
           ["chownr", "npm:2.0.0"],\
           ["fs-minipass", "npm:2.1.0"],\
           ["minipass", "npm:5.0.0"],\

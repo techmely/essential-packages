@@ -3031,7 +3031,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@techmely/types@npm:1.6.5, @techmely/types@workspace:*, @techmely/types@workspace:packages/types":
+"@techmely/types@workspace:*, @techmely/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@techmely/types@workspace:packages/types"
   dependencies:
@@ -3062,7 +3062,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@techmely/utils@workspace:packages/utils"
   dependencies:
-    "@techmely/types": "npm:1.6.5"
+    "@techmely/types": "workspace:*"
     "@testing-library/jest-dom": "npm:6.4.2"
     "@types/node": "npm:20.11.30"
     chalk: "npm:^5.3.0"

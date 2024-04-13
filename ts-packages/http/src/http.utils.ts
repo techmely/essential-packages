@@ -1,5 +1,6 @@
-import type { HttpRetryOptions } from "./http.types";
+import type { Headers } from "undici-types";
 import { httpDefaultRetry, httpRetryStatusCodes } from "./http.const";
+import type { HttpHeadersInit, HttpRetryOptions } from "./http.types";
 
 export const normalizeHttpRetryOptions = (
   retry: number | HttpRetryOptions = {},
@@ -24,4 +25,24 @@ export const normalizeHttpRetryOptions = (
     ...retry,
     afterStatusCodes: httpRetryStatusCodes,
   };
+};
+
+function createHeaders(source: HttpHeadersInit = {}) {
+  return new globalThis.Headers(source as RequestInit["headers"]) as Headers;
+}
+
+export const mergeHttpHeaders = (source1: HttpHeadersInit = {}, source2: HttpHeadersInit = {}) => {
+  const result = createHeaders(source1);
+  const isHeadersInstance = source2 instanceof globalThis.Headers;
+  const source = createHeaders(source2);
+
+  for (const [key, value] of source.entries()) {
+    if ((isHeadersInstance && value === "undefined") || value === undefined) {
+      result.delete(key);
+    } else {
+      result.set(key, value);
+    }
+  }
+
+  return result;
 };

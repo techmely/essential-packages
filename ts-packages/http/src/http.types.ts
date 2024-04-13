@@ -1,5 +1,5 @@
-import type { HttpMethod } from "./http.const";
 import type { ExceptionBase } from "./exceptions";
+import type { HttpMethod } from "./http.const";
 
 export type HttpSearchParamsBase =
   | string
@@ -117,21 +117,148 @@ export type HttpOptions = {
 export type HttpFetchOptions = HttpOptions &
   Omit<RequestInit, "headers"> & {
     /**
-     * the standard methods (`GET`, `POST`, `PUT`, `PATCH`, `HEAD` and `DELETE`) are uppercased in order to avoid server errors due to case sensitivity.
+     * the standard methods (`GET`, `POST`, `PUT`, `PATCH`, `HEAD` and `DELETE`) are upper cased in order to avoid server errors due to case sensitivity.
      */
     method?: HttpMethod;
     headers?: HttpHeadersInit;
   };
 
-export type HttpInternalOptions = Required<
-  Omit<HttpFetchOptions, "hooks" | "retry" | "fetch">
-> & {
+export type HttpInternalOptions = Required<Omit<HttpFetchOptions, "hooks" | "retry" | "fetch">> & {
   headers: Required<Headers>;
   hooks: Required<HttpHooks>;
   retry: Required<HttpRetryOptions>;
 };
 
-export type HttpHooks = {};
+/**
+ * @description options passed to the `fetch` call and the `beforeRequest` hooks.
+ * This must stay an interface so that it can be extended outside of http for use in `http.create`.
+ */
+export interface HttpFetchHookOptions extends RequestInit {
+  // Extended from `RequestInit`, but ensured to be set (not optional).
+  method: NonNullable<RequestInit["method"]>;
+  credentials?: NonNullable<RequestInit["credentials"]>;
+
+  // Extended from custom `HttpOptions`, but ensured to be set (not optional).
+  retry: HttpRetryOptions;
+}
+
+export type HttpBeforeRequestHook = (
+  request: Request,
+  options: HttpFetchHookOptions,
+) => Request | Response | VoidFunction | Promise<Request | Response | VoidFunction>;
+
+export type HttpAfterResponseHook = (
+  request: Request,
+  options: HttpFetchHookOptions,
+  response: Response,
+) => Response | VoidFunction | Promise<Response | VoidFunction>;
+
+export type HttpBeforeErrorHook = (error: ExceptionBase) => ExceptionBase | Promise<ExceptionBase>;
+
+export type HttpHooks = {
+  /**
+	This hook enables you to modify the request right before it is sent. http will make no further changes to the request after this. The hook function receives normalized input and options as arguments. You could, for example, modify `options.headers` here.
+
+	A [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) can be returned from this hook to completely avoid making a HTTP request. This can be used to mock a request, check an internal cache, etc. An **important** consideration when returning a `Response` from this hook is that all the following hooks will be skipped, so **ensure you only return a `Response` from the last hook**.
+
+	@default []
+	*/
+  beforeRequest?: HttpBeforeRequestHook[];
+
+  /**
+	This hook enables you to modify the request right before retry. http will make no further changes to the request after this. The hook function receives an object with the normalized request and options, an error instance, and the retry count. You could, for example, modify `request.headers` here.
+
+	If the request received a response, the error will be of type `HTTPError` and the `Response` object will be available at `error.response`. Be aware that some types of errors, such as network errors, inherently mean that a response was not received. In that case, the error will not be an instance of `HTTPError`.
+
+	You can prevent http from retrying the request by throwing an error. http will not handle it in any way and the error will be propagated to the request initiator. The rest of the `beforeRetry` hooks will not be called in this case. Alternatively, you can return the [`http.stop`](#http.stop) symbol to do the same thing but without propagating an error (this has some limitations, see `http.stop` docs for details).
+
+	@example
+	```
+	import http from '@techmely/http';
+
+	const response = await http('https://techmely.com', {
+		hooks: {
+			beforeRetry: [
+				async ({request, options, error, retryCount}) => {
+					const token = await http('https://techmely.com/refresh-token');
+					options.headers.set('Authorization', `token ${token}`);
+				}
+			]
+		}
+	});
+	```
+
+	@default []
+	*/
+  beforeRetry?: HttpBeforeRetryIntercept[];
+
+  /**
+	This hook enables you to read and optionally modify the response. The hook function receives normalized input, options, and a clone of the response as arguments. The return value of the hook function will be used by http as the response object if it's an instance of [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response).
+
+	@default []
+
+	@example
+	```
+	import http from '@techmely/http';
+
+	const response = await http('https://techmely.com', {
+		hooks: {
+			afterResponse: [
+				(_input, _options, response) => {
+					// You could do something with the response, for example, logging.
+					log(response);
+
+					// Or return a `Response` instance to overwrite the response.
+					return new Response('A different response', {status: 200});
+				},
+
+				// Or retry with a fresh token on a 403 error
+				async (input, options, response) => {
+					if (response.status === 403) {
+						// Get a fresh token
+						const token = await http('https://techmely.com/token').text();
+
+						// Retry with the token
+						options.headers.set('Authorization', `token ${token}`);
+
+						return http(input, options);
+					}
+				}
+			]
+		}
+	});
+	```
+	*/
+  afterResponse?: HttpAfterResponseHook[];
+
+  /**
+	This hook enables you to modify the `HTTPError` right before it is thrown. The hook function receives a `HTTPError` as an argument and should return an instance of `HTTPError`.
+
+	@default []
+
+	@example
+	```
+	import http from '@techmely/http';
+
+	await http('https://techmely.com', {
+		hooks: {
+			beforeError: [
+				error => {
+					const {response} = error;
+					if (response && response.body) {
+						error.name = 'GitHubError';
+						error.message = `${response.body.message} (${response.status})`;
+					}
+
+					return error;
+				}
+			]
+		}
+	});
+	```
+	*/
+  beforeError?: HttpBeforeErrorHook[];
+};
 
 export type HttpRetryOptions = {
   /**
@@ -199,57 +326,57 @@ export type HttpRetryOptions = {
   delay?: (attemptCount: number) => number;
 };
 
-export type BeforeRequestIntercept = (
+export type HttpBeforeRequestIntercept = (
   request: Request,
   options: any,
-) => Request | Response | void | Promise<Request | Response | void>;
+) => Request | Response | VoidFunction | Promise<Request | Response | VoidFunction>;
 
-export type BeforeRetryState = {
-  request: Request;
+export type HttpBeforeRetryState = {
+  request: HttpFetchHookOptions;
   options: any;
   error: Error;
   retryCount: number;
 };
-export type BeforeRetryIntercept = (
-  options: BeforeRetryState,
-) => typeof stop | void | Promise<typeof stop | void>;
+export type HttpBeforeRetryIntercept = (
+  options: HttpBeforeRetryState,
+) => typeof stop | VoidFunction | Promise<typeof stop | VoidFunction>;
 
-export type AfterResponseIntercept = (
+export type HttpAfterResponseIntercept = (
   request: Request,
   options: any,
   response: Response,
-) => Response | void | Promise<Response | void>;
+) => Response | VoidFunction | Promise<Response | VoidFunction>;
 
-export type BeforeErrorIntercept = (
+export type HttpBeforeErrorIntercept = (
   error: ExceptionBase,
 ) => ExceptionBase | Promise<ExceptionBase>;
 
 export type HttpInterceptors = {
   /**
-	This hook enables you to modify the request right before it is sent. Ky will make no further changes to the request after this. The hook function receives normalized input and options as arguments. You could, forf example, modiy `options.headers` here.
+	This hook enables you to modify the request right before it is sent. http will make no further changes to the request after this. The hook function receives normalized input and options as arguments. You could, forf example, modiy `options.headers` here.
 
 	A [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) can be returned from this hook to completely avoid making a HTTP request. This can be used to mock a request, check an internal cache, etc. An **important** consideration when returning a `Response` from this hook is that all the following hooks will be skipped, so **ensure you only return a `Response` from the last hook**.
 
 	@default []
 	*/
-  beforeRequest?: BeforeRequestIntercept[];
+  beforeRequest?: HttpBeforeRequestIntercept[];
 
   /**
-	This hook enables you to modify the request right before retry. Ky will make no further changes to the request after this. The hook function receives an object with the normalized request and options, an error instance, and the retry count. You could, for example, modify `request.headers` here.
+	This hook enables you to modify the request right before retry. http will make no further changes to the request after this. The hook function receives an object with the normalized request and options, an error instance, and the retry count. You could, for example, modify `request.headers` here.
 
 	If the request received a response, the error will be of type `HTTPError` and the `Response` object will be available at `error.response`. Be aware that some types of errors, such as network errors, inherently mean that a response was not received. In that case, the error will not be an instance of `HTTPError`.
 
-	You can prevent Ky from retrying the request by throwing an error. Ky will not handle it in any way and the error will be propagated to the request initiator. The rest of the `beforeRetry` hooks will not be called in this case. Alternatively, you can return the [`ky.stop`](#ky.stop) symbol to do the same thing but without propagating an error (this has some limitations, see `ky.stop` docs for details).
+	You can prevent http from retrying the request by throwing an error. http will not handle it in any way and the error will be propagated to the request initiator. The rest of the `beforeRetry` hooks will not be called in this case. Alternatively, you can return the [`http.stop`](#http.stop) symbol to do the same thing but without propagating an error (this has some limitations, see `http.stop` docs for details).
 
 	@example
 	```
 	import http from '@techmely/http';
 
-	const response = await http('https://example.com', {
+	const response = await http('https://techmely.com', {
 		interceptors: {
 			beforeRetry: [
 				async ({request, options, error, retryCount}) => {
-					const token = await http('https://example.com/refresh-token');
+					const token = await http('https://techmely.com/refresh-token');
 					options.headers.set('Authorization', `token ${token}`);
 				}
 			]
@@ -259,10 +386,10 @@ export type HttpInterceptors = {
 
 	@default []
 	*/
-  beforeRetry?: BeforeRetryIntercept[];
+  beforeRetry?: HttpBeforeRetryIntercept[];
 
   /**
-	This hook enables you to read and optionally modify the response. The hook function receives normalized input, options, and a clone of the response as arguments. The return value of the hook function will be used by Ky as the response object if it's an instance of [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response).
+	This hook enables you to read and optionally modify the response. The hook function receives normalized input, options, and a clone of the response as arguments. The return value of the hook function will be used by http as the response object if it's an instance of [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response).
 
 	@default []
 
@@ -270,7 +397,7 @@ export type HttpInterceptors = {
 	```
 	import http from '@techmely/http';
 
-	const response = await http('https://example.com', {
+	const response = await http('https://techmely.com', {
 		interceptors: {
 			afterResponse: [
 				(_input, _options, response) => {
@@ -285,12 +412,12 @@ export type HttpInterceptors = {
 				async (input, options, response) => {
 					if (response.status === 403) {
 						// Get a fresh token
-						const token = await http('https://example.com/token').text();
+						const token = await http('https://techmely.com/token').text();
 
 						// Retry with the token
 						options.headers.set('Authorization', `token ${token}`);
 
-						return ky(input, options);
+						return http(input, options);
 					}
 				}
 			]
@@ -298,7 +425,7 @@ export type HttpInterceptors = {
 	});
 	```
 	*/
-  afterResponse?: AfterResponseIntercept[];
+  afterResponse?: HttpAfterResponseIntercept[];
 
   /**
 	This hook enables you to modify the `HTTPError` right before it is thrown. The hook function receives a `HTTPError` as an argument and should return an instance of `HTTPError`.
@@ -309,7 +436,7 @@ export type HttpInterceptors = {
 	```
 	import http from '@techmely/http';
 
-	await http('https://example.com', {
+	await http('https://techmely.com', {
 		interceptors: {
 			beforeError: [
 				error => {
@@ -326,5 +453,5 @@ export type HttpInterceptors = {
 	});
 	```
 	*/
-  beforeError?: BeforeErrorIntercept[];
+  beforeError?: HttpBeforeErrorIntercept[];
 };

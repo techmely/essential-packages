@@ -123,10 +123,10 @@ export type HttpFetchOptions = HttpOptions &
     headers?: HttpHeadersInit;
   };
 
-export type HttpInternalOptions = Required<Omit<HttpFetchOptions, "hooks" | "retry" | "fetch">> & {
-  headers: Required<Headers>;
+export type HttpInternalOptions = Omit<HttpFetchOptions, "hooks" | "retry" | "fetch"> & {
+  headers: Headers;
   hooks: Required<HttpHooks>;
-  retry: Required<HttpRetryOptions>;
+  retry: HttpRetryOptions;
 };
 
 /**
@@ -454,4 +454,9 @@ export type HttpInterceptors = {
 	```
 	*/
   beforeError?: HttpBeforeErrorIntercept[];
+};
+
+export type HttpTimeoutOptions = {
+  timeout: number;
+  fetch: typeof fetch;
 };

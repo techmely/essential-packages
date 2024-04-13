@@ -1,6 +1,7 @@
 import type { Headers } from "undici-types";
+import { TimeOutException } from "./exceptions";
 import { httpDefaultRetry, httpRetryStatusCodes } from "./http.const";
-import type { HttpHeadersInit, HttpRetryOptions } from "./http.types";
+import type { HttpHeadersInit, HttpRetryOptions, HttpTimeoutOptions } from "./http.types";
 
 export const normalizeHttpRetryOptions = (
   retry: number | HttpRetryOptions = {},
@@ -45,4 +46,28 @@ export const mergeHttpHeaders = (source1: HttpHeadersInit = {}, source2: HttpHea
   }
 
   return result;
+};
+
+export const fetchTimeOut = async (
+  request: Request,
+  init: RequestInit,
+  abortController: AbortController | null,
+  options: HttpTimeoutOptions,
+): Promise<Response> => {
+  return new Promise((resolve, reject) => {
+    const timeoutId = setTimeout(() => {
+      if (abortController) {
+        abortController.abort();
+      }
+      reject(new TimeOutException(JSON.stringify(request)));
+    }, options.timeout);
+
+    options
+      .fetch(request, init)
+      .then(resolve)
+      .catch(reject)
+      .then(() => {
+        clearTimeout(timeoutId);
+      });
+  });
 };

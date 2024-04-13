@@ -1,12 +1,12 @@
 {
-  "name": "@techmely/utils",
-  "version": "2.1.18",
-  "description": "Collection of helpful JavaScript / TypeScript utils",
+  "name": "@techmely/metrics",
+  "version": "1.0.6",
+  "description": "Techmely metrics",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/utils",
+  "repository": "https://github.com/techmely/essential-packages/tree/dev/ts-packages/types",
+  "type": "module",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public",
@@ -17,37 +17,26 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --dts",
-    "build:dev": "tsup",
+    "build": "tsup src/index.ts --clean --dts --format esm",
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
     "publish": "node ../../scripts/publishPkg.mjs",
-    "type-check": "tsc --noEmit --project ./tsconfig.json"
+    "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "dayjs": "^1.11.6"
+    "@axiomhq/js": "^1.0.0-rc.1"
   },
   "peerDependenciesMeta": {
-    "dayjs": {
+    "@axiomhq/js": {
       "optional": true
     }
   },
-  "optionalDependencies": {
-    "nanoid": "^5.0.7"
-  },
   "devDependencies": {
+    "@axiomhq/js": "^1.0.0-rc.3",
     "@techmely/types": "workspace:*",
-    "@testing-library/jest-dom": "6.4.2",
-    "@types/node": "20.12.7",
-    "chalk": "^5.3.0",
-    "dayjs": "^1.11.10",
-    "execa": "^8.0.1",
-    "nanoid": "^5.0.7",
-    "time-span": "5.1.0",
-    "tslib": "^2.6.2",
+    "tslib": "2.6.2",
     "tsup": "8.0.2",
-    "typescript": "5.4.5",
-    "vitest": "1.5.0"
+    "typescript": "5.4.5"
   },
   "funding": [
     {
@@ -59,8 +48,11 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
+  "bugs": {
+    "url": "https://github.com/techmely/techmely/issues"
+  },
   "keywords": [
     "techmely",
-    "techmely-utils"
+    "metrics"
   ]
 }

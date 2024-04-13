@@ -4,7 +4,7 @@
   "description": "Techmely Reset CSS",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/types",
+  "repository": "https://github.com/techmely/essential-packages/tree/dev/ts-packages/types",
   "files": [
     ".",
     "./reset.css",

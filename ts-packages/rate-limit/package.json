@@ -1,10 +1,10 @@
 {
-  "name": "@techmely/cache",
-  "version": "1.0.6",
-  "description": "Techmely cache",
+  "name": "@techmely/rate-limit",
+  "version": "1.1.7",
+  "description": "Techmely Rate Limit",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/types",
+  "repository": "https://github.com/techmely/essential-packages/tree/dev/ts-packages/types",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,19 +17,26 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --clean --dts --format esm",
+    "build": "tsup --entry src/index.ts --entry src/cloudflare.do.rate-limit.ts --entry src/cloudflare.rate-limit.ts --clean --dts --format esm",
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
     "publish": "node ../../scripts/publishPkg.mjs",
     "type-check": "tsc --noEmit"
   },
+  "peerDependencies": {
+    "@techmely/logger": "1.0.6",
+    "@techmely/metrics": "1.0.5",
+    "valibot": "^0.28.0"
+  },
   "devDependencies": {
+    "@cloudflare/workers-types": "4.20240405.0",
+    "@techmely/logger": "workspace:*",
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",
-    "hono": "^4.2.3",
     "tslib": "2.6.2",
     "tsup": "8.0.2",
-    "typescript": "5.4.5"
+    "typescript": "5.4.5",
+    "valibot": "0.30.0"
   },
   "funding": [
     {
@@ -46,6 +53,6 @@
   },
   "keywords": [
     "techmely",
-    "cache"
+    "rate limit"
   ]
 }

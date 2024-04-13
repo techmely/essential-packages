@@ -5,7 +5,7 @@
   "bugs": {
     "url": "https://github.com/techmely/essential-packages/issues"
   },
-  "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/vike/react-query",
+  "repository": "https://github.com/techmely/essential-packages/tree/dev/ts-packages/vike/react-query",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",

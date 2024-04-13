@@ -33,10 +33,10 @@
       "node_modules",
       "coverage",
       "dist",
-      "packages/**/node_modules",
-      "packages/**/dist",
+      "ts-packages/**/node_modules",
+      "ts-packages/**/dist",
       "partytown",
-      "packages/**/**/*.d.ts",
+      "ts-packages/**/**/*.d.ts",
       ".vscode"
     ]
   }

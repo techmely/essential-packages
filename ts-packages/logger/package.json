@@ -1,10 +1,10 @@
 {
-  "name": "@techmely/usage-limit",
+  "name": "@techmely/logger",
   "version": "1.0.7",
-  "description": "Techmely usage limit",
+  "description": "Techmely logger",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/types",
+  "repository": "https://github.com/techmely/essential-packages/tree/dev/ts-packages/types",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,25 +17,30 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --clean --dts --format esm",
+    "build": "tsup --entry src/index.ts --entry src/axiom.logger.ts --clean --dts --format esm",
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
     "publish": "node ../../scripts/publishPkg.mjs",
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@techmely/logger": "workspace:*",
-    "@techmely/metrics": "workspace:*",
-    "valibot": "^0.28.0"
+    "@axiomhq/js": "^1.0.0-rc.1"
+  },
+  "peerDependenciesMeta": {
+    "@axiomhq/js": {
+      "optional": true
+    },
+    "@techmely/types": {
+      "optional": true
+    }
   },
   "devDependencies": {
+    "@axiomhq/js": "^1.0.0-rc.3",
     "@cloudflare/workers-types": "4.20240405.0",
-    "@techmely/logger": "workspace:*",
-    "@techmely/metrics": "workspace:*",
+    "@techmely/types": "workspace:*",
     "tslib": "2.6.2",
     "tsup": "8.0.2",
-    "typescript": "5.4.5",
-    "valibot": "0.30.0"
+    "typescript": "5.4.5"
   },
   "funding": [
     {
@@ -52,6 +57,6 @@
   },
   "keywords": [
     "techmely",
-    "usage-limit"
+    "logger"
   ]
 }

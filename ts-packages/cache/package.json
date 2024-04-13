@@ -1,27 +1,34 @@
 {
-  "name": "@techmely/types",
-  "version": "1.6.5",
-  "description": "Techmely types definitions",
+  "name": "@techmely/cache",
+  "version": "1.0.6",
+  "description": "Techmely cache",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/techmely/essential-packages/tree/dev/packages/types",
-  "types": "index.d.ts",
+  "repository": "https://github.com/techmely/essential-packages/tree/dev/ts-packages/types",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public",
     "directory": "dist",
     "tag": "latest"
   },
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
+    "build": "tsup src/index.ts --clean --dts --format esm",
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
-    "publish": "npm publish",
+    "publish": "node ../../scripts/publishPkg.mjs",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20240405.0",
+    "@techmely/metrics": "workspace:*",
+    "@techmely/types": "workspace:*",
+    "hono": "^4.2.3",
+    "tslib": "2.6.2",
+    "tsup": "8.0.2",
     "typescript": "5.4.5"
   },
   "funding": [
@@ -39,6 +46,6 @@
   },
   "keywords": [
     "techmely",
-    "types"
+    "cache"
   ]
 }

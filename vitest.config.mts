@@ -7,8 +7,8 @@ const r = (p: string) =>
   path.resolve(path.dirname(fileURLToPath(import.meta.url)), p);
 
 export const alias: AliasOptions = {
-  "@techmely/types": r("./packages/types/src/"),
-  "@techmely/utils": r("./packages/utils/src/"),
+  "@techmely/types": r("./ts-packages/types/src/"),
+  "@techmely/utils": r("./ts-packages/utils/src/"),
 };
 
 export default defineConfig({
@@ -17,12 +17,12 @@ export default defineConfig({
   },
   test: {
     globals: true,
-    setupFiles: ["./packages/utils/vitest-setup.ts"],
+    setupFiles: ["./ts-packages/utils/vitest-setup.ts"],
     environment: "happy-dom",
     coverage: {
       reporter: ["lcovonly"],
     },
-    include: ["packages/**/**/**/*.test.?(m)ts?(x)"],
-    exclude: ["node_modules", "packages/**/node_modules", "packages/**/dist"],
+    include: ["ts-packages/**/**/**/*.test.?(m)ts?(x)"],
+    exclude: ["node_modules", "ts-packages/**/node_modules", "ts-packages/**/dist"],
   },
 });

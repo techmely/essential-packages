@@ -2,9 +2,9 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "paths": {
-      "@techmely/*": ["./packages/*/src"]
+      "@techmely/*": ["./ts-packages/*/src"]
     }
   },
-  "include": ["./packages/*/src", "./reset.d.ts"],
-  "exclude": ["./node_modules", "./packages/*/node_modules"]
+  "include": ["./ts-packages/*/src", "./reset.d.ts"],
+  "exclude": ["./node_modules", "./ts-packages/*/node_modules"]
 }

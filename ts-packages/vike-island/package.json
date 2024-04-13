@@ -5,7 +5,7 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "repository": "https://github.com/techmely/techmely/tree/dev/packages/vike/island",
+  "repository": "https://github.com/techmely/techmely/tree/dev/ts-packages/vike/island",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",

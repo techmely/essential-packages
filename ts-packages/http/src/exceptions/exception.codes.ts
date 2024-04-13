@@ -9,12 +9,13 @@
  * can be shared and reused on a receiving side (code sharing is
  * useful when developing fullstack apps or microservices)
  */
-export const ARGUMENT_INVALID = "GENERIC.ARGUMENT_INVALID";
-export const ARGUMENT_OUT_OF_RANGE = "GENERIC.ARGUMENT_OUT_OF_RANGE";
-export const ARGUMENT_NOT_PROVIDED = "GENERIC.ARGUMENT_NOT_PROVIDED";
-export const NOT_FOUND = "GENERIC.NOT_FOUND";
-export const CONFLICT = "GENERIC.CONFLICT";
-export const INTERNAL_SERVER_ERROR = "GENERIC.INTERNAL_SERVER_ERROR";
+export const CODE_ARGUMENT_INVALID = "GENERIC.ARGUMENT_INVALID";
+export const CODE_ARGUMENT_OUT_OF_RANGE = "GENERIC.`ARGUMENT_OUT_OF_RANGE";
+export const CODE_ARGUMENT_NOT_PROVIDED = "GENERIC.ARGUMENT_NOT_PROVIDED";
+export const CODE_NOT_FOUND = "GENERIC.NOT_FOUND";
+export const CODE_CONFLICT = "GENERIC.CONFLICT";
+export const CODE_TIMEOUT = "GENERIC.TIMEOUT";
+export const CODE_INTERNAL_SERVER_ERROR = "GENERIC.INTERNAL_SERVER_ERROR";
 
 /**
  * 1xx_MESSAGE: Indicates an interim response for communicating connection status or request progress prior to completing the requested action and sending a final response.

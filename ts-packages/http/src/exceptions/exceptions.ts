@@ -1,15 +1,17 @@
 import { ExceptionBase } from "./exception.base";
 import {
-  ARGUMENT_INVALID,
-  ARGUMENT_NOT_PROVIDED,
-  ARGUMENT_OUT_OF_RANGE,
-  CONFLICT,
+  CODE_ARGUMENT_INVALID,
+  CODE_ARGUMENT_NOT_PROVIDED,
+  CODE_ARGUMENT_OUT_OF_RANGE,
+  CODE_CONFLICT,
+  CODE_INTERNAL_SERVER_ERROR,
+  CODE_NOT_FOUND,
+  CODE_TIMEOUT,
   HTTP_BAD_REQUEST,
   HTTP_CONFLICT,
   HTTP_INTERNAL_SERVER_ERROR,
   HTTP_NOT_FOUND,
-  INTERNAL_SERVER_ERROR,
-  NOT_FOUND,
+  HTTP_REQUEST_TIMEOUT,
 } from "./exception.codes";
 
 /**
@@ -20,7 +22,7 @@ import {
  */
 export class ArgumentNotProvidedException extends ExceptionBase {
   override statusCode = HTTP_BAD_REQUEST;
-  readonly code = ARGUMENT_NOT_PROVIDED;
+  readonly code = CODE_ARGUMENT_NOT_PROVIDED;
 }
 
 /**
@@ -31,7 +33,7 @@ export class ArgumentNotProvidedException extends ExceptionBase {
  */
 export class ArgumentInvalidException extends ExceptionBase {
   override statusCode = HTTP_BAD_REQUEST;
-  readonly code = ARGUMENT_INVALID;
+  readonly code = CODE_ARGUMENT_INVALID;
 }
 
 /**
@@ -43,7 +45,7 @@ export class ArgumentInvalidException extends ExceptionBase {
  */
 export class ArgumentOutOfRangeException extends ExceptionBase {
   override statusCode = HTTP_BAD_REQUEST;
-  readonly code = ARGUMENT_OUT_OF_RANGE;
+  readonly code = CODE_ARGUMENT_OUT_OF_RANGE;
 }
 
 /**
@@ -54,7 +56,7 @@ export class ArgumentOutOfRangeException extends ExceptionBase {
  */
 export class ConflictException extends ExceptionBase {
   override statusCode = HTTP_CONFLICT;
-  readonly code = CONFLICT;
+  readonly code = CODE_CONFLICT;
 }
 
 /**
@@ -66,7 +68,13 @@ export class ConflictException extends ExceptionBase {
 export class NotFoundException extends ExceptionBase {
   static readonly message = "Not found";
   override statusCode = HTTP_NOT_FOUND;
-  readonly code = NOT_FOUND;
+  readonly code = CODE_NOT_FOUND;
+}
+
+export class TimeOutException extends ExceptionBase {
+  static readonly message = "Timeout";
+  override statusCode = HTTP_REQUEST_TIMEOUT;
+  readonly code = CODE_TIMEOUT;
 }
 
 /**
@@ -78,6 +86,5 @@ export class NotFoundException extends ExceptionBase {
 export class InternalServerErrorException extends ExceptionBase {
   override message = "Internal server error";
   override statusCode = HTTP_INTERNAL_SERVER_ERROR;
-
-  readonly code = INTERNAL_SERVER_ERROR;
+  readonly code = CODE_INTERNAL_SERVER_ERROR;
 }

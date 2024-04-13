@@ -38,6 +38,7 @@ export class RopeSequence<T> {
    */
   append(other: RopeSequence<T> | Leaf<T> | readonly T[]): RopeSequence<T> | Leaf<T> {
     if (!other.length) return this;
+    // biome-ignore lint/style/noParameterAssign: Ignore
     other = RopeSequence.from(other);
 
     return (

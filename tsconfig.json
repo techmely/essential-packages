@@ -3,7 +3,7 @@
   "compilerOptions": {
     "paths": {
       "@techmely/*": ["./packages/*/src"]
-    },
+    }
   },
   "include": ["./packages/*/src", "./reset.d.ts"],
   "exclude": ["./node_modules", "./packages/*/node_modules"]

@@ -3036,7 +3036,6 @@ __metadata:
   resolution: "@techmely/types@workspace:packages/types"
   dependencies:
     "@cloudflare/workers-types": "npm:4.20240320.1"
-    tsup: "npm:8.0.2"
     typescript: "npm:5.4.3"
   languageName: unknown
   linkType: soft

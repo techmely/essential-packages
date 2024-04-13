@@ -87,6 +87,11 @@ export type HttpOptions = {
   /**
 	Hooks allow modifications during the request lifecycle. Hook functions may be async and are run serially.
 	*/
+  hooks?: HttpHooks;
+
+  /**
+	Hooks allow modifications during the request lifecycle. Hook functions may be async and are run serially.
+	*/
   interceptors?: HttpInterceptors;
   /**
 	User-defined `fetch` function.

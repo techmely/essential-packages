@@ -1,5 +1,7 @@
-import { REQUEST_METHODS, type HttpMethod } from "./http.const";
-import type { HttpFetchOptions, HttpInput, HttpInternalOptions, HttpOptions } from "./http.types";
+import { type HttpMethod } from "./http.const";
+import type { HttpFetchOptions, HttpHooks, HttpInput, HttpInternalOptions, HttpOptions } from "./http.types";
+import { normalizeHttpRetryOptions } from "./http.utils";
+import { mergeDeep } from '@techmely/utils';
 
 export class Http {
   #retryCount = 0;
@@ -12,11 +14,18 @@ export class Http {
 
   constructor(input: HttpInput, options: HttpFetchOptions = {}) {
     this.#input = input
+    const defaultHooks: HttpHooks = {
+					beforeRequest: [],
+					beforeRetry: [],
+					beforeError: [],
+					afterResponse: [],
+				}
     this.#options = {
       method: options.method || ((this.#input as Request).method as HttpMethod),
-      retry: options.retry,
+      retry: normalizeHttpRetryOptions(options.retry),
       timeout: options.timeout || 10000,
-      $fetch: options.$fetch || globalThis.fetch.bind(globalThis)
+      $fetch: options.$fetch || globalThis.fetch.bind(globalThis),
+      hooks: mergeDeep(defaultHooks, options.hooks)
     }
   }
 

@@ -1,7 +1,7 @@
 import type { HttpRetryOptions } from "./http.types";
 import { httpDefaultRetry, httpRetryStatusCodes } from "./http.const";
 
-export const normalizeRetryOptions = (
+export const normalizeHttpRetryOptions = (
   retry: number | HttpRetryOptions = {},
 ): Required<HttpRetryOptions> => {
   if (typeof retry === "number") {

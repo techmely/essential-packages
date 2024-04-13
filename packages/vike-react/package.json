@@ -19,7 +19,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
-    "build": "tsup --entry src/+config.h.ts --entry src/index.ts --entry src/useData.ts --entry src/usePageContext.ts --entry src/onRenderClient.tsx --entry src/onRenderHtml.tsx --sourcemap --clean --dts --format esm && yarn fix.build",
+    "build": "tsup --entry src/+config.h.ts --entry src/index.ts --entry src/useData.ts --entry src/usePageContext.ts --entry src/onRenderClient.tsx --entry src/onRenderHtml.tsx --sourcemap --clean --dts --format esm && bun fix.build",
     "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts",
     "publish": "node ../../scripts/publishPkg.mjs --only-esm"
   },
@@ -32,14 +32,14 @@
   },
   "devDependencies": {
     "@techmely/utils": "workspace:*",
-    "@types/react": "18.2.69",
-    "@types/react-dom": "^18.2.22",
+    "@types/react": "18.2.77",
+    "@types/react-dom": "^18.2.25",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-streaming": "0.3.24",
     "tsup": "8.0.2",
-    "typescript": "5.4.3",
-    "vike": "^0.4.167"
+    "typescript": "5.4.5",
+    "vike": "^0.4.168"
   },
   "publishConfig": {
     "access": "public",

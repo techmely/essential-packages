@@ -18,49 +18,49 @@
     "test.unit.run": "vitest run --passWithNoTests",
     "test.unit.coverage": "vitest --coverage",
     "publish": "nx run-many -t publish",
-    "lint.format": "yarn dlx @biomejs/biome check --apply packages",
-    "lint.check": "yarn dlx @biomejs/biome check packages",
+    "lint.format": "bunx @biomejs/biome check --apply packages",
+    "lint.check": "bunx @biomejs/biome check packages",
     "lint.types": "nx run-many --target=type-check",
     "lint.bundlesize": "bundlesize",
     "lint.duplicate": "jscpd",
     "upgrade.deps": "npm-check-updates -u"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.6.2",
+    "@biomejs/biome": "1.6.4",
     "@changesets/changelog-github": "0.5.0",
     "@changesets/cli": "2.27.1",
-    "@cloudflare/workers-types": "4.20240320.1",
-    "@playwright/test": "1.42.1",
+    "@cloudflare/workers-types": "4.20240405.0",
+    "@playwright/test": "1.43.1",
     "@testing-library/jest-dom": "6.4.2",
-    "@testing-library/react": "14.2.2",
+    "@testing-library/react": "15.0.1",
     "@total-typescript/ts-reset": "0.5.1",
-    "@types/node": "20.11.30",
-    "@types/react": "18.2.69",
-    "@types/react-dom": "^18.2.22",
-    "@vitest/coverage-v8": "1.4.0",
+    "@types/node": "20.12.7",
+    "@types/react": "18.2.77",
+    "@types/react-dom": "^18.2.25",
+    "@vitest/coverage-v8": "1.5.0",
     "bundlesize": "0.18.2",
     "cross-env": "7.0.3",
     "fast-glob": "^3.3.2",
     "fs-extra": "^11.2.0",
-    "happy-dom": "14.3.1",
+    "happy-dom": "14.7.1",
     "husky": "9.0.11",
     "jscpd": "3.5.10",
     "kolorist": "1.8.0",
-    "npm-check-updates": "16.14.17",
-    "nx": "^18.1.2",
+    "npm-check-updates": "16.14.18",
+    "nx": "^18.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "5.0.5",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
-    "typescript": "5.4.3",
-    "vite": "^5.2.3",
+    "typescript": "5.4.5",
+    "vite": "^5.2.8",
     "vite-plugin-solid": "2.10.2",
-    "vitest": "1.4.0",
-    "zx": "7.2.3"
+    "vitest": "1.5.0",
+    "zx": "8.0.1"
   },
   "engines": {
-    "node": ">=18.6.0"
+    "node": ">=20"
   },
   "jscpd": {
     "threshold": 0.1,
@@ -85,6 +85,5 @@
       "type": "patreon",
       "url": "https://www.patreon.com/harrytran998"
     }
-  ],
-  "packageManager": "yarn@4.1.1"
+  ]
 }

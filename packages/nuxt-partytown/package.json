@@ -33,15 +33,15 @@
     "release": "npm publish"
   },
   "dependencies": {
-    "@builder.io/partytown": "^0.10.0",
-    "@nuxt/kit": "^3.11.1"
+    "@builder.io/partytown": "^0.10.1",
+    "@nuxt/kit": "^3.11.2"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^1.1.3",
+    "@nuxt/devtools": "^1.1.5",
     "@nuxt/module-builder": "^0.5.5",
-    "@nuxt/schema": "^3.11.1",
+    "@nuxt/schema": "^3.11.2",
     "@nuxt/test-utils": "3.12.0",
-    "@types/node": "20.11.30",
-    "nuxt": "^3.11.1"
+    "@types/node": "20.12.7",
+    "nuxt": "^3.11.2"
   }
 }

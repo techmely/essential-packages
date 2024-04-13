@@ -5,11 +5,11 @@ textInformation='\033[1;34m'
 textSuccess='\033[1;32m'
 
 echo "$textInformation \nStart lint code quality with rome"
-yarn lint.check
+bun run lint.check
 echo "$textSuccess \nCheck rome format successfully."
 
 # echo "$textInformation Start to check typings in projects"
-# yarn lint:duplicate
+# bun run lint:duplicate
 # echo "$textSuccess Start to check typings in projects"
 
 echo "$textBase"

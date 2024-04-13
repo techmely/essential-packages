@@ -17,7 +17,7 @@
     "publish": "npm publish"
   },
   "dependencies": {
-    "@techmely/utils": "^2.1.17"
+    "@techmely/utils": "^2.1.18"
   },
   "peerDependencies": {
     "pinia": "^2.1.0",
@@ -26,10 +26,10 @@
   "devDependencies": {
     "cookie": "^0.6.0",
     "pinia": "^2.1.7",
-    "ts-essentials": "9.4.1",
+    "ts-essentials": "9.4.2",
     "tsup": "8.0.2",
-    "typescript": "5.4.3",
-    "vitest": "1.4.0",
+    "typescript": "5.4.5",
+    "vitest": "1.5.0",
     "vue": "^3.4.21"
   },
   "publishConfig": {

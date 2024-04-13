@@ -1,4 +1,4 @@
-import path from "path";
+import path from "node:path";
 import { getDataPath } from "./getDataPath";
 
 export async function findNearestFile<T>(

@@ -12,10 +12,7 @@
   "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
-  "files": [
-    "dist",
-    "CHANGELOG.md"
-  ],
+  "files": ["dist", "CHANGELOG.md"],
   "scripts": {
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
@@ -56,9 +53,5 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-react",
-    "vike react"
-  ]
+  "keywords": ["techmely", "techmely-react", "vike react"]
 }

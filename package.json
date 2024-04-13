@@ -18,11 +18,12 @@
     "test.unit.run": "vitest run --passWithNoTests",
     "test.unit.coverage": "vitest --coverage",
     "publish": "nx run-many -t publish",
-    "lint.format": "bunx @biomejs/biome check --apply packages",
-    "lint.check": "bunx @biomejs/biome check packages",
+    "lint.format": "bunx @biomejs/biome check --apply ts-packages",
+    "lint.check": "bunx @biomejs/biome check ts-packages",
     "lint.types": "nx run-many --target=type-check",
     "lint.bundlesize": "bundlesize",
     "lint.duplicate": "jscpd",
+    "lint.perf": "oxlint",
     "upgrade.deps": "npm-check-updates -u"
   },
   "devDependencies": {
@@ -48,6 +49,7 @@
     "kolorist": "1.8.0",
     "npm-check-updates": "16.14.18",
     "nx": "^18.2.4",
+    "oxlint": "0.2.17",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "5.0.5",

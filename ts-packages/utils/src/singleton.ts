@@ -10,6 +10,5 @@ export function singleton<Value>(name: string, valueFactory: () => Value): Value
 }
 
 declare global {
-  // biome-ignore lint/style/noVar: must use var here to add typing to globalThis
   var __singletons: Record<string, unknown>;
 }

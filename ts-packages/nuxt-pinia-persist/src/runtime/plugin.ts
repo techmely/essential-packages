@@ -11,7 +11,9 @@ export default defineNuxtPlugin<{ pinia: Pinia }>(({ vueApp, payload }) => {
   pinia.use(
     piniaPersist({
       ...restOptions,
+      // biome-ignore lint/security/noGlobalEval: I knew this
       onAfterRestore: onAfterRestore ? eval(onAfterRestore) : undefined,
+      // biome-ignore lint/security/noGlobalEval: I knew this
       onBeforeRestore: onBeforeRestore ? eval(onBeforeRestore) : undefined,
     }),
   );

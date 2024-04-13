@@ -10,9 +10,7 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
@@ -43,11 +41,7 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-react",
-    "vike react"
-  ],
+  "keywords": ["techmely", "techmely-react", "vike react"],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

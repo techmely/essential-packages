@@ -145,7 +145,6 @@ export class OrderedMap<T = any> {
    */
   toObject(): Record<string, T> {
     const result = {};
-    // biome-ignore lint/complexity/noForEach: This is not basic foreach
     this.forEach((key, value) => {
       result[key] = value;
     });

@@ -1,4 +1,4 @@
-import path from "path";
+import path from "node:path";
 import { readFile } from "./readFile";
 
 export async function getDataPath<T = any>(directoryPath: string, fileName: string) {

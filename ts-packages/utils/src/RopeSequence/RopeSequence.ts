@@ -1,4 +1,4 @@
-export type RopeSequenceCallback<T> = (elt: T, index: number) => boolean | void;
+export type RopeSequenceCallback<T> = (elt: T, index: number) => boolean | VoidFunction;
 
 /**
  * A rope sequence is a persistent sequence data structure that supports appending,
@@ -80,7 +80,11 @@ export class RopeSequence<T> {
   // indices. This tends to be more efficient than looping over the
   // indices and calling `get`, because it doesn't have to descend the
   // tree for every element.
-  forEach(f: (elt: T, index: number) => boolean | void, from = 0, to = RopeSequence.length) {
+  forEach(
+    f: (elt: T, index: number) => boolean | VoidFunction,
+    from = 0,
+    to = RopeSequence.length,
+  ) {
     if (from <= to) this.forEachInner(f, from, to, 0);
     else this.forEachInvertedInner(f, from, to, 0);
   }

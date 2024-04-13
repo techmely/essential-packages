@@ -9,5 +9,5 @@ import type { EntityId } from "@techmely/types";
  * @example strip(0.09999999999999998) === 0.1 // true
  */
 export function stripPrecision(num: EntityId, precision = 15): number {
-  return +parseFloat(Number(num).toPrecision(precision));
+  return +Number.parseFloat(Number(num).toPrecision(precision));
 }

@@ -127,7 +127,7 @@ describe("serializeCookie(name, value, options)", () => {
     });
 
     it("should throw on invalid date", () => {
-      expect(() => serializeCookie("foo", "bar", { expires: new Date(NaN) })).throws(
+      expect(() => serializeCookie("foo", "bar", { expires: new Date(Number.NaN) })).throws(
         /option expires is invalid/,
       );
     });
@@ -160,7 +160,7 @@ describe("serializeCookie(name, value, options)", () => {
     });
 
     it("should throw when Infinity", () => {
-      expect(() => serializeCookie("foo", "bar", { maxAge: Infinity })).throws(
+      expect(() => serializeCookie("foo", "bar", { maxAge: Number.POSITIVE_INFINITY })).throws(
         /option maxAge is invalid/,
       );
     });

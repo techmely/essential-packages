@@ -1,6 +1,7 @@
 import { type DehydratedState, type QueryClient, dehydrate, hydrate } from "@tanstack/react-query";
 import { uneval } from "devalue";
-import React, { type PropsWithChildren } from "react";
+import type React from "react";
+import type { PropsWithChildren } from "react";
 import { useStream } from "react-streaming";
 
 declare global {

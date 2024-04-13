@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 
 export function copyDir(srcDir: string, destDir: string): void {
   fs.mkdirSync(destDir, { recursive: true });

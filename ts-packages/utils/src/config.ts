@@ -1,4 +1,4 @@
-import { type Options } from "tsup";
+import type { Options } from "tsup";
 
 const now = new Date();
 

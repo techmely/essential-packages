@@ -14,9 +14,7 @@
   },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "echo SUCCESS",
     "build.main": "nuxt prepare playground && nuxt-module-build build",
@@ -29,7 +27,7 @@
   "dependencies": {
     "@nuxt/kit": "3.11.2",
     "@techmely/utils": "^2.1.18",
-    "@techmely/vue-pinia-persist": "^1.0.11",
+    "@techmely/vue-pinia-persist": "workspace:*",
     "defu": "^6.1.4"
   },
   "peerDependencies": {

@@ -7,9 +7,7 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",

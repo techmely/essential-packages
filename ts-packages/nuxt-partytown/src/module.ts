@@ -1,5 +1,5 @@
-import { join } from "path";
-import { type PartytownConfig } from "@builder.io/partytown/integration";
+import { join } from "node:path";
+import type { PartytownConfig } from "@builder.io/partytown/integration";
 import { copyLibFiles } from "@builder.io/partytown/utils";
 import { defineNuxtModule, useLogger } from "@nuxt/kit";
 import pkg from "../package.json";

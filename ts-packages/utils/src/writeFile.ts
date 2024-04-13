@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
+import path from "node:path";
 
 export function writeFile(filename: string, content: string | Uint8Array): void {
   const dir = path.dirname(filename);

@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, test, vi } from "vitest";
-import emitter, { Emitter, EventHandlerMap } from "../src/emitter";
+import emitter, { type Emitter, type EventHandlerMap } from "../src/emitter";
 
 describe("Emitter", () => {
   const eventType = Symbol("eventType");

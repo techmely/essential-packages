@@ -161,6 +161,7 @@ export class PCancelable<ValueType> extends Promise<ValueType> {
   }
 
   // @ts-expect-error Ignore then
+  // biome-ignore lint/suspicious/noThenProperty: <explanation>
   then(onFulfilled, onRejected) {
     return this.#promise.then(onFulfilled, onRejected);
   }

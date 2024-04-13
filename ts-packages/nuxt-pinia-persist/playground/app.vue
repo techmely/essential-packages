@@ -7,15 +7,15 @@
 </template>
 
 <script setup lang="ts">
-import { useAuthStore } from './stores/auth.store';
-import { useUserStore } from './stores/user.store';
+import { useAuthStore } from "./stores/auth.store";
+import { useUserStore } from "./stores/user.store";
 
-const auth = useAuthStore()
-const user = useUserStore()
+const auth = useAuthStore();
+const user = useUserStore();
 
 user.user.info = {
-  fullName: 'string'
-}
+  fullName: "string",
+};
 
-auth.accessToken = "ACCESS TOKEN"
+auth.accessToken = "ACCESS TOKEN";
 </script>

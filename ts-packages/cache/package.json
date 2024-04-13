@@ -13,9 +13,7 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "tsup src/index.ts --clean --dts --format esm",
     "clean": "rimraf dist",
@@ -44,8 +42,5 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": [
-    "techmely",
-    "cache"
-  ]
+  "keywords": ["techmely", "cache"]
 }

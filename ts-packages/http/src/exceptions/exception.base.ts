@@ -14,23 +14,32 @@ export interface NormalizedException {
   metadata?: Record<string, any>;
 }
 
-export abstract class ExceptionBase extends Error {
-  abstract code: string;
-  abstract statusCode: number;
+export interface HttpExceptionOptions {
+  /**
+   * @description origin cause of the error
+   */
+  cause?: unknown;
+  description?: string;
+}
+
+export class ExceptionBase extends Error {
+  override cause?: unknown;
 
   /**
    * @param {string} exMessage
-   * @param {ObjectLiteral} [metadata={}]
+   * @param {number} status
+   * @param {HttpExceptionOptions} [options={}]
    * **BE CAREFUL** not to include sensitive info in 'metadata'
    * to prevent leaks since all exception's data will end up
    * in application's log files. Only include non-sensitive
    * info that may help with debugging.
    */
   constructor(
-    readonly exMessage: string,
-    readonly metadata?: Record<string, any>,
+    private readonly exMessage: string | Record<string, any>,
+    private readonly status: number,
+    readonly options?: HttpExceptionOptions,
   ) {
-    super(exMessage);
+    super();
   }
 
   toJSON(): NormalizedException {

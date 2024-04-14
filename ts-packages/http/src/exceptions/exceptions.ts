@@ -1,3 +1,4 @@
+import type { HttpFetchOptions } from "../http.types";
 import { ExceptionBase } from "./exception.base";
 import {
   CODE_ARGUMENT_INVALID,
@@ -87,4 +88,20 @@ export class InternalServerErrorException extends ExceptionBase {
   override message = "Internal server error";
   override statusCode = HTTP_INTERNAL_SERVER_ERROR;
   readonly code = CODE_INTERNAL_SERVER_ERROR;
+}
+
+export class HttpError extends ExceptionBase {
+  #response: Response;
+  #request: Request;
+
+  constructor(response: Response, request: Request, options: HttpFetchOptions) {
+    const message = response.statusText;
+    super(message);
+    this.#response = response;
+    this.#request = request;
+  }
+
+  override code = this.#response.statusText;
+  // code;
+  // statusCode = this.#response.status;
 }

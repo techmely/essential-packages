@@ -1,4 +1,5 @@
 import { isSupportsRequestStreams, mergeDeep } from "@techmely/utils";
+import { ExceptionBase } from "./exceptions";
 import type { HttpMethod } from "./http.const";
 import type {
   HttpFetchHookOptions,
@@ -34,6 +35,11 @@ export class Http {
         }
       }
       http.#jsonifyResponse(response);
+      if (!response.ok) {
+        const code = response.status;
+        const message = response.statusText;
+        const error = new ExceptionBase(message);
+      }
     }
   }
 

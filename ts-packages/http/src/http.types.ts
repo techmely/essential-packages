@@ -1,4 +1,4 @@
-import type { ExceptionBase } from "./exceptions";
+import type { HttpError } from "./exceptions";
 import type { HttpMethod } from "./http.const";
 
 export type HttpSearchParamsBase =
@@ -126,7 +126,7 @@ export type HttpFetchOptions = HttpOptions &
 export type HttpInternalOptions = Omit<HttpFetchOptions, "hooks" | "retry" | "fetch"> & {
   headers: Headers;
   hooks: Required<HttpHooks>;
-  retry: HttpRetryOptions;
+  retry: Required<HttpRetryOptions>;
 };
 
 /**
@@ -153,7 +153,7 @@ export type HttpAfterResponseHook = (
   response: Response,
 ) => Response | VoidFunction | Promise<Response | VoidFunction>;
 
-export type HttpBeforeErrorHook = (error: ExceptionBase) => ExceptionBase | Promise<ExceptionBase>;
+export type HttpBeforeErrorHook = (error: HttpError) => HttpError | Promise<HttpError>;
 
 export type HttpHooks = {
   /**
@@ -347,9 +347,7 @@ export type HttpAfterResponseIntercept = (
   response: Response,
 ) => Response | VoidFunction | Promise<Response | VoidFunction>;
 
-export type HttpBeforeErrorIntercept = (
-  error: ExceptionBase,
-) => ExceptionBase | Promise<ExceptionBase>;
+export type HttpBeforeErrorIntercept = (error: HttpError) => HttpError | Promise<HttpError>;
 
 export type HttpInterceptors = {
   /**
@@ -460,3 +458,11 @@ export type HttpTimeoutOptions = {
   timeout: number;
   fetch: typeof fetch;
 };
+
+export type ResponsePromise = {
+  arrayBuffer: () => Promise<ArrayBuffer>;
+  blob: () => Promise<Blob>;
+  formData: () => Promise<FormData>;
+  json<T extends unknown>(): Promise<T>;
+  text: () => Promise<string>;
+} & Promise<Response>;

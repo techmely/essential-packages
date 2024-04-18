@@ -21,8 +21,12 @@
     "publish": "node ../../scripts/publishPkg.mjs",
     "type-check": "tsc --noEmit"
   },
+  "dependencies": {
+    "@techmely/utils": "workspace:*"
+  },
   "devDependencies": {
     "@techmely/types": "workspace:*",
+    "uWebSockets.js": "uNetworking/uWebSockets.js#v20.43.0",
     "tslib": "2.6.2",
     "tsup": "8.0.2",
     "typescript": "5.4.5"

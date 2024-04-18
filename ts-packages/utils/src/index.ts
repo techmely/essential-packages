@@ -20,6 +20,7 @@ export * from "./createElement";
 export * from "./createStyleTag";
 export * from "./cutString";
 export * from "./debounce";
+export * from "./delaySignal";
 export * from "./deleteProps";
 export * from "./downloadByData";
 export * from "./emitter";

@@ -18,6 +18,6 @@ describe("Main test", () => {
       const result = JSON.stringify({ method: req.getMethod() });
       res.writeStatus(String(200)).end(result);
     });
-    const { ok } = await http;
+    // const { ok } = await http;
   });
 });

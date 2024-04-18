@@ -22,8 +22,9 @@ import {
  * @extends {ExceptionBase}
  */
 export class ArgumentNotProvidedException extends ExceptionBase {
-  override statusCode = HTTP_BAD_REQUEST;
-  readonly code = CODE_ARGUMENT_NOT_PROVIDED;
+  constructor(customMessage?: string) {
+    super(customMessage || "Argument not provided", HTTP_BAD_REQUEST, CODE_ARGUMENT_NOT_PROVIDED);
+  }
 }
 
 /**
@@ -33,8 +34,9 @@ export class ArgumentNotProvidedException extends ExceptionBase {
  * @extends {ExceptionBase}
  */
 export class ArgumentInvalidException extends ExceptionBase {
-  override statusCode = HTTP_BAD_REQUEST;
-  readonly code = CODE_ARGUMENT_INVALID;
+  constructor(customMessage?: string) {
+    super(customMessage || "Argument invalid", HTTP_BAD_REQUEST, CODE_ARGUMENT_INVALID);
+  }
 }
 
 /**
@@ -45,8 +47,9 @@ export class ArgumentInvalidException extends ExceptionBase {
  * @extends {ExceptionBase}
  */
 export class ArgumentOutOfRangeException extends ExceptionBase {
-  override statusCode = HTTP_BAD_REQUEST;
-  readonly code = CODE_ARGUMENT_OUT_OF_RANGE;
+  constructor(customMessage?: string) {
+    super(customMessage || "Argument out of range", HTTP_BAD_REQUEST, CODE_ARGUMENT_OUT_OF_RANGE);
+  }
 }
 
 /**
@@ -56,8 +59,9 @@ export class ArgumentOutOfRangeException extends ExceptionBase {
  * @extends {ExceptionBase}
  */
 export class ConflictException extends ExceptionBase {
-  override statusCode = HTTP_CONFLICT;
-  readonly code = CODE_CONFLICT;
+  constructor(customMessage?: string) {
+    super(customMessage || "Conflict", HTTP_CONFLICT, CODE_CONFLICT);
+  }
 }
 
 /**
@@ -67,15 +71,15 @@ export class ConflictException extends ExceptionBase {
  * @extends {ExceptionBase}
  */
 export class NotFoundException extends ExceptionBase {
-  static readonly message = "Not found";
-  override statusCode = HTTP_NOT_FOUND;
-  readonly code = CODE_NOT_FOUND;
+  constructor(customMessage?: string) {
+    super(customMessage || "Not found", HTTP_NOT_FOUND, CODE_NOT_FOUND);
+  }
 }
 
 export class TimeOutException extends ExceptionBase {
-  static readonly message = "Timeout";
-  override statusCode = HTTP_REQUEST_TIMEOUT;
-  readonly code = CODE_TIMEOUT;
+  constructor(customMessage?: string) {
+    super(customMessage || "Request timeout", HTTP_REQUEST_TIMEOUT, CODE_TIMEOUT);
+  }
 }
 
 /**
@@ -85,23 +89,25 @@ export class TimeOutException extends ExceptionBase {
  * @extends {ExceptionBase}
  */
 export class InternalServerErrorException extends ExceptionBase {
-  override message = "Internal server error";
-  override statusCode = HTTP_INTERNAL_SERVER_ERROR;
-  readonly code = CODE_INTERNAL_SERVER_ERROR;
+  constructor(customMessage?: string) {
+    super(
+      customMessage || "Internal server error",
+      HTTP_INTERNAL_SERVER_ERROR,
+      CODE_INTERNAL_SERVER_ERROR,
+    );
+  }
 }
 
 export class HttpError extends ExceptionBase {
-  #response: Response;
-  #request: Request;
+  response: Response;
+  request: Request;
+  options: HttpFetchOptions;
 
   constructor(response: Response, request: Request, options: HttpFetchOptions) {
     const message = response.statusText;
-    super(message);
-    this.#response = response;
-    this.#request = request;
+    super(message, response.status, "");
+    this.request = request;
+    this.response = response;
+    this.options = options;
   }
-
-  override code = this.#response.statusText;
-  // code;
-  // statusCode = this.#response.status;
 }

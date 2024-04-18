@@ -16,7 +16,7 @@
   "files": ["dist"],
   "scripts": {
     "build": "tsup --dts",
-    "build:dev": "tsup",
+    "build:ts": "tsc",
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
     "publish": "node ../../scripts/publishPkg.mjs",

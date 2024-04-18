@@ -1,6 +1,6 @@
-import { execCommand } from "./execCommand";
+import { $ } from "execa";
 
 export async function getLastGitCommitHash() {
-  const commitHash = await execCommand("git", ["rev-parse", "--short", "HEAD"]);
+  const commitHash = await $`git rev-parse --short HEAD`;
   return commitHash;
 }

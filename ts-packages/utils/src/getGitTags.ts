@@ -1,9 +1,6 @@
-import { execCommand } from "./execCommand";
+import { $ } from "execa";
 
 export async function getGitTags() {
-  const tags = await execCommand("git", ["--no-pager", "tag", "-l", "--sort=creatordate"]).then(
-    (r) => r.split("\n"),
-  );
-
-  return tags;
+  const tags = await $`git --no-pager tag -l --sort=creatordate`;
+  return String(tags).split("\n");
 }

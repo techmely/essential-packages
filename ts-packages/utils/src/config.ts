@@ -17,7 +17,10 @@ type BuildOptions = {
 };
 
 export function getTsupOptions(pkg?: any, buildOptions?: BuildOptions): Options {
-  let external = [...new Set(Object.keys(pkg?.peerDependencies ?? {}))];
+  let external = [
+    ...Object.keys(pkg?.peerDependencies ?? {}),
+    ...Object.keys(pkg?.devDependencies ?? {}),
+  ];
   if (buildOptions?.externalDeps) {
     external = [...external, ...buildOptions.externalDeps];
   }
@@ -27,7 +30,6 @@ export function getTsupOptions(pkg?: any, buildOptions?: BuildOptions): Options 
     format: ["cjs", "esm"],
     external,
     clean: true,
-    treeshake: true,
     ignoreWatch: ["**/{node_modules}/**", "dist", "src/**/*.test.ts"],
     banner: {
       js: TECHMELY_BANNER(buildOptions?.packageName || pkg?.name || "open-sources"),

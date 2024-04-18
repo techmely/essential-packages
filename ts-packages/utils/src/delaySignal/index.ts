@@ -1,4 +1,4 @@
-export type DelayOptions = {
+type DelayOptions = {
   signal?: AbortController["signal"] | null;
 };
 

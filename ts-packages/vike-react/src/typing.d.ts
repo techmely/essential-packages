@@ -1,6 +1,6 @@
 import type { EntityId, StringEnum } from "@techmely/types";
 import type { PageContext } from "vike/types";
-import type { PropsWithChildren, ReactElement, ReactNode } from "react";
+import type { PropsWithChildren, ReactNode } from "react";
 
 declare global {
   type PageProps = Record<string, any>;

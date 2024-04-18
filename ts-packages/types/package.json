@@ -5,16 +5,16 @@
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/techmely/essential-packages/tree/dev/ts-packages/types",
-  "types": "index.d.ts",
+  "types": "src/index.d.ts",
   "publishConfig": {
     "access": "public",
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["src"],
+  "files": ["."],
   "scripts": {
     "clean": "rimraf dist",
-    "upgrade.deps": "npm-check-updates -u",
+    "upgrade.deps": "echo SUCCESS",
     "publish": "npm publish",
     "type-check": "tsc --noEmit"
   },

@@ -16,7 +16,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
-    "build": "tsup --entry src/+config.h.ts --entry src/index.ts --entry src/useData.ts --entry src/usePageContext.ts --entry src/onRenderClient.tsx --entry src/onRenderHtml.tsx --sourcemap --clean --dts --format esm && bun fix.build",
+    "build": "tsup --entry src/+config.h.ts --entry src/index.ts --entry src/useData.ts --entry src/usePageContext.ts --entry src/onRenderClient.tsx --entry src/onRenderHtml.tsx --sourcemap --clean --dts --format esm && bun run fix.build",
     "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts",
     "publish": "node ../../scripts/publishPkg.mjs --only-esm"
   },

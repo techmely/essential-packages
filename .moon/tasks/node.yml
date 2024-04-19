@@ -1,0 +1,11 @@
+fileGroups:
+  default:
+    - "**/*"
+  production: []
+  sharedGlobals: []
+tasks:
+  build:
+    deps:
+      - ^:build
+    options:
+      cache: true

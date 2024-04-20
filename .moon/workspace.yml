@@ -11,11 +11,10 @@ runner:
 telemetry: false
 hooks:
   commit-msg:
-    -
+    - echo "hello commit msg"
   pre-commit:
     - "bun run test.unit.run"
-    - "another-command"
   pre-push:
-    -
+    - echo "hello push"
   prepare-commit-msg:
-    -
+    - echo "hello prepare"

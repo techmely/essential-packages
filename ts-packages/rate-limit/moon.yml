@@ -3,5 +3,8 @@ language: "typescript"
 
 tasks:
   build:
+    options:
+      mergeArgs: "replace"
+    args: "--entry src/index.ts --entry src/cloudflare.do.rate-limit.ts --entry src/cloudflare.rate-limit.ts --clean --dts --format esm"
     outputs:
       - "dist"

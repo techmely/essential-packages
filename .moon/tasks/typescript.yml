@@ -25,12 +25,8 @@ tasks:
       - 'rimraf dist'
 
   lint:
-    command:
-      - 'bunx'
-      - '@biomejs/biome'
-      - 'check'
-      - '--apply'
-      - 'ts-packages'
+    command: 'bunx'
+    args: '@biomejs/biome check --apply .'
     inputs:
       - '/biome.json'
       - '/tsconfig.base.json'

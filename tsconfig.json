@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.base.json",
-  "files": [],
+  "include": ["ts-packages"],
   "references": [
     {
       "path": "ts-packages/cache"

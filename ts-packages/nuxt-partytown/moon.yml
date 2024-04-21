@@ -3,10 +3,10 @@ language: "typescript"
 
 tasks:
   build:
-    command: "echo BUILD TYPES"
+    command: "echo BUILD NUXT PARTYTOWN"
     options:
       mergeArgs: 'replace'
   lint:
-    command: "echo LINT TYPES"
+    command: "echo LINT NUXT PARTYTOWN"
     options:
       mergeArgs: 'replace'

@@ -11,7 +11,7 @@ export async function delaySignal(ms: number, { signal }: DelayOptions): Promise
 
     function abortHandler() {
       clearTimeout(timeoutId);
-      reject(signal!.reason);
+      reject(signal?.reason);
     }
 
     const timeoutId = setTimeout(() => {

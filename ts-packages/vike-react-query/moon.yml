@@ -3,5 +3,8 @@ language: "typescript"
 
 tasks:
   build:
+    options:
+      mergeArgs: "replace"
+    args: "--entry src/index.ts --entry src/+config.h.ts --entry src/ReactQueryProvider.tsx --entry src/FallbackErrorBoundary.tsx --sourcemap --clean --dts --format esm && bun run fix.build"
     outputs:
       - "dist"

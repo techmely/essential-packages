@@ -3,16 +3,12 @@
   "compilerOptions": {
     "outDir": "../../.moon/cache/types/ts-packages/utils",
     "composite": false,
-    "rootDir": "."
+    "rootDir": "./src"
   },
   "include": ["src", "tests"],
-  "exclude": ["**/*.test.mts", "**/*.test.ts"],
   "references": [
     {
-      "path": "./tsconfig.build.json"
-    },
-    {
-      "path": "../types/utils"
+      "path": "../types"
     }
   ]
 }

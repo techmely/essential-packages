@@ -3,10 +3,7 @@
   "compilerOptions": {
     "outDir": "../../.moon/cache/types/ts-packages/vue-pinia-persist"
   },
-  "include": [
-    "src/**/*",
-    "tests/**/*"
-  ],
+  "include": ["src/**/*", "tests/**/*"],
   "references": [
     {
       "path": "../utils"

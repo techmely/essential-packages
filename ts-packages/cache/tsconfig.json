@@ -1,7 +1,8 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "../../.moon/cache/types/ts-packages/cache"
+    "outDir": "../../.moon/cache/types/ts-packages/cache",
+    "composite": true
   },
   "include": ["src/**/*", "tests/**/*"],
   "references": [

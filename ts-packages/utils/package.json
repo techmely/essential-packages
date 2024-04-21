@@ -15,9 +15,6 @@
   },
   "files": ["dist"],
   "scripts": {
-    "build": "tsup --dts",
-    "build:ts": "tsc",
-    "clean": "rimraf dist",
     "upgrade.deps": "npm-check-updates -u",
     "publish": "node ../../scripts/publishPkg.mjs",
     "type-check": "tsc --noEmit --project ./tsconfig.json"

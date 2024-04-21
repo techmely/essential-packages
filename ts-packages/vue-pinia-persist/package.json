@@ -15,7 +15,7 @@
     "publish": "npm publish"
   },
   "dependencies": {
-    "@techmely/utils": "^2.1.18"
+    "@techmely/utils": "workspace:*"
   },
   "peerDependencies": {
     "pinia": "^2.1.0",

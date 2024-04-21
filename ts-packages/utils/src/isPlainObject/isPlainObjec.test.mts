@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import { getTag, isPlainObject } from ".";
 
 describe("getTag()", () => {

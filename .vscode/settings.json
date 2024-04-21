@@ -115,7 +115,5 @@
     "vike",
     "vite",
     "vitest"
-  ],
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  ]
 }

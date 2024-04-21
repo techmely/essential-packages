@@ -4,17 +4,28 @@ projects:
 vcs:
   defaultBranch: main
   manager: git
+  hooks:
+    commit-msg:
+      - echo "commit msg"
+    pre-commit:
+      - echo "pre commit msg"
+    pre-push:
+      - echo "pre push"
+    prepare-commit-msg:
+      - echo "prepare commit msg"
+
+
 hasher:
   optimization: "performance"
+
 runner:
   cacheLifetime: "24 hours"
+  archivableTargets:
+    - ':clean'
+    - ':format'
+    - ':lint'
+    - ':test'
+    - ':typecheck'
+  logRunningCommand: true
+
 telemetry: false
-hooks:
-  commit-msg:
-    - echo "hello commit msg"
-  pre-commit:
-    - "bun run test.unit.run"
-  pre-push:
-    - echo "hello push"
-  prepare-commit-msg:
-    - echo "hello prepare"

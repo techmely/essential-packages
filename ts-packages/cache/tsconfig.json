@@ -1,14 +1,10 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "../../.moon/cache/types/ts-packages/rate-limit",
-    "types": ["@cloudflare/workers-types"]
+    "outDir": "../../.moon/cache/types/ts-packages/cache"
   },
   "include": ["src/**/*", "tests/**/*"],
   "references": [
-    {
-      "path": "../logger"
-    },
     {
       "path": "../metrics"
     },

@@ -1,0 +1,10 @@
+type: "library"
+language: "typescript"
+
+tasks:
+  build:
+    command: "tsup --entry src/+config.h.ts --entry src/index.ts --entry src/useData.ts --entry src/usePageContext.ts --entry src/onRenderClient.tsx --entry src/onRenderHtml.tsx --sourcemap --clean --dts --format esm && bun run fix.build"
+    options:
+      mergeArgs: "replace"
+    outputs:
+      - "dist"

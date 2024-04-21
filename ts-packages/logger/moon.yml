@@ -3,8 +3,8 @@ language: "typescript"
 
 tasks:
   build:
-    command: "tsup --dts --config tsup.config.ts"
     options:
       mergeArgs: "replace"
+    args: "--entry src/index.ts --entry src/axiom.logger.ts --clean --dts --format esm"
     outputs:
       - "dist"

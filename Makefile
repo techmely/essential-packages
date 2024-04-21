@@ -4,9 +4,6 @@ e2e.headless:
 e2e.open:
 	bun playwright test --project=chromium --ui
 
-build.vike:
-	bun nx run-many -t build -p @techmely/vike-react @techmely/vike-react-query
-
 build:
 	bun nx run-many -t build -p
 

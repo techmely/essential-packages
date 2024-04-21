@@ -1,0 +1,8 @@
+type: "library"
+language: "typescript"
+
+tasks:
+  build:
+    command: "echo BUILD TYPES"
+    options:
+      mergeArgs: 'replace'

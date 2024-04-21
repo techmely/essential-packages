@@ -1,10 +1,12 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "../../.moon/cache/types/ts-packages/vike-react",
-    "jsx": "react"
+    "outDir": "../../.moon/cache/types/ts-packages/vue-pinia-persist"
   },
-  "include": ["src/**/*", "tests/**/*"],
+  "include": [
+    "src/**/*",
+    "tests/**/*"
+  ],
   "references": [
     {
       "path": "../utils"

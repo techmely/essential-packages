@@ -1,0 +1,62 @@
+$schema: 'https://moonrepo.dev/schemas/tasks.json'
+
+implicitDeps:
+  - '^:build'
+
+implicitInputs:
+  - 'package.json'
+
+fileGroups:
+  # Application specific files
+  app: []
+  configs:
+    - '*.{js,json,yml,yaml}'
+  sources:
+    - 'src/**/*'
+  tests:
+    - 'src/**/*.test.mts'
+    - 'tests/**/*.test.mts'
+    - 'tests/**/*.stories.*'
+    - '**/__tests__/**/*'
+
+tasks:
+  clean:
+    command:
+      - 'rimraf dist'
+
+  lint:
+    command:
+      - 'bunx'
+      - '@biomejs/biome'
+      - 'check'
+      - '--apply'
+      - 'ts-packages'
+    inputs:
+      - '/biome.json'
+      - '/tsconfig.base.json'
+      - 'tsconfig.json'
+      - '@globs(sources)'
+      - '@globs(tests)'
+
+  test:
+    command:
+      - 'vitest'
+      - 'run'
+      - '--passWithNoTests'
+      - '--isolate'
+    inputs:
+      - '@globs(sources)'
+      - '@globs(tests)'
+      - 'vitest.config.*'
+
+  typecheck:
+    command:
+      - 'tsc'
+      - '--build'
+    inputs:
+      - '@group(app)'
+      - '@globs(sources)'
+      - '@globs(tests)'
+      - 'tsconfig.json'
+      - 'tsconfig.*.json'
+      - '/tsconfig.base.json'

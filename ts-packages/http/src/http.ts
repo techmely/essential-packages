@@ -5,7 +5,7 @@ import {
   HttpError,
   TimeOutException,
 } from "./exceptions";
-import { RESPONSE_TYPES, type HttpMethod } from "./http.const";
+import { type HttpMethod, RESPONSE_TYPES } from "./http.const";
 import type {
   HttpFetchHookOptions,
   HttpFetchOptions,
@@ -17,7 +17,7 @@ import type {
 } from "./http.types";
 import { fetchTimeOut, mergeHttpHeaders, normalizeHttpRetryOptions } from "./http.utils";
 
-const RETRY_AFTER_MILLSECONDS = 1000;
+const RETRY_AFTER_MILLISECONDS = 1000;
 const MAX_SAFE_TIMEOUT = 2_147_483_647;
 const SEARCH_PARAMS_REG = /(?:\?.*?)?(?=#|$)/;
 
@@ -116,7 +116,7 @@ export class Http {
       const textSearch = new URLSearchParams(
         this.#options.searchParams as unknown as Record<string, any>,
       ).toString();
-      const searchParams = "?" + textSearch;
+      const searchParams = `?${textSearch}`;
       const url = this.request.url.replace(SEARCH_PARAMS_REG, searchParams);
 
       // The spread of `this.request` is required as otherwise it misses the `duplex` option for some reason and throws.
@@ -198,7 +198,7 @@ export class Http {
           if (Number.isNaN(after)) {
             after = Date.parse(retryAfter) - Date.now();
           } else {
-            after *= RETRY_AFTER_MILLSECONDS;
+            after *= RETRY_AFTER_MILLISECONDS;
           }
           if (
             this.#options.retry.maxRetryAfter !== undefined &&

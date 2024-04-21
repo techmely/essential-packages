@@ -1,10 +1,45 @@
 {
   "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "paths": {
-      "@techmely/*": ["./ts-packages/*/src"]
+  "files": [],
+  "references": [
+    {
+      "path": "ts-packages/cache"
+    },
+    {
+      "path": "ts-packages/http"
+    },
+    {
+      "path": "ts-packages/logger"
+    },
+    {
+      "path": "ts-packages/metrics"
+    },
+    {
+      "path": "ts-packages/nuxt-partytown"
+    },
+    {
+      "path": "ts-packages/rate-limit"
+    },
+    {
+      "path": "ts-packages/types"
+    },
+    {
+      "path": "ts-packages/usage-limit"
+    },
+    {
+      "path": "ts-packages/utils"
+    },
+    {
+      "path": "ts-packages/vike-island"
+    },
+    {
+      "path": "ts-packages/vike-react"
+    },
+    {
+      "path": "ts-packages/vike-react-query"
+    },
+    {
+      "path": "ts-packages/vue-pinia-persist"
     }
-  },
-  "include": ["./ts-packages/*/src", "./reset.d.ts"],
-  "exclude": ["./node_modules", "./ts-packages/*/node_modules"]
+  ]
 }

@@ -22,8 +22,8 @@
     "type-check": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@techmely/logger": "1.0.6",
-    "@techmely/metrics": "1.0.5",
+    "@techmely/logger": "workspace:*",
+    "@techmely/metrics": "workspace:*",
     "valibot": "^0.28.0"
   },
   "devDependencies": {

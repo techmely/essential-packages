@@ -14,7 +14,6 @@
   "files": ["."],
   "scripts": {
     "clean": "rimraf dist",
-    "upgrade.deps": "echo SUCCESS",
     "publish": "npm publish",
     "type-check": "tsc --noEmit"
   },

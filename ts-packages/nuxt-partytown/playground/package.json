@@ -2,11 +2,6 @@
   "private": true,
   "name": "my-module-playground",
   "type": "module",
-  "scripts": {
-    "dev": "nuxi dev --dotenv .env.test",
-    "build": "nuxi build",
-    "generate": "nuxi generate"
-  },
   "devDependencies": {
     "nuxt": "^3.10.1"
   }

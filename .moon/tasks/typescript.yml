@@ -1,8 +1,5 @@
 $schema: 'https://moonrepo.dev/schemas/tasks.json'
 
-implicitDeps:
-  - '^:build'
-
 implicitInputs:
   - 'package.json'
 
@@ -27,10 +24,9 @@ tasks:
     outputs:
       - "dist"
 
-
   clean:
     command:
-      - 'rimraf dist'
+      - 'rm -rf dist'
 
   lint:
     command: 'bunx'

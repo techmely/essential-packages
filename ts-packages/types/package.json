@@ -12,11 +12,6 @@
     "tag": "latest"
   },
   "files": ["."],
-  "scripts": {
-    "clean": "rimraf dist",
-    "publish": "npm publish",
-    "type-check": "tsc --noEmit"
-  },
   "devDependencies": {
     "@cloudflare/workers-types": "4.20240419.0",
     "typescript": "5.4.5"

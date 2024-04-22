@@ -20,16 +20,6 @@
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
   "files": ["dist"],
-  "scripts": {
-    "build": "echo SUCCESS",
-    "build.main": "nuxt prepare playground && nuxt-module-build build",
-    "dev": "nuxi dev playground --dotenv .env.test",
-    "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "clean": "rimraf dist",
-    "upgrade.deps": "npm-check-updates -u",
-    "release": "npm publish"
-  },
   "dependencies": {
     "@builder.io/partytown": "^0.10.1",
     "@nuxt/kit": "^3.11.2"

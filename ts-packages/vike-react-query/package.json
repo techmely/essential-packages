@@ -12,11 +12,7 @@
   "types": "dist/index.d.ts",
   "files": ["dist"],
   "scripts": {
-    "clean": "rimraf dist",
-    "upgrade.deps": "npm-check-updates -u",
-    "build": "tsup --entry src/index.ts --entry src/+config.h.ts --entry src/ReactQueryProvider.tsx --entry src/FallbackErrorBoundary.tsx --sourcemap --clean --dts --format esm && bun run fix.build",
-    "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts && sed '1d' dist/+config.h.js > temp; mv temp dist/+config.h.js",
-    "publish": "node ../../scripts/publishPkg.mjs --only-esm"
+    "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts && sed '1d' dist/+config.h.js > temp; mv temp dist/+config.h.js"
   },
   "peerDependencies": {
     "@tanstack/react-query": "^5.17.0",

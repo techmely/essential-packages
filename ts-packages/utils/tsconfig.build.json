@@ -1,11 +1,11 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "../../.moon/cache/types/ts-packages/utils",
     "composite": false,
-    "rootDir": "./src"
+    "outDir": "dist",
+    "rootDir": "src"
   },
-  "include": ["src", "tests"],
+  "include": ["src/**/*", "tests"],
   "references": [
     {
       "path": "../types"

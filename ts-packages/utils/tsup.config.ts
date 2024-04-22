@@ -24,7 +24,7 @@ const universalOptions = getTsupOptions(pkg, {
       "src/mergeStreams.ts",
       "src/writeFile.ts",
     ],
-    tsconfig: "tsconfig.json",
+    tsconfig: "tsconfig.build.json",
   },
 });
 

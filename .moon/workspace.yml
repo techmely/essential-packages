@@ -26,7 +26,6 @@ runner:
     - ':lint'
     - ':test'
     - ':typecheck'
-    - ':clean'
   logRunningCommand: true
 
 telemetry: false

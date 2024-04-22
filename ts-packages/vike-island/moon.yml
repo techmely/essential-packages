@@ -1,8 +1,6 @@
 type: "library"
 language: "typescript"
 
-tasks:
-  build:
-    command: "echo BUILD VIKE ISLAND"
-    options:
-      mergeInputs: 'replace'
+workspace:
+  inheritedTasks:
+    exclude: ['build', 'lint']

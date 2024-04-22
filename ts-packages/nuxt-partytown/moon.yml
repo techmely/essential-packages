@@ -1,12 +1,6 @@
 type: "library"
 language: "typescript"
 
-tasks:
-  build:
-    command: "echo BUILD NUXT PARTYTOWN"
-    options:
-      mergeArgs: 'replace'
-  lint:
-    command: "echo LINT NUXT PARTYTOWN"
-    options:
-      mergeArgs: 'replace'
+workspace:
+  inheritedTasks:
+    exclude: ['build', 'lint']

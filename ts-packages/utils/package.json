@@ -4,9 +4,9 @@
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
+  "type": "module",
   "repository": "https://github.com/techmely/essential-packages/tree/dev/ts-packages/utils",
   "main": "dist/index.js",
-  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public",
@@ -14,11 +14,6 @@
     "tag": "latest"
   },
   "files": ["dist"],
-  "scripts": {
-    "upgrade.deps": "npm-check-updates -u",
-    "publish": "node ../../scripts/publishPkg.mjs",
-    "type-check": "tsc --noEmit --project ./tsconfig.json"
-  },
   "peerDependencies": {
     "dayjs": "^1.11.6"
   },

@@ -14,13 +14,6 @@
     "tag": "latest"
   },
   "files": ["dist"],
-  "scripts": {
-    "build": "tsup src/index.ts --clean --dts --format esm",
-    "clean": "rimraf dist",
-    "upgrade.deps": "npm-check-updates -u",
-    "publish": "node ../../scripts/publishPkg.mjs",
-    "type-check": "tsc --noEmit"
-  },
   "devDependencies": {
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",

@@ -2,11 +2,13 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "../../.moon/cache/types/ts-packages/vike-react-query",
-    "types": ["../vike-react/src/typing.d.ts"],
-    "composite": true
+    "types": ["../vike-react/src/typing.d.ts"]
   },
   "include": ["src/**/*", "tests/**/*"],
   "references": [
+    {
+      "path": "./tsconfig.build.json"
+    },
     {
       "path": "../utils"
     },

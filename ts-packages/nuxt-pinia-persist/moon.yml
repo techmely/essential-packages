@@ -1,12 +1,6 @@
 type: "library"
 language: "typescript"
 
-tasks:
-  build:
-    command: "echo BUILD NUXT PINIA PERSIST"
-    options:
-      mergeArgs: 'replace'
-  lint:
-    command: "echo LINT NUXT PINIA PERSIST"
-    options:
-      mergeArgs: 'replace'
+workspace:
+  inheritedTasks:
+    exclude: ['build', 'lint']

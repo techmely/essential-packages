@@ -2,12 +2,13 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "../../.moon/cache/types/ts-packages/vike-react",
-    "composite": false,
-    "rootDir": ".",
     "jsx": "react"
   },
   "include": ["src/**/*", "tests/**/*"],
   "references": [
+    {
+      "path": "./tsconfig.build.json"
+    },
     {
       "path": "../utils"
     }

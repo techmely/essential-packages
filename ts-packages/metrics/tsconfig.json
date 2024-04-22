@@ -1,10 +1,12 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "outDir": "../../.moon/cache/types/ts-packages/metrics",
-    "composite": true
+    "outDir": "../../.moon/cache/types/ts-packages/metrics"
   },
   "references": [
+    {
+      "path": "./tsconfig.build.json"
+    },
     {
       "path": "../types"
     }

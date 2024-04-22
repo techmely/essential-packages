@@ -1,18 +1,18 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "types": ["../vike-react/src/typing.d.ts"],
+    "types": ["@cloudflare/workers-types"],
     "composite": false,
     "outDir": "dist",
     "rootDir": "src"
   },
-  "include": ["src/**/*", "tests/**/*"],
+  "include": ["src/**/*", "tests"],
   "references": [
     {
-      "path": "../utils"
+      "path": "../logger"
     },
     {
-      "path": "../vike-react"
+      "path": "../metrics"
     }
   ]
 }

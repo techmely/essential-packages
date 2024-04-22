@@ -8,12 +8,6 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
-  "scripts": {
-    "clean": "rimraf dist",
-    "upgrade.deps": "npm-check-updates -u",
-    "build": "tsup src/index.ts --sourcemap --clean --dts --format esm",
-    "publish": "npm publish"
-  },
   "dependencies": {
     "@techmely/utils": "workspace:*"
   },

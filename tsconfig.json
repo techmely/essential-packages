@@ -18,6 +18,9 @@
       "path": "ts-packages/nuxt-partytown"
     },
     {
+      "path": "ts-packages/nuxt-pinia-persist"
+    },
+    {
       "path": "ts-packages/rate-limit"
     },
     {

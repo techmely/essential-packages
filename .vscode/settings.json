@@ -115,5 +115,8 @@
     "vike",
     "vite",
     "vitest"
-  ]
+  ],
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible.json#/$defs/tasks": "file:///Users/techmely/Desktop/Code/Me/_self/essential-packages/.moon/tasks/typescript-library.yml"
+  }
 }

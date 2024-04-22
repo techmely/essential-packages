@@ -11,12 +11,6 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
-  "scripts": {
-    "clean": "rimraf dist",
-    "upgrade.deps": "npm-check-updates -u",
-    "build": "echo BUILD",
-    "publish": "npm publish"
-  },
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

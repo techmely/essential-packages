@@ -1,9 +1,0 @@
-$schema: "https://moonrepo.dev/schemas/tasks.json"
-
-tasks:
-  build:
-    command: "tsup"
-    args: "src/index.ts --clean --format esm --dts"
-    inputs:
-      - "@globs(sources)"
-      - "package.json"

@@ -7,8 +7,6 @@ implicitInputs:
   - 'package.json'
 
 fileGroups:
-  # Application specific files
-  app: []
   configs:
     - '*.{js,json,yml,yaml}'
   sources:
@@ -20,6 +18,16 @@ fileGroups:
     - '**/__tests__/**/*'
 
 tasks:
+  build:
+    command: "tsup"
+    args: "src/index.ts --clean --format esm --dts --tsconfig tsconfig.build.json"
+    inputs:
+      - "@globs(sources)"
+      - "package.json"
+    outputs:
+      - "dist"
+
+
   clean:
     command:
       - 'rimraf dist'
@@ -37,9 +45,7 @@ tasks:
   test:
     command:
       - 'vitest'
-      - 'run'
-      - '--passWithNoTests'
-      - '--isolate'
+    args: 'run --passWithNoTests --isolate'
     inputs:
       - '@globs(sources)'
       - '@globs(tests)'
@@ -48,11 +54,21 @@ tasks:
   typecheck:
     command:
       - 'tsc'
-      - '--build'
+    args: '--noEmit'
     inputs:
-      - '@group(app)'
       - '@globs(sources)'
       - '@globs(tests)'
       - 'tsconfig.json'
       - 'tsconfig.*.json'
       - '/tsconfig.base.json'
+
+  publish:
+    command:
+      - 'node'
+    args: '../../scripts/publishPkg.mjs'
+    inputs:
+      - '@globs(sources)'
+      - '@globs(tests)'
+
+  upgrade.deps:
+    command: 'npm-check-updates -u'

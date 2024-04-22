@@ -4,8 +4,7 @@ import { getTsupOptions } from "./src/config";
 
 const universalOptions = getTsupOptions(pkg, {
   tsupOptions: {
-    target: "node20",
-    format: ["cjs", "esm"],
+    format: ["esm"],
     entry: [
       "src/index.ts",
       "src/copyDir.ts",

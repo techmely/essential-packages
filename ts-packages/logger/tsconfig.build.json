@@ -1,18 +1,14 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "types": ["../vike-react/src/typing.d.ts"],
     "composite": false,
     "outDir": "dist",
     "rootDir": "src"
   },
-  "include": ["src/**/*", "tests/**/*"],
+  "include": ["src/**/*", "tests"],
   "references": [
     {
-      "path": "../utils"
-    },
-    {
-      "path": "../vike-react"
+      "path": "../types"
     }
   ]
 }

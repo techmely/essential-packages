@@ -1,12 +1,6 @@
 type: "library"
 language: "typescript"
 
-tasks:
-  build:
-    command: "echo BUILD TYPES"
-    options:
-      mergeArgs: 'replace'
-  lint:
-    command: "echo LINT TYPES"
-    options:
-      mergeArgs: 'replace'
+workspace:
+  inheritedTasks:
+    exclude: ['build', 'lint']

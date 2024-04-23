@@ -1,5 +1,17 @@
 # @techmely/utils
 
+## 3.0.0
+
+### Major Changes
+
+- [`0cc5742`](https://github.com/techmely/essential-packages/commit/0cc5742b2da509662f7a9f51ad6f0757864cedd1) Thanks [@harrytran998](https://github.com/harrytran998)! - Flat utils libs + only build nodejs function
+
+### Minor Changes
+
+- [`04df2e6`](https://github.com/techmely/essential-packages/commit/04df2e6dedb74bb11283f03216d475e044bf55ea) Thanks [@harrytran998](https://github.com/harrytran998)! - Add delay with signal func
+
+- Update how we export the utils modules
+
 ## 2.1.18
 
 ### Patch Changes

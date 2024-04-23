@@ -1,5 +1,15 @@
 # @techmely/rate-limit
 
+## 2.0.0
+
+### Patch Changes
+
+- Update the workflow we use to build this project
+
+- Updated dependencies [[`e496334`](https://github.com/techmely/essential-packages/commit/e49633413e30c9350a3c6bb27137bc1da6a7bd07)]:
+  - @techmely/logger@1.1.0
+  - @techmely/metrics@1.0.7
+
 ## 1.1.7
 
 ### Patch Changes

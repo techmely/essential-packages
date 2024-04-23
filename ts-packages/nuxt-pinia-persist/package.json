@@ -1,6 +1,6 @@
 {
   "name": "@techmely/nuxt-pinia-persist",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Pinia Persist like Redux-Persist for Nuxt 3",
   "repository": "https://github.com/techmely/essential-packages/tree/main/packages/nuxt-pinia-persist",
   "license": "MIT",
@@ -14,10 +14,12 @@
   },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@nuxt/kit": "3.11.2",
-    "@techmely/utils": "^2.1.18",
+    "@techmely/utils": "^3.0.0",
     "@techmely/vue-pinia-persist": "workspace:*",
     "defu": "^6.1.4"
   },

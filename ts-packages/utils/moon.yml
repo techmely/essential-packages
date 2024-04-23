@@ -1,6 +1,10 @@
 type: "library"
 language: "typescript"
 
+workspace:
+  inheritedTasks:
+    exclude: ["publish"]
+
 tasks:
   build:
     options:
@@ -8,3 +12,5 @@ tasks:
     args: "--dts --config tsup.config.ts"
     outputs:
       - "dist"
+  publish:
+    command: "node ../../scripts/publishPkg.mjs"

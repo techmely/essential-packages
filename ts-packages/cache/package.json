@@ -1,6 +1,6 @@
 {
   "name": "@techmely/cache",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Techmely cache",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -13,7 +13,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",
@@ -35,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": ["techmely", "cache"]
+  "keywords": [
+    "techmely",
+    "cache"
+  ]
 }

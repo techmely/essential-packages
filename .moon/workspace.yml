@@ -14,18 +14,18 @@ vcs:
     prepare-commit-msg:
       - echo "prepare commit msg"
 
-
 hasher:
   optimization: "performance"
 
 runner:
   cacheLifetime: "24 hours"
   archivableTargets:
-    - ':clean'
-    - ':format'
-    - ':lint'
-    - ':test'
-    - ':typecheck'
+    - ":clean"
+    - ":format"
+    - ":lint"
+    - ":test"
+    - ":typecheck"
+    - ":publish"
   logRunningCommand: true
 
 telemetry: false

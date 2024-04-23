@@ -1,5 +1,11 @@
 # @techmely/nuxt-partytown
 
+## 1.0.6
+
+### Patch Changes
+
+- Update the workflow we use to build this project
+
 ## 1.0.5
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@techmely/logger",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "description": "Techmely logger",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -13,7 +13,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "@axiomhq/js": "^1.0.0-rc.1",
     "pino": "^8.20.0",
@@ -55,5 +57,8 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": ["techmely", "logger"]
+  "keywords": [
+    "techmely",
+    "logger"
+  ]
 }

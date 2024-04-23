@@ -1,5 +1,15 @@
 # @techmely/logger
 
+## 1.1.0
+
+### Minor Changes
+
+- [`e496334`](https://github.com/techmely/essential-packages/commit/e49633413e30c9350a3c6bb27137bc1da6a7bd07) Thanks [@harrytran998](https://github.com/harrytran998)! - Add pino logger
+
+### Patch Changes
+
+- Update the workflow we use to build this project
+
 ## 1.0.7
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@techmely/nuxt-partytown",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Integration with Partytown effortless",
   "repository": "https://github.com/techmely/essential-packages/tree/main/packages/nuxt-partytown",
   "license": "MIT",
@@ -19,7 +19,9 @@
   },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@builder.io/partytown": "^0.10.1",
     "@nuxt/kit": "^3.11.2"

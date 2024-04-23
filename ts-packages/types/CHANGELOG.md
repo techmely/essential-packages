@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.6.6
+
+### Patch Changes
+
+- Update the workflow we use to build this project
+
 ## 1.6.5
 
 ### Patch Changes

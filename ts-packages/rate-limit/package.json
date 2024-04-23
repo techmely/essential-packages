@@ -1,6 +1,6 @@
 {
   "name": "@techmely/rate-limit",
-  "version": "1.1.7",
+  "version": "2.0.0",
   "description": "Techmely Rate Limit",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -13,7 +13,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "@techmely/logger": "workspace:*",
     "@techmely/metrics": "workspace:*",
@@ -42,5 +44,8 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": ["techmely", "rate limit"]
+  "keywords": [
+    "techmely",
+    "rate limit"
+  ]
 }

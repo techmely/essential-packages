@@ -27,6 +27,8 @@ tasks:
   clean:
     command:
       - 'rm -rf dist'
+    options:
+      shell: true
 
   lint:
     command: 'bunx'

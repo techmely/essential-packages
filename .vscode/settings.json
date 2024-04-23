@@ -117,6 +117,6 @@
     "vitest"
   ],
   "yaml.schemas": {
-    "https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible.json#/$defs/tasks": "file:///Users/techmely/Desktop/Code/Me/_self/essential-packages/.moon/tasks/typescript-library.yml"
+    "https://raw.githubusercontent.com/software-t-rex/monospace/main/apps/monospace/schemas/monospace.schema.json": "file:///Users/techmely/Desktop/Code/Me/_self/essential-packages/.moon/tasks/typescript.yml"
   }
 }

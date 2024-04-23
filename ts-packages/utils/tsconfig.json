@@ -6,6 +6,9 @@
   "include": ["src/**/*", "tests/**/*"],
   "references": [
     {
+      "path": "./tsconfig.build.json"
+    },
+    {
       "path": "../types"
     }
   ]

@@ -1,0 +1,42 @@
+{
+  "name": "@techmely/domain-driven",
+  "version": "0.0.0",
+  "description": "Techmely Domain Driven",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "repository": "https://github.com/techmely/essential-packages/tree/dev/ts-packages/domain-driven",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "tag": "latest"
+  },
+  "files": ["dist"],
+  "dependencies": {
+    "@techmely/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@techmely/types": "workspace:*",
+    "@techmely/http": "workspace:*",
+    "tslib": "2.6.2",
+    "tsup": "8.0.2",
+    "ts-essentials": "9.4.2",
+    "typescript": "5.4.5"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/techmely/techmely/issues"
+  },
+  "keywords": ["techmely", "domain driven design"]
+}

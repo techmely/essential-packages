@@ -9,6 +9,7 @@ const r = (p: string) =>
 export const alias: AliasOptions = {
   "@techmely/types": r("./ts-packages/types/src/"),
   "@techmely/utils": r("./ts-packages/utils/src/"),
+  "@techmely/domain-driven": r("./ts-packages/domain-driven/src/"),
 };
 
 export default defineConfig({

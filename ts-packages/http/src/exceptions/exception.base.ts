@@ -19,12 +19,12 @@ export class ExceptionBase extends Error {
    * info that may help with debugging.
    */
   constructor(
-    private readonly exMessage: string | Record<string, any>,
+    private readonly exMessage: string,
     private readonly statusCode: number,
     private readonly code: string,
     readonly metadata?: Record<string, any>,
   ) {
-    super();
+    super(exMessage);
   }
 
   toJSON() {

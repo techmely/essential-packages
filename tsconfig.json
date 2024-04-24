@@ -6,6 +6,9 @@
       "path": "ts-packages/cache"
     },
     {
+      "path": "ts-packages/domain-driven"
+    },
+    {
       "path": "ts-packages/http"
     },
     {

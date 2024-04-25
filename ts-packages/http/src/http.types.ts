@@ -463,6 +463,6 @@ export type ResponsePromise = {
   arrayBuffer: () => Promise<ArrayBuffer>;
   blob: () => Promise<Blob>;
   formData: () => Promise<FormData>;
-  json<T extends unknown>(): Promise<T>;
+  json<T>(): Promise<T>;
   text: () => Promise<string>;
 } & Promise<Response>;

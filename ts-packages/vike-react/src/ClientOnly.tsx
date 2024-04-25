@@ -1,4 +1,4 @@
-import React from "react";
+import type React from "react";
 import { lazy, startTransition, useEffect, useState } from "react";
 import type { ComponentType, ReactNode } from "react";
 

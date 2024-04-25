@@ -20,7 +20,7 @@
     "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts"
   },
   "peerDependencies": {
-    "@techmely/utils": "^3.0.0",
+    "@techmely/utils": "^3.0.1",
     "react": "18.x.x",
     "react-dom": "18.x.x",
     "react-streaming": "^0.3.22",

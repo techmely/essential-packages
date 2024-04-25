@@ -1,6 +1,6 @@
 import type { EntityId, StringEnum } from "@techmely/types";
-import type { PageContext } from "vike/types";
 import type { PropsWithChildren, ReactNode } from "react";
+import type { PageContext } from "vike/types";
 
 declare global {
   type PageProps = Record<string, any>;
@@ -171,5 +171,3 @@ declare global {
     jsonLd?: string;
   }
 }
-
-export {};

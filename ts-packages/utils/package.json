@@ -1,6 +1,6 @@
 {
   "name": "@techmely/utils",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -13,7 +13,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -151,5 +153,8 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
-  "keywords": ["techmely", "techmely-utils"]
+  "keywords": [
+    "techmely",
+    "techmely-utils"
+  ]
 }

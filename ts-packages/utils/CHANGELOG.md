@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 3.0.1
+
+### Patch Changes
+
+- [`7f69015`](https://github.com/techmely/essential-packages/commit/7f690154588e888643be6c02005687c88db4d44c) Thanks [@harrytran998](https://github.com/harrytran998)! - Fix missing export function + wrong config exception
+
 ## 3.0.0
 
 ### Major Changes

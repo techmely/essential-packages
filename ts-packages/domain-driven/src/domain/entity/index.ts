@@ -1,5 +1,7 @@
 import type { Records } from "@techmely/types";
 import { isEmpty } from "@techmely/utils";
+import { Result } from "../../utils";
+import { IResult } from "../../utils/result/types";
 import type { BaseEntityProps, CreateEntityProps, EntityConfig, EntityPort } from "./types";
 import { UniqueEntityID } from "./unique-entity";
 
@@ -31,28 +33,25 @@ export abstract class Entity<Props> implements EntityPort<Props> {
     return entity instanceof Entity;
   }
 
-  static isValidProps(props: unknown, config: EntityConfig = defaultEntityConfig) {
+  static isValidProps(
+    props: unknown,
+    config: EntityConfig = defaultEntityConfig,
+  ): [boolean, Error | undefined] {
     if (isEmpty(props)) {
       if (config.debug) console.error("Entity props should not be empty");
-      return false;
+      return [false, Error("Entity props should not be empty")];
     }
     if (typeof props !== "object") {
       if (config.debug) console.error("Entity props should be and object");
-      return false;
+      return [false, Error("Entity props should be and object")];
     }
     if (Object.keys(props as any).length >= config.maxProps) {
-      if (config.debug)
-        console.error(`The entity props count must smaller than ${config.maxProps} properties`);
-      return false;
+      const errMessage = `The entity props count must smaller than ${config.maxProps} properties`;
+      if (config.debug) console.error(errMessage);
+      return [false, Error(errMessage)];
     }
-    return true;
+    return [true, undefined];
   }
-
-  // static create(props: any): IResult<any, any, any>;
-  // static create(props: any): Result {
-  //   if (Entity.isValidProps(props)) return Result.Ok(new Entity(props));
-  //   return Result.fail(`Invalid props to create ${Entity.name} instance`);
-  // }
 
   get id(): UniqueEntityID {
     return this.#id;

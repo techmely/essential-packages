@@ -1,6 +1,6 @@
 import type { ContextEventName } from "../context/types";
 
-export type DomainEventMetrics = {
+export type DomainMetrics = {
   totalEvents: () => number;
   totalDispatched: () => number;
 };
@@ -18,7 +18,7 @@ export type DomainEventOptions = {
 };
 
 export type DomainEvent<T> = {
-  name: string;
+  name: ContextEventName;
   handler: DomainEventHandler<T>;
   options: DomainEventOptions;
 };

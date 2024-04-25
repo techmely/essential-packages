@@ -3,14 +3,14 @@ import type { ContextEventName } from "../context/types";
 import type {
   DomainEvent,
   DomainEventHandler,
-  DomainEventMetrics,
   DomainEventOptions,
   DomainEventPort,
   DomainEventPromiseHandler,
+  DomainMetrics,
 } from "./types";
 
 export class DomainEvents<T> implements DomainEventPort<T> {
-  #metrics: DomainEventMetrics;
+  #metrics: DomainMetrics;
   #events: DomainEvent<T>[];
   #totalDispatched: number;
 
@@ -23,7 +23,7 @@ export class DomainEvents<T> implements DomainEventPort<T> {
     };
   }
 
-  get metrics(): DomainEventMetrics {
+  get metrics(): DomainMetrics {
     return this.#metrics;
   }
 

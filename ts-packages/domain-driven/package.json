@@ -20,6 +20,7 @@
   "devDependencies": {
     "@techmely/types": "workspace:*",
     "@techmely/http": "workspace:*",
+    "tseep": "1.2.1",
     "tslib": "2.6.2",
     "tsup": "8.0.2",
     "ts-essentials": "9.4.2",

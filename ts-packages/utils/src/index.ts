@@ -36,6 +36,7 @@ export * from "./flattenObject";
 export * from "./formatBytes";
 export * from "./formatLot10Volume";
 export * from "./formatNumber";
+export * from "./freeMainThread";
 export * from "./fromString2Primitive";
 export * from "./fullScreen";
 export * from "./generateSampleArray";

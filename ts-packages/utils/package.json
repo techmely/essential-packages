@@ -13,105 +13,103 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist", "package.json", "README.md"],
   "exports": {
     "./package.json": "./package.json",
     ".": {
       "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+        "types": "./index.d.ts",
+        "default": "./index.js"
       }
     },
     "./id": {
       "import": {
-        "types": "./dist/id.d.ts",
-        "default": "./dist/id.js"
+        "types": "./id.d.ts",
+        "default": "./id.js"
       }
     },
     "./copyDir": {
       "import": {
-        "types": "./dist/copyDir.d.ts",
-        "default": "./dist/copyDir.js"
+        "types": "./copyDir.d.ts",
+        "default": "./copyDir.js"
       }
     },
     "./emptyDir": {
       "import": {
-        "types": "./dist/emptyDir.d.ts",
-        "default": "./dist/emptyDir.js"
+        "types": "./emptyDir.d.ts",
+        "default": "./emptyDir.js"
       }
     },
     "./findNearestFile": {
       "import": {
-        "types": "./dist/findNearestFile.d.ts",
-        "default": "./dist/findNearestFile.js"
+        "types": "./findNearestFile.d.ts",
+        "default": "./findNearestFile.js"
       }
     },
     "./getDataPath": {
       "import": {
-        "types": "./dist/getDataPath.d.ts",
-        "default": "./dist/getDataPath.js"
+        "types": "./getDataPath.d.ts",
+        "default": "./getDataPath.js"
       }
     },
     "./isFileReadable": {
       "import": {
-        "types": "./dist/isFileReadable.d.ts",
-        "default": "./dist/isFileReadable.js"
+        "types": "./isFileReadable.d.ts",
+        "default": "./isFileReadable.js"
       }
     },
     "./isStream": {
       "import": {
-        "types": "./dist/isStream.d.ts",
-        "default": "./dist/isStream.js"
+        "types": "./isStream.d.ts",
+        "default": "./isStream.js"
       }
     },
     "./mergeStreams": {
       "import": {
-        "types": "./dist/mergeStreams.d.ts",
-        "default": "./dist/mergeStreams.js"
+        "types": "./mergeStreams.d.ts",
+        "default": "./mergeStreams.js"
       }
     },
     "./readFile": {
       "import": {
-        "types": "./dist/readFile.d.ts",
-        "default": "./dist/readFile.js"
+        "types": "./readFile.d.ts",
+        "default": "./readFile.js"
       }
     },
     "./getAppVersion": {
       "import": {
-        "types": "./dist/getAppVersion.d.ts",
-        "default": "./dist/getAppVersion.js"
+        "types": "./getAppVersion.d.ts",
+        "default": "./getAppVersion.js"
       }
     },
     "./getCurrentGitBranch": {
       "import": {
-        "types": "./dist/getCurrentGitBranch.d.ts",
-        "default": "./dist/getCurrentGitBranch.js"
+        "types": "./getCurrentGitBranch.d.ts",
+        "default": "./getCurrentGitBranch.js"
       }
     },
     "./getGitLastCommitHash": {
       "import": {
-        "types": "./dist/getGitLastCommitHash.d.ts",
-        "default": "./dist/getGitLastCommitHash.js"
+        "types": "./getGitLastCommitHash.d.ts",
+        "default": "./getGitLastCommitHash.js"
       }
     },
     "./getGitTags": {
       "import": {
-        "types": "./dist/getGitTags.d.ts",
-        "default": "./dist/getGitTags.js"
+        "types": "./getGitTags.d.ts",
+        "default": "./getGitTags.js"
       }
     },
     "./getLastGitTags": {
       "import": {
-        "types": "./dist/getLastGitTags.d.ts",
-        "default": "./dist/getLastGitTags.js"
+        "types": "./getLastGitTags.d.ts",
+        "default": "./getLastGitTags.js"
       }
     },
     "./writeFile": {
       "import": {
-        "types": "./dist/writeFile.d.ts",
-        "default": "./dist/writeFile.js"
+        "types": "./writeFile.d.ts",
+        "default": "./writeFile.js"
       }
     }
   },
@@ -153,8 +151,5 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-utils"
-  ]
+  "keywords": ["techmely", "techmely-utils"]
 }

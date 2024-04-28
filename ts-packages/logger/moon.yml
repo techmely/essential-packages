@@ -5,4 +5,4 @@ tasks:
   build:
     options:
       mergeArgs: "replace"
-    args: "--entry src/index.ts --entry src/axiom.logger.ts --clean --dts --format esm --tsconfig tsconfig.build.json"
+    args: "--entry src/index.ts --entry src/axiom.ts --entry src/pino.ts --clean --dts --format esm --tsconfig tsconfig.build.json"

@@ -16,7 +16,8 @@ fileGroups:
 
 tasks:
   build:
-    command: "tsup"
+    command:
+      - "tsup"
     args: "src/index.ts --clean --format esm --dts --tsconfig tsconfig.build.json"
     inputs:
       - "@globs(sources)"
@@ -61,9 +62,7 @@ tasks:
       - "/tsconfig.base.json"
 
   publish:
-    command:
-      - "npm"
-    args: "publish"
+    command: "node ../../scripts/publishPkg.mjs"
     inputs:
       - "@globs(sources)"
       - "@globs(tests)"

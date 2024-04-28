@@ -12,5 +12,3 @@ tasks:
     args: "--dts --config tsup.config.ts"
     outputs:
       - "dist"
-  publish:
-    command: "node ../../scripts/publishPkg.mjs"

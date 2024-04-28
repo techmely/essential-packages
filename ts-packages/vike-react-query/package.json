@@ -10,12 +10,7 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts && sed '1d' dist/+config.h.js > temp; mv temp dist/+config.h.js"
-  },
+  "files": ["dist"],
   "peerDependencies": {
     "@tanstack/react-query": "^5.32.0",
     "@techmely/utils": "workspace:*",
@@ -58,9 +53,5 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-react",
-    "vike react"
-  ]
+  "keywords": ["techmely", "techmely-react", "vike react"]
 }

@@ -12,13 +12,7 @@
   "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
-  "files": [
-    "dist",
-    "CHANGELOG.md"
-  ],
-  "scripts": {
-    "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts"
-  },
+  "files": ["dist", "CHANGELOG.md"],
   "peerDependencies": {
     "@techmely/utils": "workspace:*",
     "react": "^18.2.0",
@@ -52,9 +46,5 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-react",
-    "vike react"
-  ]
+  "keywords": ["techmely", "techmely-react", "vike react"]
 }

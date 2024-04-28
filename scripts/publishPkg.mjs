@@ -1,9 +1,9 @@
 #!/usr/bin/env zx
 
-import path from "path";
-import { fileURLToPath } from "url";
-import fse from "fs-extra";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import glob from "fast-glob";
+import fse from "fs-extra";
 import { $, cd, echo } from "zx";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -17,14 +17,12 @@ const isOnlyEsm = argv[2] === "--only-esm";
 
 async function publishPkgNah() {
   try {
-    const x = getDepsMapVersion();
-    console.log(x);
     await cpBasePkgJson();
     await Promise.all(["./CHANGELOG.md", "../../LICENSE", "../../README.md"].map(cpBaseFiles));
-    cd(buildPath);
-    echo("Publishing...");
-    await $`npm publish`;
-    echo("Published!");
+    // cd(buildPath);
+    // echo("Publishing...");
+    // await $`npm publish`;
+    // echo("Published!");
   } catch (error) {
     console.error(error);
     process.exit(1);
@@ -35,7 +33,7 @@ publishPkgNah();
 
 async function cpBasePkgJson() {
   const basePkgData = await fse.readFile(path.resolve(root, "./package.json"), "utf8");
-  let {
+  const {
     scripts,
     devDependencies,
     files,
@@ -44,6 +42,7 @@ async function cpBasePkgJson() {
     peerDependencies = {},
     ...rest
   } = JSON.parse(basePkgData);
+  console.log("cpBasePkgJson  👻  exports:", exports);
 
   mapDepsExactVersion(dependencies);
   mapDepsExactVersion(peerDependencies);
@@ -78,12 +77,13 @@ function humanizePathname(_path) {
 }
 
 function getDepsMapVersion() {
-  let result = {};
+  const result = {};
   const pkgJsonFiles = glob.globSync("../../ts-packages/**/package.json", {
     ignore: ["**/node_modules", "**/playground", "dist"],
   });
 
   for (const file of pkgJsonFiles) {
+    console.log("getDepsMapVersion  👻  file:", file);
     const data = fse.readFileSync(file, "utf8");
     const json = JSON.parse(data);
     result[json.name] = json.version;

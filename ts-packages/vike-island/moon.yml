@@ -3,4 +3,4 @@ language: "typescript"
 
 workspace:
   inheritedTasks:
-    exclude: ['build', 'lint', 'clean']
+    exclude: ['build', 'lint', 'clean', "publish"]

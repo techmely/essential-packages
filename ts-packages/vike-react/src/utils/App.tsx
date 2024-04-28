@@ -3,8 +3,8 @@ import type { PageContext } from "vike/types";
 import { PageContextProvider } from "./PageContextProvider";
 
 export function AppPage(pageContext: PageContext) {
-  const Layout = pageContext.config.Layout || PassThrough;
-  const ReactQueryProvider = pageContext.config.ReactQueryProvider || PassThrough;
+  const Layout = pageContext.config?.Layout || PassThrough;
+  const ReactQueryProvider = pageContext.config?.ReactQueryProvider || PassThrough;
   const { Page, pageProps } = pageContext;
   const AppWrapper = pageContext.config?.AppWrapper || PassThrough;
 

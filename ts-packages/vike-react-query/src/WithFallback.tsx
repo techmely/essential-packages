@@ -6,7 +6,7 @@ type RetryOptions = { retryQuery?: boolean };
 type RetryFn = (options?: RetryOptions) => void;
 
 type ErrorFallbackProps = {
-  error: { message: string };
+  error: { message: string } & Record<string, unknown>;
   retry: RetryFn;
 };
 
@@ -21,14 +21,32 @@ type WithFallbackOptions<T> = {
 export function withFallback<T extends object = Record<string, never>>(
   Component: ComponentType<T>,
   options?: WithFallbackOptions<T>,
+): ComponentType<T>;
+export function withFallback<T extends object = Record<string, never>>(
+  Component: ComponentType<T>,
+  Loading?: Loading<T>,
+  ErrorComp?: ErrorComp<T>,
+): ComponentType<T>;
+export function withFallback<T extends object = Record<string, never>>(
+  Component: ComponentType<T>,
+  options?: Loading<T> | WithFallbackOptions<T>,
+  Error_?: ErrorComp<T>,
 ): ComponentType<T> {
-  const ComponentWithFallback = (cProps: T) => {
-    const LoadingComp =
-      typeof options?.Loading === "function" ? <options.Loading {...cProps} /> : options?.Loading;
-    const ErrorComp = options?.ErrorComp;
+  let Loading: Loading<T>;
+  let ErrorComp: ErrorComp<T>;
+  if (options && typeof options === "object" && ("Loading" in options || "ErrorComp" in options)) {
+    Loading = options.Loading;
+    ErrorComp = options.ErrorComp;
+  } else if (options && typeof options !== "object") {
+    Loading = options;
+    ErrorComp = Error_;
+  }
+  const ComponentWithFallback = (componentProps: T) => {
     if (ErrorComp) {
       return (
-        <Suspense fallback={LoadingComp}>
+        <Suspense
+          fallback={typeof Loading === "function" ? <Loading {...componentProps} /> : Loading}
+        >
           <QueryErrorResetBoundary>
             {({ reset }) => {
               const createRetry =
@@ -45,25 +63,30 @@ export function withFallback<T extends object = Record<string, never>>(
                 const error = { message };
                 if (typeof originalError === "object") {
                   Object.assign(error, originalError);
+                  for (const key of ["name", "stack", "cause"]) {
+                    if (key in originalError) {
+                      Object.assign(error, { [key]: originalError[key] });
+                    }
+                  }
                 }
                 return error;
               };
 
               return (
                 <ErrorBoundary
-                  fallbackRender={({ error, resetErrorBoundary }) =>
+                  fallbackRender={({ error: originalError, resetErrorBoundary }) =>
                     typeof ErrorComp === "function" ? (
                       <ErrorComp
-                        {...cProps}
+                        {...componentProps}
                         retry={createRetry(resetErrorBoundary)}
-                        error={createError(error)}
+                        error={createError(originalError)}
                       />
                     ) : (
                       ErrorComp
                     )
                   }
                 >
-                  <Component {...cProps} />
+                  <Component {...componentProps} />
                 </ErrorBoundary>
               );
             }}
@@ -71,15 +94,17 @@ export function withFallback<T extends object = Record<string, never>>(
         </Suspense>
       );
     }
+
     return (
-      <Suspense fallback={LoadingComp}>
-        <Component {...cProps} />
+      <Suspense
+        fallback={typeof Loading === "function" ? <Loading {...componentProps} /> : Loading}
+      >
+        <Component {...componentProps} />
       </Suspense>
     );
   };
-  ComponentWithFallback.displayName = `withFallback-${
-    Component.displayName || ComponentWithFallback.name
-  }`;
+
+  ComponentWithFallback.displayName = `withFallback(${Component.displayName || Component.name})`;
   return ComponentWithFallback;
 }
 

@@ -1,6 +1,12 @@
 import type React from "react";
-import { lazy, startTransition, useEffect, useState } from "react";
-import type { ComponentType, ReactNode } from "react";
+import {
+  type ComponentType,
+  type ReactNode,
+  lazy,
+  startTransition,
+  useEffect,
+  useState,
+} from "react";
 
 export function ClientOnly<T>({
   load,
@@ -8,17 +14,18 @@ export function ClientOnly<T>({
   fallback,
   deps = [],
 }: {
-  load: () => Promise<{ default: React.ComponentType<T> } | React.ComponentType<T>>;
+  load: () => Promise<{ default: ComponentType<T> } | React.ComponentType<T>>;
   children: (Component: React.ComponentType<T>) => ReactNode;
   fallback: ReactNode;
   deps?: Parameters<typeof useEffect>[1];
 }) {
-  const [Component, setComponent] = useState<ComponentType<unknown> | undefined>(undefined);
+  const [Component, setComponent] = useState<ComponentType<unknown> | null>(null);
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: I don't know
+  // biome-ignore lint/correctness/useExhaustiveDependencies: we need this
   useEffect(() => {
     const loadComponent = () => {
       const Component = lazy(() =>
+        // @ts-expect-error I knew ok
         load()
           .then((LoadedComponent) => {
             return {
@@ -37,7 +44,7 @@ export function ClientOnly<T>({
     startTransition(() => {
       loadComponent();
     });
-  }, [deps]);
+  }, deps);
 
   return Component ? <Component /> : fallback;
 }

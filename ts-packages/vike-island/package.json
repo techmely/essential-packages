@@ -10,12 +10,10 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-streaming": "^0.3.28",
     "vike": "^0.4.171"
   },
@@ -37,11 +35,7 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-react",
-    "vike react"
-  ],
+  "keywords": ["techmely", "techmely-react", "vike react"],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

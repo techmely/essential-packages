@@ -1,5 +1,6 @@
 import type { EntityId, StringEnum } from "@techmely/types";
 import type { PropsWithChildren, ReactNode } from "react";
+import { Root } from "react-dom/client";
 import type { PageContext } from "vike/types";
 
 declare global {
@@ -48,6 +49,8 @@ declare global {
        */
       ssr?: boolean;
       renderMode?: RenderMode;
+      // https://github.com/vikejs/vike-react/pull/96
+      onAfterRenderClient?: (pageContext: PageContextClient) => void;
     }
   }
 

@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider, useSuspenseQuery } from "@tanstack/react-query";
-import { cleanup, render, waitFor } from "@testing-library/react";
+import { renderHook, cleanup, render, waitFor } from "@testing-library/react";
 import React, { type ReactNode, useEffect } from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { withFallback } from "../src/WithFallback";
@@ -45,7 +45,11 @@ const ComponentThatThrows = withFallback(
   ({
     count,
     onMount,
-  }: { count?: number; onMount?: () => void; onErrorFallbackMount?: () => void }) => {
+  }: {
+    count?: number;
+    onMount?: () => void;
+    onErrorFallbackMount?: () => void;
+  }) => {
     // biome-ignore lint/correctness/useExhaustiveDependencies: Ignore this case
     useEffect(() => {
       onMount?.();
@@ -68,7 +72,11 @@ const ComponentThatThrows2 = withFallback(
   ({
     count,
     onMount,
-  }: { count?: number; onMount?: () => void; onErrorFallbackMount?: () => void }) => {
+  }: {
+    count?: number;
+    onMount?: () => void;
+    onErrorFallbackMount?: () => void;
+  }) => {
     // biome-ignore lint/correctness/useExhaustiveDependencies: Ignore this case
     useEffect(() => {
       onMount?.();

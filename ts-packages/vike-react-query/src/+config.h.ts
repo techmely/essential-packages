@@ -2,11 +2,12 @@ import type { Config } from "vike/types";
 import FallbackErrorBoundary from "./FallbackErrorBoundary";
 import ReactQueryProvider from "./ReactQueryProvider";
 
-const config: Config = {
+const config = {
+  name: "vike-react-query",
   queryClientConfig: undefined,
   ReactQueryProvider,
   FallbackErrorBoundary,
-  stream: true,
+  _streamIsRequied: true,
   meta: {
     queryClientConfig: {
       env: {
@@ -21,6 +22,6 @@ const config: Config = {
       },
     },
   },
-};
+} as unknown as Config;
 
 export default config;

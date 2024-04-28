@@ -1,4 +1,3 @@
-import type { TemplateWrapped } from "vike/dist/esm/node/runtime/html/renderHtml";
 import { escapeInject } from "vike/server";
 import type { PageContext } from "vike/types";
 
@@ -7,7 +6,7 @@ const robotsMap = ({ follow, index }: HeadMetaRobots) => ({
   follow: follow ? "follow" : "nofollow",
 });
 
-function generateAppHead(pageContext: PageContext): TemplateWrapped {
+function generateAppHead(pageContext: PageContext): any {
   const head = pageContext.config?.Head || pageContext?.Head || {};
   const title = head?.title || "Make your dream come true - Techmely";
   const description = head?.description || "Create the talents - To the path of liberation";

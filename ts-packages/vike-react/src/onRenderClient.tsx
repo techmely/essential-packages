@@ -24,6 +24,8 @@ const onRenderClient: OnRenderClientSync = (pageContext) => {
 
     app.render(page);
   }
+
+  pageContext.config.onAfterRenderClient?.(pageContext);
 };
 
 export default onRenderClient;

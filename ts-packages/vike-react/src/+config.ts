@@ -1,5 +1,7 @@
 import type { Config, ConfigEnv } from "vike/types";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const serverClient: ConfigEnv = {
   client: true,
   server: true,
@@ -19,35 +21,29 @@ const renderModeMap: Record<RenderMode, ConfigEnv> = {
   HTML: serverOnly,
 };
 
-const VikeConfig = {
-  passToClient: ["pageProps", "metadata", "initStoreState"],
+const passToClient = ["pageProps", "metadata", "initStoreState"];
+if (!isProd) {
+  // https://github.com/vikejs/vike-react/issues/25
+  passToClient.push("$$typeof");
+}
+
+const config = {
+  name: "vike-react",
+  passToClient,
   clientRouting: true,
   hydrationCanBeAborted: true,
   prefetchStaticAssets: "hover",
   onRenderHtml: "import:@techmely/vike-react/onRenderHtml:default",
   onRenderClient: "import:@techmely/vike-react/onRenderClient:default",
   meta: {
-    Head: {
-      env: serverOnly,
-    },
-    Layout: {
-      env: serverClient,
-    },
-    ReactQueryProvider: {
-      env: serverClient,
-    },
-    AppWrapper: {
-      env: serverClient,
-    },
-    locale: {
-      env: serverClient,
-    },
-    isr: {
-      env: serverOnly,
-    },
-    stream: {
-      env: serverOnly,
-    },
+    Head: { env: serverOnly },
+    Layout: { env: serverClient },
+    ReactQueryProvider: { env: serverClient },
+    AppWrapper: { env: serverClient },
+    locale: { env: serverClient },
+    isr: { env: serverOnly },
+    stream: { env: serverOnly },
+    _streamIsRequied: { env: serverOnly },
     ssr: {
       env: { config: true },
       effect: ({ configValue }) => {
@@ -70,16 +66,13 @@ const VikeConfig = {
         return { meta: { Page: { env } } };
       },
     },
-    plugins: {
-      env: serverClient,
-    },
-    initStoreState: {
-      env: serverClient,
-    },
+    plugins: { env: serverClient },
+    initStoreState: { env: serverClient },
+    onAfterRenderClient: { env: clientOnly },
   },
   locale: "en",
   renderMode: "SSR",
   initStoreState: {},
 } satisfies Config;
 
-export default VikeConfig;
+export default config;

@@ -12,26 +12,23 @@
   "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
-  "files": [
-    "dist",
-    "CHANGELOG.md"
-  ],
+  "files": ["dist", "CHANGELOG.md"],
   "scripts": {
     "fix.build": "mv dist/_config.h.d.ts dist/+config.h.d.ts"
   },
   "peerDependencies": {
     "@techmely/utils": "workspace:*",
-    "react": "18.x.x",
-    "react-dom": "18.x.x",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-streaming": "^0.3.28",
     "vike": "^0.4.171"
   },
   "devDependencies": {
     "@techmely/utils": "workspace:*",
-    "@types/react": "18.3.1",
+    "@types/react": "18.2.0",
     "@types/react-dom": "^18.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-streaming": "0.3.28",
     "tsup": "8.0.2",
     "typescript": "5.4.5",
@@ -52,9 +49,5 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-react",
-    "vike react"
-  ]
+  "keywords": ["techmely", "techmely-react", "vike react"]
 }

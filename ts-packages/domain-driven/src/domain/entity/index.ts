@@ -1,7 +1,5 @@
 import type { Records } from "@techmely/types";
 import { isEmpty } from "@techmely/utils";
-import { Result } from "../../utils";
-import { IResult } from "../../utils/result/types";
 import type { BaseEntityProps, CreateEntityProps, EntityConfig, EntityPort } from "./types";
 import { UniqueEntityID } from "./unique-entity";
 

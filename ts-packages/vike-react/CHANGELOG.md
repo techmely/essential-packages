@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 1.0.2
+
+### Patch Changes
+
+- Update on render html
+
 ## 1.0.1
 
 ### Patch Changes

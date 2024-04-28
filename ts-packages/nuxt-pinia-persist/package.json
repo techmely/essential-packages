@@ -14,12 +14,10 @@
   },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "dependencies": {
     "@nuxt/kit": "3.11.2",
-    "@techmely/utils": "^3.0.1",
+    "@techmely/utils": "workspace:*",
     "@techmely/vue-pinia-persist": "workspace:*",
     "defu": "^6.1.4"
   },
@@ -27,9 +25,9 @@
     "pinia": "^2.1.0"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^1.1.5",
+    "@nuxt/devtools": "^1.2.0",
     "@nuxt/kit": "3.11.2",
-    "@nuxt/module-builder": "^0.5.5",
+    "@nuxt/module-builder": "^0.6.0",
     "@nuxt/schema": "^3.11.2",
     "@nuxt/test-utils": "3.12.1",
     "@types/node": "20.12.7",

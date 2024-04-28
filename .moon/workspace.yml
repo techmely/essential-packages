@@ -26,6 +26,7 @@ runner:
     - ":test"
     - ":typecheck"
     - ":publish"
+    - ":upgrade.deps"
   logRunningCommand: true
 
 telemetry: false

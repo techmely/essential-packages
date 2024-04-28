@@ -3,6 +3,7 @@
 import path from "path";
 import { fileURLToPath } from "url";
 import fse from "fs-extra";
+import glob from "fast-glob";
 import { $, cd, echo } from "zx";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -16,6 +17,8 @@ const isOnlyEsm = argv[2] === "--only-esm";
 
 async function publishPkgNah() {
   try {
+    const x = getDepsMapVersion();
+    console.log(x);
     await cpBasePkgJson();
     await Promise.all(["./CHANGELOG.md", "../../LICENSE", "../../README.md"].map(cpBaseFiles));
     cd(buildPath);
@@ -32,13 +35,26 @@ publishPkgNah();
 
 async function cpBasePkgJson() {
   const basePkgData = await fse.readFile(path.resolve(root, "./package.json"), "utf8");
-  const { scripts, devDependencies, files, exports, ...rest } = JSON.parse(basePkgData);
+  let {
+    scripts,
+    devDependencies,
+    files,
+    exports,
+    dependencies = {},
+    peerDependencies = {},
+    ...rest
+  } = JSON.parse(basePkgData);
+
+  mapDepsExactVersion(dependencies);
+  mapDepsExactVersion(peerDependencies);
 
   const newPkgData = {
     ...rest,
     types: "./index.d.ts",
     typings: "./index.d.ts",
     main: "./index.js",
+    dependencies,
+    peerDependencies,
     ...(!isOnlyEsm && { module: "./index.mjs" }),
   };
 
@@ -59,4 +75,26 @@ async function cpBaseFiles(file) {
 function humanizePathname(_path) {
   const projectDir = __dirname.replace(/\/scripts$/, "");
   return _path.replace(projectDir, "");
+}
+
+function getDepsMapVersion() {
+  let result = {};
+  const pkgJsonFiles = glob.globSync("../../ts-packages/**/package.json", {
+    ignore: ["**/node_modules", "**/playground", "dist"],
+  });
+
+  for (const file of pkgJsonFiles) {
+    const data = fse.readFileSync(file, "utf8");
+    const json = JSON.parse(data);
+    result[json.name] = json.version;
+  }
+
+  return result;
+}
+
+function mapDepsExactVersion(dependencies) {
+  const mapVersions = getDepsMapVersion();
+  for (const depName of Object.keys(dependencies)) {
+    if (depName.startsWith("@techmely")) dependencies[depName] = mapVersions[depName];
+  }
 }

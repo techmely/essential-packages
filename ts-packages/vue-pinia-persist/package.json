@@ -23,8 +23,8 @@
     "ts-essentials": "9.4.2",
     "tsup": "8.0.2",
     "typescript": "5.4.5",
-    "vitest": "1.5.0",
-    "vue": "^3.4.23"
+    "vitest": "1.5.2",
+    "vue": "^3.4.25"
   },
   "publishConfig": {
     "access": "public",

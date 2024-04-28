@@ -19,7 +19,7 @@
   "devDependencies": {
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",
-    "hono": "^4.2.4",
+    "hono": "^4.2.8",
     "tslib": "2.6.2",
     "tsup": "8.0.2",
     "typescript": "5.4.5"

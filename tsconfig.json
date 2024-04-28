@@ -3,6 +3,42 @@
   "files": [],
   "references": [
     {
+      "path": "../_self/essential-packages/ts-packages/cache"
+    },
+    {
+      "path": "../_self/essential-packages/ts-packages/domain-driven"
+    },
+    {
+      "path": "../_self/essential-packages/ts-packages/http"
+    },
+    {
+      "path": "../_self/essential-packages/ts-packages/logger"
+    },
+    {
+      "path": "../_self/essential-packages/ts-packages/metrics"
+    },
+    {
+      "path": "../_self/essential-packages/ts-packages/rate-limit"
+    },
+    {
+      "path": "../_self/essential-packages/ts-packages/types"
+    },
+    {
+      "path": "../_self/essential-packages/ts-packages/usage-limit"
+    },
+    {
+      "path": "../_self/essential-packages/ts-packages/utils"
+    },
+    {
+      "path": "../_self/essential-packages/ts-packages/vike-react"
+    },
+    {
+      "path": "../_self/essential-packages/ts-packages/vike-react-query"
+    },
+    {
+      "path": "../_self/essential-packages/ts-packages/vue-pinia-persist"
+    },
+    {
       "path": "ts-packages/cache"
     },
     {

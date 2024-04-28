@@ -1,6 +1,6 @@
 {
   "name": "@techmely/rate-limit",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Techmely Rate Limit",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",

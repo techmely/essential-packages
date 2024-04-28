@@ -1,5 +1,15 @@
 # @techmely/usage-limit
 
+## 2.0.1
+
+### Patch Changes
+
+- [`4fb8e01`](https://github.com/techmely/essential-packages/commit/4fb8e018133c2abaf622762e1b53667191b624d8) Thanks [@harrytran998](https://github.com/harrytran998)! - Fix replace build packages
+
+- Updated dependencies [[`4fb8e01`](https://github.com/techmely/essential-packages/commit/4fb8e018133c2abaf622762e1b53667191b624d8)]:
+  - @techmely/logger@1.1.1
+  - @techmely/metrics@1.0.8
+
 ## 2.0.0
 
 ### Patch Changes

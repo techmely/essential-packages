@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.6.7
+
+### Patch Changes
+
+- [`4fb8e01`](https://github.com/techmely/essential-packages/commit/4fb8e018133c2abaf622762e1b53667191b624d8) Thanks [@harrytran998](https://github.com/harrytran998)! - Fix replace build packages
+
 ## 1.6.6
 
 ### Patch Changes

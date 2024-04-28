@@ -14,10 +14,10 @@
     "dist"
   ],
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-streaming": "^0.3.18",
-    "vike": "^0.4.153"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-streaming": "^0.3.28",
+    "vike": "^0.4.171"
   },
   "devDependencies": {
     "typescript": "5.4.5"

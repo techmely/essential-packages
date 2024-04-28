@@ -71,4 +71,4 @@ tasks:
       shell: true
 
   upgrade.deps:
-    command: "npm-check-updates -u"
+    command: "npm-check-updates --dep dev,prod,peer -u"

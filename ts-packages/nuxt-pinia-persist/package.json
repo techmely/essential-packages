@@ -24,7 +24,7 @@
     "defu": "^6.1.4"
   },
   "peerDependencies": {
-    "pinia": "^2.1.0"
+    "pinia": "^2.1.7"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.2.0",

@@ -17,8 +17,8 @@
     "dist"
   ],
   "peerDependencies": {
-    "@axiomhq/js": "^1.0.0-rc.1",
-    "pino": "^8.20.0",
+    "@axiomhq/js": "^1.0.0-rc.3",
+    "pino": "^9.0.0",
     "pino-pretty": "^11.0.0"
   },
   "peerDependenciesMeta": {

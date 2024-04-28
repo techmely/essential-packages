@@ -7,7 +7,9 @@
     "type": "git",
     "url": "https://github.com/techmely/techmely.git"
   },
-  "workspaces": ["ts-packages/*"],
+  "workspaces": [
+    "ts-packages/*"
+  ],
   "scripts": {
     "postinstall": "node scripts/postinstall.mjs",
     "build": "nx run-many -t build --parallel 5",
@@ -61,13 +63,19 @@
     "zx": "8.0.2"
   },
   "engines": {
-    "node": ">=20"
+    "node": "~20"
   },
   "jscpd": {
     "threshold": 0.1,
     "pattern": "ts-packages/**/src/**/*.ts",
-    "reporters": ["html", "console"],
-    "ignore": ["**/__snapshots__/**", "ts-packages/**/test/**/*.ts"],
+    "reporters": [
+      "html",
+      "console"
+    ],
+    "ignore": [
+      "**/__snapshots__/**",
+      "ts-packages/**/test/**/*.ts"
+    ],
     "absolute": true,
     "gitignore": true
   },

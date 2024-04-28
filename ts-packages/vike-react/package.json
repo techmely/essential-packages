@@ -23,8 +23,8 @@
     "@techmely/utils": "workspace:*",
     "react": "18.x.x",
     "react-dom": "18.x.x",
-    "react-streaming": "^0.3.22",
-    "vike": "^0.4.153"
+    "react-streaming": "^0.3.28",
+    "vike": "^0.4.171"
   },
   "devDependencies": {
     "@techmely/utils": "workspace:*",

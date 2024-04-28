@@ -14,8 +14,8 @@
     "@techmely/utils": "workspace:*"
   },
   "peerDependencies": {
-    "pinia": "^2.1.0",
-    "vue": "^3.3.0"
+    "pinia": "^2.1.7",
+    "vue": "^3.4.25"
   },
   "devDependencies": {
     "cookie": "^0.6.0",

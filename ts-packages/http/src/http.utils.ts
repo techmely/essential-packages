@@ -29,7 +29,7 @@ export const normalizeHttpRetryOptions = (
 };
 
 function createHeaders(source: HttpHeadersInit = {}) {
-  return new globalThis.Headers(source as RequestInit["headers"]) as Headers;
+  return new globalThis.Headers(source as RequestInit["headers"]) as unknown as Headers;
 }
 
 export const mergeHttpHeaders = (source1: HttpHeadersInit = {}, source2: HttpHeadersInit = {}) => {
@@ -45,7 +45,7 @@ export const mergeHttpHeaders = (source1: HttpHeadersInit = {}, source2: HttpHea
     }
   }
 
-  return result;
+  return result as any;
 };
 
 export const fetchTimeOut = async (

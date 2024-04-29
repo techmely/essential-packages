@@ -1,10 +1,6 @@
 type: "library"
 language: "typescript"
 
-workspace:
-  inheritedTasks:
-    exclude: ["publish"]
-
 tasks:
   build:
     options:

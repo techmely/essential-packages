@@ -12,9 +12,6 @@ const __dirname = path.dirname(__filename);
 const root = process.cwd();
 const buildPath = path.join(root, "./dist");
 
-const argv = process.argv;
-const isOnlyEsm = argv[2] === "--only-esm";
-
 async function publishPkgNah() {
   try {
     await cpBasePkgJson();
@@ -32,29 +29,24 @@ async function publishPkgNah() {
 publishPkgNah();
 
 async function cpBasePkgJson() {
-  const basePkgData = await fse.readFile(path.resolve(root, "./package.json"), "utf8");
+  let basePkgData = await fse.readFile(path.resolve(root, "./package.json"), "utf8");
+  basePkgData = basePkgData.replace(/dist\//g, "");
   const {
     scripts,
     devDependencies,
     files,
-    exports,
     dependencies = {},
     peerDependencies = {},
     ...rest
   } = JSON.parse(basePkgData);
-  console.log("cpBasePkgJson  👻  exports:", exports);
 
   mapDepsExactVersion(dependencies);
   mapDepsExactVersion(peerDependencies);
 
   const newPkgData = {
     ...rest,
-    types: "./index.d.ts",
-    typings: "./index.d.ts",
-    main: "./index.js",
     dependencies,
     peerDependencies,
-    ...(!isOnlyEsm && { module: "./index.mjs" }),
   };
 
   const destination = path.resolve(buildPath, "./package.json");
@@ -78,9 +70,11 @@ function humanizePathname(_path) {
 
 function getDepsMapVersion() {
   const result = {};
-  const pkgJsonFiles = glob.globSync("../../ts-packages/**/package.json", {
-    ignore: ["**/node_modules", "**/playground", "dist"],
-  });
+  const pkgJsonFiles = glob
+    .globSync("../../ts-packages/**/package.json", {
+      ignore: ["**/node_modules", "dist"],
+    })
+    .filter((pkgName) => !pkgName.includes("playground"));
 
   for (const file of pkgJsonFiles) {
     const data = fse.readFileSync(file, "utf8");
@@ -94,6 +88,6 @@ function getDepsMapVersion() {
 function mapDepsExactVersion(dependencies) {
   const mapVersions = getDepsMapVersion();
   for (const depName of Object.keys(dependencies)) {
-    if (depName.startsWith("@techmely")) dependencies[depName] = mapVersions[depName];
+    if (depName.startsWith("@techmely")) dependencies[depName] = `^${mapVersions[depName]}`;
   }
 }

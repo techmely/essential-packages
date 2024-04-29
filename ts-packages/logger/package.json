@@ -46,20 +46,20 @@
     "./package.json": "./package.json",
     ".": {
       "import": {
-        "types": "./index.d.ts",
-        "import": "./index.js"
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.js"
       }
     },
     "./axiom": {
       "import": {
-        "types": "./axiom.d.ts",
-        "import": "./axiom.js"
+        "types": "./dist/axiom.d.ts",
+        "import": "./dist/axiom.js"
       }
     },
     "./pino": {
       "import": {
-        "types": "./pino.d.ts",
-        "import": "./pino.js"
+        "types": "./dist/pino.d.ts",
+        "import": "./dist/pino.js"
       }
     }
   },

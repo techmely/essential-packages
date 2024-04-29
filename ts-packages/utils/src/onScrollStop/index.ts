@@ -6,7 +6,7 @@ import { isServer } from "../isServer";
  */
 export function onScrollStop(callback: CallableFunction, timeout = 150) {
   if (isServer()) return;
-  let isScrolling: number | NodeJS.Timeout;
+  let isScrolling: number | any;
   window.addEventListener(
     "scroll",
     () => {

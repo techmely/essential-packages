@@ -20,7 +20,7 @@ export function createDelay<T = any>(
     return Promise.reject(createAbortError());
   }
 
-  let timeoutId: NodeJS.Timeout | number | undefined;
+  let timeoutId: any | number | undefined;
   let settle: VoidFunction;
   let rejectFunction: (error?: any) => void;
 

@@ -16,8 +16,8 @@ fileGroups:
 
 tasks:
   build:
-    command: "tsc"
-    args: "-P tsconfig.build.json"
+    command: "tsup"
+    args: "src/index.ts --clean --format esm --dts --tsconfig tsconfig.build.json"
     inputs:
       - "@globs(sources)"
       - "package.json"

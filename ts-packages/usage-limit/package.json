@@ -1,6 +1,6 @@
 {
   "name": "@techmely/usage-limit",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Techmely usage limit",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -13,7 +13,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "@techmely/logger": "workspace:*",
     "@techmely/metrics": "workspace:*",
@@ -41,5 +43,8 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": ["techmely", "usage-limit"]
+  "keywords": [
+    "techmely",
+    "usage-limit"
+  ]
 }

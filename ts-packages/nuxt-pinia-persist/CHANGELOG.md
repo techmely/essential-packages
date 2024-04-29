@@ -1,5 +1,15 @@
 # @techmely/nuxt-pinia-persist
 
+## 1.0.15
+
+### Patch Changes
+
+- Fix typing + packaging
+
+- Updated dependencies []:
+  - @techmely/utils@3.0.3
+  - @techmely/vue-pinia-persist@1.0.15
+
 ## 1.0.14
 
 ### Patch Changes

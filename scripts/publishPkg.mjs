@@ -4,7 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import glob from "fast-glob";
 import fse from "fs-extra";
-import { echo } from "zx";
+import { $, cd, echo } from "zx";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,10 +16,10 @@ async function publishPkgNah() {
   try {
     await cpBasePkgJson();
     await Promise.all(["./CHANGELOG.md", "../../LICENSE", "../../README.md"].map(cpBaseFiles));
-    // cd(buildPath);
-    // echo("Publishing...");
-    // await $`npm publish`;
-    // echo("Published!");
+    cd(buildPath);
+    echo("Publishing...");
+    await $`npm publish`;
+    echo("Published!");
   } catch (error) {
     console.error(error);
     process.exit(1);

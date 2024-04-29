@@ -1,6 +1,6 @@
 {
   "name": "@techmely/domain-driven",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Techmely Domain Driven",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
@@ -13,7 +13,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@techmely/utils": "workspace:*"
   },
@@ -39,5 +41,8 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": ["techmely", "domain driven design"]
+  "keywords": [
+    "techmely",
+    "domain driven design"
+  ]
 }

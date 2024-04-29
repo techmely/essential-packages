@@ -1,5 +1,14 @@
 # @techmely/domain-driven
 
+## 1.0.2
+
+### Patch Changes
+
+- Fix typing + packaging
+
+- Updated dependencies []:
+  - @techmely/utils@3.0.3
+
 ## 1.0.1
 
 ### Patch Changes

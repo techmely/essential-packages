@@ -20,7 +20,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "@axiomhq/js": "^1.0.0-rc.3",
     "pino": "^9.0.0",
@@ -80,5 +82,8 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
-  "keywords": ["techmely", "logger"]
+  "keywords": [
+    "techmely",
+    "logger"
+  ]
 }

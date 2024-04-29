@@ -1,5 +1,11 @@
 # @techmely/types
 
+## 1.6.9
+
+### Patch Changes
+
+- Fix export files not correct types
+
 ## 1.6.8
 
 ### Patch Changes

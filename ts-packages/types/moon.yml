@@ -4,3 +4,11 @@ language: "typescript"
 workspace:
   inheritedTasks:
     exclude: ['build', 'lint', 'clean', "publish"]
+
+tasks:
+  publish:
+    command: "npm publish"
+    inputs:
+      - "@globs(sources)"
+    options:
+      shell: true

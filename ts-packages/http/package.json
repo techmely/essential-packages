@@ -20,7 +20,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@techmely/utils": "workspace:*"
   },
@@ -41,5 +43,8 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
-  "keywords": ["techmely", "http"]
+  "keywords": [
+    "techmely",
+    "http"
+  ]
 }

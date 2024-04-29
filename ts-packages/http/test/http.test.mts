@@ -1,6 +1,6 @@
-import { test, describe, it, vi, beforeEach, afterEach, expect } from "vitest";
-import { type CreateTestServer, createTestServer } from "./setup/server.setup";
+import { afterEach, beforeEach, describe, expect, it, test, vi } from "vitest";
 import { Http } from "../src";
+import { type CreateTestServer, createTestServer } from "./setup/server.setup";
 
 describe("Main test", () => {
   let testServer: CreateTestServer;

@@ -13,9 +13,7 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "devDependencies": {
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",
@@ -37,8 +35,5 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": [
-    "techmely",
-    "cache"
-  ]
+  "keywords": ["techmely", "cache"]
 }

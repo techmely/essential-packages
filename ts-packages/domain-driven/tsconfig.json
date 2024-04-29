@@ -3,10 +3,7 @@
   "compilerOptions": {
     "outDir": "../../.moon/cache/types/ts-packages/domain-driven"
   },
-  "include": [
-    "src/**/*",
-    "tests/**/*"
-  ],
+  "include": ["src/**/*", "tests/**/*"],
   "references": [
     {
       "path": "./tsconfig.build.json"

@@ -14,9 +14,7 @@
   },
   "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "dependencies": {
     "@nuxt/kit": "3.11.2",
     "@techmely/utils": "workspace:*",

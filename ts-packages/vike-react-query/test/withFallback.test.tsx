@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider, useSuspenseQuery } from "@tanstack/react-query";
-import { renderHook, cleanup, render, waitFor } from "@testing-library/react";
+import { cleanup, render, renderHook, waitFor } from "@testing-library/react";
 import React, { type ReactNode, useEffect } from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { withFallback } from "../src/WithFallback";

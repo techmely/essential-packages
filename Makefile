@@ -5,15 +5,15 @@ e2e.open:
 	bun playwright test --project=chromium --ui
 
 build:
-	bun nx run-many -t build -p
+	moon :build
 
 clean:
-	bun nx run-many -t clean -p
+	moon :clean
 
 publish:
-	bun nx run-many -t publish -p
+	moon :publish
 
 upgrade.deps:
-	bun run upgrade.deps
-	bun nx run-many -t upgrade.deps -p
+	upgrade.deps
+	moon :upgrade.deps
 	bun install

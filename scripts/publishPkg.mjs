@@ -4,7 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import glob from "fast-glob";
 import fse from "fs-extra";
-import { $, cd, echo } from "zx";
+import { echo } from "zx";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -83,7 +83,6 @@ function getDepsMapVersion() {
   });
 
   for (const file of pkgJsonFiles) {
-    console.log("getDepsMapVersion  👻  file:", file);
     const data = fse.readFileSync(file, "utf8");
     const json = JSON.parse(data);
     result[json.name] = json.version;

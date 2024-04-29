@@ -569,7 +569,6 @@ $RECYCLE.BIN/
 report
 dist
 ts-packages/nuxt-partytown/public/partytown
-.nx
 
 # moon
 .moon/cache

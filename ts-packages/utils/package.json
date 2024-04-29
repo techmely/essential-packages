@@ -4,8 +4,15 @@
   "description": "Collection of helpful JavaScript / TypeScript utils",
   "author": "Harry Tran <nhattq.coding@gmail.com>",
   "license": "MIT",
+  "homepage": "https://about.techmely.com/libraries/utils",
+  "bugs": {
+    "url": "https://github.com/techmely/essential-packages/issues"
+  },
+  "repository": {
+    "url": "git+https://github.com/techmely/essential-packages.git#main",
+    "directory": "ts-package/utils"
+  },
   "type": "module",
-  "repository": "https://github.com/techmely/essential-packages/tree/dev/ts-packages/utils",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
@@ -13,11 +20,7 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": [
-    "dist",
-    "package.json",
-    "README.md"
-  ],
+  "files": ["dist", "package.json", "README.md"],
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -155,8 +158,5 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-utils"
-  ]
+  "keywords": ["techmely", "techmely-utils"]
 }

@@ -1,18 +1,19 @@
 {
   "name": "@techmely/vike-react-query",
   "version": "3.0.4",
-  "homepage": "https://techmely.com/libraries/vike-react-query",
+  "homepage": "https://about.techmely.com/libraries/vike-react-query",
   "bugs": {
     "url": "https://github.com/techmely/essential-packages/issues"
   },
-  "repository": "https://github.com/techmely/essential-packages/tree/dev/ts-packages/vike/react-query",
+  "repository": {
+    "url": "git+https://github.com/techmely/essential-packages.git#main",
+    "directory": "ts-package/vike-react-query"
+  },
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "peerDependencies": {
     "@tanstack/react-query": "^5.32.0",
     "@techmely/utils": "workspace:*",
@@ -55,9 +56,5 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-react",
-    "vike react"
-  ]
+  "keywords": ["techmely", "techmely-react", "vike react"]
 }

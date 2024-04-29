@@ -1,21 +1,19 @@
 {
   "name": "@techmely/vike-react",
   "version": "1.0.3",
-  "homepage": "https://techmely.com/libraries/vike-react",
+  "homepage": "https://about.techmely.com/libraries/vike-react",
   "bugs": {
     "url": "https://github.com/techmely/essential-packages/issues"
   },
   "repository": {
-    "url": "git+https://github.com/techmely/essential-packages.git#main"
+    "url": "git+https://github.com/techmely/essential-packages.git#main",
+    "directory": "ts-package/vike-react"
   },
   "license": "MIT",
   "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
-  "files": [
-    "dist",
-    "CHANGELOG.md"
-  ],
+  "files": ["dist", "CHANGELOG.md"],
   "peerDependencies": {
     "@techmely/utils": "workspace:*",
     "react": "^18.2.0",
@@ -49,9 +47,5 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-react",
-    "vike react"
-  ]
+  "keywords": ["techmely", "techmely-react", "vike react"]
 }

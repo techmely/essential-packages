@@ -1,5 +1,15 @@
 # @techmely/usage-limit
 
+## 2.0.2
+
+### Patch Changes
+
+- Fix typing + packaging
+
+- Updated dependencies []:
+  - @techmely/logger@1.1.2
+  - @techmely/metrics@1.0.9
+
 ## 2.0.1
 
 ### Patch Changes

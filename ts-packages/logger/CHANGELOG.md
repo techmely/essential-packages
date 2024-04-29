@@ -1,5 +1,11 @@
 # @techmely/logger
 
+## 1.1.2
+
+### Patch Changes
+
+- Fix typing + packaging
+
 ## 1.1.1
 
 ### Patch Changes

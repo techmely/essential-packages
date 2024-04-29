@@ -1,5 +1,14 @@
 ## 1.0.0
 
+## 1.2.3
+
+### Patch Changes
+
+- Fix typing + packaging
+
+- Updated dependencies []:
+  - @techmely/utils@3.0.3
+
 ## 1.2.2
 
 ### Patch Changes

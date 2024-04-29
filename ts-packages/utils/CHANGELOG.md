@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 3.0.3
+
+### Patch Changes
+
+- Fix typing + packaging
+
 ## 3.0.2
 
 ### Patch Changes

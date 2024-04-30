@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "../../.moon/cache/types/ts-packages/vike-react",
-    "jsx": "react"
+    "jsx": "react-jsx"
   },
   "include": ["src/**/*", "tests/**/*"],
   "references": [

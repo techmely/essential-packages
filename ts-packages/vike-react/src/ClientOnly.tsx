@@ -14,8 +14,8 @@ export function ClientOnly<T>({
   fallback,
   deps = [],
 }: {
-  load: () => Promise<{ default: ComponentType<T> } | React.ComponentType<T>>;
-  children: (Component: React.ComponentType<T>) => ReactNode;
+  load: () => Promise<{ default: ComponentType<T> } | ComponentType<T>>;
+  children: (Component: ComponentType<T>) => ReactNode;
   fallback: ReactNode;
   deps?: Parameters<typeof useEffect>[1];
 }) {

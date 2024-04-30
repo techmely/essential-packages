@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 1.0.4
+
+### Patch Changes
+
+- fix import +config
+
 ## 1.0.3
 
 ### Patch Changes

@@ -76,3 +76,4 @@ const config = {
 } satisfies Config;
 
 export default config;
+export * from "./typing.d";

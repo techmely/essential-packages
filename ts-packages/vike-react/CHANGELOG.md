@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 1.0.5
+
+### Patch Changes
+
+- Add missing vike react type
+
 ## 1.0.4
 
 ### Patch Changes

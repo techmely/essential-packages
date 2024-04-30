@@ -1,12 +1,14 @@
 import type { EntityId, StringEnum } from "@techmely/types";
-import type { PropsWithChildren, ReactNode } from "react";
+import type { FC, PropsWithChildren, ReactNode } from "react";
 import { Root } from "react-dom/client";
 import type { PageContext } from "vike/types";
 
+type PageProps = Record<string, any>;
+
 declare global {
-  type PageProps = Record<string, any>;
   type RenderMode = "SPA" | "SSR" | "HTML";
   type FcWithPageContext = FC<PropsWithChildren<{ pageContext: PageContext; [key: string]: any }>>;
+
   namespace VikePackages {
     interface ConfigVikeReact {
       Layout?: FC<PropsWithChildren<any>>;

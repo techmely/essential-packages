@@ -6,5 +6,3 @@ tasks:
     options:
       mergeArgs: "replace"
     args: "--dts --config tsup.config.ts"
-    outputs:
-      - "dist"

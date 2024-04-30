@@ -1,5 +1,11 @@
 # @techmely/vike-react-query
 
+## 3.0.7
+
+### Patch Changes
+
+- Use import string instead of pointer import in vike-react-query
+
 ## 3.0.6
 
 ### Patch Changes

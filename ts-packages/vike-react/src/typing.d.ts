@@ -37,7 +37,7 @@ declare global {
        *
        */
       stream?: boolean;
-      _streamIsRequied?: boolean;
+      _streamIsRequired?: boolean;
       data?: Record<string, any>;
       isr?: boolean | { expiration: number };
       abortReason?: string | { notAdmin: true };

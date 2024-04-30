@@ -1,5 +1,11 @@
 # @techmely/vike-react
 
+## 1.0.6
+
+### Patch Changes
+
+- Fix type writing + update default head
+
 ## 1.0.5
 
 ### Patch Changes

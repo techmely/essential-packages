@@ -10,7 +10,7 @@ import { getMetaHtml } from "./utils/getMetaHtml";
 
 const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
   const appHead = generateAppHead(pageContext);
-  const { stream = false, _streamIsRequied } = pageContext.config || {};
+  const { stream = false, _streamIsRequired } = pageContext.config || {};
   const lang = pageContext?.metadata?.locale || pageContext?.locale || "en";
   const metaHtml = getMetaHtml(pageContext);
 
@@ -20,7 +20,7 @@ const onRenderHtml: OnRenderHtmlAsync = async (pageContext) => {
     | Awaited<ReturnType<typeof renderToStream>>;
 
   const page = AppPage(pageContext) as ReactNode;
-  if (!stream && !_streamIsRequied) {
+  if (!stream && !_streamIsRequired) {
     pageHtml = dangerouslySkipEscape(renderToString(page));
   } else {
     const disable = stream === false ? true : undefined;

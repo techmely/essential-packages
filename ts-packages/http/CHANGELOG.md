@@ -1,5 +1,11 @@
 ## 1.0.0
 
+## 1.2.4
+
+### Patch Changes
+
+- Fix typing http instance for http client
+
 ## 1.2.3
 
 ### Patch Changes

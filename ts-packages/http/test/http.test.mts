@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, test, vi } from "vitest";
-import { Http } from "../src";
+import Http from "../src";
 import { type CreateTestServer, createTestServer } from "./setup/server.setup";
 
 describe("Main test", () => {
@@ -18,6 +18,6 @@ describe("Main test", () => {
       const result = JSON.stringify({ method: req.getMethod() });
       res.writeStatus(String(200)).end(result);
     });
-    // const { ok } = await http;
+    const http = Http.create({ headers: { hello: "world" } });
   });
 });

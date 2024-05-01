@@ -1,6 +1,4 @@
 export class ExceptionBase extends Error {
-  override cause?: unknown;
-
   /**
    * @param {string} exMessage
    *
@@ -19,9 +17,9 @@ export class ExceptionBase extends Error {
    * info that may help with debugging.
    */
   constructor(
-    private readonly exMessage: string,
-    private readonly statusCode: number,
-    private readonly code: string,
+    readonly exMessage: string,
+    readonly statusCode: number,
+    readonly code: string,
     readonly metadata?: Record<string, any>,
   ) {
     super(exMessage);

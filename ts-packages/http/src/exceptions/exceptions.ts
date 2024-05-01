@@ -105,7 +105,8 @@ export class HttpError extends ExceptionBase {
 
   constructor(response: Response, request: Request, options: HttpFetchOptions) {
     const message = response.statusText;
-    super(message, response.status, "");
+    super(message, response.status, "", options?.metadata);
+    this.name = "HttpApiError";
     this.request = request;
     this.response = response;
     this.options = options;

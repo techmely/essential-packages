@@ -134,12 +134,10 @@ export type HttpFetchOptions = HttpOptions &
      */
     method?: HttpMethod;
     headers?: HttpHeadersInit;
+    metadata?: Record<string, any>;
   };
 
-export type HttpInternalOptions = Omit<
-  HttpFetchOptions,
-  "hooks" | "retry" | "fetch"
-> & {
+export type HttpInternalOptions = Omit<HttpFetchOptions, "hooks" | "retry" | "fetch"> & {
   headers: Headers;
   hooks: Required<HttpHooks>;
   retry: Required<HttpRetryOptions>;
@@ -161,11 +159,7 @@ export interface HttpFetchHookOptions extends RequestInit {
 export type HttpBeforeRequestHook = (
   request: Request,
   options: HttpFetchHookOptions,
-) =>
-  | Request
-  | Response
-  | VoidFunction
-  | Promise<Request | Response | VoidFunction>;
+) => Request | Response | VoidFunction | Promise<Request | Response | VoidFunction>;
 
 export type HttpAfterResponseHook = (
   request: Request,
@@ -173,9 +167,7 @@ export type HttpAfterResponseHook = (
   response: Response,
 ) => Response | VoidFunction | Promise<Response | VoidFunction>;
 
-export type HttpBeforeErrorHook = (
-  error: HttpError,
-) => HttpError | Promise<HttpError>;
+export type HttpBeforeErrorHook = (error: HttpError) => HttpError | Promise<HttpError>;
 
 export type HttpHooks = {
   /**
@@ -351,11 +343,7 @@ export type HttpRetryOptions = {
 export type HttpBeforeRequestIntercept = (
   request: Request,
   options: any,
-) =>
-  | Request
-  | Response
-  | VoidFunction
-  | Promise<Request | Response | VoidFunction>;
+) => Request | Response | VoidFunction | Promise<Request | Response | VoidFunction>;
 
 export type HttpBeforeRetryState = {
   request: HttpFetchHookOptions;
@@ -373,9 +361,7 @@ export type HttpAfterResponseIntercept = (
   response: Response,
 ) => Response | VoidFunction | Promise<Response | VoidFunction>;
 
-export type HttpBeforeErrorIntercept = (
-  error: HttpError,
-) => HttpError | Promise<HttpError>;
+export type HttpBeforeErrorIntercept = (error: HttpError) => HttpError | Promise<HttpError>;
 
 export type HttpInterceptors = {
   /**

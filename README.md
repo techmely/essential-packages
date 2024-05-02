@@ -37,7 +37,7 @@
 ---
 
 <h2 align="center">
-  Opinionated collection of helpful JavaScript / TypeScript utils which we use on the real world applications
+  Opinionated collection of helpful Rust/Dart/TypeScript utils which we use on the real world applications
 </h2>
 
 <hr>
@@ -53,20 +53,23 @@
 
 ## Features
 
-| Project                     | Features                                                                                                                                                                                                           | State Quality |
-|:----------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------:|
-| @techmely/nuxt-partytown    | Integrate with Partytown easy on Nuxt 3! Just need to focus on configs partytown                                                                                                                                   |      Used in production      |
-| @techmely/vue-pinia-persist | Persist store like Redux, but for Vue                                                                                                                                                                              |      Used in production      |
-| @techmely/reset-css         | The customize reset css with the minimal config work for every modern browsers                                                                                                                                     |      Used in production      |
-| @techmely/utils             | <div>📦 <5kb mini libraries Tree-shakable ESM Unit Test coverage 80% with [vitest](https://vitest.dev) Code quality analysis is A+ with [codacy](https://www.codacy.com) and [deepscan](https://deepscan.io)</div> |      Used in production      |
-| @techmely/vike-react             | <div>React integration for Vike of Techmely Version</div> |      Used in production      |
-| @techmely/vike-react-query             | <div>ReactQuery integration for Vike of Techmely Version</div> |      Used in production      |
-| @techmely/cache             | <div>Cache layer for all runtime</div> |      Memory, Zone CF, redis cache      |
-| @techmely/logger             | <div>Logger for all runtime</div> |      Console, Axiom      |
-| @techmely/metrics             | <div>Metrics with axiom</div> |      Used in production      |
-| @techmely/rate-limit             | <div>Rate limit for all runtime </div> |      Currently only Cloudflare      |
-| @techmely/usage-limit             | <div>Usage limit for all runtime</div> |      Currently only Cloudflare      |
+### Typescript Lib
 
+| Project                      | Features                                                                       |
+| ---------------------------- | ------------------------------------------------------------------------------ |
+| @techmely/auth               | 📦 # Techmely auth's utils solutions                                           |
+| @techmely/utils              | 📦 Tree-shakable ESM Unit Test coverage 80%                                    |
+| @techmely/reset-css          | The customize reset css with the minimal config work for every modern browsers |
+| @techmely/vike-react         | React integration for Vike of Techmely Version                                 |
+| @techmely/vike-react-query   | ReactQuery integration for Vike of Techmely Version                            |
+| @techmely/cache              | Cache layer for all runtime. Memory, Zone CF, redis cache                      |
+| @techmely/logger             | Logger for all runtime: Console, Axiom, Pino                                   |
+| @techmely/metrics            | Metrics with axiom                                                             |
+| @techmely/rate-limit         | Rate limit for all runtime: Console, Axiom                                     |
+| @techmely/usage-limit        | Usage limit for all runtime: Currently only Cloudflare                         |
+| @techmely/nuxt-partytown     | Integrate with Partytown easy on Nuxt 3                                        |
+| @techmely/nuxt-pinia-persist | Integrate with Pinia easy on Nuxt 3                                            |
+| @techmely/vue-pinia-persist  | Persist store like Redux, but for Vue                                          |
 
 
 ## Install to use in your project

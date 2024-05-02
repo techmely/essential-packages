@@ -1,6 +1,6 @@
-# @techmely/cache
+# @techmely/auth
 
-Cache cache cache
+# Techmely auth's utils solutions
 
 ## License
 

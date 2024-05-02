@@ -1,0 +1,43 @@
+{
+  "name": "@techmely/auth",
+  "version": "1.0.0",
+  "description": "Techmely auth's utils solutions",
+  "author": "Harry Tran <nhattq.coding@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://about.techmely.com/libraries/auth",
+  "bugs": {
+    "url": "https://github.com/techmely/essential-packages/issues"
+  },
+  "repository": {
+    "url": "git+https://github.com/techmely/essential-packages.git#main",
+    "directory": "ts-package/cache"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "tag": "latest"
+  },
+  "peerDependencies": {
+    "jose": "^5.2.4"
+  },
+  "devDependencies": {
+    "hono": "^4.2.9",
+    "tslib": "2.6.2",
+    "tsup": "8.0.2",
+    "typescript": "5.4.5"
+  },
+  "funding": [
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/harrytran998"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/harrytran998"
+    }
+  ],
+  "keywords": ["techmely", "cache"]
+}

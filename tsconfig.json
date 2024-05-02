@@ -3,6 +3,9 @@
   "files": [],
   "references": [
     {
+      "path": "ts-packages/auth"
+    },
+    {
       "path": "ts-packages/cache"
     },
     {

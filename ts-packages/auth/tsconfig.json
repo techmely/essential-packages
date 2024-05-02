@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "../../.moon/cache/types/ts-packages/auth"
+  },
+  "include": [
+    "src/**/*",
+    "tests/**/*",
+    "moon.yml"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.build.json"
+    },
+    {
+      "path": "../metrics"
+    },
+    {
+      "path": "../types"
+    }
+  ]
+}

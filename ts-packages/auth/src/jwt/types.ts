@@ -1,4 +1,4 @@
-export interface DecodedIdToken {
+export interface UserFromDecodedIdToken {
   /**
    * The audience for which this token is intended.
    *

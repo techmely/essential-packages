@@ -1,12 +1,12 @@
 import { decodeProtectedHeader, importX509, jwtVerify } from "jose";
-import type { DecodedIdToken } from "./types";
+import type { UserFromDecodedIdToken } from "./types";
 import { GOOGLE_SECURE_TOKEN_API_URL } from "../const";
 
 export const verifyAndDecodeJwt = async (
   jwtToken: string,
   publicKeys: Record<string, string>,
   projectId: string,
-): Promise<DecodedIdToken> => {
+): Promise<UserFromDecodedIdToken> => {
   try {
     const { kid } = decodeProtectedHeader(jwtToken);
     if (!kid) {
@@ -22,13 +22,12 @@ export const verifyAndDecodeJwt = async (
       issuer: `${GOOGLE_SECURE_TOKEN_API_URL}/${projectId}`,
     });
 
-    return payload as DecodedIdToken;
+    return payload as UserFromDecodedIdToken;
   } catch (e: unknown) {
+    console.error(e);
     if (e instanceof TypeError) {
       throw new Error(e.message);
-    } else {
-      console.error(e);
-      throw new Error("uncaught jwt decode exception");
     }
+    throw new Error("uncaught jwt decode exception");
   }
 };

@@ -16,11 +16,9 @@ const createInstance = (defaults?: Partial<HttpFetchOptions>): HttpInstance => {
       Http.create(input, { ...defaults, ..._options, method });
   }
 
-  http.create = (newDefaults?: Partial<HttpFetchOptions>) =>
-    createInstance(newDefaults);
+  http.create = (newDefaults?: Partial<HttpFetchOptions>) => createInstance(newDefaults);
   http.extend = (newDefaults?: Partial<HttpFetchOptions>) =>
     createInstance({ ...defaults, ...newDefaults });
-  http.stop = stop;
   return http as HttpInstance;
 };
 

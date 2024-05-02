@@ -169,15 +169,12 @@ export class Http {
       if (ms !== 0 && this.#retryCount > 0) {
         await delaySignal(ms, { signal: this.#options.signal });
         for (const hook of this.#options.hooks.beforeRetry) {
-          const hookResult = await hook({
+          await hook({
             request: this.request as unknown as HttpFetchHookOptions,
             options: this.#options,
             error: err,
             retryCount: this.#retryCount,
           });
-          if (hookResult === stop) {
-            return;
-          }
         }
         return this.#retry(fn);
       }

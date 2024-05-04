@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 3.1.0
+
+### Minor Changes
+
+- Refactor: update the way we work with generate new id
+
 ## 3.0.3
 
 ### Patch Changes

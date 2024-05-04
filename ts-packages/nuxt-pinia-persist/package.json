@@ -1,6 +1,6 @@
 {
   "name": "@techmely/nuxt-pinia-persist",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Pinia Persist like Redux-Persist for Nuxt 3",
   "repository": "https://github.com/techmely/essential-packages/tree/main/packages/nuxt-pinia-persist",
   "license": "MIT",

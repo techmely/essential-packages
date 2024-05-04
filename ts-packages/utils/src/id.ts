@@ -1,28 +1,35 @@
-import { customAlphabet } from "nanoid";
+import baseX from "base-x";
+
+const b58 = baseX("123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz");
 
 /**
- * You just increase the length if necessary to improve performance
- * Attention to the security(id is key)
- *
- * Characters	Length	Total   States
- * UUID	      16	    32	    16^32 = 3.4e+38
- * Base58	    58	    22	    58^22 = 6.2e+38
- * ---------------------------------------------------------
- * Length	    Example	                          Total States
- * nanoid(8)	re6ZkUUV	                        1.3e+14
- * nanoid(12)	pfpPYdZGbZvw	                    1.4e+21
- * nanoid(16)	sFDUZScHfZTfkLwk	                1.6e+28
- * nanoid(24)	u7vzXJL9cGqUeabGPAZ5XUJ6	        2.1e+42
- * nanoid(32)	qkvPDeH6JyAsRhaZ3X4ZLDPSLFP7MnJz	2.7e+56
- *
- *  See @https://unkey.dev/blog/uuid-ux
+ * Using roughly sortable ids requires fewer resources in the database when inserting or sorting data.
  */
-export const generateId = customAlphabet(
-  "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz",
-);
+export function generateSortableBuff() {
+  const buf = crypto.getRandomValues(new Uint8Array(20));
 
-export const DEFAULT_PREFIX_ID_LENGTH = 22;
+  /**
+   * epoch starts more recently so that the 32-bit number space gives a
+   * significantly higher useful lifetime of around 136 years
+   * from 2023-11-14T22:13:20.000Z to 2159-12-22T04:41:36.000Z.
+   */
+  const EPOCH_TIMESTAMP = 1_700_000_000_000;
 
-export function generatePrefixId(prefix = "key", length = DEFAULT_PREFIX_ID_LENGTH): string {
-  return `${prefix}_${generateId(length)}`;
+  const t = Date.now() - EPOCH_TIMESTAMP;
+
+  buf[0] = (t >>> 24) & 255;
+  buf[1] = (t >>> 16) & 255;
+  buf[2] = (t >>> 8) & 255;
+  buf[3] = t & 255;
+
+  return buf;
+}
+
+export function generateId() {
+  const buf = generateSortableBuff();
+  return `${b58.encode(buf)}` as const;
+}
+
+export function generatePrefixId(prefix = "key"): string {
+  return `${prefix}_${generateId()}`;
 }

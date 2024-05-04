@@ -120,19 +120,17 @@
       }
     }
   },
-  "typesVersions": {
-    "*": {}
-  },
   "peerDependencies": {
-    "dayjs": "^1.11.11"
+    "dayjs": "^1.11.11",
+    "base-x": "^4.0.0"
   },
   "peerDependenciesMeta": {
     "dayjs": {
       "optional": true
+    },
+    "base-x": {
+      "optional": true
     }
-  },
-  "optionalDependencies": {
-    "nanoid": "^5.0.7"
   },
   "devDependencies": {
     "@techmely/types": "workspace:*",

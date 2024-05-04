@@ -21,7 +21,6 @@
     "vike": "^0.4.171"
   },
   "devDependencies": {
-    "@techmely/utils": "workspace:*",
     "@types/react": "18.2.0",
     "@types/react-dom": "^18.3.0",
     "react": "^18.2.0",
@@ -46,16 +45,10 @@
       "url": "https://www.patreon.com/techmely"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-react",
-    "vike react"
-  ],
+  "keywords": ["techmely", "techmely-react", "vike react"],
   "typesVersions": {
     "*": {
-      "+config": [
-        "./dist/_config.d.ts"
-      ]
+      "+config": ["./dist/_config.d.ts"]
     }
   }
 }

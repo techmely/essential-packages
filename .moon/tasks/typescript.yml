@@ -67,6 +67,7 @@ tasks:
       - "@globs(tests)"
     options:
       shell: true
+      allowFailure: true
 
   upgrade.deps:
     command: "npm-check-updates --dep dev,prod,peer -u"

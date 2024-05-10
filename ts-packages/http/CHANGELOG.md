@@ -1,5 +1,12 @@
 ## 1.0.0
 
+## 1.2.7
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @techmely/utils@3.2.0
+
 ## 1.2.6
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @techmely/domain-driven
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @techmely/utils@3.2.0
+
 ## 1.0.3
 
 ### Patch Changes

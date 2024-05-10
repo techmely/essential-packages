@@ -1,5 +1,11 @@
 # @techmely/utils
 
+## 3.2.0
+
+### Minor Changes
+
+- Add get env var feature
+
 ## 3.1.0
 
 ### Minor Changes

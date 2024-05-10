@@ -1,4 +1,4 @@
-import { AuthGoogleIdentifyErrorResponse } from "../types";
+import type { AuthGoogleIdentifyErrorResponse } from "../types";
 
 export class GoogleIdentityError extends Error {
   readonly errorResponse: AuthGoogleIdentifyErrorResponse;

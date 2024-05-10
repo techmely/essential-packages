@@ -20,11 +20,7 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": [
-    "dist",
-    "package.json",
-    "README.md"
-  ],
+  "files": ["dist", "package.json", "README.md"],
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -138,17 +134,17 @@
   },
   "devDependencies": {
     "@techmely/types": "workspace:*",
-    "@testing-library/jest-dom": "6.4.2",
-    "@types/node": "20.12.7",
+    "@testing-library/jest-dom": "6.4.5",
+    "@types/node": "20.12.11",
     "chalk": "^5.3.0",
     "dayjs": "^1.11.11",
-    "execa": "^8.0.1",
+    "execa": "^9.0.1",
     "nanoid": "^5.0.7",
     "time-span": "5.1.0",
     "tslib": "^2.6.2",
     "tsup": "8.0.2",
     "typescript": "5.4.5",
-    "vitest": "1.5.2"
+    "vitest": "1.6.0"
   },
   "funding": [
     {
@@ -160,8 +156,5 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
-  "keywords": [
-    "techmely",
-    "techmely-utils"
-  ]
+  "keywords": ["techmely", "techmely-utils"]
 }

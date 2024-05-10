@@ -20,13 +20,11 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "devDependencies": {
     "@techmely/metrics": "workspace:*",
     "@techmely/types": "workspace:*",
-    "hono": "^4.2.9",
+    "hono": "^4.3.4",
     "tslib": "2.6.2",
     "tsup": "8.0.2",
     "typescript": "5.4.5"
@@ -41,8 +39,5 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
-  "keywords": [
-    "techmely",
-    "cache"
-  ]
+  "keywords": ["techmely", "cache"]
 }

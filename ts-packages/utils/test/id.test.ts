@@ -1,6 +1,6 @@
+import { randomInt } from "node:crypto";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { generateId, generatePrefixId } from "../src/id";
-import { randomInt } from "crypto";
 
 describe("Test generate ID", () => {
   beforeEach(() => {

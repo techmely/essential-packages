@@ -11,11 +11,9 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": [
-    "src"
-  ],
+  "files": ["src"],
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20240423.0",
+    "@cloudflare/workers-types": "4.20240502.0",
     "typescript": "5.4.5"
   },
   "funding": [
@@ -31,8 +29,5 @@
   "bugs": {
     "url": "https://github.com/techmely/techmely/issues"
   },
-  "keywords": [
-    "techmely",
-    "types"
-  ]
+  "keywords": ["techmely", "types"]
 }

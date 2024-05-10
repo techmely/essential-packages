@@ -1,5 +1,5 @@
 import { GOOGLE_TOOKIT_ACCOUNTS_URL } from "../../const";
-import { AuthGetAccountInfoResponse, AuthLookUpRequest, FirebaseConfigs } from "../../types";
+import type { AuthGetAccountInfoResponse, AuthLookUpRequest, FirebaseConfigs } from "../../types";
 import { GoogleIdentityError } from "../error";
 
 export async function googleAccountLookUp(

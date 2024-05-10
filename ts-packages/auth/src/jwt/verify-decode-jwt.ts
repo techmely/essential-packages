@@ -1,6 +1,6 @@
 import { decodeProtectedHeader, importX509, jwtVerify } from "jose";
-import type { UserFromDecodedIdToken } from "./types";
 import { GOOGLE_SECURE_TOKEN_API_URL } from "../const";
+import type { UserFromDecodedIdToken } from "./types";
 
 export const verifyAndDecodeJwt = async (
   jwtToken: string,

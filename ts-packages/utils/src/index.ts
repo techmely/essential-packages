@@ -46,6 +46,7 @@ export * from "./getRandomInt";
 export * from "./getRandomIntInclusive";
 export * from "./getRandomString";
 export * from "./getStrokeRadius";
+export * from "./getEnvVar";
 export * from "./groupBy";
 export * from "./hasDuplicates";
 export * from "./haveSameElement";

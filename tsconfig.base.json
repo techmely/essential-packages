@@ -26,7 +26,7 @@
     "skipLibCheck": true,
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
-    "verbatimModuleSyntax": false,
+    "verbatimModuleSyntax": true,
     "jsx": "preserve"
   }
 }

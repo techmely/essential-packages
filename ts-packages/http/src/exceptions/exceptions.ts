@@ -1,3 +1,4 @@
+import type { Records } from "@techmely/types";
 import type { HttpFetchOptions } from "../http.types";
 import { ExceptionBase } from "./exception.base";
 import {
@@ -19,11 +20,12 @@ import {
  * Used to indicate that an argument was not provided (is empty object/array, null of undefined).
  *
  * @class ArgumentNotProvidedException
+ * @default { message = "Argument not provided" }
  * @extends {ExceptionBase}
  */
 export class ArgumentNotProvidedException extends ExceptionBase {
-  constructor(customMessage?: string) {
-    super(customMessage || "Argument not provided", HTTP_BAD_REQUEST, CODE_ARGUMENT_NOT_PROVIDED);
+  constructor(message = "Argument not provided", metadata?: Records) {
+    super(message, HTTP_BAD_REQUEST, CODE_ARGUMENT_NOT_PROVIDED, metadata);
   }
 }
 
@@ -31,11 +33,12 @@ export class ArgumentNotProvidedException extends ExceptionBase {
  * Used to indicate that an incorrect argument was provided to a method/function/class constructor
  *
  * @class ArgumentInvalidException
+ * @default { message = "Argument invalid" }
  * @extends {ExceptionBase}
  */
 export class ArgumentInvalidException extends ExceptionBase {
-  constructor(customMessage?: string) {
-    super(customMessage || "Argument invalid", HTTP_BAD_REQUEST, CODE_ARGUMENT_INVALID);
+  constructor(message = "Argument invalid", metadata?: Records) {
+    super(message, HTTP_BAD_REQUEST, CODE_ARGUMENT_INVALID, metadata);
   }
 }
 
@@ -44,11 +47,12 @@ export class ArgumentInvalidException extends ExceptionBase {
  * (for example: incorrect string/array length, number not in allowed min/max range etc)
  *
  * @class ArgumentOutOfRangeException
+ * @default { message = "Argument out of range" }
  * @extends {ExceptionBase}
  */
 export class ArgumentOutOfRangeException extends ExceptionBase {
-  constructor(customMessage?: string) {
-    super(customMessage || "Argument out of range", HTTP_BAD_REQUEST, CODE_ARGUMENT_OUT_OF_RANGE);
+  constructor(message = "Argument out of range", metadata?: Records) {
+    super(message, HTTP_BAD_REQUEST, CODE_ARGUMENT_OUT_OF_RANGE, metadata);
   }
 }
 
@@ -56,11 +60,12 @@ export class ArgumentOutOfRangeException extends ExceptionBase {
  * Used to indicate conflicting entities (usually in the database)
  *
  * @class ConflictException
+ * @default { message = "Argument out of range" }
  * @extends {ExceptionBase}
  */
 export class ConflictException extends ExceptionBase {
-  constructor(customMessage?: string) {
-    super(customMessage || "Conflict", HTTP_CONFLICT, CODE_CONFLICT);
+  constructor(message = "Conflict", metadata?: Records) {
+    super(message, HTTP_CONFLICT, CODE_CONFLICT, metadata);
   }
 }
 
@@ -71,14 +76,14 @@ export class ConflictException extends ExceptionBase {
  * @extends {ExceptionBase}
  */
 export class NotFoundException extends ExceptionBase {
-  constructor(customMessage?: string) {
-    super(customMessage || "Not found", HTTP_NOT_FOUND, CODE_NOT_FOUND);
+  constructor(message = "Not found", metadata?: Records) {
+    super(message, HTTP_NOT_FOUND, CODE_NOT_FOUND, metadata);
   }
 }
 
 export class TimeOutException extends ExceptionBase {
-  constructor(customMessage?: string) {
-    super(customMessage || "Request timeout", HTTP_REQUEST_TIMEOUT, CODE_TIMEOUT);
+  constructor(message = "Request timeout", metadata?: Records) {
+    super(message, HTTP_REQUEST_TIMEOUT, CODE_TIMEOUT, metadata);
   }
 }
 
@@ -89,12 +94,8 @@ export class TimeOutException extends ExceptionBase {
  * @extends {ExceptionBase}
  */
 export class InternalServerErrorException extends ExceptionBase {
-  constructor(customMessage?: string) {
-    super(
-      customMessage || "Internal server error",
-      HTTP_INTERNAL_SERVER_ERROR,
-      CODE_INTERNAL_SERVER_ERROR,
-    );
+  constructor(message = "Internal server error", metadata?: Records) {
+    super(message, HTTP_INTERNAL_SERVER_ERROR, CODE_INTERNAL_SERVER_ERROR, metadata);
   }
 }
 

@@ -1,5 +1,11 @@
 ## 1.0.0
 
+## 1.2.8
+
+### Patch Changes
+
+- Update the way using http exceptions
+
 ## 1.2.7
 
 ### Patch Changes

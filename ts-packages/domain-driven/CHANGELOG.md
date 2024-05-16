@@ -1,5 +1,11 @@
 # @techmely/domain-driven
 
+## 1.0.5
+
+### Patch Changes
+
+- Update return insert & update to promise entity
+
 ## 1.0.4
 
 ### Patch Changes

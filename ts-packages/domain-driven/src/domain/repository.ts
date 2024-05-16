@@ -32,12 +32,12 @@ export interface RepositoryPort<Entity> {
   existsById(id: string): Promise<boolean>;
   count(): Promise<bigint | number>;
 
-  insert(entity: Entity): Promise<void>;
+  insert(entity: Entity): Promise<Entity>;
   insertBulk(entity: Entity): Promise<void>;
   insertMany(entities: Entity[]): Promise<void>;
   insertBulkMany(entities: Entity[]): Promise<void>;
 
-  update(entity: Entity): Promise<void>;
+  update(entity: Entity): Promise<Entity>;
   updateBulk(entity: Entity): Promise<void>;
   updateMany(entities: Entity[]): Promise<void>;
   updateBulkMany(entities: Entity[]): Promise<void>;

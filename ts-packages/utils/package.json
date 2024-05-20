@@ -20,7 +20,11 @@
     "directory": "dist",
     "tag": "latest"
   },
-  "files": ["dist", "package.json", "README.md"],
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -136,6 +140,7 @@
     "@techmely/types": "workspace:*",
     "@testing-library/jest-dom": "6.4.5",
     "@types/node": "20.12.11",
+    "base-x": "^4.0.0",
     "chalk": "^5.3.0",
     "dayjs": "^1.11.11",
     "execa": "^9.0.1",
@@ -156,5 +161,8 @@
       "url": "https://www.patreon.com/harrytran998"
     }
   ],
-  "keywords": ["techmely", "techmely-utils"]
+  "keywords": [
+    "techmely",
+    "techmely-utils"
+  ]
 }

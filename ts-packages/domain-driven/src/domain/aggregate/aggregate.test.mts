@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import { Aggregate } from ".";
 import { Result } from "../../utils";
 import type { CreateEntityProps } from "../entity/types";

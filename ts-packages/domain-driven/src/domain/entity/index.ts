@@ -2,29 +2,32 @@ import type { Records } from "@techmely/types";
 import { isEmpty } from "@techmely/utils";
 import type { BaseEntityProps, CreateEntityProps, EntityConfig, EntityPort } from "./types";
 import { UniqueEntityID } from "./unique-entity";
+import type { IResult } from "../../utils/result/types";
+import { Result } from "../../utils";
 
 const BASE_MAX_PROPS = 32;
-const defaultEntityConfig: EntityConfig = { maxProps: BASE_MAX_PROPS, debug: false };
+const defaultEntityConfig: EntityConfig = {
+  maxProps: BASE_MAX_PROPS,
+  debug: Boolean(process.env.DEBUG) || false,
+};
 
-export abstract class Entity<Props> implements EntityPort<Props> {
+class Entity<Props> implements EntityPort<Props> {
   #id: UniqueEntityID;
   readonly #createdAt: Date;
   #updatedAt: Date;
   readonly #props: Props;
   readonly #config: EntityConfig;
 
-  constructor(
-    { id, props, createdAt, updatedAt }: CreateEntityProps<Props>,
-    config?: EntityConfig,
-  ) {
-    Entity.isValidProps(props, config);
+  constructor(request: CreateEntityProps<Props>, config?: EntityConfig) {
+    const error = this.validateBusinessRules(request);
+    if (error) throw error;
+    const { id, props, createdAt, updatedAt } = request;
     this.#id = id;
     const now = new Date();
     this.#createdAt = createdAt || now;
     this.#updatedAt = updatedAt || now;
     this.#props = props;
     this.#config = config || defaultEntityConfig;
-    this.validateBusinessRules();
   }
 
   static isEntity(entity: unknown): entity is Entity<unknown> {
@@ -51,6 +54,29 @@ export abstract class Entity<Props> implements EntityPort<Props> {
     return [true, undefined];
   }
 
+  public static create(props: CreateEntityProps<any>): IResult<any, any, any>;
+  /**
+   *
+   * @param props params as Props
+   * @param id optional uuid as string in props. If not provided on props a new one will be generated.
+   * @returns instance of result with a new Entity on state if success.
+   * @summary result state will be `null` case failure.
+   */
+  public static create(props: CreateEntityProps<any>): Result<any, any, any> {
+    const [isValid, err] = this.isValidProps(props);
+    if (!isValid)
+      return Result.fail(
+        "Invalid props to create an instance of " + this.name + ": ",
+        err?.message,
+      );
+    try {
+      const entity = new this(props);
+      return Result.Ok(entity);
+    } catch (err) {
+      return Result.fail(`Invalid business rules(instance of ${this.name}: ${err}`);
+    }
+  }
+
   get id(): UniqueEntityID {
     return this.#id;
   }
@@ -75,8 +101,6 @@ export abstract class Entity<Props> implements EntityPort<Props> {
 
   /**
    * @description Get hash to identify the entity.
-   * @example
-   * `[Entity@ClassName]:UUID`
    */
   hashCode(): UniqueEntityID {
     const instance = Reflect.getPrototypeOf(this);
@@ -129,5 +153,9 @@ export abstract class Entity<Props> implements EntityPort<Props> {
     return propsCopy;
   }
 
-  abstract validateBusinessRules(): boolean;
+  validateBusinessRules(_request: CreateEntityProps<Props>) {
+    return undefined;
+  }
 }
+
+export { Entity, UniqueEntityID };

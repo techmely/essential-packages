@@ -7,7 +7,7 @@ import type {
   ValueObjectProps,
 } from "./types";
 
-export abstract class ValueObject<Props> implements ValueObjectPort<Props> {
+export class ValueObject<Props> implements ValueObjectPort<Props> {
   #props: ValueObjectProps<Props>;
   #options: ValueObjectOptions;
 

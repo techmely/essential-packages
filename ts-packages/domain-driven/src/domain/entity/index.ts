@@ -12,9 +12,9 @@ const defaultEntityConfig: EntityConfig = {
 };
 
 class Entity<Props> implements EntityPort<Props> {
-  #id: UniqueEntityID;
+  readonly #id: UniqueEntityID;
   readonly #createdAt: Date;
-  #updatedAt: Date;
+  readonly #updatedAt: Date;
   readonly #props: Props;
   readonly #config: EntityConfig;
 
@@ -62,9 +62,9 @@ class Entity<Props> implements EntityPort<Props> {
    * @returns instance of result with a new Entity on state if success.
    * @summary result state will be `null` case failure.
    */
-  public static create(props: CreateEntityProps<any>): Result<any, any, any> {
-    const [isValid, err] = this.isValidProps(props);
-    if (!isValid)
+  public static create<T = any>(props: CreateEntityProps<T>): Result<any, any, any> {
+    const [_, err] = this.isValidProps(props);
+    if (err)
       return Result.fail(
         "Invalid props to create an instance of " + this.name + ": ",
         err?.message,

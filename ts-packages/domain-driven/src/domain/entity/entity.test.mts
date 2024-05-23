@@ -26,8 +26,6 @@ describe("entity", () => {
 
     it("should get prototype", () => {
       const ent = EntitySample.create({ foo: "bar" });
-
-      // ent.value().change('foo', 'changed');
       expect(ent.isOk()).toBeTruthy();
     });
   });

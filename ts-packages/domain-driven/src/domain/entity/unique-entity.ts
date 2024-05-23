@@ -17,7 +17,7 @@ export class UniqueEntityID {
     return new UniqueEntityID(id);
   }
 
-  equals(_id?: UniqueEntityID): boolean {
+  equal(_id?: UniqueEntityID): boolean {
     if (!_id) {
       return false;
     }

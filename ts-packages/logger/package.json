@@ -23,7 +23,7 @@
   "files": ["dist"],
   "peerDependencies": {
     "@axiomhq/js": "^1.0.0-rc.3",
-    "pino": "^9.0.0",
+    "pino": "^9.1.0",
     "pino-pretty": "^11.0.0"
   },
   "peerDependenciesMeta": {
@@ -42,8 +42,8 @@
   },
   "devDependencies": {
     "@axiomhq/js": "^1.0.0-rc.3",
-    "pino": "^9.0.0",
-    "@cloudflare/workers-types": "4.20240502.0",
+    "pino": "^9.1.0",
+    "@cloudflare/workers-types": "4.20240512.0",
     "@techmely/types": "workspace:*",
     "tslib": "2.6.2",
     "tsup": "8.0.2",

@@ -19,9 +19,9 @@ class Entity<Props extends EntityProps> implements EntityPort<Props> {
   readonly #config: EntityConfig;
 
   constructor(request: EntityProps, config?: EntityConfig) {
-    const error = this.validateBusinessRules(request);
-    if (error) throw error;
-    let { id, createdAt, updatedAt, ...props } = request;
+    const [isValid, error] = this.validateBusinessRules(request);
+    if (!isValid) throw error;
+    const { id, createdAt, updatedAt, ...props } = request;
     this.#id = id || UniqueEntityID.create();
     const now = new Date();
     this.#createdAt = createdAt || now;
@@ -150,8 +150,8 @@ class Entity<Props extends EntityProps> implements EntityPort<Props> {
     return propsCopy;
   }
 
-  validateBusinessRules(_request: EntityProps) {
-    return undefined;
+  validateBusinessRules(_request: EntityProps): [boolean, Error | undefined] {
+    return [true, undefined];
   }
 }
 

@@ -11,10 +11,10 @@ describe("Aggregate", () => {
       name: string;
     };
     class AggregateErr extends Aggregate<Props> {
-      override validateBusinessRules(): boolean {
-        return true;
+      override validateBusinessRules(): [boolean, Error | undefined] {
+        return [true, undefined];
       }
-      static create(props: EntityProps<Props>, config: AggregateConfig) {
+      static override create(props: EntityProps, config: AggregateConfig) {
         const [isValid, error] = AggregateErr.isValidProps(props);
         if (!isValid) return Result.fail(error);
         const aggregate = new AggregateErr(props, config);

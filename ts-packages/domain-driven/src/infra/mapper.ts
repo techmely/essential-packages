@@ -1,7 +1,8 @@
 import type { Entity } from "../domain";
+import type { EntityProps } from "../domain/entity/types";
 
 export interface DomainMapper<
-  Props,
+  Props extends EntityProps,
   DbRecord,
   DomainEntity extends Entity<Props>,
   Response = unknown,

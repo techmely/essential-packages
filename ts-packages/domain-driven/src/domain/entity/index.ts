@@ -1,9 +1,9 @@
 import type { Records } from "@techmely/types";
 import { isEmpty } from "@techmely/utils";
-import type { BaseEntityProps, CreateEntityProps, EntityConfig, EntityPort } from "./types";
-import { UniqueEntityID } from "./unique-entity";
-import type { IResult } from "../../utils/result/types";
 import { Result } from "../../utils";
+import type { IResult } from "../../utils/result/types";
+import type { BaseEntityProps, EntityConfig, EntityPort, EntityProps } from "./types";
+import { UniqueEntityID } from "./unique-entity";
 
 const BASE_MAX_PROPS = 32;
 const defaultEntityConfig: EntityConfig = {
@@ -11,26 +11,26 @@ const defaultEntityConfig: EntityConfig = {
   debug: Boolean(process.env.DEBUG) || false,
 };
 
-class Entity<Props> implements EntityPort<Props> {
+class Entity<Props extends EntityProps> implements EntityPort<Props> {
   readonly #id: UniqueEntityID;
   readonly #createdAt: Date;
   readonly #updatedAt: Date;
   readonly #props: Props;
   readonly #config: EntityConfig;
 
-  constructor(request: CreateEntityProps<Props>, config?: EntityConfig) {
+  constructor(request: EntityProps, config?: EntityConfig) {
     const error = this.validateBusinessRules(request);
     if (error) throw error;
-    const { id, props, createdAt, updatedAt } = request;
+    const { id, createdAt, updatedAt, ...props } = request;
     this.#id = id;
     const now = new Date();
     this.#createdAt = createdAt || now;
     this.#updatedAt = updatedAt || now;
-    this.#props = props;
+    this.#props = props as any;
     this.#config = config || defaultEntityConfig;
   }
 
-  static isEntity(entity: unknown): entity is Entity<unknown> {
+  static isEntity(entity: unknown): entity is Entity<any> {
     return entity instanceof Entity;
   }
 
@@ -54,7 +54,7 @@ class Entity<Props> implements EntityPort<Props> {
     return [true, undefined];
   }
 
-  public static create(props: CreateEntityProps<any>): IResult<any, any, any>;
+  public static create(props: EntityProps<any>): IResult<any, any, any>;
   /**
    *
    * @param props params as Props
@@ -62,7 +62,7 @@ class Entity<Props> implements EntityPort<Props> {
    * @returns instance of result with a new Entity on state if success.
    * @summary result state will be `null` case failure.
    */
-  public static create<T = any>(props: CreateEntityProps<T>): Result<any, any, any> {
+  public static create<T = any>(props: EntityProps<T>): Result<any, any, any> {
     const [_, err] = this.isValidProps(props);
     if (err)
       return Result.fail(
@@ -91,10 +91,10 @@ class Entity<Props> implements EntityPort<Props> {
 
   getProps(): Props & BaseEntityProps {
     const clone = {
+      ...this.#props,
       id: this.id,
       createdAt: this.#createdAt,
       updatedAt: this.#updatedAt,
-      ...this.#props,
     };
     return Object.freeze(clone);
   }
@@ -153,7 +153,7 @@ class Entity<Props> implements EntityPort<Props> {
     return propsCopy;
   }
 
-  validateBusinessRules(_request: CreateEntityProps<Props>) {
+  validateBusinessRules(_request: EntityProps) {
     return undefined;
   }
 }

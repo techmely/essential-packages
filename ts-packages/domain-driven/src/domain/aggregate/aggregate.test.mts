@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { Aggregate } from ".";
 import { Result } from "../../utils";
-import type { CreateEntityProps } from "../entity/types";
+import type { EntityProps } from "../entity/types";
 import type { AggregateConfig } from "./types";
 
 describe("Aggregate", () => {
@@ -14,7 +14,7 @@ describe("Aggregate", () => {
       override validateBusinessRules(): boolean {
         return true;
       }
-      static create(props: CreateEntityProps<Props>, config: AggregateConfig) {
+      static create(props: EntityProps<Props>, config: AggregateConfig) {
         const [isValid, error] = AggregateErr.isValidProps(props);
         if (!isValid) return Result.fail(error);
         const aggregate = new AggregateErr(props, config);

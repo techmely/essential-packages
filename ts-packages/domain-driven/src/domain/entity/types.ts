@@ -8,10 +8,9 @@ export interface BaseEntityProps {
   updatedAt: Date;
 }
 
-export interface CreateEntityProps<T>
-  extends MarkOptional<BaseEntityProps, "createdAt" | "updatedAt"> {
-  props: T;
-}
+export interface EntityProps
+  extends MarkOptional<BaseEntityProps, "createdAt" | "updatedAt">,
+    Record<string, any> {}
 
 export type EntityConfig = {
   maxProps: number;

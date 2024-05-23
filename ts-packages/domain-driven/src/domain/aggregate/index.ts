@@ -1,8 +1,8 @@
 import { createEventContext } from "../context";
 import type { ContextEventName, EventContextManager } from "../context/types";
 import { Entity } from "../entity";
-import type { CreateEntityProps } from "../entity/types";
 import { UniqueEntityID } from "../entity";
+import type { EntityProps } from "../entity/types";
 import { DomainEvents } from "../events";
 import type {
   AggregateEventHandler,
@@ -20,10 +20,10 @@ export abstract class Aggregate<Props> extends Entity<Props> implements Aggregat
   readonly #domainEvents: DomainEvents<this>;
   #dispatchEventsCount: number;
   readonly #aggregateConfig: AggregateConfig;
-  readonly #props: CreateEntityProps<Props>;
+  readonly #props: EntityProps<Props>;
 
   constructor(
-    props: CreateEntityProps<Props>,
+    props: EntityProps<Props>,
     config: AggregateConfig,
     events?: DomainEvents<Aggregate<Props>>,
   ) {

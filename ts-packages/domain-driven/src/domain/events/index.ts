@@ -27,6 +27,12 @@ export class DomainEvents<T> implements DomainEventPort<T> {
     return this.#metrics;
   }
 
+  /**
+   * Dispatches an event.
+   * @param {ContextEventName} name - The name of the event to dispatch.
+   * @param {unknown[]} args - Any param user wants provide as argument.
+   * @returns The result of the event handler function.
+   */
   dispatch(name: ContextEventName, ...args: unknown[]): void | Promise<void> {
     const event = this.#events.find((e) => e.name === name);
     if (!event) return;
@@ -47,11 +53,17 @@ export class DomainEvents<T> implements DomainEventPort<T> {
     this.remove(name);
     this.#events.push({ name, handler, options });
   }
-
+  /**
+   * Clears all events.
+   */
   clear(): void {
     this.#events = [];
   }
 
+  /**
+   * Removes an event by name.
+   * @param eventName - The name of the event to remove.
+   */
   remove(name: ContextEventName): void {
     this.#events = this.#events.filter((e) => e.name !== name);
   }

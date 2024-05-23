@@ -29,7 +29,7 @@ export class Aggregate<Props extends EntityProps>
 
   constructor(
     props: EntityProps,
-    config?: AggregateConfig,
+    config: AggregateConfig,
     events?: DomainEvents<Aggregate<Props>>,
   ) {
     super(props, config);
@@ -40,7 +40,7 @@ export class Aggregate<Props extends EntityProps>
     if (events) this.#domainEvents = events as unknown as DomainEvents<this>;
   }
 
-  static create(props: any): IResult<any, any, any>;
+  static override create(props: any, config: AggregateConfig): IResult<any, any, any>;
   /**
    *
    * @param props params as Props
@@ -48,10 +48,10 @@ export class Aggregate<Props extends EntityProps>
    * @returns instance of result with a new Aggregate on state if success.
    * @summary result state will be `null` case failure.
    */
-  static create(props: {}): Result<any, any, any> {
-    if (!this.isValidProps(props))
-      return Result.fail("Invalid props to create an instance of " + this.name);
-    return Result.Ok(new Aggregate(props));
+  static override create(props: EntityProps, config: AggregateConfig): Result<any, any, any> {
+    if (!Aggregate.isValidProps(props))
+      return Result.fail(`Invalid props to create an instance of ${Aggregate.name}`);
+    return Result.Ok(new Aggregate(props, config));
   }
 
   /**

@@ -1,3 +1,5 @@
+import { Result } from "../../utils";
+import type { IResult } from "../../utils/result/types";
 import { createEventContext } from "../context";
 import type { ContextEventName, EventContextManager } from "../context/types";
 import { Entity } from "../entity";
@@ -16,15 +18,18 @@ import type {
   DomainEventMetrics,
 } from "./types";
 
-export abstract class Aggregate<Props> extends Entity<Props> implements AggregatePort<Props> {
+export class Aggregate<Props extends EntityProps>
+  extends Entity<Props>
+  implements AggregatePort<Props>
+{
   readonly #domainEvents: DomainEvents<this>;
   #dispatchEventsCount: number;
   readonly #aggregateConfig: AggregateConfig;
-  readonly #props: EntityProps<Props>;
+  readonly #props: EntityProps;
 
   constructor(
-    props: EntityProps<Props>,
-    config: AggregateConfig,
+    props: EntityProps,
+    config?: AggregateConfig,
     events?: DomainEvents<Aggregate<Props>>,
   ) {
     super(props, config);
@@ -33,6 +38,20 @@ export abstract class Aggregate<Props> extends Entity<Props> implements Aggregat
     this.#aggregateConfig = config;
     this.#domainEvents = new DomainEvents(this);
     if (events) this.#domainEvents = events as unknown as DomainEvents<this>;
+  }
+
+  static create(props: any): IResult<any, any, any>;
+  /**
+   *
+   * @param props params as Props
+   * @param id optional uuid as string, second arg. If not provided a new one will be generated.
+   * @returns instance of result with a new Aggregate on state if success.
+   * @summary result state will be `null` case failure.
+   */
+  static create(props: {}): Result<any, any, any> {
+    if (!this.isValidProps(props))
+      return Result.fail("Invalid props to create an instance of " + this.name);
+    return Result.Ok(new Aggregate(props));
   }
 
   /**

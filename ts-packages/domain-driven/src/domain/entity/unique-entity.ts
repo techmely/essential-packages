@@ -8,6 +8,15 @@ export class UniqueEntityID {
     this.id = _id || generatePrefixId("ett");
   }
 
+  /**
+   * @description Create a short id.
+   * @param id value as string optional.If you do not provide a value a new uuid value will be generated.
+   * @returns instance of ID.
+   */
+  static create(id?: EntityId): UniqueEntityID {
+    return new UniqueEntityID(id);
+  }
+
   equals(_id?: UniqueEntityID): boolean {
     if (!_id) {
       return false;

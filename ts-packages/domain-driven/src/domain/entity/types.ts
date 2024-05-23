@@ -1,16 +1,13 @@
-import type { Records } from "@techmely/types";
-import type { MarkOptional } from "ts-essentials";
+import type { Records, EntityId } from "@techmely/types";
 import type { UniqueEntityID } from "./unique-entity";
 
 export interface BaseEntityProps {
-  id: UniqueEntityID;
+  id: UniqueEntityID | EntityId;
   createdAt: Date;
   updatedAt: Date;
 }
 
-export interface EntityProps
-  extends MarkOptional<BaseEntityProps, "createdAt" | "updatedAt">,
-    Record<string, any> {}
+export interface EntityProps extends Partial<BaseEntityProps>, Record<string, any> {}
 
 export type EntityConfig = {
   maxProps: number;
@@ -18,13 +15,13 @@ export type EntityConfig = {
 };
 
 export interface EntityPort<Props> {
-  get id(): UniqueEntityID;
+  get id(): UniqueEntityID | EntityId;
   /**
    * @description Get hash to identify the entity.
    * @example
    * `[Entity@ClassName]:UUID`
    */
-  hashCode(): UniqueEntityID;
+  hashCode(): UniqueEntityID | EntityId;
   /**
    * @description Get a new instanced based on current Entity.
    */

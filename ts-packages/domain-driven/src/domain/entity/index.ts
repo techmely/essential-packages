@@ -1,4 +1,4 @@
-import type { Records } from "@techmely/types";
+import type { EntityId, Records } from "@techmely/types";
 import { isEmpty } from "@techmely/utils";
 import { Result } from "../../utils";
 import type { IResult } from "../../utils/result/types";
@@ -12,7 +12,7 @@ const defaultEntityConfig: EntityConfig = {
 };
 
 class Entity<Props extends EntityProps> implements EntityPort<Props> {
-  readonly #id: UniqueEntityID;
+  readonly #id: UniqueEntityID | EntityId;
   readonly #createdAt: Date;
   readonly #updatedAt: Date;
   readonly #props: Props;
@@ -21,8 +21,8 @@ class Entity<Props extends EntityProps> implements EntityPort<Props> {
   constructor(request: EntityProps, config?: EntityConfig) {
     const error = this.validateBusinessRules(request);
     if (error) throw error;
-    const { id, createdAt, updatedAt, ...props } = request;
-    this.#id = id;
+    let { id, createdAt, updatedAt, ...props } = request;
+    this.#id = id || UniqueEntityID.create();
     const now = new Date();
     this.#createdAt = createdAt || now;
     this.#updatedAt = updatedAt || now;
@@ -54,7 +54,7 @@ class Entity<Props extends EntityProps> implements EntityPort<Props> {
     return [true, undefined];
   }
 
-  public static create(props: EntityProps<any>): IResult<any, any, any>;
+  public static create(props: EntityProps, config?: EntityConfig): IResult<any, any, any>;
   /**
    *
    * @param props params as Props
@@ -62,22 +62,19 @@ class Entity<Props extends EntityProps> implements EntityPort<Props> {
    * @returns instance of result with a new Entity on state if success.
    * @summary result state will be `null` case failure.
    */
-  public static create<T = any>(props: EntityProps<T>): Result<any, any, any> {
-    const [_, err] = this.isValidProps(props);
+  public static create(props: EntityProps, config?: EntityConfig): Result<any, any, any> {
+    const [_, err] = Entity.isValidProps(props);
     if (err)
-      return Result.fail(
-        "Invalid props to create an instance of " + this.name + ": ",
-        err?.message,
-      );
+      return Result.fail(`Invalid props to create an instance of ${Entity.name}: `, err?.message);
     try {
-      const entity = new this(props);
+      const entity = new Entity(props, config);
       return Result.Ok(entity);
     } catch (err) {
-      return Result.fail(`Invalid business rules(instance of ${this.name}: ${err}`);
+      return Result.fail(`Invalid business rules(instance of ${Entity.name}: ${err}`);
     }
   }
 
-  get id(): UniqueEntityID {
+  get id(): UniqueEntityID | EntityId {
     return this.#id;
   }
 

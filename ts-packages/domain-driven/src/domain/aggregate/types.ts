@@ -8,9 +8,7 @@ import type {
   DomainEventOptions,
 } from "../events/types";
 
-export type AggregateConfig = {
-  emitter: EventEmitter;
-} & EntityConfig;
+export type AggregateConfig = EntityConfig;
 
 export type AggregateClearEventsConfig = {
   resetMetrics: boolean;

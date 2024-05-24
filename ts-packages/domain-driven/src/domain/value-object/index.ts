@@ -1,19 +1,14 @@
-import { isEmpty } from "@techmely/utils";
-import type {
-  DomainPrimitive,
-  Primitives,
-  ValueObjectOptions,
-  ValueObjectPort,
-  ValueObjectProps,
-} from "./types";
+import { isEmpty, isPrimitive } from "@techmely/utils";
+import type { ValueObjectOptions, ValueObjectPort } from "./types";
+import type { IResult } from "../../utils/result/types";
+import { Result } from "../../utils";
 
 export class ValueObject<Props> implements ValueObjectPort<Props> {
-  #props: ValueObjectProps<Props>;
+  #props: Props;
   #options: ValueObjectOptions;
 
-  constructor(props: ValueObjectProps<Props>, options?: ValueObjectOptions) {
+  constructor(props: Props, options?: ValueObjectOptions) {
     const _options = options || { parser: JSON };
-    this.#validateProps(props);
     this.#props = props;
     this.#options = _options;
   }
@@ -22,7 +17,31 @@ export class ValueObject<Props> implements ValueObjectPort<Props> {
     return obj instanceof ValueObject;
   }
 
-  clone(props?: Partial<ValueObjectProps<Props>>): this {
+  /**
+   * @description Method to validate prop value.
+   * @param props to validate
+   */
+  static isValidProps(props: any): boolean {
+    if (isEmpty(props) || (isPrimitive(props) && isEmpty(props.value))) {
+      throw new Error("Props cannot be empty");
+    }
+    return true;
+  }
+
+  static create(props: any): IResult<any, any, any>;
+  /**
+   *
+   * @param props params as Props
+   * @returns instance of result with a new Value Object on state if success.
+   * @summary result state will be `null` case failure.
+   */
+  static create(props: any, options?: ValueObjectOptions): Result<any, any, any> {
+    if (!ValueObject.isValidProps(props))
+      return Result.fail("Invalid props to create an instance of " + ValueObject.name);
+    return Result.Ok(new ValueObject(props, options));
+  }
+
+  clone(props?: Partial<Props>): ValueObject<Props> {
     const _props = props ? { ...this.#props, ...props } : this.#props;
     const instance = Reflect.getPrototypeOf(this);
     if (!instance) throw new Error("Cannot get prototype of this entity instance");
@@ -39,14 +58,14 @@ export class ValueObject<Props> implements ValueObjectPort<Props> {
    * Convert value obj to get raw properties
    */
   raw() {
-    if (this.#isDomainPrimitive(this.#props)) {
+    if (isPrimitive(this.#props)) {
       return this.#props.value;
     }
     const clone = this.#convertPropsToObject(this.#props);
     return Object.freeze(clone);
   }
 
-  #convertPropsToObject(props: ValueObjectProps<Props>) {
+  #convertPropsToObject(props: Props) {
     const propsCopy = structuredClone(props) as any;
     for (const prop in propsCopy) {
       const item = propsCopy[prop];
@@ -59,17 +78,5 @@ export class ValueObject<Props> implements ValueObjectPort<Props> {
     }
 
     return propsCopy;
-  }
-
-  #validateProps(props: unknown) {
-    if (isEmpty(props) || (this.#isDomainPrimitive(props) && isEmpty(props.value))) {
-      throw new Error("Props cannot be empty");
-    }
-    return true;
-  }
-
-  #isDomainPrimitive(obj: unknown): obj is DomainPrimitive<Props & (Primitives | Date)> {
-    if (Object.prototype.hasOwnProperty.call(obj, "value")) return true;
-    return false;
   }
 }

@@ -1,4 +1,8 @@
-export function isPrimitive(value: unknown): boolean {
+export interface Primitives {
+  value: string | number | boolean | Date | null;
+}
+
+export function isPrimitive(value: unknown): value is Primitives {
   if (value === null) {
     return true;
   }

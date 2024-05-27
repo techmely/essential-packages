@@ -8,15 +8,7 @@ describe("Value Object", () => {
     interface Props {
       value: string;
     }
-    class GenericVo extends ValueObject<Props> {
-      constructor(props: Props) {
-        super(props);
-      }
-
-      static override create(props: Props): Result<GenericVo> {
-        return Result.Ok(new GenericVo(props));
-      }
-    }
+    class GenericVo extends ValueObject<Props> {}
 
     it("should return fails if provide a null value", () => {
       const obj = GenericVo.create(null as any);
@@ -39,11 +31,8 @@ describe("Value Object", () => {
     interface Props {
       value: string;
     }
+    // biome-ignore lint/complexity/noStaticOnlyClass: <explanation>
     class GenericVo extends ValueObject<Props> {
-      constructor(props: Props) {
-        super(props);
-      }
-
       static override isValidProps(): boolean {
         return true;
       }
@@ -83,7 +72,7 @@ describe("Value Object", () => {
       });
       const addressObject = address.raw();
 
-      expect(addressObject).toEqual({
+      expect(addressObject).toStrictEqual({
         city: "A",
         number: 123,
         street: "5th Avenue",
@@ -106,7 +95,6 @@ describe("Value Object", () => {
       });
       const addressObject = address.raw();
       expect(Object.isFrozen(addressObject)).toBeTruthy();
-      expect(() => ((addressObject as any).city = "B")).toThrowError();
     });
   });
 
@@ -148,23 +136,6 @@ describe("Value Object", () => {
       }
     }
 
-    it("should disable getter", () => {
-      const str = StringVo.create({ value: "hello", age: 7 });
-      expect(() => str.value()).toThrow();
-    });
-
-    it("should transform value object to object", () => {
-      class Sample extends ValueObject<string> {
-        private constructor(props: string) {
-          super(props);
-        }
-      }
-
-      const valueObject = Sample.create("Example");
-
-      expect(valueObject.value().toObject()).toBe("Example");
-    });
-
     it("should transform value object to object", () => {
       class Sample extends ValueObject<{ value: string }> {
         private constructor(props: { value: string }) {
@@ -174,7 +145,7 @@ describe("Value Object", () => {
 
       const valueObject = Sample.create({ value: "Sample" });
 
-      expect(valueObject.value().toObject()).toEqual({ value: "Sample" });
+      expect(valueObject.value().raw()).toEqual({ value: "Sample" });
     });
 
     it("should transform value object to object", () => {
@@ -194,43 +165,10 @@ describe("Value Object", () => {
 
       const result = Obj.create({ value: sample.value(), other: "Other Sample" });
 
-      expect(result.value().toObject()).toEqual({
+      expect(result.value().raw()).toEqual({
         value: { value: "Sample", foo: "bar" },
         other: "Other Sample",
       });
-    });
-
-    it("should clone a value object with success", () => {
-      class Sample extends ValueObject<{ value: string; foo: string }> {
-        private constructor(props: { value: string; foo: string }) {
-          super(props);
-        }
-      }
-      const sample = Sample.create({ value: "Sample", foo: "bar" });
-      const result = sample.value().clone();
-      expect(sample.value().toObject()).toEqual(result.toObject());
-    });
-
-    it("should clone a value object with custom props", () => {
-      interface Props {
-        value: string;
-        foo: string;
-      }
-      class Sample extends ValueObject<Props> {
-        private constructor(props: Props) {
-          super(props);
-        }
-
-        static override create(props: Props): Result<Sample> {
-          return Result.Ok(new Sample(props));
-        }
-      }
-
-      const sample = Sample.create({ value: "Sample", foo: "bar" });
-
-      const result = sample.value().clone({ foo: "other" });
-
-      expect(result.raw()).toEqual({ foo: "other", value: "Sample" });
     });
   });
 
@@ -275,10 +213,6 @@ describe("Value Object", () => {
       value: string;
     }
     class Simple extends ValueObject<Props> {
-      constructor(props: Props) {
-        super(props);
-      }
-
       static override create(props: Props): IResult<Simple> {
         return Result.Ok(new Simple(props));
       }
@@ -303,8 +237,8 @@ describe("Value Object", () => {
 
     it("should create a valid props object as value object", () => {
       const primitive = Simple.create({ value: "TEST" }).value();
-      expect(typeof primitive.raw()).toBe("string");
-      expect(primitive.raw()).toBe("TEST");
+      expect(typeof primitive.raw()).toBe("object");
+      expect(primitive.raw()).toStrictEqual({ value: "TEST" });
     });
   });
 

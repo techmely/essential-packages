@@ -1,4 +1,4 @@
-import { isEmpty, isPrimitive } from "@techmely/utils";
+import { isNotEmpty, isPrimitive } from "@techmely/utils";
 import type { ValueObjectOptions, ValueObjectPort } from "./types";
 import type { IResult } from "../../utils/result/types";
 import { Result } from "../../utils";
@@ -22,10 +22,7 @@ export class ValueObject<Props> implements ValueObjectPort<Props> {
    * @param props to validate
    */
   static isValidProps(props: any): boolean {
-    if (isEmpty(props) || (isPrimitive(props) && isEmpty(props.value))) {
-      throw new Error("Props cannot be empty");
-    }
-    return true;
+    return isNotEmpty(props) || (isPrimitive(props) && isNotEmpty(props?.value));
   }
 
   static create(props: any): IResult<any, any, any>;
@@ -36,9 +33,10 @@ export class ValueObject<Props> implements ValueObjectPort<Props> {
    * @summary result state will be `null` case failure.
    */
   static create(props: any, options?: ValueObjectOptions): Result<any, any, any> {
-    if (!ValueObject.isValidProps(props))
-      return Result.fail("Invalid props to create an instance of " + ValueObject.name);
-    return Result.Ok(new ValueObject(props, options));
+    if (ValueObject.isValidProps(props)) {
+      return Result.Ok(new ValueObject(props, options));
+    }
+    return Result.fail(`Invalid props to create an instance of ${ValueObject.name}`);
   }
 
   clone(props?: Partial<Props>): ValueObject<Props> {

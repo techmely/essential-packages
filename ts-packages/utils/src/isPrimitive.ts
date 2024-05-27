@@ -1,6 +1,6 @@
-export interface Primitives {
+export type Primitives = {
   value: string | number | boolean | Date | null;
-}
+};
 
 export function isPrimitive(value: unknown): value is Primitives {
   if (value === null) {

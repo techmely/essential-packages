@@ -45,7 +45,7 @@ export interface RepositoryPort<Entity> {
   delete(entity: Entity): Promise<boolean>;
   deleteById(id: string): Promise<boolean>;
   deleteAllByIds(ids: string[]): Promise<boolean>;
-  deleteBulk(entity: Entity): Promise<boolean>;
+  deleteBulk(ids: string[]): Promise<boolean>;
 
   transaction<T>(handler: () => Promise<T>): Promise<T>;
 }

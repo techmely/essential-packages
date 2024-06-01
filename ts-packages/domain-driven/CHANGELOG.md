@@ -1,5 +1,11 @@
 # @techmely/domain-driven
 
+## 1.1.1
+
+### Patch Changes
+
+- Fix delete bulk request in base repository
+
 ## 1.1.0
 
 ### Minor Changes

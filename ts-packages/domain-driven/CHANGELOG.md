@@ -1,5 +1,11 @@
 # @techmely/domain-driven
 
+## 1.1.2
+
+### Patch Changes
+
+- update find by key in repository port
+
 ## 1.1.1
 
 ### Patch Changes
